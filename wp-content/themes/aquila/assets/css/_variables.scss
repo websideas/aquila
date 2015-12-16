@@ -1,0 +1,52 @@
+/* -------------------------------------------------------------
+ * Title:   SCSS VARIABLES
+ * Author:  http://themeforest.net/user/Kite-Themes
+------------------------------------------------------------- */
+
+////[Table of contents]
+
+////1. Fonts
+////2. Color
+////3. Header height
+////4. Hamburger
+
+//// 1. Fonts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$font-stack: 'Karla', sans-serif;
+$heading-font: 'Playfair Display', serif;
+$button-text: 'Vollkorn', serif;
+$extra-font: 'Vollkorn', serif;
+
+
+//// 2. Color codes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+$primary-color: #22dcce;
+$primary-light-color: lighten($primary-color, 20%);
+
+$main-text: #666666;
+$title-text: #000000;
+$border-color: #eeeeee;
+
+$black: #000000;
+$white: #FFFFFF;
+$gray: #999999;
+
+$gray-bg: #f6f6f6;
+$gray-border: #999999;
+
+$dark-bg: #222222;
+$dark-border: #333333;
+
+//// 3. Header height ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+$header-height: 80px;
+$header-sticky: 60px;
+
+//// 4. Hamburger ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+$hamburger-heighticon: 12px;
+$hamburger-widthline: 20px;
+$hamburger-heightline: 2px;
+
+$hamburger-transition-time: 0.4s;
+$hamburger-rotation: 45deg;
+$hamburger-translateY: ($hamburger-heighticon / 2);
+$hamburger-translateX: 0;

@@ -1,0 +1,631 @@
+/*
+ * Title:   WingMan - E-Commerce and Blog Wordpress Theme
+ * Author:  http://themeforest.net/user/Kite-Themes
+ */
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[Table of contents]
+
+1. Base Styles
+  1.1. Common styles
+  1.2. Helper CSS
+2. Typography
+3. Forms fields
+4. Buttons
+5. Page Loader
+6. Popup
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
+
+@import 'mixin';
+@import 'variables';
+
+
+/* ==============================
+   1. Common styles
+   ============================== */
+/*
+ * 1.1 Common styles
+ */
+::-moz-selection {
+  color: #fff;
+  background: $primary-color;
+}
+
+::selection {
+  color: #fff;
+  background: $primary-color;
+}
+
+html, body {
+  -webkit-font-smoothing: antialiased;
+}
+
+iframe {
+  border: none;
+}
+
+a{
+  &:hover{
+    @include transition(all 0.3s ease 0s);
+  }
+  &:focus,
+  &:active{
+    @include css3-prefix('outline', 'none');
+  }
+}
+
+img:not([draggable]), embed, object, video {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.appear-animate .wow {
+  visibility: hidden;
+}
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+  & > [class^="col-"],
+  & > [class*=" col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+
+/*
+ * 1.2. Helper CSS
+ */
+.display-table{
+  display: table;
+  width: 100%;
+  height: 100%;
+  .display-cell{
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.round {  @include border-radius(2px);  }
+.circle {  @include border-radius(100%);  }
+.square {  @include border-radius(0);  }
+
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  width: 1px;
+}
+
+.letter-spacing{  letter-spacing: 0.2em; }
+.text-nomal{ text-transform: none; }
+
+.white{ color: #fff !important; }
+.black{ color: #111 !important; }
+.gray{ color: $gray!important; }
+
+
+#page_outter{
+  overflow: hidden;
+}
+
+#content {
+  padding: 60px 0 100px;
+  .page-template-page-blank &{
+    padding: 0!important;
+  }
+}
+
+/* ==============================
+   2. Typography
+   ============================== */
+/*
+ * 2.1 Typography common styles
+ */
+
+body {
+  font-family: $font-stack;
+  font-size: 14px;
+  line-height: 24px;
+  color: $main-text;
+  min-width: 320px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.4;
+  margin: 0 0 20px;
+  font-family: $heading-font;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: $black;
+}
+
+h1, h2, h3{
+  letter-spacing: 0.2em;
+}
+
+a {
+  color: $primary-color;
+  &:hover,
+  &:focus{
+    color: $primary-light-color;
+    text-decoration: none;
+  }
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-black {
+  font-weight: 900;
+}
+
+.post-link-outer,
+blockquote,
+.blockquote{
+  border: 1px solid $primary-color;
+  font-size: 18px;
+  font-family: $heading-font;
+  line-height: 24px;
+  padding: 30px 30px 23px 30px;
+  position: relative;
+  &:after{
+    @include FontIcon('\f10d');
+    font-size: 60px;
+    letter-spacing: 0.1em;
+    color: $border-color;
+    position: absolute;
+    bottom: 35px;
+    right: 45px;
+  }
+  p{
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .post-link-url,
+  footer,
+  small{
+    padding-top: 14px;
+    position: relative;
+    font-weight: 700;
+    color: $title-text;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    font-size: 14px;
+    text-align: left;
+    &:before{
+      content: "";
+      width: 31px;
+      height: 2px;
+      background: $title-text;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+.post-link-outer{
+  &:after{
+    @include FontIcon('\f0c1');
+    right: 10px;
+  }
+  .post-link-title{
+    position: relative;
+    z-index: 2;
+    margin-bottom: 20px;
+  }
+  .post-link-url{
+    position: relative;
+    z-index: 2;
+  }
+}
+.post-link-wrapper{
+  position: relative;
+  .post-link-link{
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    text-indent: -999px;
+    top: 0;
+    width: 100%;
+  }
+}
+
+
+/* ==============================
+   3. Forms fields
+   ============================== */
+input[type=email],
+input[type=password],
+input[type=phone],
+input[type=tel],
+input[type=text],
+textarea {
+  border: 1px solid $border-color;
+  color: $gray;
+  padding: 6px 12px;
+  height: 40px;
+  background: none;
+  @include border-radius(0);
+  @include css3-prefix('box-shadow', 'none');
+  @include css3-prefix('appearance', 'none');
+  @include css3-prefix('transition', 'none');
+  width: 100%;
+  &:focus {
+    @include css3-prefix('box-shadow', 'none');
+    border-color: $gray;
+    outline: 0;
+    color: $gray;
+  }
+}
+
+textarea {
+  height: auto;
+}
+
+select {
+  @include border-radius(0);
+  width: 100%;
+  height: 40px;
+  line-height: 1.42857;
+  padding: 6px 16px 6px 12px; 
+  border: 1px solid #f0f0f0;
+  cursor: pointer;
+  color: $gray;
+  option{
+    padding: 5px;
+    line-height: 24px;
+  }
+}
+
+select:not([multiple]) {
+  @include css3-prefix('box-shadow', 'none');
+  @include css3-prefix('appearance', 'none');
+  background: url(../images/selectbox-arrow.png) no-repeat right center;
+}
+
+.form-control {
+  @include border-radius(0);
+  @include css3-prefix('box-shadow', 'none');
+  :focus {
+    @include css3-prefix('box-shadow', 'none');
+  }
+}
+
+
+
+/* ==============================
+   4. Buttons
+   ============================== */
+
+.btn {
+  @include border-radius(0);
+  border: 2px solid transparent;
+  display: inline-block;
+  line-height: 1.42857;
+  padding: 8px 26px;
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  font-family: $button-text;
+  &:focus,
+  &:active:focus,
+  &.active:focus {
+    outline: none;
+  }
+  &.active,
+  &:active {
+    @include css3-prefix('box-shadow', 'none');
+  }
+
+  /* Button size */
+  &-xs {
+    padding: 6px 10px;
+    font-size: 8px;
+  }
+  &-sm {
+    padding: 8px 20px;
+    font-size: 10px;
+  }
+  &-lg {
+    padding: 10px 60px;
+    font-size: 18px;
+  }
+  &-xlg {
+    padding: 12px 65px;
+    font-size: 20px;
+  }
+
+  /* Button shapes */
+  &-round {
+    border-radius: 3px;
+  }
+  &-circle {
+    border-radius: 30px;
+  }
+
+  /* Button icon */
+  &.button-icon-left {
+    margin-right: 5px;
+  }
+  &.button-icon-right {
+    margin-left: 5px;
+  }
+
+  /* Button style */
+  &-default {
+    background: #252525;
+    color: #FFFFFF;
+    border-color: #252525;
+    &:hover,&:focus,&:active{
+      background: $primary-color;
+      border-color: $primary-color;
+      color: $white;
+    }
+  }
+  &-accent{
+    background: $primary-color;
+    border-color: $primary-color;
+    color: $white;
+    &:hover,
+    &:focus,
+    &:active{
+      color: $white;
+    }
+  }
+  &-light{
+    background: $white;
+    border-color: $white;
+    color: $main-text;
+    &:hover,
+    &:focus,
+    &:active{
+      border-color: $border-color;
+      background: $border-color;
+      color: $main-text;
+    }
+  }
+  &-animation{
+    span{
+      @include transform(translateX(0));
+      @include transition("all 0.3s ease 0s");
+      display: inline-block;
+      position: relative;
+      i{
+        @include opacity(0);
+        @include transition("all 0.3s ease 0s");
+        @include transform(translate(30px, -50%));
+        position: absolute;
+        right: 0;
+        top:50%;
+      }
+    }
+    &:hover{
+      span{
+        @include transform(translateX(-10px));
+        i{
+          @include opacity(1);
+        }
+      }
+    }
+  }
+}
+
+
+/* Border more */
+.readmore-link{
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  position: relative;
+  display: inline;
+  color: $primary-color;
+  padding: 0 8px;
+
+  &:after,
+  &:before{
+    content: "";
+    @include transition();
+    @include opacity(0);
+    display: block;
+    width: 2px;
+    background: $primary-color;
+    position: absolute;
+    top: 0;
+    bottom: 2px;
+  }
+  &:before{
+    left: -10px;
+  }
+  &:after{
+    right: -10px;
+  }
+  &:hover{
+    color: $primary-color;
+    &:before,
+    &:after{
+      @include opacity(1);
+    }
+    &:before{
+      left: 0;
+    }
+    &:after{
+      right: 0;
+    }
+  }
+}
+
+
+/* ==============================
+   5. Page Loader
+   ============================== */
+.kt_page_loader{
+  position: fixed;
+  width:100%;
+  height:100%;
+  top:0;
+  left:0;
+  background: #fff;
+  z-index: 999999999;
+
+  .kt_spinner{
+    width: 50px;
+    height: 50px;
+    margin:0 auto;
+  }
+
+  .page_loader_inner{
+    @include translate(c);
+    text-align: center;
+  }
+  &.style-1{
+    .page_loader_inner{
+      @include animation(loader 4s infinite ease);
+      width: 50px;
+      height: 50px;
+      border: 2px solid $primary-color;
+      margin-left: -25px;
+      margin-top: -25px;
+    }
+    .kt_spinner{
+      vertical-align: top;
+      display: inline-block;
+      width: 100%;
+      background-color: $primary-color;
+      @include animation(loader-inner 4s infinite ease-in);
+    }
+  }
+  &.style-2{
+    .kt_spinner {
+      border: 1px solid #cccccc;
+      @include animation(rotate 1.3s linear 0s infinite);
+      @include border-radius(100%);
+      &:after {
+        content: '';
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        background: $primary-color;
+        @include border-radius(50%);
+        @include animation(3s linear 0s infinite);
+        left: -5px;
+        top: 18px;
+      }
+    }
+  }
+  &.style-3{
+    .kt_spinner {
+      border: 2px solid #cccccc;
+      border-bottom-color: $primary-color;
+      @include animation(rotate 1.5s linear 0s infinite);
+      @include border-radius(100%);
+    }
+  }
+}
+
+
+@include keyframes('loader'){
+  0% {  @include rotate(0); }
+  25% {  @include rotate(180);}
+  50% {  @include rotate(180); }
+  75% {  @include rotate(360);}
+  100% {  @include rotate(360);}
+}
+
+@include keyframes('loader-inner'){
+  0% { height: 0; }
+  25% { height: 0; }
+  50% { height: 100%; }
+  75% { height: 100%; }
+  100% { height: 0; }
+}
+@include keyframes('rotate'){
+  from {
+    @include rotate(0);
+  }
+  to {
+    @include rotate(360);
+  }
+}
+
+
+
+/* ==============================
+   6. Back to top
+   ============================== */
+#back-to-top{
+  background: $primary-color;
+  bottom: 30px;
+  color: $white;
+  cursor: pointer;
+  display: none;
+  height: 40px;
+  position: fixed;
+  right: 30px;
+  text-align: center;
+  width: 40px;
+  z-index: 100;
+  i{
+    font-size: 18px;
+    line-height: 40px;
+    @include transition();
+  }
+  &:hover{
+    i{
+      @include transform(scale(1.5));
+    }
+  }
+}
+
+
+/* ==============================
+   7. Header
+   ============================== */
+/*
+ * 7.1. Header common styles
+ */
+#site-title,
+#site-description{
+  display: none;
+}
+.header-branding-outer{
+  position: relative;
+  z-index: 200;
+}
+
+.site-branding{
+  text-align: center;
+  height: auto;
+  .site-logo{
+    margin: 0;
+    padding: 0;
+    img{
+      @include transition();
+    }
+    .retina-logo{
+      display: none;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
