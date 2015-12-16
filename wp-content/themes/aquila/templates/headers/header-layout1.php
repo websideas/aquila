@@ -6,8 +6,7 @@ if ( !defined('ABSPATH')) exit;
 $position = kt_get_header();
 
 ?>
-<div id="header-inner" class="clearfix">
-
+<div id="header-inner" class="clearfix apply-sticky">
     <?php
     if($position == 'below'){
         /**
@@ -16,36 +15,27 @@ $position = kt_get_header();
         do_action( 'kt_slideshows_position' );
     }
     ?>
-
     <div class="container">
-        <div class="header-branding-outer">
+        <div class="header-branding-outer clearfix">
             <div class="site-branding">
                 <?php get_template_part( 'templates/headers/header',  'branding'); ?>
             </div><!-- .site-branding -->
+            <div class="nav-container">
+                <nav id="nav" class="nav-main">
+                    <?php get_template_part( 'templates/headers/header',  'menu'); ?>
+                </nav><!-- #main-nav -->
+            </div><!-- .nav-container -->
             <?php get_template_part( 'templates/headers/header',  'tool'); ?>
             <?php get_template_part( 'templates/headers/header',  'socials'); ?>
         </div>
     </div><!-- .container -->
-
-    <div class="nav-container ">
-        <div class="nav-container-inner apply-sticky">
-            <div class="header-sticky-background"></div>
-            <div class="container">
-                <nav id="nav" class="nav-main">
-                    <?php get_template_part( 'templates/headers/header',  'menu'); ?>
-                </nav><!-- #main-nav -->
-            </div><!-- .container -->
-        </div>
-        <?php
-        if($position != 'below'){
-            /**
-             * @hooked kt_slideshows_position_callback 10
-             */
-            do_action( 'kt_slideshows_position' );
-        }
-        ?>
-    </div>
-
-
-
+    <?php
+    if($position != 'below'){
+        /**
+         * @hooked kt_slideshows_position_callback 10
+         */
+        do_action( 'kt_slideshows_position' );
+    }
+    ?>
 </div>
+<?php get_template_part( 'templates/headers/header',  'brandingalt'); ?>

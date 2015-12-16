@@ -293,7 +293,6 @@ if (!function_exists('kt_get_logo')){
         $logo_default = kt_option( 'logo' );
         $logo_retina = kt_option( 'logo_retina' );
 
-
         if(is_array($logo_default) && $logo_default['url'] != '' ){
             $logo['default'] = $logo_default['url'];
         }
@@ -305,6 +304,8 @@ if (!function_exists('kt_get_logo')){
         if(!$logo['default']){
             $logo['default'] = THEME_IMG.'logo.png';
             $logo['retina'] = THEME_IMG.'logo-2x.png';
+            $logo['alt'] = THEME_IMG.'logo-alt.png';
+            $logo['altretina'] = THEME_IMG.'logo-alt-2x.png';
         }
 
         return $logo;

@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom Nav Menu Dropdown
+ * KT MegaMenu Walker
  *
  * @author   KiteThemes
  * @package Kite/Template
@@ -10,189 +10,6 @@
 
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
-
-
-/**
- * Nav Menu Dropdown
- * 
- * @since 1.0.0
- * @access public
- * @author Cuongdv <websideas.corp@gmail.com>
- * @link https://wordpress.org/support/topic/trouble-with-mobile-nav-walker-dropdown-meni
- * 
- * @return void
- * 
- */
- 
- 
-class KTSelectWalker extends Walker_Nav_Menu{
-    function start_lvl(&$output, $depth = 0, $args = array()){
-        $output .= "</option>";
-    }
-    function end_lvl(&$output, $depth = 0, $args = array()){
-        $indent = str_repeat("\t", $depth);
-    }
-    function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0){
-        $indent = ( $depth ) ? str_repeat("-",$depth).' ' : '';
-        $value = ' value="'. $item->url .'"';
-        $output .= '<option'.$value.'>';
-        $item_output = $args->before;
-        $item_output .= $args->link_before . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-        $output .= $indent.$item_output;
-    }
-    function end_el(&$output, $item, $depth = 0, $args = array()){
-        if(substr($output, -9) != '</option>')
-            $output .= "</option>";
-    }
-}
-
-
-/**
- * Custom Dropdown menu walker
- * Only change class of menu
- *
- * @access      public
- * @since       1.0 
- * @return      void
-*/
-class KTMenuWalker extends Walker_Nav_Menu{
-	/**
-	 * Starts the list before the elements are added.
-	 *
-	 * @see Walker::start_lvl()
-	 *
-	 * @since 3.0.0
-	 *
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @param int    $depth  Depth of menu item. Used for padding.
-	 * @param array  $args   An array of arguments. @see wp_nav_menu()
-	 */
-	public function start_lvl( &$output, $depth = 0, $args = array() ) {
-		$indent = str_repeat("\t", $depth);
-		$output .= "\n$indent<ul class=\"sub-menu-dropdown\">\n";
-	}
-    
-    /**
-	 * Start the element output.
-	 *
-	 * @see Walker::start_el()
-	 *
-	 * @since 3.0.0
-	 *
-	 * @param string $output Passed by reference. Used to append additional content.
-	 * @param object $item   Menu item data object.
-	 * @param int    $depth  Depth of menu item. Used for padding.
-	 * @param array  $args   An array of arguments. @see wp_nav_menu()
-	 * @param int    $id     Current item ID.
-	 */
-	public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
-		$indent = ( $depth ) ? str_repeat( "\t", $depth ) : '';
-
-		$classes = empty( $item->classes ) ? array() : (array) $item->classes;
-		$classes[] = 'menu-item-' . $item->ID;
-        $classes[] = 'menu-item-level-'.$depth;
-        $classes[] = 'kt-menu-item';
-        
-		/**
-		 * Filter the CSS class(es) applied to a menu item's <li>.
-		 *
-		 * @since 3.0.0
-		 *
-		 * @see wp_nav_menu()
-		 *
-		 * @param array  $classes The CSS classes that are applied to the menu item's <li>.
-		 * @param object $item    The current menu item.
-		 * @param array  $args    An array of wp_nav_menu() arguments.
-		 */
-		$class_names = join( ' ', apply_filters( 'nav_menu_css_class', array_filter( $classes ), $item, $args ) );
-		$class_names = $class_names ? ' class="' . esc_attr( $class_names ) . '"' : '';
-
-		/**
-		 * Filter the ID applied to a menu item's <li>.
-		 *
-		 * @since 3.0.1
-		 *
-		 * @see wp_nav_menu()
-		 *
-		 * @param string $menu_id The ID that is applied to the menu item's <li>.
-		 * @param object $item    The current menu item.
-		 * @param array  $args    An array of wp_nav_menu() arguments.
-		 */
-		$id = apply_filters( 'nav_menu_item_id', 'menu-item-'. $item->ID, $item, $args );
-		$id = $id ? ' id="' . esc_attr( $id ) . '"' : '';
-
-		$output .= $indent . '<li' . $id . $class_names .'>';
-
-		$atts = array();
-		$atts['title']  = ! empty( $item->attr_title ) ? $item->attr_title : '';
-		$atts['target'] = ! empty( $item->target )     ? $item->target     : '';
-		$atts['rel']    = ! empty( $item->xfn )        ? $item->xfn        : '';
-		$atts['href']   = ! empty( $item->url )        ? $item->url        : '';
-        $atts['class']   = 'kt-megamenu-link';
-        
-		/**
-		 * Filter the HTML attributes applied to a menu item's <a>.
-		 *
-		 * @since 3.6.0
-		 *
-		 * @see wp_nav_menu()
-		 *
-		 * @param array $atts {
-		 *     The HTML attributes applied to the menu item's <a>, empty strings are ignored.
-		 *
-		 *     @type string $title  Title attribute.
-		 *     @type string $target Target attribute.
-		 *     @type string $rel    The rel attribute.
-		 *     @type string $href   The href attribute.
-		 * }
-		 * @param object $item The current menu item.
-		 * @param array  $args An array of wp_nav_menu() arguments.
-		 */
-		$atts = apply_filters( 'nav_menu_link_attributes', $atts, $item, $args );
-
-		$attributes = '';
-		foreach ( $atts as $attr => $value ) {
-			if ( ! empty( $value ) ) {
-				$value = ( 'href' === $attr ) ? esc_url( $value ) : esc_attr( $value );
-				$attributes .= ' ' . $attr . '="' . $value . '"';
-			}
-		}
-
-		$item_output = $args->before;
-		$item_output .= '<a'. $attributes .'>';
-        
-        $icon = get_post_meta( $item->ID, '_menu_item_megamenu_icon', true );
-        $icon = ($icon) ? '<i class="'.$icon.'"></i>' : '';
-        
-		/** This filter is documented in wp-includes/post-template.php */
-		$item_output .= $args->link_before . $icon . apply_filters( 'the_title', $item->title, $item->ID ) . $args->link_after;
-		$item_output .= '</a>';
-		$item_output .= $args->after;
-
-        $megamenu_columntitle = get_post_meta( $item->ID, '_menu_item_megamenu_columntitle', true );
-        if($megamenu_columntitle && $depth ==1 )
-            $item_output = '';
-
-		/**
-		 * Filter a menu item's starting output.
-		 *
-		 * The menu item's starting output only includes $args->before, the opening <a>,
-		 * the menu item's title, the closing </a>, and $args->after. Currently, there is
-		 * no filter for modifying the opening and closing <li> for a menu item.
-		 *
-		 * @since 3.0.0
-		 *
-		 * @see wp_nav_menu()
-		 *
-		 * @param string $item_output The menu item's starting HTML output.
-		 * @param object $item        Menu item data object.
-		 * @param int    $depth       Depth of menu item. Used for padding.
-		 * @param array  $args        An array of wp_nav_menu() arguments.
-		 */
-		$output .= apply_filters( 'walker_nav_menu_start_el', $item_output, $item, $depth, $args );
-	}
-}
-
 
 /**
  * Custom Mega menu walker
@@ -232,14 +49,11 @@ class KTMegaWalker extends Walker_Nav_Menu{
     
     public function start_lvl( &$output, $depth = 0, $args = array() ) {
 		$indent = str_repeat("\t", $depth);
-        
-        if( $depth === 0 && $this->megamenu_enable == "enabled" ) {
-			$colums = ($this->megamenu_columns) ? $this->megamenu_columns : 'auto';
-            $position = ($this->megamenu_width != 'full') ? ' megamenu-position-'.$this->megamenu_position : '';
-            $layout = ' megamenu-layout-'.$this->megamenu_layout;
-            
-            $output .= "\n$indent<div class=\"kt-megamenu-wrapper $position $layout megamenu-columns-$colums \">\n<ul class='kt-megamenu-ul clearfix'>\n";
-        }elseif($this->megamenu_enable == "enabled"){
+
+
+        if($this->megamenu_enable == "enabled" && $depth == 0){
+            $output .= "\n$indent<ul class=\"kt-megamenu-ul\">\n";
+        } elseif($this->megamenu_enable == "enabled"){
             $output .= "\n$indent<ul class=\"sub-menu-megamenu\">\n";
         }else{
             $output .= "\n$indent<ul class=\"sub-menu-dropdown\">\n";    
@@ -247,18 +61,16 @@ class KTMegaWalker extends Walker_Nav_Menu{
 	}
     
     public function end_lvl( &$output, $depth = 0, $args = array() ) {
-		$indent = str_repeat("\t", $depth);
-        if( $depth === 0  && $this->megamenu_enable == "enabled" ) {
-		  $output .= "\n</ul>\n</div>\n";
-        }else{
-            $output .= "$indent</ul>\n";
-        }
-		
+        $indent = str_repeat("\t", $depth);
+        $output .= "$indent</ul>\n";
 	}
     
     
     public function end_el( &$output, $item, $depth = 0, $args = array() ) {
-		$output .= "</li>\n";
+        if( $depth === 0  && $this->megamenu_enable == "enabled" ) {
+            $output .= "\n</div></div>\n";
+        }
+        $output .= "</li>\n";
 	}
     
     public function start_el( &$output, $item, $depth = 0, $args = array(), $id = 0 ) {
@@ -286,7 +98,9 @@ class KTMegaWalker extends Walker_Nav_Menu{
         if($depth == 1 && $endrow){
             $classes[] = 'kt-megamenu-item-endrow';
         }
-        
+
+
+
         
 		/**
 		 * Filter the CSS class(es) applied to a menu item's <li>.
@@ -402,7 +216,47 @@ class KTMegaWalker extends Walker_Nav_Menu{
         }
         
 		$item_output .= $args->after;
-        
+
+
+        if( $depth === 0 && $this->megamenu_enable == "enabled" ) {
+            $colums = ($this->megamenu_columns) ? $this->megamenu_columns : 'auto';
+            $position = ($this->megamenu_width != 'full') ? ' megamenu-position-'.$this->megamenu_position : '';
+            $layout = ' megamenu-layout-'.$this->megamenu_layout;
+
+            $item_output .= "\n$indent<div class=\"kt-megamenu-wrapper $position $layout megamenu-columns-$colums \">\n<div class=\"container\">\n";
+
+            if ( $depth == 0 && $item->object == 'category' ) {
+
+                $item_output .= '<div class="megamenu-posts">';
+
+                global $post;
+                $menu_posts = get_posts( apply_filters('kt_megamenu_posts', array( 'posts_per_page' => 3, 'category' => $item->object_id )) );
+
+                $item_output .= '<ul class="megamenu-posts-content">';
+                foreach( $menu_posts as $post ):
+                    $item_output .=
+                        sprintf(
+                            '<li>%s<a href="%s">%s</a>',
+                            '',
+                            get_permalink(),
+                            get_the_title()
+                        );
+                endforeach;
+                wp_reset_postdata();
+                $item_output .= '</ul>';
+
+                $item_output .= sprintf(
+                    '<a href="%s">%s</a>',
+                    get_category_link( $item->object_id ),
+                    __('See all', THEME_LANG)
+                );
+                $item_output .= '</div>';
+
+            }
+
+
+        }
+
         
         $megamenu_columntitle = get_post_meta( $item->ID, '_menu_item_megamenu_columntitle', true );
         if($megamenu_columntitle && $depth ==1 )

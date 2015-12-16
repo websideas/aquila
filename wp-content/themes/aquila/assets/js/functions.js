@@ -50,7 +50,7 @@
 
         init_backtotop();
         init_parallax();
-        init_MainMenu();
+        //init_MainMenu();
         init_MobileMenu();
         init_masonry();
         init_kt_image();
@@ -75,7 +75,7 @@
             $(this).closest('#nav').toggleClass('is-opened');
         });
         
-        $('.widget-container .kt_widget_tabs').tabs();
+        //$('.widget-container .kt_widget_tabs').tabs();
 
 
 
@@ -88,9 +88,9 @@
             /**==============================
              ***  Sticky header
              ===============================**/
-            $('.header-container.sticky-header').ktSticky({
+            //$('.header-container.sticky-header').ktSticky({
                 //contentSticky : '.nav-container'
-            });
+            //});
         }
 
         if ($.fn.ktFooter) {
@@ -258,12 +258,9 @@
      Search
      --------------------------------------------- */
     function init_SearchFull(){
-        $('.mini-search a, a.mobile-search').magnificPopup({
-            type: 'inline',
-            mainClass : 'mfp-zoom-in',
-            items: { src: '#search-fullwidth' },
-            focus : 'input[name=s]',
-            removalDelay: 200
+        $('.mini-search a').on('click',function(e){
+            e.preventDefault();
+            console.log('call');
         });
     }
 

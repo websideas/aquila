@@ -11,7 +11,7 @@ if ( has_nav_menu( 'primary' ) ) {
         'link_before'     => '<span>',
         'link_after'      => '</span>',
         'menu_id'         => 'main-navigation',
-        'menu_class' => 'hidden-xs hidden-sm',
+        'menu_class' => 'hidden-xs hidden-sm clearfix',
         'walker' => new KTMegaWalker(),
     ) );
 }else{

@@ -229,6 +229,8 @@ function kt_setting_script() {
 
         <?php } ?>
         <?php
+
+        /*
             $color_first_loader = kt_option('color_first_loader', $accent);
             echo '.kt_page_loader.style-1 .page_loader_inner{border-color: '.$color_first_loader.';}';
             echo '.kt_page_loader.style-1 .kt_spinner{background-color: '.$color_first_loader.';}';
@@ -295,7 +297,7 @@ function kt_setting_script() {
             }
             echo '.header-container.is-sticky #main-navigation > li{line-height: '.intval($navigation_height_fixed['height']).'px;}';
 
-
+        */
 
         ?>
     </style>
