@@ -79,6 +79,17 @@
 
 
 
+        $('.blog-posts-slick').slick();
+
+        $('.blog-posts-thumb').slick({
+            asNavFor: '.blog-posts-slick',
+            slidesToShow: 3,
+            arrows: false,
+            focusOnSelect: true
+        });
+
+
+
     });
     
     $(window).resize(function(){
@@ -89,7 +100,7 @@
              ***  Sticky header
              ===============================**/
             //$('.header-container.sticky-header').ktSticky({
-                //contentSticky : '.nav-container'
+                //contentSticky : '#header-inner'
             //});
         }
 

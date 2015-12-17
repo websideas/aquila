@@ -325,7 +325,10 @@ function kt_contactmethods( $contactmethods ) {
     $contactmethods['pinterest'] = __('Pinterest username', THEME_LANG);
     $contactmethods['googleplus'] = __('Google+ page/profile URL', THEME_LANG);
     $contactmethods['instagram'] = __('Instagram username', THEME_LANG);
+    $contactmethods['behance'] = __('Behance username', THEME_LANG);
     $contactmethods['tumblr'] = __('Tumblr username', THEME_LANG);
+    $contactmethods['dribbble'] = __('Dribbble username', THEME_LANG);
+
 
 
     return $contactmethods;

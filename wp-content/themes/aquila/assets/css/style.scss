@@ -112,24 +112,6 @@ p {
 .gray{ color: $gray!important; }
 
 
-#page_outter{
-  overflow: hidden;
-}
-
-.kt-container{
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-}
-
-#content {
-  padding: 60px 0 100px;
-  .page-template-page-blank &{
-    padding: 0!important;
-  }
-}
 
 /* ==============================
    2. Typography
@@ -657,7 +639,7 @@ select:not([multiple]) {
 
 }
 
-#header-inner{
+#header-content{
   position: relative;
   @include box-shadow(0, 2px, 6px, rgba($black, 0.05));
   &.header-shadow {
@@ -1103,14 +1085,24 @@ select:not([multiple]) {
 
 }
 
+.header-container.is-sticky.sticky-header-down .nav-container .nav-container-inner,
+.header-container.header-layout2.is-sticky.sticky-header-down #header-content{
+
+}
+
 /*
  * 7.4. Header sticky
  */
 .header-container.is-sticky {
-
-  .nav-container {
-    background: none;
-    border: none;
+  .header-sticky-background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    visibility: visible;
+    background: rgba($white, .8);
+    z-index: -1;
   }
 
   .apply-sticky {
@@ -1118,6 +1110,12 @@ select:not([multiple]) {
     width: 100%;
     top: 0;
     z-index: 999;
+  }
+
+  &.sticky-header-down{
+    .apply-sticky{
+      top: -$header-sticky;
+    }
   }
 
   &.sticky {
@@ -1130,13 +1128,25 @@ select:not([multiple]) {
     }
   }
 
-  #main-navigation {
-    > li {
-      height: $header-sticky;
-      line-height: $header-sticky;
+  &.header-layout1{
+    #main-navigation {
+      > li {
+        height: $header-sticky;
+        line-height: $header-sticky;
+      }
+    }
+    #main-nav-tool,
+    .main-nav-socials{
+      > a,
+      > li > a{
+        line-height: $header-sticky;
+        height: $header-sticky;
+      }
+    }
+    .site-branding{
+      margin: 17px 65px 17px 0;
     }
   }
-
 
 
 
@@ -1150,12 +1160,294 @@ select:not([multiple]) {
     }
   }
 }
+/* ==============================
+   9. Post slider
+   ============================== */
+
+#main-sideshow{
+  position: relative;
+  #sideshow-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+  &.postslider-graybg{
+    padding: 98px;
+    background: $gray-bg;
+  }
+  &.postslider-big{
+    #sideshow-inner{
+      max-width: 1490px;
+    }
+    .blog-posts-slick{
+      position: static;
+    }
+    .slick-slide{
+      margin: 0 15px;
+      &:after {
+        background: rgba($white, .7);
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        @include opacity(1);
+        @include transition();
+      }
+      &.slick-current{
+        &:after{
+          @include opacity(0);
+        }
+      }
+    }
+  }
+  &.postslider-thumb{
+    #sideshow-inner{
+      overflow: hidden;
+      position: relative;
+      border-bottom: 2px solid $border-color;
+    }
+  }
+  &.postslider-slider{
+    #sideshow-inner{
+      max-width: none;
+    }
+    .slick-slide{
+      height: 800px;
+      background-position: center center;
+      background-size: cover;
+      text-align: center;
+    }
+  }
+}
+
+.blog-posts-slick {
+
+  &.slide-visible{
+    .slick-list{
+      overflow: visible;
+    }
+  }
+
+  .article-post{
+    position: relative;
+    &-content{
+      position: absolute;
+      bottom: 30px;
+      border: 15px solid rgba($white, .7);
+      left: 130px;
+      right: 130px;
+      z-index: 1;
+      @include opacity(0);
+      visibility: hidden;
+    }
+    &-inner{
+      background: rgba($black, .8);
+      padding: 70px;
+      text-align: center;
+      letter-spacing: 0.025em;
+    }
+    &-meta{
+      color: $white;
+      font-size: 12px;
+    }
+    h3{
+      font-size: 48px;
+      font-style: italic;
+      font-weight: normal;
+      line-height: 72px;
+      text-transform: capitalize;
+      a{
+        color: $white;
+        &:hover,
+        &:focus{
+          color: $primary-color;
+        }
+      }
+    }
+
+  }
+  .slick-slide{
+    position: relative;
+  }
+  .slick-arrow{
+    z-index: 99;
+    @include translate(y);
+    height: 60px;
+    width: 40px;
+    text-indent: -999px;
+    overflow: hidden;
+    background: $white;
+    border: none;
+    text-align: center;
+    line-height: 60px;
+    @include opacity(.4);
+    @include transition();
+    &:before{
+      text-indent: 0;
+      font-size: 18px;
+      color: $black;
+      left: 0;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      @include transition();
+    }
+    &.slick-prev{
+      left: 0;
+      &:before{
+        @include FontIcon('\f104');
+      }
+    }
+    &.slick-next{
+      right: 0;
+      &:before{
+        @include FontIcon('\f105');
+      }
+    }
+    &:hover{
+      @include opacity(1);
+    }
+  }
+
+  &.slideAnimation{
+    .article-post{
+      h3,
+      &-meta{
+        @include opacity(0);
+        @include transform(translateY(140px));
+        @include transition('all 1s ease 0s');
+      }
+
+      &-meta{
+        @include css3-prefix(transition-delay, 200ms);
+      }
+
+      &.slick-current{
+        .article-post-content{
+          @include opacity(1);
+          visibility: visible;
+          h3,
+          .article-post-meta{
+            @include opacity(1);
+            @include transform(translateY(0));
+          }
+        }
+      }
+    }
+  }
+
+  .postslider-graybg &{
+    max-width: 1140px;
+    .article-post-content{
+      left: 80px;
+      right: 80px;
+    }
+    .slick-arrow{
+      @include opacity(1);
+      &.slick-prev {
+        left: 40px;
+      }
+      &.slick-next {
+        right: 40px;
+      }
+      &:hover{
+        &:before{
+          color: $primary-color;
+        }
+      }
+    }
+    .slick-slide{
+      margin: 0;
+    }
+  }
+
+}
+
+.blog-posts-thumb{
+  margin: 30px -15px 50px;
+  .slick-slide{
+    margin: 0 15px;
+    position: relative;
+    padding: 23px;
+    background-position: center center;
+    background-size: cover;
+    cursor: pointer;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: $black;
+      @include opacity(.4);
+      @include transition();
+    }
+    &.slick-current,
+    &:hover{
+      &:before{
+        @include opacity(.7);
+      }
+    }
+    .blog-posts-thumb-content{
+      position: relative;
+    }
+    h4 a,
+    .article-thumb-meta{
+      color: $white;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 100%;
+      @include css3-prefix('text-overflow', 'ellipsis');
+      display: block;
+    }
+    h4{
+      font-size: 14px;
+      font-weight: normal;
+      text-transform: none;
+      margin-bottom: 10px;
+      a{
+        &:hover{
+          color: $primary-color;
+        }
+      }
+    }
+    .article-thumb-meta{
+      font-size: 12px;
+      line-height: 14px;
+      a{
+        color: $white;
+        &:hover{
+          color: $primary-color;
+        }
+      }
+    }
+
+  }
+
+}
+
+
 
 
 /* ==============================
    9. Content
    ============================== */
+/*
+ * 9.1. content common styles
+ */
 
+#page_outter{
+  overflow: hidden;
+}
+
+#content {
+  padding: 60px 0 100px;
+  .page-template-page-blank &{
+    padding: 0!important;
+  }
+}
 
 .layout-boxed{
   background: #eeeeee;
@@ -1167,6 +1459,8 @@ select:not([multiple]) {
     background: #FFFFFF;
   }
 }
+
+
 
 
 

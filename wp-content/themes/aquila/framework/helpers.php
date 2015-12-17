@@ -24,22 +24,6 @@ function  kt_is_wpml(){
 }
 
 
-/**
- *
- * Detect plugin.
- *
- * @param $plugin example: 'plugin-directory/plugin-file.php'
- */
-
-function kt_is_active_plugin(   $plugin ){
-    if(  !function_exists( 'is_plugin_active' ) ){
-        include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-    }
-    // check for plugin using plugin name
-    return is_plugin_active( $plugin ) ;
-}
-
-
 if (!function_exists('kt_sidebars')){
     /**
      * Get sidebars
@@ -345,8 +329,8 @@ if (!function_exists('kt_show_slideshow')) {
         global $post;
         if (!$post_id) $post_id = $post->ID;
 
-        $slideshow = rwmb_meta('_kt_slideshow_source', array(), $post_id);
-
+        $slideshow = rwmb_meta('_kt_slideshow_type', array(), $post_id);
+        $sideshow_class = array();
         $output = '';
 
         if ($slideshow == 'revslider') {
@@ -356,9 +340,7 @@ if (!function_exists('kt_show_slideshow')) {
                 putRevSlider($revslider);
                 $revslider_html = ob_get_contents();
                 ob_end_clean();
-
                 $output .= $revslider_html;
-
             }
         } elseif ($slideshow == 'layerslider') {
             $layerslider = rwmb_meta('_kt_layerslider', array(), $post_id);
@@ -368,10 +350,90 @@ if (!function_exists('kt_show_slideshow')) {
                     $output .= $layerslider_html;
                 }
             }
+        } elseif( $slideshow == 'postslider'){
+
+            $style = rwmb_meta('_kt_slideshow_posts_style', array(), $post_id);
+
+            $args = array('post_type' => 'post', 'posts_per_page' => 4);
+            $query = new WP_Query( $args );
+            $slider_html = '';
+
+
+            if ( $query->have_posts() ) {
+
+                $slider_class = array('blog-posts-slick');
+                $image_size = 'blog_post';
+                $slider_option = '{}';
+                $sideshow_class[] = 'postslider-'.$style;
+                $slider_thumbnail = '';
+
+                if($style == 'big'){
+                    $slider_class[] = 'slideAnimation';
+                    $slider_class[] = 'slide-visible';
+                    $image_size = 'blog_post_slider';
+                }elseif($style == 'normal'){
+                    $sideshow_class[] = 'postslider-graybg';
+                } elseif ($style == 'thumb'){
+                    $slider_option = '{"arrows": true, "asNavFor": ".blog-posts-thumb"}';
+                    $slider_thumbnail .= '<div class="blog-posts-thumb">';
+                }elseif($style == 'slider'){
+
+                }
+
+                while ( $query->have_posts() ) {
+                    $query->the_post();
+                    $slider_content = '';
+                    if($style != 'thumb'){
+                        $slider_content = sprintf(
+                            '<div class="article-post-content"><div class="article-post-inner">%1$s %2$s</div></div>',
+                            '<h3><a href="'.get_the_permalink().'">'.get_the_title().'</a></h3>',
+                            '<div class="article-post-meta">'.get_the_author().' - '. get_the_date().'</div>'
+                        );
+                    }
+
+                    if($style == 'slider'){
+                        $slider_html .= sprintf(
+                            '<div class="article-post" style="%s">%s</div>',
+                            "background-image: url('".get_the_post_thumbnail_url()."');",
+                            $slider_content
+                        );
+                    }else{
+                        $slider_html .= sprintf(
+                            '<div class="article-post"><div class="article-post-thumb">%1$s</div>%2$s</div>',
+                            get_the_post_thumbnail(null, $image_size),
+                            $slider_content
+                        );
+                    }
+
+                    if ($style == 'thumb') {
+                        $slider_thumbnail .= sprintf(
+                            '<div style="%s"><div class="blog-posts-thumb-content">%s %s</div></div>',
+                            "background-image: url('".get_the_post_thumbnail_url()."');",
+                            '<h4><a href="' . get_the_permalink() . '"> ' . get_the_title() . '</a></h4>',
+                            '<div class="article-thumb-meta">' . get_the_author() . ' - ' . get_the_date() . '</div>'
+                        );
+                    }
+                }
+
+                if ($style == 'thumb'){
+                    $slider_thumbnail .= '</div>';
+                }
+
+                $output .= sprintf(
+                    '<div class="%1$s" data-slick=\'%2$s\'>%3$s</div>%4$s',
+                    implode(' ', $slider_class),
+                    esc_attr($slider_option),
+                    $slider_html,
+                    $slider_thumbnail
+                );
+            }
+            /* Restore original Post Data */
+            wp_reset_postdata();
+
         }
 
         if($output != ''){
-            echo '<div id="main-content-sideshow">'.$output.'</div>';
+            echo '<div id="main-sideshow" class="'.esc_attr(implode(' ', $sideshow_class)).'"><div id="sideshow-inner">'.$output.'</div></div>';
         }
 
 
@@ -392,13 +454,6 @@ if (!function_exists('kt_get_header')) {
 
         if(is_page() || is_singular()){
             $header_position = rwmb_meta('_kt_header_position');
-        }elseif(is_archive()){
-            if(kt_is_wc()){
-                if(is_shop()){
-                    $page_id = get_option( 'woocommerce_shop_page_id' );
-                    $header_position = rwmb_meta('_kt_header_position', array(), $page_id);
-                }
-            }
         }
 
         if($header_position){
@@ -566,148 +621,6 @@ if (!function_exists('kt_get_single_file')) {
         return false;
     }
 }
-
-/**
- * Render Carousel
- *
- * @param $data array, All option for carousel
- * @param $class string, Default class for carousel
- *
- * @return void
- */
-
-function kt_render_carousel($data, $extra = '', $class = 'owl-carousel kt-owl-carousel'){
-    $data = shortcode_atts( array(
-        'gutters' => true,
-        'autoheight' => true,
-        'autoplay' => false,
-        'mousedrag' => true,
-        'autoplayspeed' => 5000,
-        'slidespeed' => 200,
-        'desktop' => 4,
-        'desktopsmall' => '',
-        'tablet' => 2,
-        'mobile' => 1,
-
-        'navigation' => true,
-        'navigation_always_on' => false,
-        'navigation_position' => 'center_outside',
-        'navigation_style' => 'circle_border',
-        'navigation_icon' => 'fa fa-angle-left|fa fa-angle-right',
-
-        'pagination' => false,
-        'pagination_position' => 'outside',
-
-        'carousel_skin' => 'dark',
-        'callback' => ''
-
-    ), $data );
-
-    if(!$data['desktopsmall']){
-        $data['desktopsmall'] = $data['desktop'];
-    }
-
-    extract( $data );
-
-
-    $autoheight = apply_filters('sanitize_boolean', $autoheight);
-    $autoplay = apply_filters('sanitize_boolean', $autoplay);
-    $mousedrag = apply_filters('sanitize_boolean', $mousedrag);
-    $navigation = apply_filters('sanitize_boolean', $navigation);
-    $navigation_always_on = apply_filters('sanitize_boolean', $navigation_always_on);
-    $pagination = apply_filters('sanitize_boolean', $pagination);
-
-    $output = $custom_css = '';
-    $uniqid = 'owl-carousel-'.uniqid();
-
-    $owl_carousel_class = array(
-        'owl-carousel-kt',
-        'carousel-navigation-'.$navigation_position,
-        'carousel-'.$carousel_skin,
-        $extra
-    );
-
-    if($gutters){
-        $owl_carousel_class[] = 'carousel-gutters';
-    }
-
-    if(!$navigation_always_on && $navigation_position != 'bottom'){
-        $owl_carousel_class[] = 'visiable-navigation';
-    }
-    if($navigation_style){
-        $owl_carousel_class[] = 'carousel-navigation-'.$navigation_style;
-        $owl_carousel_class[] = 'carousel-navigation-hasstyle';
-        if(strpos($navigation_style, 'border') !== false){
-            $owl_carousel_class[] = 'carousel-navigation-border';
-        }elseif(strpos($navigation_style, 'background') !== false){
-            $owl_carousel_class[] = 'carousel-navigation-background';
-        }
-    }
-    if($pagination){
-        $owl_carousel_class[] = 'carousel-pagination-dots';
-    }
-
-
-    $autoplay = ($autoplay) ? $autoplayspeed : $autoplay;
-
-    $data_carousel = array(
-        'mousedrag' => $mousedrag,
-        "autoheight" => $autoheight,
-        "autoplay" => $autoplay,
-        'navigation_icon' => $navigation_icon,
-        "navigation" => $navigation,
-        'navigation_pos' => $navigation_position,
-        "slidespeed" => $slidespeed,
-        'desktop' => $desktop,
-        'desktopsmall' => $desktopsmall,
-        'tablet' => $tablet,
-        'mobile' => $mobile,
-        'pagination' => $pagination,
-        'callback' => $callback
-
-    );
-
-
-    $output .= '<div id="'.esc_attr($uniqid).'" class="'.esc_attr(implode(' ', $owl_carousel_class)).'">';
-    $output .= '<div class=" '.$class.'" '.render_data_carousel($data_carousel).'>%carousel_html%</div>';
-    $output .= '</div>';
-
-    if($custom_css){
-        $output .= '<div class="kt_custom_css" data-css="'.$custom_css.'"></div>';
-    }
-
-    return $output;
-}
-
-
-if (!function_exists('render_data_carousel')) {
-
-    /*
-     * Render data option for carousel
-     * @param $data
-     * @return string
-     */
-    function render_data_carousel($data)
-    {
-        $output = "";
-        $array = array();
-        foreach ($data as $key => $val) {
-            if (is_bool($val) === true) {
-                $val = ($val) ? 'true': 'false';
-                $array[$key]= '"'.$key.'": '.$val;
-            }else{
-                $array[$key]= '"'.$key.'": "'.$val.'"';
-            }
-        }
-
-        if(count($array)){
-            $output = " data-options='{".implode(',', $array)."}'";
-        }
-
-        return $output;
-    }
-}
-
 
 
 if (!function_exists('kt_post_option')) {

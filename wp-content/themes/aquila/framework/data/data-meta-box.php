@@ -277,7 +277,18 @@ function kt_register_meta_boxes( $meta_boxes )
                 'tab'  => 'frontpage_general',
                 'visible' => array($prefix . 'frontpage_source', '=', 'categories')
             ),
-
+            // Authors
+            array(
+                'name'    => __( 'Specific Authors', THEME_LANG ),
+                'id'      => "{$prefix}authors",
+                'type'    => 'user',
+                'multiple'=> true,
+                'options' => array(
+                    'type'     => 'select_advanced'
+                ),
+                'tab'  => 'frontpage_general',
+                'visible' => array($prefix . 'frontpage_source', '=', 'authors')
+            ),
             array(
                 'name' => __('Blog type', THEME_LANG),
                 'id'   => "{$prefix}frontpage_type",
@@ -530,16 +541,77 @@ function kt_register_meta_boxes( $meta_boxes )
 
             array(
                 'name' => __('Select Your Slideshow Type', THEME_LANG),
-                'id' => $prefix . 'slideshow_source',
+                'id' => $prefix . 'slideshow_type',
                 'desc' => __("You can select the slideshow type using this option.", THEME_LANG),
                 'type' => 'select',
                 'options' => array(
                     '' => __('Select Option', THEME_LANG),
+                    'postslider' => __('Post Slider', THEME_LANG),
                     'revslider' => __('Revolution Slider', THEME_LANG),
                     'layerslider' => __('Layer Slider', THEME_LANG),
                 ),
                 'tab'  => 'header',
             ),
+
+            array(
+                'name' => __('Posts Slider style', THEME_LANG),
+                'id'   => "{$prefix}slideshow_posts_style",
+                'type' => 'select',
+                'options' => array(
+                    'big'           => __('Big Carousel', THEME_LANG),
+                    'slider'        => __('Posts slider', THEME_LANG),
+                    'thumb'         => __('Thumb slider', THEME_LANG),
+                    'carousel'      => __('Small Carousel', THEME_LANG),
+                ),
+                'std'  => '',
+                'tab'  => 'header',
+                'visible' => array($prefix . 'slideshow_type', '=', 'postslider')
+            ),
+
+            array(
+                'name' => __('Data source', THEME_LANG),
+                'id'   => "{$prefix}slideshow_source",
+                'type' => 'select',
+                'options' => array(
+                    ''              => __('All', THEME_LANG),
+                    'categories'    => __('Specific Categories', THEME_LANG),
+                    'authors'		=> __('Specific Authors', THEME_LANG),
+                ),
+                'std'  => '',
+                'tab'  => 'header',
+                'visible' => array($prefix . 'slideshow_type', '=', 'postslider')
+            ),
+
+
+            // Categories
+            array(
+                'name'    => __( 'Specific Categories', THEME_LANG ),
+                'id'      => "{$prefix}slideshow_categories",
+                'type'    => 'taxonomy',
+                'multiple'=> true,
+                'options' => array(
+                    'taxonomy' => 'category',
+                    'type'     => 'select_advanced',
+                    'args'     => array()
+                ),
+                'tab'  => 'header',
+                'visible' => array($prefix . 'slideshow_source', '=', 'categories')
+            ),
+
+            // Authors
+            array(
+                'name'    => __( 'Specific Categories', THEME_LANG ),
+                'id'      => "{$prefix}slideshow_authors",
+                'type'    => 'user',
+                'multiple'=> true,
+                'options' => array(
+                    'type'     => 'select_advanced'
+                ),
+                'tab'  => 'header',
+                'visible' => array($prefix . 'slideshow_source', '=', 'authors')
+            ),
+
+
             array(
                 'name' => __('Select Revolution Slider', THEME_LANG),
                 'id' => $prefix . 'rev_slider',
@@ -547,7 +619,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'revSlider',
                 'tab'  => 'header',
                 'desc' => __('Select the Revolution Slider.', THEME_LANG),
-                'visible' => array($prefix . 'slideshow_source', '=', 'revslider')
+                'visible' => array($prefix . 'slideshow_type', '=', 'revslider')
             ),
             array(
                 'name' => __('Select Layer Slider', THEME_LANG),
@@ -556,7 +628,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'layerslider',
                 'tab'  => 'header',
                 'desc' => __('Select the Layer Slider.', THEME_LANG),
-                'visible' => array($prefix . 'slideshow_source', '=', 'layerslider')
+                'visible' => array($prefix . 'slideshow_type', '=', 'layerslider')
             ),
 
             /*
@@ -670,6 +742,5 @@ function kt_register_meta_boxes( $meta_boxes )
 
     return $meta_boxes;
 }
-
 
 
