@@ -23,9 +23,9 @@ if ( function_exists('register_sidebar')) {
         ) );
 
         register_sidebar( array(
-            'name' => __( 'Blog Widget Area', THEME_LANG),
-            'id' => 'blog-widget-area',
-            'description' => __( 'The blog widget area', THEME_LANG),
+            'name' => __( 'Side Area', THEME_LANG),
+            'id' => 'side-widget-area',
+            'description' => __( 'The side widget area', THEME_LANG),
             'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h3 class="widget-title">',

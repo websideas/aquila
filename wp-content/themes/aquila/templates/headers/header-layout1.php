@@ -34,7 +34,7 @@ $position = kt_get_header();
 
     </div>
 
-    <?php //get_template_part( 'templates/headers/header',  'brandingalt'); ?>
+    <?php get_template_part( 'templates/headers/header',  'brandingalt'); ?>
 
     <?php
     if($position != 'below'){

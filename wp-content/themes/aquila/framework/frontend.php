@@ -57,9 +57,11 @@ function theme_setup() {
     
     if (function_exists( 'add_image_size' ) ) {
         add_image_size( 'recent_posts', 570, 355, true);
-        add_image_size( 'recent_posts_list', 570, 410, true);
+        add_image_size( 'first_featured', 670, 500, true);
+
         add_image_size( 'small', 170, 170, true );
         add_image_size( 'blog_post', 1140, 600, true );
+
         add_image_size( 'blog_post_sidebar', 1140 );
         add_image_size( 'blog_post_slider', 1460, 800, true );
     }
@@ -556,11 +558,7 @@ if ( ! function_exists( 'kt_paging_nav' ) ) :
             </nav><!-- .navigation -->
 
         <?php }else{
-            the_posts_pagination(array(
-                'prev_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Previous', THEME_LANG), '<i class="fa fa-long-arrow-left"></i>'),
-                'next_text' => sprintf('<span class="screen-reader-text">%s</span>%s', __('Next', THEME_LANG), '<i class="fa fa-long-arrow-right"></i>'),
-                'before_page_number' => '',
-            ));
+            the_posts_pagination();
         }
     }
 endif;
@@ -592,21 +590,41 @@ if ( ! function_exists( 'kt_entry_meta_categories' ) ) :
             $categories_list = get_the_category_list( _x( $separator, 'Used between list items, there is a space after the comma.', THEME_LANG ) );
             if ( $categories_list ) {
                 if($echo){
-                    printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s %3$s</span>',
+                    printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span> %2$s</span>',
                         _x( 'Categories', 'Used before category names.', THEME_LANG ),
-                        __('in', THEME_LANG),
                         $categories_list
                     );
                 }else{
-                    return sprintf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span>%2$s %3$s</span>',
+                    return sprintf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span> %2$s</span>',
                         _x( 'Categories', 'Used before category names.', THEME_LANG ),
-                        __('in', THEME_LANG),
                         $categories_list
                     );
                 }
             }
         }
     }
+endif;
+
+if ( ! function_exists( 'kt_entry_excerpt' ) ) :
+	/**
+	 * Displays the optional excerpt.
+	 *
+	 * Wraps the excerpt in a div element.
+	 *
+	 * Create your own kt_entry_excerpt() function to override in a child theme.
+	 *
+	 *
+	 * @param string $class Optional. Class string of the div element. Defaults to 'entry-summary'.
+	 */
+	function kt_entry_excerpt( $class = 'entry-summary' ) {
+		$class = esc_attr( $class );
+
+		 ?>
+			<div class="<?php echo $class; ?>">
+				<?php the_excerpt(); ?>
+			</div><!-- .<?php echo $class; ?> -->
+		<?php
+	}
 endif;
 
 if ( ! function_exists( 'kt_entry_meta_tags' ) ) :
@@ -640,7 +658,7 @@ if ( ! function_exists( 'kt_entry_meta_comments' ) ) :
         if ( !shortcode_exists( 'fbcomments' ) ) {
             if (! post_password_required() && ( comments_open() || get_comments_number() ) ) {
                 echo '<span class="comments-link">';
-                comments_popup_link( __( 'No Comments', THEME_LANG ), __( '1 Comment', THEME_LANG ), __( '% Comments', THEME_LANG ) );
+                comments_popup_link( 0, 1, '%');
                 echo '</span>';
             }
         }
@@ -691,19 +709,22 @@ endif;
 
 
 if ( ! function_exists( 'kt_get_post_views' ) ){
-    function kt_get_post_views($postID){
+    function kt_get_post_views($post_id = null){
+        global $post;
+        if(!$post_id){ $post_id = $post->ID; }
+
         $count_key = 'kt_post_views_count';
-        $count = get_post_meta($postID, $count_key, true);
+        $count = get_post_meta($post_id, $count_key, true);
 
         if( $count == '' || $count == 0 ){
-            delete_post_meta($postID, $count_key);
-            add_post_meta($postID, $count_key, '0');
+            delete_post_meta($post_id, $count_key);
+            add_post_meta($post_id, $count_key, '0');
             $count = 0;
         }
 
         $text = ($count == 0 || $count == 1) ? __('View',THEME_LANG) : __('Views',THEME_LANG);
 
-        return '<span class="post-view"><i class="fa fa-eye"></i> '.$count.' '.$text.'</span>';
+        echo  '<span class="post-view">'.$count.'<span class="screen-reader-text">'.$text.'</span></span>';
 
     }
 }
@@ -816,7 +837,7 @@ endif;
  * Share Box [share_box]
  * --------------------------------------------------------------------------- */
 if( ! function_exists( 'kt_share_box' ) ){
-    function kt_share_box($post_id = null, $style = "", $class = ''){
+    function kt_share_box($post_id = null, $style = "", $class = 'post-item-share'){
         global $post;
         if(!$post_id) $post_id = $post->ID;
 
@@ -829,50 +850,54 @@ if( ! function_exists( 'kt_share_box' ) ){
 
         $social_share = kt_option('social_share');
 
+
+
         foreach($social_share as $key => $val){
             if($val){
                 if($key == 'facebook'){
                     // Facebook
-                    $html .= '<a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.facebook.com/sharer.php?s=100&amp;p[title]=' . $title . '&amp;p[url]=' . $link.'\', \'sharer\', \'toolbar=0,status=0,width=620,height=280\');popUp.focus();return false;">';
-                    $html .= '<i class="fa fa-facebook"></i>';
-                    $html .= '</a>';
+                    $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.facebook.com/sharer.php?s=100&amp;p[title]=' . $title . '&amp;p[url]=' . $link.'\', \'sharer\', \'toolbar=0,status=0,width=620,height=280\');popUp.focus();return false;">';
+                    $html .= '<i class="fa fa-facebook"></i>'.__('Facebook', THEME_LANG);
+                    $html .= '</a></li>';
                 }elseif($key == 'twitter'){
                     // Twitter
-                    $html .= '<a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://twitter.com/home?status=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false;">';
-                    $html .= '<i class="fa fa-twitter"></i>';
-                    $html .= '</a>';
+                    $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://twitter.com/home?status=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false;">';
+                    $html .= '<i class="fa fa-twitter"></i>'.__('Twitter', THEME_LANG);
+                    $html .= '</a></li>';
                 }elseif($key == 'google_plus'){
                     // Google plus
-                    $html .= '<a class="'.$style.'" href="#" onclick="popUp=window.open(\'https://plus.google.com/share?url=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
-                    $html .= '<i class="fa fa-google-plus"></i>';
-                    $html .= "</a>";
+                    $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'https://plus.google.com/share?url=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                    $html .= '<i class="fa fa-google-plus"></i>'.__('Google+', THEME_LANG);
+                    $html .= "</a></li>";
                 }elseif($key == 'pinterest'){
                     // Pinterest
-                    $html .= '<a class="share_link" href="#" onclick="popUp=window.open(\'http://pinterest.com/pin/create/button/?url=' . $link . '&amp;description=' . $title . '&amp;media=' . urlencode($image[0]) . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
-                    $html .= '<i class="fa fa-pinterest"></i>';
-                    $html .= "</a>";
+                    $html .= '<li><a class="share_link" href="#" onclick="popUp=window.open(\'http://pinterest.com/pin/create/button/?url=' . $link . '&amp;description=' . $title . '&amp;media=' . urlencode($image[0]) . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                    $html .= '<i class="fa fa-pinterest"></i>'.__('Pinterest', THEME_LANG);
+                    $html .= "</a></li>";
                 }elseif($key == 'linkedin'){
                     // linkedin
-                    $html .= '<a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://linkedin.com/shareArticle?mini=true&amp;url=' . $link . '&amp;title=' . $title. '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
-                    $html .= '<i class="fa fa-linkedin"></i>';
-                    $html .= "</a>";
+                    $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://linkedin.com/shareArticle?mini=true&amp;url=' . $link . '&amp;title=' . $title. '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                    $html .= '<i class="fa fa-linkedin"></i>'.__('LinkedIn', THEME_LANG);
+                    $html .= "</a></li>";
                 }elseif($key == 'tumblr'){
                     // Tumblr
-                    $html .= '<a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.tumblr.com/share/link?url=' . $link . '&amp;name=' . $title . '&amp;description=' . $excerpt . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
-                    $html .= '<i class="fa fa-tumblr"></i>';
-                    $html .= "</a>";
+                    $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.tumblr.com/share/link?url=' . $link . '&amp;name=' . $title . '&amp;description=' . $excerpt . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
+                    $html .= '<i class="fa fa-tumblr"></i>'.__('Tumblr', THEME_LANG);
+                    $html .= "</a></li>";
                 }elseif($key == 'email'){
                     // Email
-                    $html .= '<a class="'.$style.'" href="mailto:?subject='.$title.'&amp;body='.$link.'">';
-                    $html .= '<i class="fa fa-envelope-o"></i>';
-                    $html .= "</a>";
+                    $html .= '<li><a class="'.$style.'" href="mailto:?subject='.$title.'&amp;body='.$link.'">';
+                    $html .= '<i class="fa fa-envelope-o"></i>'.__('Mail', THEME_LANG);
+                    $html .= "</a></li>";
                 }
             }
         }
 
+
+
         if($html){
             printf(
-                '<div class="entry-share-box %s">%s</div>',
+                '<div class="%s"> <a href="#">5</a><ul>%s</ul></div>',
                 $class,
                 $html
             );

@@ -377,18 +377,27 @@ if (!function_exists('kt_show_slideshow')) {
                     $slider_option = '{"arrows": true, "asNavFor": ".blog-posts-thumb"}';
                     $slider_thumbnail .= '<div class="blog-posts-thumb">';
                 }elseif($style == 'slider'){
-
+                    $slider_class[] = 'slideAnimation';
                 }
 
                 while ( $query->have_posts() ) {
                     $query->the_post();
                     $slider_content = '';
+
                     if($style != 'thumb'){
+                        $content_class = '';
+                        if($style == 'slider'){
+                            $content_class = 'slider container';
+                        }
+
                         $slider_content = sprintf(
-                            '<div class="article-post-content"><div class="article-post-inner">%1$s %2$s</div></div>',
+                            '<div class="article-post-content%1$s"><div class="article-post-inner">%2$s %3$s</div></div>',
+                            $content_class,
                             '<h3><a href="'.get_the_permalink().'">'.get_the_title().'</a></h3>',
                             '<div class="article-post-meta">'.get_the_author().' - '. get_the_date().'</div>'
                         );
+
+
                     }
 
                     if($style == 'slider'){

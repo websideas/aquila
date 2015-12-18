@@ -514,3 +514,25 @@ function theme_after_footer_add_popup(){
         <?php
     }
 }
+
+
+add_filter('navigation_markup_template', 'kt_navigation_markup_template', 10, 2);
+function kt_navigation_markup_template($template, $class){
+    $disable_next = $disable_prev = '';
+    if ( !get_previous_posts_link() ) {
+        $disable_prev = '<span class="page-numbers prev disable">'._x( 'Previous', 'previous post' ).'</span>';
+    }
+    if ( !get_next_posts_link() ) {
+        $disable_next = '<span class="page-numbers next disable">'._x( 'Next', 'next post' ).'</span>';
+    }
+
+    $template = '
+	<nav class="navigation %1$s" role="navigation">
+		<h2 class="screen-reader-text">%2$s</h2>
+		<div class="nav-links">'.$disable_prev.'%3$s'.$disable_next.'</div>
+	</nav>';
+    return $template;
+}
+
+
+

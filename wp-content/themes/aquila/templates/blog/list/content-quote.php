@@ -1,24 +1,15 @@
-<?php $classes = array('post-item post-layout-1 clearfix', $blog_atts['class']); ?>
-<?php //print_r($blog_atts); ?>
-<div <?php post_class($classes); ?>>
-    <div class="list-media-wrapper">
-        <?php if($blog_atts['show_meta']){ ?>
-            <div class="entry-meta-data meta-date">
-                <?php
-                    if($blog_atts['show_date']){
-                        kt_entry_meta_time($blog_atts['date_format']);
-                    }
-                ?>
-            </div><!-- .entry-meta-data -->
-        <?php } ?>
-        <?php
-            if($blog_atts['thumbnail_type'] == 'image'){
-                kt_post_thumbnail_image('recent_posts_list', 'img-responsive');
-            }else{
-                kt_post_thumbnail('recent_posts_list', 'img-responsive');
-            }
-        ?>
-    </div>
+<?php
+    $classes = array('post-item post-layout-classic', $blog_atts['class']);
+?>
+<article <?php post_class($classes); ?>>
+
+    <?php
+    if($blog_atts['thumbnail_type'] == 'image'){
+        kt_post_thumbnail_image('blog_post', 'img-responsive');
+    }else{
+        kt_post_thumbnail('blog_post', 'img-responsive');
+    }
+    ?>
     <?php if($blog_atts['thumbnail_type'] == 'image'){ ?>
         <div class="entry-main-content">
 
@@ -37,6 +28,9 @@
                             if($blog_atts['show_comment']){
                                 kt_entry_meta_comments();
                             }
+                            if($blog_atts['show_date']){
+                                kt_entry_meta_time($blog_atts['date_format']);
+                            }
                             if($blog_atts['show_like_post']){
                                 kt_like_post();
                             }
@@ -45,25 +39,16 @@
                     <?php } ?>
                     <?php if($blog_atts['show_excerpt']){ ?>
                         <div class="entry-excerpt">
-                            <?php the_excerpt(); ?>
+                            <?php
+                            the_content(sprintf(
+                                __('Read more %s', THEME_LANG),
+                                the_title('<span class="screen-reader-text">', '</span>', false)
+                            ));
+                            ?>
                         </div><!-- .entry-excerpt -->
                     <?php } ?>
-                    <?php if($blog_atts['readmore']){ ?>
-                        <?php $moreclass = ( $blog_atts['readmore'] == 'link' ) ? 'readmore-link' : 'btn '.$blog_atts['readmore']; ?>
-                        <div class="entry-more">
-                            <?php
-                            printf( '<a href="%1$s" class="%2$s">%3$s</a>',
-                                esc_url( get_permalink( get_the_ID() ) ),
-                                $moreclass,
-                                sprintf( __( 'Read more %s', THEME_LANG ), '<span class="screen-reader-text">' . get_the_title( get_the_ID() ) . '</span>' )
-                            );
-                            ?>
-                        </div>
-                    <?php } ?>
                 </div>
-
             </div>
         </div>
     <?php } ?>
-
-</div>
+</article>

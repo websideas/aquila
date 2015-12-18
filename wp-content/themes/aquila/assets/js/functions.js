@@ -89,6 +89,18 @@
         });
 
 
+        $('body')
+            .on('click','.menu-bars-link',function(e){
+                e.preventDefault();
+                $('body').addClass('open-sidearea');
+            })
+            .on('click','#close-side-slideout-right',function(e){
+                e.preventDefault();
+                $('body').removeClass('open-sidearea');
+            });
+
+
+
 
     });
     
@@ -99,9 +111,9 @@
             /**==============================
              ***  Sticky header
              ===============================**/
-            //$('.header-container.sticky-header').ktSticky({
+            $('.header-container.sticky-header').ktSticky({
                 //contentSticky : '#header-inner'
-            //});
+            });
         }
 
         if ($.fn.ktFooter) {
