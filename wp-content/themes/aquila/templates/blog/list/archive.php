@@ -7,7 +7,7 @@ $settings = kt_get_settings_archive();
 global $wp_query;
 $i = 1;
 
-$sidebar = array('sidebar' => '', 'sidebar_area' => 'primary-widget-area');
+$sidebar = array('sidebar' => 'right', 'sidebar_area' => 'primary-widget-area');
 
 
 echo '<div class="row main">';

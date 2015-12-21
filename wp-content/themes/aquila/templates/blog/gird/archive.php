@@ -5,7 +5,7 @@ $sidebar = kt_get_archive_sidebar();
 $settings = kt_get_settings_archive();
 
 global $wp_query;
-$i = $j = 1;
+$i = 1;
 
 $column = 2;
 $first_featured = true;

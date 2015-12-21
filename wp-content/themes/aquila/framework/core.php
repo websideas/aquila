@@ -84,8 +84,6 @@ require_once ( FW_EXT_DIR .'shortcodes/shortcodes.php' );
 define( 'RWMB_URL', trailingslashit( FW_EXT_URL . 'meta-box' ) );
 define( 'RWMB_DIR', trailingslashit( FW_EXT_DIR . 'meta-box' ) );
 
-
-
 require_once (RWMB_DIR . 'meta-box.php');
 
 if ( class_exists( 'RW_Meta_Box' ) && is_admin() ) {
@@ -98,10 +96,6 @@ if ( class_exists( 'RW_Meta_Box' ) && is_admin() ) {
 
     // Add plugin meta-box-tabs
     require_once (FW_EXT_DIR . 'meta-box-tabs/meta-box-tabs.php');
-
-    // Add plugin meta-box-group
-    require_once (FW_EXT_DIR . 'meta-box-group/meta-box-group.php');
-
 
     // Add plugin meta-box-conditional-logic
     define( 'MBC_URL', trailingslashit( FW_EXT_URL . 'meta-box-conditional-logic' ) );
@@ -116,12 +110,6 @@ if ( class_exists( 'RW_Meta_Box' ) && is_admin() ) {
  * Include the redux-framework.
  * 
  */
-
-if ( !class_exists( 'ReduxFramework' ) && file_exists( FW_EXT_DIR . 'ReduxCore/framework.php' ) ) {
-    require_once( FW_EXT_DIR . 'ReduxCore/framework.php' );
-}
-
-
 
 if(!function_exists('redux_register_custom_extension_loader')) :
 	function redux_register_custom_extension_loader($ReduxFramework) {
@@ -212,9 +200,6 @@ function kt_vcSetAsTheme() {
 if ( class_exists( 'Vc_Manager', false ) ) {
 
 
-    /* Insert icon to parrams icons */
-    require_once(FW_DATA . 'data-icons.php');
-
     if ( ! function_exists( 'js_composer_bridge_admin' ) ) {
 		function js_composer_bridge_admin( $hook ) {
 			wp_enqueue_style( 'js_composer_bridge', FW_CSS . 'js_composer_bridge.css', array(), FW_VER );
@@ -234,14 +219,6 @@ if ( class_exists( 'Vc_Manager', false ) ) {
         }
 	}
     add_action( 'init', 'kt_js_composer_bridge', 20 );
-
-    /**
-     * Include js_composer update param
-     *
-     */
-    require_once ( FW_DIR . 'js_composer/js_composer_update.php' );
-
-
 
 
 }

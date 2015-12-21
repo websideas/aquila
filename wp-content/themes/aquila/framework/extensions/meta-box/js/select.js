@@ -37,7 +37,7 @@ jQuery( function ( $ )
 				}
 				else
 				{
-					$element.val([]).trigger( 'change' );
+					$element.val( '' );
 				}
 			} );
 		},

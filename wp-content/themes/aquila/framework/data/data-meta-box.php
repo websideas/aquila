@@ -28,7 +28,6 @@ function kt_register_meta_boxes( $meta_boxes )
      * For Post Audio
      *
      */
-
     $meta_boxes[] = array(
         'title'  => __('Audio Settings',THEME_LANG),
         'pages'  => array( 'post' ),
@@ -52,7 +51,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type'             => 'file_advanced',
                 'max_file_uploads' => 1,
                 'mime_type'        => 'audio', // Leave blank for all file types
-                'compare' => array($prefix . 'audio_type','=', 'upload' ),
+                'visible' => array($prefix . 'audio_type', '=', 'upload')
             ),
             array(
                 'name' => __( 'Soundcloud', THEME_LANG ),
@@ -61,7 +60,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'textarea',
                 'cols' => 20,
                 'rows' => 3,
-                'compare' => array($prefix . 'audio_type','=', 'soundcloud' ),
+                'visible' => array($prefix . 'audio_type', '=', 'soundcloud')
             ),
         ),
     );
@@ -96,14 +95,14 @@ function kt_register_meta_boxes( $meta_boxes )
                     'youtube' => __('Youtube', THEME_LANG),
                     'vimeo' => __('Vimeo', THEME_LANG),
                 ),
-                'compare' => array($prefix . 'video_type','=', 'external' ),
+                'visible' => array($prefix . 'video_type', '=', 'external')
             ),
             array(
                 'name' => __( 'Video id', THEME_LANG ),
                 'id' => $prefix . 'video_id',
                 'desc' => sprintf( __( 'Enter id of video .Example: <br />- Link video youtube: https://www.youtube.com/watch?v=nPOO1Coe2DI id of video: nPOO1Coe2DI <br /> -Link vimeo: https://vimeo.com/70296428 id video: 70296428.', THEME_LANG ) ),
                 'type'  => 'text',
-                'compare' => array($prefix . 'video_type','=', 'external' ),
+                'visible' => array($prefix . 'video_type', '=', 'external')
             ),
         ),
     );
@@ -162,7 +161,7 @@ function kt_register_meta_boxes( $meta_boxes )
      * For Link
      *
      */
-
+    /*
     $meta_boxes[] = array(
         'title'  => __('Link Settings',THEME_LANG),
         'pages'  => array( 'post' ),
@@ -179,6 +178,7 @@ function kt_register_meta_boxes( $meta_boxes )
 
         ),
     );
+    */
 
     /**
      * For Quote

@@ -32,7 +32,7 @@ function theme_setup() {
     /**
 	 * Enable support for Post Formats
 	 */
-	add_theme_support( 'post-formats', array('gallery', 'link', 'image', 'quote', 'video', 'audio') );
+	add_theme_support( 'post-formats', array('gallery', 'image', 'quote', 'video', 'audio') );
 
     /*
     * Let WordPress manage the document title.

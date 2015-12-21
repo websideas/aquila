@@ -1,4 +1,4 @@
-<article <?php post_class('post-item-medium'); ?>>
+<article <?php post_class(); ?>>
     <div class="row row-eq-height">
         <div class="col-md-6">
             <?php the_post_thumbnail('first_featured'); ?>

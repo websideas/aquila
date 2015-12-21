@@ -50,6 +50,11 @@ function kt_register_plugins() {
             'external_url'      => '', // If set, overrides default API URL and points to an external URL
         ),
         array(
+            'name' => 'Redux - Options framework',
+            'slug' => 'redux-framework',
+            'required' => true,
+        ),
+        array(
             'name' => 'Contact Form 7',
             'slug' => 'contact-form-7',
             'required' => false,
