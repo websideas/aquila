@@ -1,35 +1,24 @@
 <?php
 
-
-$sidebar = kt_get_archive_sidebar();
-$settings = kt_get_settings_archive();
-
 global $wp_query;
-$i = 1;
 
 $column = 2;
 $first_featured = true;
 $sidebar = array('sidebar' => 'right', 'sidebar_area' => 'primary-widget-area');
 
-
-
 $article_column = 12/$column;
 
-
+$i = 1;
 while ( have_posts() ) : the_post();
-
-
     if($i == 1){
         if($first_featured){
-            get_template_part( 'templates/blog/gird/content', 'featured');
-
+            get_template_part( 'templates/blog/gird/content', 'first');
         }
         echo '<div class="row main">';
-
         $main_column = ($sidebar['sidebar']) ? '8' : '12';
-        $sidebar_class = ($sidebar['sidebar'] == 'left') ? 'pull-right' : '';
-
-        echo '<div class="col-md-'.$main_column.' '.$sidebar_class.'"><div class="row main-content multi-columns-row">';
+        $sidebar_class = ($sidebar['sidebar']) ? 'sidebar-'.$sidebar['sidebar'] : 'no-sidebar';
+        $pull_class = ($sidebar['sidebar'] == 'left') ? 'pull-right' : '';
+        echo '<div class="col-md-'.$main_column.' '.$sidebar_class.' '.$pull_class.'"><div class="row main-content multi-columns-row blog-posts-gird">';
 
         if(!$first_featured){
             printf('<div class="col-lg-%1$s col-md-%1$s">', $article_column);
@@ -53,8 +42,6 @@ while ( have_posts() ) : the_post();
             dynamic_sidebar('primary-widget-area');
             echo '</div>';
         }
-
-
         echo '</div><!-- .main -->';
     }
 

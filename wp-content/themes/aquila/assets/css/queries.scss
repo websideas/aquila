@@ -27,6 +27,22 @@ only screen and (min-resolution: 144dpi) {
   .site-branding .site-logo.retina-logo-wrapper .retina-logo{ display: block; }
   .site-branding .site-logo.retina-logo-wrapper .default-logo { display: none; }
 }
+
+
+@media (min-width: 1200px) {
+  .blog-posts-medium {
+    .no-sidebar &{
+      .post-item-thumb{
+        width: 58.3333%;
+      }
+      .post-item-info{
+        width: 41.6667%;
+      }
+    }
+  }
+}
+
+
 /* 2. Styles for devices(<=1199px) */
 @media (max-width: 1199px) {
 
@@ -50,3 +66,5 @@ only screen and (min-resolution: 144dpi) {
 @media (max-width: 480px) {
 
 }
+
+

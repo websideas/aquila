@@ -146,7 +146,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'visible' => array($prefix . 'gallery_type','=', 'layerslider' ),
             ),
             array(
-                'name' => __( 'Gallery images', 'your-prefix' ),
+                'name' => __( 'Gallery images', THEME_LANG ),
                 'id'  => "{$prefix}gallery_images",
                 'type' => 'image_advanced',
                 'desc' => __( "You can drag and drop for change order image", THEME_LANG ),

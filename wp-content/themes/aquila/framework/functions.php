@@ -535,13 +535,5 @@ function kt_navigation_markup_template($template, $class){
 }
 
 
-add_filter('post_class', 'kt_post_class', 10, 3);
-function kt_post_class($classes, $class, $post_id){
-    $featured = get_post_meta(get_the_ID(), '_kt_post_featured', true);
-    if($featured){
-        $classes[] = 'post-item-featured';
-    }
-    return $classes;
-}
 
 

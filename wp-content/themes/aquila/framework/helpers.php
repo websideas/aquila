@@ -397,7 +397,6 @@ if (!function_exists('kt_show_slideshow')) {
                             '<div class="article-post-meta">'.get_the_author().' - '. get_the_date().'</div>'
                         );
 
-
                     }
 
                     if($style == 'slider'){
@@ -844,23 +843,5 @@ if(!function_exists('video_vimeo')) {
     function video_vimeo($video_id, $args = 'title=0&amp;byline=0&amp;portrait=0?wmode=transparent')
     {
         return '<iframe src="http://player.vimeo.com/video/' . $video_id . '?'.$args.'"></iframe>';
-    }
-}
-
-
-if(!function_exists('video_embed')) {
-    /**
-     * Video Embed
-     *
-     * @param $video_id
-     * @return string
-     */
-    function video_embed($video_id)
-    {
-        if (rwmb_meta('_kt_choose_video') == 'youtube') {
-            return video_youtube($video_id);
-        } else {
-            return video_vimeo($video_id);
-        }
     }
 }

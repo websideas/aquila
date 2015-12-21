@@ -1,15 +1,14 @@
 <?php
 
-
 global $wp_query;
-$i = 1;
 
-$column = 2;
+
 $first_featured = true;
-$sidebar = array('sidebar' => 'right', 'sidebar_area' => 'primary-widget-area');
+$sidebar = array('sidebar' => 'left', 'sidebar_area' => 'primary-widget-area');
 $article_column = 12;
 
 
+$i = 1;
 while ( have_posts() ) : the_post();
 
     if($i == 1){
@@ -19,9 +18,9 @@ while ( have_posts() ) : the_post();
         echo '<div class="row main">';
 
         $main_column = ($sidebar['sidebar']) ? '8' : '12';
-        $sidebar_class = ($sidebar['sidebar'] == 'left') ? 'pull-right' : '';
-
-        echo '<div class="col-md-'.$main_column.' '.$sidebar_class.'"><div class="row main-content blog-posts-medium">';
+        $sidebar_class = ($sidebar['sidebar']) ? 'sidebar-'.$sidebar['sidebar'] : 'no-sidebar';
+        $pull_class = ($sidebar['sidebar'] == 'left') ? 'pull-right' : '';
+        echo '<div class="col-md-'.$main_column.' '.$sidebar_class.' '.$pull_class.'"><div class="row main-content blog-posts-medium">';
 
         if(!$first_featured){
             printf('<div class="col-lg-%1$s col-md-%1$s">', $article_column);
@@ -51,8 +50,6 @@ while ( have_posts() ) : the_post();
             dynamic_sidebar('primary-widget-area');
             echo '</div>';
         }
-
-
         echo '</div><!-- .main -->';
     }
 
@@ -60,9 +57,7 @@ while ( have_posts() ) : the_post();
     // End the loop.
 endwhile;
 
-
-
 if($wp_query->post_count == 1){
     // Previous/next page navigation.
-    kt_paging_nav($settings['blog_pagination']);
+    kt_paging_nav();
 }

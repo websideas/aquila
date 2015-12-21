@@ -182,10 +182,20 @@
      Masonry
      --------------------------------------------- */
     function init_masonry(){
-        $(".blog-posts-masonry .row").each(function(){
+        $(".blog-posts-masonry").each(function(){
             var $masonry = $(this);
             $masonry.imagesLoaded(function(){
                 $masonry.isotope({
+                    itemSelector: '.article-post-item'
+                });
+            });
+        });
+
+
+        $('.gallery-images').each(function(){
+            var $gallery_masonry = $(this);
+            $gallery_masonry.imagesLoaded(function(){
+                $gallery_masonry.isotope({
                     itemSelector: '.article-post-item'
                 });
             });

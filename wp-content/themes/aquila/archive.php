@@ -15,7 +15,7 @@ get_header(); ?>
         <div class='blog-posts'>
             <?php
             do_action('before_blog_posts_loop');
-            get_template_part( 'templates/blog/medium/archive');
+            get_template_part( 'templates/blog/list/archive');
             do_action('after_blog_posts_loop');
             ?>
         </div><!-- .blog-posts -->

@@ -32,7 +32,7 @@ function theme_setup() {
     /**
 	 * Enable support for Post Formats
 	 */
-	add_theme_support( 'post-formats', array('gallery', 'image', 'quote', 'video', 'audio') );
+	add_theme_support( 'post-formats', array('gallery', 'quote', 'video', 'audio') );
 
     /*
     * Let WordPress manage the document title.
@@ -57,6 +57,7 @@ function theme_setup() {
     
     if (function_exists( 'add_image_size' ) ) {
         add_image_size( 'recent_posts', 570, 355, true);
+        add_image_size( 'recent_posts_masonry', 570);
         add_image_size( 'first_featured', 670, 500, true);
 
         add_image_size( 'small', 170, 170, true );

@@ -1,39 +1,84 @@
-<article <?php post_class(); ?>>
-    <div class="row row-eq-height">
-        <div class="col-md-6">
-            <?php the_post_thumbnail('first_featured'); ?>
-        </div>
-        <div class="col-md-6">
-            <?php
-            the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
+<article <?php post_class('post-item-featured'); ?>>
+    <?php
+    $post_id = get_the_ID();
+    $type = get_post_meta($post_id, '_kt_gallery_type', true);
+    ?>
 
-            kt_entry_excerpt();
-            ?>
+    <?php if($type == 'gird'){ ?>
+        <div class="row row-eq-height">
+            <div class="col-md-6 post-item-thumb">
+                <?php the_post_thumbnail('first_featured'); ?>
+            </div>
+            <div class="col-md-6 post-item-info">
+                <?php
+                the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );
+                kt_entry_excerpt();
+                ?>
+            </div>
         </div>
-    </div>
+    <?php }else{ ?>
+        <div class="post-info-featured">
+            <div class="post-info-featured-inner">
+                <?php
+                the_title( sprintf( '<h3 class="entry-title-featured"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );
+                echo '<div class="post-item-meta-featured">';
+                kt_entry_meta_author();
+                kt_entry_meta_time();
+                echo '</div><!-- .post-item-meta-featured -->';
+                ?>
+            </div><!-- .post-info-featured-inner -->
+        </div><!-- .post-info-featured -->
+    <?php } ?>
     <?php
 
-    $images = get_galleries_post('_kt_gallery_images', 'small');
-    $gallery = '';
-    if($images){
-        $i = 1;
-        foreach($images as $image){
-            $gallery .= sprintf(
-                '<div class="%s">%s</div>',
-                'col-md-3',
-                '<img src="'.$image['url'].'" title="'.esc_attr($image['title']).'" alt="'.esc_attr($image['alt']).'">'
-            );
-            if($i == 4){
-                break;
+    if($type == 'slider' ||!$type){
+
+        $images = get_galleries_post('_kt_gallery_images', 'blog_post');
+        if($images){
+            $slider_class = array('blog-posts-slick');
+            $slider_option = '{"arrows": false}';
+            $slider_html = '';
+            foreach($images as $image){
+                $slider_html .= sprintf(
+                    '<div class="gallery-slider-item">%1$s</div>',
+                    '<img src="'.$image['url'].'" title="'.esc_attr($image['title']).'" alt="'.esc_attr($image['alt']).'">'
+                );
             }
-            $i++;
+            printf(
+                '<div class="%1$s" data-slick=\'%2$s\'>%3$s</div>',
+                implode(' ', $slider_class),
+                esc_attr($slider_option),
+                $slider_html
+            );
+
         }
-        printf(
-            '<div class="%s">%s</div>',
-            'row gallery-images',
-            $gallery
-        );
+
+
+
+
+    }elseif($type == 'gird'){
+        $images = get_galleries_post('_kt_gallery_images', 'small');
+        $gallery = '';
+        if($images){
+            foreach($images as $image){
+                $gallery .= sprintf(
+                    '<div class="%s">%s</div>',
+                    'gallery-image-item',
+                    '<a href="'.$image['full_url'].'"><img src="'.$image['url'].'" title="'.esc_attr($image['title']).'" alt="'.esc_attr($image['alt']).'"></a>'
+                );
+            }
+            printf(
+                '<div class="%s">%s</div>',
+                'gallery-images clearfix',
+                $gallery
+            );
+        }
+    }elseif($type == 'revslider'){
+
+    }elseif($type == 'layerslider'){
+
     }
+
     ?>
 
 </article>
