@@ -10,7 +10,7 @@ if ( !defined('ABSPATH')) exit;
  * @see kt_content_width() for template-specific adjustments.
  */
 if ( ! isset( $content_width ) )
-	$content_width = 1170;
+	$content_width = 1140;
 
 
 
@@ -22,13 +22,26 @@ function theme_setup() {
     /**
      * Editor style.
      */
-    add_editor_style();
+    add_editor_style( array( 'assets/css/editor-style.css') );
     
     /**
 	 * Add default posts and comments RSS feed links to head
 	 */
 	add_theme_support( 'automatic-feed-links' );
-    
+
+    /*
+	 * Switch default core markup for search form, comment form, and comments
+	 * to output valid HTML5.
+	 */
+	add_theme_support( 'html5', array(
+		'search-form',
+		'comment-form',
+		'comment-list',
+		'gallery',
+		'caption',
+	) );
+
+
     /**
 	 * Enable support for Post Formats
 	 */
@@ -95,9 +108,7 @@ function kt_add_scripts() {
 
     wp_enqueue_style( 'mediaelement-style', get_stylesheet_uri(), array('mediaelement', 'wp-mediaelement') );
     wp_enqueue_style( 'bootstrap-css', THEME_LIBS . 'bootstrap/css/bootstrap.css', array());
-    wp_enqueue_style( 'font-Poppins', THEME_FONTS . 'Poppins/stylesheet.css', array());
     wp_enqueue_style( 'font-awesome', THEME_FONTS . 'font-awesome/css/font-awesome.min.css', array());
-    wp_enqueue_style( 'icomoon_theme', THEME_FONTS . 'Lineicons/style.css', array());
     wp_enqueue_style( 'plugins', THEME_CSS . 'plugins.css', array());
 
 	// Load our main stylesheet.
@@ -115,7 +126,7 @@ function kt_add_scripts() {
     wp_register_script('google-maps-api','http://maps.googleapis.com/maps/api/js?sensor=false', array( 'jquery' ), null, false);
     wp_enqueue_script( 'bootstrap-script', THEME_LIBS . 'bootstrap/js/bootstrap.min.js', array( 'jquery' ), null, true );
     wp_enqueue_script( 'plugins-script', THEME_JS . 'plugins.js', array( 'jquery' ), null, true );
-    wp_enqueue_script( 'main-script', THEME_JS . 'functions.js', array( 'jquery', 'mediaelement', 'wp-mediaelement' ), null, true );
+    wp_enqueue_script( 'main-script', THEME_JS . 'functions.js', array( 'jquery', 'mediaelement', 'wp-mediaelement', 'jquery-ui-tabs' ), null, true );
 
 
     global $wp_query;
@@ -152,35 +163,6 @@ add_filter( 'excerpt_length', 'kt_excerpt_length', 99 );
 
 
 
-if ( ! function_exists( 'kt_comment_nav' ) ) :
-    /**
-     * Display navigation to next/previous comments when applicable.
-     *
-     */
-    function kt_comment_nav() {
-        // Are there comments to navigate through?
-        if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
-            ?>
-            <nav class="navigation comment-navigation clearfix">
-                <h2 class="screen-reader-text"><?php _e( 'Comment navigation', THEME_LANG ); ?></h2>
-                <div class="nav-links">
-                    <?php
-
-                    if ( $prev_link = get_previous_comments_link( '<i class="fa fa-angle-double-left"></i> '.__( 'Older Comments', THEME_LANG ) ) ) :
-                        printf( '<div class="nav-previous">%s</div>', $prev_link );
-                    endif;
-
-                    if ( $next_link = get_next_comments_link( '<i class="fa fa-angle-double-right"></i> '.__( 'Newer Comments',  THEME_LANG ) ) ) :
-                        printf( '<div class="nav-next">%s</div>', $next_link );
-                    endif;
-
-                    ?>
-                </div><!-- .nav-links -->
-            </nav><!-- .comment-navigation -->
-        <?php
-        endif;
-    }
-endif;
 
 function kt_get_post_thumbnail_url($size = 'post-thumbnail', $post_id = null){
     global $post;
@@ -251,23 +233,24 @@ if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
 
     }
 endif;
-
+/**
+ * Display an optional post thumbnail.
+ *
+ * Wraps the post thumbnail in an anchor element on index views, or a div
+ * element when on single views.
+ *
+ */
 
 if ( ! function_exists( 'kt_post_thumbnail' ) ) :
-    /**
-     * Display an optional post thumbnail.
-     *
-     * Wraps the post thumbnail in an anchor element on index views, or a div
-     * element when on single views.
-     *
-     */
-    function kt_post_thumbnail($size = 'post-thumbnail', $class_img = '', $link = true, $placeholder = true) {
+
+    function kt_post_thumbnail($size = 'post-thumbnail', $class_img = '', $link = true) {
         if ( post_password_required() || is_attachment()) {
             return;
         }
         $format = get_post_format();
+        $post_id = get_the_ID();
 
-        if(has_post_thumbnail() && ($format == '' || $format == 'image')){ ?>
+        if(has_post_thumbnail() && $format == ''){ ?>
 
             <?php if ( $link ){ ?>
                 <a href="<?php the_permalink(); ?>" aria-hidden="true" class="entry-thumb">
@@ -280,54 +263,54 @@ if ( ! function_exists( 'kt_post_thumbnail' ) ) :
             <?php }else{ ?>
                 </div><!-- .entry-thumb -->
             <?php } ?>
-
-        <?php }elseif(!has_post_thumbnail() && ($format == '' || $format == 'image') && $placeholder){ ?>
-            <?php $image = apply_filters( 'kt_placeholder', $size ); ?>
-            <?php if ( $link ){ ?>
-                <a href="<?php the_permalink(); ?>" aria-hidden="true" class="entry-thumb no-image">
-            <?php }else{ ?>
-                <div class="entry-thumb no-image">
-            <?php } ?>
-
-            <?php
-                printf(
-                    '<img src="%s" alt="%s" class="%s"/>',
-                    $image,
-                    __('No image', THEME_LANG),
-                    $class_img
-                );
-            ?>
-            <?php if ( $link ){ ?>
-                </a>
-            <?php }else{ ?>
-                </div><!-- .entry-thumb -->
-            <?php } ?>
         <?php }elseif($format == 'gallery'){
-            $type = rwmb_meta('_kt_gallery_type');
-            if($type == 'rev' && class_exists( 'RevSlider' )){
+            $type = get_post_meta($post_id, '_kt_gallery_type', true);
+            if($type == 'slider' ||!$type){
+                $images = get_galleries_post('_kt_gallery_images', 'blog_post');
+                if($images){
+                    $slider_class = array('blog-posts-slick');
+                    $slider_option = '{}';
+                    $slider_html = '';
+                    foreach($images as $image){
+                        $slider_html .= sprintf(
+                            '<div class="gallery-slider-item">%1$s</div>',
+                            '<img src="'.$image['url'].'" title="'.esc_attr($image['title']).'" alt="'.esc_attr($image['alt']).'">'
+                        );
+                    }
+                    printf(
+                        '<div class="entry-thumb"><div class="%1$s" data-slick=\'%2$s\'>%3$s</div></div><!-- .entry-thumb -->',
+                        implode(' ', $slider_class),
+                        esc_attr($slider_option),
+                        $slider_html
+                    );
+                }
+            }elseif($type == 'gird'){
+                $images = get_galleries_post('_kt_gallery_images', 'small');
+                $gallery = '';
+                if($images){
+                    foreach($images as $image){
+                        $gallery .= sprintf(
+                            '<div class="%s">%s</div>',
+                            'gallery-image-item',
+                            '<a href="'.$image['full_url'].'"><img src="'.$image['url'].'" title="'.esc_attr($image['title']).'" alt="'.esc_attr($image['alt']).'"></a>'
+                        );
+                    }
+                    printf(
+                        '<div class="entry-thumb"><div class="%s">%s</div></div><!-- .entry-thumb -->',
+                        'gallery-images clearfix',
+                        $gallery
+                    );
+                }
+            }elseif($type == 'revslider' && class_exists( 'RevSlider' )){
                 if ($rev = rwmb_meta('_kt_gallery_rev_slider')) {
                     echo '<div class="entry-thumb">';
                     putRevSlider($rev);
                     echo '</div><!-- .entry-thumb -->';
                 }
-            }elseif($type == 'layer' && is_plugin_active( 'LayerSlider/layerslider.php' ) ) {
+            }elseif($type == 'layerslider' && is_plugin_active( 'LayerSlider/layerslider.php' )){
                 if($layerslider = rwmb_meta('_kt_gallery_layerslider')){
                     echo '<div class="entry-thumb">';
                     echo do_shortcode('[layerslider id="'.rwmb_meta('_kt_gallery_layerslider').'"]');
-                    echo '</div><!-- .entry-thumb -->';
-                }
-            }elseif($type == ''){
-                $images = get_galleries_post('_kt_gallery_images', $size);
-                if($images){
-                    echo '<div class="entry-thumb">';
-                    $galleries_html = '';
-                    foreach($images as $image){
-                        $galleries_html .= '<div class="recent-posts-item"><img src="'.$image['url'].'" alt="" /></div>';
-                    }
-                    $atts = array( "pagination"=> false, "navigation"=> false, "desktop"=> 1, "desktopsmall" => 1, "tablet" => 1, "mobile" => 1);
-                    $carousel_ouput = kt_render_carousel($atts);
-                    echo str_replace('%carousel_html%', $galleries_html, $carousel_ouput);
-
                     echo '</div><!-- .entry-thumb -->';
                 }
             }
@@ -345,25 +328,37 @@ if ( ! function_exists( 'kt_post_thumbnail' ) ) :
                 }
 
             }elseif($type == 'external'){
-                if($video_link = rwmb_meta('_kt_video_id')){
-                    $embed = video_embed( $video_link );
-                    echo '<div class="entry-thumb"><div class="embed-responsive embed-responsive-16by9">'.do_shortcode($embed).'</div></div><!-- .entry-thumb -->';
+
+                $video = get_post_meta($post_id, '_kt_choose_video', true);
+                $video_id = get_post_meta($post_id, '_kt_video_id', true);
+
+                if($video == 'youtube'){
+                    printf(
+                        '<div class="entry-thumb"><div class="embed-responsive embed-responsive-16by9">%s</div></div><!-- .entry-thumb -->',
+                        video_youtube($video_id)
+                    );
+                }elseif($video == 'vimeo'){
+                    printf(
+                        '<div class="entry-thumb"><div class="embed-responsive embed-responsive-16by9">%s</div></div><!-- .entry-thumb -->',
+                        video_vimeo($video_id)
+                    );
                 }
             }
         }elseif($format == 'audio'){
             $type = rwmb_meta('_kt_audio_type');
             if($type == 'upload'){
                 if($audios = rwmb_meta('_kt_audio_mp3', 'type=file')){
+
+                    printf(
+                        '<div class="entry-thumb entry-thumb-audio" style="%s">',
+                        "background-image: url('".get_the_post_thumbnail_url()."');"
+                    );
                     foreach($audios as $audio) {
-                        echo '<div class="entry-thumb">';
-                            if(has_post_thumbnail()){
-                                the_post_thumbnail( $size, array( 'alt' => get_the_title(), 'class' => $class_img ) );
-                            }
-                            echo '<div class="entry-thumb-audio">';
-                            echo do_shortcode('[audio src="'.$audio['url'].'"][/audio]');
-                            echo '</div><!-- .entry-thumb-audio -->';
-                        echo '</div><!-- .entry-thumb -->';
+                        echo do_shortcode('[audio src="'.$audio['url'].'"][/audio]');
+                        break;
                     }
+                    echo '</div><!-- .entry-thumb-audio -->';
+
                 }
             } elseif( $type == 'soundcloud' ){
                 if($soundcloud = rwmb_meta('_kt_audio_soundcloud')){
@@ -372,28 +367,11 @@ if ( ! function_exists( 'kt_post_thumbnail' ) ) :
                     echo '</div><!-- .entry-thumb -->';
                 }
             }
-        } elseif ( $format == 'link' ){ ?>
-            <div class="entry-thumb post-link-wrapper">
-                <div class="entry-thumb-content post-link-outer">
-                    <div class="post-link-content">
-                        <div class="post-link-title"><?php the_title(); ?></div>
-                        <div class="post-link-url">
-                            <a href="<?php echo rwmb_meta('_kt_external_url'); ?>"><?php echo rwmb_meta('_kt_external_url'); ?></a>
-                        </div>
-                    </div>
-                </div><!-- .entry-thumb-content -->
-                <?php if ( $link ){ ?>
-                    <a href="<?php the_permalink(); ?>" aria-hidden="true" class="post-link-link"><?php the_title(); ?></a>
-                <?php } ?>
-            </div><!-- .post-link-wrapper -->
-
-        <?php } elseif ( $format == 'quote' ){ ?>
+        } elseif ( $format == 'quote' ){ ?>
             <div class="entry-thumb post-quote-wrapper">
-                <blockquote class="classic">
-                    <div class="blockquote-content">
-                        <p><?php echo rwmb_meta('_kt_quote_content'); ?></p>
-                        <footer><?php echo rwmb_meta('_kt_quote_author'); ?></footer>
-                    </div>
+                <blockquote class="post-item-quote">
+                    <p><?php echo rwmb_meta('_kt_quote_content'); ?></p>
+                    <footer><?php echo rwmb_meta('_kt_quote_author'); ?></footer>
                 </blockquote>
                 <?php if ( $link ){ ?>
                     <a href="<?php the_permalink(); ?>" aria-hidden="true" class="post-quote-link"><?php the_title(); ?></a>
@@ -405,21 +383,51 @@ endif;
 
 
 
-/**
- * Filter function, converts fixed width to '100%' width
- */
-function responsive_wp_video_shortcode( $html, $atts, $video, $post_id, $library ) {
-    //$html = str_replace('width: ' . $atts['width'] . 'px', 'width: 100%', $html);
+if ( ! function_exists( 'kt_comment_nav' ) ) :
+    /**
+     * Display navigation to next/previous comments when applicable.
+     *
+     */
+    function kt_comment_nav() {
+        // Are there comments to navigate through?
+        if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+            ?>
+            <nav class="navigation comment-navigation clearfix">
+                <h2 class="screen-reader-text"><?php _e( 'Comment navigation', THEME_LANG ); ?></h2>
+                <div class="nav-links">
+                    <?php
+                    if ( $prev_link = get_previous_comments_link( '<i class="fa fa-angle-double-left"></i> '.__( 'Older Comments', THEME_LANG ) ) ) :
+                        printf( '<div class="nav-previous">%s</div>', $prev_link );
+                    endif;
 
-    print_r($video);
-    $html = str_replace('width="' . $atts['width'] . '"', 'width="100%"', $html);
-    $html = str_replace('height="' . $atts['height'] . '"', 'height="100%"', $html);
-    return $html;
-}
+                    if ( $next_link = get_next_comments_link( '<i class="fa fa-angle-double-right"></i> '.__( 'Newer Comments',  THEME_LANG ) ) ) :
+                        printf( '<div class="nav-next">%s</div>', $next_link );
+                    endif;
 
-add_filter( 'wp_video_shortcode', 'responsive_wp_video_shortcode', 10, 5 );
+                    ?>
+                </div><!-- .nav-links -->
+            </nav><!-- .comment-navigation -->
+        <?php
+        endif;
+    }
+endif;
 
 
+if ( ! function_exists( 'kt_entry_meta_comments' ) ) :
+    /**
+     * Prints HTML with meta information for comments.
+     *
+     */
+    function kt_entry_meta_comments() {
+        if ( !shortcode_exists( 'fbcomments' ) ) {
+            if (! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+                echo '<span class="comments-link">';
+                comments_popup_link( 0, 1, '%');
+                echo '</span>';
+            }
+        }
+    }
+endif;
 
 /**
  *
@@ -431,10 +439,6 @@ add_filter( 'wp_video_shortcode', 'responsive_wp_video_shortcode', 10, 5 );
  */
 function kt_comments($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
-    global $post;
-
-    $is_author_comment  = $post->post_author == $comment->user_id;
-
     ?>
 
 <li <?php comment_class('comment'); ?> id="li-comment-<?php comment_ID() ?>">
@@ -445,13 +449,12 @@ function kt_comments($comment, $args, $depth) {
         </div>
         <div class="comment-content">
             <div class="comment-meta">
-                <span class="comment-date"><?php printf( '%1$s' , get_comment_date( 'M d, Y ')); ?></span>
                 <h5 class="author_name">
                     <?php comment_author_link(); ?>
-                    <?php if($is_author_comment){ ?>
-                        <span class="icon-user"></span>
-                    <?php } ?>
                 </h5>
+                <span class="comment-date">
+                    <?php printf( _x( '%s ago', '%s = human-readable time difference', THEME_LANG ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
+                </span>
             </div>
             <div class="comment-entry entry-content">
                 <?php comment_text() ?>
@@ -459,7 +462,7 @@ function kt_comments($comment, $args, $depth) {
                     <em><?php _e('Your comment is awaiting moderation.', THEME_LANG) ?></em>
                 <?php endif; ?>
             </div>
-            <div class="comment-actions clear">
+            <div class="comment-actions">
                 <?php edit_comment_link( '<span class="icon-pencil"></span> '.__('Edit', THEME_LANG),'  ',' ') ?>
                 <?php comment_reply_link( array_merge( $args,
                     array('depth' => $depth,
@@ -650,21 +653,6 @@ endif;
 
 
 
-if ( ! function_exists( 'kt_entry_meta_comments' ) ) :
-    /**
-     * Prints HTML with meta information for comments.
-     *
-     */
-    function kt_entry_meta_comments() {
-        if ( !shortcode_exists( 'fbcomments' ) ) {
-            if (! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-                echo '<span class="comments-link">';
-                comments_popup_link( 0, 1, '%');
-                echo '</span>';
-            }
-        }
-    }
-endif;
 
 if ( ! function_exists( 'kt_entry_meta_time' ) ) :
     /**
@@ -742,8 +730,6 @@ if ( ! function_exists( 'kt_like_post' ) ){
             add_post_meta($post_id, '_like_post', $like_count, true);
         }
 
-        $text = ($like_count == 0 || $like_count == 1) ? __('like',THEME_LANG) : __('likes',THEME_LANG);
-
         $class = 'kt_likepost';
         $title = __('Like this post', THEME_LANG);
         $already =  __('You already like this!', THEME_LANG);
@@ -753,86 +739,11 @@ if ( ! function_exists( 'kt_like_post' ) ){
             $title = $already;
         }
 
-        $output = "<a data-id='".$post_id."' data-already='".esc_attr($already)."' class='".esc_attr($class)."' href='".get_the_permalink($post_id)."#".$post_id."' title='".esc_attr($title)."'>".$like_count.' '.$text."</a>";
+        $output = "<a data-id='".$post_id."' data-already='".esc_attr($already)."' class='".esc_attr($class)."' href='".get_the_permalink($post_id)."#".$post_id."' title='".esc_attr($title)."'>".$like_count.'</a>';
 
         echo $before . $output . $after;
     }
 }
-
-
-
-/* ---------------------------------------------------------------------------
- * Entry author [entry_author]
- * --------------------------------------------------------------------------- */
-if ( ! function_exists( 'kt_author_box' ) ) :
-    /**
-     * Prints HTML with information for author box.
-     *
-     */
-    function kt_author_box() {
-        ?>
-
-        <div class="author-info">
-            <div class="author-avatar">
-                <?php
-                    $author_bio_avatar_size = apply_filters( 'kt_author_bio_avatar_size', 165 );
-                    echo get_avatar( get_the_author_meta( 'user_email' ), $author_bio_avatar_size );
-                ?>
-            </div><!-- .author-avatar -->
-            <div class="author-description">
-                <h2 class="author-title">
-                    <a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author" title="<?php echo esc_attr(sprintf( __( 'View all posts by %s', THEME_LANG ), get_the_author() ) ); ?>">
-                        <?php printf( __( 'About %s', THEME_LANG ), get_the_author() ); ?>
-                    </a>
-                </h2>
-                <?php
-                    $googleplus = get_the_author_meta('googleplus');
-                    $url = get_the_author_meta('url');
-                    $twitter = get_the_author_meta('twitter');
-                    $facebook = get_the_author_meta('facebook');
-                    $pinterest = get_the_author_meta('pinterest');
-                    $instagram = get_the_author_meta('instagram');
-                    $tumblr = get_the_author_meta('tumblr');
-                ?>
-                <?php if($facebook || $twitter || $pinterest || $googleplus || $instagram || $tumblr || $url){ ?>
-                <p class="author-social">
-                    <?php if($facebook){ ?>
-                        <a href="<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook"></i></a>
-                    <?php } ?>
-                    <?php if($twitter){ ?>
-                        <a href="http://www.twitter.com/<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a>
-                    <?php } ?>
-                    <?php if($pinterest){ ?>
-                        <a href="http://www.pinterest.com/<?php echo $pinterest; ?>" target="_blank"><i class="fa fa-pinterest"></i></a>
-                    <?php } ?>
-                    <?php if($googleplus){ ?>
-                        <a href="<?php echo $googleplus; ?>" target="_blank"><i class="fa fa-google-plus"></i></a>
-                    <?php } ?>
-                    <?php if($instagram){ ?>
-                        <a href="http://instagram.com/<?php echo $instagram; ?>" target="_blank"><i class="fa fa-instagram"></i></a>
-                    <?php } ?>
-                    <?php if($tumblr){ ?>
-                        <a href="http://<?php echo $instagram; ?>.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a>
-                    <?php } ?>
-                    <?php if($url){ ?>
-                        <a href="<?php echo $url; ?>" target="_blank"><i class="fa fa-globe"></i></a>
-                    <?php } ?>
-                </p>
-                <?php } ?>
-                <div class="author-bio">
-                    <?php if($description = get_the_author_meta('description')){ ?>
-                        <p class="author-description-content"><?php echo $description; ?></p>
-                    <?php } ?>
-                </div>
-
-            </div><!-- .author-description -->
-        </div><!-- .author-info -->
-
-    <?php }
-endif;
-
-
-
 
 /* ---------------------------------------------------------------------------
  * Share Box [share_box]
@@ -858,37 +769,37 @@ if( ! function_exists( 'kt_share_box' ) ){
                 if($key == 'facebook'){
                     // Facebook
                     $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.facebook.com/sharer.php?s=100&amp;p[title]=' . $title . '&amp;p[url]=' . $link.'\', \'sharer\', \'toolbar=0,status=0,width=620,height=280\');popUp.focus();return false;">';
-                    $html .= '<i class="fa fa-facebook"></i>'.__('Facebook', THEME_LANG);
+                    $html .= '<i class="fa fa-facebook"></i><span>'.__('Facebook', THEME_LANG).'</span>';
                     $html .= '</a></li>';
                 }elseif($key == 'twitter'){
                     // Twitter
                     $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://twitter.com/home?status=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false;">';
-                    $html .= '<i class="fa fa-twitter"></i>'.__('Twitter', THEME_LANG);
+                    $html .= '<i class="fa fa-twitter"></i><span>'.__('Twitter', THEME_LANG).'</span>';
                     $html .= '</a></li>';
                 }elseif($key == 'google_plus'){
                     // Google plus
                     $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'https://plus.google.com/share?url=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
-                    $html .= '<i class="fa fa-google-plus"></i>'.__('Google+', THEME_LANG);
+                    $html .= '<i class="fa fa-google-plus"></i><span>'.__('Google+', THEME_LANG).'</span>';
                     $html .= "</a></li>";
                 }elseif($key == 'pinterest'){
                     // Pinterest
                     $html .= '<li><a class="share_link" href="#" onclick="popUp=window.open(\'http://pinterest.com/pin/create/button/?url=' . $link . '&amp;description=' . $title . '&amp;media=' . urlencode($image[0]) . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
-                    $html .= '<i class="fa fa-pinterest"></i>'.__('Pinterest', THEME_LANG);
+                    $html .= '<i class="fa fa-pinterest"></i><span>'.__('Pinterest', THEME_LANG).'</span>';
                     $html .= "</a></li>";
                 }elseif($key == 'linkedin'){
                     // linkedin
                     $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://linkedin.com/shareArticle?mini=true&amp;url=' . $link . '&amp;title=' . $title. '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
-                    $html .= '<i class="fa fa-linkedin"></i>'.__('LinkedIn', THEME_LANG);
+                    $html .= '<i class="fa fa-linkedin"></i><span>'.__('LinkedIn', THEME_LANG).'</span>';
                     $html .= "</a></li>";
                 }elseif($key == 'tumblr'){
                     // Tumblr
                     $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.tumblr.com/share/link?url=' . $link . '&amp;name=' . $title . '&amp;description=' . $excerpt . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
-                    $html .= '<i class="fa fa-tumblr"></i>'.__('Tumblr', THEME_LANG);
+                    $html .= '<i class="fa fa-tumblr"></i><span>'.__('Tumblr', THEME_LANG).'</span>';
                     $html .= "</a></li>";
                 }elseif($key == 'email'){
                     // Email
                     $html .= '<li><a class="'.$style.'" href="mailto:?subject='.$title.'&amp;body='.$link.'">';
-                    $html .= '<i class="fa fa-envelope-o"></i>'.__('Mail', THEME_LANG);
+                    $html .= '<i class="fa fa-envelope-o"></i><span>'.__('Mail', THEME_LANG).'</span>';
                     $html .= "</a></li>";
                 }
             }
@@ -915,9 +826,7 @@ if ( ! function_exists( 'kt_related_article' ) ) :
         global $post;
         if(!$post_id) $post_id = $post->ID;
 
-        $blog_columns = 3;
-        $blog_columns_tablet = 2;
-        $posts_per_page = kt_option('blog_related_sidebar', 3);
+        $posts_per_page = kt_option('blog_related_sidebar', 5);
 
         $args = array(
             'posts_per_page' => $posts_per_page,
@@ -944,52 +853,16 @@ if ( ! function_exists( 'kt_related_article' ) ) :
         ?>
         <?php if($query->have_posts()){ ?>
             <div id="related-article">
-                <h3 class="title-article"><?php _e('Related Article', THEME_LANG); ?></h3>
-                <div class="row">
-                    <?php
-
-                    $blog_atts_posts = array(
-                        'image_size' => 'recent_posts',
-                        'readmore' => false,
-                        "show_author" => false,
-                        "show_category" => true,
-                        "show_comment" => false,
-                        "show_date" => true,
-                        'show_meta' => true,
-                        "show_like_post" => false,
-                        "date_format" => 'M d Y',
-                        'thumbnail_type' => 'image',
-                        "class" => '',
-                        'show_view_number' => false,
-                        'show_excerpt' => false,
-                        'type' => ''
-                    );
-
-                    $i = 1;
-                    $bootstrapColumn = round( 12 / $blog_columns );
-                    $bootstrapTabletColumn = round( 12 / $blog_columns_tablet );
-                    $classes = 'col-xs-12 col-sm-'.$bootstrapTabletColumn.' col-md-' . $bootstrapColumn;
-
-                    ?>
-
-                    <?php while ( $query->have_posts() ) : $query->the_post(); ?>
-                        <?php
-                            $blog_atts = $blog_atts_posts;
-                            $classes_extra = '';
-                            if (  ( $i - 1 ) % $blog_columns == 0 || 1 == $blog_columns )
-                                $classes_extra .= ' col-clearfix-md col-clearfix-lg ';
-
-                            if ( ( $i - 1 ) % $blog_columns_tablet == 0 || 1 == $blog_columns )
-                                $classes_extra .= ' col-clearfix-sm';
-
-                        ?>
-                        <div class="article-post-item <?php echo $classes." ".$classes_extra; ?>">
-                            <?php kt_get_template_part( 'templates/blog/layout/content', get_post_format(), $blog_atts); ?>
-                        </div><!-- .article-post-item -->
-                    <?php $i++; endwhile; ?>
-                    <?php wp_reset_postdata(); ?>
+                <h3 class="post-single-heading"><?php _e('Related Article', THEME_LANG); ?></h3>
+                <div class="blog-posts-related"  data-slick='{"slidesToShow": 2}'>
+                <?php
+                while ( $query->have_posts() ) : $query->the_post();
+                    get_template_part( 'templates/blog/gird/content', get_post_format());
+                endwhile;
+                ?>
                 </div>
             </div><!-- #related-article -->
-        <?php } ?>
     <?php }
+        wp_reset_postdata();
+    }
 endif;

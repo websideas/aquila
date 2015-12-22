@@ -18,7 +18,7 @@ while ( have_posts() ) : the_post();
         $main_column = ($sidebar['sidebar']) ? '8' : '12';
         $sidebar_class = ($sidebar['sidebar']) ? 'sidebar-'.$sidebar['sidebar'] : 'no-sidebar';
         $pull_class = ($sidebar['sidebar'] == 'left') ? 'pull-right' : '';
-        echo '<div class="col-md-'.$main_column.' '.$sidebar_class.' '.$pull_class.'"><div class="row main-content multi-columns-row blog-posts-gird">';
+        echo '<div class="col-md-'.$main_column.' main-content '.$sidebar_class.' '.$pull_class.'"><div class="row multi-columns-row blog-posts-gird">';
 
         if(!$first_featured){
             printf('<div class="col-lg-%1$s col-md-%1$s">', $article_column);
@@ -38,7 +38,7 @@ while ( have_posts() ) : the_post();
         echo "</div>";
 
         if($sidebar['sidebar']){
-            echo '<div class="col-md-4">';
+            echo '<div class="col-md-4 sidebar sidebar-'.$sidebar['sidebar'].'">';
             dynamic_sidebar('primary-widget-area');
             echo '</div>';
         }

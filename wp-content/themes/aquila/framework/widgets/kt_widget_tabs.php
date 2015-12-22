@@ -45,15 +45,15 @@ class WP_Widget_KT_Tabs extends WP_Widget {
         ob_start();
 
         $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-        
-        $select_rand = isset( $instance['select_rand'] ) ? $instance['select_rand'] : true;
+
         $select_recent = isset( $instance['select_recent'] ) ? $instance['select_recent'] : true;
         $select_comments = isset( $instance['select_comments'] ) ? $instance['select_comments'] : true;
-        
+        $select_rand = isset( $instance['select_rand'] ) ? $instance['select_rand'] : true;
+
         $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 5;
         if ( ! $number )
             $number = 5;
-        $show_thumbnail = isset( $instance['show_thumbnail'] ) ? $instance['show_thumbnail'] : true;
+
             
         echo $args['before_widget'];
         if ( $title ) {
@@ -69,15 +69,13 @@ class WP_Widget_KT_Tabs extends WP_Widget {
             $tabs = array();
             if($select_rand)  $tabs[] = 'rand';
             if($select_recent)  $tabs[] = 'recent';
-            //if($select_popular)  $tabs[] = 'popular';
-
 
             ?>
             <div class="kt_widget_tabs">
                 <ul class="clearfix kt-tabs-nav">
                     <?php if( $select_rand ){ ?><li><a href="#kt_tab_rand<?php echo $rand; ?>"><?php _e( 'Random', THEME_LANG ); ?></a></li><?php } ?>
-                    <?php if( $select_recent ){ ?><li><a href="#kt_tab_recent<?php echo $rand; ?>"><?php _e( 'Recent', THEME_LANG ); ?></a></li><?php } ?>
-                    <?php if( $select_comments ){ ?><li><a href="#kt_tab_comments<?php echo $rand; ?>"><i class="icon_chat_alt"></i> </a></li><?php } ?>
+                    <?php if( $select_recent ){ ?><li><a href="#kt_tab_recent<?php echo $rand; ?>"><?php _e( 'Most recent', THEME_LANG ); ?></a></li><?php } ?>
+                    <?php if( $select_comments ){ ?><li><a href="#kt_tab_comments<?php echo $rand; ?>"><?php _e( 'Most comment', THEME_LANG ); ?></a></li><?php } ?>
                 </ul>
                 <div class="tabs-container">
                     <?php
@@ -102,15 +100,13 @@ class WP_Widget_KT_Tabs extends WP_Widget {
                             ?>
                             <div id="kt_tab_<?php echo $tab ?><?php echo $rand; ?>" class="kt_tabs_content">
                                 <?php if ($query->have_posts()){ ?>
-                                    <ul>
+                                    <ul class="kt_posts_widget">
                                         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                                             <li <?php post_class('article-widget clearfix'); ?>>
-                                                <?php if($show_thumbnail){ kt_post_thumbnail_image( 'small', 'img-responsive' ); } ?>
+                                                <?php kt_post_thumbnail_image( 'recent_posts', 'img-responsive' ); ?>
                                                 <div class="article-attr">
                                                     <h3 class="title"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h3>
-                                                    <div class="entry-meta-data">
-                                                        <?php  kt_entry_meta_time();  ?>
-                                                    </div>
+                                                    <?php kt_entry_meta_time();?>
                                                 </div>
                                             </li>
                                         <?php endwhile; wp_reset_postdata(); ?>
@@ -121,9 +117,6 @@ class WP_Widget_KT_Tabs extends WP_Widget {
                         }
                     }
                     ?>
-
-
-
 
                     <?php if( $select_comments ){ ?>
                         <div id="kt_tab_comments<?php echo $rand; ?>" class="kt_tabs_content">
@@ -137,14 +130,12 @@ class WP_Widget_KT_Tabs extends WP_Widget {
                             $comments = $comments_query->query( $args_comments );
 
                             if ( $comments ) { ?>
-                                <ul>
+                                <ul class="kt_posts_widget">
                                     <?php foreach ( $comments as $comment ) { ?>
                                         <li class="clearfix">
-                                            <?php if($show_thumbnail){ ?>
-                                                <a class="entry-thumb" href="<?php echo get_comment_link($comment->comment_ID); ?>">
-                                                    <?php echo get_avatar( $comment->comment_author_email, 70 ); ?>
-                                                </a>
-                                            <?php } ?>
+                                            <a class="entry-thumb" href="<?php echo get_comment_link($comment->comment_ID); ?>">
+                                                <?php echo get_avatar( $comment->comment_author_email, 120 ); ?>
+                                            </a>
                                             <div class="article-attr">
                                                 <h3 class="title">
                                                     <a href="<?php echo get_comment_link($comment->comment_ID); ?>">
@@ -199,7 +190,6 @@ class WP_Widget_KT_Tabs extends WP_Widget {
         $instance['select_comments'] = isset( $new_instance['select_comments'] ) ? (bool) $new_instance['select_comments'] : false;
         
         $instance['number'] = (int) $new_instance['number'];
-        $instance['show_thumbnail'] = isset( $new_instance['show_thumbnail'] ) ? (bool) $new_instance['show_thumbnail'] : false;
 
         $this->flush_widget_cache();
 
@@ -215,14 +205,13 @@ class WP_Widget_KT_Tabs extends WP_Widget {
     }
 
 	public function form( $instance ) {
-		$title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : __( 'Widget Tabs' , THEME_LANG);
+		$title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
         
         $select_rand = isset( $instance['select_rand'] ) ? (bool) $instance['select_rand'] : true;
         $select_recent = isset( $instance['select_recent'] ) ? (bool) $instance['select_recent'] : true;
         $select_comments = isset( $instance['select_comments'] ) ? (bool) $instance['select_comments'] : true;
         
         $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
-        $show_thumbnail = isset( $instance['show_thumbnail'] ) ? (bool) $instance['show_thumbnail'] : true;
 		
 	?>
     <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
@@ -247,10 +236,6 @@ class WP_Widget_KT_Tabs extends WP_Widget {
     <p>
         <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
         <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" class="widefat" />
-    </p>
-    <p>
-        <input class="checkbox" type="checkbox" <?php checked( $show_thumbnail ); ?> id="<?php echo $this->get_field_id( 'show_thumbnail' ); ?>" name="<?php echo $this->get_field_name( 'show_thumbnail' ); ?>" />
-        <label for="<?php echo $this->get_field_id( 'show_thumbnail' ); ?>"><?php _e( 'Show Thumbnail (Avatar Comments)',THEME_LANG ); ?></label>
     </p>
 <?php
 	}

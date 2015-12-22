@@ -20,17 +20,19 @@
             ?>
         </div>
     </div>
-
-    <div class="embed-responsive embed-responsive-16by9">
-        <?php
-        if($video == 'youtube'){
-            echo video_youtube($video_id);
-        }elseif($video == 'vimeo'){
-            echo video_vimeo($video_id);
-        }
-
-        ?>
-    </div>
+    <?php
+    if($video == 'youtube'){
+        printf(
+            '<div class="embed-responsive embed-responsive-16by9">%s</div>',
+            video_youtube($video_id)
+        );
+    }elseif($video == 'vimeo'){
+        printf(
+            '<div class="embed-responsive embed-responsive-16by9">%s</div>',
+            video_vimeo($video_id)
+        );
+    }
+    ?>
 
 
 </article>

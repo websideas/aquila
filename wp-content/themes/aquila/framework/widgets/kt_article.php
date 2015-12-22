@@ -74,11 +74,6 @@ class Widget_KT_Posts extends WP_Widget {
         $r = new WP_Query( apply_filters( 'widget_posts_args', $args_article ) );
 
         if ($r->have_posts()) :
-            $show_date = isset( $instance['show_date'] ) ? $instance['show_date'] : true;
-            $show_category = isset( $instance['show_category'] ) ? (bool) $instance['show_category'] : true;
-            $show_image = isset( $instance['show_image'] ) ? (bool) $instance['show_image'] : true;
-            $show_comment = isset( $instance['show_comment'] ) ? (bool) $instance['show_comment'] : false;
-            $show_author = isset( $instance['show_author'] ) ? (bool) $instance['show_author'] : false;
 
             $layout = ( ! empty( $instance['layout'] ) ) ? absint( $instance['layout'] ) : 1;
             if ( ! $layout )
@@ -89,29 +84,14 @@ class Widget_KT_Posts extends WP_Widget {
             if ( $title ) {
                 echo $args['before_title'] . $title . $args['after_title'];
             }
-            if(!$show_image){ $no_image = 'no-image'; }else{ $no_image = ''; }
             ?>
-            <ul class="kt-artilce-<?php echo esc_attr($layout) ?><?php echo ' '.$no_image; ?>">
+            <ul class="kt_posts_widget kt-artilce-<?php echo esc_attr($layout) ?>">
                 <?php while ( $r->have_posts() ) : $r->the_post(); ?>
                     <li <?php post_class('article-widget clearfix'); ?>>
-                        <?php
-                            if($show_image){
-                                $image_size = ($layout == 2) ? 'recent_posts' : 'small';
-                                kt_post_thumbnail_image( $image_size, 'img-responsive' );
-                            }
-                        ?>
+                        <?php kt_post_thumbnail_image( 'recent_posts', 'img-responsive' ); ?>
                         <div class="article-attr">
                             <h3 class="title"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h3>
-                            <?php if( $show_category ){ kt_entry_meta_categories(); } ?>
-                            <?php if( $show_date || $show_comment || $show_author ){ ?>
-                                <div class="entry-meta-data">
-                                    <?php
-                                        if( $show_date ){ kt_entry_meta_time(); }
-                                        if( $show_author ){ kt_entry_meta_author(); }
-                                        if( $show_comment ){ kt_entry_meta_comments(); }
-                                    ?>
-                                </div>
-                            <?php } ?>
+                            <?php kt_entry_meta_time();?>
                         </div>
                     </li>
                 <?php endwhile; ?>
@@ -138,11 +118,6 @@ class Widget_KT_Posts extends WP_Widget {
         $instance['title'] = strip_tags($new_instance['title']);
         $instance['number'] = (int) $new_instance['number'];
         $instance['layout'] = isset( $new_instance['layout'] ) ? (int) $new_instance['layout'] : 1;
-        $instance['show_date'] = isset( $new_instance['show_date'] ) ? (bool) $new_instance['show_date'] : false;
-        $instance['show_category'] = isset( $new_instance['show_category'] ) ? (bool) $new_instance['show_category'] : false;
-        $instance['show_image'] = isset( $new_instance['show_image'] ) ? (bool) $new_instance['show_image'] : false;
-        $instance['show_comment'] = isset( $new_instance['show_comment'] ) ? (bool) $new_instance['show_comment'] : false;
-        $instance['show_author'] = isset( $new_instance['show_author'] ) ? (bool) $new_instance['show_author'] : false;
 
         $instance['category'] = isset( $new_instance['show_author'] ) ? $new_instance['category'] :  array();
 
@@ -174,11 +149,6 @@ class Widget_KT_Posts extends WP_Widget {
     public function form( $instance ) {
         $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : __( 'Recent Posts' , THEME_LANG);
         $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
-        $show_date = isset( $instance['show_date'] ) ? (bool) $instance['show_date'] : true;
-        $show_category = isset( $instance['show_category'] ) ? (bool) $instance['show_category'] : true;
-        $show_image = isset( $instance['show_image'] ) ? (bool) $instance['show_image'] : true;
-        $show_comment = isset( $instance['show_comment'] ) ? (bool) $instance['show_comment'] : false;
-        $show_author = isset( $instance['show_author'] ) ? (bool) $instance['show_author'] : false;
 
         $order = isset( $instance['order'] ) ? $instance['order'] : 'DESC';
         $orderby = isset( $instance['orderby'] ) ? $instance['orderby'] : 'date';
@@ -221,22 +191,6 @@ class Widget_KT_Posts extends WP_Widget {
                 <option <?php selected( $order, 'ASC' ); ?> value="ASC"><?php _e('ASC',THEME_LANG); ?></option>
             </select>
         </p>
-
-        <p><input class="checkbox" type="checkbox" <?php checked( $show_date ); ?> id="<?php echo $this->get_field_id( 'show_date' ); ?>" name="<?php echo $this->get_field_name( 'show_date' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_date' ); ?>"><?php _e( 'Display post date?' ); ?></label></p>
-
-        <p><input class="checkbox" type="checkbox" <?php checked( $show_category ); ?> id="<?php echo $this->get_field_id( 'show_category' ); ?>" name="<?php echo $this->get_field_name( 'show_category' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_category' ); ?>"><?php _e( 'Display post category?', THEME_LANG ); ?></label></p>
-
-        <p><input class="checkbox" type="checkbox" <?php checked( $show_image ); ?> id="<?php echo $this->get_field_id( 'show_image' ); ?>" name="<?php echo $this->get_field_name( 'show_image' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_image' ); ?>"><?php _e( 'Display post image?', THEME_LANG ); ?></label></p>
-
-        <p><input class="checkbox" type="checkbox" <?php checked( $show_comment ); ?> id="<?php echo $this->get_field_id( 'show_comment' ); ?>" name="<?php echo $this->get_field_name( 'show_comment' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_comment' ); ?>"><?php _e( 'Display post comment?', THEME_LANG ); ?></label></p>
-
-        <p><input class="checkbox" type="checkbox" <?php checked( $show_author ); ?> id="<?php echo $this->get_field_id( 'show_author' ); ?>" name="<?php echo $this->get_field_name( 'show_author' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_author' ); ?>"><?php _e( 'Display post author?', THEME_LANG ); ?></label></p>
-
 
         <p><label for="<?php echo $this->get_field_id('layout'); ?>"><?php _e('Layout:',THEME_LANG); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('layout'); ?>" name="<?php echo $this->get_field_name('layout'); ?>">

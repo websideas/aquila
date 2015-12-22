@@ -28,9 +28,6 @@
         }
 
     }elseif($type == 'upload'){
-
-
-
         if($audios = rwmb_meta('_kt_audio_mp3', 'type=file')){
             printf(
                 '<div class="entry-thumb-audio" style="%s">',

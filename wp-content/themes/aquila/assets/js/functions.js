@@ -61,25 +61,26 @@
         //init_smooth_scrolling();
 
         kt_likepost();
-        
-        kt_widget_categories();
+
         
         if($('#wpadminbar').length){
             $('body').addClass('admin-bar');
         }
 
-        setInterval(init_masonry, 1000);
+        //setInterval(init_masonry, 1000);
 
         $('.button-toggle').click(function(e){
             e.preventDefault();
             $(this).closest('#nav').toggleClass('is-opened');
         });
         
-        //$('.widget-container .kt_widget_tabs').tabs();
+        $('.widget-container .kt_widget_tabs').tabs();
 
 
 
         $('.blog-posts-slick').slick();
+
+        $('.blog-posts-related').slick();
 
         $('.blog-posts-thumb').slick({
             asNavFor: '.blog-posts-slick',
@@ -191,7 +192,7 @@
             });
         });
 
-
+        /*
         $('.gallery-images').each(function(){
             var $gallery_masonry = $(this);
             $gallery_masonry.imagesLoaded(function(){
@@ -200,6 +201,7 @@
                 });
             });
         });
+        */
     }
 
     /* ---------------------------------------------
@@ -760,18 +762,6 @@
         });
     }
 
-    
-    /**==============================
-    *** Widget Categories Icon Toggle
-    ===============================**/
-    function kt_widget_categories(){
-        $('.widget-container ul.children').closest('li').append('<span class="icon-toggle"></span>');
-        $('.widget-container ul.children').hide();
-        $('body').on('click','.widget-container .icon-toggle',function(){
-            $(this).closest('li').find('.children').slideToggle();
-        });
-    }
-    
     /**==============================
     *** Popup Content
     ===============================**/

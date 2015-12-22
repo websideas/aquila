@@ -33,7 +33,10 @@
   .no-sidebar .blog-posts-medium .post-item-thumb {
     width: 58.3333%; }
   .no-sidebar .blog-posts-medium .post-item-info {
-    width: 41.6667%; } }
+    width: 41.6667%; }
+
+  .sidebar {
+    padding-left: 40px; } }
 /* 2. Styles for devices(<=1199px) */
 
 /*# sourceMappingURL=queries.css.map */

@@ -208,7 +208,7 @@ add_filter( 'body_class', 'theme_body_classes' );
 function kt_main_class_callback($classes, $layout){
     
     if($layout == 'left' || $layout == 'right'){
-        $classes .= ' col-md-9 col-sm-12 col-xs-12';
+        $classes .= ' col-md-8 col-sm-12 col-xs-12';
     }else{
         $classes .= ' col-md-12 col-xs-12';
     }
@@ -233,7 +233,7 @@ add_filter('kt_main_class', 'kt_main_class_callback', 10, 2);
  */
 function kt_sidebar_class_callback( $classes, $layout ){
     if($layout == 'left' || $layout == 'right'){
-        $classes .= ' col-md-3 col-sm-12 col-xs-12';
+        $classes .= ' col-md-4 col-sm-12 col-xs-12';
     }
     return $classes;
 }
@@ -292,11 +292,6 @@ add_action( 'kt_slideshows_position', 'kt_slideshows_position_callback' );
 function kt_slideshows_position_callback(){
     if(is_page() || is_singular()){
         kt_show_slideshow();
-    }elseif ( kt_is_wc() ) {
-        if(is_shop()){
-            $shop_page_id = get_option( 'woocommerce_shop_page_id' );
-            kt_show_slideshow($shop_page_id);
-        }
     }
 }
 
@@ -305,12 +300,6 @@ function kt_comment_form_before_fields(){
     echo '<div class="comment-form-fields clearfix">';
 }
 
-
-
-add_action( 'comment_form_after_fields', 'kt_comment_form_after_fields', 9999 );
-function kt_comment_form_after_fields(){
-    echo '</div>';
-}
 
 
 /*
@@ -328,8 +317,6 @@ function kt_contactmethods( $contactmethods ) {
     $contactmethods['behance'] = __('Behance username', THEME_LANG);
     $contactmethods['tumblr'] = __('Tumblr username', THEME_LANG);
     $contactmethods['dribbble'] = __('Dribbble username', THEME_LANG);
-
-
 
     return $contactmethods;
 }
@@ -423,97 +410,9 @@ function add_search_full(){
 add_action('theme_body_top', 'add_search_full');
 
 
-
-if ( ! function_exists( 'kt_login_body_class' ) ) :
-    /**
-     * Add class regsiter to body
-     *
-     */
-    function kt_login_body_class($classes, $action){
-        if ( get_option( 'users_can_register' ) ) {
-            $classes[] = 'register-allow';
-        }
-        return $classes;
-    }
-    add_filter( 'login_body_class', 'kt_login_body_class', 10, 2);
-endif;
-
-
-
+//Remove Facebook comment box in the content
 remove_filter ('the_content', 'fbcommentbox', 100);
 
-
-/**
- * Add Category by Search form 
- **/
-function advanced_search_query($query) {
-
-    if($query->is_search()) {
-        if (isset($_GET['product_cat']) && !empty($_GET['product_cat'])) {
-            $query->set('tax_query', array(array(
-                'taxonomy' => 'product_cat',
-                'field' => 'slug',
-                'terms' => array($_GET['product_cat']))
-            ));
-        }
-        return $query;
-    }
-}
-add_action('pre_get_posts', 'advanced_search_query', 1000);
-
-/**
- * Add Category by Search form Product
- **/
-/*
-function kt_get_categories_product(){
-    global $post;
-    $categories = get_terms( 'product_cat' );
-
-    
-    if( count($categories) > 0 ){
-        echo '<div class="wrap_product_cat"><select id="product_cat" class="postform" name="product_cat">';
-            echo '<option value="">'.__('All Categories', THEME_LANG).'</option>';print_r($categories);
-            foreach ($categories as $key => $value) {
-                echo '<option value="'.$value->slug.'">'.$value->name.'</option>';
-            }
-        echo '</select></div>';
-    }
-}*/
-
-/**
- * Add popup 
- *
- * @since 1.0
- */
-add_action( 'theme_after_footer', 'theme_after_footer_add_popup', 20 );
-function theme_after_footer_add_popup(){
-    $enable_popup = kt_option( 'enable_popup' );
-    $disable_popup_mobile = kt_option( 'disable_popup_mobile' );
-    $content_popup = kt_option( 'content_popup' );
-    $time_show = kt_option( 'time_show', 0 );
-    $title_popup = kt_option( 'title_popup' );
-    $image_popup = kt_option( 'popup_image' );
-    
-    if( $enable_popup == 1 && !isset($_COOKIE['kt_popup']) ){
-        ?>
-            <div id="popup-wrap" class="mfp-hide" data-mobile="<?php echo esc_attr( $disable_popup_mobile ); ?>" data-timeshow="<?php echo esc_attr($time_show); ?>">     
-                <div class="white-popup-block">
-                    <h3 class="title-top"><?php echo $title_popup; ?></h3>
-                    <?php if( $image_popup['url'] ){ ?>
-                        <img src="<?php echo $image_popup['url']; ?>" alt="" class="img-responsive">
-                    <?php } ?>
-                    <div class="content-popup">
-                        <?php echo do_shortcode($content_popup); ?>
-                    </div>
-                </div>
-                <form class="dont-show" name="dont-show">
-                    <input id="dont-showagain" type="checkbox" value="" />
-                    <label for="dont-showagain"><?php _e( "Don’t Show Again.", THEME_LANG ); ?></label>
-                </form>
-            </div>
-        <?php
-    }
-}
 
 
 add_filter('navigation_markup_template', 'kt_navigation_markup_template', 10, 2);

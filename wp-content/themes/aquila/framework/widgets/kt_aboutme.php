@@ -26,54 +26,50 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
             echo $args['before_title'] . $title . $args['after_title'];
         }
 
-        echo "<div class='kt-aboutwidget-content'>";
         $attachment = get_thumbnail_attachment($instance['attachment'], $instance['size']);
         $value = isset( $instance['value'] ) ? $instance['value'] : '';
         
         if($attachment){
-            echo "<div class='kt-aboutwidget-img'>";
-            echo "<img src='".$attachment['url']."' alt='".esc_attr($attachment['alt'])."' class='img-responsive' title='".esc_attr($attachment['title'])."'/>";
-            
-            $socials_arr = array(
-                'facebook' => array('title' => __('Facebook', THEME_LANG), 'icon' => 'fa fa-facebook', 'link' => '%s'),
-                'twitter' => array('title' => __('Twitter', THEME_LANG), 'icon' => 'fa fa-twitter', 'link' => 'http://www.twitter.com/%s'),
-                'dribbble' => array('title' => __('Dribbble', THEME_LANG), 'icon' => 'fa fa-dribbble', 'link' => 'http://www.dribbble.com/%s'),
-                'vimeo' => array('title' => __('Vimeo', THEME_LANG), 'icon' => 'fa fa-vimeo-square', 'link' => 'http://www.vimeo.com/%s'),
-                'tumblr' => array('title' => __('Tumblr', THEME_LANG), 'icon' => 'fa fa-tumblr', 'link' => 'http://%s.tumblr.com/'),
-                'skype' => array('title' => __('Skype', THEME_LANG), 'icon' => 'fa fa-skype', 'link' => 'skype:%s'),
-                'linkedin' => array('title' => __('LinkedIn', THEME_LANG), 'icon' => 'fa fa-linkedin', 'link' => '%s'),
-                'googleplus' => array('title' => __('Google Plus', THEME_LANG), 'icon' => 'fa fa-google-plus', 'link' => '%s'),
-                'youtube' => array('title' => __('Youtube', THEME_LANG), 'icon' => 'fa fa-youtube', 'link' => 'http://www.youtube.com/user/%s'),
-                'pinterest' => array('title' => __('Pinterest', THEME_LANG), 'icon' => 'fa fa-pinterest', 'link' => 'http://www.pinterest.com/%s'),
-                'instagram' => array('title' => __('Instagram', THEME_LANG), 'icon' => 'fa fa-instagram', 'link' => 'http://instagram.com/%s'),
-            );
-    
-            foreach($socials_arr as $k => &$v){
-                $val = kt_option($k);
-                $v['val'] = ($val) ? $val : '';
-            }
-            ?>
-            <?php if($value){ 
-                $social_type = explode(',', $value); ?>
-                <ul class="kt-aboutwidget-socials">
-                    <?php 
-                    foreach ($social_type as $id) {
-                        $val = $socials_arr[$id];
-                        $social_text = '<i class="'.esc_attr($val['icon']).'"></i>';
-                        echo '<li><a href="'.esc_url(str_replace('%s', $val['val'], $val['link'])).'" target="_blank">'.$social_text.'</a></li>';
-                    }
-                    ?>
-                </ul>
-            <?php }
-            echo "</div>";
+            echo "<div class='kt-aboutwidget-img'><img src='".$attachment['url']."' alt='".esc_attr($attachment['alt'])."' class='img-responsive' title='".esc_attr($attachment['title'])."'/></div>";
         }
-        if($instance['name']) {
-            echo '<h4 class="kt-aboutwidget-title">'.$instance['name'].'</h4>';
-        }
+
         if($instance['description']){
             echo '<div class="kt-aboutwidget-text">'.$instance['description'].'</div>';
         }
-        echo "</div>";
+
+        $socials_arr = array(
+            'facebook' => array('title' => __('Facebook', THEME_LANG), 'icon' => 'fa fa-facebook', 'link' => '%s'),
+            'twitter' => array('title' => __('Twitter', THEME_LANG), 'icon' => 'fa fa-twitter', 'link' => 'http://www.twitter.com/%s'),
+            'dribbble' => array('title' => __('Dribbble', THEME_LANG), 'icon' => 'fa fa-dribbble', 'link' => 'http://www.dribbble.com/%s'),
+            'vimeo' => array('title' => __('Vimeo', THEME_LANG), 'icon' => 'fa fa-vimeo-square', 'link' => 'http://www.vimeo.com/%s'),
+            'tumblr' => array('title' => __('Tumblr', THEME_LANG), 'icon' => 'fa fa-tumblr', 'link' => 'http://%s.tumblr.com/'),
+            'skype' => array('title' => __('Skype', THEME_LANG), 'icon' => 'fa fa-skype', 'link' => 'skype:%s'),
+            'linkedin' => array('title' => __('LinkedIn', THEME_LANG), 'icon' => 'fa fa-linkedin', 'link' => '%s'),
+            'googleplus' => array('title' => __('Google Plus', THEME_LANG), 'icon' => 'fa fa-google-plus', 'link' => '%s'),
+            'youtube' => array('title' => __('Youtube', THEME_LANG), 'icon' => 'fa fa-youtube', 'link' => 'http://www.youtube.com/user/%s'),
+            'pinterest' => array('title' => __('Pinterest', THEME_LANG), 'icon' => 'fa fa-pinterest', 'link' => 'http://www.pinterest.com/%s'),
+            'instagram' => array('title' => __('Instagram', THEME_LANG), 'icon' => 'fa fa-instagram', 'link' => 'http://instagram.com/%s'),
+        );
+
+        foreach($socials_arr as $k => &$v){
+            $val = kt_option($k);
+            $v['val'] = ($val) ? $val : '';
+        }
+        ?>
+        <?php if($value){
+            $social_type = explode(',', $value); ?>
+            <ul class="kt-aboutwidget-socials">
+                <?php
+                foreach ($social_type as $id) {
+                    $val = $socials_arr[$id];
+                    $social_text = '<i class="'.esc_attr($val['icon']).'"></i>';
+                    echo '<li><a href="'.esc_url(str_replace('%s', $val['val'], $val['link'])).'" target="_blank">'.$social_text.'</a></li>';
+                }
+                ?>
+            </ul>
+        <?php }
+
+
 
         echo $args['after_widget'];
 
@@ -84,7 +80,6 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
         $instance['title'] = strip_tags($new_instance['title']);
         $instance['size'] = $new_instance['size'];
         $instance['attachment'] = intval($new_instance['attachment']);
-        $instance['name'] = strip_tags($new_instance['name']);
 
         if ( current_user_can('unfiltered_html') ){
             $instance['description'] =  $new_instance['description'];
@@ -98,7 +93,7 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
 
     public function form( $instance ) {
         //Defaults
-        $instance = wp_parse_args( (array) $instance, array( 'title' => __('About me', THEME_LANG), 'target' => '_self', 'attachment' => '', 'size' => 'recent_posts', 'name' => '', 'description' => '') );
+        $instance = wp_parse_args( (array) $instance, array( 'title' => __('About me', THEME_LANG), 'target' => '_self', 'attachment' => '', 'size' => 'recent_posts', 'description' => '') );
         $title = strip_tags($instance['title']);
         $name = strip_tags($instance['name']);
 
@@ -148,9 +143,6 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
                 <?php } ?>
             </select>
         </p>
-
-        <p><label for="<?php echo $this->get_field_id( 'name' ); ?>"><?php _e( 'Name:' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'name' ); ?>" name="<?php echo $this->get_field_name( 'name' ); ?>" type="text" value="<?php echo $name; ?>" /></p>
 
         <p>
             <label for="<?php echo $this->get_field_id( 'description' ); ?>"><?php _e( 'Description:', THEME_LANG ); ?></label>

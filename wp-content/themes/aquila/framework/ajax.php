@@ -30,9 +30,8 @@ function wp_ajax_fronted_likepost_callback() {
         //The cookie will expire after 30 days
         setcookie('like_post_'. $post_id, $post_id, time() + (86400 * 30), '/');
     }
-    $text = ($like_count == 0 || $like_count == 1) ? __('like',THEME_LANG) : __('likes',THEME_LANG);
 
-    $output['count'] = $like_count. ' '.$text;
+    $output['count'] = $like_count;
     echo json_encode($output);
     die();
 }

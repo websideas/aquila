@@ -8,7 +8,7 @@ global $wp_query;
 
 $i = 1;
 $first_featured = true;
-$sidebar = array('sidebar' => 'left', 'sidebar_area' => 'primary-widget-area');
+$sidebar = array('sidebar' => '', 'sidebar_area' => 'primary-widget-area');
 $article_column = 12;
 
 

@@ -20,9 +20,9 @@ if ( post_password_required() ) {
 <div id="comments" class="comments-area">
 
     <?php if ( have_comments() ) : ?>
-        <h2 class="comments-title">
+        <h2 class="comments-title post-single-heading">
             <?php
-            printf( _nx( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'comments title', 'twentyfifteen' ),
+            printf( _nx( 'One comment', '%1$s comments', get_comments_number(), 'comments title', THEME_LANG ),
                 number_format_i18n( get_comments_number() ), get_the_title() );
             ?>
         </h2>
@@ -60,15 +60,13 @@ if ( post_password_required() ) {
     $required = ' '.__('(required)', THEME_LANG);
 
     $new_fields = array(
-        'author' => '<p class="comment_field-column">' .
+        'author' => '<p class="comment_field-column comment-form-author">' .
             '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  placeholder="'.__('Name', THEME_LANG).'"' . $aria_req . $html_req . ' /></p>',
-        'email'  => '<p class="comment_field-column">' .
-            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="'.__('Email', THEME_LANG).'"' . $aria_req . $html_req . ' /></p>',
-        'url'    => '<p class="comment_field-column">' .
+        'email'  => '<p class="comment_field-column comment-form-email">' .
+            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="'.__('Email', THEME_LANG).'"' . $aria_req . $html_req . ' /></p></div>',
+        'url'    => '<p class="comment-form-url">' .
             '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="'.__('Website', THEME_LANG).'" /></p>',
     );
-
-
 
     $comments_args = array(
         'label_submit'      => __( 'send messages' ),
@@ -77,6 +75,7 @@ if ( post_password_required() ) {
         //'comment_form_after_fields' => '</div>',
         'comment_field' => '<p><textarea id="comment" name="comment" placeholder="'.__('Your Comment', THEME_LANG).'"  aria-required="true" rows="6"></textarea></p>',
         'class_submit'      => 'btn btn-default',
+        'title_reply_before'   => '<h3 id="reply-title" class="comment-reply-title post-single-heading">',
     );
 
     ?>

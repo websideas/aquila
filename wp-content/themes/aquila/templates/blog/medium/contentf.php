@@ -32,7 +32,6 @@
     <?php
 
     if($type == 'slider' ||!$type){
-
         $images = get_galleries_post('_kt_gallery_images', 'blog_post');
         if($images){
             $slider_class = array('blog-posts-slick');
@@ -50,12 +49,7 @@
                 esc_attr($slider_option),
                 $slider_html
             );
-
         }
-
-
-
-
     }elseif($type == 'gird'){
         $images = get_galleries_post('_kt_gallery_images', 'small');
         $gallery = '';
@@ -73,10 +67,18 @@
                 $gallery
             );
         }
-    }elseif($type == 'revslider'){
-
-    }elseif($type == 'layerslider'){
-
+    }elseif($type == 'revslider' && class_exists( 'RevSlider' )){
+        if ($rev = rwmb_meta('_kt_gallery_rev_slider')) {
+            echo '<div class="entry-thumb">';
+            putRevSlider($rev);
+            echo '</div><!-- .entry-thumb -->';
+        }
+    }elseif($type == 'layerslider' && is_plugin_active( 'LayerSlider/layerslider.php' )){
+        if($layerslider = rwmb_meta('_kt_gallery_layerslider')){
+            echo '<div class="entry-thumb">';
+            echo do_shortcode('[layerslider id="'.rwmb_meta('_kt_gallery_layerslider').'"]');
+            echo '</div><!-- .entry-thumb -->';
+        }
     }
 
     ?>

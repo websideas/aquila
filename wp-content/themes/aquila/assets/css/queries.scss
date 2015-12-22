@@ -30,6 +30,9 @@ only screen and (min-resolution: 144dpi) {
 
 
 @media (min-width: 1200px) {
+
+
+
   .blog-posts-medium {
     .no-sidebar &{
       .post-item-thumb{
@@ -40,6 +43,11 @@ only screen and (min-resolution: 144dpi) {
       }
     }
   }
+
+  .sidebar{
+    padding-left: 40px;
+  }
+
 }
 
 
