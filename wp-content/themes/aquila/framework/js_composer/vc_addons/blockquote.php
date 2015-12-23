@@ -67,7 +67,7 @@ vc_map( array(
             'param_name' => 'style',
             'value' => array(
                 __( 'Normal', THEME_LANG ) => '',
-                __( 'Classic', THEME_LANG ) => 'classic',
+                __( 'Post quote', THEME_LANG ) => 'post-item-quote',
                 __( 'Simple', THEME_LANG ) => 'simple',
             ),
             'description' => __( 'Position of content.', THEME_LANG ),

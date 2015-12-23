@@ -5,7 +5,7 @@ if ( !defined('ABSPATH')) exit;
 
 
 if ( ! class_exists( 'KT_config' ) ) {
-    class KT_config{
+    class KT_config1{
         public $args = array();
         public $sections = array();
         public $theme;
@@ -757,252 +757,7 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
 
-            /**
-             *	Styling Footer
-             **/
-            $this->sections[] = array(
-                'id'			=> 'styling_footer',
-                'title'			=> __( 'Footer', THEME_LANG ),
-                'subsection' => true,
-                'fields'		=> array(
-                    array(
-                        'id'       => 'footer_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer settings', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id'       => 'footer_background',
-                        'type'     => 'background',
-                        'title'    => __( 'Footer Background', THEME_LANG ),
-                        'subtitle' => __( 'Footer Background with image, color, etc.', THEME_LANG ),
-                        'default'   => array( 'background-color' => '#1e1e1e' ),
-                        'output'      => array( '#footer' ),
-                    ),
 
-                    array(
-                        'id'       => 'footer_padding',
-                        'type'     => 'spacing',
-                        'mode'     => 'padding',
-                        'left'     => false,
-                        'right'    => false,
-                        'output'   => array( '#footer' ),
-                        'units'          => array( 'px' ),
-                        'units_extended' => 'true',
-                        'title'    => __( 'Footer padding', THEME_LANG ),
-                        'default'  => array( )
-                    ),
-
-                    array(
-                        'id'       => 'footer_border',
-                        'type'     => 'border',
-                        'title'    => __( 'Footer Border', THEME_LANG ),
-                        'output'   => array( '#footer' ),
-                        'all'      => false,
-                        'left'     => false,
-                        'right'    => false,
-                        'bottom'      => false,
-                        'default'  => array( )
-                    ),
-
-                    // Footer top settings
-                    array(
-                        'id'       => 'footer_top_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer top settings', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id'       => 'footer_top_background',
-                        'type'     => 'background',
-                        'title'    => __( 'Footer top Background', THEME_LANG ),
-                        'subtitle' => __( 'Footer top Background with image, color, etc.', THEME_LANG ),
-                        'default'   => array( ),
-                        'output'      => array( '#footer-top' ),
-                    ),
-                    array(
-                        'id'       => 'footer_top_padding',
-                        'type'     => 'spacing',
-                        'mode'     => 'padding',
-                        'left'     => false,
-                        'right'    => false,
-                        'output'   => array( '#footer-top' ),
-                        'units'          => array( 'px' ),
-                        'units_extended' => 'true',
-                        'title'    => __( 'Footer top padding', THEME_LANG ),
-                        'default'  => array( )
-                    ),
-                    array(
-                        'id'       => 'footer_top_border',
-                        'type'     => 'border',
-                        'title'    => __( 'Footer top Border', THEME_LANG ),
-                        'output'   => array( '#footer-top' ),
-                        'all'      => false,
-                        'left'     => false,
-                        'right'    => false,
-                        'top'      => false,
-                        'default'  => array(
-
-                        )
-                    ),
-                    // Footer widgets settings
-                    array(
-                        'id'       => 'footer_widgets_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer widgets settings', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id'       => 'footer_widgets_background',
-                        'type'     => 'background',
-                        'title'    => __( 'Footer widgets Background', THEME_LANG ),
-                        'subtitle' => __( 'Footer widgets Background with image, color, etc.', THEME_LANG ),
-                        'default'   => array(  ),
-                        'output'      => array( '#footer-area' ),
-                    ),
-                    array(
-                        'id'       => 'footer_widgets_padding',
-                        'type'     => 'spacing',
-                        'mode'     => 'padding',
-                        'left'     => false,
-                        'right'    => false,
-                        'output'   => array( '#footer-area' ),
-                        'units'          => array( 'px' ),
-                        'units_extended' => 'true',
-                        'title'    => __( 'Footer widgets padding', THEME_LANG ),
-                        'default'  => array( )
-                    ),
-
-                    //Footer bottom settings
-                    array(
-                        'id'       => 'footer_bottom_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer bottom settings', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id'       => 'footer_bottom_background',
-                        'type'     => 'background',
-                        'title'    => __( 'Footer Background', THEME_LANG ),
-                        'subtitle' => __( 'Footer Background with image, color, etc.', THEME_LANG ),
-                        'default'   => array( ),
-                        'output'      => array( '#footer-bottom' ),
-                    ),
-
-                    array(
-                        'id'       => 'footer_bottom_padding',
-                        'type'     => 'spacing',
-                        'mode'     => 'padding',
-                        'left'     => false,
-                        'right'    => false,
-                        'units'          => array( 'px' ),
-                        'units_extended' => 'true',
-                        'title'    => __( 'Footer bottom padding', THEME_LANG ),
-                        'default'  => array( ),
-                        'subtitle' => 'Disable if you use instagram background',
-                    ),
-
-                    //Footer copyright settings
-                    array(
-                        'id'       => 'footer_copyright_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer copyright settings', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-
-                    array(
-                        'id'       => 'footer_copyright_border',
-                        'type'     => 'border',
-                        'title'    => __( 'Footer Copyright Border', THEME_LANG ),
-                        'output'   => array( '#footer-copyright' ),
-                        'all'      => false,
-                        'left'     => false,
-                        'right'    => false,
-                        'bottom'      => false,
-                        'default'  => array( )
-                    ),
-
-                    array(
-                        'id'       => 'footer_copyright_background',
-                        'type'     => 'background',
-                        'title'    => __( 'Footer Background', THEME_LANG ),
-                        'subtitle' => __( 'Footer Background with image, color, etc.', THEME_LANG ),
-                        'default'   => array( ),
-                        'output'      => array( '#footer-copyright' ),
-                    ),
-                    array(
-                        'id'       => 'footer_copyright_padding',
-                        'type'     => 'spacing',
-                        'mode'     => 'padding',
-                        'left'     => false,
-                        'right'    => false,
-                        'output'   => array( '#footer-copyright' ),
-                        'units'          => array( 'px' ),
-                        'units_extended' => 'true',
-                        'title'    => __( 'Footer copyright padding', THEME_LANG ),
-                        'default'  => array( )
-                    ),
-                    array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
-                    ),
-                    array(
-                        'id'       => 'footer_socials_style',
-                        'type'     => 'select',
-                        'title'    => __( 'Footer socials style', THEME_LANG ),
-                        'options'  => array(
-                            'accent' => __('Accent', THEME_LANG ),
-                            'dark'   => __('Dark', THEME_LANG ),
-                            'light'  => __('Light', THEME_LANG ),
-                            'color'  => __('Color', THEME_LANG ),
-                            'custom'  => __('Custom Color', THEME_LANG ),
-                        ),
-                        'default'  => 'custom'
-                    ),
-                    array(
-                        'id'       => 'custom_color_social',
-                        'type'     => 'color',
-                        'title'    => __( 'Footer socials Color', THEME_LANG ),
-                        'default'  => '#707070',
-                        'transparent' => false,
-                        'required' => array('footer_socials_style','equals', array( 'custom' ) ),
-                    ),
-                    array(
-                        'id'       => 'footer_socials_background',
-                        'type'     => 'select',
-                        'title'    => __( 'Footer socials background', THEME_LANG ),
-                        'options'  => array(
-                            'empty'       => __('None', THEME_LANG ),
-                            'rounded'   => __('Circle', THEME_LANG ),
-                            'boxed'  => __('Square', THEME_LANG ),
-                            'rounded-less'  => __('Rounded', THEME_LANG ),
-                            'diamond-square'  => __('Diamond Square', THEME_LANG ),
-                            'rounded-outline'  => __('Outline Circle', THEME_LANG ),
-                            'boxed-outline'  => __('Outline Square', THEME_LANG ),
-                            'rounded-less-outline'  => __('Outline Rounded', THEME_LANG ),
-                            'diamond-square-outline'  => __('Outline Diamond Square', THEME_LANG ),
-                        ),
-                        'subtitle'     => __( 'Select background shape and style for social.', THEME_LANG ),
-                        'default'  => 'empty'
-                    ),
-                    array(
-                        'id'       => 'footer_socials_size',
-                        'type'     => 'select',
-                        'title'    => __( 'Footer socials size', THEME_LANG ),
-                        'options'  => array(
-                            'small'       => __('Small', THEME_LANG ),
-                            'standard'   => __('Standard', THEME_LANG ),
-                        ),
-                        'default'  => 'small'
-                    ),
-                    array(
-                        'id'       => 'footer_socials_space_between_item',
-                        'type'     => 'text',
-                        'title'    => __( 'Footer socials space between item', THEME_LANG ),
-                        'default'  => '10'
-                    ),
-                )
-            );
 
             /**
              *	Main Navigation
@@ -1940,37 +1695,6 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
 
-
-            /**
-             *	Sidebar
-             **/
-            $this->sections[] = array(
-                'id'			=> 'sidebar_section',
-                'title'			=> __( 'Sidebar Widgets', THEME_LANG ),
-                'desc'			=> '',
-                'icon'          => 'icon-Sidebar-Window',
-                'fields'		=> array(
-
-                    array(
-                        'id'          => 'custom_sidebars',
-                        'type'        => 'slides',
-                        'title'       => __('Slides Options', THEME_LANG ),
-                        'subtitle'    => __('Unlimited sidebar with drag and drop sortings.', THEME_LANG ),
-                        'desc'        => '',
-                        'class'       => 'slider-no-image-preview',
-                        'content_title' =>'Sidebar',
-                        'show' => array(
-                            'title' => true,
-                            'description' => true,
-                            'url' => false,
-                        ),
-                        'placeholder' => array(
-                            'title'           => __('Sidebar title', THEME_LANG ),
-                            'description'     => __('Sidebar Description', THEME_LANG ),
-                        ),
-                    ),
-                )
-            );
 
             /**
              *	Page header
@@ -3245,67 +2969,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                 )
             );
 
-            /**
-             *	404 Page
-             **/
-            $this->sections[] = array(
-                'id'			=> '404_section',
-                'title'			=> __( '404 Page', THEME_LANG ),
-                'desc'			=> '404 Page settings',
-                'icon'          => 'icon-Error-404Window',
-                'fields'		=> array(
-                    array(
-                        'id'       => 'notfound_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( '404 Page general', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id' => 'notfound_page_header',
-                        'type' => 'switch',
-                        'title' => __('Show Page header', THEME_LANG),
-                        'desc' => __('Show page header or?.', THEME_LANG),
-                        "default" => 0,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
-                    ),
 
-                    array(
-                        'id'       => '404_image',
-                        'type'     => 'media',
-                        'url'      => true,
-                        'compiler' => true,
-                        'title'    => __( '404 Image', THEME_LANG ),
-                        'default'  => array(
-                            'url' => THEME_IMG.'404.png'
-                        )
-                    ),
-
-                    array(
-                        'id' => 'notfound_page_type',
-                        'type' => 'select',
-                        'title' => __('404 Page', THEME_LANG),
-                        'desc' => '',
-                        'options' => array(
-                            'default' => __( 'Default', THEME_LANG ) ,
-                            'page' => __( 'From Page', THEME_LANG ) ,
-                            'home' => __( 'Redirect Home', THEME_LANG ) ,
-                        ),
-                        'default' => 'default',
-                    ),
-
-
-                    array(
-                        'id'       => 'notfound_page_id',
-                        'type'     => 'select',
-                        'data'     => 'pages',
-                        'title'    => __( 'Pages Select Option', THEME_LANG ),
-                        'desc'     => __( 'Select your page 404 you want use', THEME_LANG ),
-                        'required' => array( 'notfound_page_type', '=', 'page' ),
-                    ),
-
-                )
-            );
 
             /**
 			 *	Woocommerce
@@ -3653,6 +3317,601 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
 
+
+            
+            
+            
+        }
+        
+    }
+
+    class KT_config
+    {
+        public $args = array();
+        public $sections = array();
+        public $theme;
+        public $ReduxFramework;
+
+        public function __construct()
+        {
+
+            if (!class_exists('ReduxFramework')) {
+                return;
+            }
+            // This is needed. Bah WordPress bugs.  ;)
+            if (true == Redux_Helpers::isTheme(__FILE__)) {
+                $this->initSettings();
+            } else {
+                add_action('plugins_loaded', array($this, 'initSettings'), 10);
+            }
+        }
+
+        public function initSettings()
+        {
+
+            // Just for demo purposes. Not needed per say.
+            $this->theme = wp_get_theme();
+
+            // Set the default arguments
+            $this->setArguments();
+
+            // Create the sections and fields
+            $this->setSections();
+
+            if (!isset($this->args['opt_name'])) { // No errors please
+                return;
+            }
+
+            $this->ReduxFramework = new ReduxFramework($this->sections, $this->args);
+        }
+
+
+        /**
+         * All the possible arguments for Redux.
+         * For full documentation on arguments, please refer to: https://github.com/ReduxFramework/ReduxFramework/wiki/Arguments
+         * */
+        public function setArguments()
+        {
+
+            $theme = wp_get_theme(); // For use with some settings. Not necessary.
+
+            $this->args = array(
+                // TYPICAL -> Change these values as you need/desire
+                'opt_name' => THEME_OPTIONS,
+                // This is where your data is stored in the database and also becomes your global variable name.
+                'display_name' => $theme->get('Name'),
+                // Name that appears at the top of your panel
+                'display_version' => $theme->get('Version'),
+                // Version that appears at the top of your panel
+                'menu_type' => 'menu',
+                //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
+                'allow_sub_menu' => false,
+                // Show the sections below the admin menu item or not
+                'menu_title' => __('Theme Options', THEME_LANG),
+
+                'page_title' => $theme->get('Name') . ' ' . __('Theme Options', THEME_LANG),
+                // You will need to generate a Google API key to use this feature.
+                // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
+                // You will need to generate a Google API key to use this feature.
+                // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
+                'google_api_key' => '',
+                // Set it you want google fonts to update weekly. A google_api_key value is required.
+                'google_update_weekly' => false,
+                // Must be defined to add google fonts to the typography module
+                'async_typography' => false,
+                // Use a asynchronous font on the front end or font string
+                //'disable_google_fonts_link' => true,                    // Disable this in case you want to create your own google fonts loader
+                'admin_bar' => false,
+                // Show the panel pages on the admin bar
+                'admin_bar_icon' => 'dashicons-portfolio',
+                // Choose an icon for the admin bar menu
+                'admin_bar_priority' => 50,
+                // Choose an priority for the admin bar menu
+                'global_variable' => '',
+                // Set a different name for your global variable other than the opt_name
+                'dev_mode' => false,
+                // Show the time the page took to load, etc
+                'update_notice' => false,
+                // If dev_mode is enabled, will notify developer of updated versions available in the GitHub Repo
+                'customizer' => true,
+                // Enable basic customizer support
+                //'open_expanded'     => true,                    // Allow you to start the panel in an expanded way initially.
+                //'disable_save_warn' => true,                    // Disable the save warning when a user changes a field
+
+                // OPTIONAL -> Give you extra features
+                'page_priority' => 61,
+                // Order where the menu appears in the admin area. If there is any conflict, something will not show. Warning.
+                'page_parent' => 'themes.php',
+                // For a full list of options, visit: http://codex.wordpress.org/Function_Reference/add_submenu_page#Parameters
+                'page_permissions' => 'manage_options',
+                // Permissions needed to access the options panel.
+                'menu_icon' => 'dashicons-art',
+                // Specify a custom URL to an icon
+                'last_tab' => '',
+                // Force your panel to always open to a specific tab (by id)
+                'page_icon' => 'icon-themes',
+                // Icon displayed in the admin panel next to your menu_title
+                'page_slug' => 'theme_options',
+                // Page slug used to denote the panel
+                'save_defaults' => true,
+                // On load save the defaults to DB before user clicks save or not
+                'default_show' => false,
+                // If true, shows the default value next to each field that is not the default value.
+                'default_mark' => '',
+                // What to print by the field's title if the value shown is default. Suggested: *
+                'show_import_export' => true,
+                // Shows the Import/Export panel when not used as a field.
+
+                // CAREFUL -> These options are for advanced use only
+                'transient_time' => 60 * MINUTE_IN_SECONDS,
+                'output' => true,
+                // Global shut-off for dynamic CSS output by the framework. Will also disable google fonts output
+                'output_tag' => true,
+                // Allows dynamic CSS to be generated for customizer and google fonts, but stops the dynamic CSS from going to the head
+                // 'footer_credit'     => '',                   // Disable the footer credit of Redux. Please leave if you can help it.
+
+                // FUTURE -> Not in use yet, but reserved or partially implemented. Use at your own risk.
+                'database' => '',
+                // possible: options, theme_mods, theme_mods_expanded, transient. Not fully functional, warning!
+                'system_info' => false,
+                // REMOVE
+            );
+
+            // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
+            $this->args['share_icons'][] = array(
+                'url' => '#',
+                'title' => __('Like us on Facebook', THEME_LANG),
+                'icon' => 'el-icon-facebook'
+            );
+            $this->args['share_icons'][] = array(
+                'url' => '#',
+                'title' => __('Follow us on Twitter', THEME_LANG),
+                'icon' => 'el-icon-twitter'
+            );
+            $this->args['share_icons'][] = array(
+                'url' => '#',
+                'title' => __('Find us on LinkedIn', THEME_LANG),
+                'icon' => 'el-icon-linkedin'
+            );
+
+        }
+
+        public function setSections()
+        {
+
+            /**
+             *    Footer
+             **/
+            $this->sections[] = array(
+                'id' => 'footer',
+                'title' => __('Footer', THEME_LANG),
+                'desc' => '',
+                'subsection' => true,
+                'fields' => array(
+                    // Footer settings
+
+                    array(
+                        'id' => 'backtotop',
+                        'type' => 'switch',
+                        'title' => __('Back to top', THEME_LANG),
+                        'default' => true,
+                        'on' => __('Enabled', THEME_LANG),
+                        'off' => __('Disabled', THEME_LANG),
+                    ),
+
+                    array(
+                        'id' => 'footer_heading',
+                        'type' => 'raw',
+                        'content' => '<div class="section-heading">' . __('Footer settings', THEME_LANG) . '</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id' => 'footer',
+                        'type' => 'switch',
+                        'title' => __('Footer enable', THEME_LANG),
+                        'default' => true,
+                        'on' => __('Enabled', THEME_LANG),
+                        'off' => __('Disabled', THEME_LANG),
+                    ),
+
+                    // Footer Top settings
+                    array(
+                        'id' => 'footer_top_heading',
+                        'type' => 'raw',
+                        'content' => '<div class="section-heading">' . __('Footer top settings', THEME_LANG) . '</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id' => 'footer_top',
+                        'type' => 'switch',
+                        'title' => __('Footer top enable', THEME_LANG),
+                        'default' => true,
+                        'on' => __('Enabled', THEME_LANG),
+                        'off' => __('Disabled', THEME_LANG),
+                    ),
+                    /* Footer Logo */
+                    array(
+                        'id' => 'footer_Logo_heading',
+                        'type' => 'raw',
+                        'content' => '<div class="section-heading">' . __('Footer Logo settings', THEME_LANG) . '</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id' => 'footer_logo',
+                        'type' => 'switch',
+                        'title' => __('Footer logo enable', THEME_LANG),
+                        'default' => false,
+                        'on' => __('Enabled', THEME_LANG),
+                        'off' => __('Disabled', THEME_LANG),
+                    ),
+                    array(
+                        'id' => 'footer_socials',
+                        'type' => 'kt_socials',
+                        'title' => __('Select your socials', THEME_LANG),
+                    ),
+                    // Footer widgets settings
+                    array(
+                        'id' => 'footer_widgets_heading',
+                        'type' => 'raw',
+                        'content' => '<div class="section-heading">' . __('Footer widgets settings', THEME_LANG) . '</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id' => 'footer_widgets',
+                        'type' => 'switch',
+                        'title' => __('Footer widgets enable', THEME_LANG),
+                        'default' => true,
+                        'on' => __('Enabled', THEME_LANG),
+                        'off' => __('Disabled', THEME_LANG),
+                    ),
+
+                    array(
+                        'id' => 'footer_widgets_layout',
+                        'type' => 'image_select',
+                        'compiler' => true,
+                        'title' => __('Footer widgets layout', THEME_LANG),
+                        'subtitle' => __('Select your footer widgets layout', THEME_LANG),
+                        'options' => array(
+                            '3-3-3-3' => array('alt' => __('Layout 1', THEME_LANG), 'img' => FW_IMG . 'footer/footer-1.png'),
+                            '6-3-3' => array('alt' => __('Layout 2', THEME_LANG), 'img' => FW_IMG . 'footer/footer-2.png'),
+                            '3-3-6' => array('alt' => __('Layout 3', THEME_LANG), 'img' => FW_IMG . 'footer/footer-3.png'),
+                            '6-6' => array('alt' => __('Layout 4', THEME_LANG), 'img' => FW_IMG . 'footer/footer-4.png'),
+                            '4-4-4' => array('alt' => __('Layout 5', THEME_LANG), 'img' => FW_IMG . 'footer/footer-5.png'),
+                            '8-4' => array('alt' => __('Layout 6', THEME_LANG), 'img' => FW_IMG . 'footer/footer-6.png'),
+                            '4-8' => array('alt' => __('Layout 7', THEME_LANG), 'img' => FW_IMG . 'footer/footer-7.png'),
+                            '3-6-3' => array('alt' => __('Layout 8', THEME_LANG), 'img' => FW_IMG . 'footer/footer-8.png'),
+                            '12' => array('alt' => __('Layout 9', THEME_LANG), 'img' => FW_IMG . 'footer/footer-9.png'),
+                        ),
+                        'default' => '3-3-3-3'
+                    ),
+
+
+                    /* Footer copyright */
+                    array(
+                        'id' => 'footer_copyright_heading',
+                        'type' => 'raw',
+                        'content' => '<div class="section-heading">' . __('Footer copyright settings', THEME_LANG) . '</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id' => 'footer_copyright',
+                        'type' => 'switch',
+                        'title' => __('Footer copyright enable', THEME_LANG),
+                        'default' => true,
+                        'on' => __('Enabled', THEME_LANG),
+                        'off' => __('Disabled', THEME_LANG),
+                    ),
+                    array(
+                        'id' => 'footer_copyright_text',
+                        'type' => 'editor',
+                        'title' => __('Footer Copyright Text', THEME_LANG),
+                        'default' => '© Copyright Alitstudio 2015 .All Rights Reserved. Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a>'
+                    ),
+                )
+            );
+
+
+            /**
+             *	Styling Footer
+             **/
+            $this->sections[] = array(
+                'id'			=> 'styling_footer',
+                'title'			=> __( 'Footer', THEME_LANG ),
+                //'subsection' => true,
+                'fields'		=> array(
+                    array(
+                        'id'       => 'footer_heading',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Footer settings', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id'       => 'footer_background',
+                        'type'     => 'background',
+                        'title'    => __( 'Footer Background', THEME_LANG ),
+                        'subtitle' => __( 'Footer Background with image, color, etc.', THEME_LANG ),
+                        'default'   => array( 'background-color' => '#222222' ),
+                        'output'      => array( '#footer' ),
+                    ),
+
+                    array(
+                        'id'       => 'footer_border',
+                        'type'     => 'border',
+                        'title'    => __( 'Footer Border', THEME_LANG ),
+                        'output'   => array( '#footer' ),
+                        'all'      => false,
+                        'left'     => false,
+                        'right'    => false,
+                        'bottom'   => false,
+                        'default'  => array( )
+                    ),
+
+                    // Footer top settings
+                    array(
+                        'id'       => 'footer_top_heading',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Footer top settings', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id'       => 'footer_top_background',
+                        'type'     => 'background',
+                        'title'    => __( 'Footer top Background', THEME_LANG ),
+                        'subtitle' => __( 'Footer top Background with image, color, etc.', THEME_LANG ),
+                        'default'   => array( ),
+                        'output'      => array( '#footer-top' ),
+                    ),
+                    array(
+                        'id'       => 'footer_top_padding',
+                        'type'     => 'spacing',
+                        'mode'     => 'padding',
+                        'left'     => false,
+                        'right'    => false,
+                        'output'   => array( '#footer-top' ),
+                        'units'          => array( 'px' ),
+                        'units_extended' => 'true',
+                        'title'    => __( 'Footer top padding', THEME_LANG ),
+                        'default'  => array( )
+                    ),
+                    array(
+                        'id'       => 'footer_top_border',
+                        'type'     => 'border',
+                        'title'    => __( 'Footer top Border', THEME_LANG ),
+                        'output'   => array( '#footer-top' ),
+                        'all'      => false,
+                        'left'     => false,
+                        'right'    => false,
+                        'top'      => false,
+                        'default'  => array(
+
+                        )
+                    ),
+                    // Footer widgets settings
+                    array(
+                        'id'       => 'footer_widgets_heading',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Footer widgets settings', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id'       => 'footer_widgets_background',
+                        'type'     => 'background',
+                        'title'    => __( 'Footer widgets Background', THEME_LANG ),
+                        'subtitle' => __( 'Footer widgets Background with image, color, etc.', THEME_LANG ),
+                        'default'   => array(  ),
+                        'output'      => array( '#footer-area' ),
+                    ),
+                    array(
+                        'id'       => 'footer_widgets_padding',
+                        'type'     => 'spacing',
+                        'mode'     => 'padding',
+                        'left'     => false,
+                        'right'    => false,
+                        'output'   => array( '#footer-area' ),
+                        'units'          => array( 'px' ),
+                        'units_extended' => 'true',
+                        'title'    => __( 'Footer widgets padding', THEME_LANG ),
+                        'default'  => array( )
+                    ),
+
+                    array(
+                        'id'       => 'footer_widgets_border',
+                        'type'     => 'border',
+                        'title'    => __( 'Footer Copyright Border', THEME_LANG ),
+                        'output'   => array( '#footer-area' ),
+                        'all'      => false,
+                        'left'     => false,
+                        'right'    => false,
+                        'top'      => false,
+                        'default'  => array( )
+                    ),
+
+                    //Footer copyright settings
+                    array(
+                        'id'       => 'footer_copyright_heading',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Footer copyright settings', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+
+
+                    array(
+                        'id'       => 'footer_copyright_background',
+                        'type'     => 'background',
+                        'title'    => __( 'Footer Background', THEME_LANG ),
+                        'subtitle' => __( 'Footer Background with image, color, etc.', THEME_LANG ),
+                        'default'   => array( ),
+                        'output'      => array( '#footer-copyright' ),
+                    ),
+                    array(
+                        'id'       => 'footer_copyright_padding',
+                        'type'     => 'spacing',
+                        'mode'     => 'padding',
+                        'left'     => false,
+                        'right'    => false,
+                        'output'   => array( '#footer-copyright' ),
+                        'units'          => array( 'px' ),
+                        'units_extended' => 'true',
+                        'title'    => __( 'Footer copyright padding', THEME_LANG ),
+                        'default'  => array( )
+                    ),
+                    array(
+                        'type' => 'divide',
+                        'id' => 'divide_fake',
+                    ),
+                    array(
+                        'id'       => 'footer_socials_style',
+                        'type'     => 'select',
+                        'title'    => __( 'Footer socials style', THEME_LANG ),
+                        'options'  => array(
+                            'accent' => __('Accent', THEME_LANG ),
+                            'dark'   => __('Dark', THEME_LANG ),
+                            'light'  => __('Light', THEME_LANG ),
+                            'color'  => __('Color', THEME_LANG ),
+                            'custom'  => __('Custom Color', THEME_LANG ),
+                        ),
+                        'default'  => 'custom'
+                    ),
+                    array(
+                        'id'       => 'custom_color_social',
+                        'type'     => 'color',
+                        'title'    => __( 'Footer socials Color', THEME_LANG ),
+                        'default'  => '#707070',
+                        'transparent' => false,
+                        'required' => array('footer_socials_style','equals', array( 'custom' ) ),
+                    ),
+                    array(
+                        'id'       => 'footer_socials_background',
+                        'type'     => 'select',
+                        'title'    => __( 'Footer socials background', THEME_LANG ),
+                        'options'  => array(
+                            'empty'       => __('None', THEME_LANG ),
+                            'rounded'   => __('Circle', THEME_LANG ),
+                            'boxed'  => __('Square', THEME_LANG ),
+                            'rounded-less'  => __('Rounded', THEME_LANG ),
+                            'diamond-square'  => __('Diamond Square', THEME_LANG ),
+                            'rounded-outline'  => __('Outline Circle', THEME_LANG ),
+                            'boxed-outline'  => __('Outline Square', THEME_LANG ),
+                            'rounded-less-outline'  => __('Outline Rounded', THEME_LANG ),
+                            'diamond-square-outline'  => __('Outline Diamond Square', THEME_LANG ),
+                        ),
+                        'subtitle'     => __( 'Select background shape and style for social.', THEME_LANG ),
+                        'default'  => 'empty'
+                    ),
+                    array(
+                        'id'       => 'footer_socials_size',
+                        'type'     => 'select',
+                        'title'    => __( 'Footer socials size', THEME_LANG ),
+                        'options'  => array(
+                            'small'       => __('Small', THEME_LANG ),
+                            'standard'   => __('Standard', THEME_LANG ),
+                        ),
+                        'default'  => 'small'
+                    ),
+                    array(
+                        'id'       => 'footer_socials_space_between_item',
+                        'type'     => 'text',
+                        'title'    => __( 'Footer socials space between item', THEME_LANG ),
+                        'default'  => '10'
+                    ),
+                )
+            );
+
+
+            /**
+             *	Sidebar
+             **/
+            $this->sections[] = array(
+                'id'			=> 'sidebar_section',
+                'title'			=> __( 'Sidebar Widgets', THEME_LANG ),
+                'desc'			=> '',
+                'icon'          => 'icon-Sidebar-Window',
+                'fields'		=> array(
+
+                    array(
+                        'id'          => 'custom_sidebars',
+                        'type'        => 'slides',
+                        'title'       => __('Slides Options', THEME_LANG ),
+                        'subtitle'    => __('Unlimited sidebar with drag and drop sortings.', THEME_LANG ),
+                        'desc'        => '',
+                        'class'       => 'slider-no-image-preview',
+                        'content_title' =>'Sidebar',
+                        'show' => array(
+                            'title' => true,
+                            'description' => true,
+                            'url' => false,
+                        ),
+                        'placeholder' => array(
+                            'title'           => __('Sidebar title', THEME_LANG ),
+                            'description'     => __('Sidebar Description', THEME_LANG ),
+                        ),
+                    ),
+                )
+            );
+
+            /**
+             *	404 Page
+             **/
+            $this->sections[] = array(
+                'id'			=> '404_section',
+                'title'			=> __( '404 Page', THEME_LANG ),
+                'desc'			=> '404 Page settings',
+                'icon'          => 'icon-Error-404Window',
+                'fields'		=> array(
+                    array(
+                        'id'       => 'notfound_heading',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( '404 Page general', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id' => 'notfound_page_header',
+                        'type' => 'switch',
+                        'title' => __('Show Page header', THEME_LANG),
+                        'desc' => __('Show page header or?.', THEME_LANG),
+                        "default" => 0,
+                        'on' => __('Enabled', THEME_LANG),
+                        'off' =>__('Disabled', THEME_LANG)
+                    ),
+
+                    array(
+                        'id'       => '404_image',
+                        'type'     => 'media',
+                        'url'      => true,
+                        'compiler' => true,
+                        'title'    => __( '404 Image', THEME_LANG ),
+                        'default'  => array(
+                            'url' => THEME_IMG.'404.png'
+                        )
+                    ),
+
+                    array(
+                        'id' => 'notfound_page_type',
+                        'type' => 'select',
+                        'title' => __('404 Page', THEME_LANG),
+                        'desc' => '',
+                        'options' => array(
+                            'default' => __( 'Default', THEME_LANG ) ,
+                            'page' => __( 'From Page', THEME_LANG ) ,
+                            'home' => __( 'Redirect Home', THEME_LANG ) ,
+                        ),
+                        'default' => 'default',
+                    ),
+
+
+                    array(
+                        'id'       => 'notfound_page_id',
+                        'type'     => 'select',
+                        'data'     => 'pages',
+                        'title'    => __( 'Pages Select Option', THEME_LANG ),
+                        'desc'     => __( 'Select your page 404 you want use', THEME_LANG ),
+                        'required' => array( 'notfound_page_type', '=', 'page' ),
+                    ),
+
+                )
+            );
+
+
             $importer_errors = array();
             $max_execution_time  = ini_get("max_execution_time");
             $max_input_time      = ini_get("max_input_time");
@@ -3689,23 +3948,23 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
             /**
-			 *	Import Demo
-			 **/
+             *	Import Demo
+             **/
             $this->sections[] = array(
-                 'id' => 'wbc_importer_section',
-                 'title'  => esc_html__( 'Demo Content', THEME_LANG ),
-                 'desc'   => esc_html__( 'Chose a demo to import', THEME_LANG ),
-                 'icon'   => 'icon-Blackboard',
-                 'fields' => $importer
+                'id' => 'wbc_importer_section',
+                'title'  => esc_html__( 'Demo Content', THEME_LANG ),
+                'desc'   => esc_html__( 'Chose a demo to import', THEME_LANG ),
+                'icon'   => 'icon-Blackboard',
+                'fields' => $importer
             );
 
             /**
-			 *	Advanced
-			 **/
-			$this->sections[] = array(
-				'id'			=> 'advanced',
-				'title'			=> __( 'Advanced', THEME_LANG ),
-				'desc'			=> '',
+             *	Advanced
+             **/
+            $this->sections[] = array(
+                'id'			=> 'advanced',
+                'title'			=> __( 'Advanced', THEME_LANG ),
+                'desc'			=> '',
                 'icon'	=> 'icon-Settings-Window',
             );
 
@@ -3749,7 +4008,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
-             *	Advanced Mail Chimp API
+             *	Advanced Socials API
              **/
             $this->sections[] = array(
                 'id'			=> 'socials_api_section',
@@ -3757,41 +4016,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
-                    array(
-                        'id'       => 'twitter_api_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Twitter API', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id' => 'twitter_consumer_key',
-                        'type' => 'text',
-                        'title' => __('Twitter Consumer Key', THEME_LANG),
-                        'subtitle' => __('Your twitter Consumer Key', THEME_LANG),
-                        'desc' => sprintf( __( '%sClick Here%s to learn about these keys.', THEME_LANG ), '<a href="#" target="_blank">', '</a>'),
-                        'default' => 'geINSa0v1hZsHnp9Tj7Km2bgl'
-                    ),
-                    array(
-                        'id' => 'twitter_consumer_secret',
-                        'type' => 'text',
-                        'title' => __('Twitter Consumer Secret', THEME_LANG),
-                        'subtitle' => __("Your twitter Consumer Secret.", THEME_LANG),
-                        'default' => 'ms0lQ6i4nWuIWA0yvByEq97sK72wFAEJWHCdUBDOQog6Yp50cj'
-                    ),
-                    array(
-                        'id' => 'twitter_access_key',
-                        'type' => 'text',
-                        'title' => __('Twitter Access Token', THEME_LANG),
-                        'subtitle' => __("Your twitter Access Token.", THEME_LANG),
-                        'default' => '2309625042-h1NgGNpzMPYYXfLdlCCcvdBVhZPzjUeo9br7GrZ'
-                    ),
-                    array(
-                        'id' => 'twitter_access_secret',
-                        'type' => 'text',
-                        'title' => __('Twitter Access Token Secret', THEME_LANG),
-                        'subtitle' => __("Your twitter Access Token Secret.", THEME_LANG),
-                        'default' => '9jzZ2MxHnbyxuGyGs75DuBT1ZF3GtW4JU7oaFO6k91SDR'
-                    ),
                     array(
                         'id'       => 'facebook_app_heading',
                         'type'     => 'raw',
@@ -3804,21 +4028,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title' => __('Facebook App ID', THEME_LANG),
                         'subtitle' => __("Add Facebook App ID.", THEME_LANG),
                         'default' => '417674911655656'
-                    ),
-                    array(
-                        'id'       => 'mailchimp_api_key_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Mail Chimp API', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id' => 'mailchimp_api_key',
-                        'type' => 'text',
-                        'title' => __('Mail Chimp API Key', THEME_LANG),
-                        'subtitle' => __('Your Mail Chimp API Key', THEME_LANG),
-                        'desc' => sprintf( __( '%sClick Here%s to learn about these keys.', THEME_LANG ), '<a href="#" target="_blank">', '</a>'),
-                        'default' => 'acf783f889d685580748b6c543235ef9-us5'
-                    ),
+                    )
                 )
             );
 
@@ -3828,14 +4038,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
-			 *	Advanced Custom CSS
-			 **/
-			$this->sections[] = array(
-				'id'			=> 'advanced_css',
-				'title'			=> __( 'Custom CSS', THEME_LANG ),
-				'desc'			=> '',
+             *	Advanced Custom CSS
+             **/
+            $this->sections[] = array(
+                'id'			=> 'advanced_css',
+                'title'			=> __( 'Custom CSS', THEME_LANG ),
+                'desc'			=> '',
                 'subsection' => true,
-				'fields'		=> array(
+                'fields'		=> array(
                     array(
                         'id'       => 'advanced_editor_css',
                         'type'     => 'ace_editor',
@@ -3848,14 +4058,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                 )
             );
             /**
-			 *	Advanced Custom CSS
-			 **/
-			$this->sections[] = array(
-				'id'			=> 'advanced_js',
-				'title'			=> __( 'Custom JS', THEME_LANG ),
-				'desc'			=> '',
+             *	Advanced Custom CSS
+             **/
+            $this->sections[] = array(
+                'id'			=> 'advanced_js',
+                'title'			=> __( 'Custom JS', THEME_LANG ),
+                'desc'			=> '',
                 'subsection' => true,
-				'fields'		=> array(
+                'fields'		=> array(
                     array(
                         'id'       => 'advanced_editor_js',
                         'type'     => 'ace_editor',
@@ -3869,14 +4079,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                 )
             );
             /**
-			 *	Advanced Tracking Code
-			 **/
-			$this->sections[] = array(
-				'id'			=> 'advanced_tracking',
-				'title'			=> __( 'Tracking Code', THEME_LANG ),
-				'desc'			=> '',
+             *	Advanced Tracking Code
+             **/
+            $this->sections[] = array(
+                'id'			=> 'advanced_tracking',
+                'title'			=> __( 'Tracking Code', THEME_LANG ),
+                'desc'			=> '',
                 'subsection' => true,
-				'fields'		=> array(
+                'fields'		=> array(
                     array(
                         'id'       => 'advanced_tracking_code',
                         'type'     => 'textarea',
@@ -3885,27 +4095,26 @@ if ( ! class_exists( 'KT_config' ) ) {
                     )
                 )
             );
-            
+
             $info_arr = array();
             $theme = wp_get_theme();
-            
+
             $info_arr[] = "<li><span>".__('Theme Name:', THEME_LANG)." </span>". $theme->get('Name').'</li>';
             $info_arr[] = "<li><span>".__('Theme Version:', THEME_LANG)." </span>". $theme->get('Version').'</li>';
             $info_arr[] = "<li><span>".__('Theme URI:', THEME_LANG)." </span>". $theme->get('ThemeURI').'</li>';
             $info_arr[] = "<li><span>".__('Author:', THEME_LANG)." </span>". $theme->get('Author').'</li>';
-            
+
             $system_info = sprintf("<div class='troubleshooting'><ul>%s</ul></div>", implode('', $info_arr));
-            
-            
+
             /**
-			 *	Advanced Troubleshooting
-			 **/
-			$this->sections[] = array(
-				'id'			=> 'advanced_troubleshooting',
-				'title'			=> __( 'Troubleshooting', THEME_LANG ),
-				'desc'			=> '',
+             *	Advanced Troubleshooting
+             **/
+            $this->sections[] = array(
+                'id'			=> 'advanced_troubleshooting',
+                'title'			=> __( 'Troubleshooting', THEME_LANG ),
+                'desc'			=> '',
                 'subsection' => true,
-				'fields'		=> array(
+                'fields'		=> array(
                     array(
                         'id'       => 'opt-raw_info_4',
                         'type'     => 'raw',
@@ -3914,15 +4123,12 @@ if ( ! class_exists( 'KT_config' ) ) {
                     ),
                 )
             );
-            
-            
-            
+
         }
-        
     }
     
     global $reduxConfig;
-    //$reduxConfig = new KT_config();
+    $reduxConfig = new KT_config();
     
 } else {
     echo "The class named Redux_Framework_sample_config has already been called. <strong>Developers, you need to prefix this class with your company name or you'll run into problems!</strong>";

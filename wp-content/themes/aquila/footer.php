@@ -33,48 +33,23 @@
                         <?php dynamic_sidebar('footer-top') ?>
                     </footer><!-- #footer-top -->
                 <?php } ?>
-
-
                 <?php
-                    $layouts = explode('-', kt_option('footer_widgets_layout', '4-4-4'));
-                    $sidebar_widgets = true;
-                    foreach($layouts as $i => $layout){
-                        if(is_active_sidebar($layout)){
-                            $sidebar_widgets = false;
-                            break;
-                        }
-                    }
+
+                get_template_part( 'templates/footers/footer', 'navigation');
+
+                get_template_part( 'templates/footers/footer', 'socials');
+
+                if(kt_option('footer_widgets', true)){
+                    get_template_part( 'templates/footers/footer', 'widgets');
+                }
                 ?>
 
-                <?php if(kt_option('footer_widgets', true) && $sidebar_widgets){ ?>
-                    <footer id="footer-area">
-                        <div id="footer-area-content">
-                            <div class="container">
-                                <div class="row">
-                                    <?php foreach($layouts as $i => $layout){ ?>
-                                        <?php $footer_class = ($layout == 12) ? 'footer-area-one col-md-offset-2 col-md-8 col-sm-12 col-xs-12' : 'col-md-'.$layout . ' col-sm-'.$layout.' col-xs-12'; ?>
-                                        <div class="<?php echo esc_attr($footer_class); ?>">
-                                            <?php dynamic_sidebar('footer-column-'.($i+1)) ?>
-                                        </div>
-                                    <?php } ?>
-                                </div>
-                            </div><!-- .container -->
-                        </div><!-- #footer-area-content -->
-                    </footer><!-- #footer-area -->
-                <?php } ?>
-
-                <?php if(is_active_sidebar( 'footer-bottom' ) && kt_option('footer_bottom', true)){ ?>
-                    <footer id="footer-bottom">
-                        <?php dynamic_sidebar('footer-bottom') ?>
-                    </footer><!-- #footer-bottom -->
-                <?php } ?>
-
                 <?php if(kt_option('footer_copyright', true)){ ?>
-                    <div class="container">
-                        <footer id="footer-copyright">
-                            <?php get_template_part( 'templates/footers/footer', kt_option('footer_copyright_layout', 'centered') ); ?>
-                        </footer><!-- #footer-copyright -->
-                    </div><!-- .container -->
+                    <footer id="footer-copyright">
+                        <div class="container">
+                            <?php get_template_part( 'templates/footers/footer', 'copyright'); ?>
+                        </div><!-- .container -->
+                    </footer><!-- #footer-copyright -->
                 <?php } ?>
             </div><!-- #footer -->
             <?php

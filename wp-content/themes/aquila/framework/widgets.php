@@ -74,7 +74,7 @@ if ( function_exists('register_sidebar')) {
                 'name' => __( 'Footer column '.$i, THEME_LANG),
                 'id' => 'footer-column-'.$i,
                 'description' => __( 'The footer column '.$i.' widget area', THEME_LANG),
-                'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
+                'before_widget' => '<div id="%1$s" class="widget-footer %2$s">',
                 'after_widget' => '</div>',
                 'before_title' => '<h3 class="widget-title">',
                 'after_title' => '</h3>',

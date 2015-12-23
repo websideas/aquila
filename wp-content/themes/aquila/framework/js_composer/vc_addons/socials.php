@@ -57,12 +57,12 @@ class WPBakeryShortCode_Socials extends WPBakeryShortCode {
             foreach ($social_type as $id) {
                 $val = $socials_arr[$id];
                 $social_text = '<i class="'.esc_attr($val['icon']).'"></i>';
-                $social_icons .= '<li '.$margin.'><a class="'.esc_attr($id).'" title="'.esc_attr($val['title']).'" '.$tooltiphtml.' href="'.esc_url(str_replace('%s', $val['val'], $val['link'])).'" target="_blank">'.$social_text.'</a></li>'."\n";
+                $social_icons .= '<li '.$margin.'><a class="'.esc_attr($id).'" title="'.esc_attr($val['title']).'" '.$tooltiphtml.' href="'.esc_url(str_replace('%s', $val['val'], $val['link'])).'" target="_blank">'.$social_text.'<span>'.$val['title'].'</span></a></li>'."\n";
             }
         }else{
             foreach($socials_arr as $key => $val){
                 $social_text = '<i class="'.esc_attr($val['icon']).'"></i>';
-                $social_icons .= '<li '.$margin.'><a class="'.esc_attr($key).'"  '.$tooltiphtml.' title="'.esc_attr($val['title']).'" href="'.esc_url(str_replace('%s', $val['val'], $val['link'])).'" target="_blank">'.$social_text.'</a></li>'."\n";
+                $social_icons .= '<li '.$margin.'><a class="'.esc_attr($key).'"  '.$tooltiphtml.' title="'.esc_attr($val['title']).'" href="'.esc_url(str_replace('%s', $val['val'], $val['link'])).'" target="_blank">'.$social_text.'<span>'.$val['title'].'</span></a></li>'."\n";
             }
         }
 
@@ -75,8 +75,10 @@ class WPBakeryShortCode_Socials extends WPBakeryShortCode {
             'shape' => 'social-background-'.$background_style,
             'clearfix' => 'clearfix'
         );
-        if($background_style == 'empty'){
+        if($background_style == 'empty') {
             $elementClass[] = 'social-background-empty';
+        }elseif($background_style == 'text'){
+            $elementClass[] = 'social-text';
         }elseif ( strpos( $background_style, 'outline' ) !== false ) {
             $elementClass[] = 'social-background-outline';
         }else{
@@ -90,15 +92,12 @@ class WPBakeryShortCode_Socials extends WPBakeryShortCode {
                 color:#fff!important;
                 background:'.$custom_color.'!important;
             }';
-            $custom_css .= '#'.$rand.'.social-style-custom.social-background-outline a{
+            $custom_css .= '#'.$rand.'.social-style-custom.social-background-empty a,
+            #'.$rand.'.social-style-custom.social-text a,
+            #'.$rand.'.social-style-custom.social-background-outline a{
                 color:'.$custom_color.'!important;
                 border-color:'.$custom_color.'!important;
                 background: none !important;
-            }';
-            $custom_css .= '#'.$rand.'.social-style-custom.social-background-empty a{
-                color:'.$custom_color.'!important;
-                background:none!important;
-                border:!important;
             }';
         }
         if($custom_css){
@@ -169,6 +168,7 @@ vc_map( array(
             'param_name' => 'background_style',
             'value' => array(
                 __( 'None', 'js_composer' ) => '',
+                __( 'Text', 'js_composer' ) => 'text',
                 __( 'Circle', 'js_composer' ) => 'rounded',
                 __( 'Square', 'js_composer' ) => 'boxed',
                 __( 'Rounded', 'js_composer' ) => 'rounded-less',

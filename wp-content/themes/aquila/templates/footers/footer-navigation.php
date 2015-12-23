@@ -2,7 +2,12 @@
 
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
+?>
 
-if ( has_nav_menu( 'bottom' ) ) {
-    wp_nav_menu( array( 'theme_location' => 'bottom', 'container' => 'nav', 'container_id' => 'bottom-nav' ) );
-}
+<?php if ( has_nav_menu( 'footer' ) ) { ?>
+    <div id="footer-navigation">
+        <div class="container">
+            <?php wp_nav_menu( array( 'theme_location' => 'footer' ) ); ?>
+        </div>
+    </div>
+<?php } ?>

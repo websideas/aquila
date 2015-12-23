@@ -86,8 +86,9 @@ function theme_setup() {
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus(array(
-        'primary' => __('Main menu', THEME_LANG),
-        //'top'	  => __( 'Top Menu', THEME_LANG ),
+        'primary' => __('Main Navigation Menu', THEME_LANG),
+        'mobile' => __('(Mobile Devices) Main Navigation Menu', THEME_LANG),
+        'footer'	  => __( 'Footer Navigation Menu', THEME_LANG ),
         'bottom'	  => __( 'Bottom Menu', THEME_LANG ),
     ));
 

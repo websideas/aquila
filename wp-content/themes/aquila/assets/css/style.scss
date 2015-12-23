@@ -186,25 +186,61 @@ blockquote{
       display: none;
     }
   }
-}
 
-.post-item-quote{
-  text-align: center;
-  font-size: 24px;
-  color: $black;
-  line-height: 40px;
-  padding: 90px 0 0;
-  border: none;
-
-  &:before{
-    width: 50px;
-    height: 50px;
-    line-height: 65px;
-    border: 2px solid $primary-color;
-    @include border-radius(50%);
-    @include translate(x);
+  &.blockquote-reverse{
+    border: none;
+    padding: 0 45px 0 0;
+    &:before{
+      content: '”';
+      left: auto;
+      right: 0;
+    }
+    footer{
+      &:after{
+        display: none;
+      }
+    }
   }
+
+  &.post-item-quote{
+    text-align: center;
+    font-size: 24px;
+    color: $black;
+    line-height: 40px;
+    padding: 90px 0 0;
+    border: none;
+
+    &:before{
+      width: 50px;
+      height: 50px;
+      line-height: 65px;
+      border: 2px solid $primary-color;
+      @include border-radius(50%);
+      @include translate(x);
+    }
+  }
+
+  &.simple{
+    text-align: center;
+    font-size: 30px;
+    line-height: 48px;
+    color: $white;
+    padding: 95px 0 0;
+    font-family: $extra-font;
+    &:before{
+      font-size: 200px;
+      color: rgba($white, .2);
+      top: 0;
+      line-height: 125px;
+      @include translate(x);
+    }
+  }
+
+
+
+
 }
+
 
 
 
@@ -1303,6 +1339,9 @@ ul.kt_posts_widget{
         line-height: 36px;
         width: 40px;
       }
+      span{
+        display: none;
+      }
     }
   }
 }
@@ -1334,7 +1373,7 @@ ul.kt_posts_widget{
   }
 }
 
-
+.social-text,
 .social-background-empty{
   ul{
     li{
@@ -1346,68 +1385,96 @@ ul.kt_posts_widget{
       }
     }
   }
-
 }
 
-.social-background-fill.social-style-accent{
-  a{
-    background: $primary-color !important;
-    color: $white !important;
-    &:hover{
-      @include opacity(.6);
+.social-text{
+  ul {
+    li {
+      a{
+        font-size: 10px;
+      }
+      span {
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        display: inline;
+        font-size: 12px;
+        padding-left: 6px;
+      }
     }
   }
 }
-.social-background-empty.social-style-accent,
-.social-background-outline.social-style-accent{
-  a{
-    background: none !important;
-    border-color: $primary-color;
-    color: $primary-color !important;
-    &:hover{
-      @include opacity(.6);
+
+.social-style-accent{
+  &.social-background-fill{
+    a{
+      background: $primary-color !important;
+      color: $white !important;
+      &:hover{
+        @include opacity(.6);
+      }
     }
   }
-}
-.social-background-fill.social-style-dark{
-  a{
-    background: $main-text !important;
-    color: $white !important;
-    &:hover{
-      color: $primary-color !important;
-    }
-  }
-}
-.social-background-empty.social-style-dark,
-.social-background-outline.social-style-dark{
-  a{
-    background: none !important;
-    border-color: $black;
-    color: $black !important;
-    &:hover{
-      color: $primary-color!important;
+  &.social-text,
+  &.social-background-empty,
+  &.social-background-outline{
+    a{
+      background: none !important;
       border-color: $primary-color;
-    }
-  }
-}
-.social-background-fill.social-style-light{
-  a{
-    background: $white !important;
-    color: $main-text !important;
-    &:hover{
       color: $primary-color !important;
+      &:hover{
+        @include opacity(.6);
+      }
     }
   }
 }
-.social-background-empty.social-style-light,
-.social-background-outline.social-style-light{
-  a{
-    background: none !important;
-    border-color: $white;
-    color: $white !important;
-    &:hover{
-      color: $primary-color!important;
-      border-color: $primary-color;
+
+
+.social-style-dark{
+  &.social-background-fill{
+    a{
+      background: $main-text !important;
+      color: $white !important;
+      &:hover{
+        color: $primary-color !important;
+      }
+    }
+  }
+  &.social-text,
+  &.social-background-empty,
+  &.social-background-outline{
+    a{
+      background: none !important;
+      border-color: $black;
+      color: $black !important;
+      &:hover{
+        color: $primary-color!important;
+        border-color: $primary-color;
+      }
+    }
+  }
+}
+
+.social-style-light{
+  &.social-background-fill{
+    a{
+      background: $white !important;
+      color: $main-text !important;
+      &:hover{
+        color: $primary-color !important;
+      }
+    }
+  }
+  &.social-text,
+  &.social-background-empty,
+  &.social-background-outline{
+    a{
+      background: none !important;
+      border-color: $white;
+      color: $white !important;
+      &:hover{
+        color: $primary-color!important;
+        border-color: $primary-color;
+      }
     }
   }
 }
@@ -1546,21 +1613,6 @@ ul.kt_posts_widget{
     height: auto;
     line-height: 1;
     width: auto;
-  }
-}
-
-.social-icons-small.social-background-diamond-square-outline,
-.social-icons-small.social-background-diamond-square{
-  li{
-    margin: 0;
-    padding: 4px;
-  }
-}
-
-.social-icons-small.social-background-diamond-square-outline,
-.social-icons-small.social-background-diamond-square{
-  li:last-child{
-    margin-right: 0;
   }
 }
 
@@ -2198,8 +2250,89 @@ ul.kt_posts_widget{
       display: none;
     }
   }
-
 }
+
+#footer{
+  background: $dark-bg;
+}
+
+#footer-navigation{
+  padding: 40px 0;
+  text-align: center;
+  border-bottom: 1px solid $dark-border;
+  ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    li{
+      display: inline-block;
+      padding: 0 30px;
+      &:first-child{
+        padding-left: 0;
+      }
+      &:last-child{
+        padding-right: 0;
+      }
+      a{
+        color: $white;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: .1em;
+        position: relative;
+        &:before{
+          content: '';
+          height: 1px;
+          width: 0;
+          bottom: -5px;
+          @include translate(x);
+          @include transition();
+          background: $primary-color;
+        }
+        &:hover{
+          color: $primary-color;
+          &:before{
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+#footer-area{
+  padding: 40px 0 30px;
+  border-bottom: 1px solid $dark-border;
+
+  .widget-footer{
+    margin-bottom: 30px;
+    .widget-title{
+      color: $white;
+    }
+  }
+}
+
+#footer-copyright{
+  padding: 40px 0;
+  color: $gray;
+  text-align: center;
+  a{
+    color: $gray;
+    &:hover{
+      color: $primary-color;
+    }
+  }
+}
+
+#footer-top{
+  background: url("../images/footer-quote.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 60px 0 70px;
+  .widget-container{
+    margin-bottom: 0;
+  }
+}
+
+
 
 /* ==============================
    9. Post slider
