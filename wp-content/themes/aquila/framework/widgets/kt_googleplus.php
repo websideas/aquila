@@ -21,12 +21,8 @@ class Widget_KT_Goolge extends WP_Widget {
 
     function footer() {
         ?>
-        <script type="text/javascript">
-            (function() {
-                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                po.src = 'https://apis.google.com/js/platform.js';
-                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-            })();</script>
+        <!-- Place this tag in your head or just before your close body tag. -->
+        <script src="https://apis.google.com/js/platform.js" async defer></script>
     <?php
     }
 
@@ -41,16 +37,26 @@ class Widget_KT_Goolge extends WP_Widget {
             $cover = isset( $instance['cover'] ) ? (bool) $instance['cover'] : true;
             $tagline = isset( $instance['tagline'] ) ? (bool) $instance['tagline'] : true;
 
-
             $layout =  ( in_array( $instance['layout'], array( 'portrait', 'landscape' ) ) ) ? $instance['layout'] : 'portrait';
+            $type =  ( in_array( $instance['type'], array( 'person', 'page', 'community' ) ) ) ? $instance['type'] : 'person';
             $color =  ( in_array( $instance['color'], array( 'light', 'dark' ) ) ) ? $instance['color'] : 'light';
 
             echo $args['before_widget'];
             if ( $title ) {
                 echo $args['before_title'] . $title . $args['after_title'];
             }
+
+            if($type == 'page'){
+                $badge_attr = 'data-rel="publisher"';
+            }elseif($type == 'person'){
+                $badge_attr = 'data-rel="author"';
+            }else{
+                $badge_attr = '';
+            }
+
             ?>
-            <div class="g-page" data-href="<?php echo esc_attr($href); ?>" data-width="262" data-theme="<?php echo esc_attr($color) ?>" data-layout="<?php echo esc_attr($layout) ?>" data-rel="publisher" data-showtagline="<?php echo $tagline ? 'true' : 'false' ?>" data-showcoverphoto="<?php echo $cover ? 'true' : 'false' ?>"></div>
+            <!-- Place this tag where you want the widget to render. -->
+            <div class="g-<?php echo esc_attr($instance['type']) ?>" data-href="<?php echo esc_attr($href) ?>" <?php echo $badge_attr; ?> data-width="335" data-layout="<?php echo esc_attr($layout) ?>" data-theme="<?php echo esc_attr($color) ?>" data-showtagline="<?php echo $tagline ? 'true' : 'false' ?>" data-showphoto="<?php echo $cover ? 'true' : 'false' ?>"></div>
             <?php
             echo $args['after_widget'];
         }
@@ -69,8 +75,16 @@ class Widget_KT_Goolge extends WP_Widget {
         } else {
             $instance['layout'] = 'portrait';
         }
+
+        if ( in_array( $new_instance['type'], array( 'person', 'page', 'community' ) ) ) {
+            $instance['type'] = $new_instance['type'];
+        } else {
+            $instance['type'] = 'person';
+        }
+
+
         if ( in_array( $new_instance['color'], array( 'light', 'dark' ) ) ) {
-            $instance['color'] = $new_instance['layout'];
+            $instance['color'] = $new_instance['color'];
         } else {
             $instance['color'] = 'light';
         }
@@ -85,7 +99,7 @@ class Widget_KT_Goolge extends WP_Widget {
 
     public function form( $instance ) {
 
-        $defaults = array( 'title' => __( 'Google Plus' , THEME_LANG), 'href' => '', 'layout' => 'portrait', 'color' => 'light', 'cover' => true, 'tagline' => true);
+        $defaults = array( 'title' => __( 'Google Plus' , THEME_LANG), 'href' => '', 'layout' => 'portrait', 'type' => 'person', 'color' => 'light', 'cover' => true, 'tagline' => true);
         $instance = wp_parse_args( (array) $instance, $defaults );
 
         $title = strip_tags($instance['title']);
@@ -94,6 +108,14 @@ class Widget_KT_Goolge extends WP_Widget {
 
         <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
+
+        <p><label for="<?php echo $this->get_field_id('type'); ?>"><?php _e('Type:',THEME_LANG); ?></label>
+            <select class="widefat" id="<?php echo $this->get_field_id('type'); ?>" name="<?php echo $this->get_field_name('type'); ?>">
+                <option <?php selected( $instance['type'], 'person' ); ?> value="person"><?php _e('Profile badge',THEME_LANG); ?></option>
+                <option <?php selected( $instance['type'], 'page' ); ?> value="page"><?php _e('Google+ page',THEME_LANG); ?></option>
+                <option <?php selected( $instance['type'], 'community' ); ?> value="community"><?php _e('Community page',THEME_LANG); ?></option>
+            </select>
+        </p>
 
         <p><label for="<?php echo $this->get_field_id( 'href' ); ?>"><?php _e( 'The URL of the Google plus Page:', THEME_LANG ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'href' ); ?>" name="<?php echo $this->get_field_name( 'href' ); ?>" type="text" value="<?php echo $instance['href']; ?>" /></p>

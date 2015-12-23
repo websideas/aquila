@@ -21,6 +21,8 @@ class WPBakeryShortCode_Socials extends WPBakeryShortCode {
             'css' => '',
     	), $atts));
 
+        $space_between_item = intval($space_between_item);
+
         $output = $social_icons = '';
 
         $socials_arr = array(
@@ -48,7 +50,7 @@ class WPBakeryShortCode_Socials extends WPBakeryShortCode {
             $tooltiphtml .= ' data-toggle="tooltip" data-placement="'.esc_attr($tooltip).'" ';
         }
 
-        $margin = ($space_between_item > 0) ? 'style="margin:0 '.$space_between_item.'px;"' : '';
+        $margin = ($space_between_item > 0) ? 'style="margin:0 '.$space_between_item.'px '.$space_between_item.'px;"' : '';
         
         if($social){
             $social_type = explode(',', $social);
@@ -109,7 +111,7 @@ class WPBakeryShortCode_Socials extends WPBakeryShortCode {
 
         $elementClass = preg_replace( array( '/\s+/', '/^\s|\s$/' ), array( ' ', '' ), implode( ' ', $elementClass ) );
 
-    	$output .= '<div id="'.$rand.'" class="'.esc_attr( $elementClass ).'"><ul class="social-nav clearfix">';
+    	$output .= '<div id="'.$rand.'" class="'.esc_attr( $elementClass ).'"><ul class="social-nav clearfix" style="margin:0 -'.$space_between_item.'px -'.$space_between_item.'px;">';
     	$output .= $social_icons;
     	$output .= '</ul>'.$custom_css.'</div>';
      
@@ -121,7 +123,7 @@ class WPBakeryShortCode_Socials extends WPBakeryShortCode {
 
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "Social", THEME_LANG),
+    "name" => __( "Socials", THEME_LANG),
     "base" => "socials",
     "category" => __('by Theme', THEME_LANG ),
     "description" => __( "Social", THEME_LANG),
@@ -170,11 +172,9 @@ vc_map( array(
                 __( 'Circle', 'js_composer' ) => 'rounded',
                 __( 'Square', 'js_composer' ) => 'boxed',
                 __( 'Rounded', 'js_composer' ) => 'rounded-less',
-                __( 'Diamond Square', 'js_composer' ) => 'diamond-square',
                 __( 'Outline Circle', 'js_composer' ) => 'rounded-outline',
                 __( 'Outline Square', 'js_composer' ) => 'boxed-outline',
                 __( 'Outline Rounded', 'js_composer' ) => 'rounded-less-outline',
-                __( 'Outline Diamond Square', 'js_composer' ) => 'diamond-square-outline',
             ),
             'description' => __( 'Select background shape and style for social.', THEME_LANG ),
             "admin_label" => true,

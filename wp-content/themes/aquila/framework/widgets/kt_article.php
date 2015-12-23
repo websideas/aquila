@@ -88,11 +88,29 @@ class Widget_KT_Posts extends WP_Widget {
             <ul class="kt_posts_widget kt-artilce-<?php echo esc_attr($layout) ?>">
                 <?php while ( $r->have_posts() ) : $r->the_post(); ?>
                     <li <?php post_class('article-widget clearfix'); ?>>
-                        <?php kt_post_thumbnail_image( 'recent_posts', 'img-responsive' ); ?>
-                        <div class="article-attr">
-                            <h3 class="title"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h3>
-                            <?php kt_entry_meta_time();?>
-                        </div>
+                            <?php kt_post_thumbnail_image( 'recent_posts', 'img-responsive' ); ?>
+                            <div class="article-attr">
+                                <h3 class="title"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h3>
+                                <?php if($layout == 2){ ?>
+                                <?php
+                                    echo '<div class="post-item-meta">';
+                                    echo '<div class="post-item-metaleft pull-left">';
+                                    kt_entry_meta_author();
+                                    kt_entry_meta_time();
+                                    echo '</div><!-- .post-item-metaleft -->';
+                                    echo '<div class="post-item-metaright pull-right">';
+                                    kt_get_post_views();
+                                    kt_entry_meta_comments();
+                                    echo '</div><!-- .post-item-metaright -->';
+                                    echo '<div class="clearfix"></div></div><!-- .post-item-meta -->';
+
+                                ?>
+                                <?php }else{ ?>
+                                    <?php kt_entry_meta_time();?>
+                                <?php } ?>
+
+                            </div>
+
                     </li>
                 <?php endwhile; ?>
             </ul>
@@ -114,12 +132,16 @@ class Widget_KT_Posts extends WP_Widget {
     }
 
     public function update( $new_instance, $old_instance ) {
+
+
+        print_r($_POST);
+
         $instance = $old_instance;
         $instance['title'] = strip_tags($new_instance['title']);
         $instance['number'] = (int) $new_instance['number'];
         $instance['layout'] = isset( $new_instance['layout'] ) ? (int) $new_instance['layout'] : 1;
 
-        $instance['category'] = isset( $new_instance['show_author'] ) ? $new_instance['category'] :  array();
+        $instance['category'] = isset( $new_instance['category'] ) ? $new_instance['category'] :  array();
 
         if ( in_array( $new_instance['orderby'], array( 'name', 'id', 'date', 'author', 'modified', 'rand', 'comment_count' ) ) ) {
             $instance['orderby'] = $new_instance['orderby'];
@@ -154,7 +176,7 @@ class Widget_KT_Posts extends WP_Widget {
         $orderby = isset( $instance['orderby'] ) ? $instance['orderby'] : 'date';
         $layout = isset( $instance['layout'] ) ? absint( $instance['layout'] ) : 1;
 
-        $category = isset( $instance['category'] ) ? $instance['category'] : array();;
+        $category = isset( $instance['category'] ) ? $instance['category'] : array();
 
         $categories = get_terms( 'category', array('hide_empty' => false));
 

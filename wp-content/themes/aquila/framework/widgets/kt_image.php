@@ -20,7 +20,6 @@ class WP_Widget_KT_Image extends WP_Widget {
 
         $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
-
         $attachment = get_thumbnail_attachment($instance['attachment'], $instance['size']);
 
         if($attachment){
@@ -30,11 +29,7 @@ class WP_Widget_KT_Image extends WP_Widget {
                 echo $args['before_title'] . $title . $args['after_title'];
             }
 
-            $animation_class = '';
-            if($instance['animation']){
-                $animation_class .= ' kt-image-animation';
-            }
-            echo "<div class='kt-image-content text-".$instance['align']." ".$animation_class."' data-animation='".$instance['animation']."'>";
+            echo "<div class='kt-image-content text-".$instance['align']."'>";
             if($instance['link']){
                 echo "<a href='".esc_attr($instance['link'])."' target='".esc_attr($instance['target'])."'>";
             }
@@ -54,7 +49,6 @@ class WP_Widget_KT_Image extends WP_Widget {
 		$instance['link'] = strip_tags($new_instance['link']);
         $instance['target'] = $new_instance['target'];
         $instance['size'] = $new_instance['size'];
-        $instance['animation'] = $new_instance['animation'];
         $instance['align'] = $new_instance['align'];
         $instance['attachment'] = intval($new_instance['attachment']);
         
@@ -63,12 +57,11 @@ class WP_Widget_KT_Image extends WP_Widget {
 
 	public function form( $instance ) {
 		//Defaults
-		$instance = wp_parse_args( (array) $instance, array( 'title' => __('Image', THEME_LANG), 'target' => '_self', 'link' => '', 'attachment' => '', 'size' => '', 'animation' => '', 'align' => 'center') );
+		$instance = wp_parse_args( (array) $instance, array( 'title' => '', 'target' => '_self', 'link' => '', 'attachment' => '', 'size' => '', 'align' => 'center') );
         $title = strip_tags($instance['title']);
 
 		$link = esc_attr( $instance['link'] );
         $attachment = esc_attr( $instance['attachment'] );
-        $animation = esc_attr( $instance['animation'] );
         $preview = false;
         $img_preview = "";
         if($instance['attachment']){
@@ -124,28 +117,6 @@ class WP_Widget_KT_Image extends WP_Widget {
                 <?php } ?>
 			</select>
 		</p>
-        <p>
-            <label for="<?php echo $this->get_field_id('animation'); ?>"><?php _e( 'CSS Animation:', THEME_LANG ); ?></label>
-            <?php
-                $string = file_get_contents(FW_URL.'js_composer/animate-config.json');
-                $json_a = json_decode($string,true);
-
-                $posts_fields = array();
-                $posts_fields[] = "<option value=''>".__('No Animation', THEME_LANG)."</option>";
-
-                foreach($json_a as $key => $value){
-                    $posts_fields[] = "<optgroup label='".ucwords(str_replace('_',' ',$key))."'>";
-                    foreach( $value as $k=>$v ){
-                        $selected = ($animation == $k) ? ' selected="selected"' : '';
-                        $posts_fields[] .= "<option value='{$k}' {$selected}>".$k."</option>";
-                    }
-                    $posts_fields[] .= "</optgroup>";
-                }
-            ?>
-            <select  name="<?php echo $this->get_field_name('animation'); ?>" id="<?php echo $this->get_field_id('animation'); ?>" class="widefat">'
-                <?php echo implode( $posts_fields ); ?>
-            </select>
-        </p>
         <p>
             <label for="<?php echo $this->get_field_id('align'); ?>"><?php _e( 'Align:', THEME_LANG); ?></label>
             <select name="<?php echo $this->get_field_name('align'); ?>" id="<?php echo $this->get_field_id('align'); ?>" class="widefat">

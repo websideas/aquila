@@ -16,8 +16,8 @@ if ( function_exists('register_sidebar')) {
             'name' => __( 'Primary Widget Area', THEME_LANG),
             'id' => 'primary-widget-area',
             'description' => __( 'The primary widget area', THEME_LANG),
-            'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
-            'after_widget' => '</div>',
+            'before_widget' => '<div id="%1$s" class="widget-container %2$s"><div class="widget-inner">',
+            'after_widget' => '</div></div>',
             'before_title' => '<h3 class="widget-title">',
             'after_title' => '</h3>',
         ) );
@@ -26,7 +26,7 @@ if ( function_exists('register_sidebar')) {
             'name' => __( 'Side Area', THEME_LANG),
             'id' => 'side-widget-area',
             'description' => __( 'The side widget area', THEME_LANG),
-            'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
+            'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h3 class="widget-title">',
             'after_title' => '</h3>',
@@ -39,12 +39,22 @@ if ( function_exists('register_sidebar')) {
                 'name' => __( 'Sidebar '.$i, THEME_LANG),
                 'id' => 'sidebar-column-'.$i,
                 'description' => __( 'The sidebar column '.$i.' widget area', THEME_LANG),
-                'before_widget' => '<div class="widget-container clearfix %2$s">',
+                'before_widget' => '<div class="widget-container %2$s">',
                 'after_widget' => '</div>',
                 'before_title' => '<h3 class="widget-title">',
                 'after_title' => '</h3>',
             ) );
         }
+
+        register_sidebar(array(
+            'name' => __( 'Instagram Footer', THEME_LANG),
+            'id' => 'instagram-footer',
+            'before_widget' => '<div id="%1$s" class="instagram-widget %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<h4 class="instagram-title">',
+            'after_title' => '</h4>',
+            'description' => __('Use the Instagram widget here. IMPORTANT: For best result select "Large" under "Photo Size" and set number of photos to 6.', THEME_LANG),
+        ));
 
         register_sidebar( array(
             'name' => __( 'Footer top', THEME_LANG),
@@ -55,6 +65,7 @@ if ( function_exists('register_sidebar')) {
             'before_title' => '<h4 class="widget-title">',
             'after_title' => '</h4>',
         ) );
+
 
         $count = 4;
 
@@ -150,7 +161,6 @@ $kt_widgets = array(
     'kt_facebook.php',
     'kt_googleplus.php',
     'kt_article.php',
-    'kt_twitter.php',
     'kt_widget_tabs.php',
     'kt_ads.php',
     'kt_flickr.php',

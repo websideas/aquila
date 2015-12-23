@@ -63,7 +63,6 @@ class WP_Widget_KT_Popular extends WP_Widget {
         }
 
 
-
         if( $select_week || $select_month || $select_year ){
 
             $rand = rand();

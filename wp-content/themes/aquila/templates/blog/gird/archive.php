@@ -39,7 +39,7 @@ while ( have_posts() ) : the_post();
 
         if($sidebar['sidebar']){
             echo '<div class="col-md-4 sidebar sidebar-'.$sidebar['sidebar'].'">';
-            dynamic_sidebar('primary-widget-area');
+            dynamic_sidebar($sidebar['sidebar_area']);
             echo '</div>';
         }
         echo '</div><!-- .main -->';

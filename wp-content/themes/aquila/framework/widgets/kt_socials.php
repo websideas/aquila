@@ -90,7 +90,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
         $tooltip = isset( $instance['tooltip'] ) ? $instance['tooltip'] : '';
         $align = isset( $instance['align'] ) ? $instance['align'] : '';
         $space_between_item    = isset( $instance['space_between_item'] ) ? absint( $instance['space_between_item'] ) : 3;
-        $custom_color    = isset( $instance['custom_color'] ) ? $instance['custom_color'] : '#d0a852';
+        $custom_color    = isset( $instance['custom_color'] ) ? $instance['custom_color'] : '#22dcce';
 	?>
         <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
@@ -132,7 +132,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
             <input id="<?php echo $this->get_field_id( 'value' ); ?>" type="hidden" class="wpb_vc_param_value kt-socials-value" name="<?php echo $this->get_field_name( 'value' ); ?>" value="<?php echo esc_attr($value); ?>" />
         </div><!-- .kt-socials-options -->
         <small><?php _e( 'Empty for select all, Drop and sortable social',THEME_LANG ); ?></small>
-        <?php wp_enqueue_script( 'cosials_js', FW_JS.'kt_socials.js', array('jquery'), FW_VER, true); ?>
+        <?php wp_enqueue_script( 'socials_js', FW_JS.'kt_socials.js', array('jquery'), FW_VER, true); ?>
         
         <p><label for="<?php echo $this->get_field_id('style'); ?>"><?php _e('Style:', THEME_LANG); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('style'); ?>" name="<?php echo $this->get_field_name('style'); ?>">
@@ -151,11 +151,9 @@ class WP_Widget_KT_Socials extends WP_Widget {
                 <option <?php selected( $background_style, 'rounded' ); ?> value="rounded"><?php _e('Circle',THEME_LANG); ?></option>
                 <option <?php selected( $background_style, 'boxed' ); ?> value="boxed"><?php _e('Square',THEME_LANG); ?></option>
                 <option <?php selected( $background_style, 'rounded-less' ); ?> value="rounded-less"><?php _e('Rounded',THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'diamond-square' ); ?> value="diamond-square"><?php _e('Diamond Square',THEME_LANG); ?></option>
                 <option <?php selected( $background_style, 'rounded-outline' ); ?> value="rounded-outline"><?php _e('Outline Circle',THEME_LANG); ?></option>
                 <option <?php selected( $background_style, 'boxed-outline' ); ?> value="boxed-outline"><?php _e('Outline Square',THEME_LANG); ?></option>
                 <option <?php selected( $background_style, 'rounded-less-outline' ); ?> value="rounded-less-outline"><?php _e('Outline Rounded',THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'diamond-square-outline' ); ?> value="diamond-square-outline"><?php _e('Outline Diamond Square',THEME_LANG); ?></option>
             </select>
             <small><?php _e('Select background shape and style for social.',THEME_LANG); ?></small>
         </p>

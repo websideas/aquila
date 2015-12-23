@@ -34,6 +34,7 @@ $composer_addons = array(
     //'dropcap.php',
     'blockquote.php',
     'googlemap.php',
+    'socials.php'
 );
 
 foreach ( $composer_addons as $addon ) {

@@ -31,6 +31,10 @@ class Widget_KT_Mailchimp extends WP_Widget {
                 echo $args['before_title'] . $title . $args['after_title'];
             }
 
+            if($instance['text_before']){
+                printf('<div class="kt_mailchimp-before">%s</div>', $instance['text_before']);
+            }
+
             if ( isset ( $this->options['api_key'] ) && !empty ( $this->options['api_key'] ) ) {
 
                 echo do_shortcode('[kt_mailchimp layout="'.$instance['layout'].'" list="'.$instance['list'].'" opt_in="'.$instance['opt_in'].'" disable_names="'.$instance['disable_names'].'"]');

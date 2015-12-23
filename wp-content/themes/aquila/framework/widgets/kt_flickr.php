@@ -20,7 +20,6 @@ class Widget_KT_Flickr extends WP_Widget {
         $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
         $user_id = $instance['user_id'];
         $number = $instance['number'];
-        $column = $instance['column'];
         $api = $instance['api'];
         
         echo $args['before_widget'];
@@ -30,7 +29,7 @@ class Widget_KT_Flickr extends WP_Widget {
             
         ?>
             <?php if( $user_id && $number && $api ){ ?>
-                <div class="kt_flickr clearfix column-<?php echo $column; ?>">
+                <ul class="kt_flickr">
                     <script type="text/javascript">
                 		function jsonFlickrApi(rsp) {
                             console.log(rsp);
@@ -50,13 +49,13 @@ class Widget_KT_Flickr extends WP_Widget {
                 				//size of the image
                 				t_url = "http://farm" + photo.farm +
                 				".static.flickr.com/" + photo.server + "/" +
-                				photo.id + "_" + photo.secret + "_" + "s.jpg";
+                				photo.id + "_" + photo.secret + "_" + "q.jpg";
                 
                 				p_url = "http://www.flickr.com/photos/" +
                 				photo.owner + "/" + photo.id;
                 
-                				s +=  '<a target="_blank" href="' + p_url + '">' + '<img alt="'+
-                				photo.title + '"src="' + t_url + '"/>' + '</a>';
+                				s +=  '<li><a target="_blank" href="' + p_url + '">' + '<img alt="'+
+                				photo.title + '"src="' + t_url + '"/></li>' + '</a>';
                 			}
                 
                 			document.write(s);
@@ -64,7 +63,7 @@ class Widget_KT_Flickr extends WP_Widget {
                 		</script>
                 		<script type="text/javascript" src="https://api.flickr.com/services/rest/?format=json&amp;method=flickr.photos.search&amp;user_id=<?php echo $user_id; ?>&amp;api_key=<?php echo $api; ?>&amp;media=photos&amp;per_page=<?php echo $number; ?>&amp;privacy_filter=1"></script>
                 		<script type="text/javascript" src="https://api.flickr.com/services/rest/?format=json&amp;method=flickr.photos.search&amp;group_id=<?php echo $user_id; ?>&amp;api_key=<?php echo $api; ?>&amp;media=photos&amp;per_page=<?php echo $number; ?>&amp;privacy_filter=1"></script>
-                </div>
+                    </ul>
             <?php } ?>
         <?php  
         
@@ -82,10 +81,6 @@ class Widget_KT_Flickr extends WP_Widget {
         if(!$instance['number']){
             $instance['number'] = 9;
         }
-        $instance['column'] = $new_instance['column'];
-        if(!$instance['column']){
-            $instance['column'] = 3;
-        }
 
         return $instance;
     }
@@ -93,7 +88,7 @@ class Widget_KT_Flickr extends WP_Widget {
 
     public function form( $instance ) {
 
-        $defaults = array( 'title' => __( 'Flickr' , THEME_LANG), 'type' => '', 'user_id' => '', 'number' => 9, 'ordering' => '', 'column' => 3, 'api' => '6346cf3fc74387e93b84f0d22c78939a' );
+        $defaults = array( 'title' => __( 'Flickr' , THEME_LANG), 'type' => '', 'user_id' => '', 'number' => 9, 'ordering' => '', 'api' => '6346cf3fc74387e93b84f0d22c78939a' );
         $instance = wp_parse_args( (array) $instance, $defaults );
 
         $title = strip_tags($instance['title']);
@@ -111,15 +106,6 @@ class Widget_KT_Flickr extends WP_Widget {
         <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of image to show:', THEME_LANG ); ?></label>
             <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $instance['number']; ?>" class="widefat" />
             <small><?php _e('Select number of photos to display.',THEME_LANG); ?></small>
-        </p>
-        
-        <p><label for="<?php echo $this->get_field_id( 'column' ); ?>"><?php _e( 'Column of images:', THEME_LANG ); ?></label>
-            <select class="widefat" id="<?php echo $this->get_field_id('column'); ?>" name="<?php echo $this->get_field_name('column'); ?>">
-                <option <?php selected( $instance['column'], '2' ); ?> value="2"><?php _e('2',THEME_LANG); ?></option>
-                <option <?php selected( $instance['column'], '3' ); ?> value="3"><?php _e('3',THEME_LANG); ?></option>
-                <option <?php selected( $instance['column'], '4' ); ?> value="4"><?php _e('4',THEME_LANG); ?></option>
-            </select>
-            <small><?php _e('Select column of image.',THEME_LANG); ?></small>
         </p>
         
         <p>

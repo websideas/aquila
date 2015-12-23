@@ -23,13 +23,17 @@
         	 */
         	do_action( 'theme_before_footer' ); ?>
             <div id="footer">
-                <?php if(is_active_sidebar( 'footer-top' ) && kt_option('footer_top', true)){ ?>
-                    <footer id="footer-top">
-                        <div class="container">
-                            <?php dynamic_sidebar('footer-top') ?>
-                        </div><!-- .container -->
+                <?php if(is_active_sidebar( 'instagram-footer' )){ ?>
+                    <footer id="instagram-footer">
+                        <?php dynamic_sidebar('instagram-footer') ?>
                     </footer><!-- #footer-top -->
                 <?php } ?>
+                <?php if( is_active_sidebar( 'footer-top' ) ){ ?>
+                    <footer id="footer-top">
+                        <?php dynamic_sidebar('footer-top') ?>
+                    </footer><!-- #footer-top -->
+                <?php } ?>
+
 
                 <?php
                     $layouts = explode('-', kt_option('footer_widgets_layout', '4-4-4'));
