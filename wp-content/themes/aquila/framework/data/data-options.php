@@ -3863,17 +3863,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                     ),
 
                     array(
-                        'id'       => '404_image',
-                        'type'     => 'media',
-                        'url'      => true,
-                        'compiler' => true,
-                        'title'    => __( '404 Image', THEME_LANG ),
-                        'default'  => array(
-                            'url' => THEME_IMG.'404.png'
-                        )
-                    ),
-
-                    array(
                         'id' => 'notfound_page_type',
                         'type' => 'select',
                         'title' => __('404 Page', THEME_LANG),

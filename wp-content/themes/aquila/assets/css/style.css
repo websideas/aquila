@@ -166,6 +166,21 @@ h1, h2, h3, h4, h5, h6 {
   color: #000000;
   letter-spacing: .025em; }
 
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 36px; }
+
+h3 {
+  font-size: 30px; }
+
+h4 {
+  font-size: 24px; }
+
+h5 {
+  font-size: 16px; }
+
 a {
   color: #22dcce; }
   a:hover, a:focus {
@@ -2169,6 +2184,131 @@ ul.kt_posts_carousel_widget {
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%; }
+
+/*
+ * 10.2 Hightlight
+ */
+.hightlight {
+  color: #ffffff;
+  padding: 4px;
+  border-radius: 3px; }
+  .hightlight.hightlight1 {
+    background: #c7db9c; }
+  .hightlight.hightlight2 {
+    background: #ed8b5c; }
+  .hightlight.hightlight3 {
+    background: #74cdd7; }
+  .hightlight.hightlight4 {
+    background: #22dcce; }
+
+/*
+ * 10.3 Dropcap
+ */
+.kt_dropcap {
+  float: left;
+  display: block;
+  margin-right: 10px;
+  font-weight: bold;
+  text-align: center; }
+  .kt_dropcap.dropcap-sm {
+    font-size: 72px;
+    line-height: 72px;
+    height: 72px; }
+    .kt_dropcap.dropcap-sm.dropcap-bg {
+      font-size: 30px;
+      line-height: 40px;
+      height: 40px; }
+      .kt_dropcap.dropcap-sm.dropcap-bg.dropcap-circle {
+        width: 40px; }
+  .kt_dropcap.dropcap-md {
+    font-size: 100px;
+    line-height: 100px;
+    height: 100px; }
+    .kt_dropcap.dropcap-md.dropcap-bg {
+      font-size: 48px;
+      line-height: 65px;
+      height: 65px; }
+      .kt_dropcap.dropcap-md.dropcap-bg.dropcap-circle {
+        width: 65px; }
+  .kt_dropcap.dropcap-gray {
+    color: #22dcce; }
+  .kt_dropcap.dropcap-black {
+    color: #000000; }
+  .kt_dropcap.dropcap-orange {
+    color: #ed8b5c; }
+  .kt_dropcap.dropcap-bg {
+    padding: 0 10px;
+    margin-top: 10px; }
+    .kt_dropcap.dropcap-bg.dropcap-circle {
+      border-radius: 100%; }
+    .kt_dropcap.dropcap-bg.dropcap-gray {
+      background: #22dcce;
+      color: #FFFFFF; }
+    .kt_dropcap.dropcap-bg.dropcap-black {
+      background: #000000;
+      color: #FFFFFF; }
+    .kt_dropcap.dropcap-bg.dropcap-orange {
+      background: #ed8b5c;
+      color: #FFFFFF; }
+
+/*
+ * 10.4 Lists
+ */
+ul.style-list {
+  padding: 0;
+  margin: 0 0 30px;
+  list-style: none; }
+  ul.style-list li {
+    padding-left: 52px;
+    margin-bottom: 20px;
+    position: relative;
+    line-height: 30px; }
+    ul.style-list li:after {
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      text-align: center; }
+  ul.style-list.style1 {
+    counter-reset: my-badass-counter; }
+    ul.style-list.style1 li:after {
+      content: counter(my-badass-counter,decimal);
+      counter-increment: my-badass-counter;
+      border-radius: 100%;
+      border: 1px solid #eeeeee;
+      font-size: 14px;
+      color: #000000;
+      line-height: 28px; }
+  ul.style-list.style2 li:after {
+    border-radius: 100%;
+    background: #ed8b5c;
+    color: #FFFFFF;
+    font-size: 10px;
+    line-height: 30px;
+    font-family: "FontAwesome";
+    content: "";
+    speak: none;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none; }
+  ul.style-list.style3 li {
+    padding-left: 22px; }
+    ul.style-list.style3 li:after {
+      width: 6px;
+      height: 6px;
+      -webkit-border-radius: 100%;
+      -khtml-border-radius: 100%;
+      -moz-border-radius: 100%;
+      -ms-border-radius: 100%;
+      -o-border-radius: 100%;
+      border-radius: 100%;
+      content: "";
+      background: #22dcce;
+      top: 50%;
+      margin-top: -3px; }
 
 /* ==============================
    7. Header
