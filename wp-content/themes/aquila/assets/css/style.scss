@@ -253,11 +253,11 @@ input[type=phone],
 input[type=tel],
 input[type=text],
 textarea {
-  border: 1px solid $border-color;
+  border: 1px solid transparent;
   color: $gray;
-  padding: 6px 12px;
-  height: 40px;
-  background: none;
+  padding: 10px 20px;
+  height: 60px;
+  background: $gray-bg;
   @include border-radius(0);
   @include css3-prefix('box-shadow', 'none');
   @include css3-prefix('appearance', 'none');
@@ -422,6 +422,10 @@ select:not([multiple]) {
       }
     }
   }
+}
+
+.shadow-box{
+  @include box-shadow(5px, 0, 40px, rgba($shadow, .1));
 }
 
 
@@ -999,11 +1003,16 @@ ul.kt_posts_carousel_widget{
       h3.title{
         margin: 0;
         background: rgba($black, .7);
-        color: #fff;
         font-size: 14px;
         line-height: 28px;
         letter-spacing: 0.025em;
         padding: 11px 15px;
+        a{
+          color: $white;
+          &:hover{
+            color: $primary-color;
+          }
+        }
       }
       .carousel-prev,.carousel-next{
         position: absolute;
@@ -3671,14 +3680,6 @@ p.logged-in-as{
       font-weight:normal;
     }
   }
-  textarea,
-  input[type="text"]{
-    background: $gray-bg;
-    border-color: $gray-bg;
-    color: $gray;
-    height: auto;
-    padding: 10px 20px;
-  }
   .form-submit{
     input#submit{
       border-radius:2px;
@@ -3868,9 +3869,47 @@ p.logged-in-as{
   }
 }
 
+/* ==============================
+   18. 404
+   ============================== */
 
-
-
-
-
-
+body.error404{
+  #content{
+    background: $gray-bg;
+    .content-404{
+      padding: 45px 0 120px;
+      text-align: center;
+      background: $white;
+      @include box-shadow(5px, 0, 40px, rgba($shadow, .1));
+      h1{
+        font-size: 200px;
+        color: $black;
+        font-weight: normal;
+        font-style: italic;
+        line-height: 1;
+        margin-bottom: 60px;
+      }
+      h3{
+        font-size: 16px;
+        font-family: $font-stack;
+        color: $gray;
+        margin-bottom: 30px;
+      }
+      p{
+        font-size: 16px;
+        line-height: 30px;
+      }
+      .buttons{
+        a{
+          color: $primary-color;
+          font-size: 16px;
+          i{
+            font-size: 20px;
+            margin-left: 15px;
+            vertical-align: text-top;
+          }
+        }
+      }
+    }
+  }
+}

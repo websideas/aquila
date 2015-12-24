@@ -69,12 +69,12 @@ if ( post_password_required() ) {
     );
 
     $comments_args = array(
-        'label_submit'      => __( 'send messages' ),
+        'label_submit'      => __( 'send' ),
         'fields' => apply_filters( 'comment_form_default_fields', $new_fields ),
         //'comment_form_before_fields' => '<div>',
         //'comment_form_after_fields' => '</div>',
         'comment_field' => '<p><textarea id="comment" name="comment" placeholder="'.__('Your Comment', THEME_LANG).'"  aria-required="true" rows="6"></textarea></p>',
-        'class_submit'      => 'btn btn-default',
+        'class_submit'      => 'btn btn-default btn-lg',
         'title_reply_before'   => '<h3 id="reply-title" class="comment-reply-title post-single-heading">',
     );
 
