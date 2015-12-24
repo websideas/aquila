@@ -289,10 +289,10 @@ input[type=phone],
 input[type=tel],
 input[type=text],
 textarea {
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   color: #999999;
-  padding: 10px 20px;
-  height: 60px;
+  padding: 6px 15px;
+  height: 50px;
   background: #f6f6f6;
   -webkit-border-radius: 0;
   -khtml-border-radius: 0;
@@ -405,12 +405,12 @@ select:not([multiple]) {
   border: 2px solid transparent;
   display: inline-block;
   line-height: 1.42857;
-  padding: 8px 26px;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.15em;
+  padding: 11px 26px;
+  font-size: 16px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  font-family: "Vollkorn", serif;
+  font-family: "Karla", sans-serif;
+  font-weight: bold;
   /* Button size */
   /* Button shapes */
   /* Button icon */
@@ -1786,74 +1786,62 @@ ul.kt_posts_carousel_widget {
 /**
  * KT Mailchimp
  **/
-.widget_kt_mailchimp {
-  /*
-    background: $gray-bg;
-    padding: 20px;
-    .widget-title{
-      color: $black;
-      border: none;
-      padding: 0;
-      margin-bottom: 20px;
-      &:after{
-        display: none;
-      }
-    }
-    .kt_mailchimp-before{
-      font-style: italic;
-      color: $gray;
-      font-family: $extra-font;
-      margin-bottom: 15px;
-      text-align: center;
-      letter-spacing: 0.025em;
-    }
-    */ }
-  .widget_kt_mailchimp .kt-mailchimp-wrapper {
-    margin: 0; }
+.widget_kt_mailchimp .kt_mailchimp-before {
+  font-style: italic;
+  letter-spacing: 0.025em;
+  color: #999999;
+  font-family: "Vollkorn", serif; }
+.main-sidebar .widget_kt_mailchimp {
+  background: #f6f6f6;
+  padding: 20px; }
+  .main-sidebar .widget_kt_mailchimp .widget-title {
+    color: #000000;
+    border: none;
+    padding: 0;
+    margin-bottom: 20px; }
+    .main-sidebar .widget_kt_mailchimp .widget-title:after {
+      display: none; }
+  .main-sidebar .widget_kt_mailchimp .mailchimp-form input[type=text],
+  .main-sidebar .widget_kt_mailchimp .mailchimp-form input[type=email] {
+    border-color: #eeeeee; }
+#footer .widget_kt_mailchimp .mailchimp-form input[type=text],
+#footer .widget_kt_mailchimp .mailchimp-form input[type=email] {
+  background: none; }
 
 /**
  * Socials
  **/
-.widget_kt_socials {
-  /*
-  background: url('../images/socials-bg.jpg') no-repeat center center;
+.main-sidebar .widget_kt_socials {
+  background: url("../images/socials-bg.jpg") no-repeat center center;
   background-size: cover;
   position: relative;
-  padding: 20px;
-  &:before{
+  padding: 20px; }
+  .main-sidebar .widget_kt_socials:before {
     content: '';
-    background: rgba($black, .5);
+    background: rgba(0, 0, 0, 0.5);
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
+    display: block; }
+  .main-sidebar .widget_kt_socials .widget-inner {
+    border: 10px solid rgba(255, 255, 255, 0.6);
     display: block;
-  }
-  .widget-inner{
-    border: 10px solid rgba($white, .6);
-    display: block;
-    padding: 20px 10px;
-  }
-
-  .widget-title,
-  .socials-icon-wrapper{
+    padding: 20px 10px; }
+  .main-sidebar .widget_kt_socials .widget-title,
+  .main-sidebar .widget_kt_socials .socials-icon-wrapper {
     position: relative;
-    z-index: 1;
-  }
-
-  .widget-title{
-    color: $white;
+    z-index: 1; }
+  .main-sidebar .widget_kt_socials .widget-title {
+    color: #FFFFFF;
     border: none;
     padding: 0;
-    margin-bottom: 35px;
-    &:after{
-      display: none;
-    }
-  }
-  */ }
-  .widget_kt_socials .socials-icon-wrapper {
-    margin: 0; }
+    margin-bottom: 35px; }
+    .main-sidebar .widget_kt_socials .widget-title:after {
+      display: none; }
+.widget_kt_socials .socials-icon-wrapper {
+  margin: 0; }
 
 /**
  * Contact info

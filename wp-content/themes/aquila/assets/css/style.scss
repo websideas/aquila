@@ -251,10 +251,6 @@ blockquote{
       @include translate(x);
     }
   }
-
-
-
-
 }
 
 
@@ -269,10 +265,10 @@ input[type=phone],
 input[type=tel],
 input[type=text],
 textarea {
-  border: 1px solid transparent;
+  border: 2px solid transparent;
   color: $gray;
-  padding: 10px 20px;
-  height: 60px;
+  padding: 6px 15px;
+  height: 50px;
   background: $gray-bg;
   @include border-radius(0);
   @include css3-prefix('box-shadow', 'none');
@@ -331,12 +327,13 @@ select:not([multiple]) {
   border: 2px solid transparent;
   display: inline-block;
   line-height: 1.42857;
-  padding: 8px 26px;
-  font-weight: 600;
-  font-size: 14px;
-  letter-spacing: 0.15em;
+  padding: 11px 26px;
+  font-size: 16px;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   font-family: $button-text;
+  font-weight: bold;
+
   &:focus,
   &:active:focus,
   &.active:focus {
@@ -1260,10 +1257,13 @@ ul.kt_posts_carousel_widget{
  **/
 
 .widget_kt_mailchimp{
-  .kt-mailchimp-wrapper{
-    margin: 0;
+  .kt_mailchimp-before{
+    font-style: italic;
+    letter-spacing: 0.025em;
+    color: $gray;
+    font-family: $extra-font;
   }
-  /*
+  .main-sidebar &{
     background: $gray-bg;
     padding: 20px;
     .widget-title{
@@ -1275,58 +1275,67 @@ ul.kt_posts_carousel_widget{
         display: none;
       }
     }
-    .kt_mailchimp-before{
-      font-style: italic;
-      color: $gray;
-      font-family: $extra-font;
-      margin-bottom: 15px;
-      text-align: center;
-      letter-spacing: 0.025em;
+    .mailchimp-form{
+      input[type=text],
+      input[type=email]{
+        border-color: $border-color;
+      }
     }
-    */
+  }
+
+  #footer & {
+    .mailchimp-form{
+      input[type=text],
+      input[type=email]{
+        background: none;
+      }
+    }
+  }
+
 }
+
 
 /**
  * Socials
  **/
 .widget_kt_socials{
-  /*
-  background: url('../images/socials-bg.jpg') no-repeat center center;
-  background-size: cover;
-  position: relative;
-  padding: 20px;
-  &:before{
-    content: '';
-    background: rgba($black, .5);
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    display: block;
-  }
-  .widget-inner{
-    border: 10px solid rgba($white, .6);
-    display: block;
-    padding: 20px 10px;
-  }
-
-  .widget-title,
-  .socials-icon-wrapper{
+  .main-sidebar &{
+    background: url('../images/socials-bg.jpg') no-repeat center center;
+    background-size: cover;
     position: relative;
-    z-index: 1;
-  }
+    padding: 20px;
+    &:before{
+      content: '';
+      background: rgba($black, .5);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+    .widget-inner{
+      border: 10px solid rgba($white, .6);
+      display: block;
+      padding: 20px 10px;
+    }
 
-  .widget-title{
-    color: $white;
-    border: none;
-    padding: 0;
-    margin-bottom: 35px;
-    &:after{
-      display: none;
+    .widget-title,
+    .socials-icon-wrapper{
+      position: relative;
+      z-index: 1;
+    }
+
+    .widget-title{
+      color: $white;
+      border: none;
+      padding: 0;
+      margin-bottom: 35px;
+      &:after{
+        display: none;
+      }
     }
   }
-  */
   .socials-icon-wrapper{
     margin: 0;
   }
