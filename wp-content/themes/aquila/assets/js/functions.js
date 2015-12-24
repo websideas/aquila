@@ -89,6 +89,20 @@
             focusOnSelect: true
         });
 
+        var slide_carousel = $('.kt_posts_carousel_widget').slick({
+            arrows: false
+        });
+
+        $('body').on('click','.carousel-next',function(){
+            slide_carousel.slick('slickNext');
+            return false;
+        });
+
+        $('body').on('click','.carousel-prev',function(){
+            slide_carousel.slick('slickPrev');
+            return false;
+        });
+
 
         $('body')
             .on('click','.menu-bars-link',function(e){
