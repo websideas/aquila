@@ -982,6 +982,47 @@ ul.kt_posts_widget{
   }
 
 }
+
+/**
+ * KT Posts Carousel
+ **/
+ul.kt_posts_carousel_widget{
+  padding: 0;
+  .article-widget{
+    position: relative;
+    .article-attr{
+      border: 10px solid rgba($white, .8);
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      h3.title{
+        margin: 0;
+        background: rgba($black, .7);
+        color: #fff;
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 0.025em;
+        padding: 11px 15px;
+      }
+      .carousel-prev,.carousel-next{
+        position: absolute;
+        top:50%;
+        @include transform(translatey(-50%));
+        font-size: 16px;
+        color: $gray;
+      }
+      .carousel-prev{
+        left: -8px;
+      }
+      .carousel-next{
+        right: -8px;
+      }
+    }
+  }
+}
+
+
 /**
  * Post Tabs
  **/

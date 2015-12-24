@@ -171,6 +171,7 @@ $kt_widgets = array(
     'kt_facebook.php',
     'kt_googleplus.php',
     'kt_article.php',
+    'kt_article_carousel.php',
     'kt_widget_tabs.php',
     'kt_ads.php',
     'kt_flickr.php',
