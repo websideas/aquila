@@ -1194,31 +1194,37 @@ ul.kt_posts_widget{
  **/
 
 .widget_kt_mailchimp{
-  background: $gray-bg;
-  padding: 20px;
-  .widget-title{
-    color: $black;
-    border: none;
-    padding: 0;
-    margin-bottom: 20px;
-    &:after{
-      display: none;
+  .kt-mailchimp-wrapper{
+    margin: 0;
+  }
+  /*
+    background: $gray-bg;
+    padding: 20px;
+    .widget-title{
+      color: $black;
+      border: none;
+      padding: 0;
+      margin-bottom: 20px;
+      &:after{
+        display: none;
+      }
     }
-  }
-  .kt_mailchimp-before{
-    font-style: italic;
-    color: $gray;
-    font-family: $extra-font;
-    margin-bottom: 15px;
-    text-align: center;
-    letter-spacing: 0.025em;
-  }
+    .kt_mailchimp-before{
+      font-style: italic;
+      color: $gray;
+      font-family: $extra-font;
+      margin-bottom: 15px;
+      text-align: center;
+      letter-spacing: 0.025em;
+    }
+    */
 }
 
 /**
  * Socials
  **/
 .widget_kt_socials{
+  /*
   background: url('../images/socials-bg.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
@@ -1254,6 +1260,7 @@ ul.kt_posts_widget{
       display: none;
     }
   }
+  */
   .socials-icon-wrapper{
     margin: 0;
   }
@@ -1310,20 +1317,13 @@ ul.kt_posts_widget{
  **/
 .socials-icon-wrapper {
   margin: 0 auto 20px;
+  line-height: 1;
   ul{
     padding: 0;
     list-style: none;
     margin: 0;
     li{
       display: inline-block;
-      /*
-      &:last-child{
-        margin-right: 0 !important;
-      }
-      &:first-child{
-        margin-left: 0 !important;
-      }
-      */
       a{
         display: inline-block;
         border: 2px solid transparent;
@@ -2228,10 +2228,14 @@ ul.kt_posts_widget{
       margin: 17px 65px 17px 0;
     }
   }
-
-
-
+  .layout-boxed &{
+    .apply-sticky{
+      max-width: 1200px;
+    }
+  }
 }
+
+
 
 
 .admin-bar{
@@ -2315,14 +2319,19 @@ ul.kt_posts_widget{
 }
 
 #footer-area{
-  padding: 40px 0 30px;
+  padding: 75px 0 40px;
   border-bottom: 1px solid $dark-border;
-
   .widget-footer{
     margin-bottom: 30px;
     .widget-title{
       color: $white;
+      font-weight: bold;
+      margin-bottom: 35px;
+      text-align: left;
     }
+  }
+  .widget_kt_aboutme{
+    text-align: left;
   }
 }
 
@@ -2347,12 +2356,26 @@ ul.kt_posts_widget{
   }
 }
 
-
+#footer-bottom{
+  padding: 40px 0;
+  border-bottom: 1px solid $dark-border;
+  &.footer-bottom-1{
+    text-align: center;
+  }
+  &.footer-bottom-2{
+    padding: 25px 0;
+    .widget_kt_socials{
+      margin-top: 18px;
+    }
+  }
+  .logo-footer{
+    margin-bottom: 40px;
+  }
+}
 
 /* ==============================
    9. Post slider
    ============================== */
-
 #main-sideshow{
   position: relative;
   #sideshow-inner {

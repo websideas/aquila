@@ -42,28 +42,28 @@
     transform: translateY(-50%); }
 .mailchimp-form.mailchimp-layout-1 input[type=text],
 .mailchimp-form.mailchimp-layout-1 input[type=email] {
-  border: none;
-  border-bottom: 1px solid #252525;
+  border: 1px solid #333333;
   color: #707070;
   font-size: 14px;
-  height: 35px;
-  padding: 5px 0; }
-.mailchimp-form.mailchimp-layout-1 input[type=email] {
-  padding-right: 30px; }
+  height: 45px;
+  padding: 5px 19px; }
+.mailchimp-form.mailchimp-layout-1 input.mailchimp-email {
+  padding-right: 130px; }
 .mailchimp-form.mailchimp-layout-1 .mailchimp-input-email {
   margin-bottom: 0; }
 .mailchimp-form.mailchimp-layout-1 .mailchimp-input-button {
-  height: 100%; }
-  .mailchimp-form.mailchimp-layout-1 .mailchimp-input-button .btn {
-    background: transparent none repeat scroll 0 0;
+  height: 100%;
+  /*
+  .btn {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     border-color: transparent;
     height: 100%;
     overflow: hidden;
     text-indent: -999px;
     width: 20px;
     padding: 0;
-    position: relative; }
-    .mailchimp-form.mailchimp-layout-1 .mailchimp-input-button .btn:before {
+    position: relative;
+    &:before{
       font-family: FontAwesome;
       content: '\f178';
       font-weight: normal;
@@ -74,11 +74,25 @@
       position: absolute;
       right: -1px;
       text-align: right;
-      top: 6px; }
-    .mailchimp-form.mailchimp-layout-1 .mailchimp-input-button .btn.loading:before {
-      content: '\f110';
-      -webkit-animation: fa-spin 2s infinite linear;
-      animation: fa-spin 2s infinite linear; }
+      top: 6px;
+    }
+    &.loading{
+      &:before{
+        content: '\f110';
+        -webkit-animation: fa-spin 2s infinite linear;
+        animation: fa-spin 2s infinite linear;
+      }
+    }
+  }*/ }
+  .mailchimp-form.mailchimp-layout-1 .mailchimp-input-button .btn {
+    background: none;
+    border-color: transparent;
+    height: 100%;
+    overflow: hidden;
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    padding: 0 13px; }
 .mailchimp-form.mailchimp-layout-2 .mailchimp-input-button button {
   width: 100%; }
 

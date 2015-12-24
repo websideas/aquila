@@ -52,7 +52,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
         } else {
             $instance['style'] = 'accent';
         }
-        if ( in_array( $new_instance['background_style'], array( 'empty', 'rounded', 'boxed', 'rounded-less', 'diamond-square', 'rounded-outline', 'boxed-outline', 'rounded-less-outline', 'diamond-square-outline' ) ) ) {
+        if ( in_array( $new_instance['background_style'], array( 'empty', 'text', 'rounded', 'boxed', 'rounded-less', 'rounded-outline', 'boxed-outline', 'rounded-less-outline') ) ) {
             $instance['background_style'] = $new_instance['background_style'];
         } else {
             $instance['background_style'] = 'empty';
@@ -80,7 +80,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
 
 	public function form( $instance ) {
 		//Defaults
-		$instance = wp_parse_args( (array) $instance, array( 'title' => __('Socials', THEME_LANG), 'target' => '_self', 'value' => '', 'style' => 'accent', 'background_style' => '', 'size' => 'standard', 'tooltip' => '', 'align' => '', 'space_between_item' => 3, 'custom_color' => '#d0a852' ) );
+		$instance = wp_parse_args( (array) $instance, array( 'title' => __('Socials', THEME_LANG), 'target' => '_self', 'value' => '', 'style' => 'accent', 'background_style' => '', 'size' => 'standard', 'tooltip' => '', 'align' => '', 'space_between_item' => 3, 'custom_color' => '#707070' ) );
         $title = strip_tags($instance['title']);
         
         $value = isset( $instance['value'] ) ? $instance['value'] : '';
@@ -148,6 +148,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
         <p><label for="<?php echo $this->get_field_id('background_style'); ?>"><?php _e('Background Style:', THEME_LANG); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('background_style'); ?>" name="<?php echo $this->get_field_name('background_style'); ?>">
                 <option <?php selected( $background_style, 'empty' ); ?> value=""><?php _e('None',THEME_LANG); ?></option>
+                <option <?php selected( $background_style, 'text' ); ?> value="text"><?php _e('Text',THEME_LANG); ?></option>
                 <option <?php selected( $background_style, 'rounded' ); ?> value="rounded"><?php _e('Circle',THEME_LANG); ?></option>
                 <option <?php selected( $background_style, 'boxed' ); ?> value="boxed"><?php _e('Square',THEME_LANG); ?></option>
                 <option <?php selected( $background_style, 'rounded-less' ); ?> value="rounded-less"><?php _e('Rounded',THEME_LANG); ?></option>

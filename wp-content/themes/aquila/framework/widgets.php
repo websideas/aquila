@@ -32,7 +32,7 @@ if ( function_exists('register_sidebar')) {
             'after_title' => '</h3>',
         ) );
 
-        $count = 6;
+        $count = 5;
 
         for($i=1; $i<=$count;$i++){
             register_sidebar( array(
@@ -82,13 +82,23 @@ if ( function_exists('register_sidebar')) {
         }
 
         register_sidebar( array(
-            'name' => __( 'Footer bottom', THEME_LANG),
-            'id' => 'footer-bottom',
+            'name' => __( 'Footer bottom column 1', THEME_LANG),
+            'id' => 'footer-bottom-1',
             'description' => __( 'The footer bottom widget area', THEME_LANG),
-            'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
+            'before_widget' => '<div id="%1$s" class="widget-footer-bottom %2$s">',
             'after_widget' => '</div>',
-            'before_title' => '<h4 class="widget-title">',
-            'after_title' => '</h4>',
+            'before_title' => '<!--',
+            'after_title' => '-->',
+        ) );
+
+        register_sidebar( array(
+            'name' => __( 'Footer bottom column 2', THEME_LANG),
+            'id' => 'footer-bottom-2',
+            'description' => __( 'The footer bottom widget area', THEME_LANG),
+            'before_widget' => '<div id="%1$s" class="widget-footer-bottom %2$s">',
+            'after_widget' => '</div>',
+            'before_title' => '<!--',
+            'after_title' => '-->',
         ) );
 
 
@@ -102,7 +112,7 @@ if ( function_exists('register_sidebar')) {
                         'name' => $sidebar['title'],
                         'id' => $id,
                         'description' => $sidebar['description'],
-                        'before_widget' => '<div id="%1$s" class="widget-container clearfix %2$s">',
+                        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
                         'after_widget' => '</div>',
                         'before_title' => '<h3 class="widget-title">',
                         'after_title' => '</h3>',

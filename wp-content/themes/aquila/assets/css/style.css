@@ -1724,55 +1724,71 @@ ul.kt_posts_widget {
  * KT Mailchimp
  **/
 .widget_kt_mailchimp {
-  background: #f6f6f6;
-  padding: 20px; }
-  .widget_kt_mailchimp .widget-title {
-    color: #000000;
-    border: none;
-    padding: 0;
-    margin-bottom: 20px; }
-    .widget_kt_mailchimp .widget-title:after {
-      display: none; }
-  .widget_kt_mailchimp .kt_mailchimp-before {
-    font-style: italic;
-    color: #999999;
-    font-family: "Vollkorn", serif;
-    margin-bottom: 15px;
-    text-align: center;
-    letter-spacing: 0.025em; }
+  /*
+    background: $gray-bg;
+    padding: 20px;
+    .widget-title{
+      color: $black;
+      border: none;
+      padding: 0;
+      margin-bottom: 20px;
+      &:after{
+        display: none;
+      }
+    }
+    .kt_mailchimp-before{
+      font-style: italic;
+      color: $gray;
+      font-family: $extra-font;
+      margin-bottom: 15px;
+      text-align: center;
+      letter-spacing: 0.025em;
+    }
+    */ }
+  .widget_kt_mailchimp .kt-mailchimp-wrapper {
+    margin: 0; }
 
 /**
  * Socials
  **/
 .widget_kt_socials {
-  background: url("../images/socials-bg.jpg") no-repeat center center;
+  /*
+  background: url('../images/socials-bg.jpg') no-repeat center center;
   background-size: cover;
   position: relative;
-  padding: 20px; }
-  .widget_kt_socials:before {
+  padding: 20px;
+  &:before{
     content: '';
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba($black, .5);
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    display: block; }
-  .widget_kt_socials .widget-inner {
-    border: 10px solid rgba(255, 255, 255, 0.6);
     display: block;
-    padding: 20px 10px; }
-  .widget_kt_socials .widget-title,
-  .widget_kt_socials .socials-icon-wrapper {
+  }
+  .widget-inner{
+    border: 10px solid rgba($white, .6);
+    display: block;
+    padding: 20px 10px;
+  }
+
+  .widget-title,
+  .socials-icon-wrapper{
     position: relative;
-    z-index: 1; }
-  .widget_kt_socials .widget-title {
-    color: #FFFFFF;
+    z-index: 1;
+  }
+
+  .widget-title{
+    color: $white;
     border: none;
     padding: 0;
-    margin-bottom: 35px; }
-    .widget_kt_socials .widget-title:after {
-      display: none; }
+    margin-bottom: 35px;
+    &:after{
+      display: none;
+    }
+  }
+  */ }
   .widget_kt_socials .socials-icon-wrapper {
     margin: 0; }
 
@@ -1815,21 +1831,14 @@ ul.kt_posts_widget {
  * 15.9. Socials
  **/
 .socials-icon-wrapper {
-  margin: 0 auto 20px; }
+  margin: 0 auto 20px;
+  line-height: 1; }
   .socials-icon-wrapper ul {
     padding: 0;
     list-style: none;
     margin: 0; }
     .socials-icon-wrapper ul li {
-      display: inline-block;
-      /*
-      &:last-child{
-        margin-right: 0 !important;
-      }
-      &:first-child{
-        margin-left: 0 !important;
-      }
-      */ }
+      display: inline-block; }
       .socials-icon-wrapper ul li a {
         display: inline-block;
         border: 2px solid transparent;
@@ -2642,6 +2651,8 @@ ul.kt_posts_widget {
   height: 60px; }
 .header-container.is-sticky.header-layout1 .site-branding {
   margin: 17px 65px 17px 0; }
+.layout-boxed .header-container.is-sticky .apply-sticky {
+  max-width: 1200px; }
 
 .admin-bar .header-container.is-sticky.sticky .apply-sticky {
   top: 32px !important; }
@@ -2714,12 +2725,17 @@ ul.kt_posts_widget {
             width: 100%; }
 
 #footer-area {
-  padding: 40px 0 30px;
+  padding: 75px 0 40px;
   border-bottom: 1px solid #333333; }
   #footer-area .widget-footer {
     margin-bottom: 30px; }
     #footer-area .widget-footer .widget-title {
-      color: #FFFFFF; }
+      color: #FFFFFF;
+      font-weight: bold;
+      margin-bottom: 35px;
+      text-align: left; }
+  #footer-area .widget_kt_aboutme {
+    text-align: left; }
 
 #footer-copyright {
   padding: 40px 0;
@@ -2736,6 +2752,18 @@ ul.kt_posts_widget {
   padding: 60px 0 70px; }
   #footer-top .widget-container {
     margin-bottom: 0; }
+
+#footer-bottom {
+  padding: 40px 0;
+  border-bottom: 1px solid #333333; }
+  #footer-bottom.footer-bottom-1 {
+    text-align: center; }
+  #footer-bottom.footer-bottom-2 {
+    padding: 25px 0; }
+    #footer-bottom.footer-bottom-2 .widget_kt_socials {
+      margin-top: 18px; }
+  #footer-bottom .logo-footer {
+    margin-bottom: 40px; }
 
 /* ==============================
    9. Post slider

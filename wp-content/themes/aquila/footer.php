@@ -37,13 +37,14 @@
 
                 get_template_part( 'templates/footers/footer', 'navigation');
 
-                get_template_part( 'templates/footers/footer', 'socials');
-
-                //footer-logo.jpg
-
                 if(kt_option('footer_widgets', true)){
                     get_template_part( 'templates/footers/footer', 'widgets');
                 }
+
+                if(kt_option('footer_bottom', true)){
+                    get_template_part( 'templates/footers/footer', 'bottom');
+                }
+
                 ?>
 
                 <?php if(kt_option('footer_copyright', true)){ ?>

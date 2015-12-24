@@ -67,27 +67,33 @@
   }
 
   &.mailchimp-layout-1{
-
     input[type=text],
     input[type=email]{
-      border: none;
-      border-bottom: 1px solid #252525;
+      border: 1px solid #333333;
       color: #707070;
       font-size: 14px;
-      height: 35px;
-      padding: 5px 0;
+      height: 45px;
+      padding: 5px 19px;
     }
-
-    input[type=email]{
-      padding-right: 30px;
+    input.mailchimp-email{
+      padding-right: 130px;
     }
-
     .mailchimp-input-email{
       margin-bottom: 0;
     }
-
     .mailchimp-input-button {
       height: 100%;
+      .btn {
+        background: none;
+        border-color: transparent;
+        height: 100%;
+        overflow: hidden;
+        font-size: 14px;
+        font-weight: bold;
+        color: #FFFFFF;
+        padding: 0 13px;
+      }
+      /*
       .btn {
         background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
         border-color: transparent;
@@ -117,7 +123,7 @@
             animation: fa-spin 2s infinite linear;
           }
         }
-      }
+      }*/
     }
   }
 

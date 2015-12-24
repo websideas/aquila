@@ -3529,26 +3529,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'on' => __('Enabled', THEME_LANG),
                         'off' => __('Disabled', THEME_LANG),
                     ),
-                    /* Footer Logo */
-                    array(
-                        'id' => 'footer_Logo_heading',
-                        'type' => 'raw',
-                        'content' => '<div class="section-heading">' . __('Footer Logo settings', THEME_LANG) . '</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id' => 'footer_logo',
-                        'type' => 'switch',
-                        'title' => __('Footer logo enable', THEME_LANG),
-                        'default' => false,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' => __('Disabled', THEME_LANG),
-                    ),
-                    array(
-                        'id' => 'footer_socials',
-                        'type' => 'kt_socials',
-                        'title' => __('Select your socials', THEME_LANG),
-                    ),
+
                     // Footer widgets settings
                     array(
                         'id' => 'footer_widgets_heading',
@@ -3584,8 +3565,33 @@ if ( ! class_exists( 'KT_config' ) ) {
                         ),
                         'default' => '3-3-3-3'
                     ),
-
-
+                    /* Footer Bottom */
+                    array(
+                        'id' => 'footer_bottom_heading',
+                        'type' => 'raw',
+                        'content' => '<div class="section-heading">' . __('Footer bottom settings', THEME_LANG) . '</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id' => 'footer_bottom',
+                        'type' => 'switch',
+                        'title' => __('Footer bottom enable', THEME_LANG),
+                        'default' => true,
+                        'on' => __('Enabled', THEME_LANG),
+                        'off' => __('Disabled', THEME_LANG),
+                    ),
+                    array(
+                        'id' => 'footer_bottom_layout',
+                        'type' => 'image_select',
+                        'compiler' => true,
+                        'title' => __('Footer bottom layout', THEME_LANG),
+                        'subtitle' => __('Select your footer bottom layout', THEME_LANG),
+                        'options' => array(
+                            '1' => array('alt' => __('Layout 1', THEME_LANG), 'img' => FW_IMG . 'footer/footer-bottom-1.png'),
+                            '2' => array('alt' => __('Layout 2', THEME_LANG), 'img' => FW_IMG . 'footer/footer-bottom-2.png'),
+                        ),
+                        'default' => '1'
+                    ),
                     /* Footer copyright */
                     array(
                         'id' => 'footer_copyright_heading',
@@ -3879,7 +3885,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         ),
                         'default' => 'default',
                     ),
-
 
                     array(
                         'id'       => 'notfound_page_id',

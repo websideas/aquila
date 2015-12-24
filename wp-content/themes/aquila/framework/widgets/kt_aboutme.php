@@ -95,7 +95,6 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
         //Defaults
         $instance = wp_parse_args( (array) $instance, array( 'title' => __('About me', THEME_LANG), 'target' => '_self', 'attachment' => '', 'size' => 'recent_posts', 'description' => '') );
         $title = strip_tags($instance['title']);
-        $name = strip_tags($instance['name']);
 
         $attachment = esc_attr( $instance['attachment'] );
         $preview = false;
