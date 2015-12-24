@@ -134,6 +134,21 @@ h1, h2, h3, h4, h5, h6 {
   color: $black;
   letter-spacing: .025em;
 }
+h1{
+  font-size: 48px;
+}
+h2{
+  font-size: 36px;
+}
+h3{
+  font-size: 30px;
+}
+h4{
+  font-size: 24px;
+}
+h5{
+  font-size: 16px;
+}
 
 a {
   color: $primary-color;
@@ -254,11 +269,11 @@ input[type=phone],
 input[type=tel],
 input[type=text],
 textarea {
-  border: 1px solid $border-color;
+  border: 1px solid transparent;
   color: $gray;
-  padding: 6px 12px;
-  height: 40px;
-  background: none;
+  padding: 10px 20px;
+  height: 60px;
+  background: $gray-bg;
   @include border-radius(0);
   @include css3-prefix('box-shadow', 'none');
   @include css3-prefix('appearance', 'none');
@@ -423,6 +438,10 @@ select:not([multiple]) {
       }
     }
   }
+}
+
+.shadow-box{
+  @include box-shadow(5px, 0, 40px, rgba($shadow, .1));
 }
 
 
@@ -1000,11 +1019,16 @@ ul.kt_posts_carousel_widget{
       h3.title{
         margin: 0;
         background: rgba($black, .7);
-        color: #fff;
         font-size: 14px;
         line-height: 28px;
         letter-spacing: 0.025em;
         padding: 11px 15px;
+        a{
+          color: $white;
+          &:hover{
+            color: $primary-color;
+          }
+        }
       }
       .carousel-prev,.carousel-next{
         position: absolute;
@@ -1701,6 +1725,151 @@ ul.kt_posts_carousel_widget{
     @include translate;
   }
 }
+
+/*
+ * 10.2 Hightlight
+ */
+.hightlight {
+  color: #ffffff;
+  padding: 4px;
+  border-radius: 3px;
+  &.hightlight1{
+    background: $heightlight1;
+  }
+  &.hightlight2{
+    background: $heightlight2;
+  }
+  &.hightlight3{
+    background: $heightlight3;
+  }
+  &.hightlight4{
+    background: $primary-color;
+  }
+}
+
+/*
+ * 10.3 Dropcap
+ */
+.kt_dropcap{
+  float: left;
+  display: block;
+  margin-right: 10px;
+  font-weight: bold;
+  text-align: center;
+  &.dropcap-sm{
+    font-size: 72px;
+    line-height: 72px;
+    height: 72px;
+    &.dropcap-bg{
+      font-size: 30px;
+      line-height: 40px;
+      height: 40px;
+      &.dropcap-circle{
+        width: 40px;
+      }
+    }
+  }
+  &.dropcap-md{
+    font-size: 100px;
+    line-height: 100px;
+    height: 100px;
+    &.dropcap-bg{
+      font-size: 48px;
+      line-height: 65px;
+      height: 65px;
+      &.dropcap-circle{
+        width: 65px;
+      }
+    }
+  }
+  &.dropcap-gray{
+    color: $primary-color;
+  }
+  &.dropcap-black{
+    color: $black;
+  }
+  &.dropcap-orange{
+    color: $orange;
+  }
+  &.dropcap-bg{
+    padding: 0 10px;
+    margin-top: 10px;
+    &.dropcap-circle{
+      border-radius: 100%;
+    }
+    &.dropcap-gray{
+      background: $primary-color;
+      color: $white;
+    }
+    &.dropcap-black{
+      background: $black;
+      color: $white;
+    }
+    &.dropcap-orange{
+      background: $orange;
+      color: $white;
+    }
+  }
+}
+/*
+ * 10.4 Lists
+ */
+ul.style-list{
+  padding: 0;
+  margin: 0 0 30px;
+  list-style: none;
+  li{
+    padding-left: 52px;
+    margin-bottom: 20px;
+    position: relative;
+    line-height: 30px;
+    &:after{
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      text-align: center;
+    }
+  }
+  &.style1{
+    counter-reset: my-badass-counter;
+    li:after{
+      content: counter(my-badass-counter, decimal);
+      counter-increment: my-badass-counter;
+      border-radius: 100%;
+      border: 1px solid $border-color;
+      font-size: 14px;
+      color: $black;
+      line-height: 28px;
+    }
+  }
+  &.style2{
+    li:after{
+      border-radius: 100%;
+      background: $orange;
+      color: $white;
+      font-size: 10px;
+      line-height: 30px;
+      @include FontIcon('\f00c');
+    }
+  }
+  &.style3{
+    li{
+      padding-left: 22px;
+      &:after{
+        width:6px;
+        height: 6px;
+        @include border-radius('100%');
+        content: "";
+        background: $primary-color;
+        top: 50%;
+        margin-top: -3px;
+      }
+    }
+  }
+}
+
 
 /* ==============================
    7. Header
@@ -3672,14 +3841,6 @@ p.logged-in-as{
       font-weight:normal;
     }
   }
-  textarea,
-  input[type="text"]{
-    background: $gray-bg;
-    border-color: $gray-bg;
-    color: $gray;
-    height: auto;
-    padding: 10px 20px;
-  }
   .form-submit{
     input#submit{
       border-radius:2px;
@@ -3869,9 +4030,47 @@ p.logged-in-as{
   }
 }
 
+/* ==============================
+   18. 404
+   ============================== */
 
-
-
-
-
-
+body.error404{
+  #content{
+    background: $gray-bg;
+    .content-404{
+      padding: 45px 0 120px;
+      text-align: center;
+      background: $white;
+      @include box-shadow(5px, 0, 40px, rgba($shadow, .1));
+      h1{
+        font-size: 200px;
+        color: $black;
+        font-weight: normal;
+        font-style: italic;
+        line-height: 1;
+        margin-bottom: 60px;
+      }
+      h3{
+        font-size: 16px;
+        font-family: $font-stack;
+        color: $gray;
+        margin-bottom: 30px;
+      }
+      p{
+        font-size: 16px;
+        line-height: 30px;
+      }
+      .buttons{
+        a{
+          color: $primary-color;
+          font-size: 16px;
+          i{
+            font-size: 20px;
+            margin-left: 15px;
+            vertical-align: text-top;
+          }
+        }
+      }
+    }
+  }
+}

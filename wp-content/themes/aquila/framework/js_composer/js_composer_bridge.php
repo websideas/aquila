@@ -29,6 +29,17 @@ foreach($visibilities_arr as $item){
     ));
 }
 
+vc_add_params("vc_custom_heading", array(
+    array(
+        "type" => "kt_number",
+        "heading" => __("Letter spacing", THEME_LANG),
+        "param_name" => "letter_spacing",
+        "min" => 0,
+        "suffix" => "px",
+        'group' => __( 'Extra', 'js_composer' )
+    )
+));
+
 
 $composer_addons = array(
     //'dropcap.php',
