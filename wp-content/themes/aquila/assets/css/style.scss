@@ -1003,7 +1003,7 @@ ul.kt_posts_widget{
     li{
       display: inline-block;
       a{
-        padding: 0 10px 10px;
+        padding: 0 8px 8px;
         border-right: 2px solid $border-color;
         font-weight: bold;
         color: $gray;
@@ -1391,13 +1391,13 @@ ul.kt_posts_widget{
   ul {
     li {
       a{
-        font-size: 10px;
+        font-size: 12px;
       }
       span {
         text-transform: uppercase;
         letter-spacing: .1em;
         display: inline;
-        font-size: 12px;
+        font-size: 14px;
         padding-left: 6px;
       }
     }
@@ -1530,6 +1530,8 @@ ul.kt_posts_widget{
     }
   }
 }
+
+.social-text.social-style-color,
 .social-background-empty.social-style-color,
 .social-background-outline.social-style-color{
   .twitter{
@@ -1594,7 +1596,8 @@ ul.kt_posts_widget{
   }
 }
 
-.social-icons-small{
+
+.social-icons-small {
   ul{
     li{
       a{
@@ -1605,17 +1608,29 @@ ul.kt_posts_widget{
       }
     }
   }
-
-}
-
-.social-icons-small.social-background-empty{
-  a{
-    height: auto;
-    line-height: 1;
-    width: auto;
+  &.social-background-empty,
+  &.social-text {
+    a {
+      height: auto;
+      line-height: 1;
+      width: auto;
+    }
   }
-}
 
+  &.social-text{
+    ul{
+      li{
+        a{
+          font-size: 10px;
+        }
+        span {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+}
 .social-icons-center {
   text-align: center;
 }

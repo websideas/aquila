@@ -39,6 +39,8 @@
 
                 get_template_part( 'templates/footers/footer', 'socials');
 
+                //footer-logo.jpg
+
                 if(kt_option('footer_widgets', true)){
                     get_template_part( 'templates/footers/footer', 'widgets');
                 }

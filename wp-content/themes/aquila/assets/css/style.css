@@ -1480,7 +1480,7 @@ ul.kt_posts_widget {
   .widget_kt_post_tabs .kt-tabs-nav li {
     display: inline-block; }
     .widget_kt_post_tabs .kt-tabs-nav li a {
-      padding: 0 10px 10px;
+      padding: 0 8px 8px;
       border-right: 2px solid #eeeeee;
       font-weight: bold;
       color: #999999;
@@ -1888,12 +1888,12 @@ ul.kt_posts_widget {
   line-height: 1; }
 
 .social-text ul li a {
-  font-size: 10px; }
+  font-size: 12px; }
 .social-text ul li span {
   text-transform: uppercase;
   letter-spacing: .1em;
   display: inline;
-  font-size: 12px;
+  font-size: 14px;
   padding-left: 6px; }
 
 .social-style-accent.social-background-fill a {
@@ -1991,61 +1991,73 @@ ul.kt_posts_widget {
   -o-opacity: 0.6;
   opacity: 0.6; }
 
+.social-text.social-style-color .twitter,
 .social-background-empty.social-style-color .twitter,
 .social-background-outline.social-style-color .twitter {
   background: none !important;
   border-color: #00ACED;
   color: #00ACED !important; }
+.social-text.social-style-color .facebook,
 .social-background-empty.social-style-color .facebook,
 .social-background-outline.social-style-color .facebook {
   background: none !important;
   border-color: #3B579D;
   color: #3B579D !important; }
+.social-text.social-style-color .googleplus,
 .social-background-empty.social-style-color .googleplus,
 .social-background-outline.social-style-color .googleplus {
   background: none !important;
   border-color: #DD4A3A;
   color: #DD4A3A !important; }
+.social-text.social-style-color .linkedin,
 .social-background-empty.social-style-color .linkedin,
 .social-background-outline.social-style-color .linkedin {
   background: none !important;
   border-color: #007BB6;
   color: #007BB6 !important; }
+.social-text.social-style-color .pinterest,
 .social-background-empty.social-style-color .pinterest,
 .social-background-outline.social-style-color .pinterest {
   background: none !important;
   border-color: #CB2026;
   color: #CB2026 !important; }
+.social-text.social-style-color .dribbble,
 .social-background-empty.social-style-color .dribbble,
 .social-background-outline.social-style-color .dribbble {
   background: none !important;
   border-color: #d0316a;
   color: #d0316a !important; }
+.social-text.social-style-color .vimeo,
 .social-background-empty.social-style-color .vimeo,
 .social-background-outline.social-style-color .vimeo {
   background: none !important;
   border-color: #86c9ef;
   color: #86c9ef !important; }
+.social-text.social-style-color .tumblr,
 .social-background-empty.social-style-color .tumblr,
 .social-background-outline.social-style-color .tumblr {
   background: none !important;
   border-color: #4a6278;
   color: #4a6278 !important; }
+.social-text.social-style-color .skype,
 .social-background-empty.social-style-color .skype,
 .social-background-outline.social-style-color .skype {
   background: none !important;
   border-color: #00aff0;
   color: #00aff0 !important; }
+.social-text.social-style-color .youtube,
 .social-background-empty.social-style-color .youtube,
 .social-background-outline.social-style-color .youtube {
   background: none !important;
   border-color: #ff021e;
   color: #ff021e !important; }
+.social-text.social-style-color .instagram,
 .social-background-empty.social-style-color .instagram,
 .social-background-outline.social-style-color .instagram {
   background: none !important;
   border-color: #634d40;
   color: #634d40 !important; }
+.social-text.social-style-color a:hover,
 .social-background-empty.social-style-color a:hover,
 .social-background-outline.social-style-color a:hover {
   filter: alpha(opacity=60);
@@ -2062,11 +2074,14 @@ ul.kt_posts_widget {
   height: 26px;
   line-height: 24px;
   width: 26px; }
-
-.social-icons-small.social-background-empty a {
+.social-icons-small.social-background-empty a, .social-icons-small.social-text a {
   height: auto;
   line-height: 1;
   width: auto; }
+.social-icons-small.social-text ul li a {
+  font-size: 10px; }
+.social-icons-small.social-text ul li span {
+  font-size: 12px; }
 
 .social-icons-center {
   text-align: center; }

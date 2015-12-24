@@ -3776,27 +3776,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'custom_color_social',
                         'type'     => 'color',
                         'title'    => __( 'Footer socials Color', THEME_LANG ),
-                        'default'  => '#707070',
+                        'default'  => '#999999',
                         'transparent' => false,
                         'required' => array('footer_socials_style','equals', array( 'custom' ) ),
-                    ),
-                    array(
-                        'id'       => 'footer_socials_background',
-                        'type'     => 'select',
-                        'title'    => __( 'Footer socials background', THEME_LANG ),
-                        'options'  => array(
-                            'empty'       => __('None', THEME_LANG ),
-                            'rounded'   => __('Circle', THEME_LANG ),
-                            'boxed'  => __('Square', THEME_LANG ),
-                            'rounded-less'  => __('Rounded', THEME_LANG ),
-                            'diamond-square'  => __('Diamond Square', THEME_LANG ),
-                            'rounded-outline'  => __('Outline Circle', THEME_LANG ),
-                            'boxed-outline'  => __('Outline Square', THEME_LANG ),
-                            'rounded-less-outline'  => __('Outline Rounded', THEME_LANG ),
-                            'diamond-square-outline'  => __('Outline Diamond Square', THEME_LANG ),
-                        ),
-                        'subtitle'     => __( 'Select background shape and style for social.', THEME_LANG ),
-                        'default'  => 'empty'
                     ),
                     array(
                         'id'       => 'footer_socials_size',
@@ -3812,7 +3794,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'footer_socials_space_between_item',
                         'type'     => 'text',
                         'title'    => __( 'Footer socials space between item', THEME_LANG ),
-                        'default'  => '10'
+                        'default'  => '18'
                     ),
                 )
             );
