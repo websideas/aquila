@@ -246,6 +246,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'options' => array(
                     0		=> __('This content', THEME_LANG),
                     1		=> __('Special content', THEME_LANG),
+                    //2		=> __('Both', THEME_LANG),
                 ),
                 'std'  => -1,
                 'tab'  => 'frontpage_general',
@@ -258,6 +259,7 @@ function kt_register_meta_boxes( $meta_boxes )
                     ''              => __('All', THEME_LANG),
                     'categories'    => __('Specific Categories', THEME_LANG),
                     'authors'		=> __('Specific Authors', THEME_LANG),
+                    'posts'		=> __('Specific Posts', THEME_LANG),
                 ),
                 'std'  => '',
                 'tab'  => 'frontpage_general',
@@ -289,12 +291,29 @@ function kt_register_meta_boxes( $meta_boxes )
                 'tab'  => 'frontpage_general',
                 'visible' => array($prefix . 'frontpage_source', '=', 'authors')
             ),
+            // POST
+            array(
+                'name'        => __( 'Posts', THEME_LANG ),
+                'id'          => "{$prefix}posts",
+                'type'        => 'post',
+                'post_type'   => 'post',
+                'field_type'  => 'select_advanced',
+                'query_args'  => array(
+                    'post_status'    => 'publish',
+                    'posts_per_page' => - 1,
+                ),
+                'multiple'=> true,
+                'tab'  => 'frontpage_general',
+                'visible' => array($prefix . 'frontpage_source', '=', 'posts')
+            ),
+
             array(
                 'name' => __('Blog type', THEME_LANG),
                 'id'   => "{$prefix}frontpage_type",
                 'type' => 'select',
                 'options' => array(
-                    'standard'              => __('Standard', THEME_LANG),
+                    'list'              => __('List', THEME_LANG),
+                    'medium'              => __('Medium', THEME_LANG),
                     'masonry'    => __('Masonry', THEME_LANG),
                     'gird'		=> __('Gird', THEME_LANG),
                 ),
@@ -334,7 +353,8 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type' => 'text',
                 'name' => __( 'Meta key', THEME_LANG ),
                 'id' => $prefix.'meta_key',
-                'tab' => 'frontpage_displays'
+                'tab' => 'frontpage_displays',
+                'visible' => array($prefix . 'frontpage_orderby', '=', 'meta_value')
             ),
             array(
                 'type' => 'select',
@@ -503,6 +523,7 @@ function kt_register_meta_boxes( $meta_boxes )
      * For Layout option
      *
      */
+    /*
     $meta_boxes[] = array(
         'id' => 'page_meta_boxes',
         'title' => 'Page Options',
@@ -631,17 +652,6 @@ function kt_register_meta_boxes( $meta_boxes )
                 'visible' => array($prefix . 'slideshow_type', '=', 'layerslider')
             ),
 
-            /*
-            array(
-                'name' => __('Main Navigation Menu', THEME_LANG),
-                'id'   => "{$prefix}header_main_menu",
-                'type' => 'select',
-                'options' => $menus_arr,
-                'std'  => '',
-                'tab'  => 'header',
-            ),
-            */
-
             // Page Header
             array(
                 'name' => __( 'Page Header Custom Text', THEME_LANG ),
@@ -738,6 +748,7 @@ function kt_register_meta_boxes( $meta_boxes )
 
         )
     );
+    */
 
 
     return $meta_boxes;

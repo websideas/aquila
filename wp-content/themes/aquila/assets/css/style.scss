@@ -163,6 +163,7 @@ blockquote{
   letter-spacing: 0.025em;
   position: relative;
   margin-bottom: 30px;
+
   &:before{
     content: '“';
     font-family: $heading-font;

@@ -11,19 +11,21 @@
 
 get_header(); ?>
 <div class="container">
-    <?php if ( have_posts() ) : ?>
+    <?php if ( have_posts() ) { ?>
         <div class='blog-posts'>
             <?php
             do_action('before_blog_posts_loop');
-            get_template_part( 'templates/blog/list/archive');
+            get_template_part('templates/blog/archive');
+
+
             do_action('after_blog_posts_loop');
             ?>
         </div><!-- .blog-posts -->
-        <?php
+    <?php
     // If no content, include the "No posts found" template.
-    else :
+    }else{
         get_template_part( 'templates/content', 'none' );
-    endif;
+    }
     ?>
 </div><!-- .container -->
 <?php get_footer(); ?>

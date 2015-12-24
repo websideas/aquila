@@ -190,7 +190,7 @@ blockquote {
   position: relative;
   margin-bottom: 30px; }
   blockquote:before {
-    content: 'ΓÇ£';
+    content: '“';
     font-family: "Playfair Display", serif;
     color: #22dcce;
     position: absolute;
@@ -213,7 +213,7 @@ blockquote {
     border: none;
     padding: 0 45px 0 0; }
     blockquote.blockquote-reverse:before {
-      content: 'ΓÇ¥';
+      content: '”';
       left: auto;
       right: 0; }
     blockquote.blockquote-reverse footer:after {

@@ -151,7 +151,7 @@ class Widget_KT_Posts_Carousel extends WP_Widget {
     }
 
     public function form( $instance ) {
-        $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : __( 'Recent Posts' , THEME_LANG);
+        $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';
         $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
 
         $order = isset( $instance['order'] ) ? $instance['order'] : 'DESC';
