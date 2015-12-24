@@ -269,7 +269,7 @@ function kt_register_meta_boxes( $meta_boxes )
             array(
                 'name'    => __( 'Specific Categories', THEME_LANG ),
                 'id'      => "{$prefix}categories",
-                'type'    => 'taxonomy',
+                'type'    => 'taxonomy_advanced',
                 'multiple'=> true,
                 'options' => array(
                     'taxonomy' => 'category',
@@ -523,7 +523,6 @@ function kt_register_meta_boxes( $meta_boxes )
      * For Layout option
      *
      */
-    /*
     $meta_boxes[] = array(
         'id' => 'page_meta_boxes',
         'title' => 'Page Options',
@@ -608,7 +607,7 @@ function kt_register_meta_boxes( $meta_boxes )
             array(
                 'name'    => __( 'Specific Categories', THEME_LANG ),
                 'id'      => "{$prefix}slideshow_categories",
-                'type'    => 'taxonomy',
+                'type'    => 'taxonomy_advanced',
                 'multiple'=> true,
                 'options' => array(
                     'taxonomy' => 'category',
@@ -748,7 +747,6 @@ function kt_register_meta_boxes( $meta_boxes )
 
         )
     );
-    */
 
 
     return $meta_boxes;

@@ -31,13 +31,26 @@ get_header(); ?>
         ?>
     <?php }else{ ?>
         <?php
+
+        $orderby = get_post_meta($post_id, '_kt_frontpage_orderby', true);
+        $order = get_post_meta($post_id, '_kt_order', true);
+        $paged = (get_query_var('page')) ? get_query_var('page') : 1;
+
         $args = array(
             'post_type' => 'post',
+            'posts_per_page' => get_post_meta($post_id, '_kt_max_items', true),
+            'orderby' => $orderby,
+            'order' => $order,
+            'paged' => $paged
         );
+
+        if($orderby == 'meta_value' || $orderby == 'meta_value_num'){
+            $args['meta_key'] = $meta_key;
+        }
 
         $source = get_post_meta($post_id, '_kt_frontpage_source', true);
         if($source == 'categories'){
-            $categories = rwmb_meta( '_kt_categories', 'type=taxonomy&taxonomy=category', $post_id );
+            $categories = rwmb_meta( '_kt_categories', 'type=taxonomy_advanced&taxonomy=category', $post_id );
             if(count($categories)){
                 $categories_arr = array();
                 foreach($categories as $category){
@@ -59,13 +72,13 @@ get_header(); ?>
 
 
         $type = get_post_meta($post_id, '_kt_frontpage_type', true);
-        $column = 3;
+        $column = 2;
         $first_featured = true;
 
-        $the_query = new WP_Query( apply_filters('kt_front_page_args', $args) );
+        $the_query = query_posts( apply_filters('kt_front_page_args', $args) );
 
         ?>
-        <?php if ( $the_query->have_posts() ) { ?>
+        <?php if ( have_posts() ) { ?>
             <div class='blog-posts'>
                 <?php
                 do_action('before_blog_posts_loop');
@@ -77,8 +90,9 @@ get_header(); ?>
                 }
                 $article_column = 12/$column;
 
+                global $wp_query;
                 $i = 1;
-                while ( $the_query->have_posts() ) : $the_query->the_post();
+                while ( have_posts() ) : the_post();
                     if($i == 1){
                         if($first_featured){
                             get_template_part( 'templates/blog/gird/content', 'first');
@@ -106,7 +120,7 @@ get_header(); ?>
                         }
                         echo '</div>';
                     }
-                    if($i == $the_query->post_count){
+                    if($i == $wp_query->post_count){
                         echo '</div><!-- .main-content -->';
                         // Previous/next page navigation.
                         kt_paging_nav();
@@ -123,12 +137,12 @@ get_header(); ?>
                     // End the loop.
                 endwhile;
 
-                if($the_query->post_count == 1){
+                if($wp_query->post_count == 1){
                     // Previous/next page navigation.
                     kt_paging_nav();
                 }
                 /* Restore original Post Data */
-                wp_reset_postdata();
+                wp_reset_query();
 
 
                 do_action('after_blog_posts_loop');

@@ -536,7 +536,6 @@ if ( ! function_exists( 'kt_paging_nav' ) ) :
         if ( $wp_query->max_num_pages < 2 ) {
             return;
         }
-
         if($type == 'none'){
             return ;
         }elseif($type == 'loadmore'){
@@ -563,6 +562,7 @@ if ( ! function_exists( 'kt_paging_nav' ) ) :
             </nav><!-- .navigation -->
 
         <?php }else{
+
             the_posts_pagination();
         }
     }
@@ -584,6 +584,8 @@ if ( ! function_exists( 'kt_entry_meta_author' ) ) :
         );
     }
 endif;
+
+
 
 if ( ! function_exists( 'kt_entry_meta_categories' ) ) :
     /**
