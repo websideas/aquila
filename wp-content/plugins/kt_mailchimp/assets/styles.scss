@@ -1,11 +1,9 @@
-
 .kt-mailchimp-wrapper{
   margin-bottom: 30px;
   .mailchimp-before{
     margin-bottom: 10px;
   }
 }
-
 .widget_kt_mailchimp {
   .kt-mailchimp-wrapper{
     margin-bottom: 0;
@@ -15,28 +13,23 @@
     text-align: center;
   }
 }
-
-
 .mailchimp-form {
-
   .mailchimp-error,
   .mailchimp-success{
     display: none;
     margin-top: 15px;
     clear: both;
   }
-
   .mailchimp-error{
     color: #a94442;
     &:before {
-        margin-right: 5px;
-        content: '\f057';
-        font-family: FontAwesome;
-        font-weight: normal;
-        font-style: normal;
-      }
+      margin-right: 5px;
+      content: '\f057';
+      font-family: FontAwesome;
+      font-weight: normal;
+      font-style: normal;
+    }
   }
-
   .mailchimp-success{
     color: #3c763d;
     &:before {
@@ -60,17 +53,47 @@
       position: absolute;
       right: 0;
       top: 50%;
-
       -webkit-transform: translateY(-50%);
       -moz-transform: translateY( -50%);
       -ms-transform: translateY( -50%);
       transform: translateY( -50%);
-
     }
-
   }
 
-
+  .mailchimp-submit {
+    position: relative;
+    &:before{
+      font-family: FontAwesome;
+      content: '\f110';
+      font-weight: normal;
+      display: block;
+      text-indent: 0;
+      -webkit-animation: fa-spin 2s infinite linear;
+      -moz-animation: fa-spin 2s infinite linear;
+      animation: fa-spin 2s infinite linear;
+      width: 10px;
+      height: 10px;
+      line-height: 10px;
+      margin-left: -5px;
+      margin-top: -5px;
+      top: 50%;
+      left: 50%;
+      position: absolute;
+      visibility: hidden;
+    }
+    &.loading{
+      cursor: default;
+      -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+      filter: alpha(opacity=70);
+      opacity: .7;
+      &:before{
+        visibility: visible;
+      }
+      span{
+        visibility: hidden;
+      }
+    }
+  }
   &.mailchimp-layout-2{
     input[type=text],
     input[type=email]{
@@ -93,43 +116,6 @@
         padding: 0 25px;
         text-transform: uppercase;
       }
-      /*
-      .btn {
-        background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
-        border-color: transparent;
-        height: 100%;
-        overflow: hidden;
-        text-indent: -999px;
-        width: 20px;
-        padding: 0;
-        position: relative;
-        &:before{
-          font-family: FontAwesome;
-          content: '\f178';
-          font-weight: normal;
-          display: block;
-          font-size: 14px;
-          color: #252525;
-          text-indent: 0;
-          position: absolute;
-          right: -1px;
-          text-align: right;
-          top: 6px;
-        }
-        &.loading{
-          &:before{
-            content: '\f110';
-            -webkit-animation: fa-spin 2s infinite linear;
-            animation: fa-spin 2s infinite linear;
-          }
-        }
-      }*/
     }
   }
-
-
-
-
-
-
 }

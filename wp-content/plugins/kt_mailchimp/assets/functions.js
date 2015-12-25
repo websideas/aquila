@@ -8,7 +8,7 @@
             $error = $mForm.find('.mailchimp-error').fadeOut(),
             $success = $mForm.find('.mailchimp-success').fadeOut();
 
-        $button.addClass('loading').html($button.data('loading'));
+        $button.addClass('loading');
 
         var data = {
             action: 'frontend_mailchimp',
@@ -21,7 +21,7 @@
         };
 
         $.post(ajax_frontend.ajaxurl, data, function(response) {
-            $button.removeClass('loading').html($button.data('text'));
+            $button.removeClass('loading');
 
             if(response.error == '1'){
                 $error.html(response.msg).fadeIn();

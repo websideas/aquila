@@ -250,7 +250,7 @@ class KT_MailChimp
                 $btn_class = ($layout == 1) ? 'btn btn-accent btn-block' : '';
 
                 $email = '<div class="mailchimp-input-email"><input name="email" class="mailchimp-email" type="text" placeholder="'.__('Enter your email address*', 'kt_mailchimp').'"/></div>';
-                $button = '<div class="mailchimp-input-button"><button data-loading="'.esc_attr(__('Loading', 'kt_mailchimp')).'" data-text="'.esc_attr(__('Subscribe', 'kt_mailchimp')).'"  class="'.$btn_class.' mailchimp-submit" type="submit"><span>'.__('Subscribe', 'kt_mailchimp').'</span></button></div>';
+                $button = '<div class="mailchimp-input-button"><button class="'.$btn_class.' mailchimp-submit" type="submit"><span>'.__('Subscribe', 'kt_mailchimp').'</span></button></div>';
 
                 if($disable_names != 'yes'){
                     $name .= '<div class="mailchimp-input-fname"><input name="firstname" class="mailchimp-firstname" type="text" placeholder="'.__('First Name', 'kt_mailchimp').'"/></div>';

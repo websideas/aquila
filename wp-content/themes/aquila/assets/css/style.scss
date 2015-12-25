@@ -180,7 +180,7 @@ blockquote{
   margin-bottom: 30px;
 
   &:before{
-    content: '“';
+    content: '\201C';
     font-family: $heading-font;
     color: $primary-color;
     position: absolute;
@@ -207,7 +207,7 @@ blockquote{
     border: none;
     padding: 0 45px 0 0;
     &:before{
-      content: '”';
+      content: '\201D';
       left: auto;
       right: 0;
     }
@@ -1288,6 +1288,7 @@ ul.kt_posts_carousel_widget{
       input[type=text],
       input[type=email]{
         background: none;
+        border: 1px solid $dark-border;
       }
     }
   }
