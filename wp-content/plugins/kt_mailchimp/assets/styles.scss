@@ -4,21 +4,25 @@
   .mailchimp-before{
     margin-bottom: 10px;
   }
+}
 
-  .widget-container &{
+.widget_kt_mailchimp {
+  .kt-mailchimp-wrapper{
     margin-bottom: 0;
+  }
+  .kt_mailchimp-before{
+    margin-bottom: 15px;
+    text-align: center;
   }
 }
 
 
 .mailchimp-form {
 
-
-
   .mailchimp-error,
   .mailchimp-success{
     display: none;
-    margin-top: 20px;
+    margin-top: 15px;
     clear: both;
   }
 
@@ -66,14 +70,11 @@
 
   }
 
-  &.mailchimp-layout-1{
+
+  &.mailchimp-layout-2{
     input[type=text],
     input[type=email]{
-      border: 1px solid #333333;
-      color: #707070;
-      font-size: 14px;
-      height: 45px;
-      padding: 5px 19px;
+
     }
     input.mailchimp-email{
       padding-right: 130px;
@@ -83,15 +84,14 @@
     }
     .mailchimp-input-button {
       height: 100%;
-      .btn {
+      .mailchimp-submit {
         background: none;
         border-color: transparent;
         height: 100%;
         overflow: hidden;
         font-size: 14px;
-        font-weight: bold;
-        color: #FFFFFF;
-        padding: 0 13px;
+        padding: 0 25px;
+        text-transform: uppercase;
       }
       /*
       .btn {
@@ -127,15 +127,6 @@
     }
   }
 
-
-  &.mailchimp-layout-2{
-
-    .mailchimp-input-button{
-      button{
-        width: 100%;
-      }
-    }
-  }
 
 
 
