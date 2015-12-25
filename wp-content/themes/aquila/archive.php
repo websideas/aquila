@@ -10,16 +10,31 @@
 
 
 get_header(); ?>
-<div class="container">
+
     <?php if ( have_posts() ) { ?>
         <div class='blog-posts'>
             <?php
-            do_action('before_blog_posts_loop');
-            get_template_part('templates/blog/archive');
-
-
-            do_action('after_blog_posts_loop');
+            /*
+            <header class="page-header">
+                <div class="container">
+                    <div class="page-header-content">
+                        <?php
+                            the_archive_title( '<h1 class="page-title">', '</h1>' );
+                            the_archive_description( '<div class="taxonomy-description">', '</div>' );
+                        ?>
+                    </div><!-- .page-header-content -->
+                </div><!-- .container -->
+            </header><!-- .page-header -->
+            */
+            //the_archive_description();
             ?>
+            <div class="container">
+                <?php
+                do_action('before_blog_posts_loop');
+                get_template_part('templates/blog/archive');
+                do_action('after_blog_posts_loop');
+                ?>
+            </div><!-- .container -->
         </div><!-- .blog-posts -->
     <?php
     // If no content, include the "No posts found" template.
@@ -27,5 +42,5 @@ get_header(); ?>
         get_template_part( 'templates/content', 'none' );
     }
     ?>
-</div><!-- .container -->
+
 <?php get_footer(); ?>

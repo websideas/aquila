@@ -163,8 +163,6 @@ function kt_excerpt_length( ) {
 add_filter( 'excerpt_length', 'kt_excerpt_length', 99 );
 
 
-
-
 function kt_get_post_thumbnail_url($size = 'post-thumbnail', $post_id = null){
     global $post;
         if(!$post_id) $post_id = $post->ID;

@@ -32,7 +32,6 @@ class Widget_KT_Flickr extends WP_Widget {
                 <ul class="kt_flickr">
                     <script type="text/javascript">
                 		function jsonFlickrApi(rsp) {
-                            console.log(rsp);
                 			if (rsp.stat != "ok"){
                 				// If this executes, something broke!
                 				return;

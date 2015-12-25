@@ -8,7 +8,7 @@
 
 $post_id = get_the_ID();
 $content = get_post_meta($post_id, '_kt_frontpage_content', true);
-$sidebar = array('sidebar' => 'right', 'sidebar_area' => 'primary-widget-area');
+$sidebar = array('sidebar' => '', 'sidebar_area' => 'primary-widget-area');
 
 
 get_header(); ?>
@@ -72,10 +72,14 @@ get_header(); ?>
 
 
         $type = get_post_meta($post_id, '_kt_frontpage_type', true);
-        $column = 2;
-        $first_featured = true;
+        $column = get_post_meta($post_id, '_kt_frontpage_columns', true);
+        $first_featured = get_post_meta($post_id, '_kt_first_featured', true);
+        $excerpt_length = get_post_meta($post_id, '_kt_excerpt_length', true);
 
         $the_query = query_posts( apply_filters('kt_front_page_args', $args) );
+
+        $function = create_function('', 'return '.intval($excerpt_length).';');
+        add_filter('excerpt_length', $function, 9999);
 
         ?>
         <?php if ( have_posts() ) { ?>
@@ -143,7 +147,7 @@ get_header(); ?>
                 }
                 /* Restore original Post Data */
                 wp_reset_query();
-
+                remove_filter('excerpt_length', $function, 9999);
 
                 do_action('after_blog_posts_loop');
 

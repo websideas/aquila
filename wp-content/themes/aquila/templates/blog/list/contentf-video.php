@@ -1,4 +1,4 @@
-<article <?php post_class(); ?>>
+<article <?php post_class('post-item-content'); ?>>
     <?php
     $post_id = get_the_ID();
     $type = get_post_meta($post_id, '_kt_video_type', true);

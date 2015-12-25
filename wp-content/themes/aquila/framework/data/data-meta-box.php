@@ -314,20 +314,61 @@ function kt_register_meta_boxes( $meta_boxes )
                 'options' => array(
                     'list'              => __('List', THEME_LANG),
                     'medium'              => __('Medium', THEME_LANG),
-                    'masonry'    => __('Masonry', THEME_LANG),
                     'gird'		=> __('Gird', THEME_LANG),
+                    'masonry'    => __('Masonry', THEME_LANG),
+
                 ),
                 'std'  => 'standard',
                 'tab'  => 'frontpage_layout',
             ),
 
+            array(
+                'name' => __('Blog columns', THEME_LANG),
+                'id'   => "{$prefix}frontpage_columns",
+                'type' => 'select',
+                'options' => array(
+                    '2'              => __('2', THEME_LANG),
+                    '3'              => __('3', THEME_LANG),
+                    '4'    => __('4', THEME_LANG),
+                ),
+                'std'  => '2',
+                'tab'  => 'frontpage_layout',
+                'visible' => array($prefix . 'frontpage_type','in', array('masonry', 'gird' )),
+            ),
+            array(
+                'name' => __( 'First featured', THEME_LANG ),
+                'id'   => "{$prefix}first_featured",
+                'type' => 'checkbox',
+                'std'  => 1,
+                'visible' => array($prefix . 'frontpage_type','in', array('list', 'medium' )),
+                'tab'  => 'frontpage_layout',
+                'desc' => __( 'Check it if you want the first article is featured.', 'js_composer' ),
+            ),
+
+
+
+
+            /*
+            array(
+                'name' => __('Blog type', THEME_LANG),
+                'id'   => "{$prefix}frontpage_type",
+                'type' => 'select',
+                'options' => array(
+                    'full' => __('Full text', THEME_LANG),
+                    'summary' => __('Summary', THEME_LANG)
+                ),
+                'std'  => 'summary',
+                'tab'  => 'frontpage_layout',
+            ),
+            */
+
             //Displays
             array(
                 'type' => 'text',
-                'name' => __( 'Number of items', 'js_composer' ),
+                'name' => __( 'Number of items', THEME_LANG ),
                 'id' => $prefix.'max_items',
                 'std' => 10, // default value
-                'desc' => __( 'Set max limit for items in grid or enter -1 to display all (limited to 1000).', 'js_composer' ),
+                'desc' => __( 'Set max limit for items in grid or enter -1 to display all (limited to 1000).', THEME_LANG ),
                 'tab'  => 'frontpage_displays',
             ),
             array(
@@ -366,7 +407,15 @@ function kt_register_meta_boxes( $meta_boxes )
                     'ASC' => __( 'Ascending', THEME_LANG ),
                 ),
                 'desc' => __( 'Select sorting order.', THEME_LANG ),
-            )
+            ),
+            array(
+                'type' => 'text',
+                'name' => __( 'Excerpt Length', THEME_LANG ),
+                'id' => $prefix.'excerpt_length',
+                'std' => 30, // default value
+                'desc' => __( 'Insert the number of words you want to show in the post excerpts.',THEME_LANG ),
+                'tab'  => 'frontpage_displays',
+            ),
         )
     );
 
@@ -666,22 +715,6 @@ function kt_register_meta_boxes( $meta_boxes )
                 'id' => $prefix . 'page_header_subtitle',
                 'desc' => __( "Enter subtitle for page.", THEME_LANG ),
                 'type'  => 'text',
-                'tab'  => 'page_header',
-                'visible' => array($prefix . 'page_header', '!=', '0')
-            ),
-
-            array(
-                'id'       => "{$prefix}page_header_align",
-                'type'     => 'select',
-                'name'    => __( 'Page Header align', THEME_LANG ),
-                'desc'     => __( 'Please select Page Header align', THEME_LANG ),
-                'options'  => array(
-                    ''    => __('Default', THEME_LANG),
-                    'left' => __('Left', THEME_LANG ),
-                    'center' => __('Center', THEME_LANG),
-                    'right' => __('Right', THEME_LANG)
-                ),
-                'std'  => '',
                 'tab'  => 'page_header',
                 'visible' => array($prefix . 'page_header', '!=', '0')
             ),

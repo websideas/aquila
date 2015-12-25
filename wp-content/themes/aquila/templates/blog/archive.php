@@ -1,8 +1,8 @@
 <?php
 
 
-$type = 'list';
-$column = 3;
+$type = 'gird';
+$column = 2;
 $first_featured = true;
 $sidebar = array('sidebar' => 'right', 'sidebar_area' => 'primary-widget-area');
 

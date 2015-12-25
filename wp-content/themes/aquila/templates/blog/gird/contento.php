@@ -1,4 +1,4 @@
-<article <?php post_class(); ?>>
+<article <?php post_class('post-item-content'); ?>>
     <?php
 
     if(has_post_thumbnail()){

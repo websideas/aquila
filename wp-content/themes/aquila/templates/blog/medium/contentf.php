@@ -1,4 +1,4 @@
-<article <?php post_class('post-item-featured'); ?>>
+<article <?php post_class('post-item-content post-item-featured'); ?>>
     <?php
     $post_id = get_the_ID();
     $type = get_post_meta($post_id, '_kt_gallery_type', true);

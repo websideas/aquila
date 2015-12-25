@@ -57,7 +57,7 @@ if ( ! function_exists( 'kt_track_post_views' ) ){
                 global $post;
                 $post_id = $post->ID;
             }
-            
+
             $count_key = 'kt_post_views_count';
             $count = get_post_meta($post_id, $count_key, true);
             if($count==''){
@@ -171,11 +171,11 @@ function kt_get_settings_search(){
  */
 function theme_body_classes( $classes ) {
     global $post;
-    
+
     if ( is_multi_author() ) {
         $classes[] = 'group-blog';
     }
-    
+
     /*
     if( is_page() || is_singular('post')){
         $classes[] = 'layout-'.kt_getlayout($post->ID);
@@ -201,18 +201,18 @@ add_filter( 'body_class', 'theme_body_classes' );
  * @since 1.0
  *
  * @param string $classes current class
- * @param string $layout layout current of page 
- *  
+ * @param string $layout layout current of page
+ *
  * @return array The filtered body class list.
  */
 function kt_main_class_callback($classes, $layout){
-    
+
     if($layout == 'left' || $layout == 'right'){
         $classes .= ' col-md-8 col-sm-12 col-xs-12';
     }else{
         $classes .= ' col-md-12 col-xs-12';
     }
-    
+
     if($layout == 'left'){
          $classes .= ' pull-right';
     }
@@ -227,8 +227,8 @@ add_filter('kt_main_class', 'kt_main_class_callback', 10, 2);
  * @since 1.0
  *
  * @param string $classes current class
- * @param string $layout layout current of page 
- *  
+ * @param string $layout layout current of page
+ *
  * @return array The filtered body class list.
  */
 function kt_sidebar_class_callback( $classes, $layout ){
@@ -336,10 +336,12 @@ if(!function_exists('kt_placeholder_callback')) {
         if(is_array($placeholder) && $placeholder['id'] != '' ){
             $obj = get_thumbnail_attachment($placeholder['id'], $size);
             $imgage = $obj['url'];
-        }elseif($size == 'blog_post' || $size == 'blog_post_sidebar'){
-            $imgage = THEME_IMG . 'placeholder-blogpost.png';
+        }elseif($size == 'recent_posts' || $size == 'recent_posts_masonry') {
+            $imgage = THEME_IMG . 'placeholder-recent.jpg';
+        }elseif ($size == 'blog_post' || $size == 'blog_post_sidebar'){
+            $imgage = THEME_IMG . 'placeholder-blogpost.jpg';
         }else{
-            $imgage = THEME_IMG . 'placeholder-post.png';
+            $imgage = THEME_IMG . 'placeholder-post.jpg';
         }
 
         return $imgage;
@@ -436,3 +438,119 @@ function kt_navigation_markup_template($template, $class){
 
 
 
+/**
+ * Add page header
+ *
+ * @since 1.0
+ */
+add_action( 'theme_before_content', 'get_page_header', 20 );
+function get_page_header( ){
+    global $post;
+    $title = '';
+
+    if ( is_front_page() && !is_singular('page') ) {
+        $title = __( 'Blog', THEME_LANG );
+    } elseif(is_category()){
+        $title = single_tag_title( '', false );
+    } elseif( is_home() ){
+        $page_for_posts = get_option('page_for_posts', true);
+        if($page_for_posts){
+            $title = get_the_title($page_for_posts) ;
+        }
+    } elseif(is_search()){
+        $title = sprintf( __( '<i class="fa fa-search"></i> <span>%s</span>' ), get_search_query() );
+    } elseif ( is_front_page() && is_singular('page') ){
+        $page_on_front = get_option('page_on_front', true);
+        $title = get_the_title($page_on_front) ;
+    } elseif ( is_archive() ){
+        if(is_tag()){
+            $title = sprintf( __( '<i class="fa fa-tags"></i> <span>%s</span>' ), single_tag_title( '', false ) );
+        } elseif(is_author()){
+            $title = sprintf( __( '<i class="fa fa-user"></i> <span>%s</span>' ), '<span class="vcard">' . get_the_author() . '</span>' );
+        } elseif ( is_year() ) {
+            $title = sprintf( __( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'Y', 'yearly archives date format' ) ) );
+        } elseif ( is_month() ) {
+            $title = sprintf( __( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'F Y', 'monthly archives date format' ) ) );
+        } elseif ( is_day() ) {
+            $title = sprintf( __( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'F j, Y', 'daily archives date format' ) ) );
+        }
+    } elseif(is_page()){
+        $post_id = $post->ID;
+        $custom_text = rwmb_meta('_kt_page_header_custom', array(), $post_id);
+        $title = ($custom_text != '') ? $custom_text : get_the_title($post_id);
+    }
+
+    if($title){
+        $title = sprintf('<h1 class="page-title">%s</h1>', $title);
+        $subtitle = kt_get_page_subtitle();
+
+        printf(
+            '<div class="page-header"><div class="container"><div class="page-header-content clearfix">%s</div></div></div>',
+            $title.$subtitle
+        );
+    }
+}
+
+
+/**
+ * Get page tagline
+ *
+ * @return mixed|void
+ */
+
+function kt_get_page_subtitle(){
+    global $post;
+    $subtitle = '';
+    if ( is_front_page() && !is_singular('page') ) {
+        $subtitle =  __('Lastest posts', THEME_LANG);
+    }elseif( is_home() ){
+        $page_for_posts = get_option('page_for_posts', true);
+        $subtitle = nl2br(rwmb_meta('_kt_page_header_subtitle', array(), $page_for_posts))  ;
+    }elseif ( is_front_page() && is_singular('page') ){
+        $subtitle =  rwmb_meta('_kt_page_header_subtitle');
+    }elseif ( is_archive() ){
+        $subtitle =  get_the_archive_description( );
+        if(!$subtitle){
+            if(is_category()){
+                $category_current = get_category( get_query_var( 'cat' ) );
+                $categories = get_categories( array('child_of' => $category_current->term_id) );
+
+                if(count($categories)){
+                    $subtitle .= '<ul class="category_children">';
+                    $subtitle .= sprintf(
+                        '<li class="active"><a href="%s">%s</a></li>',
+                        get_category_link($category_current->term_id),
+                        __('All', THEME_LANG)
+                    );
+                    foreach($categories as $category){
+                        $subtitle .= sprintf(
+                            '<li><a href="%s">%s</a></li>',
+                            get_category_link($category->term_id),
+                            $category->cat_name
+                        );
+                    }
+                    $subtitle .= '</ul>';
+                }else{
+                    $subtitle = sprintf( __('%s posts', THEME_LANG), $category_current->count);
+                }
+            }elseif(is_tag() || is_author() || is_year() || is_month() || is_day()){
+                global $wp_query;
+                $subtitle = sprintf( __('%s posts', THEME_LANG), $wp_query->found_posts);
+            }
+        }
+    }elseif(is_search()){
+        global $wp_query;
+        $subtitle = sprintf( __('%s posts', THEME_LANG), $wp_query->found_posts);
+    }elseif( $post ){
+        $post_id = $post->ID;
+        $subtitle = nl2br(rwmb_meta('_kt_page_header_subtitle', array(), $post_id));
+    }
+
+    $subtitle = apply_filters( 'kt_subtitle', $subtitle );
+
+    if($subtitle){
+        $subtitle = sprintf('<div class="%s">%s</div>', 'page-subtitle', $subtitle);
+    }
+
+    return $subtitle;
+}
