@@ -972,6 +972,17 @@ ul.kt_posts_widget{
     }
   }
 }
+
+#footer{
+  ul.kt_posts_widget{
+  li{
+    .posted-on{
+      font-size: 12px;
+    }
+  }
+}
+}
+
 .widget_kt_posts{
 
 
@@ -1962,11 +1973,9 @@ ul.style-list{
       top: 100%;
       right: 10px;
       line-height: normal;
-      @include opacity(0);
-      @include transform(translate(0px, 40px));
       @include transition('transform 0.2s ease-in-out 0s, opacity 0.2s ease-in-out 0s');
       @include box-shadow(0, 8px, 15px, rgba(0, 0, 0, 0.1));
-      visibility: hidden;
+      display: none;
       input[type=text]{
         background: #FFFFFF;
         @include box-shadow(1px, 0, 6px, rgba($black, 0.05));
@@ -1985,14 +1994,6 @@ ul.style-list{
 
     &.mini-hamburger{
       width: 32px;
-    }
-
-    &:hover{
-      .searchform{
-        @include opacity(1);
-        @include transform(translate(0, 0));
-        visibility: visible;
-      }
     }
   }
 }
