@@ -34,61 +34,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data-options.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="data-options.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/framework/data/data-options.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="4002" column="46" selection-start-line="4002" selection-start-column="46" selection-end-line="4002" selection-end-column="46" />
+            <state vertical-scroll-proportion="0.18115942">
+              <caret line="1809" column="48" selection-start-line="1809" selection-start-column="48" selection-end-line="1809" selection-end-column="48" />
               <folding>
-                <marker date="1451118926000" expanded="true" signature="20888:20908" placeholder="..." />
-                <marker date="1451118926000" expanded="true" signature="21023:21043" placeholder="..." />
-                <marker date="1451118926000" expanded="true" signature="46245:46257" placeholder="..." />
-                <marker date="1451118926000" expanded="true" signature="53416:53428" placeholder="..." />
-                <marker date="1451118926000" expanded="true" signature="193107:193116" placeholder="..." />
-                <marker date="1451118926000" expanded="true" signature="193392:193401" placeholder="..." />
-                <marker date="1451118926000" expanded="true" signature="193663:193672" placeholder="..." />
-                <marker date="1451118926000" expanded="true" signature="193956:193965" placeholder="..." />
+                <marker date="1451121149000" expanded="true" signature="17945:17965" placeholder="..." />
+                <marker date="1451121149000" expanded="true" signature="18080:18100" placeholder="..." />
+                <marker date="1451121149000" expanded="true" signature="43099:43111" placeholder="..." />
+                <marker date="1451121149000" expanded="true" signature="50270:50282" placeholder="..." />
+                <marker date="1451121149000" expanded="true" signature="185757:185766" placeholder="..." />
+                <marker date="1451121149000" expanded="true" signature="186042:186051" placeholder="..." />
+                <marker date="1451121149000" expanded="true" signature="186313:186322" placeholder="..." />
+                <marker date="1451121149000" expanded="true" signature="186606:186615" placeholder="..." />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.0">
-              <caret line="3884" column="22" selection-start-line="3884" selection-start-column="22" selection-end-line="3884" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_variables.scss" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/assets/css/_variables.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31578946">
-              <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_mixin.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/assets/css/_mixin.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-31.875">
-              <caret line="468" column="0" selection-start-line="468" selection-start-column="0" selection-end-line="468" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -96,8 +56,8 @@
       <file leaf-file-name="content-single.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/templates/content-single.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
+            <state vertical-scroll-proportion="-1.25">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -106,8 +66,8 @@
       <file leaf-file-name="data-meta-box.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/framework/data/data-meta-box.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="713" column="53" selection-start-line="713" selection-start-column="53" selection-end-line="713" selection-end-column="53" />
+            <state vertical-scroll-proportion="-13.125">
+              <caret line="734" column="51" selection-start-line="734" selection-start-column="51" selection-end-line="734" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -154,7 +114,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/page-templates/front-page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/templates/content-page.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/scripts.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/data/data-options.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/templates/headers/header-layout1.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/assets/css/framework-core.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/functions.php" />
@@ -169,6 +128,7 @@
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.css" />
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/assets/css/_mixin.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/data/data-options.php" />
       </list>
     </option>
   </component>
@@ -602,6 +562,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
@@ -758,6 +723,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="88" column="46" selection-start-line="88" selection-start-column="46" selection-end-line="88" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -856,6 +822,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.5">
           <caret line="404" column="40" selection-start-line="404" selection-start-column="40" selection-end-line="404" selection-end-column="40" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -918,55 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/framework/data/data-options.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4002" column="46" selection-start-line="4002" selection-start-column="46" selection-end-line="4002" selection-end-column="46" />
-          <folding>
-            <marker date="1451118926000" expanded="true" signature="20888:20908" placeholder="..." />
-            <marker date="1451118926000" expanded="true" signature="21023:21043" placeholder="..." />
-            <marker date="1451118926000" expanded="true" signature="46245:46257" placeholder="..." />
-            <marker date="1451118926000" expanded="true" signature="53416:53428" placeholder="..." />
-            <marker date="1451118926000" expanded="true" signature="193107:193116" placeholder="..." />
-            <marker date="1451118926000" expanded="true" signature="193392:193401" placeholder="..." />
-            <marker date="1451118926000" expanded="true" signature="193663:193672" placeholder="..." />
-            <marker date="1451118926000" expanded="true" signature="193956:193965" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/templates/content-single.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/framework/data/data-meta-box.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="713" column="53" selection-start-line="713" selection-start-column="53" selection-end-line="713" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0">
-          <caret line="3884" column="22" selection-start-line="3884" selection-start-column="22" selection-end-line="3884" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/assets/css/_mixin.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-31.875">
@@ -975,11 +893,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36956522">
+          <caret line="3884" column="22" selection-start-line="3884" selection-start-column="22" selection-end-line="3884" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/assets/css/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31578946">
-          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.49122807">
+          <caret line="38" column="22" selection-start-line="38" selection-start-column="22" selection-end-line="38" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8976109">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/templates/content-single.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.25">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/framework/data/data-meta-box.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.125">
+          <caret line="734" column="51" selection-start-line="734" selection-start-column="51" selection-end-line="734" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/framework/data/data-options.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18115942">
+          <caret line="1809" column="48" selection-start-line="1809" selection-start-column="48" selection-end-line="1809" selection-end-column="48" />
+          <folding>
+            <marker date="1451121149000" expanded="true" signature="17945:17965" placeholder="..." />
+            <marker date="1451121149000" expanded="true" signature="18080:18100" placeholder="..." />
+            <marker date="1451121149000" expanded="true" signature="43099:43111" placeholder="..." />
+            <marker date="1451121149000" expanded="true" signature="50270:50282" placeholder="..." />
+            <marker date="1451121149000" expanded="true" signature="185757:185766" placeholder="..." />
+            <marker date="1451121149000" expanded="true" signature="186042:186051" placeholder="..." />
+            <marker date="1451121149000" expanded="true" signature="186313:186322" placeholder="..." />
+            <marker date="1451121149000" expanded="true" signature="186606:186615" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
