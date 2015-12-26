@@ -8,7 +8,9 @@
 
 $post_id = get_the_ID();
 $content = get_post_meta($post_id, '_kt_frontpage_content', true);
-$sidebar = array('sidebar' => '', 'sidebar_area' => 'primary-widget-area');
+$sidebar = kt_get_page_sidebar();
+
+
 
 
 get_header(); ?>

@@ -107,10 +107,8 @@ if (!function_exists('kt_get_page_sidebar')) {
      */
     function kt_get_page_sidebar( $post_id = null )
     {
-
         global $post;
         if(!$post_id) $post_id = $post->ID;
-
 
         $sidebar = array(
             'sidebar' => rwmb_meta('_kt_sidebar', array(), $post_id),
@@ -121,24 +119,22 @@ if (!function_exists('kt_get_page_sidebar')) {
             $sidebar['sidebar'] = $_REQUEST['sidebar'];
         }
 
-
         if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default' ){
-            $sidebar['sidebar'] = kt_option('sidebar', 'full');
+            $sidebar['sidebar'] = kt_option('page_sidebar');
             if($sidebar['sidebar'] == 'left' ){
-                $sidebar['sidebar_area'] = kt_option('sidebar_left', 'primary-widget-area');
+                $sidebar['sidebar_area'] = kt_option('page_sidebar_left', 'primary-widget-area');
             }elseif($sidebar['sidebar'] == 'right'){
-                $sidebar['sidebar_area'] = kt_option('sidebar_right', 'primary-widget-area');
+                $sidebar['sidebar_area'] = kt_option('page_sidebar_right', 'primary-widget-area');
             }
         }elseif($sidebar['sidebar'] == 'left'){
             $sidebar['sidebar_area'] = rwmb_meta('_kt_left_sidebar', array(), $post_id);
         }elseif($sidebar['sidebar'] == 'right'){
             $sidebar['sidebar_area'] = rwmb_meta('_kt_right_sidebar', array(), $post_id);
+        }elseif($sidebar['sidebar'] == 'full'){
+            $sidebar['sidebar'] = '';
         }
 
-
-
         return apply_filters('page_sidebar', $sidebar);
-
     }
 }
 

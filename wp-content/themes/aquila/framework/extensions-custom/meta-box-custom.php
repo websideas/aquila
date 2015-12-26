@@ -19,66 +19,6 @@ function kt_rwmb_image_advanced_select_string($string, $field){
 }
 
 
-if ( ! class_exists( 'RWMB_Sidebars_Field' )){
-	class RWMB_Sidebars_Field extends RWMB_Select_Field{
-
-		/**
-		 * Get field HTML
-		 *
-		 * @param mixed $meta
-		 * @param array $field
-		 *
-		 * @return string
-		 */
-		static function html( $meta, $field )
-		{
-			$field['options'] = self::get_options( $field );
-			return RWMB_Select_Field::html( $meta, $field );
-		}
-        /**
-		 * Normalize parameters for field
-		 *
-		 * @param array $field
-		 *
-		 * @return array
-		 */
-		static function normalize_field( $field )
-		{
-			$field = parent::normalize_field( $field );
-
-            if(!isset($field['default'])){
-                $field['default'] = false;
-            }
-
-			return $field;
-		}
-
-        /**
-		 * Get options
-		 *
-		 * @param array $field
-		 *
-		 * @return array
-		 */
-		static function get_options( $field )
-		{
-			$options = array();
-            if($field['default']){
-                $options['default'] = __('Default area', THEME_LANG);
-            }
-
-            foreach($GLOBALS['wp_registered_sidebars'] as $sidebar){
-                $options[$sidebar['id']] = ucwords( $sidebar['name'] );
-            }
-
-			return $options;
-		}
-
-	}
-} // end RWMB_Sidebars_Field
-
-
-
 if ( ! class_exists( 'RWMB_RevSlider_Field' )){
 	class RWMB_RevSlider_Field extends RWMB_Select_Field{
 

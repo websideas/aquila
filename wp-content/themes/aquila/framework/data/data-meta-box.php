@@ -24,6 +24,12 @@ function kt_register_meta_boxes( $meta_boxes )
         $menus_arr[$menu->term_id] = esc_html( $menu->name );
     }
 
+    $sidebars = array();
+
+    foreach($GLOBALS['wp_registered_sidebars'] as $sidebar){
+        $sidebars[$sidebar['id']] = ucwords( $sidebar['name'] );
+    }
+
     /**
      * For Post Audio
      *
@@ -340,7 +346,6 @@ function kt_register_meta_boxes( $meta_boxes )
                 'id'   => "{$prefix}first_featured",
                 'type' => 'checkbox',
                 'std'  => 1,
-                'visible' => array($prefix . 'frontpage_type','in', array('list', 'medium' )),
                 'tab'  => 'frontpage_layout',
                 'desc' => __( 'Check it if you want the first article is featured.', 'js_composer' ),
             ),
@@ -627,6 +632,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'id'   => "{$prefix}slideshow_posts_style",
                 'type' => 'select',
                 'options' => array(
+                    'normal'        => __('Normal Carousel', THEME_LANG),
                     'big'           => __('Big Carousel', THEME_LANG),
                     'slider'        => __('Posts slider', THEME_LANG),
                     'thumb'         => __('Thumb slider', THEME_LANG),
@@ -737,20 +743,20 @@ function kt_register_meta_boxes( $meta_boxes )
             array(
                 'name' => __('Left sidebar', THEME_LANG),
                 'id' => $prefix . 'left_sidebar',
-                'default' => false,
-                'type' => 'sidebars',
+                'type' => 'select',
                 'tab'  => 'page_layout',
+                'options' => $sidebars,
                 'desc' => __("Select your sidebar.", THEME_LANG),
-                'compare' => array($prefix . 'sidebar','=', 'left' ),
+                'visible' => array($prefix . 'sidebar','=', 'left' ),
             ),
             array(
                 'name' => __('Right sidebar', THEME_LANG),
                 'id' => $prefix . 'right_sidebar',
-                'default' => false,
-                'type' => 'sidebars',
+                'type' => 'select',
                 'tab'  => 'page_layout',
+                'options' => $sidebars,
                 'desc' => __("Select your sidebar.", THEME_LANG),
-                'compare' => array($prefix . 'sidebar','=', 'right' ),
+                'visible' => array($prefix . 'sidebar','=', 'right' ),
             ),
             array(
                 'name' => __('Page top spacing', THEME_LANG),

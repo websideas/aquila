@@ -1844,70 +1844,7 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
 
-            /**
-             * General page
-             *
-             */
-            $this->sections[] = array(
-                'title' => __('Page', THEME_LANG),
-                'desc' => __('General Page Options', THEME_LANG),
-                'icon' => 'icon-Code-Window',
-                'fields' => array(
-                    array(
-                        'id' => 'show_page_header',
-                        'type' => 'switch',
-                        'title' => __('Show Page header', THEME_LANG),
-                        'desc' => __('Show page header or?.', THEME_LANG),
-                        "default" => 1,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
-                    ),
 
-                    array(
-                        'id'       => 'sidebar_left',
-                        'type' => 'select',
-                        'title'    => __( 'Sidebar left area', THEME_LANG ),
-                        'subtitle'     => __( "Please choose default layout", THEME_LANG ),
-                        'data'     => 'sidebars',
-                        'default'  => 'primary-widget-area',
-                        'required' => array('sidebar','equals','left')
-                        //'clear' => false
-                    ),
-
-                    array(
-                        'id'       => 'sidebar_right',
-                        'type'     => 'select',
-                        'title'    => __( 'Sidebar right area', THEME_LANG ),
-                        'subtitle'     => __( "Please choose page layout", THEME_LANG ),
-                        'data'     => 'sidebars',
-                        'default'  => 'primary-widget-area',
-                        'required' => array('sidebar','equals','right')
-                        //'clear' => false
-                    ),
-
-                    array(
-                        'id' => 'show_page_comment',
-                        'type' => 'switch',
-                        'title' => __('Show comments on page ?', THEME_LANG),
-                        'desc' => __('Show or hide the readmore button.', THEME_LANG),
-                        "default" => 0,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
-                    ),
-
-                )
-            );
-
-            
-            /**
-             * General Blog
-             *
-             */
-            $this->sections[] = array(
-                'title' => __('Blog', THEME_LANG),
-                'icon' => 'icon-Pen-2',
-                'desc' => __('General Blog Options', THEME_LANG)
-            );
 
 
             /**
@@ -3478,7 +3415,82 @@ if ( ! class_exists( 'KT_config' ) ) {
 
         public function setSections()
         {
+            /**
+             * General page
+             *
+             */
+            $this->sections[] = array(
+                'title' => __('Page', THEME_LANG),
+                'desc' => __('General Page Options', THEME_LANG),
+                'icon' => 'icon-Code-Window',
+                'fields' => array(
+                    array(
+                        'id' => 'show_page_header',
+                        'type' => 'switch',
+                        'title' => __('Show Page header', THEME_LANG),
+                        'desc' => __('Show page header or?.', THEME_LANG),
+                        "default" => 1,
+                        'on' => __('Enabled', THEME_LANG),
+                        'off' =>__('Disabled', THEME_LANG)
+                    ),
+                    array(
+                        'id'       => 'page_sidebar',
+                        'type'     => 'select',
+                        'title'    => __( 'Sidebar configuration', THEME_LANG ),
+                        'subtitle'     => __( "Please choose archive page ", THEME_LANG ),
+                        'options'  => array(
+                            'full' => __('No sidebars', THEME_LANG),
+                            'left' => __('Left Sidebar', THEME_LANG),
+                            'right' => __('Right Layout', THEME_LANG)
+                        ),
+                        'default'  => 'right',
+                        'clear' => false
+                    ),
+                    array(
+                        'id'       => 'page_sidebar_left',
+                        'type' => 'select',
+                        'title'    => __( 'Sidebar left area', THEME_LANG ),
+                        'subtitle'     => __( "Please choose default layout", THEME_LANG ),
+                        'data'     => 'sidebars',
+                        'default'  => 'primary-widget-area',
+                        'required' => array('page_sidebar','equals','left')
+                        //'clear' => false
+                    ),
 
+                    array(
+                        'id'       => 'page_sidebar_right',
+                        'type'     => 'select',
+                        'title'    => __( 'Sidebar right area', THEME_LANG ),
+                        'subtitle'     => __( "Please choose page layout", THEME_LANG ),
+                        'data'     => 'sidebars',
+                        'default'  => 'primary-widget-area',
+                        'required' => array('page_sidebar','equals','right')
+                        //'clear' => false
+                    ),
+
+                    array(
+                        'id' => 'show_page_comment',
+                        'type' => 'switch',
+                        'title' => __('Show comments on page ?', THEME_LANG),
+                        'desc' => __('Show or hide the readmore button.', THEME_LANG),
+                        "default" => 0,
+                        'on' => __('Enabled', THEME_LANG),
+                        'off' =>__('Disabled', THEME_LANG)
+                    ),
+
+                )
+            );
+
+
+            /**
+             * General Blog
+             *
+             */
+            $this->sections[] = array(
+                'title' => __('Blog', THEME_LANG),
+                'icon' => 'icon-Pen-2',
+                'desc' => __('General Blog Options', THEME_LANG)
+            );
             /**
              *    Footer
              **/
@@ -3486,7 +3498,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'id' => 'footer',
                 'title' => __('Footer', THEME_LANG),
                 'desc' => '',
-                'subsection' => true,
+                //'subsection' => true,
                 'fields' => array(
                     // Footer settings
 
