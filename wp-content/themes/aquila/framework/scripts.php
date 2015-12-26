@@ -230,6 +230,21 @@ function kt_setting_script() {
         <?php } ?>
         <?php
 
+        if(is_page() || is_singular()){
+
+            global $post;
+            $post_id = $post->ID;
+
+            $pageh_spacing = rwmb_meta('_kt_page_top_spacing', array(), $post_id);
+            if($pageh_spacing != ''){
+                echo '#content{padding-top: '.$pageh_spacing.';}';
+            }
+            $pageh_spacing = rwmb_meta('_kt_page_bottom_spacing', array(), $post_id);
+            if($pageh_spacing != ''){
+                echo '#content{padding-bottom:'.$pageh_spacing.';}';
+            }
+        }
+
         /*
             $color_first_loader = kt_option('color_first_loader', $accent);
             echo '.kt_page_loader.style-1 .page_loader_inner{border-color: '.$color_first_loader.';}';
@@ -247,23 +262,7 @@ function kt_setting_script() {
                 }
             }
 
-            if(is_page() || is_singular() || $is_shop){
 
-                global $post;
-                $post_id = $post->ID;
-                if($is_shop){
-                    $post_id = get_option( 'woocommerce_shop_page_id' );
-                }
-
-                $pageh_spacing = rwmb_meta('_kt_page_top_spacing', array(), $post_id);
-                if($pageh_spacing != ''){
-                    echo '#content{padding-top: '.$pageh_spacing.';}';
-                }
-                $pageh_spacing = rwmb_meta('_kt_page_bottom_spacing', array(), $post_id);
-                if($pageh_spacing != ''){
-                    echo '#content{padding-bottom:'.$pageh_spacing.';}';
-                }
-            }
 
             if($navigation_space = kt_option('navigation_space', 30)){
                 echo '#main-navigation > li{margin-left: '.$navigation_space.'px;}#main-navigation > li:first-child {margin-left: 0;}#main-navigation > li:last-child {margin-right: 0;}';

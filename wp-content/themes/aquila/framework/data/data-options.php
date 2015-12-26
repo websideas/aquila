@@ -3396,25 +3396,64 @@ if ( ! class_exists( 'KT_config' ) ) {
 
             // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
             $this->args['share_icons'][] = array(
-                'url' => '#',
+                'url' => 'https://www.facebook.com/kitethemes/',
                 'title' => __('Like us on Facebook', THEME_LANG),
                 'icon' => 'el-icon-facebook'
             );
             $this->args['share_icons'][] = array(
-                'url' => '#',
-                'title' => __('Follow us on Twitter', THEME_LANG),
-                'icon' => 'el-icon-twitter'
+                'url' => 'http://themeforest.net/user/kite-themes',
+                'title' => __('Follow us on Themeforest', THEME_LANG),
+                'icon' => 'fa fa-wordpress'
             );
             $this->args['share_icons'][] = array(
                 'url' => '#',
-                'title' => __('Find us on LinkedIn', THEME_LANG),
-                'icon' => 'el-icon-linkedin'
+                'title' => __('Get Email Newsletter', THEME_LANG),
+                'icon' => 'fa fa-envelope-o'
             );
-
+            $this->args['share_icons'][] = array(
+                'url' => 'http://themeforest.net/user/kite-themes/portfolio',
+                'title' => __('Check out our works', THEME_LANG),
+                'icon' => 'fa fa-briefcase'
+            );
         }
 
         public function setSections()
         {
+            $this->sections[] = array(
+                'id' 	=> 'general',
+                'title'  => __( 'General', THEME_LANG ),
+                'desc'   => __( '', THEME_LANG ),
+                'icon'	=> 'icon_cogs'
+            );
+            $this->sections[] = array(
+                'id' 	=> 'general_layout',
+                'title'  => __( 'General', THEME_LANG ),
+                'desc'   => __( '', THEME_LANG ),
+                'subsection' => true,
+                'fields' => array(
+                    array(
+                        'id'       => 'layout',
+                        'type'     => 'select',
+                        'title'    => __( 'Site boxed mod(?)', THEME_LANG ),
+                        'subtitle'     => __( "Please choose page layout", THEME_LANG ),
+                        'options'  => array(
+                            'full' => __('Full width Layout', THEME_LANG),
+                            'boxed' => __('Boxed Layout', THEME_LANG),
+                        ),
+                        'default'  => 'full',
+                        'clear' => false
+                    ),
+                    array(
+                        'id'       => 'archive_placeholder',
+                        'type'     => 'media',
+                        'url'      => true,
+                        'compiler' => true,
+                        'title'    => __( 'Placeholder', THEME_LANG ),
+                        'subtitle'     => __( "Placeholder for none image", THEME_LANG ),
+                    ),
+                )
+            );
+
             /**
              * General page
              *

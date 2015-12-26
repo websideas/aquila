@@ -176,11 +176,11 @@ function theme_body_classes( $classes ) {
         $classes[] = 'group-blog';
     }
 
-    /*
+
     if( is_page() || is_singular('post')){
         $classes[] = 'layout-'.kt_getlayout($post->ID);
         $classes[] = rwmb_meta('_kt_extra_page_class');
-    }elseif(is_archive()){
+    }/*elseif(is_archive()){
         $classes[] = 'layout-'.kt_option('layout', 'boxed');
     }else{
         $classes[] = 'layout-'.kt_option('layout', 'boxed');
@@ -446,6 +446,52 @@ function kt_navigation_markup_template($template, $class){
 add_action( 'theme_before_content', 'get_page_header', 20 );
 function get_page_header( ){
     global $post;
+    $show_title = true;
+
+    if ( is_front_page() && is_singular('page')){
+        $show_title = rwmb_meta('_kt_page_header', array(), get_option('page_on_front', true));
+        if( !$show_title ){
+            $show_title = kt_option('show_page_header', 1);
+        }
+    }elseif(is_archive()){
+        $show_title = kt_option('archive_page_header', 1);
+    }elseif(is_search()){
+        $show_title = kt_option('search_page_header', 1);
+    }elseif(is_author()){
+        $show_title = kt_option('author_page_header', 1);
+    }elseif(is_404()){
+        $show_title = kt_option('notfound_page_header', 1);
+    }elseif(is_page() || is_singular()){
+        $post_id = $post->ID;
+        $show_title = rwmb_meta('_kt_page_header', array(), $post_id);
+        if( !$show_title ){
+            if(is_page()){
+                $show_title = kt_option('show_page_header', 1);
+            }elseif(is_singular('post')){
+                $show_title = kt_option('single_page_header', 1);
+            }
+        }
+    }
+
+    $show_title = apply_filters( 'kt_show_title', $show_title );
+
+    if($show_title == 'on' || $show_title == 1){
+        $title = kt_get_page_title();
+        $title = sprintf('<h1 class="page-title">%s</h1>', $title);
+        $subtitle = kt_get_page_subtitle();
+        printf(
+            '<div class="page-header"><div class="container"><div class="page-header-content clearfix">%s</div></div></div>',
+            $title.$subtitle
+        );
+    }
+}
+/**
+ * Get page title
+ *
+ * @return mixed|void
+ */
+function kt_get_page_title(){
+    global $post;
     $title = '';
 
     if ( is_front_page() && !is_singular('page') ) {
@@ -474,24 +520,15 @@ function get_page_header( ){
         } elseif ( is_day() ) {
             $title = sprintf( __( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'F j, Y', 'daily archives date format' ) ) );
         }
-    } elseif(is_page()){
+    } elseif(is_page() || is_singular()){
         $post_id = $post->ID;
         $custom_text = rwmb_meta('_kt_page_header_custom', array(), $post_id);
         $title = ($custom_text != '') ? $custom_text : get_the_title($post_id);
     }
 
-    if($title){
-        $title = sprintf('<h1 class="page-title">%s</h1>', $title);
-        $subtitle = kt_get_page_subtitle();
+    return $title;
 
-        printf(
-            '<div class="page-header"><div class="container"><div class="page-header-content clearfix">%s</div></div></div>',
-            $title.$subtitle
-        );
-    }
 }
-
-
 /**
  * Get page tagline
  *

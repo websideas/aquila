@@ -597,7 +597,6 @@ function kt_register_meta_boxes( $meta_boxes )
         ),
         'fields' => array(
 
-
             //Header
             array(
                 'name'    => __( 'Header position', THEME_LANG ),
@@ -611,8 +610,6 @@ function kt_register_meta_boxes( $meta_boxes )
                 'std'  => 'default',
                 'tab'  => 'header',
             ),
-
-
             array(
                 'name' => __('Select Your Slideshow Type', THEME_LANG),
                 'id' => $prefix . 'slideshow_type',
@@ -626,7 +623,6 @@ function kt_register_meta_boxes( $meta_boxes )
                 ),
                 'tab'  => 'header',
             ),
-
             array(
                 'name' => __('Posts Slider style', THEME_LANG),
                 'id'   => "{$prefix}slideshow_posts_style",
@@ -708,24 +704,50 @@ function kt_register_meta_boxes( $meta_boxes )
 
             // Page Header
             array(
+
+                'name' => __( 'Page Header', THEME_LANG ),
+                'id' => $prefix . 'page_header',
+                'desc' => __( "Show Page Header.", THEME_LANG ),
+                'type' => 'select',
+                'options' => array(
+                    ''          => __('Default', THEME_LANG),
+                    'off'	    => __('Hidden', THEME_LANG),
+                    'on'		=> __('Show', THEME_LANG),
+                ),
+                'std'  => '',
+                'tab'  => 'page_header',
+            ),
+            array(
                 'name' => __( 'Page Header Custom Text', THEME_LANG ),
                 'id' => $prefix . 'page_header_custom',
                 'desc' => __( "Enter cstom Text for page header.", THEME_LANG ),
                 'type'  => 'text',
                 'tab'  => 'page_header',
-                'visible' => array($prefix . 'page_header', '!=', '0')
+                'visible' => array($prefix . 'page_header', '!=', 'off')
             ),
-
             array(
                 'name' => __( 'Page header subtitle', THEME_LANG ),
                 'id' => $prefix . 'page_header_subtitle',
                 'desc' => __( "Enter subtitle for page.", THEME_LANG ),
                 'type'  => 'text',
                 'tab'  => 'page_header',
-                'visible' => array($prefix . 'page_header', '!=', '0')
+                'visible' => array($prefix . 'page_header', '!=', 'off')
             ),
 
             //Page layout
+            array(
+                'name' => __('Page layout', THEME_LANG),
+                'id' => $prefix . 'layout',
+                'desc' => __("Please choose this page's layout.", THEME_LANG),
+                'type' => 'select',
+                'options' => array(
+                    'default' => __('Default', THEME_LANG),
+                    'full' => __('Full width Layout', THEME_LANG),
+                    'boxed' => __('Boxed Layout', THEME_LANG),
+                ),
+                'std' => 'default',
+                'tab'  => 'page_layout',
+            ),
             array(
                 'name' => __('Sidebar configuration', THEME_LANG),
                 'id' => $prefix . 'sidebar',

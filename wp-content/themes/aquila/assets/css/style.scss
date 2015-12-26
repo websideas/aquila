@@ -2639,7 +2639,6 @@ ul.style-list{
     #sideshow-inner{
       overflow: hidden;
       position: relative;
-      border-bottom: 2px solid $border-color;
     }
   }
   &.postslider-slider{
@@ -2720,7 +2719,12 @@ ul.style-list{
   }
   .slick-slide{
     position: relative;
+    outline: none;
+    img{
+      margin: 0 auto;
+    }
   }
+
   .slick-arrow{
     z-index: 90;
     @include translate(y);
@@ -2816,7 +2820,7 @@ ul.style-list{
 }
 
 .blog-posts-thumb{
-  margin: 30px -15px 50px;
+  margin: 30px -15px 0;
   .slick-slide{
     margin: 0 15px;
     position: relative;
@@ -3360,9 +3364,6 @@ article.post-item-content{
       }
     }
   }
-
-
-
 
   &.post-item-featured{
     &.format-gallery,
@@ -4082,12 +4083,22 @@ p.logged-in-as{
     }
   }
 }
+
+
+
+
 /* ==============================
    9. Content
    ============================== */
 /*
  * 9.1. content common styles
  */
+
+.page-content{
+  .entry-footer{
+    margin: 20px 0;
+  }
+}
 
 #page_outter{
   overflow: hidden;
