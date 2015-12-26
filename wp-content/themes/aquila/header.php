@@ -36,8 +36,8 @@
             <div id="wrapper-content">
                 <?php do_action( 'theme_before_header' ); ?>
 
-                <?php //get_template_part( 'templates/headers/header',  'mobile'); ?>
-                <?php //get_template_part( 'templates/headers/header',  'mobilenav'); ?>
+                <?php get_template_part( 'templates/headers/header',  'mobile'); ?>
+                <?php get_template_part( 'templates/headers/header',  'mobilenav'); ?>
 
                 <div class="<?php echo esc_attr(apply_filters('theme_header_class', 'header-container header-'.$header_layout.' header-'.$position, $header_layout)); ?>">
                     <header id="header" class="<?php echo apply_filters('theme_header_content_class', 'header-content', $header_layout) ?>">

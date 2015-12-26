@@ -538,80 +538,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                     ),
                 )
             );
-
-
-
-            /**
-             *	Styling Logo
-             **/
-            $this->sections[] = array(
-                'id'			=> 'styling-logo',
-                'title'			=> __( 'Logo', THEME_LANG ),
-                'subsection' => true,
-                'fields'		=> array(
-
-                    array(
-                        'id'             => 'logo_width',
-                        'type'           => 'dimensions',
-                        'units'          => array( 'px'),
-                        'units_extended' => 'true',
-                        'title'          => __( 'Logo width', THEME_LANG ),
-                        'height'         => false,
-                        'default'        => array( 'width'  => 215, 'unit'   => 'px' ),
-                        'output'   => array( '.site-branding .site-logo img' ),
-                    ),
-
-                    array(
-                        'id'       => 'logo_margin_spacing',
-                        'type'     => 'spacing',
-                        'mode'     => 'margin',
-                        'output'   => array( '.site-branding' ),
-                        'units'          => array( 'px' ),
-                        'units_extended' => 'true',
-                        'title'    => __( 'Logo margin spacing Option', THEME_LANG ),
-                        'default'  => array(
-                            'margin-top'    => '40px',
-                            'margin-right'  => '0',
-                            'margin-bottom' => '40px',
-                            'margin-left'   => '0'
-                        )
-                    ),
-
-                    array(
-                        'id'   => 'divide_id',
-                        'type' => 'divide'
-                    ),
-                    array(
-                        'id'             => 'logo_mobile_width',
-                        'type'           => 'dimensions',
-                        'units'          => array( 'px'),
-                        'units_extended' => 'true',
-                        'title'          => __( 'Logo mobile width', THEME_LANG ),
-                        'height'         => false,
-                        'default'        => array(
-                            'width'  => 190,
-                            'unit'   => 'px'
-                        ),
-                        'output'   => array( '#header-content-mobile .site-branding .site-logo img' ),
-                    ),
-                    array(
-                        'id'       => 'logo_mobile_margin_spacing',
-                        'type'     => 'spacing',
-                        'mode'     => 'margin',
-                        'units'          => array( 'px' ),
-                        'units_extended' => 'true',
-                        'title'    => __( 'Logo mobile margin spacing Option', THEME_LANG ),
-                        'default'  => array(
-                            'margin-top'    => '16px',
-                            'margin-right'  => '0px',
-                            'margin-bottom' => '17px',
-                            'margin-left'   => '0px'
-                        ),
-                        'output'   => array( '#header-content-mobile .site-branding' ),
-                    ),
-
-                )
-            );
             
             /**
 			 *	Styling Header
@@ -3558,7 +3484,79 @@ if ( ! class_exists( 'KT_config' ) ) {
                     ),
                 )
             );
+            
+            
+            /**
+             *  Styling Logo
+             **/
+            $this->sections[] = array(
+                'id'            => 'styling-logo',
+                'title'         => __( 'Logo', THEME_LANG ),
+                //'subsection' => true,
+                'fields'        => array(
 
+                    array(
+                        'id'             => 'logo_width',
+                        'type'           => 'dimensions',
+                        'units'          => array( 'px'),
+                        'units_extended' => 'true',
+                        'title'          => __( 'Logo width', THEME_LANG ),
+                        'height'         => false,
+                        'default'        => array( 'width'  => 25, 'unit'   => 'px' ),
+                        'output'   => array( '.site-branding .site-logo img' ),
+                    ),
+
+                    array(
+                        'id'       => 'logo_margin_spacing',
+                        'type'     => 'spacing',
+                        'mode'     => 'margin',
+                        'output'   => array( '.site-branding' ),
+                        'units'          => array( 'px' ),
+                        'units_extended' => 'true',
+                        'title'    => __( 'Logo margin spacing Option', THEME_LANG ),
+                        'default'  => array(
+                            'margin-top'    => '40px',
+                            'margin-right'  => '0',
+                            'margin-bottom' => '40px',
+                            'margin-left'   => '0'
+                        )
+                    ),
+
+                    array(
+                        'id'   => 'divide_id',
+                        'type' => 'divide'
+                    ),
+                    array(
+                        'id'             => 'logo_mobile_width',
+                        'type'           => 'dimensions',
+                        'units'          => array( 'px'),
+                        'units_extended' => 'true',
+                        'title'          => __( 'Logo mobile width', THEME_LANG ),
+                        'height'         => false,
+                        'default'        => array(
+                            'width'  => 190,
+                            'unit'   => 'px'
+                        ),
+                        'output'   => array( '#header-content-mobile .site-branding .site-logo img' ),
+                    ),
+                    array(
+                        'id'       => 'logo_mobile_margin_spacing',
+                        'type'     => 'spacing',
+                        'mode'     => 'margin',
+                        'units'          => array( 'px' ),
+                        'units_extended' => 'true',
+                        'title'    => __( 'Logo mobile margin spacing Option', THEME_LANG ),
+                        'default'  => array(
+                            'margin-top'    => '16px',
+                            'margin-right'  => '0px',
+                            'margin-bottom' => '17px',
+                            'margin-left'   => '0px'
+                        ),
+                        'output'   => array( '#header-content-mobile .site-branding' ),
+                    ),
+
+                )
+            );
 
             /**
              *	Styling Footer
