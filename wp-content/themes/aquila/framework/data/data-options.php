@@ -1389,114 +1389,6 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
             
             /**
-			 *	Typography footer
-			 **/
-			$this->sections[] = array(
-				'id'			=> 'typography_footer',
-				'title'			=> __( 'Footer', THEME_LANG ),
-				'desc'			=> '',
-                'subsection' => true,
-				'fields'		=> array(
-                    array(
-                        'id'       => 'typography_footer_top_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Typography Footer top settings', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id'       => 'typography_footer_top',
-                        'type'     => 'typography',
-                        'title'    => __( 'Footer top', THEME_LANG ),
-                        'subtitle' => __( 'Specify the footer top font properties.', THEME_LANG ),
-                        'google'   => true,
-                        'text-align'      => false,
-                        'output'      => array( '#footer-top' ),
-                        'default'  => array(
-                            'color'       => '',
-                            'font-size'   => '',
-                            'font-weight' => '',
-                            'line-height' => ''
-                        ),
-                    ),
-                    array(
-                        'id'       => 'typography_footer_widgets_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Typography Footer widgets settings', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id'       => 'typography_footer_widgets',
-                        'type'     => 'typography',
-                        'title'    => __( 'Footer widgets', THEME_LANG ),
-                        'subtitle' => __( 'Specify the footer widgets font properties.', THEME_LANG ),
-                        'google'   => true,
-                        'text-align'      => false,
-                        'output'      => array( '#footer-area' ),
-                        'default'  => array(
-                            'color'       => '#707070',
-                            'font-size'   => '',
-                            'font-weight' => '',
-                            'line-height' => ''
-                        ),
-                    ),
-                    array(
-                        'id'       => 'typography_footer_widgets_title',
-                        'type'     => 'typography',
-                        'title'    => __( 'Footer widgets title', THEME_LANG ),
-                        'subtitle' => __( 'Specify the footer widgets title font properties.', THEME_LANG ),
-                        'letter-spacing'  => true,
-                        'text-align'      => true,
-                        'text-transform' => true,
-                        'output'      => array( '#footer-area h3.widget-title' ),
-                        'default'  => array( ),
-                    ),
-                    array(
-                        'id'       => 'typography_footer_widgets_link',
-                        'type'     => 'link_color',
-                        'title'    => __( 'Footer widgets Links Color', THEME_LANG ),
-                        'output'      => array( '#footer-area a' ),
-                        'default'  => array(
-                            'regular' => '#707070',
-                            'hover'   => '#ffffff',
-                            'active'  => '#ffffff'
-                        )
-                    ),
-
-                    array(
-                        'id'       => 'typography_footer_copyright_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Typography Footer copyright settings', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id'       => 'typography_footer_copyright_link',
-                        'type'     => 'link_color',
-                        'title'    => __( 'Footer Copyright Links Color', THEME_LANG ),
-                        'output'      => array( '#footer-copyright a' ),
-                        'default'  => array(
-                            'regular' => '#707070',
-                            'hover'   => '#ffffff',
-                            'active'  => '#ffffff'
-                        )
-                    ),
-                    array(
-                        'id'       => 'typography_footer_copyright',
-                        'type'     => 'typography',
-                        'title'    => __( 'Footer copyright', THEME_LANG ),
-                        'subtitle' => __( 'Specify the footer font properties.', THEME_LANG ),
-                        'text-align'      => false,
-                        'output'      => array( '#footer-copyright' ),
-                        'default'  => array(
-                            'color'       => '',
-                            'font-size'   => '',
-                            'font-weight' => '',
-                            'line-height' => ''
-                        ),
-                    ),
-
-                )
-            );
-            /**
 			 *	Typography sidebar
 			 **/
 			$this->sections[] = array(
@@ -3853,6 +3745,147 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => __( 'Footer socials space between item', THEME_LANG ),
                         'default'  => '18'
                     ),
+                )
+            );
+
+            /**
+             *  Typography footer
+             **/
+            $this->sections[] = array(
+                'id'            => 'typography_footer',
+                'title'         => __( 'Footer', THEME_LANG ),
+                'desc'          => '',
+                //'subsection'    => true,
+                'fields'        => array(
+                    array(
+                        'id'       => 'typography_footer_top_heading',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Typography Footer top settings', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id'       => 'typography_footer_top',
+                        'type'     => 'typography',
+                        'title'    => __( 'Footer top', THEME_LANG ),
+                        'subtitle' => __( 'Specify the footer top font properties.', THEME_LANG ),
+                        'google'   => true,
+                        'text-align'      => false,
+                        'output'      => array( '#footer-top' ),
+                        'default'  => array(
+                            'color'       => '',
+                            'font-size'   => '',
+                            'font-weight' => '',
+                            'line-height' => ''
+                        ),
+                    ),
+                    array(
+                        'id'       => 'typography_footer_widgets_heading',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Typography Footer widgets settings', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id'       => 'typography_footer_widgets',
+                        'type'     => 'typography',
+                        'title'    => __( 'Footer widgets', THEME_LANG ),
+                        'subtitle' => __( 'Specify the footer widgets font properties.', THEME_LANG ),
+                        'google'   => true,
+                        'text-align'      => false,
+                        'output'      => array( '#footer-area' ),
+                        'default'  => array(
+                            'color'       => '#999999',
+                            'font-size'   => '',
+                            'font-weight' => '',
+                            'line-height' => ''
+                        ),
+                    ),
+                    array(
+                        'id'       => 'typography_footer_widgets_title',
+                        'type'     => 'typography',
+                        'title'    => __( 'Footer widgets title', THEME_LANG ),
+                        'subtitle' => __( 'Specify the footer widgets title font properties.', THEME_LANG ),
+                        'letter-spacing'  => true,
+                        'text-align'      => true,
+                        'text-transform' => true,
+                        'output'      => array( '#footer-area h3.widget-title' ),
+                        'default'  => array( ),
+                    ),
+                    array(
+                        'id'       => 'typography_footer_widgets_link',
+                        'type'     => 'link_color',
+                        'title'    => __( 'Footer widgets Links Color', THEME_LANG ),
+                        'output'      => array( '#footer-area a' ),
+                        'default'  => array(
+                            'regular' => '#ffffff',
+                            'hover'   => '#22dcce',
+                            'active'  => '#22dcce'
+                        )
+                    ),
+
+                    array(
+                        'id'       => 'typography_footer_copyright_heading',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Typography Footer Bottom settings', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id'       => 'typography_footer_bottom_link',
+                        'type'     => 'link_color',
+                        'title'    => __( 'Footer Bottom Links Color', THEME_LANG ),
+                        'output'      => array( '#footer-bottom a', '#footer-bottom button' ),
+                        'default'  => array(
+                            'regular' => '#ffffff',
+                            'hover'   => '#22dcce',
+                            'active'  => '#22dcce'
+                        )
+                    ),
+                    array(
+                        'id'       => 'typography_footer_bottom',
+                        'type'     => 'typography',
+                        'title'    => __( 'Footer Bottom', THEME_LANG ),
+                        'subtitle' => __( 'Specify the footer font properties.', THEME_LANG ),
+                        'text-align'      => false,
+                        'output'      => array( '#footer-bottom' ),
+                        'default'  => array(
+                            'color'       => '#999999',
+                            'font-size'   => '',
+                            'font-weight' => '',
+                            'line-height' => ''
+                        ),
+                    ),
+
+                    array(
+                        'id'       => 'typography_footer_copyright_heading',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Typography Footer copyright settings', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id'       => 'typography_footer_copyright_link',
+                        'type'     => 'link_color',
+                        'title'    => __( 'Footer Copyright Links Color', THEME_LANG ),
+                        'output'      => array( '#footer-copyright a' ),
+                        'default'  => array(
+                            'regular' => '#999999',
+                            'hover'   => '#ffffff',
+                            'active'  => '#ffffff'
+                        )
+                    ),
+                    array(
+                        'id'       => 'typography_footer_copyright',
+                        'type'     => 'typography',
+                        'title'    => __( 'Footer copyright', THEME_LANG ),
+                        'subtitle' => __( 'Specify the footer font properties.', THEME_LANG ),
+                        'text-align'      => false,
+                        'output'      => array( '#footer-copyright' ),
+                        'default'  => array(
+                            'color'       => '',
+                            'font-size'   => '',
+                            'font-weight' => '',
+                            'line-height' => ''
+                        ),
+                    ),
+
                 )
             );
 

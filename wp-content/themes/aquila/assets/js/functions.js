@@ -54,11 +54,11 @@
         init_MobileMenu();
         init_masonry();
         init_kt_image();
-        init_SearchFull();
         init_kt_animation();
         init_loadmore();
         init_VCLightBox();
         //init_smooth_scrolling();
+        init_searchform();
 
         kt_likepost();
 
@@ -301,16 +301,6 @@
                 $(this).parallax("50%", 0.1);
             });
         }
-    }
-
-    /* ---------------------------------------------
-     Search
-     --------------------------------------------- */
-    function init_SearchFull(){
-        $('.mini-search a').on('click',function(e){
-            e.preventDefault();
-            console.log('call');
-        });
     }
 
     /* ---------------------------------------------
@@ -804,6 +794,25 @@
             //}
         }
     }
+
+    /**==============================
+    *** Search Form
+    ===============================**/
+
+    function init_searchform(){
+        $('body').on('click','#main-nav-tool li.mini-search a',function(e){
+            e.preventDefault();
+            $(this).next().slideToggle();
+        });
+
+        $('body').on('click',function(e){
+            var target = $(e.target);
+            if(!target.is("#main-nav-tool li .searchform input, #main-nav-tool li.mini-search i")) {
+                $('#main-nav-tool li .searchform').slideUp();
+            }
+        });
+    }
+
 
 })(jQuery); // End of use strict
 

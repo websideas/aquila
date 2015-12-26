@@ -22,11 +22,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="header-layout1.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="header-layout1.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/templates/headers/header-layout1.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6315789">
+            <state vertical-scroll-proportion="-22.5">
               <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.55438596">
+              <caret line="2817" column="3" selection-start-line="2817" selection-start-column="3" selection-end-line="2817" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -86,8 +96,8 @@
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/data/data-meta-box.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/data/data-options.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.scss" />
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/templates/headers/header-layout1.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.scss" />
       </list>
     </option>
   </component>
@@ -782,7 +792,7 @@
         <state vertical-scroll-proportion="0.3152174">
           <caret line="180" column="37" selection-start-line="180" selection-start-column="37" selection-end-line="180" selection-end-column="37" />
           <folding>
-            <marker date="1451099139000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451101821000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -824,30 +834,30 @@
         <state vertical-scroll-proportion="0.57894737">
           <caret line="3394" column="14" selection-start-line="3394" selection-start-column="14" selection-end-line="3394" selection-end-column="14" />
           <folding>
-            <marker date="1451100088000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451100088000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451100088000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451100088000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451100088000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451100088000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451100088000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451100088000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451101821000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451101821000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451101821000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451101821000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451101821000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451101821000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451101821000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451101821000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35144928">
-          <caret line="2703" column="5" selection-start-line="2703" selection-start-column="5" selection-end-line="2703" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/templates/headers/header-layout1.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6315789">
+        <state vertical-scroll-proportion="-22.5">
           <caret line="36" column="10" selection-start-line="36" selection-start-column="10" selection-end-line="36" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55438596">
+          <caret line="2817" column="3" selection-start-line="2817" selection-start-column="3" selection-end-line="2817" selection-end-column="3" />
           <folding />
         </state>
       </provider>
