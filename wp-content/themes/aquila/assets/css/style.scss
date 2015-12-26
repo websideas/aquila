@@ -2609,6 +2609,10 @@ ul.style-list{
     padding: 98px;
     background: $gray-bg;
   }
+  &.slideshow_page-graybg{
+    padding: 120px;
+    background: $gray-bg;
+  }
   &.postslider-big{
     #sideshow-inner{
       max-width: 1490px;
@@ -3525,6 +3529,12 @@ article.post-item-content{
   }
 }
 
+.page-postslider-thumb{
+  .first-featured{
+    border-top: 2px solid $border-color;
+    padding-top: 50px;
+  }
+}
 
 
 /* ==============================

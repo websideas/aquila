@@ -1,6 +1,9 @@
 <?php
-$layout = 1;
+
+$post_id = get_the_ID();
+$layout = get_post_meta($post_id, '_kt_blog_post_layout', true);
 $imagesize = 'full';
+
 ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class( 'post-single' ); ?>>
     <?php

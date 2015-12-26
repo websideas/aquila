@@ -254,6 +254,9 @@ div#post-body .rwmb-select-advanced{
     font-size: 12px;
 }
 
+div#post-body .rwmb-revSlider,
+div#post-body .rwmb-layerslider,
+div#post-body .rwmb-post,
 div#post-body .rwmb-select{
     -moz-appearance: none;
     background: url("../images/selectbox-arrow.png") no-repeat scroll right center rgba(0, 0, 0, 0);

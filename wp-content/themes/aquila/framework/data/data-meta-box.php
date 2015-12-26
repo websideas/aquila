@@ -227,7 +227,7 @@ function kt_register_meta_boxes( $meta_boxes )
         'pages' => array('page'),
         'context' => 'normal',
         'show'   => array(
-            'template' => array( 'page-templates/front-page.php'),
+            'template' => array( 'front-page.php'),
         ),
         'tabs'      => array(
             'frontpage_general'  => array(
@@ -425,390 +425,411 @@ function kt_register_meta_boxes( $meta_boxes )
     );
 
 
+
+    $tabs = array(
+        'page_layout' => array(
+            'label' => __( 'Layout', THEME_LANG ),
+            'icon'  => 'fa fa-columns',
+        )
+    );
+
+    $fields = array(
+        // Categories
+        array(
+            'name'    => __( 'Specific Categories', THEME_LANG ),
+            'id'      => "{$prefix}slideshow_categories",
+            'type'    => 'taxonomy_advanced',
+            'multiple'=> true,
+            'options' => array(
+                'taxonomy' => 'category',
+                'type'     => 'select_advanced',
+                'args'     => array()
+            ),
+            'tab'  => 'header',
+            'visible' => array($prefix . 'slideshow_source', '=', 'categories')
+        ),
+
+        // Authors
+        array(
+            'name'    => __( 'Specific Categories', THEME_LANG ),
+            'id'      => "{$prefix}slideshow_authors",
+            'type'    => 'user',
+            'multiple'=> true,
+            'options' => array(
+                'type'     => 'select_advanced'
+            ),
+            'tab'  => 'header',
+            'visible' => array($prefix . 'slideshow_source', '=', 'authors')
+        ),
+
+
+        array(
+            'name' => __('Select Revolution Slider', THEME_LANG),
+            'id' => $prefix . 'rev_slider',
+            'default' => true,
+            'type' => 'revSlider',
+            'tab'  => 'header',
+            'desc' => __('Select the Revolution Slider.', THEME_LANG),
+            'visible' => array($prefix . 'slideshow_type', '=', 'revslider')
+        ),
+        array(
+            'name' => __('Select Layer Slider', THEME_LANG),
+            'id' => $prefix . 'layerslider',
+            'default' => true,
+            'type' => 'layerslider',
+            'tab'  => 'header',
+            'desc' => __('Select the Layer Slider.', THEME_LANG),
+            'visible' => array($prefix . 'slideshow_type', '=', 'layerslider')
+        ),
+
+
+
+        //Page layout
+        array(
+            'name' => __('Page layout', THEME_LANG),
+            'id' => $prefix . 'layout',
+            'desc' => __("Please choose this page's layout.", THEME_LANG),
+            'type' => 'select',
+            'options' => array(
+                'default' => __('Default', THEME_LANG),
+                'full' => __('Full width Layout', THEME_LANG),
+                'boxed' => __('Boxed Layout', THEME_LANG),
+            ),
+            'std' => 'default',
+            'tab'  => 'page_layout',
+        ),
+        array(
+            'name' => __('Sidebar configuration', THEME_LANG),
+            'id' => $prefix . 'sidebar',
+            'desc' => __("Choose the sidebar configuration for the detail page.<br/><b>Note: Cart and checkout, My account page always use no sidebars.</b>", THEME_LANG),
+            'type' => 'select',
+            'options' => array(
+                'default' => __('Default', THEME_LANG),
+                'full' => __('No sidebars', THEME_LANG),
+                'left' => __('Left Sidebar', THEME_LANG),
+                'right' => __('Right Sidebar', THEME_LANG)
+            ),
+            'std' => 'default',
+            'tab'  => 'page_layout',
+        ),
+        array(
+            'name' => __('Left sidebar', THEME_LANG),
+            'id' => $prefix . 'left_sidebar',
+            'type' => 'select',
+            'tab'  => 'page_layout',
+            'options' => $sidebars,
+            'desc' => __("Select your sidebar.", THEME_LANG),
+            'visible' => array($prefix . 'sidebar','=', 'left' ),
+        ),
+        array(
+            'name' => __('Right sidebar', THEME_LANG),
+            'id' => $prefix . 'right_sidebar',
+            'type' => 'select',
+            'tab'  => 'page_layout',
+            'options' => $sidebars,
+            'desc' => __("Select your sidebar.", THEME_LANG),
+            'visible' => array($prefix . 'sidebar','=', 'right' ),
+        ),
+        array(
+            'name' => __('Page top spacing', THEME_LANG),
+            'id' => $prefix . 'page_top_spacing',
+            'desc' => __("Enter your page top spacing (Example: 100px).", THEME_LANG ),
+            'type'  => 'text',
+            'tab'  => 'page_layout',
+        ),
+        array(
+            'name' => __('Page bottom spacing', THEME_LANG),
+            'id' => $prefix . 'page_bottom_spacing',
+            'desc' => __("Enter your page bottom spacing (Example: 100px).", THEME_LANG ),
+            'type'  => 'text',
+            'tab'  => 'page_layout',
+        ),
+        array(
+            'name' => __('Extra page class', THEME_LANG),
+            'id' => $prefix . 'extra_page_class',
+            'desc' => __('If you wish to add extra classes to the body class of the page (for custom css use), then please add the class(es) here.', THEME_LANG ),
+            'type'  => 'text',
+            'tab'  => 'page_layout',
+        )
+    );
+
+
+
+    $tabs_page = array(
+        'header'  => array(
+            'label' => __( 'Header', THEME_LANG ),
+            'icon'  => 'fa fa-desktop',
+        ),
+        'page_header' => array(
+            'label' => __( 'Page Header', THEME_LANG ),
+            'icon'  => 'fa fa-bars',
+        )
+    );
+
+    $fields_page = array(
+        // Page Header
+        array(
+
+            'name' => __( 'Page Header', THEME_LANG ),
+            'id' => $prefix . 'page_header',
+            'desc' => __( "Show Page Header.", THEME_LANG ),
+            'type' => 'select',
+            'options' => array(
+                ''          => __('Default', THEME_LANG),
+                'off'	    => __('Hidden', THEME_LANG),
+                'on'		=> __('Show', THEME_LANG),
+            ),
+            'std'  => '',
+            'tab'  => 'page_header',
+        ),
+        array(
+            'name' => __( 'Page Header Custom Text', THEME_LANG ),
+            'id' => $prefix . 'page_header_custom',
+            'desc' => __( "Enter cstom Text for page header.", THEME_LANG ),
+            'type'  => 'text',
+            'tab'  => 'page_header',
+            'visible' => array($prefix . 'page_header', '!=', 'off')
+        ),
+        array(
+            'name' => __( 'Page header subtitle', THEME_LANG ),
+            'id' => $prefix . 'page_header_subtitle',
+            'desc' => __( "Enter subtitle for page.", THEME_LANG ),
+            'type'  => 'text',
+            'tab'  => 'page_header',
+            'visible' => array($prefix . 'page_header', '!=', 'off')
+        ),
+
+
+        array(
+            'name'    => __( 'Header position', THEME_LANG ),
+            'type'     => 'select',
+            'id'       => $prefix.'header_position',
+            'desc'     => __( "Please choose header position", THEME_LANG ),
+            'options'  => array(
+                'default' => __('Default', THEME_LANG),
+                'below' => __('Below Slideshow', THEME_LANG),
+            ),
+            'std'  => 'default',
+            'tab'  => 'header',
+        ),
+        array(
+            'name' => __('Select Your Slideshow Type', THEME_LANG),
+            'id' => $prefix . 'slideshow_type',
+            'desc' => __("You can select the slideshow type using this option.", THEME_LANG),
+            'type' => 'select',
+            'options' => array(
+                '' => __('Select Option', THEME_LANG),
+                'postslider' => __('Post Slider', THEME_LANG),
+                'revslider' => __('Revolution Slider', THEME_LANG),
+                'layerslider' => __('Layer Slider', THEME_LANG),
+                'page' => __('From Page content', THEME_LANG),
+            ),
+            'tab'  => 'header',
+        ),
+        array(
+            'name'        => __( 'Page', THEME_LANG ),
+            'id'          => "{$prefix}slideshow_page",
+            'type'        => 'post',
+            'post_type'   => 'page',
+            'field_type'  => 'select',
+            'title'    => __( 'Pages Select Option', THEME_LANG ),
+            'query_args'  => array(
+                'post_status'    => 'publish',
+                'posts_per_page' => - 1,
+            ),
+            'tab'  => 'header',
+            'visible' => array($prefix . 'slideshow_type', '=', 'page')
+        ),
+        array(
+            'name' => __('Posts Slider style', THEME_LANG),
+            'id'   => "{$prefix}slideshow_posts_style",
+            'type' => 'select',
+            'options' => array(
+                'normal'        => __('Normal Carousel', THEME_LANG),
+                'big'           => __('Big Carousel', THEME_LANG),
+                'slider'        => __('Posts slider', THEME_LANG),
+                'thumb'         => __('Thumb slider', THEME_LANG),
+                'carousel'      => __('Small Carousel', THEME_LANG),
+            ),
+            'std'  => '',
+            'tab'  => 'header',
+            'visible' => array($prefix . 'slideshow_type', '=', 'postslider')
+        ),
+
+        array(
+            'name' => __('Data source', THEME_LANG),
+            'id'   => "{$prefix}slideshow_source",
+            'type' => 'select',
+            'options' => array(
+                ''              => __('All', THEME_LANG),
+                'categories'    => __('Specific Categories', THEME_LANG),
+                'authors'		=> __('Specific Authors', THEME_LANG),
+            ),
+            'std'  => '',
+            'tab'  => 'header',
+            'visible' => array($prefix . 'slideshow_type', '=', 'postslider')
+        )
+    );
+
+
+
     /**
-     * For Layout option for post
+     * For Page Options
+     *
+     */
+    $meta_boxes[] = array(
+        'id'        => 'page_meta_boxes',
+        'title'     => __('Page Options', THEME_LANG),
+        'pages'     => array( 'page' ),
+        'tabs'      => array_merge( $tabs,$tabs_page),
+        'fields'    => array_merge( $fields,$fields_page),
+    );
+
+
+
+
+    $tabs_post = array(
+        'post_general'  => array(
+            'label' => __( 'General', THEME_LANG ),
+            'icon'  => 'fa fa-bars',
+        ),
+        'post_displays'  => array(
+            'label' => __( 'Displays', THEME_LANG ),
+            'icon'  => 'dashicons-before dashicons-art',
+        ),
+    );
+
+    $fields_post = array(
+        //General
+        array(
+            'name' => __('Featured Post', THEME_LANG),
+            'id'   => "{$prefix}post_featured",
+            'type' => 'select',
+            'options' => array(
+                'no'		=> __('No', THEME_LANG),
+                'yes'		=> __('Yes', THEME_LANG),
+            ),
+            'std'  => 'no',
+            'tab'  => 'post_general',
+            'desc' => __('Make this post featured', THEME_LANG)
+        ),
+
+        array(
+            'name' => __('Detail Media', THEME_LANG),
+            'id'   => "{$prefix}post_detail_media",
+            'type' => 'select',
+            'options' => array(
+                0    => __('Default', THEME_LANG),
+                1		=> __('Hidden', THEME_LANG),
+                2		=> __('Post format', THEME_LANG),
+                3       => __('Thumbnail content', THEME_LANG)
+            ),
+            'std'  => 0,
+            'tab'  => 'post_general',
+        ),
+
+
+        array(
+            'type' => 'select',
+            'name' => __('Post layouts', THEME_LANG),
+            'desc' => __('Select the your post layout.', THEME_LANG),
+            'id'   => "{$prefix}blog_post_layout",
+            'options' => array(
+                0    => __('Default', THEME_LANG),
+                1 => __( 'Layout 1', THEME_LANG ),
+                2 => __( 'layout 2', THEME_LANG ),
+            ),
+            'std' => '',
+            'tab'  => 'post_general',
+        ),
+
+        array(
+            'type' => 'select',
+            'name' => __('Post image size', THEME_LANG),
+            'desc' => __('Select the format position.', THEME_LANG),
+            'id'   => "{$prefix}blog_image_size",
+            'options' => array_merge(array('' => __('Default', THEME_LANG)), $image_sizes),
+            'std' => '',
+            'tab'  => 'post_general',
+        ),
+        array(
+            'name' => __('Meta info', THEME_LANG),
+            'id'   => "{$prefix}meta_info",
+            'type' => 'select',
+            'options' => array(
+                ''    => __('Default', THEME_LANG),
+                'no'		=> __('Hidden', THEME_LANG),
+                'yes'		=> __('Show', THEME_LANG),
+            ),
+            'std'  => -1,
+            'tab'  => 'post_displays',
+            'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
+        ),
+        array(
+            'name' => __('Previous & next buttons', THEME_LANG),
+            'id'   => "{$prefix}prev_next",
+            'type' => 'select',
+            'options' => array(
+                ''    => __('Default', THEME_LANG),
+                'no'		=> __('Hidden', THEME_LANG),
+                'yes'		=> __('Show', THEME_LANG),
+            ),
+            'std'  => '',
+            'tab'  => 'post_displays',
+            'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
+        ),
+        array(
+            'name' => __('Author info', THEME_LANG),
+            'id'   => "{$prefix}author_info",
+            'type' => 'select',
+            'options' => array(
+                ''    => __('Default', THEME_LANG),
+                'no'		=> __('Hidden', THEME_LANG),
+                'yes'		=> __('Show', THEME_LANG),
+            ),
+            'std'  => '',
+            'tab'  => 'post_displays',
+            'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
+        ),
+        array(
+            'name' => __('Social sharing', THEME_LANG),
+            'id'   => "{$prefix}social_sharing",
+            'type' => 'select',
+            'options' => array(
+                ''    => __('Default', THEME_LANG),
+                'no'		=> __('Hidden', THEME_LANG),
+                'yes'		=> __('Show', THEME_LANG),
+            ),
+            'std'  => '',
+            'tab'  => 'post_displays',
+            'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
+        ),
+        array(
+            'name' => __('Related articles', THEME_LANG),
+            'id'   => "{$prefix}related_acticles",
+            'type' => 'select',
+            'options' => array(
+                ''      => __('Default', THEME_LANG),
+                'no'    => __('Hidden', THEME_LANG),
+                'yes'	=> __('Show', THEME_LANG),
+            ),
+            'std'  => '',
+            'tab'  => 'post_displays',
+            'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
+        )
+    );
+
+    /**
+     * For Posts Options
      *
      */
     $meta_boxes[] = array(
         'id' => 'post_meta_boxes',
         'title' => 'Post Options',
         'pages' => array('post'),
-        'tabs'      => array(
-            'post_general'  => array(
-                'label' => __( 'General', THEME_LANG ),
-                'icon'  => 'fa fa-bars',
-            ),
-            'post_displays'  => array(
-                'label' => __( 'Displays', THEME_LANG ),
-                'icon'  => 'fa fa-bars',
-            ),
-
-        ),
-        'fields' => array(
-            //General
-
-            array(
-                'name' => __('Featured Post', THEME_LANG),
-                'id'   => "{$prefix}post_featured",
-                'type' => 'select',
-                'options' => array(
-                    'no'		=> __('No', THEME_LANG),
-                    'yes'		=> __('Yes', THEME_LANG),
-                ),
-                'std'  => 'no',
-                'tab'  => 'post_general',
-                'desc' => __('Make this post featured', THEME_LANG)
-            ),
-
-            array(
-                'name' => __('Detail Media', THEME_LANG),
-                'id'   => "{$prefix}post_detail_media",
-                'type' => 'select',
-                'options' => array(
-                    0    => __('Default', THEME_LANG),
-                    1		=> __('Hidden', THEME_LANG),
-                    2		=> __('Post format', THEME_LANG),
-                    3       => __('Thumbnail content', THEME_LANG)
-                ),
-                'std'  => 0,
-                'tab'  => 'post_general',
-            ),
-
-
-            array(
-                'type' => 'select',
-                'name' => __('Post layouts', THEME_LANG),
-                'desc' => __('Select the your post layout.', THEME_LANG),
-                'id'   => "{$prefix}blog_post_layout",
-                'options' => array(
-                    0    => __('Default', THEME_LANG),
-                    1 => __( 'Layout 1', THEME_LANG ),
-                    2 => __( 'layout 2', THEME_LANG ),
-                ),
-                'std' => '',
-                'tab'  => 'post_general',
-            ),
-
-            array(
-                'type' => 'select',
-                'name' => __('Post image size', THEME_LANG),
-                'desc' => __('Select the format position.', THEME_LANG),
-                'id'   => "{$prefix}blog_image_size",
-                'options' => array_merge(array('' => __('Default', THEME_LANG)), $image_sizes),
-                'std' => '',
-                'tab'  => 'post_general',
-            ),
-            array(
-                'name' => __('Meta info', THEME_LANG),
-                'id'   => "{$prefix}meta_info",
-                'type' => 'select',
-                'options' => array(
-                    ''    => __('Default', THEME_LANG),
-                    'no'		=> __('Hidden', THEME_LANG),
-                    'yes'		=> __('Show', THEME_LANG),
-                ),
-                'std'  => -1,
-                'tab'  => 'post_displays',
-                'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
-            ),
-            array(
-                'name' => __('Previous & next buttons', THEME_LANG),
-                'id'   => "{$prefix}prev_next",
-                'type' => 'select',
-                'options' => array(
-                    ''    => __('Default', THEME_LANG),
-                    'no'		=> __('Hidden', THEME_LANG),
-                    'yes'		=> __('Show', THEME_LANG),
-                ),
-                'std'  => '',
-                'tab'  => 'post_displays',
-                'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
-            ),
-            array(
-                'name' => __('Author info', THEME_LANG),
-                'id'   => "{$prefix}author_info",
-                'type' => 'select',
-                'options' => array(
-                    ''    => __('Default', THEME_LANG),
-                    'no'		=> __('Hidden', THEME_LANG),
-                    'yes'		=> __('Show', THEME_LANG),
-                ),
-                'std'  => '',
-                'tab'  => 'post_displays',
-                'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
-            ),
-            array(
-                'name' => __('Social sharing', THEME_LANG),
-                'id'   => "{$prefix}social_sharing",
-                'type' => 'select',
-                'options' => array(
-                    ''    => __('Default', THEME_LANG),
-                    'no'		=> __('Hidden', THEME_LANG),
-                    'yes'		=> __('Show', THEME_LANG),
-                ),
-                'std'  => '',
-                'tab'  => 'post_displays',
-                'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
-            ),
-            array(
-                'name' => __('Related articles', THEME_LANG),
-                'id'   => "{$prefix}related_acticles",
-                'type' => 'select',
-                'options' => array(
-                    ''      => __('Default', THEME_LANG),
-                    'no'    => __('Hidden', THEME_LANG),
-                    'yes'	=> __('Show', THEME_LANG),
-                ),
-                'std'  => '',
-                'tab'  => 'post_displays',
-                'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
-            ),
-
-
-
-        )
+        'tabs'      => array_merge( $tabs_post, $tabs ),
+        'fields'    => array_merge( $fields_post, $fields),
     );
-
-
-
-
-
-    /**
-     * For Layout option
-     *
-     */
-    $meta_boxes[] = array(
-        'id' => 'page_meta_boxes',
-        'title' => 'Page Options',
-        'pages' => array( 'page', 'post' ),
-        'tabs'      => array(
-            'header'  => array(
-                'label' => __( 'Header', THEME_LANG ),
-                'icon'  => 'fa fa-desktop',
-            ),
-            'page_header' => array(
-                'label' => __( 'Page Header', THEME_LANG ),
-                'icon'  => 'fa fa-bars',
-            ),
-            'page_layout' => array(
-                'label' => __( 'Page layout', THEME_LANG ),
-                'icon'  => 'fa fa-columns',
-            )
-        ),
-        'fields' => array(
-
-            //Header
-            array(
-                'name'    => __( 'Header position', THEME_LANG ),
-                'type'     => 'select',
-                'id'       => $prefix.'header_position',
-                'desc'     => __( "Please choose header position", THEME_LANG ),
-                'options'  => array(
-                    'default' => __('Default', THEME_LANG),
-                    'below' => __('Below Slideshow', THEME_LANG),
-                ),
-                'std'  => 'default',
-                'tab'  => 'header',
-            ),
-            array(
-                'name' => __('Select Your Slideshow Type', THEME_LANG),
-                'id' => $prefix . 'slideshow_type',
-                'desc' => __("You can select the slideshow type using this option.", THEME_LANG),
-                'type' => 'select',
-                'options' => array(
-                    '' => __('Select Option', THEME_LANG),
-                    'postslider' => __('Post Slider', THEME_LANG),
-                    'revslider' => __('Revolution Slider', THEME_LANG),
-                    'layerslider' => __('Layer Slider', THEME_LANG),
-                ),
-                'tab'  => 'header',
-            ),
-            array(
-                'name' => __('Posts Slider style', THEME_LANG),
-                'id'   => "{$prefix}slideshow_posts_style",
-                'type' => 'select',
-                'options' => array(
-                    'normal'        => __('Normal Carousel', THEME_LANG),
-                    'big'           => __('Big Carousel', THEME_LANG),
-                    'slider'        => __('Posts slider', THEME_LANG),
-                    'thumb'         => __('Thumb slider', THEME_LANG),
-                    'carousel'      => __('Small Carousel', THEME_LANG),
-                ),
-                'std'  => '',
-                'tab'  => 'header',
-                'visible' => array($prefix . 'slideshow_type', '=', 'postslider')
-            ),
-
-            array(
-                'name' => __('Data source', THEME_LANG),
-                'id'   => "{$prefix}slideshow_source",
-                'type' => 'select',
-                'options' => array(
-                    ''              => __('All', THEME_LANG),
-                    'categories'    => __('Specific Categories', THEME_LANG),
-                    'authors'		=> __('Specific Authors', THEME_LANG),
-                ),
-                'std'  => '',
-                'tab'  => 'header',
-                'visible' => array($prefix . 'slideshow_type', '=', 'postslider')
-            ),
-
-
-            // Categories
-            array(
-                'name'    => __( 'Specific Categories', THEME_LANG ),
-                'id'      => "{$prefix}slideshow_categories",
-                'type'    => 'taxonomy_advanced',
-                'multiple'=> true,
-                'options' => array(
-                    'taxonomy' => 'category',
-                    'type'     => 'select_advanced',
-                    'args'     => array()
-                ),
-                'tab'  => 'header',
-                'visible' => array($prefix . 'slideshow_source', '=', 'categories')
-            ),
-
-            // Authors
-            array(
-                'name'    => __( 'Specific Categories', THEME_LANG ),
-                'id'      => "{$prefix}slideshow_authors",
-                'type'    => 'user',
-                'multiple'=> true,
-                'options' => array(
-                    'type'     => 'select_advanced'
-                ),
-                'tab'  => 'header',
-                'visible' => array($prefix . 'slideshow_source', '=', 'authors')
-            ),
-
-
-            array(
-                'name' => __('Select Revolution Slider', THEME_LANG),
-                'id' => $prefix . 'rev_slider',
-                'default' => true,
-                'type' => 'revSlider',
-                'tab'  => 'header',
-                'desc' => __('Select the Revolution Slider.', THEME_LANG),
-                'visible' => array($prefix . 'slideshow_type', '=', 'revslider')
-            ),
-            array(
-                'name' => __('Select Layer Slider', THEME_LANG),
-                'id' => $prefix . 'layerslider',
-                'default' => true,
-                'type' => 'layerslider',
-                'tab'  => 'header',
-                'desc' => __('Select the Layer Slider.', THEME_LANG),
-                'visible' => array($prefix . 'slideshow_type', '=', 'layerslider')
-            ),
-
-            // Page Header
-            array(
-
-                'name' => __( 'Page Header', THEME_LANG ),
-                'id' => $prefix . 'page_header',
-                'desc' => __( "Show Page Header.", THEME_LANG ),
-                'type' => 'select',
-                'options' => array(
-                    ''          => __('Default', THEME_LANG),
-                    'off'	    => __('Hidden', THEME_LANG),
-                    'on'		=> __('Show', THEME_LANG),
-                ),
-                'std'  => '',
-                'tab'  => 'page_header',
-            ),
-            array(
-                'name' => __( 'Page Header Custom Text', THEME_LANG ),
-                'id' => $prefix . 'page_header_custom',
-                'desc' => __( "Enter cstom Text for page header.", THEME_LANG ),
-                'type'  => 'text',
-                'tab'  => 'page_header',
-                'visible' => array($prefix . 'page_header', '!=', 'off')
-            ),
-            array(
-                'name' => __( 'Page header subtitle', THEME_LANG ),
-                'id' => $prefix . 'page_header_subtitle',
-                'desc' => __( "Enter subtitle for page.", THEME_LANG ),
-                'type'  => 'text',
-                'tab'  => 'page_header',
-                'visible' => array($prefix . 'page_header', '!=', 'off')
-            ),
-
-            //Page layout
-            array(
-                'name' => __('Page layout', THEME_LANG),
-                'id' => $prefix . 'layout',
-                'desc' => __("Please choose this page's layout.", THEME_LANG),
-                'type' => 'select',
-                'options' => array(
-                    'default' => __('Default', THEME_LANG),
-                    'full' => __('Full width Layout', THEME_LANG),
-                    'boxed' => __('Boxed Layout', THEME_LANG),
-                ),
-                'std' => 'default',
-                'tab'  => 'page_layout',
-            ),
-            array(
-                'name' => __('Sidebar configuration', THEME_LANG),
-                'id' => $prefix . 'sidebar',
-                'desc' => __("Choose the sidebar configuration for the detail page.<br/><b>Note: Cart and checkout, My account page always use no sidebars.</b>", THEME_LANG),
-                'type' => 'select',
-                'options' => array(
-                    'default' => __('Default', THEME_LANG),
-                    'full' => __('No sidebars', THEME_LANG),
-                    'left' => __('Left Sidebar', THEME_LANG),
-                    'right' => __('Right Sidebar', THEME_LANG)
-                ),
-                'std' => 'default',
-                'tab'  => 'page_layout',
-            ),
-            array(
-                'name' => __('Left sidebar', THEME_LANG),
-                'id' => $prefix . 'left_sidebar',
-                'type' => 'select',
-                'tab'  => 'page_layout',
-                'options' => $sidebars,
-                'desc' => __("Select your sidebar.", THEME_LANG),
-                'visible' => array($prefix . 'sidebar','=', 'left' ),
-            ),
-            array(
-                'name' => __('Right sidebar', THEME_LANG),
-                'id' => $prefix . 'right_sidebar',
-                'type' => 'select',
-                'tab'  => 'page_layout',
-                'options' => $sidebars,
-                'desc' => __("Select your sidebar.", THEME_LANG),
-                'visible' => array($prefix . 'sidebar','=', 'right' ),
-            ),
-            array(
-                'name' => __('Page top spacing', THEME_LANG),
-                'id' => $prefix . 'page_top_spacing',
-                'desc' => __("Enter your page top spacing (Example: 100px).", THEME_LANG ),
-                'type'  => 'text',
-                'tab'  => 'page_layout',
-            ),
-            array(
-                'name' => __('Page bottom spacing', THEME_LANG),
-                'id' => $prefix . 'page_bottom_spacing',
-                'desc' => __("Enter your page bottom spacing (Example: 100px).", THEME_LANG ),
-                'type'  => 'text',
-                'tab'  => 'page_layout',
-            ),
-            array(
-                'name' => __('Extra page class', THEME_LANG),
-                'id' => $prefix . 'extra_page_class',
-                'desc' => __('If you wish to add extra classes to the body class of the page (for custom css use), then please add the class(es) here.', THEME_LANG ),
-                'type'  => 'text',
-                'tab'  => 'page_layout',
-            ),
-
-
-            //The image that will be used as the OUTER page background image.
-            //Inner Background
-
-        )
-    );
-
 
     return $meta_boxes;
 }

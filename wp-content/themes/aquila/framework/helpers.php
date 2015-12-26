@@ -434,13 +434,17 @@ if (!function_exists('kt_show_slideshow')) {
             /* Restore original Post Data */
             wp_reset_postdata();
 
-        }
+        }elseif($slideshow == 'page'){
+            if($page_id = rwmb_meta('_kt_slideshow_page', array(), $post_id)){
+                $page = get_post($page_id);
+                $output = apply_filters( "the_content", $page->post_content );
+                $sideshow_class[] = 'slideshow_page-graybg';
+            }
+        };
 
         if($output != ''){
             echo '<div id="main-sideshow" class="'.esc_attr(implode(' ', $sideshow_class)).'"><div id="sideshow-inner">'.$output.'</div></div>';
         }
-
-
     }
 }
 

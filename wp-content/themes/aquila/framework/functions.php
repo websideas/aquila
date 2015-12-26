@@ -176,18 +176,27 @@ function theme_body_classes( $classes ) {
         $classes[] = 'group-blog';
     }
 
-
     if( is_page() || is_singular('post')){
         $classes[] = 'layout-'.kt_getlayout($post->ID);
         $classes[] = rwmb_meta('_kt_extra_page_class');
-    }/*elseif(is_archive()){
-        $classes[] = 'layout-'.kt_option('layout', 'boxed');
+
+        if(is_page_template( 'front-page.php' )){
+            $content = get_post_meta($post->ID, '_kt_frontpage_content', true);
+            if($content){
+                $slideshow_type = get_post_meta($post->ID, '_kt_slideshow_type', true);
+                if($slideshow_type == 'postslider'){
+                    $slideshow_style = get_post_meta($post->ID, '_kt_slideshow_posts_style', true);
+                    $classes[] = 'page-postslider-'.$slideshow_style;
+                }
+            }
+        }
+
     }else{
         $classes[] = 'layout-'.kt_option('layout', 'boxed');
     }
-    */
 
-    //$classes[] = 'layout-boxed';
+
+
     return $classes;
 }
 add_filter( 'body_class', 'theme_body_classes' );
@@ -292,6 +301,34 @@ add_action( 'kt_slideshows_position', 'kt_slideshows_position_callback' );
 function kt_slideshows_position_callback(){
     if(is_page() || is_singular()){
         kt_show_slideshow();
+    }
+}
+
+/**
+ * Add CustomCss
+ **/
+add_action( 'wp_head', 'kt_addFrontCss', 1000 );
+function kt_addFrontCss( $post_id = null ){
+
+    if(is_page()){
+        if ( ! $post_id ) {
+            $post_id = get_the_ID();
+        }
+        if ( $post_id ) {
+            if($page_id = rwmb_meta('_kt_slideshow_page', array(), $post_id)){
+                $shortcodes_custom_css = get_post_meta( $page_id, '_wpb_shortcodes_custom_css', true );
+            }
+        }
+    }elseif(is_404()){
+        if($page_id = kt_option('notfound_page_id')){
+            $shortcodes_custom_css = get_post_meta( $page_id, '_wpb_shortcodes_custom_css', true );
+        }
+    }
+    if ( ! empty( $shortcodes_custom_css ) ) {
+        $shortcodes_custom_css = strip_tags( $shortcodes_custom_css );
+        echo '<style type="text/css" data-type="vc_shortcodes-custom-css">';
+        echo $shortcodes_custom_css;
+        echo '</style>';
     }
 }
 
