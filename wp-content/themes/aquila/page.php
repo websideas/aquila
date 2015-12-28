@@ -8,11 +8,10 @@
  *
  */
 
-
-
 $sidebar = kt_get_page_sidebar();
 
 get_header(); ?>
+
     <div class="container">
         <?php
     	/**

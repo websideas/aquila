@@ -154,19 +154,18 @@ if (!function_exists('kt_get_single_sidebar')) {
             'sidebar' => rwmb_meta('_kt_sidebar', array(), $post_id),
             'sidebar_area' => '',
         );
-        if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default' ){
-            $sidebar['sidebar'] = kt_option('blog_sidebar', 'right');
+        if($sidebar['sidebar'] == '0' || $sidebar['sidebar'] == 'default' ){
+            $sidebar['sidebar'] = kt_option('single_sidebar', 'right');
             if($sidebar['sidebar'] == 'left' ){
-                $sidebar['sidebar_area'] = kt_option('blog_sidebar_left', 'blog-widget-area');
+                $sidebar['sidebar_area'] = kt_option('single_sidebar_left', 'primary-widget-area');
             }elseif($sidebar['sidebar'] == 'right'){
-                $sidebar['sidebar_area'] = kt_option('blog_sidebar_right', 'blog-widget-area');
+                $sidebar['sidebar_area'] = kt_option('single_sidebar_right', 'primary-widget-area');
             }
         }elseif($sidebar['sidebar'] == 'left'){
             $sidebar['sidebar_area'] = rwmb_meta('_kt_left_sidebar', array(), $post_id);
         }elseif($sidebar['sidebar'] == 'right'){
             $sidebar['sidebar_area'] = rwmb_meta('_kt_right_sidebar', array(), $post_id);
         }
-
         return apply_filters('single_sidebar', $sidebar);
     }
 
@@ -181,55 +180,72 @@ if (!function_exists('kt_get_archive_sidebar')) {
      */
     function kt_get_archive_sidebar()
     {
-        $sidebar = array( 'sidebar' => '', 'sidebar_area' => '' );
-
-
-        if(is_front_page()){
-            $post_id = get_option( 'page_for_posts' );
+        if(is_search()){
             $sidebar = array(
-                'sidebar' => rwmb_meta('_kt_sidebar', array(), $post_id),
+                'sidebar' => kt_option('search_sidebar', 'full'),
+                'sidebar_area' => ''
+            );
+            if($sidebar['sidebar'] == 'left' ){
+                $sidebar['sidebar_area'] = kt_option('search_sidebar_left', 'primary-widget-area');
+            }elseif($sidebar['sidebar'] == 'full'){
+                $sidebar['sidebar'] = '';
+            }elseif($sidebar['sidebar'] == 'right'){
+                $sidebar['sidebar_area'] = kt_option('search_sidebar_right', 'primary-widget-area');
+            }
+        }elseif(is_author()){
+            $sidebar = array(
+                'sidebar' => kt_option('author_sidebar', 'full'),
                 'sidebar_area' => '',
             );
-        }
+            if($sidebar['sidebar'] == 'left' ){
+                $sidebar['sidebar_area'] = kt_option('author_sidebar_left', 'primary-widget-area');
+            }elseif($sidebar['sidebar'] == 'full'){
+                $sidebar['sidebar'] = '';
+            }elseif($sidebar['sidebar'] == 'right'){
+                $sidebar['sidebar_area'] = kt_option('author_sidebar_right', 'primary-widget-area');
+            }
+        }else{
+            $default = false;
+            if(is_home()) {
+                $post_id = get_option('page_for_posts');
+                $sidebar = array(
+                    'sidebar' => rwmb_meta('_kt_sidebar', array(), $post_id),
+                    'sidebar_area' => '',
+                );
 
-        if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default'){
-            $sidebar = array(
-                'sidebar' => kt_option('archive_sidebar', 'right'),
-                'sidebar_area' => '',
-            );
-        }
+                if($sidebar['sidebar'] == 'left' ){
+                    $sidebar['sidebar_area'] = rwmb_meta('_kt_left_sidebar', array(), $post_id);
+                }elseif($sidebar['sidebar'] == 'right'){
+                    $sidebar['sidebar_area'] = rwmb_meta('_kt_right_sidebar', array(), $post_id);
+                }elseif($sidebar['sidebar'] == 'full'){
+                    $sidebar['sidebar'] = '';
+                }else{
+                    $default = true;
+                }
+            }else{
+                $default = true;
+            }
 
-        if($sidebar['sidebar'] == 'left' ){
-            $sidebar['sidebar_area'] = kt_option('archive_sidebar_left', 'primary-widget-area');
-        }elseif($sidebar['sidebar'] == 'right'){
-            $sidebar['sidebar_area'] = kt_option('archive_sidebar_right', 'primary-widget-area');
+            if($default){
+                $sidebar = array(
+                    'sidebar' => kt_option('archive_sidebar', 'right'),
+                    'sidebar_area' => '',
+                );
+                if($sidebar['sidebar'] == 'left' ){
+                    $sidebar['sidebar_area'] = kt_option('archive_sidebar_left', 'primary-widget-area');
+                }elseif($sidebar['sidebar'] == 'right'){
+                    $sidebar['sidebar_area'] = kt_option('archive_sidebar_right', 'primary-widget-area');
+                }elseif($sidebar['sidebar'] == 'full'){
+                    $sidebar['sidebar'] = '';
+                }
+
+            }
         }
 
         return apply_filters('archive_sidebar', $sidebar);
     }
 }
 
-
-if (!function_exists('kt_get_search_sidebar')) {
-    /**
-     * Get Search sidebar
-     *
-     * @return array
-     */
-    function kt_get_search_sidebar()
-    {
-        $sidebar = array(
-            'sidebar' => kt_option('search_sidebar', 'right'),
-            'sidebar_area' => '',
-        );
-        if($sidebar['sidebar'] == 'left' ){
-            $sidebar['sidebar_area'] = kt_option('search_sidebar_left', 'blog-widget-area');
-        }elseif($sidebar['sidebar'] == 'right'){
-            $sidebar['sidebar_area'] = kt_option('search_sidebar_right', 'blog-widget-area');
-        }
-        return apply_filters('search_sidebar', $sidebar);
-    }
-}
 
 
 
@@ -369,6 +385,7 @@ if (!function_exists('kt_show_slideshow')) {
                     $image_size = 'blog_post_slider';
                 }elseif($style == 'normal'){
                     $sideshow_class[] = 'postslider-graybg';
+                    $slider_class[] = 'slideAnimation';
                 } elseif ($style == 'thumb'){
                     $slider_option = '{"arrows": true, "asNavFor": ".blog-posts-thumb"}';
                     $slider_thumbnail .= '<div class="blog-posts-thumb">';
@@ -514,53 +531,6 @@ if (!function_exists('get_thumbnail_attachment')){
 }
 
 
-if (!function_exists('kt_custom_wpml')){
-    /**
-     * Custom wpml
-     *
-     */
-
-    function kt_custom_wpml($before = '', $after = '', $title = ''){
-
-        if(kt_is_wpml()){
-
-            $output = $language_html = '';
-
-            if($title){
-                $output .= '<h4>'.$title.'</h4>';
-            }
-
-            $languages = icl_get_languages();
-
-            if(!empty($languages)) {
-                foreach ($languages as $l) {
-                    $active = ($l['active']) ? 'current' : '';
-
-                    $language_html .= '<li class="'.$active.'">';
-                    $language_html .= '<a href="' . $l['url'] . '">';
-                    if ($l['country_flag_url']) {
-                        $language_html .= '<img src="' . $l['country_flag_url'] . '" height="12" alt="' . $l['language_code'] . '" width="18" />';
-                    }
-                    $language_html .= "<span>" . $l['native_name'] . "</span>";
-                    $language_html .= '</a>';
-
-                    $language_html .= '</li>';
-                }
-
-                if ($language_html != '') {
-                    $language_html = '<ul>' . $language_html . '</ul>';
-                }
-
-                $output .= $language_html;
-
-            }
-
-            echo $before.$output.$after;
-
-        }
-
-    }
-}
 if (!function_exists('get_link_image_post')) {
     /**
      * Get image form meta.
@@ -645,13 +615,11 @@ if (!function_exists('kt_post_option')) {
     {
         global $post;
         if (!$post_id) $post_id = $post->ID;
-
         $meta_v = get_post_meta($post_id, $meta, true);
-
-        if ($meta_v == -1 || $meta_v == '') {
+        if ($meta_v == '') {
             $meta_v = kt_option($option, $default);
         }
-        return $meta_v;
+        return apply_filters('sanitize_boolean', $meta_v);
     }
 }
 

@@ -43,10 +43,16 @@ only screen and (min-resolution: 144dpi) {
       }
     }
   }
-
-  .sidebar{
-    padding-left: 40px;
+  .main-sidebar{
+    .sidebar-left &{
+      padding-right: 40px;
+    }
+    .sidebar-right &{
+      padding-left: 40px;
+    }
   }
+
+
 
 }
 

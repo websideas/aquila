@@ -6,7 +6,7 @@ if ( !defined('ABSPATH')) exit;
 // Script version, used to add version for scripts and styles
 define( 'THEME_VER', '1.0' );
 
-define( 'THEME_OPTIONS', 'valorous_option' );
+define( 'THEME_OPTIONS', 'aquila_option' );
 define( 'THEME_LANG', 'valorous');
 
 define( 'THEME_DIR', trailingslashit(get_template_directory()));

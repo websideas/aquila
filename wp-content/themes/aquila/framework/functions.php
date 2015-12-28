@@ -43,7 +43,6 @@ function kt_previous_posts_link_attributes( $attr = '' ) {
 add_filter( 'previous_posts_link_attributes', 'kt_previous_posts_link_attributes', 15 );
 
 
-
 if ( ! function_exists( 'kt_track_post_views' ) ){
     /**
      * Track post views
@@ -60,10 +59,9 @@ if ( ! function_exists( 'kt_track_post_views' ) ){
 
             $count_key = 'kt_post_views_count';
             $count = get_post_meta($post_id, $count_key, true);
-            if($count==''){
-                $count = 0;
+            if($count == ''){
                 delete_post_meta($post_id, $count_key);
-                add_post_meta($post_id, $count_key, '0');
+                add_post_meta($post_id, $count_key, 0);
             }else{
                 $count++;
                 update_post_meta($post_id, $count_key, $count);
@@ -73,92 +71,6 @@ if ( ! function_exists( 'kt_track_post_views' ) ){
 }
 add_action( 'wp_head', 'kt_track_post_views');
 
-/**
- * Get settings archive
- *
- * @return array
- */
-function kt_get_settings_archive(){
-    if(is_author()){
-        $settings = array(
-            'blog_type' => kt_option('author_loop_style', 'classic'),
-            'blog_columns' => kt_option('author_columns', 2),
-            'blog_columns_tablet' => kt_option('author_columns_tablet', 2),
-            'readmore' => kt_option('author_readmore', 'link'),
-            'blog_pagination' => kt_option('author_pagination', 'classic'),
-            'thumbnail_type' => kt_option('author_thumbnail_type', 'image'),
-            'sharebox' => kt_option('author_sharebox', 1),
-            'align' => kt_option('author_align', 'left'),
-            'show_excerpt' => kt_option('author_excerpt', 1),
-            'excerpt_length' => kt_option('author_excerpt_length', 30),
-            'show_meta' => kt_option('author_meta', 1),
-            'show_author' => kt_option('author_meta_author', 1),
-            'show_category' => kt_option('author_meta_categories', 1),
-            'show_comment' => kt_option('author_meta_comments', 1),
-            'show_date' => kt_option('author_meta_date', 1),
-            'date_format' => kt_option('author_date_format', 1),
-            'show_like_post' => kt_option('author_like_post', 0),
-            'show_view_number' => kt_option('author_view_number', 0),
-            'image_size' => kt_option('author_image_size', 'blog_post'),
-            'max_items' => get_option('posts_per_page')
-        );
-    }else{
-        $settings = array(
-            'blog_type' => kt_option('archive_loop_style', 'classic'),
-            'blog_columns' => kt_option('archive_columns', 2),
-            'blog_columns_tablet' => kt_option('archive_columns_tablet', 2),
-            'readmore' => kt_option('archive_readmore', 'link'),
-            'blog_pagination' => kt_option('archive_pagination', 'classic'),
-            'thumbnail_type' => kt_option('archive_thumbnail_type', 'image'),
-            'sharebox' => kt_option('archive_sharebox', 1),
-            'align' => kt_option('archive_align', 'left'),
-            'show_excerpt' => kt_option('archive_excerpt', 1),
-            'excerpt_length' => kt_option('archive_excerpt_length', 30),
-            'show_meta' => kt_option('archive_meta', 1),
-            'show_author' => kt_option('archive_meta_author', 1),
-            'show_category' => kt_option('archive_meta_categories', 1),
-            'show_comment' => kt_option('archive_meta_comments', 1),
-            'show_date' => kt_option('archive_meta_date', 1),
-            'date_format' => kt_option('archive_date_format', 1),
-            'show_like_post' => kt_option('archive_like_post', 0),
-            'show_view_number' => kt_option('archive_view_number', 0),
-            'image_size' => kt_option('archive_image_size', 'blog_post'),
-            'max_items' => get_option('posts_per_page')
-        );
-    }
-    return $settings;
-}
-
-/**
- * Get settings search
- *
- * @return array
- */
-function kt_get_settings_search(){
-    return array(
-        'blog_type' => kt_option('search_loop_style', 'classic'),
-        'blog_columns' => kt_option('search_columns', 3),
-        'blog_columns_tablet' => kt_option('search_columns_tablet', 2),
-        'align' => kt_option('archive_align', 'left'),
-        'readmore' => kt_option('search_readmore', 'link'),
-        'blog_pagination' => kt_option('search_pagination', 'classic'),
-        'thumbnail_type' => kt_option('search_thumbnail_type', 'image'),
-        'sharebox' => kt_option('search_sharebox', 0),
-        'show_excerpt' => kt_option('search_excerpt', 1),
-        'excerpt_length' => kt_option('search_excerpt_length', 30),
-        'show_meta' => kt_option('search_meta', 1),
-        'show_author' => kt_option('search_meta_author', 1),
-        'show_category' => kt_option('search_meta_categories', 1),
-        'show_comment' => kt_option('search_meta_comments', 1),
-        'show_date' => kt_option('search_meta_date', 1),
-        'date_format' => kt_option('search_date_format', 1),
-        'show_like_post' => kt_option('search_like_post', 0),
-        'show_view_number' => kt_option('search_view_number', 0),
-        'image_size' => kt_option('search_image_size', 'blog_post'),
-        'max_items' => get_option('posts_per_page'),
-
-    );
-}
 
 
 /**
@@ -483,7 +395,7 @@ function kt_navigation_markup_template($template, $class){
 add_action( 'theme_before_content', 'get_page_header', 20 );
 function get_page_header( ){
     global $post;
-    $show_title = true;
+    $show_title = false;
 
     if ( is_front_page() && is_singular('page')){
         $show_title = rwmb_meta('_kt_page_header', array(), get_option('page_on_front', true));
@@ -498,7 +410,7 @@ function get_page_header( ){
         $show_title = kt_option('author_page_header', 1);
     }elseif(is_404()){
         $show_title = kt_option('notfound_page_header', 1);
-    }elseif(is_page() || is_singular()){
+    }elseif(is_page()){
         $post_id = $post->ID;
         $show_title = rwmb_meta('_kt_page_header', array(), $post_id);
         if( !$show_title ){
@@ -511,7 +423,6 @@ function get_page_header( ){
     }
 
     $show_title = apply_filters( 'kt_show_title', $show_title );
-
     if($show_title == 'on' || $show_title == 1){
         $title = kt_get_page_title();
         $title = sprintf('<h1 class="page-title">%s</h1>', $title);

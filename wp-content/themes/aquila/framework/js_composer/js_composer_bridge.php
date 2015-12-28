@@ -45,7 +45,10 @@ $composer_addons = array(
     //'dropcap.php',
     'blockquote.php',
     'googlemap.php',
-    'socials.php'
+    'socials.php',
+    'gallery-grid.php',
+    'gallery-justified.php',
+    'kt_image_gallery.php'
 );
 
 foreach ( $composer_addons as $addon ) {

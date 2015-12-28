@@ -108,7 +108,7 @@ class WP_Widget_KT_Tabs extends WP_Widget {
                                                 <?php kt_post_thumbnail_image( 'recent_posts', 'img-responsive' ); ?>
                                                 <div class="article-attr">
                                                     <h3 class="title"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h3>
-                                                    <?php kt_entry_meta_time();?>
+                                                    <?php kt_entry_date();?>
                                                 </div>
                                             </li>
                                         <?php endwhile; wp_reset_postdata(); ?>

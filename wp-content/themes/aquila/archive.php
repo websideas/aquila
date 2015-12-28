@@ -9,6 +9,8 @@
  */
 
 
+$sidebar = kt_get_archive_sidebar();
+
 get_header(); ?>
 
     <?php if ( have_posts() ) { ?>
@@ -17,10 +19,25 @@ get_header(); ?>
                 <?php
 
                 do_action('before_blog_posts_loop');
-                $type = 'gird';
-                $column = 2;
-                $first_featured = true;
-                $sidebar = array('sidebar' => 'right', 'sidebar_area' => 'primary-widget-area');
+
+
+                if(is_author()){
+                    $type = kt_option('author_loop_style', 'grid');
+                    $column = kt_option('author_columns', 3);
+                    $first_featured = kt_option('author_first_featured', false);
+                    $pagination = kt_option('author_pagination', 'normal');
+                }elseif(is_search()){
+                    $type = kt_option('search_loop_style', 'grid');
+                    $column = kt_option('search_columns', 3);
+                    $first_featured = kt_option('search_first_featured', false);
+                    $pagination = kt_option('search_pagination', 'normal');
+                }else{
+                    $type = kt_option('archive_loop_style', 'gird');
+                    $column = kt_option('archive_columns', 2);
+                    $first_featured = kt_option('archive_first_featured', false);
+                    $pagination = kt_option('archive_pagination', 'normal');
+                }
+
 
                 if($type == 'medium' || $type == 'list'){
                     $column = 1;
@@ -32,7 +49,7 @@ get_header(); ?>
                 while ( have_posts() ) : the_post();
                     if($i == 1){
                         if($first_featured){
-                            get_template_part( 'templates/blog/gird/content', 'first');
+                            get_template_part( 'templates/blog/grid/content', 'first');
                         }
 
                         $main_column = ($sidebar['sidebar']) ? '8' : '12';
@@ -50,7 +67,7 @@ get_header(); ?>
                     }else {
                         printf('<div class="article-post-item col-lg-%1$s col-md-%1$s">', $article_column);
                         $featured = get_post_meta(get_the_ID(), '_kt_post_featured', true);
-                        if($featured == 'yes' && $type != 'gird' && $type != 'masonry' ){
+                        if($featured == 'yes' && $type != 'grid' && $type != 'masonry' ){
                             get_template_part( 'templates/blog/'.$type.'/contentf', get_post_format());
                         }else{
                             get_template_part( 'templates/blog/'.$type.'/content', get_post_format());
@@ -60,7 +77,7 @@ get_header(); ?>
                     if($i == $wp_query->post_count){
                         echo '</div><!-- .main-content -->';
                         // Previous/next page navigation.
-                        kt_paging_nav();
+                        kt_paging_nav($pagination);
                         echo "</div>";
 
                         if($sidebar['sidebar']){
@@ -76,7 +93,7 @@ get_header(); ?>
 
                 if($wp_query->post_count == 1){
                     // Previous/next page navigation.
-                    kt_paging_nav();
+                    kt_paging_nav($pagination);
                 }
 
                 do_action('after_blog_posts_loop');

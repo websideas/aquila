@@ -11,8 +11,6 @@ $content = get_post_meta($post_id, '_kt_frontpage_content', true);
 $sidebar = kt_get_page_sidebar();
 
 
-
-
 get_header(); ?>
 <div class="container">
     <?php if(!$content){ ?>
@@ -101,7 +99,7 @@ get_header(); ?>
                 while ( have_posts() ) : the_post();
                     if($i == 1){
                         if($first_featured){
-                            get_template_part( 'templates/blog/gird/content', 'first');
+                            get_template_part( 'templates/blog/grid/content', 'first');
                         }
 
                         $main_column = ($sidebar['sidebar']) ? '8' : '12';
@@ -119,7 +117,7 @@ get_header(); ?>
                     }else {
                         printf('<div class="article-post-item col-lg-%1$s col-md-%1$s">', $article_column);
                         $featured = get_post_meta(get_the_ID(), '_kt_post_featured', true);
-                        if($featured == 'yes' && $type != 'gird' && $type != 'masonry' ){
+                        if($featured == 'yes' && $type != 'grid' && $type != 'masonry' ){
                             get_template_part( 'templates/blog/'.$type.'/contentf', get_post_format());
                         }else{
                             get_template_part( 'templates/blog/'.$type.'/content', get_post_format());

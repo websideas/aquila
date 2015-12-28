@@ -88,34 +88,15 @@ class Widget_KT_Posts extends WP_Widget {
             <ul class="kt_posts_widget kt-artilce-<?php echo esc_attr($layout) ?>">
                 <?php while ( $r->have_posts() ) : $r->the_post(); ?>
                     <li <?php post_class('article-widget clearfix'); ?>>
-                            <?php kt_post_thumbnail_image( 'recent_posts', 'img-responsive' ); ?>
-                            <div class="article-attr">
-                                <h3 class="title"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h3>
-                                <?php if($layout == 2){ ?>
-                                <?php
-                                    echo '<div class="post-item-meta">';
-                                    echo '<div class="post-item-metaleft pull-left">';
-                                    kt_entry_meta_author();
-                                    kt_entry_meta_time();
-                                    echo '</div><!-- .post-item-metaleft -->';
-                                    echo '<div class="post-item-metaright pull-right">';
-                                    kt_get_post_views();
-                                    kt_entry_meta_comments();
-                                    echo '</div><!-- .post-item-metaright -->';
-                                    echo '<div class="clearfix"></div></div><!-- .post-item-meta -->';
-
-                                ?>
-                                <?php }else{ ?>
-                                    <?php kt_entry_meta_time();?>
-                                <?php } ?>
-
-                            </div>
-
+                        <?php kt_post_thumbnail_image( 'recent_posts', 'img-responsive' ); ?>
+                        <div class="article-attr">
+                            <h3 class="title"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h3>
+                            <?php ($layout == 2) ? kt_entry_meta() : kt_entry_date(); ?>
+                        </div>
                     </li>
                 <?php endwhile; ?>
             </ul>
             <?php
-
             echo $args['after_widget'];
 
             // Reset the global $the_post as this query will have stomped on it

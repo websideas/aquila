@@ -132,7 +132,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'type'     => 'select',
                 'options'  => array(
                     'slider' => __('Default', THEME_LANG),
-                    'gird' => __('Gird', THEME_LANG),
+                    'grid' => __('Grid', THEME_LANG),
                     'revslider' => __('Revolution Slider', THEME_LANG),
                     'layerslider' => __('Layer Slider', THEME_LANG)
                 ),
@@ -156,7 +156,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'id'  => "{$prefix}gallery_images",
                 'type' => 'image_advanced',
                 'desc' => __( "You can drag and drop for change order image", THEME_LANG ),
-                'visible' => array($prefix . 'gallery_type','in', array('slider', 'gird' )),
+                'visible' => array($prefix . 'gallery_type','in', array('slider', 'grid' )),
             ),
         ),
     );
@@ -227,7 +227,7 @@ function kt_register_meta_boxes( $meta_boxes )
         'pages' => array('page'),
         'context' => 'normal',
         'show'   => array(
-            'template' => array( 'front-page.php'),
+            'template' => array( 'frontpage.php'),
         ),
         'tabs'      => array(
             'frontpage_general'  => array(
@@ -318,11 +318,10 @@ function kt_register_meta_boxes( $meta_boxes )
                 'id'   => "{$prefix}frontpage_type",
                 'type' => 'select',
                 'options' => array(
-                    'list'              => __('List', THEME_LANG),
-                    'medium'              => __('Medium', THEME_LANG),
-                    'gird'		=> __('Gird', THEME_LANG),
-                    'masonry'    => __('Masonry', THEME_LANG),
-
+                    'list'      => __('List', THEME_LANG),
+                    'medium'    => __('Medium', THEME_LANG),
+                    'grid'		=> __('Grid', THEME_LANG),
+                    'masonry'   => __('Masonry', THEME_LANG),
                 ),
                 'std'  => 'standard',
                 'tab'  => 'frontpage_layout',
@@ -333,13 +332,13 @@ function kt_register_meta_boxes( $meta_boxes )
                 'id'   => "{$prefix}frontpage_columns",
                 'type' => 'select',
                 'options' => array(
-                    '2'              => __('2', THEME_LANG),
-                    '3'              => __('3', THEME_LANG),
+                    '2'    => __('2', THEME_LANG),
+                    '3'    => __('3', THEME_LANG),
                     '4'    => __('4', THEME_LANG),
                 ),
                 'std'  => '2',
                 'tab'  => 'frontpage_layout',
-                'visible' => array($prefix . 'frontpage_type','in', array('masonry', 'gird' )),
+                'visible' => array($prefix . 'frontpage_type','in', array('masonry', 'grid' )),
             ),
             array(
                 'name' => __( 'First featured', THEME_LANG ),
@@ -504,7 +503,7 @@ function kt_register_meta_boxes( $meta_boxes )
             'desc' => __("Choose the sidebar configuration for the detail page.<br/><b>Note: Cart and checkout, My account page always use no sidebars.</b>", THEME_LANG),
             'type' => 'select',
             'options' => array(
-                'default' => __('Default', THEME_LANG),
+                0 => __('Default', THEME_LANG),
                 'full' => __('No sidebars', THEME_LANG),
                 'left' => __('Left Sidebar', THEME_LANG),
                 'right' => __('Right Sidebar', THEME_LANG)
@@ -692,11 +691,7 @@ function kt_register_meta_boxes( $meta_boxes )
         'post_general'  => array(
             'label' => __( 'General', THEME_LANG ),
             'icon'  => 'fa fa-bars',
-        ),
-        'post_displays'  => array(
-            'label' => __( 'Displays', THEME_LANG ),
-            'icon'  => 'dashicons-before dashicons-art',
-        ),
+        )
     );
 
     $fields_post = array(
@@ -715,21 +710,6 @@ function kt_register_meta_boxes( $meta_boxes )
         ),
 
         array(
-            'name' => __('Detail Media', THEME_LANG),
-            'id'   => "{$prefix}post_detail_media",
-            'type' => 'select',
-            'options' => array(
-                0    => __('Default', THEME_LANG),
-                1		=> __('Hidden', THEME_LANG),
-                2		=> __('Post format', THEME_LANG),
-                3       => __('Thumbnail content', THEME_LANG)
-            ),
-            'std'  => 0,
-            'tab'  => 'post_general',
-        ),
-
-
-        array(
             'type' => 'select',
             'name' => __('Post layouts', THEME_LANG),
             'desc' => __('Select the your post layout.', THEME_LANG),
@@ -738,32 +718,12 @@ function kt_register_meta_boxes( $meta_boxes )
                 0    => __('Default', THEME_LANG),
                 1 => __( 'Layout 1', THEME_LANG ),
                 2 => __( 'layout 2', THEME_LANG ),
+                3 => __( 'layout 3', THEME_LANG ),
+                4 => __( 'layout 4', THEME_LANG ),
+                5 => __( 'layout 5', THEME_LANG ),
             ),
             'std' => '',
             'tab'  => 'post_general',
-        ),
-
-        array(
-            'type' => 'select',
-            'name' => __('Post image size', THEME_LANG),
-            'desc' => __('Select the format position.', THEME_LANG),
-            'id'   => "{$prefix}blog_image_size",
-            'options' => array_merge(array('' => __('Default', THEME_LANG)), $image_sizes),
-            'std' => '',
-            'tab'  => 'post_general',
-        ),
-        array(
-            'name' => __('Meta info', THEME_LANG),
-            'id'   => "{$prefix}meta_info",
-            'type' => 'select',
-            'options' => array(
-                ''    => __('Default', THEME_LANG),
-                'no'		=> __('Hidden', THEME_LANG),
-                'yes'		=> __('Show', THEME_LANG),
-            ),
-            'std'  => -1,
-            'tab'  => 'post_displays',
-            'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
         ),
         array(
             'name' => __('Previous & next buttons', THEME_LANG),
@@ -771,11 +731,11 @@ function kt_register_meta_boxes( $meta_boxes )
             'type' => 'select',
             'options' => array(
                 ''    => __('Default', THEME_LANG),
-                'no'		=> __('Hidden', THEME_LANG),
-                'yes'		=> __('Show', THEME_LANG),
+                'off'		=> __('Hidden', THEME_LANG),
+                'on'		=> __('Show', THEME_LANG),
             ),
             'std'  => '',
-            'tab'  => 'post_displays',
+            'tab'  => 'post_general',
             'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
         ),
         array(
@@ -784,11 +744,11 @@ function kt_register_meta_boxes( $meta_boxes )
             'type' => 'select',
             'options' => array(
                 ''    => __('Default', THEME_LANG),
-                'no'		=> __('Hidden', THEME_LANG),
-                'yes'		=> __('Show', THEME_LANG),
+                'off'		=> __('Hidden', THEME_LANG),
+                'on'		=> __('Show', THEME_LANG),
             ),
             'std'  => '',
-            'tab'  => 'post_displays',
+            'tab'  => 'post_general',
             'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
         ),
         array(
@@ -797,11 +757,11 @@ function kt_register_meta_boxes( $meta_boxes )
             'type' => 'select',
             'options' => array(
                 ''    => __('Default', THEME_LANG),
-                'no'		=> __('Hidden', THEME_LANG),
-                'yes'		=> __('Show', THEME_LANG),
+                'off'		=> __('Hidden', THEME_LANG),
+                'on'		=> __('Show', THEME_LANG),
             ),
             'std'  => '',
-            'tab'  => 'post_displays',
+            'tab'  => 'post_general',
             'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
         ),
         array(
@@ -810,11 +770,11 @@ function kt_register_meta_boxes( $meta_boxes )
             'type' => 'select',
             'options' => array(
                 ''      => __('Default', THEME_LANG),
-                'no'    => __('Hidden', THEME_LANG),
-                'yes'	=> __('Show', THEME_LANG),
+                'off'    => __('Hidden', THEME_LANG),
+                'on'	=> __('Show', THEME_LANG),
             ),
             'std'  => '',
-            'tab'  => 'post_displays',
+            'tab'  => 'post_general',
             'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
         )
     );

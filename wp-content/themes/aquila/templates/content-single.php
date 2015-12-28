@@ -1,8 +1,8 @@
 <?php
 
 $post_id = get_the_ID();
-$layout = get_post_meta($post_id, '_kt_blog_post_layout', true);
-$imagesize = 'full';
+$layout = kt_option('single_layout', 1);
+$imagesize = kt_option('single_image_size', 'full');
 
 ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class( 'post-single' ); ?>>
@@ -13,30 +13,7 @@ $imagesize = 'full';
     ?>
     <header class="entry-header">
         <h1 class="entry-title"><?php the_title(); ?></h1>
-        <?php if(kt_post_option(null, '_kt_meta_info', 'blog_meta', 1)) {
-            echo '<div class="post-item-meta">';
-            echo '<div class="post-item-metaleft pull-left">';
-            if (kt_option('blog_meta_author', 1)) {
-                kt_entry_meta_author( );
-            }
-            if (kt_option('blog_meta_date', 1)) {
-                kt_entry_meta_time( );
-            }
-
-            echo '</div><!-- .post-item-metaleft -->';
-            echo '<div class="post-item-metaright pull-right">';
-
-
-            //if (kt_option('blog_view_number', 1)) {
-                kt_get_post_views( );
-            //}
-            if (kt_option('blog_meta_comments', 1)) {
-                kt_entry_meta_comments( );
-            }
-            echo '</div><!-- .post-item-metaright -->';
-            echo '<div class="clearfix"></div></div><!-- .post-item-meta -->';
-        }
-        ?>
+        <?php kt_entry_meta(); ?>
     </header><!-- .entry-header -->
 
     <?php
@@ -67,10 +44,12 @@ $imagesize = 'full';
 
         echo '<div class="entry-footer-right pull-right">';
         edit_post_link( '<i class="fa fa-pencil"></i>', '<span class="edit-link" title="'.__( 'Edit', THEME_LANG ).'">', '</span>' );
-        if(kt_option('blog_like_post', 1)){
+        if(kt_option('single_like_post', 1)){
             kt_like_post();
         }
-        kt_share_box(null, 'square', 'post-single-share');
+        if(kt_post_option(null, '_kt_social_sharing', 'single_share_box', 1)) {
+            kt_share_box(null, 'square', 'post-single-share');
+        }
         echo '</div>';
 
         ?>
@@ -80,19 +59,19 @@ $imagesize = 'full';
 <div class="post-single-addons">
     <?php
 
-    //if(kt_post_option(null, '_kt_author_info', 'blog_author', 1)){
-        //kt_author_box();
+    if(kt_post_option(null, '_kt_author_info', 'single_author', 1)){
         // Author bio.
         get_template_part( 'templates/author-bio' );
-    //}
+    }
 
-    if(kt_post_option(null, '_kt_prev_next', 'blog_next_prev', 1)){
+    if(kt_post_option(null, '_kt_prev_next', 'single_next_prev', 0)){
         kt_post_nav();
     }
 
-    //if(kt_post_option(null, '_kt_related_acticles', 'blog_related', 1)){
-        kt_related_article(null, kt_option('blog_related_type', 'categories'));
-    //}
+
+    if(kt_post_option(null, '_kt_related_acticles', 'single_related', 1)){
+        kt_related_article(null, kt_option('single_related_type', 'categories'));
+    }
 
     // If comments are open or we have at least one comment, load up the comment template.
     if ( shortcode_exists( 'fbcomments' ) ) {

@@ -2156,10 +2156,8 @@ ul.style-list{
           font-size: 14px;
           padding: 16px 25px;
           position: relative;
-          &:hover{
-            color: $primary-color;
-          }
         }
+
         ul.sub-menu-dropdown{
           left: 100%;
           top: 0;
@@ -2168,9 +2166,12 @@ ul.style-list{
             left: auto;
           }
         }
-        &:hover{
+
+        &:hover,
+        &.current-menu-item{
           > a{
             background: #333333;
+            color: $primary-color;
           }
           > ul{
             @include opacity(1);
@@ -2178,6 +2179,7 @@ ul.style-list{
             visibility: visible;
           }
         }
+
         &.menu-item-has-children{
           > a{
             padding-right: 40px;
@@ -2800,7 +2802,7 @@ body.opened-nav-animate{
 #footer-area{
   padding: 75px 0 40px;
   border-bottom: 1px solid $dark-border;
-  .widget-footer{
+  .widget-container{
     margin-bottom: 30px;
     .widget-title{
       color: $white;
@@ -2922,6 +2924,7 @@ body.opened-nav-animate{
       }
     }
   }
+
 }
 
 .blog-posts-slick {
@@ -3055,8 +3058,8 @@ body.opened-nav-animate{
   .postslider-slider &,
   .postslider-graybg &{
     .article-post-content{
-      left: 80px;
-      right: 80px;
+      left: 120px;
+      right: 120px;
     }
     .slick-arrow{
       @include opacity(1);

@@ -12,13 +12,12 @@ get_header();
 
 $post_id = get_the_ID();
 
-$layout = get_post_meta($post_id, '_kt_blog_post_layout', true);
-$sidebar = array('sidebar' => 'right', 'sidebar_area' => 'primary-widget-area');
-$post_id = get_the_ID();
-$imagesize = 'full';
+$sidebar = kt_get_single_sidebar();
+
+$layout = kt_option('single_layout', 1);
+$imagesize = kt_option('single_image_size', 'full');
 
 ?>
-
     <?php if( ! post_password_required( ) && $layout == 3 ){ ?>
         <div class="entry-thumb-fullwidth"><?php kt_post_thumbnail($imagesize, 'img-responsive', false); ?></div>
     <?php } ?>
@@ -50,7 +49,7 @@ $imagesize = 'full';
             </div><!-- .main-content -->
 
             <?php if($sidebar['sidebar']){ ?>
-                <?php echo '<div class="col-md-4 sidebar">'; ?>
+                <?php echo '<div class="col-md-4 sidebar main-sidebar">'; ?>
                     <?php dynamic_sidebar($sidebar['sidebar_area']); ?>
                 </div><!-- .sidebar -->
             <?php } ?>

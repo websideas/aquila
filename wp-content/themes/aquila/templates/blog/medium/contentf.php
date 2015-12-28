@@ -23,7 +23,7 @@
                 the_title( sprintf( '<h3 class="entry-title-featured"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );
                 echo '<div class="post-item-meta-featured">';
                 kt_entry_meta_author();
-                kt_entry_meta_time();
+                kt_entry_date();
                 echo '</div><!-- .post-item-meta-featured -->';
                 ?>
             </div><!-- .post-info-featured-inner -->

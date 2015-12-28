@@ -158,9 +158,37 @@ function theme_after_footer_top_addscroll(){
 
 
 function kt_excerpt_length( ) {
-    return kt_option('archive_excerpt_length', 30);
+    if(is_search()){
+        $excerpt_length = kt_option('search_excerpt_length', 35);
+    }elseif(is_author()){
+        $excerpt_length = kt_option('author_excerpt_length', 35);
+    }else{
+        $excerpt_length = kt_option('archive_excerpt_length', 40);
+    }
+    return $excerpt_length;
 }
 add_filter( 'excerpt_length', 'kt_excerpt_length', 99 );
+
+/**
+ *
+ *
+ * Control the number of search results
+ */
+function custom_posts_per_page( $query ) {
+    if(!is_admin()){
+        if(is_search()){
+            $posts_per_page = kt_option('search_posts_per_page', 9);
+            set_query_var('posts_per_page', $posts_per_page);
+        }elseif ( $query->is_author()) {
+            $posts_per_page = kt_option('author_posts_per_page', 9);
+            set_query_var('posts_per_page', $posts_per_page);
+        }elseif($query->is_archive()){
+            $posts_per_page = kt_option('archive_posts_per_page', 14);
+            set_query_var('posts_per_page', $posts_per_page);
+        }
+    }
+}
+add_action( 'pre_get_posts', 'custom_posts_per_page' );
 
 
 function kt_get_post_thumbnail_url($size = 'post-thumbnail', $post_id = null){
@@ -229,7 +257,6 @@ if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
         if(!$echo){
             return ob_get_clean();
         }
-
     }
 endif;
 /**
@@ -526,7 +553,7 @@ if ( ! function_exists( 'kt_paging_nav' ) ) :
     /**
      * Display navigation to next/previous set of posts when applicable.
      */
-    function kt_paging_nav( $type = 'classic' ) {
+    function kt_paging_nav( $type = 'normal' ) {
 
         global $wp_query;
 
@@ -536,26 +563,16 @@ if ( ! function_exists( 'kt_paging_nav' ) ) :
         }
         if($type == 'none'){
             return ;
-        }elseif($type == 'loadmore'){
-            printf(
-                '<div class="blog-posts-loadmore"><a href="#" class="blog-loadmore-button btn btn-default">%s %s</a></div>',
-                '<span class="fa fa-refresh button-icon-left"></span>',
-                __('Load more', THEME_LANG)
-            );
-        }elseif($type == 'normal'){ ?>
-
-            <nav class="navigation paging-navigation clearfix">
+        }elseif($type == 'button'){ ?>
+            <nav class="navigation post-navigation clearfix">
                 <h1 class="screen-reader-text"><?php _e( 'Posts navigation', THEME_LANG ); ?></h1>
                 <div class="nav-links">
-
                     <?php if ( get_next_posts_link() ) : ?>
                         <div class="nav-previous"><?php next_posts_link( '<i class="fa fa-long-arrow-left"></i> '.__( 'Older posts', THEME_LANG ) ); ?></div>
                     <?php endif; ?>
-
                     <?php if ( get_previous_posts_link() ) : ?>
                         <div class="nav-next"><?php previous_posts_link( __( 'Newer posts', THEME_LANG ).' <i class="fa fa-long-arrow-right"></i>' ); ?></div>
                     <?php endif; ?>
-
                 </div><!-- .nav-links -->
             </nav><!-- .navigation -->
 
@@ -568,43 +585,20 @@ endif;
 
 
 
-if ( ! function_exists( 'kt_entry_meta_author' ) ) :
-    /**
-     * Prints HTML with meta information for author.
-     *
-     */
-    function kt_entry_meta_author() {
-        printf( '<span class="author vcard">%4$s <span class="screen-reader-text">%1$s </span><a class="url fn n" href="%2$s">%3$s</a></span>',
-            _x( 'Author', 'Used before post author name.', THEME_LANG ),
-            esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-            get_the_author(),
-            __('By:', THEME_LANG )
-        );
-    }
-endif;
-
-
 
 if ( ! function_exists( 'kt_entry_meta_categories' ) ) :
     /**
      * Prints HTML with meta information for categories.
      *
      */
-    function kt_entry_meta_categories( $separator = ', ', $echo = true ) {
+    function kt_entry_meta_categories( $separator = ', ') {
         if ( 'post' == get_post_type() ) {
             $categories_list = get_the_category_list( _x( $separator, 'Used between list items, there is a space after the comma.', THEME_LANG ) );
             if ( $categories_list ) {
-                if($echo){
-                    printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span> %2$s</span>',
-                        _x( 'Categories', 'Used before category names.', THEME_LANG ),
-                        $categories_list
-                    );
-                }else{
-                    return sprintf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span> %2$s</span>',
-                        _x( 'Categories', 'Used before category names.', THEME_LANG ),
-                        $categories_list
-                    );
-                }
+                printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span> %2$s</span>',
+                    _x( 'Categories', 'Used before category names.', THEME_LANG ),
+                    $categories_list
+                );
             }
         }
     }
@@ -654,13 +648,55 @@ endif;
 
 
 
-
-if ( ! function_exists( 'kt_entry_meta_time' ) ) :
+if ( ! function_exists( 'kt_entry_meta_author' ) ) :
     /**
-     * Prints HTML with meta information for time.
+     * Prints HTML with meta information for author.
      *
      */
-    function kt_entry_meta_time($format = 'd F Y', $echo = true) {
+    function kt_entry_meta_author() {
+        if ( 'post' === get_post_type() ) {
+            printf( '<span class="author vcard">%4$s <span class="screen-reader-text">%1$s </span><a class="url fn n" href="%2$s">%3$s</a></span>',
+                _x( 'Author', 'Used before post author name.', THEME_LANG ),
+                esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
+                get_the_author(),
+                __('By:', THEME_LANG )
+            );
+        }
+    }
+endif;
+
+
+if ( ! function_exists( 'kt_entry_meta' ) ) {
+    /**
+     * Prints HTML with meta information for the categories, tags.
+     *
+     * Create your own kt_entry_meta() function to override in a child theme.
+     *
+     */
+    function kt_entry_meta() {
+        echo '<div class="post-item-meta">';
+        echo '<div class="post-item-metaleft pull-left">';
+            kt_entry_meta_author( );
+            kt_entry_date( );
+        echo '</div><!-- .post-item-metaleft -->';
+        echo '<div class="post-item-metaright pull-right">';
+            kt_get_post_views( );
+            kt_entry_meta_comments( );
+        echo '</div><!-- .post-item-metaright -->';
+        echo '<div class="clearfix"></div></div><!-- .post-item-meta -->';
+    }
+}
+
+
+
+if ( ! function_exists( 'kt_entry_date' ) ) {
+    /**
+     * Prints HTML with date information for current post.
+     *
+     * Create your own twentysixteen_entry_date() function to override in a child theme.
+     *
+     */
+    function kt_entry_date($format = 'd F Y') {
         if ( in_array( get_post_type(), array( 'post', 'attachment' ) ) ) {
             $time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 
@@ -676,46 +712,45 @@ if ( ! function_exists( 'kt_entry_meta_time' ) ) :
                 esc_attr( get_the_modified_date( 'c' ) ),
                 get_the_modified_date()
             );
-            if($echo){
-                printf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-                    _x( 'Posted on', 'Used before publish date.', THEME_LANG ),
-                    $time_string
-                );
-            }else{
-                return sprintf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-                    _x( 'Posted on', 'Used before publish date.', THEME_LANG ),
-                    $time_string
-                );
-            }
 
+            printf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
+                _x( 'Posted on', 'Used before publish date.', THEME_LANG ),
+                esc_url( get_permalink() ),
+                $time_string
+            );
         }
     }
-endif;
+}
 
 /* ---------------------------------------------------------------------------
  * Posts Views Number
  * --------------------------------------------------------------------------- */
 
-
-
 if ( ! function_exists( 'kt_get_post_views' ) ){
+    /**
+     * Prints HTML with date information for current post.
+     *
+     * Create your own kt_get_post_views() function to override in a child theme.
+     *
+     */
     function kt_get_post_views($post_id = null){
-        global $post;
-        if(!$post_id){ $post_id = $post->ID; }
-
-        $count_key = 'kt_post_views_count';
-        $count = get_post_meta($post_id, $count_key, true);
-
-        if( $count == '' || $count == 0 ){
-            delete_post_meta($post_id, $count_key);
-            add_post_meta($post_id, $count_key, '0');
-            $count = 0;
+        if('post' == get_post_type()) {
+            global $post;
+            if(!$post_id){ $post_id = $post->ID; }
+            $count_key = 'kt_post_views_count';
+            $count = get_post_meta($post_id, $count_key, true);
+            if( $count == '' || $count == 0 ){
+                delete_post_meta($post_id, $count_key);
+                add_post_meta($post_id, $count_key, '0');
+                $count = 0;
+            }
+            $text = ($count == 0 || $count == 1) ? __('View',THEME_LANG) : __('Views',THEME_LANG);
+            printf(
+                '<span class="post-view">%s<span class="screen-reader-text">%s</span></span>',
+                $count,
+                $text
+            );
         }
-
-        $text = ($count == 0 || $count == 1) ? __('View',THEME_LANG) : __('Views',THEME_LANG);
-
-        echo  '<span class="post-view">'.$count.'<span class="screen-reader-text">'.$text.'</span></span>';
-
     }
 }
 
@@ -858,7 +893,7 @@ if ( ! function_exists( 'kt_related_article' ) ) :
                 <div class="blog-posts-related"  data-slick='{"slidesToShow": 2}'>
                 <?php
                 while ( $query->have_posts() ) : $query->the_post();
-                    get_template_part( 'templates/blog/gird/content', get_post_format());
+                    get_template_part( 'templates/blog/grid/content', get_post_format());
                 endwhile;
                 ?>
                 </div>
