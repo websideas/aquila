@@ -1,7 +1,6 @@
 .container-megamenu{
     background-color: #fafafa;
     border: 1px solid #dfdfdf;
-    box-shadow: 0 0 4px #ddd;
     margin: 10px 10px 10px 0;
     box-shadow: 0 0 2px #ddd;
     padding: 10px;
@@ -27,15 +26,6 @@ ul#menu-to-edit .menu-item-depth-1.megamenu .megamenu-layout-depth-1{
     display: block;
 }
 
-
-/*
-ul#menu-to-edit .menu-item-depth-1.megamenu .megamenu-layout,
-ul#menu-to-edit .menu-item-depth-0.megamenu .megamenu-layout,
-ul#menu-to-edit .menu-item-depth-0.megamenu .wrapper-megamenu,
-ul#menu-to-edit .menu-item-depth-1.megamenu .wrapper-megamenu,
-ul#menu-to-edit .menu-item-depth-0.megamenu .field-enable,
-ul#menu-to-edit .menu-item-depth-0.megamenu .megamenu-layout-depth-0,
-ul#menu-to-edit .menu-item-depth-1.megamenu .megamenu-layout-depth-1{
-    display: block;
+ul#menu-to-edit .menu-item-depth-0.menu-item-category .megamenu-layout{
+    display: none!important;
 }
-*/

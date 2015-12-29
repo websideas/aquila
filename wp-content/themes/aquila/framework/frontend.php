@@ -310,20 +310,20 @@ if ( ! function_exists( 'kt_post_thumbnail' ) ) :
                         $slider_html
                     );
                 }
-            }elseif($type == 'gird'){
-                $images = get_galleries_post('_kt_gallery_images', 'small');
+            }elseif($type == 'grid'){
+                $images = get_galleries_post('_kt_gallery_images', 'recent_posts_masonry');
                 $gallery = '';
                 if($images){
                     foreach($images as $image){
                         $gallery .= sprintf(
                             '<div class="%s">%s</div>',
                             'gallery-image-item',
-                            '<a href="'.$image['full_url'].'"><img src="'.$image['url'].'" title="'.esc_attr($image['title']).'" alt="'.esc_attr($image['alt']).'"></a>'
+                            '<a href="'.$image['full_url'].'"><span></span><img src="'.$image['url'].'" title="'.esc_attr($image['title']).'" alt="'.esc_attr($image['alt']).'"></a>'
                         );
                     }
                     printf(
                         '<div class="entry-thumb"><div class="%s">%s</div></div><!-- .entry-thumb -->',
-                        'gallery-images clearfix',
+                        'gallery-images gallery-images-justified  clearfix',
                         $gallery
                     );
                 }

@@ -1898,14 +1898,22 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => __( 'Header layout', THEME_LANG ),
                         'subtitle' => __( 'Please choose header layout', THEME_LANG ),
                         'options'  => array(
-                            'layout1' => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'header/header-v1.png' ),
-                            'layout2' => array( 'alt' => __( 'Layout 2', THEME_LANG ), 'img' => FW_IMG . 'header/header-v2.png' ),
+                            1 => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'header/header-v1.png' ),
+                            2 => array( 'alt' => __( 'Layout 2', THEME_LANG ), 'img' => FW_IMG . 'header/header-v2.png' ),
                         ),
-                        'default'  => 'layout1'
+                        'default'  => 1
                     ),
                     array(
                         'id'   => 'divide_id',
                         'type' => 'divide'
+                    ),
+                    array(
+                        'id' => 'header_shadow',
+                        'type' => 'switch',
+                        'title' => __('Header shadow', THEME_LANG),
+                        "default" => 1,
+                        'on'		=> __( 'Enabled', THEME_LANG ),
+                        'off'		=> __( 'Disabled', THEME_LANG ),
                     ),
                     array(
                         'id' => 'header_search',
@@ -2003,7 +2011,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '3-6-3' => array('alt' => __('Layout 8', THEME_LANG), 'img' => FW_IMG . 'footer/footer-8.png'),
                             '12' => array('alt' => __('Layout 9', THEME_LANG), 'img' => FW_IMG . 'footer/footer-9.png'),
                         ),
-                        'default' => '3-3-3-3'
+                        'default' => '4-4-4'
                     ),
                     /* Footer Bottom */
                     array(
@@ -2885,6 +2893,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             3 => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'single/layout-3.jpg' ),
                             4 => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'single/layout-4.jpg' ),
                             5 => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'single/layout-5.jpg' ),
+                            6 => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'single/layout-6.jpg' ),
                         ),
                         'default'  => 1
                     ),
@@ -2969,7 +2978,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Author info in posts', THEME_LANG),
                         'desc' => __('Show author info in blog posts.', THEME_LANG),
-                        "default" => 0,
+                        "default" => 1,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG)
                     ),
@@ -2978,7 +2987,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Related posts', THEME_LANG),
                         'desc' => __('Show related posts in blog posts.', THEME_LANG),
-                        "default" => 0,
+                        "default" => 1,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG)
                     ),
@@ -3386,10 +3395,10 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'facebook' => true,
                             'twitter' => true,
                             'google_plus' => true,
-                            'pinterest' => true,
-                            'linkedin' => true,
-                            'tumblr' => true,
-                            'mail' => true,
+                            'pinterest' => false,
+                            'linkedin' => false,
+                            'tumblr' => false,
+                            'mail' => false,
                         )
                     )
                 )
@@ -3420,10 +3429,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                     )
                 )
             );
-
-
-
-
 
 
             /**

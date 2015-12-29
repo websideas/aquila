@@ -21,7 +21,7 @@ class WPBakeryShortCode_KT_Gallery_Justified extends WPBakeryShortCode_VC_Custom
         extract($atts);
         
         $elementClass = array(
-            'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'wrapper-gallery ', $this->settings['base'], $atts ),
+            'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'wrapper-gallery-justified ', $this->settings['base'], $atts ),
             'extra' => $this->getExtraClass( $el_class ),
             'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' ),
         );
@@ -31,7 +31,8 @@ class WPBakeryShortCode_KT_Gallery_Justified extends WPBakeryShortCode_VC_Custom
         if( $gallery_popup == 'true' ){ $popup = ' popup-gallery'; }else{ $popup = ''; }
         $output = '';
         if( count($image_gallery) > 0 ){
-            $output .= '<div class="'.esc_attr( $elementClass ).'" style="margin-left:-'.$margin_image.'px;margin-right:-'.$margin_image.'px;">';
+            $output .= '<div class="'.esc_attr( $elementClass ).'">';
+                $output .= '<div class="gallery-grid-outer" style="margin-left:-'.esc_attr($margin_image).'px;margin-right:-'.esc_attr($margin_image).'px;">';
                 $output .= '<div class="justified-gallery'.$popup.'" data-height="'.esc_attr($row_height).'" data-margin="'.esc_attr($margin_image).'">';
                     foreach ( $image_gallery as $attach_id ) {
                     	if ( $attach_id > 0 ) {
@@ -41,11 +42,16 @@ class WPBakeryShortCode_KT_Gallery_Justified extends WPBakeryShortCode_VC_Custom
                             }
                     	}
                         $output .= '<div class="gallery-item">';
-                            if( $gallery_popup == 'true' ){ $output .= '<a href="'.$image_popup[0].'">'; }
-                                $output .= $image['thumbnail'];
-                            if( $gallery_popup == 'true' ){ $output .= "</a>"; }
+                            if( $gallery_popup == 'true' ){
+                                $output .= '<a href="'.esc_attr($image_popup[0]).'">';
+                            }
+                            $output .= $image['thumbnail'];
+                            if( $gallery_popup == 'true' ){
+                                $output .= "</a>";
+                            }
                         $output .= '</div>';
                     }
+                $output .= '</div>';
                 $output .= '</div>';
             $output .= '</div>';
         }

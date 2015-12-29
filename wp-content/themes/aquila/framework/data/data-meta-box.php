@@ -429,7 +429,12 @@ function kt_register_meta_boxes( $meta_boxes )
         'page_layout' => array(
             'label' => __( 'Layout', THEME_LANG ),
             'icon'  => 'fa fa-columns',
+        ),
+        'page_background' => array(
+            'label' => __( 'Background', THEME_LANG ),
+            'icon'  => 'fa fa-picture-o',
         )
+
     );
 
     $fields = array(
@@ -549,6 +554,20 @@ function kt_register_meta_boxes( $meta_boxes )
             'desc' => __('If you wish to add extra classes to the body class of the page (for custom css use), then please add the class(es) here.', THEME_LANG ),
             'type'  => 'text',
             'tab'  => 'page_layout',
+        ),
+        array(
+            'name' => __('Background', THEME_LANG),
+            'id' => $prefix.'background_body',
+            'type'  => 'background',
+            'tab'  => 'page_background',
+            'desc' => __('The option that will be used as the OUTER page.', THEME_LANG ),
+        ),
+        array(
+            'name' => __('Inner Background', THEME_LANG),
+            'id' => $prefix.'background_inner',
+            'type'  => 'background',
+            'tab'  => 'page_background',
+            'desc' => __('The option that will be used as the INNER page.', THEME_LANG ),
         )
     );
 
@@ -598,7 +617,20 @@ function kt_register_meta_boxes( $meta_boxes )
             'visible' => array($prefix . 'page_header', '!=', 'off')
         ),
 
-
+        // Header
+        array(
+            'name' => __('Header shadow', THEME_LANG),
+            'id'   => "{$prefix}header_shadow",
+            'type' => 'select',
+            'options' => array(
+                ''    => __('Default', THEME_LANG),
+                'off'		=> __('Hidden', THEME_LANG),
+                'on'		=> __('Show', THEME_LANG),
+            ),
+            'std'  => '',
+            'tab'  => 'header',
+            'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
+        ),
         array(
             'name'    => __( 'Header position', THEME_LANG ),
             'type'     => 'select',
@@ -715,12 +747,13 @@ function kt_register_meta_boxes( $meta_boxes )
             'desc' => __('Select the your post layout.', THEME_LANG),
             'id'   => "{$prefix}blog_post_layout",
             'options' => array(
-                0    => __('Default', THEME_LANG),
+                ''    => __('Default', THEME_LANG),
                 1 => __( 'Layout 1', THEME_LANG ),
                 2 => __( 'layout 2', THEME_LANG ),
                 3 => __( 'layout 3', THEME_LANG ),
                 4 => __( 'layout 4', THEME_LANG ),
                 5 => __( 'layout 5', THEME_LANG ),
+                6 => __( 'layout 6', THEME_LANG ),
             ),
             'std' => '',
             'tab'  => 'post_general',

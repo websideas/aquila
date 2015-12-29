@@ -4,7 +4,7 @@
     $type = get_post_meta($post_id, '_kt_gallery_type', true);
     ?>
 
-    <?php if($type == 'gird'){ ?>
+    <?php if($type == 'grid'){ ?>
         <div class="row row-eq-height">
             <div class="col-md-6 post-item-thumb post-item-thumb">
                 <?php the_post_thumbnail('first_featured'); ?>
@@ -50,7 +50,7 @@
                 $slider_html
             );
         }
-    }elseif($type == 'gird'){
+    }elseif($type == 'grid'){
         $images = get_galleries_post('_kt_gallery_images', 'small');
         $gallery = '';
         if($images){

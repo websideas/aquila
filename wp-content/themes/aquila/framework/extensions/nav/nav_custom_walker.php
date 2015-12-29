@@ -235,7 +235,7 @@ class KTMegaWalker extends Walker_Nav_Menu{
                 ob_start();
                 foreach( $menu_posts as $post ): ?>
                     <div class="col-lg-4 col-md-4">
-                        <?php get_template_part( 'templates/blog/gird/contento', get_post_format()); ?>
+                        <?php get_template_part( 'templates/blog/grid/contento', get_post_format()); ?>
                     </div>
                     <?php
                 endforeach;

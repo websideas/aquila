@@ -28,7 +28,6 @@
 
     $position = kt_get_header();
     $header_layout = kt_get_header_layout();
-
     ?>
     <?php get_template_part( 'templates/sidearea'); ?>
     <div id="page_outter">
@@ -36,15 +35,33 @@
             <div id="wrapper-content">
                 <?php do_action( 'theme_before_header' ); ?>
 
+                <?php
+                if($position == 'below'){
+                    /**
+                     * @hooked kt_slideshows_position_callback 10
+                     */
+                    do_action( 'kt_slideshows_position' );
+                }
+                ?>
+
                 <?php get_template_part( 'templates/headers/header',  'mobile'); ?>
                 <?php get_template_part( 'templates/headers/header',  'mobilenav'); ?>
 
-                <div class="<?php echo esc_attr(apply_filters('theme_header_class', 'header-container header-'.$header_layout.' header-'.$position, $header_layout)); ?>">
+                <div class="<?php echo esc_attr(apply_filters('theme_header_class', 'header-container header-layout'.$header_layout.' header-'.$position, $header_layout)); ?>">
                     <header id="header" class="<?php echo apply_filters('theme_header_content_class', 'header-content', $header_layout) ?>">
-                        <?php get_template_part( 'templates/headers/header',  $header_layout); ?>
+                        <?php get_template_part( 'templates/headers/header',  'layout'.$header_layout); ?>
                     </header><!-- #header -->
                 </div><!-- .header-container -->
-                
+
+                <?php
+                if($position != 'below'){
+                    /**
+                     * @hooked kt_slideshows_position_callback 10
+                     */
+                    do_action( 'kt_slideshows_position' );
+                }
+                ?>
+
                 <?php do_action( 'theme_before_content' , $position); ?>
                 <div id="content" class="<?php echo apply_filters('kt_content_class', 'site-content') ?>">
                     <?php do_action( 'theme_content_top' ); ?>

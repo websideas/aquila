@@ -34,7 +34,13 @@ get_header(); ?>
 
         $orderby = get_post_meta($post_id, '_kt_frontpage_orderby', true);
         $order = get_post_meta($post_id, '_kt_order', true);
-        $paged = (get_query_var('page')) ? get_query_var('page') : 1;
+        $paged = get_query_var('page');
+        if($paged == ''){
+            $paged = get_query_var('paged');
+        }
+        if(!$paged){
+            $paged = 1;
+        }
 
         $args = array(
             'post_type' => 'post',

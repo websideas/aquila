@@ -1272,6 +1272,7 @@ ul.kt_posts_carousel_widget{
  **/
 
 .widget_kt_mailchimp{
+
   .kt_mailchimp-before{
     font-style: italic;
     letter-spacing: 0.025em;
@@ -1308,7 +1309,6 @@ ul.kt_posts_carousel_widget{
     }
   }
 }
-
 
 /**
  * Socials
@@ -1371,7 +1371,7 @@ ul.kt_posts_carousel_widget{
  * 15.12. Contact Info
  **/
 .contact-info-wrapper{
-  margin-bottom: 30px;
+  margin-bottom: $shortcode;
   > ul{
     padding:0;
     li{
@@ -1739,6 +1739,7 @@ ul.kt_posts_carousel_widget{
 
 .wrapper-googlemap{
   position: relative;
+  margin-bottom: $shortcode;
   .content-map{
     position: absolute;
     padding: 45px 45px 25px;
@@ -1837,7 +1838,7 @@ ul.kt_posts_carousel_widget{
  */
 ul.style-list{
   padding: 0;
-  margin: 0 0 30px;
+  margin: 0 0 $shortcode;
   list-style: none;
   li{
     padding-left: 52px;
@@ -1891,6 +1892,22 @@ ul.style-list{
   }
 }
 
+/*
+ * 10.4 Gallery Justified
+ */
+.wrapper-gallery-justified{
+  margin-bottom: $shortcode;
+  .justified-gallery > a > .caption,
+  .justified-gallery > div > .caption{
+    padding: 5px 15px;
+  }
+}
+/*
+ * 10.4 Gallery Grid
+ */
+.wrapper-gallery-grid{
+  margin-bottom: $shortcode;
+}
 
 /* ==============================
    7. Header
@@ -1948,16 +1965,8 @@ ul.style-list{
   }
 }
 
-#header{
-
-}
-
 #header-content{
   position: relative;
-  @include box-shadow(0, 2px, 6px, rgba($black, 0.05));
-  &.header-shadow {
-    @include box-shadow(0, 2px, 6px, rgba($black, 0.05));
-  }
 }
 
 #main-nav-tool{
@@ -2369,7 +2378,6 @@ ul.style-list{
     left: 40px;
     top: 0;
   }
-
   #main-nav-tool,
   .main-nav-socials{
     float: right;
@@ -2379,17 +2387,14 @@ ul.style-list{
       height: $header-height;
     }
   }
-
   #main-nav-tool{
     position: absolute;
     right: 40px;
     top: 0;
   }
-
   .nav-container{
     float: left;
   }
-
   .layout-boxed &{
     .main-nav-socials{
       margin-right: 15px;
@@ -2401,12 +2406,16 @@ ul.style-list{
       position: static;
     }
   }
-
 }
 
-.header-container.is-sticky.sticky-header-down .nav-container .nav-container-inner,
-.header-container.header-layout2.is-sticky.sticky-header-down #header-content{
-
+.header-container{
+  background: $white;
+  &.header-shadow {
+    #header-content{
+      z-index: 3;
+      @include box-shadow(0, 2px, 6px, rgba($black, 0.05));
+    }
+  }
 }
 
 /*
@@ -2859,6 +2868,7 @@ body.opened-nav-animate{
    ============================== */
 #main-sideshow{
   position: relative;
+  z-index: 1;
   #sideshow-inner {
     max-width: 1140px;
     margin: 0 auto;
@@ -2866,6 +2876,9 @@ body.opened-nav-animate{
   &.postslider-graybg{
     padding: 98px;
     background: $gray-bg;
+    .slick-slider{
+      position: static;
+    }
   }
   &.slideshow_page-graybg{
     padding: 120px;
@@ -2899,6 +2912,7 @@ body.opened-nav-animate{
     }
   }
   &.postslider-thumb{
+    margin-top: 50px;
     #sideshow-inner{
       overflow: hidden;
       position: relative;
@@ -3515,8 +3529,12 @@ article.post-item-content{
     border-bottom: 2px solid $border-color;
     .entry-title{
       a {
+        color: $black;
         &:before {
           border-color: $primary-color;
+        }
+        &:hover{
+          color: $primary-color;
         }
       }
     }
@@ -3648,11 +3666,9 @@ article.post-item-content{
 
         }
       }
-
       .entry-summary{
         margin-bottom: 0;
       }
-
     }
     &.format-gallery{
       .gallery-images{
@@ -3791,6 +3807,67 @@ article.post-item-content{
 }
 
 
+.gallery-images-justified{
+  margin: -30px;
+  width: auto;
+  .gallery-image-item{
+    a{
+      span {
+        z-index: 2;
+        @include translate();
+        width: 50px;
+        height: 50px;
+        &:before,
+        &:after{
+          content: '';
+          background: $primary-color;
+          display: block;
+        }
+        &:before{
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          margin-top: -1px;
+        }
+        &:after{
+          height: 100%;
+          width: 2px;
+          position: absolute;
+          left: 50%;
+          top: 0;
+          margin-left: -1px;
+        }
+      }
+      &:after {
+        background: $white;
+        content: "";
+        right: 5px;
+        left: 5px;
+        top: 5px;
+        bottom: 5px;
+        position: absolute;
+        z-index: 1;
+      }
+      span,
+      &:after{
+        @include transition();
+        @include opacity(0);
+      }
+
+      &:hover{
+        span{
+          @include opacity(1);
+        }
+        &:after {
+          @include opacity(.6);
+        }
+      }
+    }
+  }
+}
+
 /* ==============================
    18. Single post
    ============================== */
@@ -3910,8 +3987,23 @@ article.post-item-content{
     }
   }
 
+  &.post-layout-6{
+    .entry-header,
+    .entry-content,
+    .entry-footer{
+      margin-left: 195px;
+      margin-right: 195px;
+    }
+  }
 }
 
+
+.post-layout-6{
+  &.post-single-addons{
+    margin-left: 195px;
+    margin-right: 195px;
+  }
+}
 
 /*
  * 12.4. Author Info

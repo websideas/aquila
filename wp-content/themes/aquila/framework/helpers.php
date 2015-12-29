@@ -160,11 +160,15 @@ if (!function_exists('kt_get_single_sidebar')) {
                 $sidebar['sidebar_area'] = kt_option('single_sidebar_left', 'primary-widget-area');
             }elseif($sidebar['sidebar'] == 'right'){
                 $sidebar['sidebar_area'] = kt_option('single_sidebar_right', 'primary-widget-area');
+            }elseif($sidebar['sidebar'] == 'full'){
+                $sidebar['sidebar'] = '';
             }
         }elseif($sidebar['sidebar'] == 'left'){
             $sidebar['sidebar_area'] = rwmb_meta('_kt_left_sidebar', array(), $post_id);
         }elseif($sidebar['sidebar'] == 'right'){
             $sidebar['sidebar_area'] = rwmb_meta('_kt_right_sidebar', array(), $post_id);
+        }elseif($sidebar['sidebar'] == 'full'){
+            $sidebar['sidebar'] = '';
         }
         return apply_filters('single_sidebar', $sidebar);
     }
@@ -387,7 +391,7 @@ if (!function_exists('kt_show_slideshow')) {
                     $sideshow_class[] = 'postslider-graybg';
                     $slider_class[] = 'slideAnimation';
                 } elseif ($style == 'thumb'){
-                    $slider_option = '{"arrows": true, "asNavFor": ".blog-posts-thumb"}';
+                    $slider_option = '{"arrows": true, "asNavFor": ".blog-posts-thumb", "fade": true}';
                     $slider_thumbnail .= '<div class="blog-posts-thumb">';
                 }elseif($style == 'slider'){
                     $slider_class[] = 'slideAnimation';
@@ -611,15 +615,17 @@ if (!function_exists('kt_post_option')) {
      * @param string $default Optional. Default vaule if theme option don't have data
      * @return boolean
      */
-    function kt_post_option($post_id = null, $meta = '', $option = '', $default = null)
+    function kt_post_option($post_id = null, $meta = '', $option = '', $default = null, $boolean = true)
     {
         global $post;
         if (!$post_id) $post_id = $post->ID;
         $meta_v = get_post_meta($post_id, $meta, true);
-        if ($meta_v == '') {
+
+        if ($meta_v == '' || $meta_v == 0) {
             $meta_v = kt_option($option, $default);
         }
-        return apply_filters('sanitize_boolean', $meta_v);
+        $ouput = ($boolean) ? apply_filters('sanitize_boolean', $meta_v) : $meta_v;
+        return $ouput;
     }
 }
 
@@ -675,6 +681,7 @@ if (!function_exists('kt_render_custom_css')) {
             global $post;
             $post_id = $post->ID;
         }
+
         $page_bg = rwmb_meta($meta, array(), $post_id);
         if(is_array($page_bg)){
             $page_arr = array();

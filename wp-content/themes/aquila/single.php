@@ -11,11 +11,13 @@
 get_header();
 
 $post_id = get_the_ID();
-
 $sidebar = kt_get_single_sidebar();
-
-$layout = kt_option('single_layout', 1);
+$layout = kt_post_option(null, '_kt_blog_post_layout', 'single_layout', 1, false);
 $imagesize = kt_option('single_image_size', 'full');
+
+if($layout == 6){
+    $sidebar['sidebar'] = '';
+}
 
 ?>
     <?php if( ! post_password_required( ) && $layout == 3 ){ ?>
@@ -27,7 +29,6 @@ $imagesize = kt_option('single_image_size', 'full');
          * @hooked
          */
         do_action( 'theme_before_main' ); ?>
-
 
         <?php
             $main_column = ($sidebar['sidebar']) ? '8' : '12';

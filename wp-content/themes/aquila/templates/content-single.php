@@ -1,14 +1,15 @@
 <?php
 
 $post_id = get_the_ID();
-$layout = kt_option('single_layout', 1);
-$imagesize = kt_option('single_image_size', 'full');
+$layout = kt_post_option(null, '_kt_blog_post_layout', 'single_layout', 1, false);
+$imageSize = kt_option('single_image_size', 'full');
+$post_class = array('post-single', 'post-layout-'.$layout);
 
 ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class( 'post-single' ); ?>>
+<div id="post-<?php the_ID(); ?>" <?php post_class( $post_class ); ?>>
     <?php
-    if($layout == 1){
-        kt_post_thumbnail($imagesize, 'img-responsive', false);
+    if($layout == 1 || $layout == 6){
+        kt_post_thumbnail($imageSize, 'img-responsive', false);
     }
     ?>
     <header class="entry-header">
@@ -56,7 +57,7 @@ $imagesize = kt_option('single_image_size', 'full');
     </footer><!-- .entry-footer -->
 </div><!-- #post-<?php the_ID(); ?> -->
 
-<div class="post-single-addons">
+<div class="post-single-addons <?php echo esc_attr('post-layout-'.$layout); ?>">
     <?php
 
     if(kt_post_option(null, '_kt_author_info', 'single_author', 1)){

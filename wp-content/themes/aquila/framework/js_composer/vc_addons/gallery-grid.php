@@ -18,6 +18,8 @@ class WPBakeryShortCode_KT_Gallery_Grid extends WPBakeryShortCode {
             'css' => '',
         ), $atts );
         extract($atts);
+
+        $gallery_popup = apply_filters('sanitize_boolean', $gallery_popup);
         
         $elementClass = array(
             'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'wrapper-gallery-grid ', $this->settings['base'], $atts ),
@@ -25,24 +27,26 @@ class WPBakeryShortCode_KT_Gallery_Grid extends WPBakeryShortCode {
             'shortcode_custom' => vc_shortcode_custom_css_class( $css, ' ' ),
         );
         $elementClass = preg_replace( array( '/\s+/', '/^\s|\s$/' ), array( ' ', '' ), implode( ' ', $elementClass ) );
-        
-        if( $image_gallery ){ $image_gallery = explode( ',', $image_gallery ); }else{ $image_gallery = array(); }
-        if( $gallery_popup == 'true' ){ $popup = ' popup-gallery'; }else{ $popup = ''; }
+
+
+        $image_gallery = ($image_gallery) ? explode( ',', $image_gallery ) : array();
+        $popup = ($gallery_popup) ?  ' popup-gallery' : '';
+
         $lightbox_image = $output = '';
         if( count($image_gallery) > 0 ){
+
             $output .= '<div class="'.esc_attr( $elementClass ).'">';
                 $output .= '<div class="gallery-grid'.$popup.'" data-popup="'.esc_attr( $gallery_popup ).'" data-layout="'.esc_attr($layout).'" data-margin="'.esc_attr($margin_image).'">';
                     foreach ( $image_gallery as $attach_id ) {
                     	if ( $attach_id > 0 ) {
                     		$image = wp_get_attachment_image_src( $attach_id, $image_size );
 
-                            if( $gallery_popup == 'true' ){
+                            if( $gallery_popup){
                                 $image_popup = wp_get_attachment_image_src( $attach_id, $image_size_popup );
                                 $lightbox_image = 'data-lightbox="'.$image_popup[0].'"';
                             }
                             $output .= '<img src="'.$image[0].'" alt="" '.$lightbox_image.' />';
                     	}
-
                     }
                 $output .= '</div>';
             $output .= '</div>';
@@ -71,7 +75,7 @@ class WPBakeryShortCode_KT_Gallery_Grid extends WPBakeryShortCode {
 			$output .= '<ul class="attachment-thumbnails' . ( empty( $images_ids ) ? ' image-exists' : '' ) . '" data-name="' . $param_name . '">';
 			foreach ( $images_ids as $image ) {
 				$img = wpb_getImageBySize( array( 'attach_id' => (int)$image, 'thumb_size' => 'thumbnail' ) );
-				$output .= ( $img ? '<li>' . $img['thumbnail'] . '</li>' : '<li><img width="150" height="150" test="' . $image . '" src="' . vc_asset_url( 'vc/blank.gif' ) . '" class="attachment-thumbnail" alt="" title="" /></li>' );
+				$output .= ( $img ? '<li>' . $img['thumbnail'] . '</li>' : '<li><img width="150" height="150" src="' . vc_asset_url( 'vc/blank.gif' ) . '" class="attachment-thumbnail" alt="" title="" /></li>' );
 			}
 			$output .= '</ul>';
 			$output .= '<a href="#" class="column_edit_trigger' . ( ! empty( $images_ids ) ? ' image-exists' : '' ) . '">' . __( 'Add images', 'js_composer' ) . '</a>';

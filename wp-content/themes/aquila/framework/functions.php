@@ -92,7 +92,7 @@ function theme_body_classes( $classes ) {
         $classes[] = 'layout-'.kt_getlayout($post->ID);
         $classes[] = rwmb_meta('_kt_extra_page_class');
 
-        if(is_page_template( 'front-page.php' )){
+        if(is_page_template( 'frontpage.php' )){
             $content = get_post_meta($post->ID, '_kt_frontpage_content', true);
             if($content){
                 $slideshow_type = get_post_meta($post->ID, '_kt_slideshow_type', true);
@@ -106,8 +106,6 @@ function theme_body_classes( $classes ) {
     }else{
         $classes[] = 'layout-'.kt_option('layout', 'boxed');
     }
-
-
 
     return $classes;
 }
@@ -166,6 +164,9 @@ add_filter('kt_sidebar_class', 'kt_sidebar_class_callback', 10, 2);
  * Add class sticky to header
  */
 function theme_header_class_callback($classes, $layout){
+    global $post;
+
+
     $fixed_header = kt_option('fixed_header', 2);
     if($fixed_header == 2 || $fixed_header == 3 ){
         $classes .= ' sticky-header';
@@ -174,8 +175,17 @@ function theme_header_class_callback($classes, $layout){
         }
     }
 
-    $header_shadow = kt_option('header_shadow', true);
-    if($header_shadow){
+    if(is_page() || is_singular()){
+        $post_id = $post->ID;
+        $header_shadow = rwmb_meta('_kt_header_shadow', array(), $post_id);
+        if($header_shadow == ''){
+            $header_shadow = kt_option('header_shadow', true);
+        }
+    }else{
+        $header_shadow = kt_option('header_shadow', true);
+    }
+
+    if($header_shadow == 'on' || $header_shadow == 1){
         $classes .= ' header-shadow';
     }
 
@@ -539,3 +549,5 @@ function kt_get_page_subtitle(){
 
     return $subtitle;
 }
+
+

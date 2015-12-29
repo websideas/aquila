@@ -47,8 +47,7 @@ $composer_addons = array(
     'googlemap.php',
     'socials.php',
     'gallery-grid.php',
-    'gallery-justified.php',
-    'kt_image_gallery.php'
+    'gallery-justified.php'
 );
 
 foreach ( $composer_addons as $addon ) {

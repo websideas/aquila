@@ -20,8 +20,13 @@ get_header(); ?>
     	do_action( 'theme_before_main' );
 
         ?>
-        <div class="row">    
-            <div id="main" class="<?php echo apply_filters('kt_main_class', 'main-class', $sidebar['sidebar']); ?>">
+        <?php
+            $main_column = ($sidebar['sidebar']) ? '8' : '12';
+            $sidebar_class = ($sidebar['sidebar']) ? 'sidebar-'.$sidebar['sidebar'] : 'no-sidebar';
+            $pull_class = ($sidebar['sidebar'] == 'left') ? 'pull-right' : '';
+        ?>
+        <div class="row main <?php echo $sidebar_class; ?>">
+            <?php echo '<div class="main-content col-md-'.$main_column.' '.$pull_class.'">'; ?>
                 <?php /* The loop */ ?>
                 <?php while ( have_posts() ) : the_post(); ?>
                     <?php
@@ -29,9 +34,10 @@ get_header(); ?>
                         get_template_part( 'templates/content', 'page' );
                     ?>
                 <?php endwhile; ?>
+                </div><!-- .main-content -->
             </div>
-            <?php if($sidebar['sidebar'] != 'full'){ ?>
-                <div class="col-md-4 sidebar main-sidebar">
+            <?php if($sidebar['sidebar']){ ?>
+                <?php echo '<div class="col-md-4 sidebar main-sidebar">'; ?>
                     <?php dynamic_sidebar($sidebar['sidebar_area']); ?>
                 </div><!-- .sidebar -->
             <?php } ?>
