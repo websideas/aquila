@@ -3565,6 +3565,11 @@ article.post-item-content{
     margin-bottom: 50px;
     padding-bottom: 50px;
     border-bottom: 2px solid $border-color;
+    .entry-thumb{
+      img{
+        width: 100%;
+      }
+    }
     .entry-title{
       a {
         color: $black;
@@ -3645,7 +3650,7 @@ article.post-item-content{
     background: rgba($black, .7);
     padding: 30px 25px;
     color: $white;
-    width: 320px;
+    max-width: 320px;
   }
   .entry-title-featured{
     font-size: 18px;

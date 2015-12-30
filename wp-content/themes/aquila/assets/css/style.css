@@ -3965,6 +3965,8 @@ article.post-item-content {
     margin-bottom: 50px;
     padding-bottom: 50px;
     border-bottom: 2px solid #eeeeee; }
+    article.post-item-content.first-featured .entry-thumb img {
+      width: 100%; }
     article.post-item-content.first-featured .entry-title a {
       color: #000000; }
       article.post-item-content.first-featured .entry-title a:before {
@@ -4020,7 +4022,7 @@ article.post-item-content {
     background: rgba(0, 0, 0, 0.7);
     padding: 30px 25px;
     color: #FFFFFF;
-    width: 320px; }
+    max-width: 320px; }
   article.post-item-content .entry-title-featured {
     font-size: 18px;
     line-height: 30px;

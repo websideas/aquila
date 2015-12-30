@@ -306,13 +306,24 @@
 
         $('.blog-posts-slick').slick();
 
-        $('.blog-posts-related').slick();
-
         $('.blog-posts-thumb').slick({
             asNavFor: '.blog-posts-slick',
             slidesToShow: 3,
             arrows: false,
             focusOnSelect: true
+        });
+
+        $('.blog-posts-related').slick({
+            slidesToShow: 2,
+            responsive: [
+            {
+              breakpoint: 480,
+              settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1
+              }
+            }
+            ]
         });
 
         var slide_carousel = $('.kt_posts_carousel_widget').slick({
@@ -328,7 +339,6 @@
             slide_carousel.slick('slickPrev');
             return false;
         });
-
     }
 
     /* ---------------------------------------------

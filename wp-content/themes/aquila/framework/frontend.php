@@ -893,7 +893,7 @@ if ( ! function_exists( 'kt_related_article' ) ) :
         <?php if($query->have_posts()){ ?>
             <div id="related-article">
                 <h3 class="post-single-heading"><?php _e('Related Article', THEME_LANG); ?></h3>
-                <div class="blog-posts-related"  data-slick='{"slidesToShow": 2}'>
+                <div class="blog-posts-related">
                 <?php
                 while ( $query->have_posts() ) : $query->the_post();
                     get_template_part( 'templates/blog/grid/content', get_post_format());
