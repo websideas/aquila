@@ -328,4 +328,18 @@ only screen and (min-resolution: 144dpi) {
       text-align: center;
     }
   }
+  #footer-bottom{
+    .social-text{
+      ul{
+        li{
+          a{
+            font-size: 14px;
+            span{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -210,6 +210,11 @@
     margin-bottom: 10px; }
   .author-info .author-description {
     padding-left: 0;
-    text-align: center; } }
+    text-align: center; }
+
+  #footer-bottom .social-text ul li a {
+    font-size: 14px; }
+    #footer-bottom .social-text ul li a span {
+      display: none; } }
 
 /*# sourceMappingURL=queries.css.map */
