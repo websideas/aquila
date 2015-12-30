@@ -111,55 +111,6 @@ function theme_body_classes( $classes ) {
 }
 add_filter( 'body_class', 'theme_body_classes' );
 
-
-
-
-/**
- * Add class layout for main class
- *
- * @since 1.0
- *
- * @param string $classes current class
- * @param string $layout layout current of page
- *
- * @return array The filtered body class list.
- */
-function kt_main_class_callback($classes, $layout){
-
-    if($layout == 'left' || $layout == 'right'){
-        $classes .= ' col-md-8 col-sm-12 col-xs-12';
-    }else{
-        $classes .= ' col-md-12 col-xs-12';
-    }
-
-    if($layout == 'left'){
-         $classes .= ' pull-right';
-    }
-    return $classes;
-}
-add_filter('kt_main_class', 'kt_main_class_callback', 10, 2);
-
-
-/**
- * Add class layout for sidebar class
- *
- * @since 1.0
- *
- * @param string $classes current class
- * @param string $layout layout current of page
- *
- * @return array The filtered body class list.
- */
-function kt_sidebar_class_callback( $classes, $layout ){
-    if($layout == 'left' || $layout == 'right'){
-        $classes .= ' col-md-4 col-sm-12 col-xs-12';
-    }
-    return $classes;
-}
-add_filter('kt_sidebar_class', 'kt_sidebar_class_callback', 10, 2);
-
-
-
 /**
  * Add class sticky to header
  */
@@ -198,21 +149,6 @@ function theme_header_class_callback($classes, $layout){
 
 add_filter('theme_header_class', 'theme_header_class_callback', 10, 2);
 
-
-/**
- * Add class sticky to header
- */
-function theme_header_content_class_callback( $classes, $layout ){
-
-    if(kt_option('header_full', 1)){
-        $classes .= ' header-fullwidth';
-    }
-
-
-    return $classes;
-}
-
-add_filter('theme_header_content_class', 'theme_header_content_class_callback', 10, 2);
 
 /**
  * Add slideshow header

@@ -2182,6 +2182,8 @@ ul.style-list{
             background: #333333;
             color: $primary-color;
           }
+        }
+        &:hover{
           > ul{
             @include opacity(1);
             @include transform(translate(0, 0));

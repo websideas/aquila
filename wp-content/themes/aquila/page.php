@@ -27,15 +27,14 @@ get_header(); ?>
         ?>
         <div class="row main <?php echo $sidebar_class; ?>">
             <?php echo '<div class="main-content col-md-'.$main_column.' '.$pull_class.'">'; ?>
-                <?php /* The loop */ ?>
-                <?php while ( have_posts() ) : the_post(); ?>
-                    <?php
-                        // Include the page content template.
-                        get_template_part( 'templates/content', 'page' );
-                    ?>
-                <?php endwhile; ?>
-                </div><!-- .main-content -->
-            </div>
+            <?php /* The loop */ ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+                <?php
+                    // Include the page content template.
+                    get_template_part( 'templates/content', 'page' );
+                ?>
+            <?php endwhile; ?>
+            </div><!-- .main-content -->
             <?php if($sidebar['sidebar']){ ?>
                 <?php echo '<div class="col-md-4 sidebar main-sidebar">'; ?>
                     <?php dynamic_sidebar($sidebar['sidebar_area']); ?>

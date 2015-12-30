@@ -176,14 +176,16 @@ add_filter( 'excerpt_length', 'kt_excerpt_length', 99 );
  */
 function custom_posts_per_page( $query ) {
     if(!is_admin()){
-        if(is_search()){
+        if(isset($_REQUEST['per_page'])){
+            $posts_per_page = $_REQUEST['per_page'];
+        }elseif(is_search()){
             $posts_per_page = kt_option('search_posts_per_page', 9);
-            set_query_var('posts_per_page', $posts_per_page);
         }elseif ( $query->is_author()) {
             $posts_per_page = kt_option('author_posts_per_page', 9);
-            set_query_var('posts_per_page', $posts_per_page);
         }elseif($query->is_archive()){
             $posts_per_page = kt_option('archive_posts_per_page', 14);
+        }
+        if(isset($posts_per_page)){
             set_query_var('posts_per_page', $posts_per_page);
         }
     }
@@ -617,7 +619,6 @@ if ( ! function_exists( 'kt_entry_excerpt' ) ) :
 	 */
 	function kt_entry_excerpt( $class = 'entry-summary' ) {
 		$class = esc_attr( $class );
-
 		 ?>
 			<div class="<?php echo $class; ?>">
 				<?php the_excerpt(); ?>
@@ -673,20 +674,22 @@ if ( ! function_exists( 'kt_entry_meta' ) ) {
      * Create your own kt_entry_meta() function to override in a child theme.
      *
      */
-    function kt_entry_meta() {
+    function kt_entry_meta( $share = false ) {
         echo '<div class="post-item-meta">';
         echo '<div class="post-item-metaleft pull-left">';
             kt_entry_meta_author( );
             kt_entry_date( );
         echo '</div><!-- .post-item-metaleft -->';
         echo '<div class="post-item-metaright pull-right">';
+            if($share){
+                kt_share_box();
+            }
             kt_get_post_views( );
             kt_entry_meta_comments( );
         echo '</div><!-- .post-item-metaright -->';
         echo '<div class="clearfix"></div></div><!-- .post-item-meta -->';
     }
 }
-
 
 
 if ( ! function_exists( 'kt_entry_date' ) ) {
@@ -713,9 +716,9 @@ if ( ! function_exists( 'kt_entry_date' ) ) {
                 get_the_modified_date()
             );
 
-            printf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span><a href="%2$s" rel="bookmark">%3$s</a></span>',
+            printf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span>%2$s</span>',
                 _x( 'Posted on', 'Used before publish date.', THEME_LANG ),
-                esc_url( get_permalink() ),
+                //esc_url( get_permalink() ),
                 $time_string
             );
         }

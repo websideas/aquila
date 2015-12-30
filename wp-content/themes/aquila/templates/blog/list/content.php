@@ -9,8 +9,8 @@
         <div class="post-item-content">
             <?php
             kt_entry_meta_categories();
-            kt_entry_excerpt();
-            kt_entry_meta();
+            the_content();
+            kt_entry_meta(true);
             ?>
         </div>
     </div>

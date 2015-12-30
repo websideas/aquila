@@ -20,8 +20,12 @@ get_header(); ?>
 
                 do_action('before_blog_posts_loop');
 
-
-                if(is_author()){
+                if(isset($_REQUEST['type'])){
+                    $type = $_REQUEST['type'];
+                    $first_featured = false;
+                    $pagination = 'normal';
+                    $column = ($sidebar['sidebar'] == 'left' || $sidebar['sidebar'] == 'right') ? 2 : 3;
+                }elseif(is_author()){
                     $type = kt_option('author_loop_style', 'grid');
                     $column = kt_option('author_columns', 3);
                     $first_featured = kt_option('author_first_featured', false);

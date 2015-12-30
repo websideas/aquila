@@ -184,7 +184,15 @@ if (!function_exists('kt_get_archive_sidebar')) {
      */
     function kt_get_archive_sidebar()
     {
-        if(is_search()){
+        if( isset($_REQUEST['sidebar'] )){
+            $sidebar = array(
+                'sidebar' => $_REQUEST['sidebar'],
+                'sidebar_area' => 'primary-widget-area'
+            );
+            if($sidebar['sidebar'] == 'full'){
+                $sidebar['sidebar'] = '';
+            }
+        }elseif(is_search()){
             $sidebar = array(
                 'sidebar' => kt_option('search_sidebar', 'full'),
                 'sidebar_area' => ''
