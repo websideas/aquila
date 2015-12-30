@@ -155,43 +155,6 @@ if ( ! class_exists( 'KT_config' ) ) {
         public function setSections() {
             
 
-            $image_sizes = kt_get_image_sizes();
-
-            $this->sections[] = array(
-                'id' 	=> 'general',
-                'title'  => __( 'General', THEME_LANG ),
-                'desc'   => __( '', THEME_LANG ),
-                'icon'	=> 'icon-Settings-Window'
-            );
-            $this->sections[] = array(
-                'id' 	=> 'general_layout',
-                'title'  => __( 'General', THEME_LANG ),
-                'desc'   => __( '', THEME_LANG ),
-                'subsection' => true,
-                'fields' => array(
-                    array(
-                        'id'       => 'archive_placeholder',
-                        'type'     => 'media',
-                        'url'      => true,
-                        'compiler' => true,
-                        'title'    => __( 'Placeholder', THEME_LANG ),
-                        'subtitle'     => __( "Placeholder for none image", THEME_LANG ),
-                    ),
-
-                    array(
-                        'id' => 'page_animation',
-                        'type' => 'switch',
-                        'title' => __('Page Animation', THEME_LANG),
-                        'desc' => __('Enable Animation switcher in the page.', THEME_LANG),
-                        "default" => 0,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
-                    ),
-
-                )
-            );
-
-
 
 
             /**
@@ -361,73 +324,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                 )
             );
 
-            /**
-             * Page Loader
-             *
-             */
-            $this->sections[] = array(
-                'title' => __('Page Loader', THEME_LANG),
-                'desc' => __('Page Loader Options', THEME_LANG),
-                'subsection' => true,
-                'fields' => array(
-                    array(
-                        'id' => 'use_page_loader',
-                        'type' => 'switch',
-                        'title' => __('Use Page Loader?', THEME_LANG),
-                        'desc' => __('', THEME_LANG),
-                        'default' => 1,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
-                    ),
-                    array(
-                        'id'       => 'layout_loader',
-                        'type'     => 'image_select',
-                        'compiler' => true,
-                        'title'    => __( 'Loader layout', THEME_LANG ),
-                        'subtitle' => __( 'Please choose loader layout', THEME_LANG ),
-                        'options'  => array(
-                            'style-1' => array( 'alt' => __( 'Style 1', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v1.png' ),
-                            'style-2' => array( 'alt' => __( 'Style 2', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v2.png' ),
-                            'style-3' => array( 'alt' => __( 'Style 2', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v3.png' ),
-                        ),
-                        'default'  => 'style-1',
-                    ),
-                    array(
-                        'id'       => 'background_page_loader',
-                        'type'     => 'background',
-                        'title'    => __( 'Background Color Page Loader', THEME_LANG ),
-                        'background-repeat'     => false,
-                        'background-attachment' => false,
-                        'background-position'   => false,
-                        'background-image'      => false,
-                        'background-size'       => false,
-                        'preview'               => false,
-                        'transparent'           => false,
-                        'default'   => array(
-                            'background-color'      => '#FFFFFF',
-                        ),
-                        'output'   => array( '.kt_page_loader' ),
-                        'required' => array( 'use_page_loader', 'equals', array( 1 ) ),
-                    ),
-                    array(
-                        'id'       => 'color_first_loader',
-                        'type'     => 'color',
-                        'title'    => __( 'Color Loader', THEME_LANG ),
-                        'default'  => '#82c14f',
-                        'transparent' => false,
-                        'required' => array( 'use_page_loader', 'equals', array( 1 ) ),
-                    ),
-                    array(
-                        'id'       => 'color_second_loader',
-                        'type'     => 'color',
-                        'title'    => __( 'Color Second Loader', THEME_LANG ),
-                        'default'  => '#cccccc',
-                        'transparent' => false,
-                        'required' => array( 'use_page_loader', 'equals', array( 1 ) ),
-                    ),
-                )
-            );
-
 
             /**
 			 *	Styling General
@@ -499,106 +395,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'display_value' => 'text'
                         ),
                     */
-                )
-            );
-            /**
-             *	Styling Footer
-             **/
-            $this->sections[] = array(
-                'id'			=> 'styling_sticky',
-                'title'			=> __( 'Sticky', THEME_LANG ),
-                'subsection' => true,
-                'fields'		=> array(
-
-                    array(
-                        'id'       => 'fixed_header',
-                        'type'     => 'button_set',
-                        'title'    => __( 'Sticky header', THEME_LANG ),
-                        'options'  => array(
-                            '1' => __('Disabled', THEME_LANG),
-                            '2' => __('Fixed Sticky', THEME_LANG),
-                            '3' => __('Slide Down', THEME_LANG),
-                        ),
-                        'default'  => '3',
-                        'desc' => __('Choose your sticky effect.', THEME_LANG)
-                    ),
-                    array(
-                        'id'             => 'logo_sticky_width',
-                        'type'           => 'dimensions',
-                        'units'          => array( 'px'),
-                        'title'          => __( 'Logo width', THEME_LANG ),
-                        'height'         => false,
-                        'default'        => array(
-                            'width'  => '100',
-                            'units'  => 'px'
-                        ),
-                        'output'   => array( '.header-layout2.header-container.is-sticky .site-branding .site-logo img' ),
-                    ),
-
-                    array(
-                        'id'       => 'logo_sticky_margin_spacing',
-                        'type'     => 'spacing',
-                        'mode'     => 'margin',
-                        'units'          => array( 'px' ),
-                        'units_extended' => 'true',
-                        'title'    => __( 'Logo sticky margin spacing Option', THEME_LANG ),
-                        'default'  => array(
-                            'margin-top'    => '0',
-                            'margin-right'  => '0',
-                            'margin-bottom' => '0',
-                            'margin-left'   => '0'
-                        ),
-                        'output'   => array( '.header-layout2.header-container.is-sticky .site-branding'),
-                    ),
-
-                    array(
-                        'id'             => 'navigation_height_fixed',
-                        'type'           => 'dimensions',
-                        'units'          => array('px'),
-                        'units_extended' => 'true',
-                        'title'          => __( 'Main Navigation Sticky Height', THEME_LANG ),
-                        'subtitle'          => __( 'Change height of main navigation sticky', THEME_LANG ),
-                        'width'         => false,
-                        'default'        => array(
-                            'height'  => '60',
-                            'units'  => 'px'
-                        ),
-
-                        'output'   => array(
-                            '.header-container.is-sticky #main-navigation > li',
-                            '.header-container.header-layout1.is-sticky .nav-container-inner',
-                        ),
-                    ),
-                    array(
-                        'id'       => 'header_sticky_background',
-                        'type'     => 'background',
-                        'title'    => __( 'Header sticky background', THEME_LANG ),
-                        'subtitle' => __( 'Header sticky with image, color, etc.', THEME_LANG ),
-                        'background-repeat'     => false,
-                        'background-attachment' => false,
-                        'background-position'   => false,
-                        'background-image'      => false,
-                        'background-size'       => false,
-                        'preview'               => false,
-                        'transparent'           => false,
-                        'default'   => array(
-                            'background-color'      => '#252525',
-                        ),
-                        'output'      => array( '.header-sticky-background' ),
-                    ),
-
-                    array(
-                        'id'            => 'header_sticky_opacity',
-                        'type'          => 'slider',
-                        'title'         => __( 'Sticky Background opacity', THEME_LANG ),
-                        'default'       => .8,
-                        'min'           => 0,
-                        'step'          => .1,
-                        'max'           => 1,
-                        'resolution'    => 0.1,
-                        'display_value' => 'text'
-                    ),
-
                 )
             );
 
@@ -1898,8 +1694,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => __( 'Header layout', THEME_LANG ),
                         'subtitle' => __( 'Please choose header layout', THEME_LANG ),
                         'options'  => array(
-                            1 => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'header/header-v1.png' ),
-                            2 => array( 'alt' => __( 'Layout 2', THEME_LANG ), 'img' => FW_IMG . 'header/header-v2.png' ),
+                            1 => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'header/header-v1.jpg' ),
+                            2 => array( 'alt' => __( 'Layout 2', THEME_LANG ), 'img' => FW_IMG . 'header/header-v2.jpg' ),
                         ),
                         'default'  => 1
                     ),
@@ -2065,6 +1861,73 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
             /**
+             * Page Loader
+             *
+             */
+            $this->sections[] = array(
+                'title' => __('Page Loader', THEME_LANG),
+                'desc' => __('Page Loader Options', THEME_LANG),
+                'subsection' => true,
+                'fields' => array(
+                    array(
+                        'id' => 'use_page_loader',
+                        'type' => 'switch',
+                        'title' => __('Use Page Loader?', THEME_LANG),
+                        'desc' => __('', THEME_LANG),
+                        'default' => 1,
+                        'on' => __('Enabled', THEME_LANG),
+                        'off' =>__('Disabled', THEME_LANG)
+                    ),
+                    array(
+                        'id'       => 'layout_loader',
+                        'type'     => 'image_select',
+                        'compiler' => true,
+                        'title'    => __( 'Loader layout', THEME_LANG ),
+                        'subtitle' => __( 'Please choose loader layout', THEME_LANG ),
+                        'options'  => array(
+                            'style-1' => array( 'alt' => __( 'Style 1', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v1.png' ),
+                            'style-2' => array( 'alt' => __( 'Style 2', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v2.png' ),
+                            'style-3' => array( 'alt' => __( 'Style 2', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v3.png' ),
+                        ),
+                        'default'  => 'style-1',
+                    ),
+                    array(
+                        'id'       => 'background_page_loader',
+                        'type'     => 'background',
+                        'title'    => __( 'Background Color Page Loader', THEME_LANG ),
+                        'background-repeat'     => false,
+                        'background-attachment' => false,
+                        'background-position'   => false,
+                        'background-image'      => false,
+                        'background-size'       => false,
+                        'preview'               => false,
+                        'transparent'           => false,
+                        'default'   => array(
+                            'background-color'      => '#FFFFFF',
+                        ),
+                        'output'   => array( '.kt_page_loader' ),
+                        'required' => array( 'use_page_loader', 'equals', array( 1 ) ),
+                    ),
+                    array(
+                        'id'       => 'color_first_loader',
+                        'type'     => 'color',
+                        'title'    => __( 'Color Loader', THEME_LANG ),
+                        'default'  => '#82c14f',
+                        'transparent' => false,
+                        'required' => array( 'use_page_loader', 'equals', array( 1 ) ),
+                    ),
+                    array(
+                        'id'       => 'color_second_loader',
+                        'type'     => 'color',
+                        'title'    => __( 'Color Second Loader', THEME_LANG ),
+                        'default'  => '#cccccc',
+                        'transparent' => false,
+                        'required' => array( 'use_page_loader', 'equals', array( 1 ) ),
+                    ),
+                )
+            );
+
+            /**
              *	Styling
              **/
             $this->sections[] = array(
@@ -2146,6 +2009,110 @@ if ( ! class_exists( 'KT_config' ) ) {
 
                 )
             );
+
+
+
+            /**
+             *	Styling Sticky
+             **/
+            $this->sections[] = array(
+                'id'			=> 'styling_sticky',
+                'title'			=> __( 'Sticky', THEME_LANG ),
+                'subsection' => true,
+                'fields'		=> array(
+                    array(
+                        'id'       => 'fixed_header',
+                        'type'     => 'button_set',
+                        'title'    => __( 'Sticky header', THEME_LANG ),
+                        'options'  => array(
+                            '1' => __('Disabled', THEME_LANG),
+                            '2' => __('Fixed Sticky', THEME_LANG),
+                            '3' => __('Slide Down', THEME_LANG),
+                        ),
+                        'default'  => '3',
+                        'desc' => __('Choose your sticky effect.', THEME_LANG)
+                    ),
+                    array(
+                        'id'             => 'logo_sticky_width',
+                        'type'           => 'dimensions',
+                        'units'          => array( 'px'),
+                        'title'          => __( 'Logo width', THEME_LANG ),
+                        'height'         => false,
+                        'default'        => array(
+                            'width'  => '100',
+                            'units'  => 'px'
+                        ),
+                        'output'   => array( '.header-layout2.header-container.is-sticky .site-branding .site-logo img' ),
+                    ),
+
+                    array(
+                        'id'       => 'logo_sticky_margin_spacing',
+                        'type'     => 'spacing',
+                        'mode'     => 'margin',
+                        'units'          => array( 'px' ),
+                        'units_extended' => 'true',
+                        'title'    => __( 'Logo sticky margin spacing Option', THEME_LANG ),
+                        'default'  => array(
+                            'margin-top'    => '0',
+                            'margin-right'  => '0',
+                            'margin-bottom' => '0',
+                            'margin-left'   => '0'
+                        ),
+                        'output'   => array( '.header-layout2.header-container.is-sticky .site-branding'),
+                    ),
+
+                    array(
+                        'id'             => 'navigation_height_fixed',
+                        'type'           => 'dimensions',
+                        'units'          => array('px'),
+                        'units_extended' => 'true',
+                        'title'          => __( 'Main Navigation Sticky Height', THEME_LANG ),
+                        'subtitle'          => __( 'Change height of main navigation sticky', THEME_LANG ),
+                        'width'         => false,
+                        'default'        => array(
+                            'height'  => '60',
+                            'units'  => 'px'
+                        ),
+
+                        'output'   => array(
+                            '.header-container.is-sticky #main-navigation > li',
+                            '.header-container.header-layout1.is-sticky .nav-container-inner',
+                        ),
+                    ),
+                    array(
+                        'id'       => 'header_sticky_background',
+                        'type'     => 'background',
+                        'title'    => __( 'Header sticky background', THEME_LANG ),
+                        'subtitle' => __( 'Header sticky with image, color, etc.', THEME_LANG ),
+                        'background-repeat'     => false,
+                        'background-attachment' => false,
+                        'background-position'   => false,
+                        'background-image'      => false,
+                        'background-size'       => false,
+                        'preview'               => false,
+                        'transparent'           => false,
+                        'default'   => array(
+                            'background-color'      => '#252525',
+                        ),
+                        'output'      => array( '.header-sticky-background' ),
+                    ),
+
+                    array(
+                        'id'            => 'header_sticky_opacity',
+                        'type'          => 'slider',
+                        'title'         => __( 'Sticky Background opacity', THEME_LANG ),
+                        'default'       => .8,
+                        'min'           => 0,
+                        'step'          => .1,
+                        'max'           => 1,
+                        'resolution'    => 0.1,
+                        'display_value' => 'text'
+                    ),
+
+                )
+            );
+
+
 
             /**
              *	Styling Footer

@@ -2,53 +2,23 @@
 
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
-
-$position = kt_get_header();
-
 ?>
-<div id="header-outer" class="clearfix">
-    <?php
-    if($position == 'below'){
-        /**
-         * @hooked kt_slideshows_position_callback 10
-         */
-        do_action( 'kt_slideshows_position' );
-    }
-    ?>
+<div id="header-inner">
+    <div id="header-content" class="clearfix apply-sticky">
+        <div class="header-sticky-background"></div>
+        <div class="container">
+            <div class="header-branding-outer clearfix">
 
-    <div class="nav-container-inner">
-
-
-        <div id="header-content" class="clearfix apply-sticky">
-            <div class="header-sticky-background"></div>
-            <div class="site-branding">
-                <?php get_template_part( 'templates/headers/header',  'branding'); ?>
-            </div><!-- .site-branding -->
-
-            <div class="header-actions">
-                <?php get_template_part( 'templates/headers/header',  'bars'); ?>
+                <div class="nav-container">
+                    <nav id="nav" class="nav-main">
+                        <?php get_template_part( 'templates/headers/header',  'menu'); ?>
+                    </nav><!-- #main-nav -->
+                </div><!-- .nav-container -->
                 <?php get_template_part( 'templates/headers/header',  'tool'); ?>
+                <?php get_template_part( 'templates/headers/header',  'socials'); ?>
             </div>
-
-            <div class="nav-container">
-
-                    <div class="container">
-                        <nav id="nav" class="nav-main">
-                            <?php get_template_part( 'templates/headers/header',  'menu'); ?>
-                        </nav><!-- #main-nav -->
-                    </div><!-- .container -->
-
-
-            </div>
-        </div>
-        <?php
-        if($position != 'below'){
-            /**
-             * @hooked kt_slideshows_position_callback 10
-             */
-            do_action( 'kt_slideshows_position' );
-        }
-        ?>
-
+        </div><!-- .container -->
     </div>
+    <?php get_template_part( 'templates/headers/header',  'brandingalt'); ?>
+
 </div>
