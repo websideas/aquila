@@ -913,6 +913,9 @@ select:not([multiple]) {
   text-align: center;
   .kt-aboutwidget-img{
     margin-bottom: 15px;
+    img{
+      width: 100%;
+    }
   }
   .kt-aboutwidget-text{
     margin-bottom: 15px;
@@ -1217,6 +1220,9 @@ ul.kt_posts_carousel_widget{
       a{
         display: block;
         position: relative;
+        img{
+          width: 100%;
+        }
         &:before {
           color: #fff;
           @include FontIcon('\f16e');
@@ -2546,6 +2552,7 @@ ul.style-list{
   border-bottom: 1px solid $border-color;
   display: none;
   z-index: 99999;
+  padding-bottom: 10px;
   li{
     position: relative;
   }
@@ -2631,7 +2638,7 @@ ul.style-list{
 
       div.kt-megamenu-wrapper{
         padding: 20px 0;
-        > ul {
+        ul.kt-megamenu-ul {
           margin: 0;
           padding: 0;
           list-style: none;
@@ -2939,6 +2946,12 @@ body.opened-nav-animate{
     }
   }
 
+}
+
+.slick-slide{
+  img{
+    width: 100%;
+  }
 }
 
 .blog-posts-slick {

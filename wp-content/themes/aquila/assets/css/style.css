@@ -1421,6 +1421,8 @@ select:not([multiple]) {
   text-align: center; }
   .widget_kt_aboutme .kt-aboutwidget-img {
     margin-bottom: 15px; }
+    .widget_kt_aboutme .kt-aboutwidget-img img {
+      width: 100%; }
   .widget_kt_aboutme .kt-aboutwidget-text {
     margin-bottom: 15px; }
   .widget_kt_aboutme .kt-aboutwidget-socials {
@@ -1701,6 +1703,8 @@ ul.kt_posts_carousel_widget {
       .widget_kt_flickr .kt_flickr li a {
         display: block;
         position: relative; }
+        .widget_kt_flickr .kt_flickr li a img {
+          width: 100%; }
         .widget_kt_flickr .kt_flickr li a:before {
           color: #fff;
           font-family: "FontAwesome";
@@ -2882,7 +2886,8 @@ ul.style-list {
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   display: none;
-  z-index: 99999; }
+  z-index: 99999;
+  padding-bottom: 10px; }
   .main-nav-mobile li {
     position: relative; }
   .main-nav-mobile > ul {
@@ -3028,21 +3033,21 @@ ul.style-list {
           padding: 0; }
       .main-nav-mobile > ul > li div.kt-megamenu-wrapper {
         padding: 20px 0; }
-        .main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul {
+        .main-nav-mobile > ul > li div.kt-megamenu-wrapper ul.kt-megamenu-ul {
           margin: 0;
           padding: 0;
           list-style: none; }
-          .main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li {
+          .main-nav-mobile > ul > li div.kt-megamenu-wrapper ul.kt-megamenu-ul > li {
             margin-bottom: 20px;
             width: auto !important; }
-            .main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li > a,
-            .main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li > span {
+            .main-nav-mobile > ul > li div.kt-megamenu-wrapper ul.kt-megamenu-ul > li > a,
+            .main-nav-mobile > ul > li div.kt-megamenu-wrapper ul.kt-megamenu-ul > li > span {
               display: block;
               font-size: 15px;
               color: #000000;
               padding: 3px 10px 3px 25px;
               text-transform: uppercase; }
-            .main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li .widget-container {
+            .main-nav-mobile > ul > li div.kt-megamenu-wrapper ul.kt-megamenu-ul > li .widget-container {
               padding: 0 25px;
               margin-bottom: 20px; }
       .main-nav-mobile > ul > li .searchform {
@@ -3314,6 +3319,9 @@ body.opened-nav-animate {
       top: 0;
       left: 0;
       background: rgba(0, 0, 0, 0.4); }
+
+.slick-slide img {
+  width: 100%; }
 
 .blog-posts-slick .slick-list {
   cursor: url(../images/drag.png) 16 9, ew-resize !important; }

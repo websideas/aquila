@@ -2123,7 +2123,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'          => __( 'Logo mobile width', THEME_LANG ),
                         'height'         => false,
                         'default'        => array(
-                            'width'  => 190,
+                            'width'  => 25,
                             'unit'   => 'px'
                         ),
                         'output'   => array( '#header-content-mobile .site-branding .site-logo img' ),

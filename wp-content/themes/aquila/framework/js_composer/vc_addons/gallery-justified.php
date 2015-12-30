@@ -41,7 +41,7 @@ class WPBakeryShortCode_KT_Gallery_Justified extends WPBakeryShortCode_VC_Custom
                                 $image_popup = wp_get_attachment_image_src( $attach_id, $image_size_popup );
                             }
                     	}
-                        $output .= '<div class="gallery-item">';
+                        $output .= '<div class="kt-gallery-item">';
                             if( $gallery_popup == 'true' ){
                                 $output .= '<a href="'.esc_attr($image_popup[0]).'">';
                             }
