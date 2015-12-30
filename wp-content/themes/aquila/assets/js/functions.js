@@ -198,12 +198,13 @@
             var $masonry = $(this);
             $masonry.imagesLoaded(function(){
                 $masonry.isotope({
-                    itemSelector: '.article-post-item'
+                    itemSelector: '.article-post-item',
+                    layoutMode: 'packery',
+                    packery: {columnWidth: '.grid-sizer'}
                 });
             });
         });
     }
-
 
     /* ---------------------------------------------
      KT custom css

@@ -103,6 +103,8 @@ get_header(); ?>
                 global $wp_query;
                 $i = 1;
                 while ( have_posts() ) : the_post();
+
+                    $featured = get_post_meta(get_the_ID(), '_kt_post_featured', true);
                     if($i == 1){
                         if($first_featured){
                             get_template_part( 'templates/blog/grid/content', 'first');
@@ -113,7 +115,14 @@ get_header(); ?>
                         $pull_class = ($sidebar['sidebar'] == 'left') ? 'pull-right' : '';
 
                         echo '<div class="row main '.$sidebar_class.'">';
-                        echo '<div class="col-md-'.$main_column.' main-content '.$pull_class.'"><div class="row multi-columns-row blog-posts-'.$type.'">';
+                        echo '<div class="col-md-'.$main_column.' main-content '.$pull_class.'"><div class="row blog-posts-'.$type.'">';
+
+                        if($type == 'grid' || $type == 'masonry'){
+                            printf(
+                                '<div class="clearfix col-lg-%1$s col-md-%1$s grid-sizer"></div>',
+                                $article_column
+                            );
+                        }
 
                         if(!$first_featured){
                             printf('<div class="col-lg-%1$s col-md-%1$s">', $article_column);
@@ -121,12 +130,13 @@ get_header(); ?>
                             echo '</div>';
                         }
                     }else {
-                        printf('<div class="article-post-item col-lg-%1$s col-md-%1$s">', $article_column);
-                        $featured = get_post_meta(get_the_ID(), '_kt_post_featured', true);
-                        if($featured == 'yes' && $type != 'grid' && $type != 'masonry' ){
+                        if($featured == 'yes'){
+                            printf('<div class="article-post-item col-lg-12 col-md-12">', $article_column);
                             get_template_part( 'templates/blog/'.$type.'/contentf', get_post_format());
                         }else{
+                            printf('<div class="article-post-item col-lg-%1$s col-md-%1$s">', $article_column);
                             get_template_part( 'templates/blog/'.$type.'/content', get_post_format());
+
                         }
                         echo '</div>';
                     }

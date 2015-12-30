@@ -157,8 +157,16 @@ add_filter('theme_header_class', 'theme_header_class_callback', 10, 2);
  */
 add_action( 'kt_slideshows_position', 'kt_slideshows_position_callback' );
 function kt_slideshows_position_callback(){
-    if(is_page() || is_singular()){
+
+    if(is_page()){
         kt_show_slideshow();
+    }elseif(is_singular('post')){
+        $layout = kt_post_option(null, '_kt_blog_post_layout', 'single_layout', 1, false);
+        if( ! post_password_required( ) && $layout == 3 ){
+            echo '<div class="entry-thumb-fullwidth">';
+            kt_post_thumbnail('full', 'img-responsive', false);
+            echo '</div>';
+        }
     }
 }
 

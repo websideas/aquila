@@ -20,9 +20,6 @@ if($layout == 6){
 }
 
 ?>
-    <?php if( ! post_password_required( ) && $layout == 3 ){ ?>
-        <div class="entry-thumb-fullwidth"><?php kt_post_thumbnail($imagesize, 'img-responsive', false); ?></div>
-    <?php } ?>
     <div class="container">
         <?php
         /**
