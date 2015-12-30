@@ -30,9 +30,9 @@ only screen and (min-resolution: 144dpi) {
 
 
 @media (min-width: 1200px) {
-
-
-
+  .col-lg-clear{
+    clear: left;
+  }
   .blog-posts-medium {
     .no-sidebar &{
       .post-item-thumb{
@@ -79,6 +79,13 @@ only screen and (min-resolution: 144dpi) {
     }
   }
 }
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .col-md-clear {
+    clear: left;
+  }
+}
+
 
 @media (max-width: 991px) {
   #footer-bottom{
@@ -173,6 +180,9 @@ only screen and (min-resolution: 144dpi) {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
+  .col-sm-clear {
+    clear: left;
+  }
   #footer{
     ul.kt_posts_widget{
       li{
@@ -187,7 +197,12 @@ only screen and (min-resolution: 144dpi) {
   }
 }
 
+
+
 @media (max-width: 767px) {
+  .col-xs-clear {
+    clear: left;
+  }
   #instagram-footer{
     .null-instagram-feed{
       .instagram-pics{

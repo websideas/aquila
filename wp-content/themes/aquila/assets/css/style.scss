@@ -795,6 +795,8 @@ select:not([multiple]) {
       padding: 8px 11px;
       color: $gray;
       border: 2px solid $border-color;
+      text-transform: uppercase;
+      letter-spacing: .1em;
       &:hover,
       &:focus{
         color: #fff;
@@ -3866,8 +3868,6 @@ article.post-item-content{
   }
 }
 
-
-
 .page-postslider-thumb{
   .first-featured{
     border-top: 2px solid $border-color;
@@ -3944,7 +3944,6 @@ article.post-item-content{
 .entry-thumb.entry-thumb-audio{
   padding: 100px 50px;
 }
-
 .post-single{
   .entry-header{
     margin-bottom: 35px;
@@ -3963,6 +3962,27 @@ article.post-item-content{
   }
   .entry-content{
     margin-bottom: 20px;
+    ul{
+      margin: 2em 0 2em 70px;
+      list-style: none;
+      padding: 0;
+      li{
+        padding: 0;
+        margin-bottom: 0.3em;
+        &:before{
+          background: $primary-color;
+          content: "";
+          display: block;
+          float: left;
+          height: 5px;
+          margin-left: -20px;
+          margin-top: 0.75em;
+          vertical-align: middle;
+          width: 5px;
+          @include border-radius(50%);
+        }
+      }
+    }
   }
   .entry-footer{
     font-size: 12px;

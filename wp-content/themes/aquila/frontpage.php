@@ -97,14 +97,16 @@ get_header(); ?>
 
                 if($type == 'medium' || $type == 'list'){
                     $column = 1;
-                    $col_tab = 12;
+                    $column_tab = 1;
                 }else{
-                    $col_tab = 6;
+                    $column_tab = 2;
                 }
                 $article_column = 12/$column;
+                $article_column_tab = 12/$column_tab;
 
                 global $wp_query;
                 $i = 1;
+                $j = $k = 0;
                 while ( have_posts() ) : the_post();
 
                     $featured = get_post_meta(get_the_ID(), '_kt_post_featured', true);
@@ -121,31 +123,37 @@ get_header(); ?>
                         echo '<div class="col-md-'.$main_column.' main-content '.$pull_class.'"><div class="row blog-posts-'.$type.'">';
 
                         if($type == 'grid' || $type == 'masonry'){
-                            printf(
-                                '<div class="clearfix col-lg-%1$s col-md-%1$s grid-sizer"></div>',
-                                $article_column
-                            );
+                            printf('<div class="clearfix col-lg-%1$s col-md-%1$s col-sm-%2$s grid-sizer"></div>', $article_column, $article_column_tab);
                         }
-
                         if(!$first_featured){
-                            printf('<div class="article-post-item col-lg-%1$s col-md-%1$s">', $article_column);
+                            printf('<div class="article-post-item col-lg-%1$s col-md-%1$s col-sm-%2$s">', $article_column, $article_column_tab);
                             get_template_part( 'templates/blog/'.$type.'/content', get_post_format());
                             echo '</div>';
+                            $j++;
                         }
                     }else {
-<<<<<<< HEAD
                         if($featured == 'yes'){
-                            printf('<div class="article-post-item col-lg-12 col-md-12">', $article_column);
-=======
-                        printf('<div class="article-post-item col-lg-%1$s col-md-%1$s col-sm-'.$col_tab.'">', $article_column);
-                        $featured = get_post_meta(get_the_ID(), '_kt_post_featured', true);
-                        if($featured == 'yes' && $type != 'grid' && $type != 'masonry' ){
->>>>>>> origin/master
+                            printf('<div class="article-post-item col-lg-12 col-md-12 col-sm-12">', $article_column);
                             get_template_part( 'templates/blog/'.$type.'/contentf', get_post_format());
+                            $j = 0;
+                            $k = 0;
                         }else{
-                            printf('<div class="article-post-item col-lg-%1$s col-md-%1$s">', $article_column);
+                            if($j == $column){
+                                $clear = "col-lg-clear col-md-clear";
+                                $j = 0;
+                            }else{
+                                $clear = '';
+                            }
+                            if($k == $column_tab){
+                                $clear_tab = "col-sm-clear";
+                                $k = 0;
+                            }else{
+                                $clear_tab = '';
+                            }
+                            printf('<div class="article-post-item col-lg-%1$s col-md-%1$s col-sm-%2$s %3$s %4$s">', $article_column, $article_column_tab, $clear, $clear_tab);
                             get_template_part( 'templates/blog/'.$type.'/content', get_post_format());
-
+                            $j++;
+                            $k++;
                         }
                         echo '</div>';
                     }
