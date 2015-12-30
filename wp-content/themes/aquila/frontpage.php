@@ -19,11 +19,11 @@ get_header(); ?>
         $sidebar_class = ($sidebar['sidebar']) ? 'sidebar-'.$sidebar['sidebar'] : 'no-sidebar';
         $pull_class = ($sidebar['sidebar'] == 'left') ? 'pull-right' : '';
         echo '<div class="row main '.$sidebar_class.'">';
-        echo '<div class="col-md-'.$main_column.' main-content '.$pull_class.'">';
+        echo '<div class="col-md-'.$main_column.' col-sm-12 col-xs-12 main-content '.$pull_class.'">';
             get_template_part( 'templates/content', 'page');
         echo '</div><!-- .main-content -->';
         if($sidebar['sidebar']){
-            echo '<div class="col-md-4 sidebar main-sidebar">';
+            echo '<div class="col-md-4 col-sm-12 col-xs-12 sidebar main-sidebar">';
             dynamic_sidebar($sidebar['sidebar_area']);
             echo '</div>';
         }
@@ -97,6 +97,9 @@ get_header(); ?>
 
                 if($type == 'medium' || $type == 'list'){
                     $column = 1;
+                    $col_tab = 12;
+                }else{
+                    $col_tab = 6;
                 }
                 $article_column = 12/$column;
 
@@ -125,13 +128,19 @@ get_header(); ?>
                         }
 
                         if(!$first_featured){
-                            printf('<div class="col-lg-%1$s col-md-%1$s">', $article_column);
+                            printf('<div class="article-post-item col-lg-%1$s col-md-%1$s">', $article_column);
                             get_template_part( 'templates/blog/'.$type.'/content', get_post_format());
                             echo '</div>';
                         }
                     }else {
+<<<<<<< HEAD
                         if($featured == 'yes'){
                             printf('<div class="article-post-item col-lg-12 col-md-12">', $article_column);
+=======
+                        printf('<div class="article-post-item col-lg-%1$s col-md-%1$s col-sm-'.$col_tab.'">', $article_column);
+                        $featured = get_post_meta(get_the_ID(), '_kt_post_featured', true);
+                        if($featured == 'yes' && $type != 'grid' && $type != 'masonry' ){
+>>>>>>> origin/master
                             get_template_part( 'templates/blog/'.$type.'/contentf', get_post_format());
                         }else{
                             printf('<div class="article-post-item col-lg-%1$s col-md-%1$s">', $article_column);

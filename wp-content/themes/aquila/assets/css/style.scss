@@ -613,9 +613,6 @@ select:not([multiple]) {
 }
 
 /* ==============================
-   6. Search
-   ============================== */
-/* ==============================
    11. Widgets
    ============================== */
 .widget,
@@ -3578,6 +3575,11 @@ article.post-item-content{
     margin-bottom: 50px;
     padding-bottom: 50px;
     border-bottom: 2px solid $border-color;
+    .entry-thumb{
+      img{
+        width: 100%;
+      }
+    }
     .entry-title{
       a {
         color: $black;
@@ -3658,7 +3660,7 @@ article.post-item-content{
     background: rgba($black, .7);
     padding: 30px 25px;
     color: $white;
-    width: 320px;
+    max-width: 320px;
   }
   .entry-title-featured{
     font-size: 18px;
@@ -4437,7 +4439,7 @@ p.logged-in-as{
    ============================== */
 .pagination {
   display: block;
-  margin: 0;
+  margin: 0 0 50px;
   @include border-radius(0);
   position: relative;
   text-align: center;
