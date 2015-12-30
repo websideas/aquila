@@ -370,6 +370,25 @@ function add_search_full(){
 }
 add_action('theme_body_top', 'add_search_full');
 
+function add_socials_mobile(){
+    $socials = '<div class="main-nav-socials">
+                    <a href="#"><i class="fa fa-facebook"></i> </a>
+                    <a href="#"><i class="fa fa-twitter"></i> </a>
+                    <a href="#"><i class="fa fa-linkedin"></i> </a>
+                    <a href="#"><i class="fa fa-behance"></i> </a>
+                    <a href="#"><i class="fa fa-instagram"></i> </a>
+                    <a href="#"><i class="fa fa-dribbble"></i> </a>
+                </div><!-- .menu-bars-socials -->';
+
+    printf(
+        '<div id="%1$s" class="%2$s">%3$s</div>',
+        'socials-mobile',
+        'mfp-hide mfp-with-anim',
+        $socials
+    );
+}
+add_action('theme_body_top', 'add_socials_mobile', 10);
+
 
 //Remove Facebook comment box in the content
 remove_filter ('the_content', 'fbcommentbox', 100);

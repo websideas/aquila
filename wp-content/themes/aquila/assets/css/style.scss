@@ -1361,6 +1361,14 @@ ul.kt_posts_carousel_widget{
   }
 }
 
+#socials-mobile{
+  padding: 30px;
+  text-align: center;
+  background: $white;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
 /**
  * Contact info
  **/
@@ -2505,15 +2513,16 @@ ul.style-list{
 #header-content-mobile{
   position: relative;
   display: none;
-  margin: 0 15px;
+  padding: 0 15px;
+  @include box-shadow(0, 2px, 6px, rgba($black, 0.05));
   .site-branding{
     float: left;
   }
   .header-mobile-tools{
     @include translate(y);
-    right: 0;
+    right: 15px;
     a{
-      color: #636363;
+      color: $black;
       float: left;
       margin-left: 15px;
       padding: 5px 0 5px 10px;
@@ -2847,7 +2856,7 @@ body.opened-nav-animate{
 #footer-top{
   background: url("../images/footer-quote.jpg") no-repeat center center;
   background-size: cover;
-  padding: 60px 0 70px;
+  padding: 60px 15px 70px;
   .widget-container{
     margin-bottom: 0;
   }
@@ -2863,6 +2872,7 @@ body.opened-nav-animate{
     padding: 25px 0;
     .widget_kt_socials{
       margin-top: 18px;
+      margin-bottom: 17px;
     }
   }
   .logo-footer{
