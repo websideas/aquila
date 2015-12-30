@@ -4422,7 +4422,7 @@ p.logged-in-as{
    ============================== */
 .pagination {
   display: block;
-  margin: 0;
+  margin: 0 0 50px;
   @include border-radius(0);
   position: relative;
   text-align: center;

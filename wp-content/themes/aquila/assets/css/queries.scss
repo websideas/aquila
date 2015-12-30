@@ -342,4 +342,11 @@ only screen and (min-resolution: 144dpi) {
       }
     }
   }
+  .blog-posts-list{
+    article.post-item-content:not(.post-item-featured){
+      .post-item-content{
+        margin: 0;
+      }
+    }
+  }
 }

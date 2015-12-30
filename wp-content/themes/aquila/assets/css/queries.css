@@ -215,6 +215,9 @@
   #footer-bottom .social-text ul li a {
     font-size: 14px; }
     #footer-bottom .social-text ul li a span {
-      display: none; } }
+      display: none; }
+
+  .blog-posts-list article.post-item-content:not(.post-item-featured) .post-item-content {
+    margin: 0; } }
 
 /*# sourceMappingURL=queries.css.map */
