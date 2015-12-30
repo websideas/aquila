@@ -24,6 +24,9 @@ if ( !defined('ABSPATH')) exit;
         <?php if ( kt_is_wc() && kt_option('header_cart', 1) ) { ?>
             <?php echo kt_woocommerce_get_cart_mobile(); ?>
         <?php } ?>
+        <a class="socials-mobile" href="#socials-mobile">
+            <i class="fa fa-share-alt"></i>
+        </a>
         <a title="Menu" href="#" id="hamburger-icon" class="">
             <span class="hamburger-icon-inner">
                 <span class="line line-1"></span>

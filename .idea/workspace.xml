@@ -28,14 +28,14 @@
             <state vertical-scroll-proportion="-13.25">
               <caret line="1697" column="80" selection-start-line="1697" selection-start-column="80" selection-end-line="1697" selection-end-column="80" />
               <folding>
-                <marker date="1451448053000" expanded="true" signature="16472:16492" placeholder="..." />
-                <marker date="1451448053000" expanded="true" signature="16607:16627" placeholder="..." />
-                <marker date="1451448053000" expanded="true" signature="33325:33337" placeholder="..." />
-                <marker date="1451448053000" expanded="true" signature="40496:40508" placeholder="..." />
-                <marker date="1451448053000" expanded="true" signature="157266:157275" placeholder="..." />
-                <marker date="1451448053000" expanded="true" signature="157551:157560" placeholder="..." />
-                <marker date="1451448053000" expanded="true" signature="157822:157831" placeholder="..." />
-                <marker date="1451448053000" expanded="true" signature="158115:158124" placeholder="..." />
+                <marker date="1451455985000" expanded="true" signature="16472:16492" placeholder="..." />
+                <marker date="1451455985000" expanded="true" signature="16607:16627" placeholder="..." />
+                <marker date="1451455985000" expanded="true" signature="33325:33337" placeholder="..." />
+                <marker date="1451455985000" expanded="true" signature="40496:40508" placeholder="..." />
+                <marker date="1451455985000" expanded="true" signature="157265:157274" placeholder="..." />
+                <marker date="1451455985000" expanded="true" signature="157550:157559" placeholder="..." />
+                <marker date="1451455985000" expanded="true" signature="157821:157830" placeholder="..." />
+                <marker date="1451455985000" expanded="true" signature="158114:158123" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -54,8 +54,8 @@
       <file leaf-file-name="style.scss" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.36594203">
-              <caret line="2405" column="3" selection-start-line="2405" selection-start-column="3" selection-end-line="2405" selection-end-column="3" />
+            <state vertical-scroll-proportion="0.6195652">
+              <caret line="2420" column="1" selection-start-line="2420" selection-start-column="1" selection-end-line="2420" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -765,7 +765,7 @@
         <state vertical-scroll-proportion="-5.0350876">
           <caret line="151" column="0" selection-start-line="151" selection-start-column="0" selection-end-line="151" selection-end-column="0" />
           <folding>
-            <marker date="1451441745000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451455985000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -791,9 +791,9 @@
         <state vertical-scroll-proportion="0.48304093">
           <caret line="626" column="5" selection-start-line="626" selection-start-column="5" selection-end-line="626" selection-end-column="5" />
           <folding>
-            <marker date="1451442691000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451442691000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1451442691000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451455985000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451455985000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1451455985000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -867,14 +867,14 @@
         <state vertical-scroll-proportion="-13.25">
           <caret line="1697" column="80" selection-start-line="1697" selection-start-column="80" selection-end-line="1697" selection-end-column="80" />
           <folding>
-            <marker date="1451448053000" expanded="true" signature="16472:16492" placeholder="..." />
-            <marker date="1451448053000" expanded="true" signature="16607:16627" placeholder="..." />
-            <marker date="1451448053000" expanded="true" signature="33325:33337" placeholder="..." />
-            <marker date="1451448053000" expanded="true" signature="40496:40508" placeholder="..." />
-            <marker date="1451448053000" expanded="true" signature="157266:157275" placeholder="..." />
-            <marker date="1451448053000" expanded="true" signature="157551:157560" placeholder="..." />
-            <marker date="1451448053000" expanded="true" signature="157822:157831" placeholder="..." />
-            <marker date="1451448053000" expanded="true" signature="158115:158124" placeholder="..." />
+            <marker date="1451455985000" expanded="true" signature="16472:16492" placeholder="..." />
+            <marker date="1451455985000" expanded="true" signature="16607:16627" placeholder="..." />
+            <marker date="1451455985000" expanded="true" signature="33325:33337" placeholder="..." />
+            <marker date="1451455985000" expanded="true" signature="40496:40508" placeholder="..." />
+            <marker date="1451455985000" expanded="true" signature="157265:157274" placeholder="..." />
+            <marker date="1451455985000" expanded="true" signature="157550:157559" placeholder="..." />
+            <marker date="1451455985000" expanded="true" signature="157821:157830" placeholder="..." />
+            <marker date="1451455985000" expanded="true" signature="158114:158123" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -905,8 +905,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.36594203">
-          <caret line="2405" column="3" selection-start-line="2405" selection-start-column="3" selection-end-line="2405" selection-end-column="3" />
+        <state vertical-scroll-proportion="0.6195652">
+          <caret line="2420" column="1" selection-start-line="2420" selection-start-column="1" selection-end-line="2420" selection-end-column="1" />
           <folding />
         </state>
       </provider>

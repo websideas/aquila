@@ -3,7 +3,7 @@
 // Exit if accessed directly
 if ( !defined('ABSPATH')) exit;
 
-if ( has_nav_menu( 'primary' ) ) {
+if ( has_nav_menu( 'mobile' ) ) {
 
     $search_html = $search = '';
     if ( kt_option('header_search', 1) ) {
@@ -17,7 +17,7 @@ if ( has_nav_menu( 'primary' ) ) {
     $search_html = sprintf('<li class="menu-item menu-item-search-form">%s</li>', $search);
 
     wp_nav_menu( array(
-        'theme_location' => 'primary',
+        'theme_location' => 'mobile',
         'container' => 'nav',
         'container_class' => 'main-nav-mobile',
         'container_id' => 'main-nav-mobile',

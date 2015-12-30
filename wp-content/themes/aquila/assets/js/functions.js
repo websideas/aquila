@@ -54,6 +54,7 @@
         kt_sidebar_sticky();
 
         kt_likepost();
+        init_lightbox_content();
 
         
         if($('#wpadminbar').length){
@@ -404,6 +405,19 @@
                     $('#main-nav-tool li .searchform').slideUp();
                 }
             });
+    }
+
+    /* ---------------------------------------------
+     Search
+     --------------------------------------------- */
+    function init_lightbox_content(){
+        $('.socials-mobile').magnificPopup({
+            type: 'inline',
+            mainClass : 'mfp-zoom-in',
+            items: { src: '#socials-mobile' },
+            focus : 'input[name=s]',
+            removalDelay: 200
+        });
     }
 
 

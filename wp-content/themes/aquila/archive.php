@@ -64,12 +64,12 @@ get_header(); ?>
                         echo '<div class="col-md-'.$main_column.' main-content '.$pull_class.'"><div class="row multi-columns-row blog-posts-'.$type.'">';
 
                         if(!$first_featured){
-                            printf('<div class="col-lg-%1$s col-md-%1$s">', $article_column);
+                            printf('<div class="col-lg-%1$s col-md-%1$s col-sm-%1$s">', $article_column);
                             get_template_part( 'templates/blog/'.$type.'/content', get_post_format());
                             echo '</div>';
                         }
                     }else {
-                        printf('<div class="article-post-item col-lg-%1$s col-md-%1$s">', $article_column);
+                        printf('<div class="article-post-item col-lg-%1$s col-md-%1$s col-sm-%1$s">', $article_column);
                         $featured = get_post_meta(get_the_ID(), '_kt_post_featured', true);
                         if($featured == 'yes' && $type != 'grid' && $type != 'masonry' ){
                             get_template_part( 'templates/blog/'.$type.'/contentf', get_post_format());
