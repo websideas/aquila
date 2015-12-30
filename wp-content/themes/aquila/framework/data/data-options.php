@@ -2298,47 +2298,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => __( 'Footer copyright padding', THEME_LANG ),
                         'default'  => array( )
                     ),
-                    array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
-                    ),
-                    array(
-                        'id'       => 'footer_socials_style',
-                        'type'     => 'select',
-                        'title'    => __( 'Footer socials style', THEME_LANG ),
-                        'options'  => array(
-                            'accent' => __('Accent', THEME_LANG ),
-                            'dark'   => __('Dark', THEME_LANG ),
-                            'light'  => __('Light', THEME_LANG ),
-                            'color'  => __('Color', THEME_LANG ),
-                            'custom'  => __('Custom Color', THEME_LANG ),
-                        ),
-                        'default'  => 'custom'
-                    ),
-                    array(
-                        'id'       => 'custom_color_social',
-                        'type'     => 'color',
-                        'title'    => __( 'Footer socials Color', THEME_LANG ),
-                        'default'  => '#999999',
-                        'transparent' => false,
-                        'required' => array('footer_socials_style','equals', array( 'custom' ) ),
-                    ),
-                    array(
-                        'id'       => 'footer_socials_size',
-                        'type'     => 'select',
-                        'title'    => __( 'Footer socials size', THEME_LANG ),
-                        'options'  => array(
-                            'small'       => __('Small', THEME_LANG ),
-                            'standard'   => __('Standard', THEME_LANG ),
-                        ),
-                        'default'  => 'small'
-                    ),
-                    array(
-                        'id'       => 'footer_socials_space_between_item',
-                        'type'     => 'text',
-                        'title'    => __( 'Footer socials space between item', THEME_LANG ),
-                        'default'  => '18'
-                    ),
                 )
             );
 
