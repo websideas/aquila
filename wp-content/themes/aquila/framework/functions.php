@@ -117,7 +117,6 @@ add_filter( 'body_class', 'theme_body_classes' );
 function theme_header_class_callback($classes, $layout){
     global $post;
 
-
     $fixed_header = kt_option('fixed_header', 2);
     if($fixed_header == 2 || $fixed_header == 3 ){
         $classes .= ' sticky-header';
@@ -125,12 +124,13 @@ function theme_header_class_callback($classes, $layout){
             $classes .= ' sticky-header-down';
         }
     }
-
-    if(is_page() || is_singular()){
-        $post_id = $post->ID;
-        $header_shadow = rwmb_meta('_kt_header_shadow', array(), $post_id);
-        if($header_shadow == ''){
-            $header_shadow = kt_option('header_shadow', true);
+    if($layout == 1){
+        if(is_page() || is_singular()){
+            $post_id = $post->ID;
+            $header_shadow = rwmb_meta('_kt_header_shadow', array(), $post_id);
+            if($header_shadow == ''){
+                $header_shadow = kt_option('header_shadow', true);
+            }
         }
     }else{
         $header_shadow = kt_option('header_shadow', true);
@@ -140,7 +140,7 @@ function theme_header_class_callback($classes, $layout){
         $classes .= ' header-shadow';
     }
 
-    if($layout == 'layout1' || $layout == 'layout2'){
+    if($layout == 1 || $layout == 2){
         $classes .= ' header-layout-normal';
     }
 

@@ -246,7 +246,7 @@
                 }, 100);
             });
 
-        $('ul.navigation-mobile ul.sub-menu-dropdown, ul.navigation-mobile .kt-megamenu-wrapper').each(function () {
+        $(' ul.sub-menu-dropdown,ul.sub-menu,.kt-megamenu-wrapper', 'ul.navigation-mobile').each(function () {
             $(this).parent().children('a').prepend('<span class="open-submenu"></span>');
         });
 
@@ -254,7 +254,7 @@
             e.stopPropagation();
             e.preventDefault();
             $(this).closest('li').toggleClass('active-menu-item');
-            $(this).closest('li').children('.sub-menu-dropdown, .kt-megamenu-wrapper').slideToggle();
+            $(this).closest('li').children('.sub-menu-dropdown, .kt-megamenu-wrapper, ul.sub-menu').slideToggle();
         });
 
         $(window).resize(function () {

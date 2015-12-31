@@ -379,6 +379,31 @@ if (!function_exists('kt_show_slideshow')) {
             $style = rwmb_meta('_kt_slideshow_posts_style', array(), $post_id);
 
             $args = array('post_type' => 'post', 'posts_per_page' => 4);
+
+
+            $source = get_post_meta($post_id, '_kt_slideshow_source', true);
+            if($source == 'categories'){
+                $categories = rwmb_meta( '_kt_slideshow_categories', 'type=taxonomy_advanced&taxonomy=category', $post_id );
+                if(count($categories)){
+                    $categories_arr = array();
+                    foreach($categories as $category){
+                        $categories_arr[] = $category->term_id;
+                    }
+                    $args['category__in'] = $categories_arr;
+                }
+            }elseif($source == 'posts'){
+                $posts = rwmb_meta( '_kt_slideshow_posts', 'multiple=true', $post_id );
+                if(count($posts)){
+                    $args['post__in'] = $posts;
+                }
+            }elseif($source == 'authors'){
+                $authors = rwmb_meta( '_kt_slideshow_authors', 'multiple=true', $post_id );
+                if(count($authors)){
+                    $args['author__in'] = $authors;
+                }
+            }
+
+
             $query = new WP_Query( $args );
             $slider_html = '';
 
@@ -462,6 +487,12 @@ if (!function_exists('kt_show_slideshow')) {
             }
             /* Restore original Post Data */
             wp_reset_postdata();
+
+            if($output != '') {
+                if (in_array($style, array('page', 'thumb', 'normal'))) {
+                    $output = '<div class="container">' . $output . '</div>';
+                }
+            }
 
         }elseif($slideshow == 'page'){
             if($page_id = rwmb_meta('_kt_slideshow_page', array(), $post_id)){

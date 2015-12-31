@@ -6,10 +6,10 @@
 
     <?php if($type == 'grid'){ ?>
         <div class="row row-eq-height">
-            <div class="col-md-6 ">
+            <div class="col-md-6 col-sm-6">
                 <?php the_post_thumbnail('first_featured'); ?>
             </div>
-            <div class="col-md-6 post-item-info">
+            <div class="col-md-6 col-sm-6 post-item-info">
                 <?php
                 the_title( sprintf( '<h3 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h3>' );
                 kt_entry_excerpt();

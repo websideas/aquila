@@ -2537,14 +2537,17 @@ ul.style-list{
 #header-content-mobile{
   position: relative;
   display: none;
-  padding: 0 15px;
   @include box-shadow(0, 2px, 6px, rgba($black, 0.05));
+
+  #header-mobile-inner{
+    position: relative;
+  }
   .site-branding{
     float: left;
   }
   .header-mobile-tools{
     @include translate(y);
-    right: 15px;
+    right: 0;
     a{
       color: $black;
       float: left;
@@ -2639,13 +2642,13 @@ ul.style-list{
 
         } 
       }
-
+      ul.sub-menu,
       ul.sub-menu-dropdown,
       div.kt-megamenu-wrapper{
         border-bottom: 1px solid $border-color;
         display: none;
       }
-
+      ul.sub-menu,
       ul.sub-menu-dropdown,
       ul.sub-menu-megamenu{
         margin: 0;
@@ -2660,9 +2663,11 @@ ul.style-list{
         }
       }
 
+      ul.sub-menu,
       ul.sub-menu-dropdown{
         padding: 15px 0;
-        ul.sub-menu-dropdown{
+        ul.sub-menu-dropdown,
+        ul.sub-menu{
           border: medium none;
           margin-left: 20px;
           padding: 0;
@@ -2908,12 +2913,8 @@ body.opened-nav-animate{
 #main-sideshow{
   position: relative;
   z-index: 1;
-  #sideshow-inner {
-    max-width: 1140px;
-    margin: 0 auto;
-  }
   &.postslider-graybg{
-    padding: 98px;
+    padding: 98px 0;
     background: $gray-bg;
     .slick-slider{
       position: static;
@@ -2926,6 +2927,7 @@ body.opened-nav-animate{
   &.postslider-big{
     #sideshow-inner{
       max-width: 1490px;
+      margin: 0 auto;
     }
     .blog-posts-slick{
       position: static;
@@ -2952,15 +2954,8 @@ body.opened-nav-animate{
   }
   &.postslider-thumb{
     margin-top: 50px;
-    #sideshow-inner{
-      overflow: hidden;
-      position: relative;
-    }
   }
   &.postslider-slider{
-    #sideshow-inner{
-      max-width: none;
-    }
     .slick-slide{
       height: 800px;
       background-position: center center;

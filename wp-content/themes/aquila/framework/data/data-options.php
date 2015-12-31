@@ -1957,7 +1957,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'default'        => array( 'width'  => 25, 'unit'   => 'px' ),
                         'output'   => array( '.site-branding .site-logo img' ),
                     ),
-
                     array(
                         'id'       => 'logo_margin_spacing',
                         'type'     => 'spacing',
@@ -1967,13 +1966,12 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'units_extended' => 'true',
                         'title'    => __( 'Logo margin spacing Option', THEME_LANG ),
                         'default'  => array(
-                            'margin-top'    => '40px',
-                            'margin-right'  => '0',
-                            'margin-bottom' => '40px',
+                            'margin-top'    => '27px',
+                            'margin-right'  => '65px',
+                            'margin-bottom' => '27px',
                             'margin-left'   => '0'
                         )
                     ),
-
                     array(
                         'id'   => 'divide_id',
                         'type' => 'divide'
@@ -1999,9 +1997,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'units_extended' => 'true',
                         'title'    => __( 'Logo mobile margin spacing Option', THEME_LANG ),
                         'default'  => array(
-                            'margin-top'    => '16px',
+                            'margin-top'    => '20px',
                             'margin-right'  => '0px',
-                            'margin-bottom' => '17px',
+                            'margin-bottom' => '20px',
                             'margin-left'   => '0px'
                         ),
                         'output'   => array( '#header-content-mobile .site-branding' ),

@@ -32,7 +32,7 @@
     <?php get_template_part( 'templates/sidearea'); ?>
     <div id="page_outter">
         <div id="page">
-            <div id="wrapper-content">
+            <div id="wrapper-content" class="content-header-<?php echo esc_attr($header_layout); ?>">
                 <?php do_action( 'theme_before_header' ); ?>
 
                 <?php
@@ -47,7 +47,7 @@
                 <?php get_template_part( 'templates/headers/header',  'mobile'); ?>
                 <?php get_template_part( 'templates/headers/header',  'mobilenav'); ?>
 
-                <div class="<?php echo esc_attr(apply_filters('theme_header_class', 'header-container header-layout'.$header_layout.' header-'.$position, $header_layout)); ?>">
+                <div class="header-container header-layout<?php echo esc_attr($header_layout); ?>  header-<?php echo esc_attr($position); ?> <?php echo esc_attr(apply_filters('theme_header_class', '', $header_layout)); ?>">
                     <header id="header" class="<?php echo apply_filters('theme_header_content_class', 'header-content', $header_layout) ?>">
                         <?php get_template_part( 'templates/headers/header',  'layout'.$header_layout); ?>
                     </header><!-- #header -->
