@@ -23,9 +23,9 @@ function kt_register_plugins() {
      */
     $plugins = array(
         array(
-            'name'          => 'Wingman Custom Post', // The plugin name
-            'slug'          => 'wingman_cp', // The plugin slug (typically the folder name)
-            'source'            => THEME_DIR.'recommend-plugins/wingman_cp.zip', // The plugin source
+            'name'          => 'Aquila Custom Post', // The plugin name
+            'slug'          => 'aquila_cp', // The plugin slug (typically the folder name)
+            'source'            => THEME_DIR.'recommend-plugins/aquila_cp.zip', // The plugin source
             'required'          => true, // If false, the plugin is only 'recommended' instead of required
             'force_activation'      => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
             'force_deactivation'    => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins

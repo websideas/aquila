@@ -28,9 +28,10 @@ only screen and (min-resolution: 144dpi) {
   .site-branding .site-logo.retina-logo-wrapper .default-logo { display: none; }
 }
 
+
 @media (max-width: 1490px) {
-  #main-sideshow{
-    &.postslider-big{
+  #main-slideshow{
+    &.post-slider-big{
       .slick-slide{
         margin: 0;
       }
@@ -155,7 +156,7 @@ only screen and (min-resolution: 144dpi) {
       }
     }
   }
-  #main-sideshow.postslider-graybg{
+  #main-slideshow.postslider-graybg{
     padding: 30px 0;
   }
 

@@ -156,7 +156,7 @@ function kt_register_meta_boxes( $meta_boxes )
                 'id'  => "{$prefix}gallery_images",
                 'type' => 'image_advanced',
                 'desc' => __( "You can drag and drop for change order image", THEME_LANG ),
-                'visible' => array($prefix . 'gallery_type','in', array('slider', 'grid' )),
+                'visible' => array($prefix . 'gallery_type', 'in', array('slider', 'grid' )),
             ),
         ),
     );
@@ -215,6 +215,127 @@ function kt_register_meta_boxes( $meta_boxes )
 
         ),
     );
+
+    /**
+     * For Post slider
+     *
+     */
+
+    $meta_boxes[] = array(
+        'title'  => __('Post Slider Settings',THEME_LANG),
+        'pages'  => array( 'kt-post-slider' ),
+        'fields' => array(
+
+            array(
+                'name' => __('Data source', THEME_LANG),
+                'id'   => "{$prefix}slideshow_source",
+                'type' => 'select',
+                'options' => array(
+                    ''              => __('All', THEME_LANG),
+                    'categories'    => __('Specific Categories', THEME_LANG),
+                    'authors'		=> __('Specific Authors', THEME_LANG),
+                    'posts'		=> __('Specific Posts', THEME_LANG),
+                ),
+                'std'  => '',
+            ),
+            // Categories
+            array(
+                'name'    => __( 'Specific Categories', THEME_LANG ),
+                'id'      => "{$prefix}slideshow_categories",
+                'type'    => 'taxonomy_advanced',
+                'multiple'=> true,
+                'options' => array(
+                    'taxonomy' => 'category',
+                    'type'     => 'select_advanced',
+                    'args'     => array()
+                ),
+                'visible' => array($prefix . 'slideshow_source', '=', 'categories'),
+            ),
+
+            // Authors
+            array(
+                'name'    => __( 'Specific Authors', THEME_LANG ),
+                'id'      => "{$prefix}slideshow_authors",
+                'type'    => 'user',
+                'multiple'=> true,
+                'options' => array(
+                    'type'     => 'select_advanced'
+                ),
+                'visible' => array($prefix . 'slideshow_source', '=', 'authors'),
+            ),
+            // Posts
+            array(
+                'name'        => __( 'Posts', THEME_LANG ),
+                'id'          => "{$prefix}slideshow_posts",
+                'type'        => 'post',
+                'post_type'   => 'post',
+                'field_type'  => 'select_advanced',
+                'query_args'  => array(
+                    'post_status'    => 'publish',
+                    'posts_per_page' => - 1,
+                ),
+                'multiple'=> true,
+                'visible' => array($prefix . 'slideshow_source', '=', 'posts'),
+            ),
+            array(
+                'name' => __('Posts Slider style', THEME_LANG),
+                'id'   => "{$prefix}slideshow_slider_style",
+                'type' => 'select',
+                'options' => array(
+                    'normal'        => __('Normal Carousel', THEME_LANG),
+                    'big'           => __('Big Carousel', THEME_LANG),
+                    'slider'        => __('Posts slider', THEME_LANG),
+                    'thumb'         => __('Thumb slider', THEME_LANG),
+                    //'carousel'      => __('Small Carousel', THEME_LANG),
+                ),
+                'std'  => '',
+            ),
+            array(
+                'type' => 'text',
+                'name' => __( 'Number of items', THEME_LANG ),
+                'id' => $prefix.'slideshow_max_items',
+                'std' => 10, // default value
+                'desc' => __( 'Set max limit for items in grid or enter -1 to display all (limited to 1000).', THEME_LANG ),
+            ),
+            array(
+                'type' => 'select',
+                'name' => __( 'Order by', THEME_LANG ),
+                'id' => $prefix.'slideshow_orderby',
+                'options' => array(
+                    'date' => __( 'Date', THEME_LANG ),
+                    'ID' => __( 'Order by post ID', THEME_LANG ),
+                    'author' => __( 'Author', THEME_LANG ),
+                    'title' => __( 'Title', THEME_LANG ),
+                    'modified' => __( 'Last modified date', THEME_LANG ),
+                    'parent' => __( 'Post/page parent ID', THEME_LANG ),
+                    'comment_count' => __( 'Number of comments', THEME_LANG ),
+                    'menu_order' => __( 'Menu order/Page Order', THEME_LANG ),
+                    'meta_value' => __( 'Meta value', THEME_LANG ),
+                    'meta_value_num' => __( 'Meta value number', THEME_LANG )
+                ),
+                'desc' => __( 'Select order type. If "Meta value" or "Meta value Number" is chosen then meta key is required.', THEME_LANG ),
+            ),
+            array(
+                'type' => 'text',
+                'name' => __( 'Meta key', THEME_LANG ),
+                'id' => $prefix.'slideshow_meta_key',
+                'visible' => array($prefix . 'slideshow_orderby', 'in', array('meta_value', 'meta_value_num'))
+            ),
+            array(
+                'type' => 'select',
+                'name' => __( 'Sorting', THEME_LANG ),
+                'id' => $prefix.'slideshow_order',
+                'tab' => 'slideshow_displays',
+                'options' => array(
+                    'DESC' => __( 'Descending', THEME_LANG ),
+                    'ASC' => __( 'Ascending', THEME_LANG ),
+                ),
+                'desc' => __( 'Select sorting order.', THEME_LANG ),
+            ),
+        ),
+    );
+
+
 
     /**
      * For Front page
@@ -397,14 +518,15 @@ function kt_register_meta_boxes( $meta_boxes )
             array(
                 'type' => 'text',
                 'name' => __( 'Meta key', THEME_LANG ),
-                'id' => $prefix.'meta_key',
+                'id' => $prefix.'frontpage_meta_key',
                 'tab' => 'frontpage_displays',
-                'visible' => array($prefix . 'frontpage_orderby', '=', 'meta_value')
+                'visible' => array($prefix . 'frontpage_orderby', 'in', array('meta_value', 'meta_value_num'))
+
             ),
             array(
                 'type' => 'select',
                 'name' => __( 'Sorting', THEME_LANG ),
-                'id' => $prefix.'order',
+                'id' => $prefix.'frontpage_order',
                 'tab' => 'frontpage_displays',
                 'options' => array(
                     'DESC' => __( 'Descending', THEME_LANG ),
@@ -610,7 +732,20 @@ function kt_register_meta_boxes( $meta_boxes )
             ),
             'tab'  => 'header',
         ),
-
+        array(
+            'name'        => __( 'Post Slider', THEME_LANG ),
+            'id'          => "{$prefix}slideshow_postslider",
+            'type'        => 'post',
+            'post_type'   => 'kt-post-slider',
+            'field_type'  => 'select',
+            'title'    => __( 'Slider Select Option', THEME_LANG ),
+            'query_args'  => array(
+                'post_status'    => 'publish',
+                'posts_per_page' => - 1,
+            ),
+            'tab'  => 'header',
+            'visible' => array($prefix . 'slideshow_type', '=', 'postslider')
+        ),
         array(
             'name' => __('Select Revolution Slider', THEME_LANG),
             'id' => $prefix . 'rev_slider',
@@ -635,93 +770,15 @@ function kt_register_meta_boxes( $meta_boxes )
             'type'        => 'post',
             'post_type'   => 'page',
             'field_type'  => 'select',
-            'title'    => __( 'Pages Select Option', THEME_LANG ),
+            'title'    => __( 'Page Select Option', THEME_LANG ),
             'query_args'  => array(
                 'post_status'    => 'publish',
                 'posts_per_page' => - 1,
             ),
             'tab'  => 'header',
             'visible' => array($prefix . 'slideshow_type', '=', 'page')
-        ),
-
-
-        array(
-            'name' => __('Posts Slider style', THEME_LANG),
-            'id'   => "{$prefix}slideshow_posts_style",
-            'type' => 'select',
-            'options' => array(
-                'normal'        => __('Normal Carousel', THEME_LANG),
-                'big'           => __('Big Carousel', THEME_LANG),
-                'slider'        => __('Posts slider', THEME_LANG),
-                'thumb'         => __('Thumb slider', THEME_LANG),
-                'carousel'      => __('Small Carousel', THEME_LANG),
-            ),
-            'std'  => '',
-            'tab'  => 'header',
-            'visible' => array($prefix . 'slideshow_type', '=', 'postslider')
-        ),
-
-        array(
-            'name' => __('Data source', THEME_LANG),
-            'id'   => "{$prefix}slideshow_source",
-            'type' => 'select',
-            'options' => array(
-                ''              => __('All', THEME_LANG),
-                'categories'    => __('Specific Categories', THEME_LANG),
-                'authors'		=> __('Specific Authors', THEME_LANG),
-                'posts'		=> __('Specific Posts', THEME_LANG),
-            ),
-            'std'  => '',
-            'tab'  => 'header',
-            'visible' => array($prefix . 'slideshow_type', '=', 'postslider')
-        ),
-        // Categories
-        array(
-            'name'    => __( 'Specific Categories', THEME_LANG ),
-            'id'      => "{$prefix}slideshow_categories",
-            'type'    => 'taxonomy_advanced',
-            'multiple'=> true,
-            'options' => array(
-                'taxonomy' => 'category',
-                'type'     => 'select_advanced',
-                'args'     => array()
-            ),
-            'tab'  => 'header',
-            'visible' => array($prefix . 'slideshow_source', '=', 'categories')
-        ),
-
-        // Authors
-        array(
-            'name'    => __( 'Specific Authors', THEME_LANG ),
-            'id'      => "{$prefix}slideshow_authors",
-            'type'    => 'user',
-            'multiple'=> true,
-            'options' => array(
-                'type'     => 'select_advanced'
-            ),
-            'tab'  => 'header',
-            'visible' => array($prefix . 'slideshow_source', '=', 'authors')
-        ),
-
-        // Posts
-        array(
-            'name'        => __( 'Posts', THEME_LANG ),
-            'id'          => "{$prefix}slideshow_posts12",
-            'type'        => 'post',
-            'post_type'   => 'post',
-            'field_type'  => 'select_advanced',
-            'query_args'  => array(
-                'post_status'    => 'publish',
-                'posts_per_page' => - 1,
-            ),
-            'multiple'=> true,
-            'tab'  => 'header',
-            'visible' => array($prefix . 'slideshow_source', '=', 'posts')
-        ),
-
+        )
     );
-
-
 
     /**
      * For Page Options
@@ -734,8 +791,6 @@ function kt_register_meta_boxes( $meta_boxes )
         'tabs'      => array_merge( $tabs,$tabs_page),
         'fields'    => array_merge( $fields,$fields_page),
     );
-
-
 
 
     $tabs_post = array(

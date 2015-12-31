@@ -33,7 +33,8 @@ get_header(); ?>
         <?php
 
         $orderby = get_post_meta($post_id, '_kt_frontpage_orderby', true);
-        $order = get_post_meta($post_id, '_kt_order', true);
+        $order = get_post_meta($post_id, '_kt_frontpage_order', true);
+
         $paged = get_query_var('page');
         if($paged == ''){
             $paged = get_query_var('paged');
@@ -51,6 +52,7 @@ get_header(); ?>
         );
 
         if($orderby == 'meta_value' || $orderby == 'meta_value_num'){
+            $meta_key = get_post_meta($post_id, 'frontpage_meta_key', true);
             $args['meta_key'] = $meta_key;
         }
 

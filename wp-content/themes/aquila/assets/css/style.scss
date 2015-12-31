@@ -133,21 +133,6 @@ h1, h2, h3, h4, h5, h6 {
   color: $black;
   letter-spacing: .025em;
 }
-h1{
-  font-size: 48px;
-}
-h2{
-  font-size: 36px;
-}
-h3{
-  font-size: 30px;
-}
-h4{
-  font-size: 24px;
-}
-h5{
-  font-size: 16px;
-}
 
 a {
   color: $primary-color;
@@ -980,21 +965,18 @@ ul.kt_posts_widget{
       line-height: 22px;
     }
   }
-}
-
-#footer{
-  ul.kt_posts_widget{
-  li{
-    .posted-on{
-      font-size: 12px;
+  #footer &{
+    li{
+      .posted-on{
+        font-size: 12px;
+      }
     }
   }
 }
-}
+
+
 
 .widget_kt_posts{
-
-
   ul.kt-artilce-2{
     li{
       padding-bottom: 50px;
@@ -1020,55 +1002,66 @@ ul.kt_posts_widget{
         padding-bottom: 0;
       }
     }
-
   }
-
 }
+
+
+
 
 /**
  * KT Posts Carousel
  **/
-ul.kt_posts_carousel_widget{
-  padding: 0;
-  .article-widget{
-    position: relative;
-    .article-attr{
-      border: 10px solid rgba($white, .8);
-      position: absolute;
-      bottom: 20px;
-      left: 20px;
-      right: 20px;
-      h3.title{
-        margin: 0;
-        background: rgba($black, .7);
-        font-size: 14px;
-        line-height: 28px;
-        letter-spacing: 0.025em;
-        padding: 11px 15px;
-        a{
-          color: $white;
-          &:hover{
-            color: $primary-color;
+.widget_kt_posts_carousel{
+  ul.kt_posts_carousel_widget{
+    padding: 0;
+    margin: 0;
+    .article-widget{
+      position: relative;
+
+      img{
+        width: 100%;
+      }
+      .article-attr{
+
+        border: 10px solid rgba($white, .8);
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        right: 20px;
+
+        h3.title{
+          margin: 0;
+          background: rgba($black, .7);
+          font-size: 14px;
+          line-height: 28px;
+          letter-spacing: 0.025em;
+          padding: 11px 15px;
+          a{
+            color: $white;
+            &:hover{
+              color: $primary-color;
+            }
           }
         }
-      }
-      .carousel-prev,.carousel-next{
-        position: absolute;
-        top:50%;
-        @include transform(translatey(-50%));
-        font-size: 16px;
-        color: $gray;
-      }
-      .carousel-prev{
-        left: -8px;
-      }
-      .carousel-next{
-        right: -8px;
+
+        .carousel-prev,
+        .carousel-next{
+          position: absolute;
+          top:50%;
+          @include transform(translatey(-50%));
+          font-size: 16px;
+          color: $gray;
+        }
+        .carousel-prev{
+          left: -8px;
+        }
+        .carousel-next{
+          right: -8px;
+        }
       }
     }
   }
 }
-
 
 /**
  * Post Tabs
@@ -2907,90 +2900,73 @@ body.opened-nav-animate{
     margin-bottom: 40px;
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ==============================
    9. Post slider
    ============================== */
-#main-sideshow{
+#main-slideshow{
   position: relative;
   z-index: 1;
-  &.postslider-graybg{
+  &.post-slider-slider,
+  &.post-slider-normal{
+    .slick-arrow{
+      @include opacity(1);
+      &.slick-prev {
+        left: 40px;
+      }
+      &.slick-next {
+        right: 40px;
+      }
+      &:hover{
+        &:before{
+          color: $primary-color;
+        }
+      }
+    }
+  }
+
+  &.post-slider-normal{
     padding: 98px 0;
     background: $gray-bg;
     .slick-slider{
       position: static;
     }
   }
+
   &.slideshow_page-graybg{
     padding: 120px 0;
     background: $gray-bg;
   }
-  &.postslider-big{
-    #sideshow-inner{
-      max-width: 1490px;
-      margin: 0 auto;
-    }
-    .blog-posts-slick{
-      position: static;
-    }
-    .slick-slide{
-      margin: 0 15px;
-      &:after {
-        background: rgba($white, .7);
-        content: "";
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-        @include opacity(1);
-        @include transition();
-      }
-      &.slick-current{
-        &:after{
-          @include opacity(0);
-        }
-      }
-    }
-  }
-  &.postslider-thumb{
-    margin-top: 50px;
-  }
-  &.postslider-slider{
-    .slick-slide{
-      height: 800px;
-      background-position: center center;
-      background-size: cover;
-      text-align: center;
-      &:before{
-        position: absolute;
-        width: 100%;
-        content: '';
-        height: 100%;
-        top: 0;
-        left: 0;
-        background: rgba($black, .4);
-      }
+
+}
+
+.content-header-1{
+  #main-slideshow{
+    &.post-slider-thumb{
+      margin-top: 50px
     }
   }
 
 }
 
-.slick-slide{
-  img{
-    width: 100%;
-  }
-}
+
 
 .blog-posts-slick {
   .slick-list{
     cursor:url(../images/drag.png) 16 9, ew-resize!important;
   }
-  &.slide-visible{
-    .slick-list{
-      overflow: visible;
-    }
-  }
-
   .article-post{
     position: relative;
     &-content{
@@ -3109,6 +3085,69 @@ body.opened-nav-animate{
       }
     }
   }
+
+
+
+
+  &.posts-slick-big{
+    max-width: 1490px;
+    margin: 0 auto;
+    position: static;
+
+    .slick-slide{
+      margin: 0 15px;
+      &:after {
+        background: rgba($white, .7);
+        content: "";
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        @include opacity(1);
+        @include transition();
+      }
+      &.slick-current{
+        &:after{
+          @include opacity(0);
+        }
+      }
+    }
+    .slick-slide{
+      margin: 0 15px;
+    }
+    .slick-arrow{
+      &.slick-prev{
+        left: 0;
+      }
+      &.slick-next{
+        right: 0;
+      }
+    }
+  }
+  &.posts-slick-slider{
+    .slick-slide{
+      height: 780px;
+      background-position: center center;
+      background-size: cover;
+      text-align: center;
+      &:before{
+        position: absolute;
+        width: 100%;
+        content: '';
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba($black, .4);
+      }
+    }
+  }
+  &.slide-visible{
+    .slick-list{
+      overflow: visible;
+    }
+  }
+  /*
   .postslider-slider &,
   .postslider-graybg &{
     .article-post-content{
@@ -3133,6 +3172,28 @@ body.opened-nav-animate{
       margin: 0;
     }
   }
+  */
+
+
+
+
+  .layout-boxed &{
+    &.posts-slick-slider{
+      .slick-slide{
+        height: 600px;
+      }
+      .slick-arrow{
+        &.slick-prev{
+          left: 0;
+        }
+        &.slick-next{
+          right: 0;
+        }
+      }
+
+    }
+  }
+
 }
 
 .blog-posts-thumb{
@@ -3197,6 +3258,20 @@ body.opened-nav-animate{
 
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* ==============================
@@ -3729,6 +3804,62 @@ article.post-item-content{
           margin-bottom: 30px;
           padding: 0 15px;
           width: 25%;
+          a{
+            display: block;
+            position: relative;
+            span {
+              z-index: 2;
+              @include translate();
+              width: 40px;
+              height: 40px;
+              &:before,
+              &:after{
+                content: '';
+                background: $primary-color;
+                display: block;
+              }
+              &:before{
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                margin-top: -1px;
+              }
+              &:after{
+                height: 100%;
+                width: 1px;
+                position: absolute;
+                left: 50%;
+                top: 0;
+                margin-left: -1px;
+              }
+            }
+            &:after {
+              background: $black;
+              content: "";
+              left: 0;
+              top: 0;
+              width:100%;
+              height: 100%;
+              position: absolute;
+              z-index: 1;
+            }
+            span,
+            &:after{
+              @include transition();
+              @include opacity(0);
+            }
+
+            &:hover{
+              span{
+                @include opacity(1);
+              }
+              &:after {
+                @include opacity(.6);
+              }
+            }
+          }
         }
       }
     }
@@ -3837,6 +3968,9 @@ article.post-item-content{
 .blog-posts-medium{
   .no-sidebar &{
     @extend %specialHeading;
+    .entry-title{
+      padding-right: 10px;
+    }
   }
 }
 

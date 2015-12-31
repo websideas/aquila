@@ -376,138 +376,171 @@ if (!function_exists('kt_show_slideshow')) {
             }
         } elseif( $slideshow == 'postslider'){
 
-            $style = rwmb_meta('_kt_slideshow_posts_style', array(), $post_id);
-
-            $args = array('post_type' => 'post', 'posts_per_page' => 4);
-
-
-            $source = get_post_meta($post_id, '_kt_slideshow_source', true);
-            if($source == 'categories'){
-                $categories = rwmb_meta( '_kt_slideshow_categories', 'type=taxonomy_advanced&taxonomy=category', $post_id );
-                if(count($categories)){
-                    $categories_arr = array();
-                    foreach($categories as $category){
-                        $categories_arr[] = $category->term_id;
+            $postslider = rwmb_meta('_kt_slideshow_postslider', array(), $post_id);
+            if($postslider){
+                $output .= kt_render_postSlider($postslider);
+                if($output != '') {
+                    $style = rwmb_meta('_kt_slideshow_slider_style', array(), $postslider);
+                    if (in_array($style, array('page', 'thumb', 'normal'))) {
+                        $output = '<div class="container">' . $output . '</div>';
                     }
-                    $args['category__in'] = $categories_arr;
+                    $sideshow_class[] = 'post-slider-'.$style;
+
+
                 }
-            }elseif($source == 'posts'){
-                $posts = rwmb_meta( '_kt_slideshow_posts', 'multiple=true', $post_id );
-                if(count($posts)){
-                    $args['post__in'] = $posts;
-                }
-            }elseif($source == 'authors'){
-                $authors = rwmb_meta( '_kt_slideshow_authors', 'multiple=true', $post_id );
-                if(count($authors)){
-                    $args['author__in'] = $authors;
-                }
+
             }
-
-
-            $query = new WP_Query( $args );
-            $slider_html = '';
-
-
-            if ( $query->have_posts() ) {
-
-                $slider_class = array('blog-posts-slick');
-                $image_size = 'blog_post';
-                $slider_option = '{}';
-                $sideshow_class[] = 'postslider-'.$style;
-                $slider_thumbnail = '';
-
-                if($style == 'big'){
-                    $slider_class[] = 'slideAnimation';
-                    $slider_class[] = 'slide-visible';
-                    $image_size = 'blog_post_slider';
-                }elseif($style == 'normal'){
-                    $sideshow_class[] = 'postslider-graybg';
-                    $slider_class[] = 'slideAnimation';
-                } elseif ($style == 'thumb'){
-                    $slider_option = '{"arrows": true, "asNavFor": ".blog-posts-thumb", "fade": true}';
-                    $slider_thumbnail .= '<div class="blog-posts-thumb">';
-                }elseif($style == 'slider'){
-                    $slider_class[] = 'slideAnimation';
-                }
-
-                while ( $query->have_posts() ) {
-                    $query->the_post();
-                    $slider_content = '';
-
-                    if($style != 'thumb'){
-                        $content_class = '';
-                        if($style == 'slider'){
-                            $content_class = 'slider container';
-                        }
-
-                        $slider_content = sprintf(
-                            '<div class="article-post-content%1$s"><div class="article-post-inner">%2$s %3$s</div></div>',
-                            $content_class,
-                            '<h3><a href="'.get_the_permalink().'">'.get_the_title().'</a></h3>',
-                            '<div class="article-post-meta">'.get_the_author().' - '. get_the_date().'</div>'
-                        );
-
-                    }
-
-                    if($style == 'slider'){
-                        $slider_html .= sprintf(
-                            '<div class="article-post" style="%s">%s</div>',
-                            "background-image: url('".get_the_post_thumbnail_url()."');",
-                            $slider_content
-                        );
-                    }else{
-                        $slider_html .= sprintf(
-                            '<div class="article-post"><div class="article-post-thumb">%1$s</div>%2$s</div>',
-                            get_the_post_thumbnail(null, $image_size),
-                            $slider_content
-                        );
-                    }
-
-                    if ($style == 'thumb') {
-                        $slider_thumbnail .= sprintf(
-                            '<div style="%s"><div class="blog-posts-thumb-content">%s %s</div></div>',
-                            "background-image: url('".get_the_post_thumbnail_url()."');",
-                            '<h4><a href="' . get_the_permalink() . '"> ' . get_the_title() . '</a></h4>',
-                            '<div class="article-thumb-meta">' . get_the_author() . ' - ' . get_the_date() . '</div>'
-                        );
-                    }
-                }
-
-                if ($style == 'thumb'){
-                    $slider_thumbnail .= '</div>';
-                }
-
-                $output .= sprintf(
-                    '<div class="%1$s" data-slick=\'%2$s\'>%3$s</div>%4$s',
-                    implode(' ', $slider_class),
-                    esc_attr($slider_option),
-                    $slider_html,
-                    $slider_thumbnail
-                );
-            }
-            /* Restore original Post Data */
-            wp_reset_postdata();
-
-            if($output != '') {
-                if (in_array($style, array('page', 'thumb', 'normal'))) {
-                    $output = '<div class="container">' . $output . '</div>';
-                }
-            }
-
         }elseif($slideshow == 'page'){
             if($page_id = rwmb_meta('_kt_slideshow_page', array(), $post_id)){
                 $page = get_post($page_id);
-                $output = apply_filters( "the_content", $page->post_content );
+                $output = '<div class="container">'.apply_filters( "the_content", $page->post_content ).'</div>';
                 $sideshow_class[] = 'slideshow_page-graybg';
             }
         };
 
         if($output != ''){
-            echo '<div id="main-sideshow" class="'.esc_attr(implode(' ', $sideshow_class)).'"><div id="sideshow-inner">'.$output.'</div></div>';
+            echo '<div id="main-slideshow" class="'.esc_attr(implode(' ', $sideshow_class)).'"><div id="sideshow-inner">'.$output.'</div></div>';
         }
     }
 }
 
+
+function kt_render_postSlider($post_id){
+    $output = '';
+
+    $orderby = get_post_meta($post_id, '_kt_slideshow_orderby', true);
+    $order = get_post_meta($post_id, '_kt_slideshow_order', true);
+    $per_page = get_post_meta($post_id, '_kt_slideshow_max_items', true);
+    $style = rwmb_meta('_kt_slideshow_slider_style', array(), $post_id);
+
+
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => $per_page,
+        'orderby' => $orderby,
+        'order' => $order,
+    );
+
+    if($orderby == 'meta_value' || $orderby == 'meta_value_num'){
+        $meta_key = get_post_meta($post_id, 'slideshow_meta_key', true);
+        $args['meta_key'] = $meta_key;
+    }
+
+    $source = get_post_meta($post_id, '_kt_slideshow_source', true);
+
+    if($source == 'categories'){
+        $categories = rwmb_meta( '_kt_slideshow_categories', 'type=taxonomy_advanced&taxonomy=category', $post_id );
+        if(count($categories)){
+            $categories_arr = array();
+            foreach($categories as $category){
+                $categories_arr[] = $category->term_id;
+            }
+            $args['category__in'] = $categories_arr;
+        }
+    }elseif($source == 'posts'){
+        $posts = rwmb_meta( '_kt_slideshow_posts', 'multiple=true', $post_id );
+
+        if(count($posts)){
+            $args['post__in'] = $posts;
+        }
+    }elseif($source == 'authors'){
+        $authors = rwmb_meta( '_kt_slideshow_authors', 'multiple=true', $post_id );
+        if(count($authors)){
+            $args['author__in'] = $authors;
+        }
+    }
+
+    $query = new WP_Query( $args );
+
+    $slider_html = '';
+
+    if ( $query->have_posts() ) {
+
+
+
+        $slider_class = array('blog-posts-slick', 'posts-slick-'.$style);
+        $image_size = 'blog_post';
+        $slider_option = '{}';
+        $slider_thumbnail = '';
+
+        if($style == 'big'){
+            $slider_class[] = 'slideAnimation';
+            $slider_class[] = 'slide-visible';
+            $image_size = 'blog_post_slider';
+        } elseif ($style == 'thumb'){
+            $slider_option = '{"arrows": false, "asNavFor": ".blog-posts-thumb", "fade": true}';
+            $slider_thumbnail .= '<div class="blog-posts-thumb">';
+        }elseif($style == 'slider'){
+            $slider_class[] = 'slideAnimation';
+        }elseif($style == 'carousel'){
+            //$slider_option = '{"arrows": true, "slidesToShow": 3}';
+        }else{
+            $slider_class[] = 'slideAnimation';
+        }
+
+        while ( $query->have_posts() ) {
+            $query->the_post();
+            $slider_content = '';
+
+            if($style != 'thumb'){
+                $content_class = '';
+                if($style == 'slider'){
+                    $content_class = 'slider container';
+                }
+
+                $slider_content = sprintf(
+                    '<div class="article-post-content%1$s"><div class="article-post-inner">%2$s %3$s</div></div>',
+                    $content_class,
+                    '<h3><a href="'.get_the_permalink().'">'.get_the_title().'</a></h3>',
+                    '<div class="article-post-meta">'.get_the_author().' - '. get_the_date().'</div>'
+                );
+
+            }
+
+            if($style == 'slider'){
+                $slider_html .= sprintf(
+                    '<div class="article-post" style="%s">%s</div>',
+                    "background-image: url('".get_the_post_thumbnail_url()."');",
+                    $slider_content
+                );
+            }else{
+                $slider_html .= sprintf(
+                    '<div class="article-post"><div class="article-post-thumb">%1$s</div>%2$s</div>',
+                    get_the_post_thumbnail(null, $image_size),
+                    $slider_content
+                );
+            }
+
+            if ($style == 'thumb') {
+                $slider_thumbnail .= sprintf(
+                    '<div style="%s"><div class="blog-posts-thumb-content">%s %s</div></div>',
+                    "background-image: url('".get_the_post_thumbnail_url()."');",
+                    '<h4><a href="' . get_the_permalink() . '"> ' . get_the_title() . '</a></h4>',
+                    '<div class="article-thumb-meta">' . get_the_author() . ' - ' . get_the_date() . '</div>'
+                );
+            }
+        }
+
+        if ($style == 'thumb'){
+            $slider_thumbnail .= '</div>';
+        }
+
+        $output .= sprintf(
+            '<div class="%1$s" data-slick=\'%2$s\'>%3$s</div>%4$s',
+            implode(' ', $slider_class),
+            esc_attr($slider_option),
+            $slider_html,
+            $slider_thumbnail
+        );
+    }
+    /* Restore original Post Data */
+    wp_reset_postdata();
+
+
+
+
+    return $output;
+}
 
 if (!function_exists('kt_get_header')) {
     /**

@@ -58,7 +58,7 @@
                 $gallery .= sprintf(
                     '<div class="%s">%s</div>',
                     'gallery-image-item',
-                    '<a href="'.$image['full_url'].'"><img src="'.$image['url'].'" title="'.esc_attr($image['title']).'" alt="'.esc_attr($image['alt']).'"></a>'
+                    '<a href="'.$image['full_url'].'"><span></span><img src="'.$image['url'].'" title="'.esc_attr($image['title']).'" alt="'.esc_attr($image['alt']).'"></a>'
                 );
             }
             printf(
