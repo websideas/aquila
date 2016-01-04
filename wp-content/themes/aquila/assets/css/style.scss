@@ -614,6 +614,7 @@ select:not([multiple]) {
   font-family: $font-stack;
   text-align: center;
   letter-spacing: .1em;
+  font-weight: 700;
 }
 
 .sidebar{
@@ -1441,7 +1442,7 @@ ul.kt_posts_widget{
         position: relative;
         @include transition('all 0.5s ease 0s');
         letter-spacing: 0;
-        font-size: 16px;
+        font-size: 12px;
         height: 40px;
         line-height: 36px;
         width: 40px;
@@ -1708,7 +1709,7 @@ ul.kt_posts_widget{
   ul{
     li{
       a{
-        font-size: 14px;
+        font-size: 10px;
         height: 26px;
         line-height: 24px;
         width: 26px;
@@ -2464,7 +2465,7 @@ ul.style-list{
     left: 0;
     top: 0;
     visibility: visible;
-    background: rgba($white, .8);
+    background: rgba($white, 1);
     z-index: -1;
   }
 
@@ -3001,10 +3002,10 @@ body.opened-nav-animate{
       font-size: 12px;
     }
     h3{
-      font-size: 48px;
+      font-size: 36px;
       font-style: italic;
       font-weight: normal;
-      line-height: 72px;
+      line-height: 60px;
       text-transform: capitalize;
       a{
         color: $white;
@@ -3058,8 +3059,11 @@ body.opened-nav-animate{
         @include FontIcon('\f105');
       }
     }
+    &:focus,
+    &:active,
     &:hover{
       @include opacity(1);
+      outline: none;
     }
   }
   &.slideAnimation{
@@ -3950,6 +3954,7 @@ article.post-item-content{
     .entry-title{
       font-size: 16px;
       line-height: 30px;
+      font-style: normal;
       a{
         color: $black;
         &:hover{
@@ -4052,7 +4057,7 @@ article.post-item-content{
         &:before,
         &:after{
           content: '';
-          background: $primary-color;
+          background: $white;
           display: block;
         }
         &:before{
@@ -4073,12 +4078,12 @@ article.post-item-content{
         }
       }
       &:after {
-        background: $white;
+        background: $black;
         content: "";
-        right: 5px;
-        left: 5px;
-        top: 5px;
-        bottom: 5px;
+        right: 0;
+        left: 0;
+        top: 0;
+        bottom: 0;
         position: absolute;
         z-index: 1;
       }
