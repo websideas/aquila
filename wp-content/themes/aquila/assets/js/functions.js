@@ -139,7 +139,7 @@
         });
 
 
-
+        $('#side-widget-area .kt_posts_widget').mCustomScrollbar();
 
     });
     

@@ -3286,12 +3286,12 @@ body.opened-nav-animate{
   color: $main-text;
   height: 100%;
   right: -500px;
-  padding: 60px 82px 60px 65px;
+  padding: 60px 65px;
   position: fixed;
   top: 0;
-  overflow: auto;
+  overflow: hidden;
   @include transition();
-  width: 517px;
+  width: 500px;
   z-index: 9999;
   @include box-shadow(1px, 0, 20px, rgba($black, 0.05));
 
@@ -3302,6 +3302,36 @@ body.opened-nav-animate{
       font-size: 16px;
       font-weight: bold;
       margin-bottom: 55px;
+    }
+  }
+
+  #side-widget-area{
+    .kt_posts_widget{
+      position: absolute;
+      left: 65px;
+      right: 35px;
+      bottom: 60px;
+      top: 137px;
+      .mCSB_scrollTools{
+        @include opacity(0);
+        .mCSB_draggerRail{
+          background: $gray;
+        }
+        .mCSB_dragger{
+          .mCSB_dragger_bar{
+            background: $primary-color;
+          }
+        }
+      }
+    }
+  }
+  &:hover{
+    #side-widget-area{
+      .kt_posts_widget{
+        .mCSB_scrollTools{
+          @include opacity(1);
+        }
+      }
     }
   }
   .open-sidearea &{
