@@ -261,7 +261,7 @@ textarea {
   width: 100%;
   &:focus {
     @include css3-prefix('box-shadow', 'none');
-    border-color: $gray;
+    border-color: $primary-color;
     outline: 0;
     color: $gray;
   }
@@ -923,6 +923,10 @@ select:not([multiple]) {
     }
     a{
       color: $gray;
+      &:hover,
+      &:focus{
+        color: $primary-color;
+      }
     }
   }
 }
@@ -3281,11 +3285,11 @@ body.opened-nav-animate{
   background: #fff;
   color: $main-text;
   height: 100%;
-  right: -517px;
-  overflow: auto;
+  right: -500px;
   padding: 60px 82px 60px 65px;
   position: fixed;
   top: 0;
+  overflow: auto;
   @include transition();
   width: 517px;
   z-index: 9999;
@@ -3301,7 +3305,7 @@ body.opened-nav-animate{
     }
   }
   .open-sidearea &{
-    right: -17px;
+    right: 0;
   }
 }
 
