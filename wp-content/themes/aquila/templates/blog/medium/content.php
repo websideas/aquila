@@ -8,9 +8,8 @@
             the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' );
             kt_entry_meta_categories();
             kt_entry_excerpt();
-            kt_entry_meta();
+            kt_entry_meta(true);
             ?>
         </div>
     </div>
 </article>
-

@@ -3919,7 +3919,7 @@ article.post-item-content{
               &:before,
               &:after{
                 content: '';
-                background: $primary-color;
+                background: $white;
                 display: block;
               }
               &:before{
@@ -4064,6 +4064,36 @@ article.post-item-content{
         color: $white;
         &:hover{
           color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.gallery-images-grid{
+  .gallery-image-item{
+    width: 37%;
+    float: left;
+    padding-left: 15px;
+    height: 185px;
+    margin-bottom: 30px;
+    &:first-child{
+      width: 63%;
+      padding-left: 0;
+      padding-right: 15px;
+      height: 400px;
+    }
+  }
+}
+
+.main.sidebar-left,
+.main.sidebar-right{
+  .blog-posts-medium{
+    div.post-item-content,
+    article.post-item-content{
+      .post-item-info{
+        .post-item-share{
+          display: none;
         }
       }
     }
