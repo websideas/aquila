@@ -1859,7 +1859,7 @@ ul.kt_posts_widget {
  * Promo widget
  **/
 .promo-area {
-  margin: -50px -15px 50px;
+  margin: 0 -15px 50px;
   position: relative; }
   .promo-area:after {
     content: "";
