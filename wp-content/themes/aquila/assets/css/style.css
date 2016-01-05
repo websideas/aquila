@@ -2635,7 +2635,13 @@ ul.style-list {
       -o-box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
       visibility: hidden;
-      z-index: 99; }
+      z-index: 99;
+      -webkit-pointer-events: none;
+      -khtml-pointer-events: none;
+      -moz-pointer-events: none;
+      -ms-pointer-events: none;
+      -o-pointer-events: none;
+      pointer-events: none; }
     #main-navigation > li:hover > ul.sub-menu-dropdown,
     #main-navigation > li:hover > .kt-megamenu-wrapper {
       filter: alpha(opacity=100);
@@ -2652,7 +2658,13 @@ ul.style-list {
       -ms-transform: translate(0, 0);
       -o-transform: translate(0, 0);
       transform: translate(0, 0);
-      visibility: visible; }
+      visibility: visible;
+      -webkit-pointer-events: auto;
+      -khtml-pointer-events: auto;
+      -moz-pointer-events: auto;
+      -ms-pointer-events: auto;
+      -o-pointer-events: auto;
+      pointer-events: auto; }
     #main-navigation > li ul.sub-menu-dropdown {
       width: 300px;
       list-style: none;

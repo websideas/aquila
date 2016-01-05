@@ -397,1050 +397,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                     */
                 )
             );
-
-
-
-
-            /**
-             *	Main Navigation
-             **/
-            $this->sections[] = array(
-                'id'			=> 'styling_navigation',
-                'title'			=> __( 'Main Navigation', THEME_LANG ),
-                'desc'			=> '',
-                'subsection' => true,
-                'fields'		=> array(
-                    array(
-                        'id'       => 'styling_navigation_general',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'General', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id'             => 'navigation_height',
-                        'type'           => 'dimensions',
-                        'units'          => array('px'),
-                        'units_extended' => 'true',
-                        'title'          => __( 'Main Navigation Height', THEME_LANG ),
-                        'subtitle'          => __( 'Change height of main navigation', THEME_LANG ),
-                        'width'         => false,
-                        'default'        => array(
-                            'height'  => '100',
-                            'units'  => 'px'
-                        ),
-                        'output'   => array(
-                            '#main-navigation > li',
-                            '.header-layout1 .nav-container-inner'
-                        ),
-                    ),
-                    array(
-                        'id'       => 'navigation_border',
-                        'type'     => 'border',
-                        'title'    => __( 'Main Navigation Border', THEME_LANG ),
-                        'output'   => array( '.nav-container' ),
-                        'all'      => false,
-                        'left'     => false,
-                        'right'    => false,
-                        'default'  => array(
-                            'border-color' => '#e5e5e5'
-                        )
-                    ),
-
-                    array(
-                        'id'       => 'navigation_background',
-                        'type'     => 'background',
-                        'title'    => __( 'Background', THEME_LANG ),
-                        'subtitle' => __( 'Main Navigation with image, color, etc.', THEME_LANG ),
-                        'default'   => array(
-                            'background-color'      => '#1e1e1e',
-                        ),
-                        'output'      => array( '.header-layout1 .nav-container'),
-                    ),
-                    array(
-                        'id'       => 'navigation_box_border',
-                        'type'     => 'border',
-                        'title'    => __( 'MegaMenu & Dropdown Box Border', THEME_LANG ),
-                        'output'   => array(
-                            '#main-navigation > li ul.sub-menu-dropdown',
-                            '#main-navigation > li > .kt-megamenu-wrapper'
-                        ),
-                        'all'      => false,
-                        'left'     => false,
-                        'right'    => false,
-                        'default'  => array(
-                            'border-color' => '#82c14f'
-                        )
-                    ),
-
-                    array(
-                        'id'       => 'navigation_box_background',
-                        'type'     => 'background',
-                        'title'    => __( 'MegaMenu & Dropdown Box background', THEME_LANG ),
-                        'default'   => array(
-                            'background-color'      => '#FFFFFF',
-                        ),
-                        'output'      => array(
-                            '#main-navigation > li ul.sub-menu-dropdown',
-                            '#main-navigation > li > .kt-megamenu-wrapper'
-                        ),
-                        'transparent'           => false,
-                    ),
-                    array(
-                        'id'       => 'styling_navigation_general',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Top Level', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-
-                    array(
-                        'id'            => 'navigation_space',
-                        'type'          => 'slider',
-                        'title'         => __( 'Top Level space', THEME_LANG ),
-                        'default'       => 30,
-                        'min'           => 0,
-                        'step'          => 1,
-                        'max'           => 50,
-                        'resolution'    => 1,
-                        'display_value' => 'text',
-                        'subtitle' => __( 'Margin left between top level.', THEME_LANG ),
-                    ),
-
-                    array(
-                        'id'       => 'navigation_color',
-                        'type'     => 'color',
-                        'output'   => array(
-                            '#main-navigation > li > a'
-                        ),
-                        'title'    => __( 'Top Level Color', THEME_LANG ),
-                        'default'  => '#FFFFFF',
-                        'transparent' => false
-                    ),
-                    array(
-                        'id'       => 'navigation_color_hover',
-                        'type'     => 'color',
-                        'output'   => array(
-                            '#main-navigation > li > a:hover',
-                            '#main-navigation > li > a:focus',
-                            '#main-navigation > li.current-menu-item > a',
-                            '#main-navigation > li.current-menu-parent > a',
-                            '#main-navigation > li.hovered > a',
-                        ),
-                        'title'    => __( 'Top Level hover Color', THEME_LANG ),
-                        'default'  => '#82c14f',
-                        'transparent' => false
-                    ),
-
-
-                    array(
-                        'id'       => 'styling_navigation_dropdown',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Drop down', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id'             => 'navigation_dropdown',
-                        'type'           => 'dimensions',
-                        'units'          => array('px'),
-                        'units_extended' => 'true',
-                        'title'          => __( 'Dropdown width', THEME_LANG ),
-                        'subtitle'          => __( 'Change width of Dropdown', THEME_LANG ),
-                        'height'         => false,
-                        'default'        => array( 'width'  => 300, 'height' => 100 ),
-                        'output'   => array( '#main-navigation > li ul.sub-menu-dropdown'),
-                    ),
-                    array(
-                        'id'       => 'dropdown_background',
-                        'type'     => 'background',
-                        'title'    => __( 'Dropdown Background Color', THEME_LANG ),
-                        'default'  => array(
-                            'background-color'      => '',
-                        ),
-                        'output'   => array(
-                            '#main-navigation > li ul.sub-menu-dropdown > li > a'
-                        ),
-                        'background-repeat'     => false,
-                        'background-attachment' => false,
-                        'background-position'   => false,
-                        'background-image'      => false,
-                        'background-size'       => false,
-                        'preview'               => false,
-                        'transparent'           => true,
-                    ),
-
-                    array(
-                        'id'       => 'dropdown_background_hover',
-                        'type'     => 'background',
-                        'title'    => __( 'Dropdown Background Hover Color', THEME_LANG ),
-                        'default'  => array(
-                            'background-color'      => '',
-                        ),
-                        'output'   => array(
-                            '#main-navigation > li ul.sub-menu-dropdown > li.current-menu-item > a',
-                            '#main-navigation > li ul.sub-menu-dropdown > li.current-menu-parent > a',
-                            '#main-navigation > li ul.sub-menu-dropdown > li.hovered > a',
-                            '#main-navigation > li ul.sub-menu-dropdown > li > a:hover',
-                        ),
-                        'background-repeat'     => false,
-                        'background-attachment' => false,
-                        'background-position'   => false,
-                        'background-image'      => false,
-                        'background-size'       => false,
-                        'preview'               => false,
-                        'transparent'           => true,
-                    ),
-                    array(
-                        'id'       => 'dropdown_color',
-                        'type'     => 'color',
-                        'output'   => array(
-                            '#main-nav-tool .kt-wpml-languages ul li > a',
-                            '#main-navigation > li ul.sub-menu-dropdown > li > a',
-                        ),
-                        'title'    => __( 'Dropdown Text Color', THEME_LANG ),
-                        'default'  => '#707070',
-                        'transparent' => false
-                    ),
-
-                    array(
-                        'id'       => 'dropdown_color_hover',
-                        'type'     => 'color',
-                        'output'   => array(
-                            '#main-navigation > li ul.sub-menu-dropdown > li.current-menu-item > a',
-                            '#main-navigation > li ul.sub-menu-dropdown > li.current-menu-parent > a',
-                            '#main-nav-tool .kt-wpml-languages ul li > a:hover',
-                            '#main-navigation > li ul.sub-menu-dropdown > li:hover > a',
-                            '#main-navigation > li ul.sub-menu-dropdown > li > a:hover',
-                        ),
-                        'title'    => __( 'Dropdown Text Hover Color', THEME_LANG ),
-                        'default'  => '#82c14f',
-                        'transparent' => false
-                    ),
-
-                    array(
-                        'id'       => 'styling_navigation_mega',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Mega', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-
-                    array(
-                        'id'       => 'mega_title_color',
-                        'type'     => 'color',
-                        'output'   => array(
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a',
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span',
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li .widget-title',
-                        ),
-                        'title'    => __( 'MegaMenu Title color', THEME_LANG ),
-                        'default'  => '#252525',
-                        'transparent' => false
-                    ),
-                    array(
-                        'id'       => 'mega_title_color_hover',
-                        'type'     => 'color',
-                        'output'   => array(
-                            '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a:hover',
-                        ),
-                        'title'    => __( 'MegaMenu Title Hover Color', THEME_LANG ),
-                        'default'  => '#82c14f',
-                        'transparent' => false
-                    ),
-                    array(
-                        'id'       => 'mega_color',
-                        'type'     => 'color',
-                        'output'   => array(
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu a'
-                        ),
-                        'title'    => __( 'MegaMenu Text color', THEME_LANG ),
-                        'default'  => '#707070',
-                        'transparent' => false
-                    ),
-
-                    array(
-                        'id'       => 'mega_color_hover',
-                        'type'     => 'color',
-                        'output'   => array(
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu  > li.current-menu-item a:hover',
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu a:hover',
-                        ),
-                        'title'    => __( 'MegaMenu Text Hover color', THEME_LANG ),
-                        'default'  => '#82c14f',
-                        'transparent' => false
-                    ),
-
-                    array(
-                        'id'       => 'typography_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div style="height:150px"></div>',
-                        'full_width' => true
-                    ),
-                )
-            );
-
-            /**
-             *	Mobile Navigation
-             **/
-            $this->sections[] = array(
-                'id'			=> 'styling_mobile_menu',
-                'title'			=> __( 'Mobile Menu', THEME_LANG ),
-                'desc'			=> '',
-                'subsection' => true,
-                'fields'		=> array(
-                    array(
-                        'id'       => 'mobile_menu_background',
-                        'type'     => 'background',
-                        'title'    => __( 'Background', THEME_LANG ),
-                        'default'   => array(
-                            'background-color'      => '#FFFFFF',
-                        ),
-                        'output'      => array( '#mobile-nav-holder'),
-                        'transparent'           => false,
-                    ),
-                    array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
-                    ),
-
-                    array(
-                        'id'       => 'mobile_menu_color',
-                        'type'     => 'color',
-                        'output'   => array(
-                            'ul.navigation-mobile > li > a'
-                        ),
-                        'title'    => __( 'Top Level Color', THEME_LANG ),
-                        'default'  => '#282828',
-                        'transparent' => false
-                    ),
-                    array(
-                        'id'       => 'mobile_menu_color_hover',
-                        'type'     => 'color',
-                        'output'   => array(
-                            'ul.navigation-mobile > li:hover > a',
-                            'ul.navigation-mobile > li > a:hover'
-                        ),
-                        'title'    => __( 'Top Level hover Color', THEME_LANG ),
-                        'default'  => '#282828',
-                        'transparent' => false
-                    ),
-                    array(
-                        'id'       => 'mobile_menu_background',
-                        'type'     => 'background',
-                        'title'    => __( 'Top Level Background Color', THEME_LANG ),
-                        'default'  => array(
-                            'background-color'      => '#FFFFFF',
-                        ),
-                        'output'   => array(
-                            'ul.navigation-mobile > li > a'
-                        ),
-                        'background-repeat'     => false,
-                        'background-attachment' => false,
-                        'background-position'   => false,
-                        'background-image'      => false,
-                        'background-size'       => false,
-                        'preview'               => false,
-                        'transparent'           => false,
-                    ),
-
-                    array(
-                        'id'       => 'mobile_menu_background_hover',
-                        'type'     => 'background',
-                        'title'    => __( 'Top Level Hover Color', THEME_LANG ),
-                        'default'  => array(
-                            'background-color'      => '#F5F5F5',
-                        ),
-                        'output'   => array(
-                            'ul.navigation-mobile > li:hover > a',
-                            'ul.navigation-mobile > li > a:hover',
-                            //'ul.navigation-mobile > li.current-menu-item > a',
-                            //'ul.navigation-mobile > li.active-menu-item > a',
-                        ),
-                        'background-repeat'     => false,
-                        'background-attachment' => false,
-                        'background-position'   => false,
-                        'background-image'      => false,
-                        'background-size'       => false,
-                        'preview'               => false,
-                        'transparent'           => false,
-                    ),
-                    array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
-                    ),
-                    array(
-                        'id'       => 'mobile_sub_color',
-                        'type'     => 'color',
-                        'output'   => array(
-                            'ul.navigation-mobile > li .sub-menu-dropdown > li > a',
-                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li > a',
-                        ),
-                        'title'    => __( 'Text color', THEME_LANG ),
-                        'default'  => '#282828',
-                        'transparent' => false
-                    ),
-
-                    array(
-                        'id'       => 'mobile_sub_color_hover',
-                        'type'     => 'color',
-                        'output'   => array(
-                            'ul.navigation-mobile > li .sub-menu-dropdown > li > a:hover',
-                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li > a:hover',
-                        ),
-                        'title'    => __( 'Text Hover color', THEME_LANG ),
-                        'default'  => '#82c14f',
-                        'transparent' => false
-                    ),
-                    array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
-                    ),
-                    array(
-                        'id'       => 'mobile_title_color',
-                        'type'     => 'color',
-                        'output'   => array(
-                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a',
-                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > span',
-                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li .widget-title',
-                        ),
-                        'title'    => __( 'MegaMenu Title color', THEME_LANG ),
-                        'default'  => '#282828',
-                        'transparent' => false
-                    ),
-                    array(
-                        'id'       => 'mobile_title_color_hover',
-                        'type'     => 'color',
-                        'output'   => array(
-                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a:hover',
-                        ),
-                        'title'    => __( 'MegaMenu Title Hover Color', THEME_LANG ),
-                        'default'  => '#82c14f',
-                        'transparent' => false
-                    ),
-
-                    array(
-                        'id'       => 'typography_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div style="height:150px"></div>',
-                        'full_width' => true
-                    ),
-                )
-            );
-            /**
-			 *	Typography General
-			 **/
-			$this->sections[] = array(
-				'id'			=> 'typography_general',
-				'title'			=> __( 'General', THEME_LANG ),
-				'subsection' => true,
-                'fields'		=> array(
-                    array(
-                        'id'       => 'typography_body',
-                        'type'     => 'typography',
-                        'title'    => __( 'Body Font', THEME_LANG ),
-                        'subtitle' => __( 'Specify the body font properties.', THEME_LANG ),
-                        'text-align' => false,
-                        'letter-spacing'  => true,
-                        'output'      => array(
-                            'body',
-                            '.tooltip',
-                            '.woocommerce ul.shop-products h3',
-                            '.woocommerce ul.shop-products h3',
-                            '.woocommerce div.product .product_title',
-                            '.woocommerce table.cart tbody td.product-name a',
-                            '.woocommerce table.wishlist_table tbody td.product-add-to-cart a'
-                        ),
-                        'default'  => array( )
-                    ),
-                    array(
-                        'id'       => 'typography_pragraph',
-                        'type'     => 'typography',
-                        'title'    => __( 'Pragraph', THEME_LANG ),
-                        'subtitle' => __( 'Specify the pragraph font properties.', THEME_LANG ),
-                        'output'   => array( 'p' ),
-                        'default'  => array( ),
-                        'color'    => false,
-                        'text-align' => false,
-                    ),
-
-                    array(
-                        'id'       => 'typography_blockquote',
-                        'type'     => 'typography',
-                        'title'    => __( 'Blockquote', THEME_LANG ),
-                        'subtitle' => __( 'Specify the blockquote font properties.', THEME_LANG ),
-                        'output'   => array( 'blockquote' ),
-                        'default'  => array( ),
-                        'color'    => false,
-                        'text-align' => false,
-                    ),
-                    /*
-                    array(
-                        'id'       => 'typography_button',
-                        'type'     => 'typography',
-                        'title'    => __( 'Button', THEME_LANG ),
-                        'subtitle' => __( 'Specify the button font properties.', THEME_LANG ),
-                        'output'   => array(
-                            '.button',
-                            '.wpcf7-submit',
-                            '.btn',
-                            '.woocommerce #respond input#submit',
-                            '.woocommerce a.button',
-                            '.woocommerce button.button',
-                            '.woocommerce input.button',
-                            '.woocommerce #respond input#submit.alt',
-                            '.woocommerce a.button.alt',
-                            '.woocommerce button.button.alt',
-                            '.woocommerce input.button.alt',
-                            '.vc_general.vc_btn3',
-                            '.kt-button',
-                            '.readmore-link',
-                            '.readmore-link-white'
-                        ),
-                        'default'  => array(
-                            'font-family'     => 'Poppins',
-                            'font-size'       => '14px',
-                            'text-transform'  => 'uppercase',
-                        ),
-                        'color'    => false,
-                        'text-align'    => false,
-                        'font-size'    => false,
-                        'text-transform' => true,
-                        'letter-spacing'  => true,
-                        'font-weight' => false
-                    ),
-                    */
-                    array(
-                        'id'       => 'typography_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Typography Heading settings', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id'       => 'typography_heading1',
-                        'type'     => 'typography',
-                        'title'    => __( 'Heading 1', THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 1 font properties.', THEME_LANG ),
-                        'letter-spacing'  => true,
-                        'text-transform' => true,
-                        'text-align' => false,
-                        'output'      => array( 'h1', '.h1' ),
-                        'default'  => array(
-                            'font-family'     => 'Josefin Slab',
-                            'text-transform'  => 'uppercase',
-                            'font-weight'     => '700'
-                        ),
-                    ),
-                    array(
-                        'id'       => 'typography_heading2',
-                        'type'     => 'typography',
-                        'title'    => __( 'Heading 2', THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 2 font properties.', THEME_LANG ),
-                        'letter-spacing'  => true,
-                        'output'      => array( 'h2', '.h2' ),
-                        'text-transform' => true,
-                        'text-align' => false,
-                        'default'  => array(
-                            'font-family'     => 'Josefin Slab',
-                            'font-weight'     => '700'
-                        ),
-                    ),
-                    array(
-                        'id'       => 'typography_heading3',
-                        'type'     => 'typography',
-                        'title'    => __( 'Heading 3', THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 3 font properties.', THEME_LANG ),
-                        'letter-spacing'  => true,
-                        'output'      => array( 'h3', '.h3' ),
-                        'text-transform' => true,
-                        'text-align' => false,
-                        'default'  => array(
-                            'font-family'     => 'Josefin Slab',
-                            'font-weight'     => '700'
-                        ),
-                    ),
-                    array(
-                        'id'       => 'typography_heading4',
-                        'type'     => 'typography',
-                        'title'    => __( 'Heading 4', THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 4 font properties.', THEME_LANG ),
-                        'letter-spacing'  => true,
-                        'output'      => array( 'h4', '.h4' ),
-                        'text-transform' => true,
-                        'text-align' => false,
-                        'default'  => array(
-                            'font-family'     => 'Josefin Slab',
-                            'font-weight'     => '700'
-                        ),
-                    ),
-                    array(
-                        'id'       => 'typography_heading5',
-                        'type'     => 'typography',
-                        'title'    => __( 'Heading 5', THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 5 font properties.', THEME_LANG ),
-                        'letter-spacing'  => true,
-                        'output'      => array( 'h5', '.h5' ),
-                        'text-transform' => true,
-                        'text-align' => false,
-                        'default'  => array(
-                            'font-family'     => 'Josefin Slab',
-                            'font-weight'     => '700'
-                        ),
-                    ),
-                    array(
-                        'id'       => 'typography_heading6',
-                        'type'     => 'typography',
-                        'title'    => __( 'Heading 6', THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 6 font properties.', THEME_LANG ),
-                        'letter-spacing'  => true,
-                        'output'      => array( 'h6', '.h6' ),
-                        'text-transform' => true,
-                        'text-align' => false,
-                        'default'  => array(
-                            'font-family'     => 'Josefin Slab',
-                            'font-weight'     => '700'
-                        ),
-                    ),
-                )
-            );
-            /**
-			 *	Typography header
-			 **/
-			$this->sections[] = array(
-				'id'			=> 'typography_header',
-				'title'			=> __( 'Header', THEME_LANG ),
-				'desc'			=> '',
-                'subsection' => true,
-				'fields'		=> array(
-                    array(
-                        'id'       => 'typography_header_content',
-                        'type'     => 'typography',
-                        'title'    => __( 'Header', THEME_LANG ),
-                        'subtitle' => __( 'Specify the header title font properties.', THEME_LANG ),
-                        'google'   => true,
-                        'text-align' => false,
-                        'output'      => array( '#header' )
-                    )
-                )
-            );
-            
-            /**
-			 *	Typography sidebar
-			 **/
-			$this->sections[] = array(
-				'id'			=> 'typography_sidebar',
-				'title'			=> __( 'Sidebar', THEME_LANG ),
-				'desc'			=> '',
-                'subsection' => true,
-				'fields'		=> array(
-                    array(
-                        'id'       => 'typography_sidebar',
-                        'type'     => 'typography',
-                        'title'    => __( 'Sidebar title', THEME_LANG ),
-                        'subtitle' => __( 'Specify the sidebar title font properties.', THEME_LANG ),
-                        'letter-spacing'  => true,
-                        'text-transform' => true,
-                        'output'      => array(
-                            '.sidebar .widget-title',
-                            '.wpb_widgetised_column .widget-title'
-                        ),
-                        'default'  => array(
-                            'text-transform' => 'uppercase',
-                        ),
-                    ),
-                    array(
-                        'id'       => 'typography_sidebar_content',
-                        'type'     => 'typography',
-                        'title'    => __( 'Sidebar text', THEME_LANG ),
-                        'subtitle' => __( 'Specify the sidebar title font properties.', THEME_LANG ),
-                        'text-algin' => true,
-                        'output'      => array( '.sidebar', '.wpb_widgetised_column' ),
-                        'default'  => array(
-                        
-                        ),
-                    ),
-                )
-            );
-            
-            /**
-			 *	Typography Navigation
-			 **/
-
-			$this->sections[] = array(
-				'id'			=> 'typography_navigation',
-				'title'			=> __( 'Main Navigation', THEME_LANG ),
-				'desc'			=> '',
-                'subsection' => true,
-				'fields'		=> array(
-                    array(
-                        'id'       => 'typography-navigation_top',
-                        'type'     => 'typography',
-                        'title'    => __( 'Top Menu Level', THEME_LANG ),
-                        'letter-spacing'  => true,
-                        'text-align'      => false,
-                        'color'           => false,
-                        'line-height'     => false,
-                        'text-transform' => true,
-                        'output'      => array( '#main-navigation > li > a' ),
-                        'default'  => array(
-                            'text-transform' => 'uppercase',
-                            'font-weight'    => '600'
-                        ),
-                    ),
-                    array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
-                    ),
-                    array(
-                        'id'       => 'typography_navigation_dropdown',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Dropdown menu', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id'       => 'typography_navigation_second',
-                        'type'     => 'typography',
-                        'title'    => __( 'Second Menu Level', THEME_LANG ),
-                        'letter-spacing'  => true,
-                        'text-align'      => false,
-                        'color'           => false,
-                        'line-height'     => false,
-                        'text-transform' => true,
-                        'output'      => array(
-                            '#main-navigation > li ul.sub-menu-dropdown li > a'
-                        ),
-                        'default'  => array(
-
-                        ),
-                    ),
-                    array(
-                        'id'       => 'typography_navigation_mega',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Mega menu', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-                    array(
-                        'id'       => 'typography_navigation_heading',
-                        'type'     => 'typography',
-                        'title'    => __( 'Heading title', THEME_LANG ),
-                        'letter-spacing'  => true,
-                        'text-align'      => false,
-                        'color'           => false,
-                        'line-height'     => false,
-                        'text-transform' => true,
-                        'output'      => array( 
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a',
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span',
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li .widget-title'
-                        ),
-                        'default'  => array(
-                            'font-family'     => 'Josefin Slab',
-                            'text-transform' => 'uppercase',
-                            'font-weight'  => '700'
-                        ),
-                    ),
-                    array(
-                        'id'       => 'typography_navigation_mega_link',
-                        'type'     => 'typography',
-                        'title'    => __( 'Mega menu', THEME_LANG ),
-                        'google'   => true,
-                        'text-align'      => false,
-                        'color'           => false,
-                        'text-transform' => true,
-                        'line-height'     => false,
-                        'output'      => array(
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu a'
-                        ),
-                        'default'  => array( ),
-                    )
-
-                )
-            );
-
-
-            /**
-             *	Typography mobile Navigation
-             **/
-
-            $this->sections[] = array(
-                'id'			=> 'typography_mobile_navigation',
-                'title'			=> __( 'Mobile Navigation', THEME_LANG ),
-                'desc'			=> '',
-                'subsection' => true,
-                'fields'		=> array(
-                    array(
-                        'id'       => 'typography_mobile_navigation_top',
-                        'type'     => 'typography',
-                        'title'    => __( 'Top Menu Level', THEME_LANG ),
-                        'letter-spacing'  => true,
-                        'text-align'      => false,
-                        'color'           => false,
-                        'line-height'     => false,
-                        'text-transform' => true,
-                        'output'      => array( 'ul.navigation-mobile > li > a' ),
-                        'default'  => array(
-                            'text-transform' => 'uppercase',
-                        ),
-                    ),
-                    array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
-                    ),
-                    array(
-                        'id'       => 'typography_mobile_navigation_second',
-                        'type'     => 'typography',
-                        'title'    => __( 'Sub Menu Level', THEME_LANG ),
-                        'letter-spacing'  => true,
-                        'text-align'      => false,
-                        'color'           => false,
-                        'line-height'     => false,
-                        'text-transform' => true,
-                        'output'      => array(
-                            '.main-nav-mobile > ul > li ul.sub-menu-dropdown li a',
-                            '.main-nav-mobile > ul > li ul.sub-menu-megamenu li a'
-                        ),
-                    ),
-                    array(
-                        'id'       => 'typography_mobile_navigation_heading',
-                        'type'     => 'typography',
-                        'title'    => __( 'Heading title', THEME_LANG ),
-                        'letter-spacing'  => true,
-                        'text-align'      => false,
-                        'color'           => false,
-                        'line-height'     => false,
-                        'text-transform' => true,
-                        'output'      => array(
-                            '.main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li > a',
-                            '.main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li > span',
-                            '.main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li .widget-title'
-                        ),
-                        'default'  => array(
-                            'text-transform' => 'uppercase',
-                            'font-weight'  => '700'
-                        ),
-                    ),
-                )
-            );
-
-
-
-            /**
-             *	Page header
-             **/
-            $this->sections[] = array(
-                'id'			=> 'page_header_section',
-                'title'			=> __( 'Page header', THEME_LANG ),
-                'desc'			=> '',
-                'icon'          => 'icon-Add-SpaceBeforeParagraph',
-                'fields'		=> array(
-
-                    array(
-                        'id'       => 'title_heading',
-                        'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Page header settings', THEME_LANG ).'</div>',
-                        'full_width' => true
-                    ),
-
-                    array(
-                        'id'       => 'title_layout',
-                        'type'     => 'select',
-                        'title'    => __( 'Page header layout', THEME_LANG ),
-                        'subtitle'     => __( 'Select your preferred Page header layout.', THEME_LANG ),
-                        'options'  => array(
-                            'sides' => __('Sides', THEME_LANG),
-                            'centered' => __('Centered', THEME_LANG ),
-                        ),
-                        'default'  => 'centered',
-                        'clear' => false
-                    ),
-
-                    array(
-                        'id'       => 'title_align',
-                        'type'     => 'select',
-                        'title'    => __( 'Page header align', THEME_LANG ),
-                        'subtitle'     => __( 'Please select page header align', THEME_LANG ),
-                        'options'  => array(
-                            'left' => __('Left', THEME_LANG ),
-                            'center' => __('Center', THEME_LANG),
-                            'right' => __('Right', THEME_LANG)
-                        ),
-                        'default'  => 'center',
-                        'clear' => false,
-                        'desc' => __('Align don\'t support for layout Sides', THEME_LANG)
-                    ),
-                    array(
-                        'id'       => 'title_breadcrumbs',
-                        'type'     => 'switch',
-                        'title'    => __( 'Show breadcrumbs', THEME_LANG ),
-                        'default'  => true,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
-                    ),
-                    array(
-                        'id'       => 'title_breadcrumbs_mobile',
-                        'type'     => 'switch',
-                        'title'    => __( 'Breadcrumbs on Mobile Devices', THEME_LANG ),
-                        'default'  => false,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
-                    ),
-                    array(
-                        'id'       => 'title_separator',
-                        'type'     => 'switch',
-                        'title'    => __( 'Separator bettwen title and subtitle', THEME_LANG ),
-                        'default'  => true,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
-                    ),
-                    array(
-                        'id'       => 'title_separator_color',
-                        'type'     => 'background',
-                        'title'    => __( 'Separator Color', THEME_LANG ),
-                        'default'  => '',
-                        'transparent' => false,
-                        'background-repeat'     => false,
-                        'background-attachment' => false,
-                        'background-position'   => false,
-                        'background-image'      => false,
-                        'background-size'       => false,
-                        'preview'               => false,
-                        'output'   => array( '.page-header .page-header-separator' ),
-                    ),
-
-
-                    array(
-                        'id'       => 'title_padding',
-                        'type'     => 'spacing',
-                        'mode'     => 'padding',
-                        'left'     => false,
-                        'right'    => false,
-                        'output'   => array( '.page-header' ),
-                        'units'          => array( 'px' ),
-                        'units_extended' => 'true',
-                        'title'    => __( 'Title padding', THEME_LANG ),
-                        'default'  => array( )
-                    ),
-                    array(
-                        'id'       => 'title_background',
-                        'type'     => 'background',
-                        'title'    => __( 'Background', THEME_LANG ),
-                        'subtitle' => __( 'Page header with image, color, etc.', THEME_LANG ),
-                        'output'      => array( '.page-header' )
-                    ),
-
-                    array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
-                    ),
-
-                    array(
-                        'id'       => 'title_typography',
-                        'type'     => 'typography',
-                        'title'    => __( 'Typography title', THEME_LANG ),
-                        'google'   => true,
-                        'text-align'      => false,
-                        'line-height'     => false,
-                        'letter-spacing'  => true,
-                        'text-transform' => true,
-                        'output'      => array( '.page-header h1.page-header-title' ),
-                        'default'  => array(
-                            'font-family'     => 'Josefin Slab',
-                            'text-transform' => 'uppercase',
-                            'font-weight' => '700'
-                        ),
-                    ),
-                    array(
-                        'id'       => 'title_typography_subtitle',
-                        'type'     => 'typography',
-                        'title'    => __( 'Typography sub title', THEME_LANG ),
-                        'google'   => true,
-                        'text-align'      => false,
-                        'line-height'     => false,
-                        'text-transform' => true,
-                        'output'      => array( '.page-header .page-header-subtitle' )
-                    ),
-                    array(
-                        'id'       => 'title_typography_breadcrumbs',
-                        'type'     => 'typography',
-                        'title'    => __( 'Typography breadcrumbs', THEME_LANG ),
-                        'google'   => true,
-                        'text-align'      => false,
-                        'line-height'     => false,
-                        'output'      => array( '.page-header .breadcrumbs', '.page-header .breadcrumbs a' )
-                    ),
-                )
-            );
-
-
-
-            /**
-			 *	Popup
-			 **/
-			$this->sections[] = array(
-				'id'			=> 'popup',
-				'title'			=> __( 'Popup', THEME_LANG ),
-				'desc'			=> '',
-				'icon'	=> 'icon-Studio-Flash',
-				'fields'		=> array(
-                    array(
-						'id'		=> 'enable_popup',
-						'type'		=> 'switch',
-						'title'		=> __( 'Enable Popup', THEME_LANG ),
-						'subtitle'	=> __( '', THEME_LANG),
-						"default"	=> true,
-						'on'		=> __( 'On', THEME_LANG ),
-						'off'		=> __( 'Off', THEME_LANG ),
-					),
-                    array(
-						'id'		=> 'disable_popup_mobile',
-						'type'		=> 'switch',
-						'title'		=> __( 'Disable Popup on Mobile', THEME_LANG ),
-						'subtitle'	=> __( '', THEME_LANG),
-						"default"	=> false,
-						'on'		=> __( 'On', THEME_LANG ),
-						'off'		=> __( 'Off', THEME_LANG ),
-                        'required' => array('enable_popup','equals', 1)
-					),
-                    array(
-                        'id' => 'time_show',
-                        'type' => 'text',
-                        'title' => __('Time to show', THEME_LANG), 
-                        'desc' => __('Unit: s', THEME_LANG),
-                        'default' => __('0', THEME_LANG),
-                        'required' => array('enable_popup','equals', 1)
-                    ),
-
-                    array(
-                        'id' => 'title_popup',
-                        'type' => 'text',
-                        'title' => __('Title Popup', THEME_LANG), 
-                        'default' => __('Advanced Popup Module', THEME_LANG),
-                    ),
-
-                    array(
-                        'id'       => 'popup_image',
-                        'type'     => 'media',
-                        'url'      => true,
-                        'compiler' => true,
-                        'title'    => __( 'Popup Image', THEME_LANG ),
-                        'default'  => array(
-                            'url' => THEME_IMG.'popup_image.png'
-                        )
-                    ),
-                    
-                    array(
-                        'id'       => 'content_popup',
-                        'type'     => 'editor',
-                        'title'    => __( 'Content Popup', THEME_LANG ),
-                        'subtitle' => __( '', THEME_LANG ),
-                        'required' => array('enable_popup','equals', 1),
-                        'default'  => __('<h4 class="newletter-title">Sign up for out newsletter<br /> to receive special offers.</h4>[kt_mailchimp list="9306fec7e3" disable_names="yes"]', THEME_LANG),
-                    ),
-                )
-            );
-
-
-
-
-            
-            
-            
         }
         
     }
@@ -2037,10 +993,10 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'          => __( 'Logo width', THEME_LANG ),
                         'height'         => false,
                         'default'        => array(
-                            'width'  => '100',
+                            'width'  => '25',
                             'units'  => 'px'
                         ),
-                        'output'   => array( '.header-layout2.header-container.is-sticky .site-branding .site-logo img' ),
+                        'output'   => array( '.header-layout1.header-container.is-sticky .site-branding .site-logo img' ),
                     ),
 
                     array(
@@ -2056,7 +1012,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'margin-bottom' => '0',
                             'margin-left'   => '0'
                         ),
-                        'output'   => array( '.header-layout2.header-container.is-sticky .site-branding'),
+                        'output'   => array( '.header-layout1.header-container.is-sticky .site-branding'),
                     ),
 
                     array(
@@ -2065,7 +1021,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'units'          => array('px'),
                         'units_extended' => 'true',
                         'title'          => __( 'Main Navigation Sticky Height', THEME_LANG ),
-                        'subtitle'          => __( 'Change height of main navigation sticky', THEME_LANG ),
+                        'desc'          => __( 'Change height of main navigation sticky', THEME_LANG ),
                         'width'         => false,
                         'default'        => array(
                             'height'  => '60',
@@ -2081,7 +1037,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'header_sticky_background',
                         'type'     => 'background',
                         'title'    => __( 'Header sticky background', THEME_LANG ),
-                        'subtitle' => __( 'Header sticky with image, color, etc.', THEME_LANG ),
+                        'desc' => __( 'Header sticky with image, color, etc.', THEME_LANG ),
                         'background-repeat'     => false,
                         'background-attachment' => false,
                         'background-position'   => false,
@@ -2299,6 +1255,428 @@ if ( ! class_exists( 'KT_config' ) ) {
                 )
             );
 
+
+
+            /**
+             *	Main Navigation
+             **/
+            $this->sections[] = array(
+                'id'			=> 'styling_navigation',
+                'title'			=> __( 'Main Navigation', THEME_LANG ),
+                'desc'			=> '',
+                'subsection' => true,
+                'fields'		=> array(
+                    array(
+                        'id'       => 'styling_navigation_general',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'General', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id'             => 'navigation_height',
+                        'type'           => 'dimensions',
+                        'units'          => array('px'),
+                        'units_extended' => 'true',
+                        'title'          => __( 'Main Navigation Height', THEME_LANG ),
+                        'subtitle'          => __( 'Change height of main navigation', THEME_LANG ),
+                        'width'         => false,
+                        'default'        => array(
+                            'height'  => '80',
+                            'units'  => 'px'
+                        ),
+                        'output'   => array(
+                            '#main-navigation > li',
+                            '.header-layout1 #main-nav-tool > a',
+                            '.header-layout1 .nav-container-inner',
+                            '.header-layout1 #main-nav-tool > li > a',
+                            '.header-layout1 .main-nav-socials > a',
+                            '.header-layout1 .main-nav-socials > li > a',
+                            '.header-layout2 #main-nav-tool > a',
+                            '.header-layout2 #main-nav-tool > li > a',
+                            '.header-layout2 .main-nav-socials > a',
+                            '.header-layout2 .main-nav-socials > li > a'
+                        ),
+                    ),
+
+                    array(
+                        'id'       => 'navigation_box_background',
+                        'type'     => 'background',
+                        'title'    => __( 'MegaMenu & Dropdown Box background', THEME_LANG ),
+                        'default'   => array(
+                            'background-color'      => '#222222',
+                        ),
+                        'output'      => array(
+                            '#main-navigation > li ul.sub-menu-dropdown',
+                            '#main-navigation > li > .kt-megamenu-wrapper'
+                        ),
+                        'transparent'           => false,
+                    ),
+                    array(
+                        'id'       => 'styling_navigation_general',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Top Level', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+
+                    array(
+                        'id'            => 'navigation_space',
+                        'type'          => 'slider',
+                        'title'         => __( 'Top Level space', THEME_LANG ),
+                        'default'       => 25,
+                        'min'           => 0,
+                        'step'          => 1,
+                        'max'           => 50,
+                        'resolution'    => 1,
+                        'display_value' => 'text',
+                        'subtitle' => __( 'Margin left between top level.', THEME_LANG ),
+                    ),
+
+                    array(
+                        'id'       => 'navigation_color',
+                        'type'     => 'color',
+                        'output'   => array(
+                            '#main-navigation > li > a'
+                        ),
+                        'title'    => __( 'Top Level Color', THEME_LANG ),
+                        'default'  => '#999999',
+                        'transparent' => false
+                    ),
+                    array(
+                        'id'       => 'navigation_color_hover',
+                        'type'     => 'color',
+                        'output'   => array(
+                            '#main-navigation > li > a:hover',
+                            '#main-navigation > li > a:focus',
+                            '#main-navigation > li.current-menu-item > a',
+                            '#main-navigation > li.current-menu-parent > a',
+                            '#main-navigation > li.hovered > a',
+                        ),
+                        'title'    => __( 'Top Level hover Color', THEME_LANG ),
+                        'default'  => '#22dcce',
+                        'transparent' => false
+                    ),
+
+
+                    array(
+                        'id'       => 'styling_navigation_dropdown',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Drop down', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id'             => 'navigation_dropdown',
+                        'type'           => 'dimensions',
+                        'units'          => array('px'),
+                        'units_extended' => 'true',
+                        'title'          => __( 'Dropdown width', THEME_LANG ),
+                        'subtitle'          => __( 'Change width of Dropdown', THEME_LANG ),
+                        'height'         => false,
+                        'default'        => array( 'width'  => 345, 'height' => 100 ),
+                        'output'   => array( '#main-navigation > li ul.sub-menu-dropdown'),
+                    ),
+                    array(
+                        'id'       => 'dropdown_background',
+                        'type'     => 'background',
+                        'title'    => __( 'Dropdown Background Color', THEME_LANG ),
+                        'default'  => array(
+                            'background-color'      => '',
+                        ),
+                        'output'   => array(
+                            '#main-navigation > li ul.sub-menu-dropdown > li > a'
+                        ),
+                        'background-repeat'     => false,
+                        'background-attachment' => false,
+                        'background-position'   => false,
+                        'background-image'      => false,
+                        'background-size'       => false,
+                        'preview'               => false,
+                        'transparent'           => true,
+                    ),
+
+                    array(
+                        'id'       => 'dropdown_background_hover',
+                        'type'     => 'background',
+                        'title'    => __( 'Dropdown Background Hover Color', THEME_LANG ),
+                        'default'  => array(
+                            'background-color'      => '',
+                        ),
+                        'output'   => array(
+                            '#main-navigation > li ul.sub-menu-dropdown > li.current-menu-item > a',
+                            '#main-navigation > li ul.sub-menu-dropdown > li.current-menu-parent > a',
+                            '#main-navigation > li ul.sub-menu-dropdown > li.hovered > a',
+                            '#main-navigation > li ul.sub-menu-dropdown > li > a:hover',
+                        ),
+                        'background-repeat'     => false,
+                        'background-attachment' => false,
+                        'background-position'   => false,
+                        'background-image'      => false,
+                        'background-size'       => false,
+                        'preview'               => false,
+                        'transparent'           => true,
+                    ),
+                    array(
+                        'id'       => 'dropdown_color',
+                        'type'     => 'color',
+                        'output'   => array(
+                            '#main-nav-tool .kt-wpml-languages ul li > a',
+                            '#main-navigation > li ul.sub-menu-dropdown > li > a',
+                        ),
+                        'title'    => __( 'Dropdown Text Color', THEME_LANG ),
+                        'default'  => '#999999',
+                        'transparent' => false
+                    ),
+
+                    array(
+                        'id'       => 'dropdown_color_hover',
+                        'type'     => 'color',
+                        'output'   => array(
+                            '#main-navigation > li ul.sub-menu-dropdown > li.current-menu-item > a',
+                            '#main-navigation > li ul.sub-menu-dropdown > li.current-menu-parent > a',
+                            '#main-nav-tool .kt-wpml-languages ul li > a:hover',
+                            '#main-navigation > li ul.sub-menu-dropdown > li:hover > a',
+                            '#main-navigation > li ul.sub-menu-dropdown > li > a:hover',
+                        ),
+                        'title'    => __( 'Dropdown Text Hover Color', THEME_LANG ),
+                        'default'  => '#22dcce',
+                        'transparent' => false
+                    ),
+
+                    array(
+                        'id'       => 'dropdown_border',
+                        'type'     => 'border',
+                        'title'    => esc_html__( 'DropDown Border', THEME_LANG ),
+                        'output'   => array( '#main-navigation > li ul.sub-menu-dropdown li' ),
+                        'all'      => false,
+                        'left'     => false,
+                        'right'    => false,
+                        'style'    => false,
+                        'top'      => false,
+                        'default'  => array(
+                            'border-style'  => 'solid',
+                            'border-bottom'    => '1px',
+                            'border-color' => '#333333'
+                        )
+                    ),
+                    array(
+                        'id'       => 'styling_navigation_mega',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Mega', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+
+                    array(
+                        'id'       => 'megamenu_border',
+                        'type'     => 'color',
+                        'title'    => __( 'MegaMenu Border color', THEME_LANG ),
+                        'default'  => '#333333',
+                        'transparent' => false
+                    ),
+                    array(
+                        'id'       => 'mega_title_color',
+                        'type'     => 'color',
+                        'output'   => array(
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a',
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span',
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li .widget-title',
+                        ),
+                        'title'    => __( 'MegaMenu Title color', THEME_LANG ),
+                        'default'  => '#FFFFFF',
+                        'transparent' => false
+                    ),
+                    array(
+                        'id'       => 'mega_title_color_hover',
+                        'type'     => 'color',
+                        'output'   => array(
+                            '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a:hover',
+                        ),
+                        'title'    => __( 'MegaMenu Title Hover Color', THEME_LANG ),
+                        'default'  => '#22dcce',
+                        'transparent' => false
+                    ),
+                    array(
+                        'id'       => 'mega_color',
+                        'type'     => 'color',
+                        'output'   => array(
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu a'
+                        ),
+                        'title'    => __( 'MegaMenu Text color', THEME_LANG ),
+                        'default'  => '#999999',
+                        'transparent' => false
+                    ),
+
+                    array(
+                        'id'       => 'mega_color_hover',
+                        'type'     => 'color',
+                        'output'   => array(
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu  > li.current-menu-item a:hover',
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu a:hover',
+                        ),
+                        'title'    => __( 'MegaMenu Text Hover color', THEME_LANG ),
+                        'default'  => '#22dcce',
+                        'transparent' => false
+                    ),
+
+
+
+
+                    array(
+                        'id'       => 'mega_menu_spacing',
+                        'type'     => 'raw',
+                        'content'  => '<div style="height:150px"></div>',
+                        'full_width' => true
+                    ),
+                )
+            );
+
+            /**
+             *	Mobile Navigation
+             **/
+            $this->sections[] = array(
+                'id'			=> 'styling_mobile_menu',
+                'title'			=> __( 'Mobile Menu', THEME_LANG ),
+                'desc'			=> '',
+                'subsection' => true,
+                'fields'		=> array(
+                    array(
+                        'id'       => 'mobile_menu_background',
+                        'type'     => 'background',
+                        'title'    => __( 'Background', THEME_LANG ),
+                        'default'   => array(
+                            'background-color'      => '#FFFFFF',
+                        ),
+                        'output'      => array( '#mobile-nav-holder'),
+                        'transparent'           => false,
+                    ),
+                    array(
+                        'type' => 'divide',
+                        'id' => 'divide_fake',
+                    ),
+
+                    array(
+                        'id'       => 'mobile_menu_color',
+                        'type'     => 'color',
+                        'output'   => array(
+                            'ul.navigation-mobile > li > a'
+                        ),
+                        'title'    => __( 'Top Level Color', THEME_LANG ),
+                        'default'  => '#282828',
+                        'transparent' => false
+                    ),
+                    array(
+                        'id'       => 'mobile_menu_color_hover',
+                        'type'     => 'color',
+                        'output'   => array(
+                            'ul.navigation-mobile > li:hover > a',
+                            'ul.navigation-mobile > li > a:hover'
+                        ),
+                        'title'    => __( 'Top Level hover Color', THEME_LANG ),
+                        'default'  => '#282828',
+                        'transparent' => false
+                    ),
+                    array(
+                        'id'       => 'mobile_menu_background',
+                        'type'     => 'background',
+                        'title'    => __( 'Top Level Background Color', THEME_LANG ),
+                        'default'  => array(
+                            'background-color'      => '#FFFFFF',
+                        ),
+                        'output'   => array(
+                            'ul.navigation-mobile > li > a'
+                        ),
+                        'background-repeat'     => false,
+                        'background-attachment' => false,
+                        'background-position'   => false,
+                        'background-image'      => false,
+                        'background-size'       => false,
+                        'preview'               => false,
+                        'transparent'           => false,
+                    ),
+
+                    array(
+                        'id'       => 'mobile_menu_background_hover',
+                        'type'     => 'background',
+                        'title'    => __( 'Top Level Hover Color', THEME_LANG ),
+                        'default'  => array(
+                            'background-color'      => '#F5F5F5',
+                        ),
+                        'output'   => array(
+                            'ul.navigation-mobile > li:hover > a',
+                            'ul.navigation-mobile > li > a:hover',
+                            //'ul.navigation-mobile > li.current-menu-item > a',
+                            //'ul.navigation-mobile > li.active-menu-item > a',
+                        ),
+                        'background-repeat'     => false,
+                        'background-attachment' => false,
+                        'background-position'   => false,
+                        'background-image'      => false,
+                        'background-size'       => false,
+                        'preview'               => false,
+                        'transparent'           => false,
+                    ),
+                    array(
+                        'type' => 'divide',
+                        'id' => 'divide_fake',
+                    ),
+                    array(
+                        'id'       => 'mobile_sub_color',
+                        'type'     => 'color',
+                        'output'   => array(
+                            'ul.navigation-mobile > li .sub-menu-dropdown > li > a',
+                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li > a',
+                        ),
+                        'title'    => __( 'Text color', THEME_LANG ),
+                        'default'  => '#282828',
+                        'transparent' => false
+                    ),
+
+                    array(
+                        'id'       => 'mobile_sub_color_hover',
+                        'type'     => 'color',
+                        'output'   => array(
+                            'ul.navigation-mobile > li .sub-menu-dropdown > li > a:hover',
+                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li > a:hover',
+                        ),
+                        'title'    => __( 'Text Hover color', THEME_LANG ),
+                        'default'  => '#82c14f',
+                        'transparent' => false
+                    ),
+                    array(
+                        'type' => 'divide',
+                        'id' => 'divide_fake',
+                    ),
+                    array(
+                        'id'       => 'mobile_title_color',
+                        'type'     => 'color',
+                        'output'   => array(
+                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a',
+                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > span',
+                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li .widget-title',
+                        ),
+                        'title'    => __( 'MegaMenu Title color', THEME_LANG ),
+                        'default'  => '#282828',
+                        'transparent' => false
+                    ),
+                    array(
+                        'id'       => 'mobile_title_color_hover',
+                        'type'     => 'color',
+                        'output'   => array(
+                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a:hover',
+                        ),
+                        'title'    => __( 'MegaMenu Title Hover Color', THEME_LANG ),
+                        'default'  => '#82c14f',
+                        'transparent' => false
+                    ),
+
+                    array(
+                        'id'       => 'mobile_menu_spacing',
+                        'type'     => 'raw',
+                        'content'  => '<div style="height:150px"></div>',
+                        'full_width' => true
+                    ),
+                )
+            );
+
+
             /**
              *	Typography
              **/
@@ -2307,6 +1685,129 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'title'			=> __( 'Typography', THEME_LANG ),
                 'desc'			=> '',
                 'icon_class'	=> 'fa fa-font',
+            );
+
+
+            /**
+             *	Typography General
+             **/
+            $this->sections[] = array(
+                'id'			=> 'typography_general',
+                'title'			=> __( 'General', THEME_LANG ),
+                'subsection' => true,
+                'fields'		=> array(
+                    array(
+                        'id'       => 'typography_body',
+                        'type'     => 'typography',
+                        'title'    => __( 'Body Font', THEME_LANG ),
+                        'subtitle' => __( 'Specify the body font properties.', THEME_LANG ),
+                        'text-align' => false,
+                        'letter-spacing'  => true,
+                        'output'      => array(
+                            'body' ),
+                        'default'  => array( )
+                    ),
+                    array(
+                        'id'       => 'typography_pragraph',
+                        'type'     => 'typography',
+                        'title'    => __( 'Pragraph', THEME_LANG ),
+                        'subtitle' => __( 'Specify the pragraph font properties.', THEME_LANG ),
+                        'output'   => array( 'p' ),
+                        'default'  => array( ),
+                        'color'    => false,
+                        'text-align' => false,
+                    ),
+                    array(
+                        'id'       => 'typography_button',
+                        'type'     => 'typography',
+                        'title'    => __( 'Button', THEME_LANG ),
+                        'subtitle' => __( 'Specify the button font properties.', THEME_LANG ),
+                        'output'   => array(
+                            '.button',
+                            '.wpcf7-submit',
+                            '.btn',
+                        ),
+                        'default'  => array( ),
+                        'color'    => false,
+                        'text-align'    => false,
+                        'font-size'    => false,
+                        'text-transform' => true,
+                        'letter-spacing'  => true,
+                        'font-weight' => false
+                    ),
+                    array(
+                        'id'       => 'typography_heading',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Typography Heading settings', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id'       => 'typography_heading1',
+                        'type'     => 'typography',
+                        'title'    => __( 'Heading 1', THEME_LANG ),
+                        'subtitle' => __( 'Specify the heading 1 font properties.', THEME_LANG ),
+                        'letter-spacing'  => true,
+                        'text-transform' => true,
+                        'text-align' => false,
+                        'output'      => array( 'h1', '.h1' ),
+                        'default'  => array( ),
+                    ),
+                    array(
+                        'id'       => 'typography_heading2',
+                        'type'     => 'typography',
+                        'title'    => __( 'Heading 2', THEME_LANG ),
+                        'subtitle' => __( 'Specify the heading 2 font properties.', THEME_LANG ),
+                        'letter-spacing'  => true,
+                        'output'      => array( 'h2', '.h2' ),
+                        'text-transform' => true,
+                        'text-align' => false,
+                        'default'  => array( ),
+                    ),
+                    array(
+                        'id'       => 'typography_heading3',
+                        'type'     => 'typography',
+                        'title'    => __( 'Heading 3', THEME_LANG ),
+                        'subtitle' => __( 'Specify the heading 3 font properties.', THEME_LANG ),
+                        'letter-spacing'  => true,
+                        'output'      => array( 'h3', '.h3' ),
+                        'text-transform' => true,
+                        'text-align' => false,
+                        'default'  => array( ),
+                    ),
+                    array(
+                        'id'       => 'typography_heading4',
+                        'type'     => 'typography',
+                        'title'    => __( 'Heading 4', THEME_LANG ),
+                        'subtitle' => __( 'Specify the heading 4 font properties.', THEME_LANG ),
+                        'letter-spacing'  => true,
+                        'output'      => array( 'h4', '.h4' ),
+                        'text-transform' => true,
+                        'text-align' => false,
+                        'default'  => array( ),
+                    ),
+                    array(
+                        'id'       => 'typography_heading5',
+                        'type'     => 'typography',
+                        'title'    => __( 'Heading 5', THEME_LANG ),
+                        'subtitle' => __( 'Specify the heading 5 font properties.', THEME_LANG ),
+                        'letter-spacing'  => true,
+                        'output'      => array( 'h5', '.h5' ),
+                        'text-transform' => true,
+                        'text-align' => false,
+                        'default'  => array( ),
+                    ),
+                    array(
+                        'id'       => 'typography_heading6',
+                        'type'     => 'typography',
+                        'title'    => __( 'Heading 6', THEME_LANG ),
+                        'subtitle' => __( 'Specify the heading 6 font properties.', THEME_LANG ),
+                        'letter-spacing'  => true,
+                        'output'      => array( 'h6', '.h6' ),
+                        'text-transform' => true,
+                        'text-align' => false,
+                        'default'  => array( ),
+                    ),
+                )
             );
 
 
@@ -2453,6 +1954,225 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
+             *	Typography header
+             **/
+            $this->sections[] = array(
+                'id'			=> 'typography_header',
+                'title'			=> __( 'Header', THEME_LANG ),
+                'desc'			=> '',
+                'subsection' => true,
+                'fields'		=> array(
+                    array(
+                        'id'       => 'typography_header_content',
+                        'type'     => 'typography',
+                        'title'    => __( 'Header', THEME_LANG ),
+                        'subtitle' => __( 'Specify the header title font properties.', THEME_LANG ),
+                        'google'   => true,
+                        'text-align' => false,
+                        'output'      => array( '#header' )
+                    )
+                )
+            );
+
+            /**
+             *	Typography sidebar
+             **/
+            $this->sections[] = array(
+                'id'			=> 'typography_sidebar',
+                'title'			=> __( 'Sidebar', THEME_LANG ),
+                'desc'			=> '',
+                'subsection' => true,
+                'fields'		=> array(
+                    array(
+                        'id'       => 'typography_sidebar',
+                        'type'     => 'typography',
+                        'title'    => __( 'Sidebar title', THEME_LANG ),
+                        'subtitle' => __( 'Specify the sidebar title font properties.', THEME_LANG ),
+                        'letter-spacing'  => true,
+                        'text-transform' => true,
+                        'output'      => array(
+                            '.sidebar .widget-title',
+                            '.wpb_widgetised_column .widget-title'
+                        ),
+                        'default'  => array(
+                            'text-transform' => 'uppercase',
+                        ),
+                    ),
+                    array(
+                        'id'       => 'typography_sidebar_content',
+                        'type'     => 'typography',
+                        'title'    => __( 'Sidebar text', THEME_LANG ),
+                        'subtitle' => __( 'Specify the sidebar title font properties.', THEME_LANG ),
+                        'text-algin' => true,
+                        'output'      => array( '.sidebar', '.wpb_widgetised_column' ),
+                        'default'  => array(
+
+                        ),
+                    ),
+                )
+            );
+
+            /**
+             *	Typography Navigation
+             **/
+
+            $this->sections[] = array(
+                'id'			=> 'typography_navigation',
+                'title'			=> __( 'Main Navigation', THEME_LANG ),
+                'desc'			=> '',
+                'subsection' => true,
+                'fields'		=> array(
+                    array(
+                        'id'       => 'typography-navigation_top',
+                        'type'     => 'typography',
+                        'title'    => __( 'Top Menu Level', THEME_LANG ),
+                        'letter-spacing'  => true,
+                        'text-align'      => false,
+                        'color'           => false,
+                        'line-height'     => false,
+                        'text-transform' => true,
+                        'output'      => array( '#main-navigation > li > a' ),
+                        'default'  => array(
+                            'text-transform' => 'uppercase',
+                            'font-weight'    => '600'
+                        ),
+                    ),
+                    array(
+                        'type' => 'divide',
+                        'id' => 'divide_fake',
+                    ),
+                    array(
+                        'id'       => 'typography_navigation_dropdown',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Dropdown menu', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id'       => 'typography_navigation_second',
+                        'type'     => 'typography',
+                        'title'    => __( 'Second Menu Level', THEME_LANG ),
+                        'letter-spacing'  => true,
+                        'text-align'      => false,
+                        'color'           => false,
+                        'line-height'     => false,
+                        'text-transform' => true,
+                        'output'      => array(
+                            '#main-navigation > li ul.sub-menu-dropdown li > a'
+                        ),
+                        'default'  => array(
+
+                        ),
+                    ),
+                    array(
+                        'id'       => 'typography_navigation_mega',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.__( 'Mega menu', THEME_LANG ).'</div>',
+                        'full_width' => true
+                    ),
+                    array(
+                        'id'       => 'typography_navigation_heading',
+                        'type'     => 'typography',
+                        'title'    => __( 'Heading title', THEME_LANG ),
+                        'letter-spacing'  => true,
+                        'text-align'      => false,
+                        'color'           => false,
+                        'line-height'     => false,
+                        'text-transform' => true,
+                        'output'      => array(
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a',
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span',
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li .widget-title'
+                        ),
+                        'default'  => array(
+                            'font-family'     => 'Josefin Slab',
+                            'text-transform' => 'uppercase',
+                            'font-weight'  => '700'
+                        ),
+                    ),
+                    array(
+                        'id'       => 'typography_navigation_mega_link',
+                        'type'     => 'typography',
+                        'title'    => __( 'Mega menu', THEME_LANG ),
+                        'google'   => true,
+                        'text-align'      => false,
+                        'color'           => false,
+                        'text-transform' => true,
+                        'line-height'     => false,
+                        'output'      => array(
+                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu a'
+                        ),
+                        'default'  => array( ),
+                    )
+
+                )
+            );
+
+
+            /**
+             *	Typography mobile Navigation
+             **/
+
+            $this->sections[] = array(
+                'id'			=> 'typography_mobile_navigation',
+                'title'			=> __( 'Mobile Navigation', THEME_LANG ),
+                'desc'			=> '',
+                'subsection' => true,
+                'fields'		=> array(
+                    array(
+                        'id'       => 'typography_mobile_navigation_top',
+                        'type'     => 'typography',
+                        'title'    => __( 'Top Menu Level', THEME_LANG ),
+                        'letter-spacing'  => true,
+                        'text-align'      => false,
+                        'color'           => false,
+                        'line-height'     => false,
+                        'text-transform' => true,
+                        'output'      => array( 'ul.navigation-mobile > li > a' ),
+                        'default'  => array(
+                            'text-transform' => 'uppercase',
+                        ),
+                    ),
+                    array(
+                        'type' => 'divide',
+                        'id' => 'divide_fake',
+                    ),
+                    array(
+                        'id'       => 'typography_mobile_navigation_second',
+                        'type'     => 'typography',
+                        'title'    => __( 'Sub Menu Level', THEME_LANG ),
+                        'letter-spacing'  => true,
+                        'text-align'      => false,
+                        'color'           => false,
+                        'line-height'     => false,
+                        'text-transform' => true,
+                        'output'      => array(
+                            '.main-nav-mobile > ul > li ul.sub-menu-dropdown li a',
+                            '.main-nav-mobile > ul > li ul.sub-menu-megamenu li a'
+                        ),
+                    ),
+                    array(
+                        'id'       => 'typography_mobile_navigation_heading',
+                        'type'     => 'typography',
+                        'title'    => __( 'Heading title', THEME_LANG ),
+                        'letter-spacing'  => true,
+                        'text-align'      => false,
+                        'color'           => false,
+                        'line-height'     => false,
+                        'text-transform' => true,
+                        'output'      => array(
+                            '.main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li > a',
+                            '.main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li > span',
+                            '.main-nav-mobile > ul > li div.kt-megamenu-wrapper > ul > li .widget-title'
+                        ),
+                        'default'  => array(
+                            'text-transform' => 'uppercase',
+                            'font-weight'  => '700'
+                        ),
+                    ),
+                )
+            );
+
+            /**
              * General page
              *
              */
@@ -2510,14 +2230,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => __('Show comments on page ?', THEME_LANG),
                         'desc' => __('Show or hide the readmore button.', THEME_LANG),
-                        "default" => 0,
+                        "default" => 1,
                         'on' => __('Enabled', THEME_LANG),
                         'off' =>__('Disabled', THEME_LANG)
                     ),
 
                 )
             );
-
 
             /**
              * General Blog
@@ -2528,10 +2247,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'icon' => 'fa fa-pencil',
                 'desc' => __('General Blog Options', THEME_LANG)
             );
-
-
-
-
 
             /**
              *  Archive settings
@@ -3233,53 +2948,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                 )
             );
 
-
-            $importer_errors = array();
-            $max_execution_time  = ini_get("max_execution_time");
-            $max_input_time      = ini_get("max_input_time");
-            $upload_max_filesize = ini_get("upload_max_filesize");
-
-            if ($max_execution_time < 120) {
-                $importer_errors[] = '<li><strong>Maximum Execution Time (max_execution_time) : </strong>' . $max_execution_time . ' seconds. <span style="color:red"> Recommended max_execution_time should be at least 120 Seconds.</span></li>';
-            }
-            if ($max_input_time < 120)
-                $importer_errors[] = '<li><strong>Maximum Input Time (max_input_time) : </strong>' . $max_input_time . ' seconds. <span style="color:red"> Recommended max_input_time should be at least 120 Seconds.</span></li>';
-
-            if(intval(WP_MEMORY_LIMIT) < 40){
-                $importer_errors[] = '<li><strong>WordPress Memory Limit (WP_MEMORY_LIMIT) : </strong>' . WP_MEMORY_LIMIT . ' <span style="color:red"> Recommended memory limit should be at least 40MB.</span></li>';
-            }
-            if (intval($upload_max_filesize) < 15) {
-                $importer_errors[] = '<li><strong>Maximum Upload File Size (upload_max_filesize) : </strong>' . $upload_max_filesize . ' <span style="color:red"> Recommended Maximum Upload Filesize should be at least 15MB.</li>';
-            }
-
-
-            $importer = array();
-            if(count($importer_errors)){
-                $importer[] = array(
-                    'id'    => 'demo_importer_critical',
-                    'type'  => 'info',
-                    'style' => 'critical',
-                    'icon'  => 'el el-info-circle',
-                    'title' => __( 'Server Requirements (Please resolve these issues before installing template.)', THEME_LANG ),
-                    'desc'  => '<ul>'.implode('', $importer_errors).'</ul>'
-                );
-            }
-            $importer[] = array(
-                'id'   => 'wbc_demo_importer',
-                'type' => 'wbc_importer'
-            );
-
-            /**
-             *	Import Demo
-             **/
-            $this->sections[] = array(
-                'id' => 'wbc_importer_section',
-                'title'  => esc_html__( 'Demo Content', THEME_LANG ),
-                'desc'   => esc_html__( 'Chose a demo to import', THEME_LANG ),
-                'icon'   => 'fa fa-download',
-                'fields' => $importer
-            );
-
             /**
              *	Advanced
              **/
@@ -3289,7 +2957,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'desc'			=> '',
                 'icon'	=> 'fa fa-cog',
             );
-
 
             /**
              *	Advanced Social Share
