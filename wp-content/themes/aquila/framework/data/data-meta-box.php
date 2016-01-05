@@ -392,6 +392,17 @@ function kt_register_meta_boxes( $meta_boxes )
                 'tab'  => 'frontpage_general',
                 'visible' => array($prefix . 'frontpage_content', '=', '1')
             ),
+            array(
+                'name' => __('Show Promo Widget', THEME_LANG),
+                'id'   => "{$prefix}promo_widget",
+                'type' => 'select',
+                'options' => array(
+                    'no'    => __('No', THEME_LANG),
+                    'yes'       => __('Yes', THEME_LANG),
+                ),
+                'std'  => 'no',
+                'tab'  => 'frontpage_general',
+            ),
             // Categories
             array(
                 'name'    => __( 'Specific Categories', THEME_LANG ),

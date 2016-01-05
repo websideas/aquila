@@ -44,6 +44,9 @@ class Widget_KT_Posts extends WP_Widget {
         $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
         $number = ( ! empty( $instance['number'] ) ) ? absint( $instance['number'] ) : 5;
+
+        $just_featured = isset( $instance['just_featured'] ) ? $instance['just_featured'] : false;
+
         if ( ! $number )
             $number = 5;
 
@@ -58,6 +61,11 @@ class Widget_KT_Posts extends WP_Widget {
 
         if(is_array($instance['category'])){
             $args_article['category__in'] = $instance['category'];
+        }
+
+        if( $just_featured == true ){
+            $args_article['meta_key'] = '_kt_post_featured';
+            $args_article['meta_value'] = 'yes';
         }
 
         //print_r($args_article);
@@ -122,6 +130,8 @@ class Widget_KT_Posts extends WP_Widget {
         $instance['number'] = (int) $new_instance['number'];
         $instance['layout'] = isset( $new_instance['layout'] ) ? (int) $new_instance['layout'] : 1;
 
+        $instance['just_featured'] = isset( $new_instance['just_featured'] ) ? (bool) $new_instance['just_featured'] : false;
+
         $instance['category'] = isset( $new_instance['category'] ) ? $new_instance['category'] :  array();
 
         if ( in_array( $new_instance['orderby'], array( 'name', 'id', 'date', 'author', 'modified', 'rand', 'comment_count' ) ) ) {
@@ -153,6 +163,8 @@ class Widget_KT_Posts extends WP_Widget {
         $title     = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : __( 'Recent Posts' , THEME_LANG);
         $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
 
+        $just_featured = isset( $instance['just_featured'] ) ? (bool) $instance['just_featured'] : false;
+
         $order = isset( $instance['order'] ) ? $instance['order'] : 'DESC';
         $orderby = isset( $instance['orderby'] ) ? $instance['orderby'] : 'date';
         $layout = isset( $instance['layout'] ) ? absint( $instance['layout'] ) : 1;
@@ -175,6 +187,11 @@ class Widget_KT_Posts extends WP_Widget {
                 <?php } ?>
             </select>
         </div>
+
+        <p>
+            <input class="checkbox" type="checkbox" <?php checked( $just_featured ); ?> id="<?php echo $this->get_field_id( 'just_featured' ); ?>" name="<?php echo $this->get_field_name( 'just_featured' ); ?>" />
+            <label for="<?php echo $this->get_field_id( 'just_featured' ); ?>"><?php _e( 'Display Just Featured',THEME_LANG ); ?></label>
+        </p>
 
         <p><label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Order by:', THEME_LANG); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('orderby'); ?>" name="<?php echo $this->get_field_name('orderby'); ?>">

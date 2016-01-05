@@ -1055,7 +1055,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'            => 'header_sticky_opacity',
                         'type'          => 'slider',
                         'title'         => __( 'Sticky Background opacity', THEME_LANG ),
-                        'default'       => .8,
+                        'default'       => 1,
                         'min'           => 0,
                         'step'          => .1,
                         'max'           => 1,

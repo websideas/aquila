@@ -885,7 +885,7 @@ if( ! function_exists( 'kt_share_box' ) ){
 
         $social_share = kt_option('social_share');
 
-
+        $count = kt_total_post_share_count($link);
 
         foreach($social_share as $key => $val){
             if($val){
@@ -928,12 +928,13 @@ if( ! function_exists( 'kt_share_box' ) ){
             }
         }
 
-
+ 
 
         if($html){
             printf(
-                '<div class="%s"> <a href="#">5</a><ul>%s</ul></div>',
+                '<div class="%s"> <a href="#">%s</a><ul>%s</ul></div>',
                 $class,
+                $count,
                 $html
             );
         }

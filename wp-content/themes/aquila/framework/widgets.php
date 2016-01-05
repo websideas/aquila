@@ -32,6 +32,16 @@ if ( function_exists('register_sidebar')) {
             'after_title' => '</h3>',
         ) );
 
+        register_sidebar( array(
+            'name' => __( 'Promo Area', THEME_LANG),
+            'id' => 'promo-area',
+            'description' => __( 'IMPORTANT: For best result select set number of widget to 3.', THEME_LANG),
+            'before_widget' => '<div id="%1$s" class="widget-container %2$s"><div class="widget-inner">',
+            'after_widget' => '</div></div>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        ) );
+
         $count = 5;
 
         for($i=1; $i<=$count;$i++){
@@ -179,6 +189,7 @@ $kt_widgets = array(
     'kt_aboutme.php',
     'kt_socials.php',
     'kt_contactinfo.php',
+    'kt_promo.php',
 );
 
 foreach ( $kt_widgets as $widget ) {
