@@ -2231,6 +2231,8 @@ ul.style-list{
       @include box-shadow(0, 8px, 15px, rgba(0, 0, 0, 0.1));
       visibility: hidden;
       z-index: 99;
+    }
+    > .kt-megamenu-wrapper{
       @include css3-prefix(pointer-events, 'none');
     }
 
@@ -3738,6 +3740,7 @@ body.opened-nav-animate{
 
 }
 
+div.post-item-content,
 article.post-item-content{
   margin-bottom: 50px;
   position: relative;

@@ -50,7 +50,7 @@
                     <a href="http://instagram.com/<?php echo $instagram; ?>" target="_blank"><i class="fa fa-instagram"></i></a>
                 <?php } ?>
                 <?php if($tumblr){ ?>
-                    <a href="http://<?php echo $instagram; ?>.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a>
+                    <a href="http://<?php echo $tumblr; ?>.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a>
                 <?php } ?>
                 <?php if($url){ ?>
                     <a href="<?php echo $url; ?>" target="_blank"><i class="fa fa-globe"></i></a>

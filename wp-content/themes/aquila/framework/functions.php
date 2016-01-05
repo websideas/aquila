@@ -350,7 +350,7 @@ function kt_navigation_markup_template($template, $class){
     }
 
     $template = '
-	<nav class="navigation %1$s" role="navigation">
+	<nav class="navigation %1$s">
 		<h2 class="screen-reader-text">%2$s</h2>
 		<div class="nav-links">'.$disable_prev.'%3$s'.$disable_next.'</div>
 	</nav>';

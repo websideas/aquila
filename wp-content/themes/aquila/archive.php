@@ -50,6 +50,7 @@ get_header(); ?>
                     $col_tab = 6;
                 }
                 $article_column = 12/$column;
+                $article_column_tab = 12/$col_tab;
                 $i = 1;
 
                 global $wp_query;
@@ -65,6 +66,10 @@ get_header(); ?>
 
                         echo '<div class="row main '.$sidebar_class.'">';
                         echo '<div class="col-md-'.$main_column.' col-sm-12 col-xs-12 main-content '.$pull_class.'"><div class="row multi-columns-row blog-posts-'.$type.'">';
+
+                        if($type == 'grid' || $type == 'masonry'){
+                            printf('<div class="clearfix col-lg-%1$s col-md-%1$s col-sm-%2$s grid-sizer"></div>', $article_column, $article_column_tab);
+                        }
 
                         if(!$first_featured){
                             printf('<div class="article-post-item col-lg-%1$s col-md-%1$s col-sm-'.$col_tab.'">', $article_column);
