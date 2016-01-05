@@ -10,11 +10,12 @@ $post_id = get_the_ID();
 $content = get_post_meta($post_id, '_kt_frontpage_content', true);
 $sidebar = kt_get_page_sidebar();
 
+$show_promo = get_post_meta( $post_id, '_kt_promo_widget', 'no' );
 
 get_header(); ?>
-<?php if ( is_active_sidebar( 'promo-area' ) ) { ?>
+<?php if ( is_active_sidebar( 'promo-area' ) && $show_promo == 'yes' ) { ?>
     <div class="container">
-        <div class="promo-area"><?php dynamic_sidebar('promo-area'); ?></div>    
+        <div class="promo-area"><div class="clearfix"><?php dynamic_sidebar('promo-area'); ?></div></div>
     </div>
 <?php } ?>
 <div class="container">
