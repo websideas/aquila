@@ -749,6 +749,8 @@ if (!function_exists('kt_render_custom_css')) {
 
     function kt_render_custom_css($meta , $selector, $post_id = null)
     {
+
+        $ouput = '';
         if(!$post_id){
             global $post;
             $post_id = $post->ID;
@@ -778,9 +780,10 @@ if (!function_exists('kt_render_custom_css')) {
                 $page_arr[] = 'background-position: '.$page_position;
             }
             if(count($page_arr)){
-                echo $selector.'{'.implode(';', $page_arr).'}';
+                $ouput = $selector.'{'.implode(';', $page_arr).'}';
             }
         }
+        return $ouput;
     }
 }
 
