@@ -12,6 +12,11 @@ $sidebar = kt_get_page_sidebar();
 
 
 get_header(); ?>
+<?php if ( is_active_sidebar( 'promo-area' ) ) { ?>
+    <div class="container">
+        <div class="promo-area"><?php dynamic_sidebar('promo-area'); ?></div>    
+    </div>
+<?php } ?>
 <div class="container">
     <?php if(!$content){ ?>
         <?php

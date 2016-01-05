@@ -125,7 +125,12 @@
 
   .post-layout-6.post-single-addons {
     margin-left: 0;
-    margin-right: 0; } }
+    margin-right: 0; }
+
+  .promo-area .widget-container {
+    width: 100%; }
+    .promo-area .widget-container img {
+      width: 100%; } }
 @media (min-width: 768px) and (max-width: 991px) {
   .col-sm-clear {
     clear: left; }

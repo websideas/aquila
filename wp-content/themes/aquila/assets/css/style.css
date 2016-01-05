@@ -1855,6 +1855,49 @@ ul.kt_posts_widget {
 .widget_kt_contactinfo .contact-info-wrapper {
   margin-bottom: 0; }
 
+/**
+ * Promo widget
+ **/
+.promo-area {
+  margin: 0 -15px; }
+  .promo-area .widget-container {
+    padding: 0 15px;
+    width: 33.33%;
+    float: left; }
+    .promo-area .widget-container .kt-promo-content {
+      position: relative; }
+      .promo-area .widget-container .kt-promo-content a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 10; }
+      .promo-area .widget-container .kt-promo-content .promo-text {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        right: 30px;
+        bottom: 30px;
+        border: 10px solid rgba(255, 255, 255, 0.4); }
+        .promo-area .widget-container .kt-promo-content .promo-text .promo-text-inner {
+          background: rgba(0, 0, 0, 0.4);
+          display: table;
+          width: 100%;
+          height: 100%;
+          text-align: center;
+          padding: 10px; }
+          .promo-area .widget-container .kt-promo-content .promo-text .promo-text-inner h4 {
+            margin: 0;
+            display: table-cell;
+            vertical-align: middle;
+            font-family: "Karla", sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #FFFFFF;
+            letter-spacing: 0.1em;
+            text-transform: uppercase; }
+
 /* ==============================
    7. ShortCodes
    ============================== */

@@ -196,6 +196,15 @@ only screen and (min-resolution: 144dpi) {
     margin-left: 0;
     margin-right: 0;
   }
+
+  .promo-area{
+    .widget-container{
+      width: 100%;
+      img{
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
