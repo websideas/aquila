@@ -1526,7 +1526,8 @@ ul.kt_posts_widget {
 .widget_kt_post_tabs .kt-tabs-nav {
   border-bottom: 2px solid #eeeeee;
   position: relative;
-  margin-bottom: 25px; }
+  margin-bottom: 25px;
+  padding: 0; }
   .widget_kt_post_tabs .kt-tabs-nav:after {
     content: '';
     width: 2px;
@@ -1545,6 +1546,8 @@ ul.kt_posts_widget {
       color: #999999;
       text-transform: uppercase;
       display: inline-block; }
+      .widget_kt_post_tabs .kt-tabs-nav li a i {
+        display: none; }
     .widget_kt_post_tabs .kt-tabs-nav li.ui-state-active a,
     .widget_kt_post_tabs .kt-tabs-nav li a:hover {
       color: #000000; }
@@ -2976,7 +2979,7 @@ ul.style-list {
   border-top: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
   display: none;
-  z-index: 99999;
+  z-index: 99;
   padding-bottom: 10px; }
   .main-nav-mobile li {
     position: relative; }

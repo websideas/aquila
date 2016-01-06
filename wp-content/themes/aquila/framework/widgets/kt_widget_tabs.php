@@ -74,9 +74,9 @@ class WP_Widget_KT_Tabs extends WP_Widget {
             ?>
             <div class="kt_widget_tabs">
                 <ul class="clearfix kt-tabs-nav">
-                    <?php if( $select_view ){ ?><li><a href="#kt_tab_view<?php echo $rand; ?>"><?php _e( 'Most View', THEME_LANG ); ?></a></li><?php } ?>
-                    <?php if( $select_recent ){ ?><li><a href="#kt_tab_recent<?php echo $rand; ?>"><?php _e( 'Most recent', THEME_LANG ); ?></a></li><?php } ?>
-                    <?php if( $select_comments ){ ?><li><a href="#kt_tab_comments<?php echo $rand; ?>"><?php _e( 'Most comment', THEME_LANG ); ?></a></li><?php } ?>
+                    <?php if( $select_view ){ ?><li><a href="#kt_tab_view<?php echo $rand; ?>"><span><?php _e( 'Most View', THEME_LANG ); ?></span><i class="fa fa-eye"></i></a></li><?php } ?>
+                    <?php if( $select_recent ){ ?><li><a href="#kt_tab_recent<?php echo $rand; ?>"><span><?php _e( 'Most recent', THEME_LANG ); ?></span><i class="fa fa-newspaper-o"></i></a></li><?php } ?>
+                    <?php if( $select_comments ){ ?><li><a href="#kt_tab_comments<?php echo $rand; ?>"><span><?php _e( 'Most comment', THEME_LANG ); ?></span><i class="fa fa-comments-o"></i></a></li><?php } ?>
                 </ul>
                 <div class="tabs-container">
                     <?php

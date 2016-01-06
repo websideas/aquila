@@ -28,17 +28,7 @@ if ( !function_exists( 'kt_wbc_extended_imported' ) ) {
 		if ( class_exists( 'RevSlider' ) ) {
 
 			$wbc_sliders_array = array(
-                'hero' => 'hero-scene.zip',
-                'hero2' => 'hero-scene-2.zip',
-                'carousel' => 'home-carousel-slider.zip',
-                'carousel2' => 'home-carousel-slider-2.zip',
-                'carousel3' => 'home-carousel-slider-3.zip',
-                'standand' => 'home-standand-slider.zip',
-                'standard2' => 'home-standard-slider-2.zip',
-                'standard3' => 'home-standard-slider-3.zip',
-                'standard4' => 'home-standard-slider-4.zip',
-                'vimeo' => 'vimeo-background.zip',
-                'youtube' => 'youtube-background.zip',
+                
 			);
 
             foreach( $wbc_sliders_array as $k => $wbc_slider_import ){
@@ -56,13 +46,15 @@ if ( !function_exists( 'kt_wbc_extended_imported' ) ) {
          *************************************************************************/
 
         $main_menu = get_term_by( 'name', __('Main menu', THEME_LANG), 'nav_menu' );
-        //$top_menu = get_term_by( 'name', __('Top menu', THEME_LANG), 'nav_menu' );
-        $footer_menu = get_term_by( 'name', __('Footer menu', THEME_LANG), 'nav_menu' );
+        $mobile = get_term_by( 'name', __('(Mobile Devices) Main Navigation Menu', THEME_LANG), 'nav_menu' );
+        $footer_menu = get_term_by( 'name', __('Footer Navigation Menu', THEME_LANG), 'nav_menu' );
+        $bottom = get_term_by( 'name', __('Bottom Menu', THEME_LANG), 'nav_menu' );
 
         set_theme_mod( 'nav_menu_locations', array(
                 'primary' => $main_menu->term_id,
-                //'top'  => $top_menu->term_id,
-                'bottom'  => $footer_menu->term_id
+                'mobile'  => $main_menu->term_id,
+                'footer'  => $footer_menu->term_id,
+                'bottom'  => $bottom->term_id
             )
         );
 
@@ -72,7 +64,7 @@ if ( !function_exists( 'kt_wbc_extended_imported' ) ) {
 
         // array of demos/homepages to check/select from
         $wbc_home_pages = array(
-            'demo1' => 'Home Standard Slider'
+            'demo1' => 'Home Standard'
         );
 
         if ( isset( $demo_active_import[$current_key]['directory'] ) && !empty( $demo_active_import[$current_key]['directory'] ) && array_key_exists( $demo_active_import[$current_key]['directory'], $wbc_home_pages ) ) {

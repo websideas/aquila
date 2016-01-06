@@ -84,7 +84,7 @@ class Widget_KT_Posts_Carousel extends WP_Widget {
             <ul class="kt_posts_carousel_widget">
                 <?php while ( $r->have_posts() ) : $r->the_post(); ?>
                     <li <?php post_class('article-widget clearfix'); ?>>
-                        <?php kt_post_thumbnail_image( 'first_featured', 'img-responsive' ); ?>
+                        <?php kt_post_thumbnail_image( 'widget_article_carousel', 'img-responsive' ); ?>
                         <div class="article-attr">
                             <a class="carousel-prev" href="#"><i class="fa fa-angle-left"></i></a>
                             <h3 class="title">

@@ -96,7 +96,13 @@ class Widget_KT_Posts extends WP_Widget {
             <ul class="kt_posts_widget kt-artilce-<?php echo esc_attr($layout) ?>">
                 <?php while ( $r->have_posts() ) : $r->the_post(); ?>
                     <li <?php post_class('article-widget clearfix'); ?>>
-                        <?php kt_post_thumbnail_image( 'recent_posts', 'img-responsive' ); ?>
+                        <?php
+                            if( $layout == 2 ){
+                                kt_post_thumbnail_image( 'widget_article_carousel', 'img-responsive' );
+                            }else{
+                                kt_post_thumbnail_image( 'widget_article', 'img-responsive' );
+                            }
+                        ?>
                         <div class="article-attr">
                             <h3 class="title"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h3>
                             <?php ($layout == 2) ? kt_entry_meta() : kt_entry_date(); ?>

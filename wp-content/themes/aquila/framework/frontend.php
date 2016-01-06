@@ -78,6 +78,9 @@ function theme_setup() {
 
         add_image_size( 'blog_post_sidebar', 1140 );
         add_image_size( 'blog_post_slider', 1460, 800, true );
+
+        add_image_size( 'widget_article', 120, 75, true );
+        add_image_size( 'widget_article_carousel', 335, 250, true );
     }
     
     load_theme_textdomain( THEME_LANG, THEME_DIR . '/languages' );

@@ -1076,6 +1076,7 @@ ul.kt_posts_widget{
     border-bottom: 2px solid $border-color;
     position: relative;
     margin-bottom: 25px;
+    padding: 0;
     &:after{
       content: '';
       width: 2px;
@@ -1095,6 +1096,9 @@ ul.kt_posts_widget{
         color: $gray;
         text-transform: uppercase;
         display: inline-block;
+        i{
+          display: none;
+        }
       }
       &.ui-state-active a,
       a:hover{
@@ -2649,7 +2653,7 @@ ul.style-list{
   border-top: 1px solid $border-color;
   border-bottom: 1px solid $border-color;
   display: none;
-  z-index: 99999;
+  z-index: 99;
   padding-bottom: 10px;
   li{
     position: relative;
