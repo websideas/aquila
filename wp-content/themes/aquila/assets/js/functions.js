@@ -131,7 +131,7 @@
 
         $('.gallery-images-justified').each(function(){
             $(this).justifiedGallery({
-                rowHeight: 185,
+                rowHeight: 300,
                 margins: 30,
                 captions: false,
                 lastRow: 'justify'

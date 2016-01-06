@@ -2231,8 +2231,6 @@ ul.style-list{
       @include box-shadow(0, 8px, 15px, rgba(0, 0, 0, 0.1));
       visibility: hidden;
       z-index: 99;
-    }
-    > .kt-megamenu-wrapper{
       @include css3-prefix(pointer-events, 'none');
     }
 
@@ -2285,6 +2283,7 @@ ul.style-list{
             @include opacity(1);
             @include transform(translate(0, 0));
             visibility: visible;
+            @include css3-prefix(pointer-events, 'auto');
           }
         }
 
@@ -4068,6 +4067,10 @@ article.post-item-content{
       }
     }
   }
+}
+
+.entry-thumb-fullwidth{
+  overflow: hidden;
 }
 
 .main.sidebar-left,
