@@ -186,7 +186,21 @@
     padding: 50px 20px 15px; }
 
   #commentform .comment_field-column {
-    width: 100%; } }
+    width: 100%; }
+
+  .gallery-images-grid .gallery-image-item {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 30px; }
+    .gallery-images-grid .gallery-image-item:first-child {
+      width: 100%;
+      padding-right: 0; }
+      .gallery-images-grid .gallery-image-item:first-child a {
+        left: 0;
+        right: 0; }
+    .gallery-images-grid .gallery-image-item a {
+      left: 0;
+      right: 0; } }
 @media (max-width: 600px) {
   body.opened-nav-animate.admin-bar #wpadminbar {
     margin-top: -46px; }

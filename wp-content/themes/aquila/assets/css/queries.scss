@@ -283,6 +283,26 @@ only screen and (min-resolution: 144dpi) {
       width: 100%;
     }
   }
+
+  .gallery-images-grid{
+    .gallery-image-item{
+      width: 100%;
+      padding: 0;
+      margin-bottom: 30px;
+      &:first-child{
+        width: 100%;
+        padding-right: 0;
+        a{
+          left: 0;
+          right: 0;
+        }
+      }
+      a{
+        left: 0;
+        right: 0;
+      }
+    }
+  }
 }
 
 @media (max-width: 600px) {

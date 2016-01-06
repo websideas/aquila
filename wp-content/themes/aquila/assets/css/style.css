@@ -4404,18 +4404,6 @@ article.post-item-content {
       article.post-item-content .entry-title a:hover {
         color: #22dcce; }
 
-.gallery-images-grid .gallery-image-item {
-  width: 37%;
-  float: left;
-  padding-left: 15px;
-  height: 185px;
-  margin-bottom: 30px; }
-  .gallery-images-grid .gallery-image-item:first-child {
-    width: 63%;
-    padding-left: 0;
-    padding-right: 15px;
-    height: 400px; }
-
 .main.sidebar-left .blog-posts-medium div.post-item-content .post-item-info .post-item-share,
 .main.sidebar-left .blog-posts-medium article.post-item-content .post-item-info .post-item-share,
 .main.sidebar-right .blog-posts-medium div.post-item-content .post-item-info .post-item-share,
@@ -4444,9 +4432,11 @@ article.post-item-content {
   border-top: 2px solid #eeeeee;
   padding-top: 50px; }
 
+.gallery-images-grid,
 .gallery-images-justified {
   margin: -30px;
   width: auto; }
+  .gallery-images-grid .gallery-image-item a span,
   .gallery-images-justified .gallery-image-item a span {
     z-index: 2;
     position: absolute;
@@ -4460,10 +4450,13 @@ article.post-item-content {
     left: 50%;
     width: 50px;
     height: 50px; }
-    .gallery-images-justified .gallery-image-item a span:before, .gallery-images-justified .gallery-image-item a span:after {
+    .gallery-images-grid .gallery-image-item a span:before, .gallery-images-grid .gallery-image-item a span:after,
+    .gallery-images-justified .gallery-image-item a span:before,
+    .gallery-images-justified .gallery-image-item a span:after {
       content: '';
       background: #FFFFFF;
       display: block; }
+    .gallery-images-grid .gallery-image-item a span:before,
     .gallery-images-justified .gallery-image-item a span:before {
       width: 100%;
       height: 2px;
@@ -4471,6 +4464,7 @@ article.post-item-content {
       top: 50%;
       left: 0;
       margin-top: -1px; }
+    .gallery-images-grid .gallery-image-item a span:after,
     .gallery-images-justified .gallery-image-item a span:after {
       height: 100%;
       width: 2px;
@@ -4478,6 +4472,7 @@ article.post-item-content {
       left: 50%;
       top: 0;
       margin-left: -1px; }
+  .gallery-images-grid .gallery-image-item a:after,
   .gallery-images-justified .gallery-image-item a:after {
     background: #000000;
     content: "";
@@ -4487,7 +4482,9 @@ article.post-item-content {
     bottom: 0;
     position: absolute;
     z-index: 1; }
-  .gallery-images-justified .gallery-image-item a span, .gallery-images-justified .gallery-image-item a:after {
+  .gallery-images-grid .gallery-image-item a span, .gallery-images-grid .gallery-image-item a:after,
+  .gallery-images-justified .gallery-image-item a span,
+  .gallery-images-justified .gallery-image-item a:after {
     -webkit-transition: all 0.2s ease-in-out 0s;
     -khtml-transition: all 0.2s ease-in-out 0s;
     -moz-transition: all 0.2s ease-in-out 0s;
@@ -4502,6 +4499,7 @@ article.post-item-content {
     -ms-opacity: 0;
     -o-opacity: 0;
     opacity: 0; }
+  .gallery-images-grid .gallery-image-item a:hover span,
   .gallery-images-justified .gallery-image-item a:hover span {
     filter: alpha(opacity=100);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
@@ -4511,6 +4509,7 @@ article.post-item-content {
     -ms-opacity: 1;
     -o-opacity: 1;
     opacity: 1; }
+  .gallery-images-grid .gallery-image-item a:hover:after,
   .gallery-images-justified .gallery-image-item a:hover:after {
     filter: alpha(opacity=60);
     -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
@@ -4520,6 +4519,33 @@ article.post-item-content {
     -ms-opacity: 0.6;
     -o-opacity: 0.6;
     opacity: 0.6; }
+
+.gallery-images-grid {
+  margin: 0; }
+  .gallery-images-grid .gallery-image-item {
+    width: 37%;
+    float: left;
+    padding-left: 15px;
+    height: 185px;
+    margin-bottom: 30px;
+    position: relative; }
+    .gallery-images-grid .gallery-image-item:first-child {
+      width: 63%;
+      padding-left: 0;
+      padding-right: 15px;
+      height: 400px; }
+      .gallery-images-grid .gallery-image-item:first-child a {
+        left: 0;
+        right: 15px; }
+    .gallery-images-grid .gallery-image-item a {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 15px;
+      right: 0;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat; }
 
 /* ==============================
    18. Single post

@@ -30,9 +30,9 @@
             foreach($images as $image){
                 if( $i <= 3 ){
                     $gallery .= sprintf(
-                        '<div class="%s" style="background-image:url('.$image['url'].')">%s</div>',
+                        '<div class="%s">%s</div>',
                         'gallery-image-item',
-                        '<a href="'.$image['full_url'].'"><span></span></a>'
+                        '<a style="background-image:url('.$image['url'].')" href="'.$image['full_url'].'"><span></span></a>'
                     );
                 }
             $i++;}
