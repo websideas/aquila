@@ -4,57 +4,43 @@
 if ( !defined('ABSPATH')) exit;
 
 
-/************************************************************************
-* Extended Example:
-* Way to set menu, import revolution slider, and set home page.
-*************************************************************************/
 
-if ( !function_exists( 'kt_wbc_extended_imported' ) ) {
-    /**
-     *
-     *
-     * @param $demo_active_import
-     * @param $demo_directory_path
-     */
-	function kt_wbc_extended_imported( $demo_active_import , $demo_directory_path ) {
+add_filter( 'kt_import_demo', 'kt_import_demo_aquila' );
+function kt_import_demo_aquila( $demos ){
+    $demos['demo1'] = array(
+        'title' => 'Classic',
+        'previewlink' => 'http://aquila.kitethemes.com/',
+        'xml_count' => 2,
+        'status' => sprintf(
+            '<span class="%s">%s</span>',
+            'demo-main',
+            __('Main', 'wingman')
+        )
+    );
 
-		reset( $demo_active_import );
-		$current_key = key( $demo_active_import );
+    $demos['demo2'] = array(
+        'title' => 'Coming soon',
+        'previewlink' => '#',
+        'coming' => true
+    );
 
-		/************************************************************************
-		* Import slider(s) for the current demo being imported
-		*************************************************************************/
 
-		if ( class_exists( 'RevSlider' ) ) {
+    return $demos;
+}
 
-			$wbc_sliders_array = array(
-                
-			);
 
-            foreach( $wbc_sliders_array as $k => $wbc_slider_import ){
-                $revslider = KT_THEME_DIR.'dummy-data/revslider/'.$wbc_slider_import;
-                if ( file_exists( $revslider ) ) {
-                    $slider = new RevSlider();
-                    $slider->importSliderFromPost( true, true, $revslider );
-                }
-            }
+if ( !function_exists( 'kt_extended_imported' ) ) {
 
-        }
+    function kt_extended_imported( $demoid ) {
+
 
         /************************************************************************
          * Setting Menus
          *************************************************************************/
 
-        $main_menu = get_term_by( 'name', esc_html__('Main menu', 'aquila'), 'nav_menu' );
-        $mobile = get_term_by( 'name', esc_html__('(Mobile Devices) Main Navigation Menu', 'aquila'), 'nav_menu' );
-        $footer_menu = get_term_by( 'name', esc_html__('Footer Navigation Menu', 'aquila'), 'nav_menu' );
-        $bottom = get_term_by( 'name', esc_html__('Bottom Menu', 'aquila'), 'nav_menu' );
-
+        $main_menu = get_term_by( 'name', __('Main menu', 'wingman'), 'nav_menu' );
         set_theme_mod( 'nav_menu_locations', array(
-                'primary' => $main_menu->term_id,
-                'mobile'  => $main_menu->term_id,
-                'footer'  => $footer_menu->term_id,
-                'bottom'  => $bottom->term_id
+                'primary' => $main_menu->term_id
             )
         );
 
@@ -63,37 +49,61 @@ if ( !function_exists( 'kt_wbc_extended_imported' ) ) {
          *************************************************************************/
 
         // array of demos/homepages to check/select from
-        $wbc_home_pages = array(
-            'demo1' => 'Home'
+        $kt_home_pages = array(
+            'demo1' => 'Home',
+            'demo2' => 'Home',
+            'demo3' => 'Home',
         );
 
-        if ( isset( $demo_active_import[$current_key]['directory'] ) && !empty( $demo_active_import[$current_key]['directory'] ) && array_key_exists( $demo_active_import[$current_key]['directory'], $wbc_home_pages ) ) {
-            $page = get_page_by_title( $wbc_home_pages[$demo_active_import[$current_key]['directory']] );
+        if ( isset( $wbc_sliders_array[$demoid]  ) ) {
+            $page = get_page_by_title( $kt_home_pages[$demoid] );
             if ( isset( $page->ID ) ) {
                 update_option( 'page_on_front', $page->ID );
                 update_option( 'show_on_front', 'page' );
             }
         }
 
+        /************************************************************************
+         * Set Posts page
+         *************************************************************************/
+
+        // array of demos/Posts page to check/select from
+        $kt_posts_pages = array(
+            'demo1' => 'Blog',
+            'demo2' => 'Blog',
+            'demo3' => 'Blog',
+        );
+
+        if ( isset( $kt_posts_pages[$demoid]  ) ) {
+            $page = get_page_by_title( $kt_posts_pages[$demoid] );
+            if ( isset( $page->ID ) ) {
+                update_option( 'page_for_posts', $page->ID );
+            }
+        }
+
     }
-    add_action( 'wbc_importer_after_content_import', 'kt_wbc_extended_imported', 10, 2 );
+    add_action( 'kt_importer_after_content_import', 'kt_extended_imported');
 }
 
 
 
 
-if(!function_exists('wbc_change_demo_directory_path')){
-    /**
-     * Change the path to the directory that contains demo data folders.
-     *
-     * @param [string] $demo_directory_path
-     *
-     * @return [string]
-     */
-
-    function wbc_change_demo_directory_path( $demo_directory_path ) {
-        $demo_directory_path = KT_THEME_DIR.'dummy-data/';
-        return $demo_directory_path;
-    }
-    add_filter('wbc_importer_dir_path', 'wbc_change_demo_directory_path' );
+function kt_importer_dir_aquila( ) {
+    return KT_THEME_DATA_DIR.'/';
 }
+add_filter('kt_importer_dir', 'kt_importer_dir_aquila' );
+
+function kt_importer_url_aquila( ) {
+
+    return KT_THEME_DATA.'/';
+}
+add_filter('kt_importer_url', 'kt_importer_url_aquila' );
+
+function kt_importer_opt_name_aquila(  ) {
+    return KT_THEME_OPTIONS;
+}
+add_filter('kt_importer_opt_name', 'kt_importer_opt_name_aquila' );
+
+
+
+

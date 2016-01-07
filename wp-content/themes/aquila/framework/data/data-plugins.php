@@ -49,6 +49,18 @@ function kt_register_plugins() {
             'force_deactivation'    => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
             'external_url'      => '', // If set, overrides default API URL and points to an external URL
         ),
+
+        array(
+            'name'          => 'KT Importer', // The plugin name
+            'slug'          => 'kt_importer', // The plugin slug (typically the folder name)
+            'source'            => KT_THEME_DIR.'recommend-plugins/kt_importer.zip', // The plugin source
+            'required'          => true, // If false, the plugin is only 'recommended' instead of required
+            'force_activation'      => false, // If true, plugin is activated upon theme activation and cannot be deactivated until theme switch
+            'force_deactivation'    => false, // If true, plugin is deactivated upon theme switch, useful for theme-specific plugins
+            'external_url'      => '', // If set, overrides default API URL and points to an external URL
+        ),
+
+
         array(
             'name' => 'Redux - Options framework',
             'slug' => 'redux-framework',

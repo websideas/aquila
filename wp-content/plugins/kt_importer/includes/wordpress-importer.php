@@ -1029,6 +1029,7 @@ class WP_Import extends WP_Importer {
 	// Display import page title
 	function header() {
 		echo '<div class="wrap">';
+		screen_icon();
 		echo '<h2>' . __( 'Import WordPress', 'wordpress-importer' ) . '</h2>';
 
 		$updates = get_plugin_updates();
@@ -1106,7 +1107,7 @@ class WP_Import extends WP_Importer {
 	 * Added to http_request_timeout filter to force timeout at 60 seconds during import
 	 * @return int 60
 	 */
-	function bump_request_timeout( $val = 60 ) {
+	function bump_request_timeout() {
 		return 60;
 	}
 
@@ -1118,3 +1119,14 @@ class WP_Import extends WP_Importer {
 
 } // class_exists( 'WP_Importer' )
 
+function wordpress_importer_init() {
+	load_plugin_textdomain( 'wordpress-importer', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+
+	/**
+	 * WordPress Importer object for registering the import callback
+	 * @global WP_Import $wp_import
+	 */
+	$GLOBALS['wp_import'] = new WP_Import();
+	register_importer( 'wordpress', 'WordPress', __('Import <strong>posts, pages, comments, custom fields, categories, and tags</strong> from a WordPress export file.', 'wordpress-importer'), array( $GLOBALS['wp_import'], 'dispatch' ) );
+}
+add_action( 'admin_init', 'wordpress_importer_init' );

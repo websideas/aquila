@@ -2870,9 +2870,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                 )
             );
 
-
-
-
             /**
              *	Sidebar
              **/
