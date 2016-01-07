@@ -17,7 +17,7 @@ get_header(); ?>
     	/**
     	 * @hooked 
     	 */
-    	do_action( 'theme_before_main' );
+    	do_action( 'kt_before_main' );
 
         ?>
         <?php
@@ -45,6 +45,6 @@ get_header(); ?>
     	/**
     	 * @hooked 
     	 */
-    	do_action( 'theme_after_main' ); ?>
+    	do_action( 'kt_after_main' ); ?>
     </div><!-- .container -->
 <?php get_footer(); ?>

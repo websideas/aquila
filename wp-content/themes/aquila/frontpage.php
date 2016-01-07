@@ -99,7 +99,7 @@ get_header(); ?>
         <?php if ( have_posts() ) { ?>
             <div class='blog-posts'>
                 <?php
-                do_action('before_blog_posts_loop');
+                do_action('kt_before_blog_posts_loop');
 
 
 
@@ -190,7 +190,7 @@ get_header(); ?>
                 wp_reset_query();
                 remove_filter('excerpt_length', $function, 9999);
 
-                do_action('after_blog_posts_loop');
+                do_action('kt_after_blog_posts_loop');
 
                 edit_post_link(
                     sprintf(

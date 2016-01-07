@@ -290,7 +290,7 @@ if ( ! function_exists( 'kt_page_loader' ) ) :
             </div>
         <?php }
     }
-    add_action( 'theme_body_top', 'kt_page_loader');
+    add_action( 'kt_body_top', 'kt_page_loader');
 endif;
 
 
@@ -312,17 +312,45 @@ function add_search_full(){
         );
     }
 }
-add_action('theme_body_top', 'add_search_full');
+add_action('kt_body_top', 'add_search_full');
 
 function add_socials_mobile(){
-    $socials = '<div class="main-nav-socials">
-                    <a href="#"><i class="fa fa-facebook"></i> </a>
-                    <a href="#"><i class="fa fa-twitter"></i> </a>
-                    <a href="#"><i class="fa fa-linkedin"></i> </a>
-                    <a href="#"><i class="fa fa-behance"></i> </a>
-                    <a href="#"><i class="fa fa-instagram"></i> </a>
-                    <a href="#"><i class="fa fa-dribbble"></i> </a>
-                </div><!-- .menu-bars-socials -->';
+    $social = kt_option('footer_socials');
+    
+    $socials_arr = array(
+        'facebook' => array('title' => esc_html__('Facebook', 'aquila'), 'icon' => 'fa fa-facebook', 'link' => '%s'),
+        'twitter' => array('title' => esc_html__('Twitter', 'aquila'), 'icon' => 'fa fa-twitter', 'link' => 'http://www.twitter.com/%s'),
+        'dribbble' => array('title' => esc_html__('Dribbble', 'aquila'), 'icon' => 'fa fa-dribbble', 'link' => 'http://www.dribbble.com/%s'),
+        'vimeo' => array('title' => esc_html__('Vimeo', 'aquila'), 'icon' => 'fa fa-vimeo-square', 'link' => 'http://www.vimeo.com/%s'),
+        'tumblr' => array('title' => esc_html__('Tumblr', 'aquila'), 'icon' => 'fa fa-tumblr', 'link' => 'http://%s.tumblr.com/'),
+        'skype' => array('title' => esc_html__('Skype', 'aquila'), 'icon' => 'fa fa-skype', 'link' => 'skype:%s'),
+        'linkedin' => array('title' => esc_html__('LinkedIn', 'aquila'), 'icon' => 'fa fa-linkedin', 'link' => '%s'),
+        'googleplus' => array('title' => esc_html__('Google Plus', 'aquila'), 'icon' => 'fa fa-google-plus', 'link' => '%s'),
+        'youtube' => array('title' => esc_html__('Youtube', 'aquila'), 'icon' => 'fa fa-youtube', 'link' => 'http://www.youtube.com/user/%s'),
+        'pinterest' => array('title' => esc_html__('Pinterest', 'aquila'), 'icon' => 'fa fa-pinterest', 'link' => 'http://www.pinterest.com/%s'),
+        'instagram' => array('title' => esc_html__('Instagram', 'aquila'), 'icon' => 'fa fa-instagram', 'link' => 'http://instagram.com/%s'),
+    );
+    
+    foreach($socials_arr as $k => &$v){
+        $val = kt_option($k);
+        $v['val'] = ($val) ? $val : '';
+    }
+    $social_icons = '';
+    if($social){
+        $social_type = explode(',', $social);
+        foreach ($social_type as $id) {
+            $val = $socials_arr[$id];
+            $social_text = '<i class="'.esc_attr($val['icon']).'"></i>';
+            $social_icons .= '<a class="'.esc_attr($id).'" title="'.esc_attr($val['title']).'" href="'.esc_url(str_replace('%s', $val['val'], $val['link'])).'" target="_blank">'.$social_text.'</a>';
+        }
+    }else{
+        foreach($socials_arr as $key => $val){
+            $social_text = '<i class="'.esc_attr($val['icon']).'"></i>';
+            $social_icons .= '<a class="'.esc_attr($key).'" title="'.esc_attr($val['title']).'" href="'.esc_url(str_replace('%s', $val['val'], $val['link'])).'" target="_blank">'.$social_text.'</a>';
+        }
+    }
+    
+    $socials = '<div class="main-nav-socials">'.$social_icons.'</div><!-- .menu-bars-socials -->';
 
     printf(
         '<div id="%1$s" class="%2$s">%3$s</div>',
@@ -331,7 +359,7 @@ function add_socials_mobile(){
         $socials
     );
 }
-add_action('theme_body_top', 'add_socials_mobile', 10);
+add_action('kt_body_top', 'add_socials_mobile', 10);
 
 
 //Remove Facebook comment box in the content
@@ -365,7 +393,7 @@ function kt_navigation_markup_template($template, $class){
  *
  * @since 1.0
  */
-add_action( 'theme_before_content', 'get_page_header', 20 );
+add_action( 'kt_before_content', 'get_page_header', 20 );
 function get_page_header( ){
     global $post;
     $show_title = false;

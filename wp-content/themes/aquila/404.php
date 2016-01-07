@@ -21,7 +21,7 @@ get_header(); ?>
         /**
          * @hooked
          */
-        do_action( 'theme_before_main' ); ?>
+        do_action( 'kt_before_main' ); ?>
         <div id="main">
             <?php
                 if($type == 'page'){
@@ -40,6 +40,6 @@ get_header(); ?>
         /**
          * @hooked
          */
-        do_action( 'theme_after_main' ); ?>
+        do_action( 'kt_after_main' ); ?>
     </div><!-- .container -->
 <?php get_footer(); ?>

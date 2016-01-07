@@ -18,7 +18,7 @@ get_header(); ?>
             <div class="container">
                 <?php
 
-                do_action('before_blog_posts_loop');
+                do_action('kt_before_blog_posts_loop');
 
                 if(isset($_REQUEST['type'])){
                     $type = $_REQUEST['type'];
@@ -108,7 +108,7 @@ get_header(); ?>
                     kt_paging_nav($pagination);
                 }
 
-                do_action('after_blog_posts_loop');
+                do_action('kt_after_blog_posts_loop');
 
                 ?>
             </div><!-- .container -->

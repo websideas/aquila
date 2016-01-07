@@ -311,7 +311,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'default'  => 'copyright'
                     ),
                     array(
-                         'id'   => 'footer_socials',
+                         'id'   => 'header_socials',
                          'type' => 'kt_socials',
                          'title'    => esc_html__( 'Select your socials', 'aquila' ),
                     ),
@@ -676,7 +676,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'on'		=> esc_html__( 'Enabled', 'aquila' ),
                         'off'		=> esc_html__( 'Disabled', 'aquila' ),
                     ),
-
+                    
+                    
+                    array(
+                         'id'   => 'footer_socials',
+                         'type' => 'kt_socials',
+                         'title'    => __( 'Select your socials', 'aquila' ),
+                    ),
                 )
             );
             /**

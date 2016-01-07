@@ -6,7 +6,7 @@ if ( !defined('ABSPATH')) exit;
 ?>
 
 <ul id="main-nav-tool" class="hidden-xs hidden-sm">
-    <?php do_action('theme_main_tool'); ?>
+    <?php do_action('kt_main_tool'); ?>
     <?php if ( kt_option('header_search', 1) ) { ?>
         <li class="mini-search">
             <a href="#"><i class="fa fa-search"></i></a>

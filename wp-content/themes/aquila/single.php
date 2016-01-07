@@ -25,7 +25,7 @@ if($layout == 6){
         /**
          * @hooked
          */
-        do_action( 'theme_before_main' ); ?>
+        do_action( 'kt_before_main' ); ?>
 
         <?php
             $main_column = ($sidebar['sidebar']) ? '8' : '12';
@@ -57,6 +57,6 @@ if($layout == 6){
         /**
          * @hooked
          */
-        do_action( 'theme_after_main' ); ?>
+        do_action( 'kt_after_main' ); ?>
     </div><!-- .container -->
 <?php get_footer(); ?>

@@ -24,7 +24,7 @@
 </head>
 <body <?php body_class( ); ?>>
     <?php
-    do_action( 'theme_body_top' );
+    do_action( 'kt_body_top' );
 
     $position = kt_get_header();
     $header_layout = kt_get_header_layout();
@@ -33,7 +33,7 @@
     <div id="page_outter">
         <div id="page">
             <div id="wrapper-content" class="content-header-<?php echo esc_attr($header_layout); ?>">
-                <?php do_action( 'theme_before_header' ); ?>
+                <?php do_action( 'kt_before_header' ); ?>
 
                 <?php
                 if($position == 'below'){
@@ -62,6 +62,6 @@
                 }
                 ?>
 
-                <?php do_action( 'theme_before_content' , $position); ?>
+                <?php do_action( 'kt_before_content' , $position); ?>
                 <div id="content" class="<?php echo apply_filters('kt_content_class', 'site-content') ?>">
-                    <?php do_action( 'theme_content_top' ); ?>
+                    <?php do_action( 'kt_content_top' ); ?>
