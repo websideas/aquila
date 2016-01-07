@@ -107,7 +107,7 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
         $value = isset( $instance['value'] ) ? $instance['value'] : '';
 
         ?>
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'aquila' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
         <div class="wrapper_kt_image_upload">
             <p style="text-align: center;">

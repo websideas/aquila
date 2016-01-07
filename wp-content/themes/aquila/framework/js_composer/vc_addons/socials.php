@@ -149,7 +149,6 @@ vc_map( array(
                 esc_html__('Color', 'aquila') => 'color',
                 esc_html__('Custom Color', 'aquila') => 'custom',
 			),
-			"description" => esc_html__("",'aquila'),
             "admin_label" => true,
 		),
         array(
@@ -189,7 +188,6 @@ vc_map( array(
                 esc_html__('Standard', 'aquila') => 'standard',
                 esc_html__('Small', 'aquila') => 'small',
 			),
-			"description" => esc_html__("",'aquila'),
             "admin_label" => true,
 		),
         array(
@@ -220,7 +218,6 @@ vc_map( array(
                 esc_html__('Left', 'aquila') => 'left',
                 esc_html__('Right', 'aquila') => 'right'
             ),
-            "description" => esc_html__("",'aquila')
         ),
         
         array(

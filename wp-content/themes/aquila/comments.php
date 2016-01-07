@@ -69,7 +69,7 @@ if ( post_password_required() ) {
     );
 
     $comments_args = array(
-        'label_submit'      => esc_html__( 'send' ),
+        'label_submit'      => esc_html__( 'send','aquila' ),
         'fields' => apply_filters( 'comment_form_default_fields', $new_fields ),
         //'comment_form_before_fields' => '<div>',
         //'comment_form_after_fields' => '</div>',

@@ -13,7 +13,7 @@ class WP_Widget_KT_Tabs extends WP_Widget {
 
 	public function __construct() {
 
-        $widget_ops = array('classname' => 'widget_kt_post_tabs', 'description' => esc_html__( "Display popular posts, recent posts and comments in tabbed format.") );
+        $widget_ops = array('classname' => 'widget_kt_post_tabs', 'description' => esc_html__( "Display popular posts, recent posts and comments in tabbed format.",'aquila') );
         parent::__construct('kt_post_tabs', esc_html__('KT: Post Tabs', 'aquila'), $widget_ops);
         $this->alt_option_name = 'widget_kt_post_tabs';
 
@@ -167,7 +167,7 @@ class WP_Widget_KT_Tabs extends WP_Widget {
         $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
 		
 	?>
-    <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
+    <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:','aquila' ); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
     
     <h4><?php esc_html_e('Select Tabs', 'aquila'); ?></h4>
@@ -187,7 +187,7 @@ class WP_Widget_KT_Tabs extends WP_Widget {
     <h4><?php esc_html_e('Options Tabs', 'aquila'); ?></h4>
     
     <p>
-        <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts to show:' ); ?></label>
+        <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts to show:','aquila' ); ?></label>
         <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" class="widefat" />
     </p>
 <?php

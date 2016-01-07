@@ -92,7 +92,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
         $space_between_item    = isset( $instance['space_between_item'] ) ? absint( $instance['space_between_item'] ) : 3;
         $custom_color    = isset( $instance['custom_color'] ) ? $instance['custom_color'] : '#22dcce';
 	?>
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:','aquila' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
         
         <?php
@@ -143,7 +143,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
                 <option <?php selected( $style, 'custom' ); ?> value="custom"><?php esc_html_e('Custom Color','aquila'); ?></option>
             </select>
         </p>
-        <p><label for="<?php echo $this->get_field_id( 'custom_color' ); ?>"><?php esc_html_e( 'Custom Color:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'custom_color' ); ?>"><?php esc_html_e( 'Custom Color:','aquila' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'custom_color' ); ?>" name="<?php echo $this->get_field_name( 'custom_color' ); ?>" type="text" value="<?php echo $custom_color; ?>" /></p>
         <p><label for="<?php echo $this->get_field_id('background_style'); ?>"><?php esc_html_e('Background Style:', 'aquila'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('background_style'); ?>" name="<?php echo $this->get_field_name('background_style'); ?>">
@@ -182,7 +182,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
                 <option <?php selected( $align, 'right' ); ?> value="right"><?php esc_html_e('Right','aquila'); ?></option>
             </select>
         </p>
-        <p><label for="<?php echo $this->get_field_id( 'space_between_item' ); ?>"><?php esc_html_e( 'Space Between item:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'space_between_item' ); ?>"><?php esc_html_e( 'Space Between item:','aquila' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'space_between_item' ); ?>" name="<?php echo $this->get_field_name( 'space_between_item' ); ?>" type="text" value="<?php echo $space_between_item; ?>" /></p>
         <script type="text/javascript">
             (function($){

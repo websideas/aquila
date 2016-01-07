@@ -24,7 +24,6 @@ foreach($visibilities_arr as $item){
             esc_html__('Hidden on Desktops', 'aquila') => 'hidden-md',
             esc_html__('Hidden on Desktops Large', 'aquila') => 'hidden-lg',
         ),
-        "description" => esc_html__("",'aquila'),
         "admin_label" => true,
     ));
 }

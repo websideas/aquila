@@ -132,7 +132,7 @@ class WP_Widget_KT_Ads extends WP_Widget {
             $img_preview4 = $file4['url'];
         }
 	?>
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:','aquila' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
         <h4><?php esc_html_e('Image 1','aquila'); ?></h4>
         <div class="wrapper_kt_image_upload">

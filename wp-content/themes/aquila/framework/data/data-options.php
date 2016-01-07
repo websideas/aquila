@@ -158,14 +158,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
-			 *	Footer
-			 **/
-			$this->sections[] = array(
-				'id'			=> 'footer',
-				'title'			=> esc_html__( 'Footer', 'aquila' ),
-				'desc'			=> '',
-				'subsection' => true,
-				'fields'		=> array(
+             *  Footer
+             **/
+            $this->sections[] = array(
+                'id'            => 'footer',
+                'title'         => esc_html__( 'Footer', 'aquila' ),
+                'desc'          => '',
+                'subsection' => true,
+                'fields'        => array(
                     // Footer settings
                     
                     array(
@@ -173,8 +173,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'switch',
                         'title'    => esc_html__( 'Back to top', 'aquila' ),
                         'default'  => true,
-                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
-                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
+                        'on'        => esc_html__( 'Enabled', 'aquila' ),
+                        'off'       => esc_html__( 'Disabled', 'aquila' ),
                     ),
 
                     array(
@@ -188,8 +188,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'switch',
                         'title'    => esc_html__( 'Footer enable', 'aquila' ),
                         'default'  => true,
-                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
-                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
+                        'on'        => esc_html__( 'Enabled', 'aquila' ),
+                        'off'       => esc_html__( 'Disabled', 'aquila' ),
                     ),
 
                     // Footer Top settings
@@ -204,8 +204,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'switch',
                         'title'    => esc_html__( 'Footer top enable', 'aquila' ),
                         'default'  => true,
-                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
-                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
+                        'on'        => esc_html__( 'Enabled', 'aquila' ),
+                        'off'       => esc_html__( 'Disabled', 'aquila' ),
                     ),
 
                     // Footer widgets settings
@@ -220,8 +220,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'switch',
                         'title'    => esc_html__( 'Footer widgets enable', 'aquila' ),
                         'default'  => true,
-                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
-                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
+                        'on'        => esc_html__( 'Enabled', 'aquila' ),
+                        'off'       => esc_html__( 'Disabled', 'aquila' ),
                     ),
 
                     array(
@@ -256,8 +256,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'switch',
                         'title'    => esc_html__( 'Footer bottom enable', 'aquila' ),
                         'default'  => false,
-                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
-                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
+                        'on'        => esc_html__( 'Enabled', 'aquila' ),
+                        'off'       => esc_html__( 'Disabled', 'aquila' ),
                     ),
                     /* Footer copyright */
                     array(
@@ -271,8 +271,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'switch',
                         'title'    => esc_html__( 'Footer copyright enable', 'aquila' ),
                         'default'  => true,
-                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
-                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
+                        'on'        => esc_html__( 'Enabled', 'aquila' ),
+                        'off'       => esc_html__( 'Disabled', 'aquila' ),
                     ),
                     array(
                         'id'       => 'footer_copyright_layout',
@@ -326,13 +326,13 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
-			 *	Styling General
-			 **/
+             *  Styling General
+             **/
             $this->sections[] = array(
-				'id'			=> 'styling_general',
-				'title'			=> esc_html__( 'General', 'aquila' ),
-				'subsection' => true,
-                'fields'		=> array(
+                'id'            => 'styling_general',
+                'title'         => esc_html__( 'General', 'aquila' ),
+                'subsection' => true,
+                'fields'        => array(
                     array(
                         'id'       => 'styling_accent',
                         'type'     => 'color',
@@ -356,13 +356,13 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
             
             /**
-			 *	Styling Header
-			 **/
+             *  Styling Header
+             **/
             $this->sections[] = array(
-				'id'			=> 'styling_header',
-				'title'			=> esc_html__( 'Header', 'aquila' ),
-				'subsection' => true,
-                'fields'		=> array(
+                'id'            => 'styling_header',
+                'title'         => esc_html__( 'Header', 'aquila' ),
+                'subsection' => true,
+                'fields'        => array(
 
 
 
@@ -565,16 +565,14 @@ if ( ! class_exists( 'KT_config' ) ) {
             $image_sizes = kt_get_image_sizes();
 
             $this->sections[] = array(
-                'id' 	=> 'general',
+                'id'    => 'general',
                 'title'  => esc_html__( 'General', 'aquila' ),
-                'desc'   => esc_html__( '', 'aquila' ),
-                'icon'	=> 'fa fa-cogs'
+                'icon'  => 'fa fa-cogs'
             );
 
             $this->sections[] = array(
-                'id' 	=> 'general_layout',
+                'id'    => 'general_layout',
                 'title'  => esc_html__( 'General', 'aquila' ),
-                'desc'   => esc_html__( '', 'aquila' ),
                 'subsection' => true,
                 'fields' => array(
                     array(
@@ -600,14 +598,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                 )
             );
             /**
-             *	Logos
+             *  Logos
              **/
             $this->sections[] = array(
-                'id'			=> 'logos_favicon',
-                'title'			=> esc_html__( 'Logos', 'aquila' ),
-                'desc'			=> '',
+                'id'            => 'logos_favicon',
+                'title'         => esc_html__( 'Logos', 'aquila' ),
+                'desc'          => '',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'logos_heading',
                         'type'     => 'raw',
@@ -634,14 +632,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
-             *	Header
+             *  Header
              **/
             $this->sections[] = array(
-                'id'			=> 'Header',
-                'title'			=> esc_html__( 'Header', 'aquila' ),
-                'desc'			=> '',
+                'id'            => 'Header',
+                'title'         => esc_html__( 'Header', 'aquila' ),
+                'desc'          => '',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
 
                     array(
                         'id'       => 'header',
@@ -664,8 +662,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type' => 'switch',
                         'title' => esc_html__('Header shadow', 'aquila'),
                         "default" => 1,
-                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
-                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
+                        'on'        => esc_html__( 'Enabled', 'aquila' ),
+                        'off'       => esc_html__( 'Disabled', 'aquila' ),
                     ),
                     array(
                         'id' => 'header_search',
@@ -673,8 +671,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title' => esc_html__('Search Icon', 'aquila'),
                         'desc' => esc_html__('Enable the search Icon in the header.', 'aquila'),
                         "default" => 1,
-                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
-                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
+                        'on'        => esc_html__( 'Enabled', 'aquila' ),
+                        'off'       => esc_html__( 'Disabled', 'aquila' ),
                     ),
                     
                     
@@ -835,7 +833,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id' => 'use_page_loader',
                         'type' => 'switch',
                         'title' => esc_html__('Use Page Loader?', 'aquila'),
-                        'desc' => esc_html__('', 'aquila'),
                         'default' => 1,
                         'on' => esc_html__('Enabled', 'aquila'),
                         'off' =>esc_html__('Disabled', 'aquila')
@@ -890,13 +887,13 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
             /**
-             *	Styling
+             *  Styling
              **/
             $this->sections[] = array(
-                'id'			=> 'styling',
-                'title'			=> esc_html__( 'Styling', 'aquila' ),
-                'desc'			=> '',
-                'icon'	=> 'dashicons dashicons-art',
+                'id'            => 'styling',
+                'title'         => esc_html__( 'Styling', 'aquila' ),
+                'desc'          => '',
+                'icon'  => 'dashicons dashicons-art',
             );
 
 
@@ -973,13 +970,13 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
-             *	Styling Sticky
+             *  Styling Sticky
              **/
             $this->sections[] = array(
-                'id'			=> 'styling_sticky',
-                'title'			=> esc_html__( 'Sticky', 'aquila' ),
+                'id'            => 'styling_sticky',
+                'title'         => esc_html__( 'Sticky', 'aquila' ),
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'fixed_header',
                         'type'     => 'button_set',
@@ -1075,13 +1072,13 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
-             *	Styling Footer
+             *  Styling Footer
              **/
             $this->sections[] = array(
-                'id'			=> 'styling_footer',
-                'title'			=> esc_html__( 'Footer', 'aquila' ),
+                'id'            => 'styling_footer',
+                'title'         => esc_html__( 'Footer', 'aquila' ),
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'footer_heading',
                         'type'     => 'raw',
@@ -1264,14 +1261,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
-             *	Main Navigation
+             *  Main Navigation
              **/
             $this->sections[] = array(
-                'id'			=> 'styling_navigation',
-                'title'			=> esc_html__( 'Main Navigation', 'aquila' ),
-                'desc'			=> '',
+                'id'            => 'styling_navigation',
+                'title'         => esc_html__( 'Main Navigation', 'aquila' ),
+                'desc'          => '',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'styling_navigation_general',
                         'type'     => 'raw',
@@ -1535,14 +1532,14 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
             /**
-             *	Mobile Navigation
+             *  Mobile Navigation
              **/
             $this->sections[] = array(
-                'id'			=> 'styling_mobile_menu',
-                'title'			=> esc_html__( 'Mobile Menu', 'aquila' ),
-                'desc'			=> '',
+                'id'            => 'styling_mobile_menu',
+                'title'         => esc_html__( 'Mobile Menu', 'aquila' ),
+                'desc'          => '',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'mobile_menu_background',
                         'type'     => 'background',
@@ -1684,24 +1681,24 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
-             *	Typography
+             *  Typography
              **/
             $this->sections[] = array(
-                'id'			=> 'typography',
-                'title'			=> esc_html__( 'Typography', 'aquila' ),
-                'desc'			=> '',
-                'icon_class'	=> 'fa fa-font',
+                'id'            => 'typography',
+                'title'         => esc_html__( 'Typography', 'aquila' ),
+                'desc'          => '',
+                'icon_class'    => 'fa fa-font',
             );
 
 
             /**
-             *	Typography General
+             *  Typography General
              **/
             $this->sections[] = array(
-                'id'			=> 'typography_general',
-                'title'			=> esc_html__( 'General', 'aquila' ),
+                'id'            => 'typography_general',
+                'title'         => esc_html__( 'General', 'aquila' ),
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'typography_body',
                         'type'     => 'typography',
@@ -1960,14 +1957,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
-             *	Typography header
+             *  Typography header
              **/
             $this->sections[] = array(
-                'id'			=> 'typography_header',
-                'title'			=> esc_html__( 'Header', 'aquila' ),
-                'desc'			=> '',
+                'id'            => 'typography_header',
+                'title'         => esc_html__( 'Header', 'aquila' ),
+                'desc'          => '',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'typography_header_content',
                         'type'     => 'typography',
@@ -1981,14 +1978,14 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
             /**
-             *	Typography sidebar
+             *  Typography sidebar
              **/
             $this->sections[] = array(
-                'id'			=> 'typography_sidebar',
-                'title'			=> esc_html__( 'Sidebar', 'aquila' ),
-                'desc'			=> '',
+                'id'            => 'typography_sidebar',
+                'title'         => esc_html__( 'Sidebar', 'aquila' ),
+                'desc'          => '',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'typography_sidebar',
                         'type'     => 'typography',
@@ -2019,15 +2016,15 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
             /**
-             *	Typography Navigation
+             *  Typography Navigation
              **/
 
             $this->sections[] = array(
-                'id'			=> 'typography_navigation',
-                'title'			=> esc_html__( 'Main Navigation', 'aquila' ),
-                'desc'			=> '',
+                'id'            => 'typography_navigation',
+                'title'         => esc_html__( 'Main Navigation', 'aquila' ),
+                'desc'          => '',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'typography-navigation_top',
                         'type'     => 'typography',
@@ -2115,15 +2112,15 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
-             *	Typography mobile Navigation
+             *  Typography mobile Navigation
              **/
 
             $this->sections[] = array(
-                'id'			=> 'typography_mobile_navigation',
-                'title'			=> esc_html__( 'Mobile Navigation', 'aquila' ),
-                'desc'			=> '',
+                'id'            => 'typography_mobile_navigation',
+                'title'         => esc_html__( 'Mobile Navigation', 'aquila' ),
+                'desc'          => '',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'typography_mobile_navigation_top',
                         'type'     => 'typography',
@@ -2512,14 +2509,14 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
             /**
-             *	Single post settings
+             *  Single post settings
              **/
             $this->sections[] = array(
-                'id'			=> 'post_single_section',
-                'title'			=> esc_html__( 'Single Post', 'aquila' ),
-                'desc'			=> 'Single post settings',
+                'id'            => 'post_single_section',
+                'title'         => esc_html__( 'Single Post', 'aquila' ),
+                'desc'          => 'Single post settings',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'blog_single_heading',
                         'type'     => 'raw',
@@ -2640,7 +2637,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'single_related_type',
                         'type'     => 'select',
                         'title'    => esc_html__( 'Related Query Type', 'aquila' ),
-                        'subtitle'     => esc_html__( "", 'aquila' ),
                         'options'  => array(
                             'categories' => esc_html__('Categories', 'aquila'),
                             'tags' => esc_html__('Tags', 'aquila'),
@@ -2776,11 +2772,11 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
             $this->sections[] = array(
-                'id'			=> 'social',
-                'title'			=> esc_html__( 'Socials', 'aquila' ),
-                'desc'			=> esc_html__('Social and share settings', 'aquila'),
-                'icon'	=> 'fa fa-facebook',
-                'fields'		=> array(
+                'id'            => 'social',
+                'title'         => esc_html__( 'Socials', 'aquila' ),
+                'desc'          => esc_html__('Social and share settings', 'aquila'),
+                'icon'  => 'fa fa-facebook',
+                'fields'        => array(
 
                     array(
                         'id' => 'twitter',
@@ -2871,14 +2867,14 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
             /**
-             *	Sidebar
+             *  Sidebar
              **/
             $this->sections[] = array(
-                'id'			=> 'sidebar_section',
-                'title'			=> esc_html__( 'Sidebar Widgets', 'aquila' ),
-                'desc'			=> '',
+                'id'            => 'sidebar_section',
+                'title'         => esc_html__( 'Sidebar Widgets', 'aquila' ),
+                'desc'          => '',
                 'icon'          => 'fa fa-columns',
-                'fields'		=> array(
+                'fields'        => array(
 
                     array(
                         'id'          => 'custom_sidebars',
@@ -2902,14 +2898,14 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
             /**
-             *	404 Page
+             *  404 Page
              **/
             $this->sections[] = array(
-                'id'			=> '404_section',
-                'title'			=> esc_html__( '404 Page', 'aquila' ),
-                'desc'			=> '404 Page settings',
+                'id'            => '404_section',
+                'title'         => esc_html__( '404 Page', 'aquila' ),
+                'desc'          => '404 Page settings',
                 'icon'          => 'fa fa-times-circle',
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'notfound_heading',
                         'type'     => 'raw',
@@ -2952,24 +2948,24 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
             /**
-             *	Advanced
+             *  Advanced
              **/
             $this->sections[] = array(
-                'id'			=> 'advanced',
-                'title'			=> esc_html__( 'Advanced', 'aquila' ),
-                'desc'			=> '',
-                'icon'	=> 'fa fa-cog',
+                'id'            => 'advanced',
+                'title'         => esc_html__( 'Advanced', 'aquila' ),
+                'desc'          => '',
+                'icon'  => 'fa fa-cog',
             );
 
             /**
-             *	Advanced Social Share
+             *  Advanced Social Share
              **/
             $this->sections[] = array(
-                'id'			=> 'share_section',
-                'title'			=> esc_html__( 'Social Share', 'aquila' ),
-                'desc'			=> '',
+                'id'            => 'share_section',
+                'title'         => esc_html__( 'Social Share', 'aquila' ),
+                'desc'          => '',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'social_share',
                         'type'     => 'sortable',
@@ -3000,14 +2996,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
-             *	Advanced Socials API
+             *  Advanced Socials API
              **/
             $this->sections[] = array(
-                'id'			=> 'socials_api_section',
-                'title'			=> esc_html__( 'Socials API', 'aquila' ),
-                'desc'			=> '',
+                'id'            => 'socials_api_section',
+                'title'         => esc_html__( 'Socials API', 'aquila' ),
+                'desc'          => '',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'facebook_app_heading',
                         'type'     => 'raw',
@@ -3026,14 +3022,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
-             *	Advanced Custom CSS
+             *  Advanced Custom CSS
              **/
             $this->sections[] = array(
-                'id'			=> 'advanced_css',
-                'title'			=> esc_html__( 'Custom CSS', 'aquila' ),
-                'desc'			=> '',
+                'id'            => 'advanced_css',
+                'title'         => esc_html__( 'Custom CSS', 'aquila' ),
+                'desc'          => '',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'advanced_editor_css',
                         'type'     => 'ace_editor',
@@ -3046,14 +3042,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                 )
             );
             /**
-             *	Advanced Custom CSS
+             *  Advanced Custom CSS
              **/
             $this->sections[] = array(
-                'id'			=> 'advanced_js',
-                'title'			=> esc_html__( 'Custom JS', 'aquila' ),
-                'desc'			=> '',
+                'id'            => 'advanced_js',
+                'title'         => esc_html__( 'Custom JS', 'aquila' ),
+                'desc'          => '',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'advanced_editor_js',
                         'type'     => 'ace_editor',
@@ -3067,14 +3063,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                 )
             );
             /**
-             *	Advanced Tracking Code
+             *  Advanced Tracking Code
              **/
             $this->sections[] = array(
-                'id'			=> 'advanced_tracking',
-                'title'			=> esc_html__( 'Tracking Code', 'aquila' ),
-                'desc'			=> '',
+                'id'            => 'advanced_tracking',
+                'title'         => esc_html__( 'Tracking Code', 'aquila' ),
+                'desc'          => '',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'advanced_tracking_code',
                         'type'     => 'textarea',
@@ -3095,14 +3091,14 @@ if ( ! class_exists( 'KT_config' ) ) {
             $system_info = sprintf("<div class='troubleshooting'><ul>%s</ul></div>", implode('', $info_arr));
 
             /**
-             *	Advanced Troubleshooting
+             *  Advanced Troubleshooting
              **/
             $this->sections[] = array(
-                'id'			=> 'advanced_troubleshooting',
-                'title'			=> esc_html__( 'Troubleshooting', 'aquila' ),
-                'desc'			=> '',
+                'id'            => 'advanced_troubleshooting',
+                'title'         => esc_html__( 'Troubleshooting', 'aquila' ),
+                'desc'          => '',
                 'subsection' => true,
-                'fields'		=> array(
+                'fields'        => array(
                     array(
                         'id'       => 'opt-raw_info_4',
                         'type'     => 'raw',

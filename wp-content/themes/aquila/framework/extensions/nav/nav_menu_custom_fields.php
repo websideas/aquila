@@ -5,7 +5,7 @@
  * @version: 1.0.0
  * @package  Kite/Template
  * @author   KiteThemes
- * @link	 http://kitethemes.com
+ * @link     http://kitethemes.com
  */
 
 // Exit if accessed directly
@@ -18,7 +18,7 @@ function kt_add_custom_fields( $item_id, $item, $depth, $args ) { ?>
         <p class="field-icon description description-wide clearfix">
             <label for="menu-item-icon-<?php echo $item_id; ?>">
                 <?php _e( 'Select icon of this item (set empty to hide). Ex: fa fa-home', 'aquila'); ?><br />
-                <input type="text" id="edit-menu-item-icon-<?php echo $item_id; ?>" class="widefat edit-menu-item-icon" name="menu-item-megamenu-icon[<?php echo $item_id; ?>]" value="<?php esc_attr_e( $item->icon ); ?>" />
+                <input type="text" id="edit-menu-item-icon-<?php echo $item_id; ?>" class="widefat edit-menu-item-icon" name="menu-item-megamenu-icon[<?php echo $item_id; ?>]" value="<?php echo esc_attr( $item->icon ); ?>" />
             </label>
         </p>
         <div class="wrapper-megamenu">

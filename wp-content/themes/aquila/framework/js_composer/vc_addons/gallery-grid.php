@@ -92,7 +92,6 @@ vc_map( array(
     "name" => esc_html__( "KT Gallery Grid", 'aquila'),
     "base" => "kt_gallery_grid",
     "category" => esc_html__('by Theme', 'aquila' ),
-    "description" => esc_html__( "", 'aquila'),
     "params" => array(
         //Image
         array(

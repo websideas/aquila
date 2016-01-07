@@ -571,7 +571,7 @@ function kt_comments($comment, $args, $depth) {
                 <?php comment_reply_link( array_merge( $args,
                     array('depth' => $depth,
                         'max_depth' => $args['max_depth'],
-                        'reply_text' =>'<span class="icon-action-undo"></span> '.esc_html__('Reply')
+                        'reply_text' =>'<span class="icon-action-undo"></span> '.esc_html__('Reply','aquila')
                     ))) ?>
             </div>
         </div>
@@ -608,15 +608,15 @@ if ( ! function_exists( 'kt_post_nav' ) ) :
 
                     
                     if(!get_previous_post_link('&laquo; %link', '', true)){
-                        printf('<div class="nav-previous meta-nav"><span>%s</span></div>', esc_html__( '<span>Previous Article</span>', 'aquila' ));
+                        printf('<div class="nav-previous meta-nav"><span>%s</span></div>', __( '<span>Previous Article</span>', 'aquila' ));
                     }else{
-                        previous_post_link('<div class="nav-previous meta-nav">%link</div>', esc_html__( '<span>Previous Article</span>', 'aquila' ), TRUE);
+                        previous_post_link('<div class="nav-previous meta-nav">%link</div>', __( '<span>Previous Article</span>', 'aquila' ), TRUE);
                     }
 
                     if(!get_next_post_link('&laquo; %link', '', true)){
-                        printf('<div class="nav-next meta-nav"><span>%s</span></div>', esc_html__( '<span>Next Article</span>', 'aquila' ));
+                        printf('<div class="nav-next meta-nav"><span>%s</span></div>', __( '<span>Next Article</span>', 'aquila' ));
                     }else{
-                        next_post_link('<div class="nav-next meta-nav">%link</div>', esc_html__( '<span>Next Article</span>', 'aquila' ), TRUE);
+                        next_post_link('<div class="nav-next meta-nav">%link</div>', __( '<span>Next Article</span>', 'aquila' ), TRUE);
                     }
                 ?>
             </div><!-- .nav-links -->
@@ -671,7 +671,7 @@ if ( ! function_exists( 'kt_entry_meta_categories' ) ) :
      */
     function kt_entry_meta_categories( $separator = ', ') {
         if ( 'post' == get_post_type() ) {
-            $categories_list = get_the_category_list( _x( $separator, 'Used between list items, there is a space after the comma.', 'aquila' ) );
+            $categories_list = get_the_category_list(  $separator );
             if ( $categories_list ) {
                 printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span> %2$s</span>',
                     _x( 'Categories', 'Used before category names.', 'aquila' ),

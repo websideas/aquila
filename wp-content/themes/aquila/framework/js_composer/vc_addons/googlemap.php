@@ -50,8 +50,7 @@ class WPBakeryShortCode_Googlemap extends WPBakeryShortCode {
 vc_map( array(
     "name" => esc_html__( "Google map", 'aquila'),
     "base" => "googlemap",
-    "category" => esc_html__('by Theme'),
-    "description" => esc_html__( "", 'aquila'),
+    "category" => esc_html__('by Theme','aquila'),
     "params" => array(
         array(
           "type" => "textfield",
@@ -78,8 +77,7 @@ vc_map( array(
                 esc_html__('Hybrid', 'aquila') => 'hybrid',
                 esc_html__('Terrain', 'aquila') => 'terrain',
         	), 
-            "admin_label" => true,            
-        	"description" => esc_html__('','aquila'),
+            "admin_label" => true,           
         ),
 
         array(
@@ -99,15 +97,12 @@ vc_map( array(
                 esc_html__('Shades of Grey', 'aquila') => '8',
             ),
             "admin_label" => true,
-            "description" => esc_html__('','aquila'),
         ),
 
         array(
             "type" => "checkbox",
-        	"heading" => esc_html__("",'aquila'),
         	"param_name" => "scrollwheel",
-        	'value' => array( esc_html__( 'Disable map zoom on mouse wheel scroll' ) => true ),
-        	"description" => esc_html__('','aquila'),
+        	'value' => array( esc_html__( 'Disable map zoom on mouse wheel scroll','aquila' ) => true ),
         ),
         array(
             "type" => "dropdown",
@@ -148,7 +143,6 @@ vc_map( array(
             "type" => "textarea_html",
             "heading" => esc_html__("Content", 'aquila'),
             "param_name" => "content",
-            "description" => esc_html__("", 'aquila'),
         ),
         array(
             "type" => "textfield",

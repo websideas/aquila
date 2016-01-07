@@ -96,7 +96,6 @@ vc_map( array(
     "name" => esc_html__( "KT Gallery Justified", 'aquila'),
     "base" => "kt_gallery_justified",
     "category" => esc_html__('by Theme', 'aquila' ),
-    "description" => esc_html__( "", 'aquila'),
     "params" => array(
         //Image
         array(

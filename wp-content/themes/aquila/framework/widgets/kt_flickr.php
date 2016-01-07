@@ -94,10 +94,10 @@ class Widget_KT_Flickr extends WP_Widget {
 
         ?>
 
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:','aquila' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
         
-        <p><label for="<?php echo $this->get_field_id( 'user_id' ); ?>"><?php esc_html_e( 'Flickr ID:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'user_id' ); ?>"><?php esc_html_e( 'Flickr ID:','aquila' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'user_id' ); ?>" name="<?php echo $this->get_field_name( 'user_id' ); ?>" type="text" value="<?php echo $instance['user_id']; ?>" />
             <small><?php esc_html_e('To find your flickID visit','aquila'); ?> <a target="_blank" href="http://idgettr.com/"><?php esc_html_e('idGettr.','aquila'); ?></a></small>
         </p>

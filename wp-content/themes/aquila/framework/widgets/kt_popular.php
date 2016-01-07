@@ -13,7 +13,7 @@ class WP_Widget_KT_Popular extends WP_Widget {
 
 	public function __construct() {
 
-        $widget_ops = array('classname' => 'widget_kt_post_popular', 'description' => esc_html__( "Display popular posts of week, month and year in tabbed format.") );
+        $widget_ops = array('classname' => 'widget_kt_post_popular', 'description' => esc_html__( "Display popular posts of week, month and year in tabbed format.",'aquila') );
         parent::__construct('kt_post_popular', esc_html__('KT: Post Popular', 'aquila'), $widget_ops);
         $this->alt_option_name = 'widget_kt_post_popular';
 
@@ -211,7 +211,7 @@ class WP_Widget_KT_Popular extends WP_Widget {
         $show_thumbnail = isset( $instance['show_thumbnail'] ) ? (bool) $instance['show_thumbnail'] : true;
 		
 	?>
-    <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
+    <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:','aquila' ); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
     
     <h4><?php esc_html_e('Select Tabs', 'aquila'); ?></h4>
@@ -231,7 +231,7 @@ class WP_Widget_KT_Popular extends WP_Widget {
     <h4><?php esc_html_e('Options Tabs', 'aquila'); ?></h4>
     
     <p> 
-        <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts to show:' ); ?></label>
+        <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts to show:','aquila' ); ?></label>
         <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" class="widefat" />
     </p>
     <p>

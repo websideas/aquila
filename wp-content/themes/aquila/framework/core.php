@@ -63,13 +63,6 @@ require_once ( KT_FW_EXT_DIR .'nav/nav_custom_walker.php' );
 
 
 /**
- * include Shortcode
- *
- */
-require_once ( KT_FW_EXT_DIR .'shortcodes/shortcodes.php' );
-
-
-/**
  * Include the meta-box plugin.
  *
  */

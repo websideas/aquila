@@ -343,10 +343,10 @@ add_filter('navigation_markup_template', 'kt_navigation_markup_template', 10, 2)
 function kt_navigation_markup_template($template, $class){
     $disable_next = $disable_prev = '';
     if ( !get_previous_posts_link() ) {
-        $disable_prev = '<span class="page-numbers prev disable">'._x( 'Previous', 'previous post' ).'</span>';
+        $disable_prev = '<span class="page-numbers prev disable">'._x( 'Previous', 'previous post','aquila' ).'</span>';
     }
     if ( !get_next_posts_link() ) {
-        $disable_next = '<span class="page-numbers next disable">'._x( 'Next', 'next post' ).'</span>';
+        $disable_next = '<span class="page-numbers next disable">'._x( 'Next', 'next post','aquila' ).'</span>';
     }
 
     $template = '
@@ -425,21 +425,30 @@ function kt_get_page_title(){
             $title = get_the_title($page_for_posts) ;
         }
     } elseif(is_search()){
-        $title = sprintf( __( '<i class="fa fa-search"></i> <span>%s</span>' ), get_search_query() );
+
+		$allowed_html = array(
+			'i' => array('class'=>true),
+			'span' => array(),
+		);
+        $title = sprintf( wp_kses(__( '<i class="fa fa-search"></i> <span>%s</span>','aquila' ), $allowed_html), get_search_query() );
     } elseif ( is_front_page() && is_singular('page') ){
         $page_on_front = get_option('page_on_front', true);
         $title = get_the_title($page_on_front) ;
     } elseif ( is_archive() ){
+		$allowed_html = array(
+			'span' => array(),
+			'i' => array('class'=>true),
+		);
         if(is_tag()){
-            $title = sprintf( __( '<i class="fa fa-tags"></i> <span>%s</span>' ), single_tag_title( '', false ) );
+            $title = sprintf( wp_kses(__( '<i class="fa fa-tags"></i> <span>%s</span>','aquila' ),$allowed_html), single_tag_title( '', false ) );
         } elseif(is_author()){
-            $title = sprintf( __( '<i class="fa fa-user"></i> <span>%s</span>' ), '<span class="vcard">' . get_the_author() . '</span>' );
+            $title = sprintf( wp_kses(__( '<i class="fa fa-user"></i> <span>%s</span>','aquila' ),$allowed_html), '<span class="vcard">' . get_the_author() . '</span>' );
         } elseif ( is_year() ) {
-            $title = sprintf( __( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'Y', 'yearly archives date format' ) ) );
+            $title = sprintf( wp_kses(__( '<i class="fa fa-clock-o"></i> <span>%s</span>','aquila' ),$allowed_html), get_the_date( _x( 'Y', 'yearly archives date format','aquila' ) ) );
         } elseif ( is_month() ) {
-            $title = sprintf( __( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'F Y', 'monthly archives date format' ) ) );
+            $title = sprintf( wp_kses(__( '<i class="fa fa-clock-o"></i> <span>%s</span>','aquila' ),$allowed_html), get_the_date( _x( 'F Y', 'monthly archives date format','aquila' ) ) );
         } elseif ( is_day() ) {
-            $title = sprintf( __( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'F j, Y', 'daily archives date format' ) ) );
+            $title = sprintf( wp_kses(__( '<i class="fa fa-clock-o"></i> <span>%s</span>','aquila' ),$allowed_html), get_the_date( _x( 'F j, Y', 'daily archives date format','aquila' ) ) );
         }
     } elseif(is_page() || is_singular()){
         $post_id = $post->ID;

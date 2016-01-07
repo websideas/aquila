@@ -52,7 +52,6 @@ vc_map( array(
             "type" => "textarea_html",
             "heading" => esc_html__("Content", 'aquila'),
             "param_name" => "content",
-            "description" => esc_html__("", 'aquila'),
             'holder' => 'div',
         ),
         array(
@@ -77,7 +76,6 @@ vc_map( array(
             'heading' => esc_html__( 'Reverse Blockquote', 'aquila' ),
             'param_name' => 'reverse',
             'value' => 'false',
-            "description" => esc_html__("", 'aquila'),
         ),
         
         array(

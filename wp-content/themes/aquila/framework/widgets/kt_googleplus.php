@@ -106,7 +106,7 @@ class Widget_KT_Goolge extends WP_Widget {
 
         ?>
 
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:','aquila' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
         <p><label for="<?php echo $this->get_field_id('type'); ?>"><?php esc_html_e('Type:','aquila'); ?></label>

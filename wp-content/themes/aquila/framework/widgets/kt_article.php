@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Widget_KT_Posts extends WP_Widget {
 
     public function __construct() {
-        $widget_ops = array('classname' => 'widget_kt_posts', 'description' => esc_html__( "Show posts of categories.") );
+        $widget_ops = array('classname' => 'widget_kt_posts', 'description' => esc_html__( "Show posts of categories.",'aquila') );
         parent::__construct('kt_posts', esc_html__('KT: Posts', 'aquila'), $widget_ops);
         $this->alt_option_name = 'widget_kt_posts';
 
@@ -180,10 +180,10 @@ class Widget_KT_Posts extends WP_Widget {
         $categories = get_terms( 'category', array('hide_empty' => false));
 
         ?>
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:', 'aquila' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-        <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts to show:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts to show:','aquila' ); ?></label>
             <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" class="widefat" /></p>
 
         <div><label for="<?php echo $this->get_field_id('category'); ?>"><?php esc_html_e('Categories:','aquila'); ?> </label>
