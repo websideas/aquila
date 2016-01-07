@@ -10,11 +10,11 @@ if ( !defined('ABSPATH')) exit;
  * @param $input string
  * @return boolean
  */
-function kt_sanitize_boolean_callback( $input = '' ) {
+function kt_sanitize_boolean( $input = '' ) {
     $input = (string)$input;
     return in_array($input, array('1', 'true', 'y', 'on'));
 }
-add_filter( 'kt_sanitize_boolean', 'kt_sanitize_boolean_callback', 15 );
+add_filter( 'sanitize_boolean', 'kt_sanitize_boolean', 15 );
 
 
 
@@ -81,7 +81,7 @@ add_action( 'wp_head', 'kt_track_post_views');
  * @param array $classes A list of existing body class values.
  * @return array The filtered body class list.
  */
-function kt_body_classes( $classes ) {
+function theme_body_classes( $classes ) {
     global $post;
 
     if ( is_multi_author() ) {
@@ -109,12 +109,12 @@ function kt_body_classes( $classes ) {
 
     return $classes;
 }
-add_filter( 'body_class', 'kt_body_classes' );
+add_filter( 'body_class', 'theme_body_classes' );
 
 /**
  * Add class sticky to header
  */
-function kt_header_class_callback($classes, $layout){
+function theme_header_class_callback($classes, $layout){
     global $post;
 
     $fixed_header = kt_option('fixed_header', 2);
@@ -147,7 +147,7 @@ function kt_header_class_callback($classes, $layout){
     return $classes;
 }
 
-add_filter('kt_header_class', 'kt_header_class_callback', 10, 2);
+add_filter('theme_header_class', 'theme_header_class_callback', 10, 2);
 
 
 /**
@@ -212,14 +212,14 @@ function kt_comment_form_before_fields(){
 function kt_contactmethods( $contactmethods ) {
 
     // Add Twitter, Facebook
-    $contactmethods['facebook'] = esc_html__('Facebook page/profile url', 'aquila');
-    $contactmethods['twitter'] = esc_html__('Twitter username (without @)', 'aquila');
-    $contactmethods['pinterest'] = esc_html__('Pinterest username', 'aquila');
-    $contactmethods['googleplus'] = esc_html__('Google+ page/profile URL', 'aquila');
-    $contactmethods['instagram'] = esc_html__('Instagram username', 'aquila');
-    $contactmethods['behance'] = esc_html__('Behance username', 'aquila');
-    $contactmethods['tumblr'] = esc_html__('Tumblr username', 'aquila');
-    $contactmethods['dribbble'] = esc_html__('Dribbble username', 'aquila');
+    $contactmethods['facebook'] = __('Facebook page/profile url', THEME_LANG);
+    $contactmethods['twitter'] = __('Twitter username (without @)', THEME_LANG);
+    $contactmethods['pinterest'] = __('Pinterest username', THEME_LANG);
+    $contactmethods['googleplus'] = __('Google+ page/profile URL', THEME_LANG);
+    $contactmethods['instagram'] = __('Instagram username', THEME_LANG);
+    $contactmethods['behance'] = __('Behance username', THEME_LANG);
+    $contactmethods['tumblr'] = __('Tumblr username', THEME_LANG);
+    $contactmethods['dribbble'] = __('Dribbble username', THEME_LANG);
 
     return $contactmethods;
 }
@@ -237,14 +237,14 @@ if(!function_exists('kt_placeholder_callback')) {
 
         $placeholder = kt_option('archive_placeholder');
         if(is_array($placeholder) && $placeholder['id'] != '' ){
-            $obj = kt_get_thumbnail_attachment($placeholder['id'], $size);
+            $obj = get_thumbnail_attachment($placeholder['id'], $size);
             $imgage = $obj['url'];
-        }elseif($size == 'kt_recent_posts' || $size == 'kt_recent_posts_masonry') {
-            $imgage = KT_THEME_IMG . 'placeholder-recent.jpg';
-        }elseif ($size == 'kt_blog_post' || $size == 'kt_blog_post_sidebar'){
-            $imgage = KT_THEME_IMG . 'placeholder-blogpost.jpg';
+        }elseif($size == 'recent_posts' || $size == 'recent_posts_masonry') {
+            $imgage = THEME_IMG . 'placeholder-recent.jpg';
+        }elseif ($size == 'blog_post' || $size == 'blog_post_sidebar'){
+            $imgage = THEME_IMG . 'placeholder-blogpost.jpg';
         }else{
-            $imgage = KT_THEME_IMG . 'placeholder-post.jpg';
+            $imgage = THEME_IMG . 'placeholder-post.jpg';
         }
 
         return $imgage;
@@ -290,12 +290,12 @@ if ( ! function_exists( 'kt_page_loader' ) ) :
             </div>
         <?php }
     }
-    add_action( 'kt_body_top', 'kt_page_loader');
+    add_action( 'theme_body_top', 'kt_page_loader');
 endif;
 
 
 
-function kt_add_search_full(){
+function add_search_full(){
     if(kt_option('header_search', 1)){
 
         if(kt_is_wc()){
@@ -312,45 +312,17 @@ function kt_add_search_full(){
         );
     }
 }
-add_action('kt_body_top', 'kt_add_search_full');
+add_action('theme_body_top', 'add_search_full');
 
-function kt_add_socials_mobile(){
-    $social = kt_option('footer_socials');
-    
-    $socials_arr = array(
-        'facebook' => array('title' => esc_html__('Facebook', 'aquila'), 'icon' => 'fa fa-facebook', 'link' => '%s'),
-        'twitter' => array('title' => esc_html__('Twitter', 'aquila'), 'icon' => 'fa fa-twitter', 'link' => 'http://www.twitter.com/%s'),
-        'dribbble' => array('title' => esc_html__('Dribbble', 'aquila'), 'icon' => 'fa fa-dribbble', 'link' => 'http://www.dribbble.com/%s'),
-        'vimeo' => array('title' => esc_html__('Vimeo', 'aquila'), 'icon' => 'fa fa-vimeo-square', 'link' => 'http://www.vimeo.com/%s'),
-        'tumblr' => array('title' => esc_html__('Tumblr', 'aquila'), 'icon' => 'fa fa-tumblr', 'link' => 'http://%s.tumblr.com/'),
-        'skype' => array('title' => esc_html__('Skype', 'aquila'), 'icon' => 'fa fa-skype', 'link' => 'skype:%s'),
-        'linkedin' => array('title' => esc_html__('LinkedIn', 'aquila'), 'icon' => 'fa fa-linkedin', 'link' => '%s'),
-        'googleplus' => array('title' => esc_html__('Google Plus', 'aquila'), 'icon' => 'fa fa-google-plus', 'link' => '%s'),
-        'youtube' => array('title' => esc_html__('Youtube', 'aquila'), 'icon' => 'fa fa-youtube', 'link' => 'http://www.youtube.com/user/%s'),
-        'pinterest' => array('title' => esc_html__('Pinterest', 'aquila'), 'icon' => 'fa fa-pinterest', 'link' => 'http://www.pinterest.com/%s'),
-        'instagram' => array('title' => esc_html__('Instagram', 'aquila'), 'icon' => 'fa fa-instagram', 'link' => 'http://instagram.com/%s'),
-    );
-    
-    foreach($socials_arr as $k => &$v){
-        $val = kt_option($k);
-        $v['val'] = ($val) ? $val : '';
-    }
-    $social_icons = '';
-    if($social){
-        $social_type = explode(',', $social);
-        foreach ($social_type as $id) {
-            $val = $socials_arr[$id];
-            $social_text = '<i class="'.esc_attr($val['icon']).'"></i>';
-            $social_icons .= '<a class="'.esc_attr($id).'" title="'.esc_attr($val['title']).'" href="'.esc_url(str_replace('%s', $val['val'], $val['link'])).'" target="_blank">'.$social_text.'</a>';
-        }
-    }else{
-        foreach($socials_arr as $key => $val){
-            $social_text = '<i class="'.esc_attr($val['icon']).'"></i>';
-            $social_icons .= '<a class="'.esc_attr($key).'" title="'.esc_attr($val['title']).'" href="'.esc_url(str_replace('%s', $val['val'], $val['link'])).'" target="_blank">'.$social_text.'</a>';
-        }
-    }
-    
-    $socials = '<div class="main-nav-socials">'.$social_icons.'</div><!-- .menu-bars-socials -->';
+function add_socials_mobile(){
+    $socials = '<div class="main-nav-socials">
+                    <a href="#"><i class="fa fa-facebook"></i> </a>
+                    <a href="#"><i class="fa fa-twitter"></i> </a>
+                    <a href="#"><i class="fa fa-linkedin"></i> </a>
+                    <a href="#"><i class="fa fa-behance"></i> </a>
+                    <a href="#"><i class="fa fa-instagram"></i> </a>
+                    <a href="#"><i class="fa fa-dribbble"></i> </a>
+                </div><!-- .menu-bars-socials -->';
 
     printf(
         '<div id="%1$s" class="%2$s">%3$s</div>',
@@ -359,7 +331,7 @@ function kt_add_socials_mobile(){
         $socials
     );
 }
-add_action('kt_body_top', 'kt_add_socials_mobile', 10);
+add_action('theme_body_top', 'add_socials_mobile', 10);
 
 
 //Remove Facebook comment box in the content
@@ -393,8 +365,8 @@ function kt_navigation_markup_template($template, $class){
  *
  * @since 1.0
  */
-add_action( 'kt_before_content', 'kt_get_page_header', 20 );
-function kt_get_page_header( ){
+add_action( 'theme_before_content', 'get_page_header', 20 );
+function get_page_header( ){
     global $post;
     $show_title = false;
 
@@ -444,7 +416,7 @@ function kt_get_page_title(){
     $title = '';
 
     if ( is_front_page() && !is_singular('page') ) {
-        $title = esc_html__( 'Blog', 'aquila' );
+        $title = __( 'Blog', THEME_LANG );
     } elseif(is_category()){
         $title = single_tag_title( '', false );
     } elseif( is_home() ){
@@ -453,21 +425,21 @@ function kt_get_page_title(){
             $title = get_the_title($page_for_posts) ;
         }
     } elseif(is_search()){
-        $title = sprintf( esc_html__( '<i class="fa fa-search"></i> <span>%s</span>' ), get_search_query() );
+        $title = sprintf( __( '<i class="fa fa-search"></i> <span>%s</span>' ), get_search_query() );
     } elseif ( is_front_page() && is_singular('page') ){
         $page_on_front = get_option('page_on_front', true);
         $title = get_the_title($page_on_front) ;
     } elseif ( is_archive() ){
         if(is_tag()){
-            $title = sprintf( esc_html__( '<i class="fa fa-tags"></i> <span>%s</span>' ), single_tag_title( '', false ) );
+            $title = sprintf( __( '<i class="fa fa-tags"></i> <span>%s</span>' ), single_tag_title( '', false ) );
         } elseif(is_author()){
-            $title = sprintf( esc_html__( '<i class="fa fa-user"></i> <span>%s</span>' ), '<span class="vcard">' . get_the_author() . '</span>' );
+            $title = sprintf( __( '<i class="fa fa-user"></i> <span>%s</span>' ), '<span class="vcard">' . get_the_author() . '</span>' );
         } elseif ( is_year() ) {
-            $title = sprintf( esc_html__( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'Y', 'yearly archives date format' ) ) );
+            $title = sprintf( __( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'Y', 'yearly archives date format' ) ) );
         } elseif ( is_month() ) {
-            $title = sprintf( esc_html__( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'F Y', 'monthly archives date format' ) ) );
+            $title = sprintf( __( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'F Y', 'monthly archives date format' ) ) );
         } elseif ( is_day() ) {
-            $title = sprintf( esc_html__( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'F j, Y', 'daily archives date format' ) ) );
+            $title = sprintf( __( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'F j, Y', 'daily archives date format' ) ) );
         }
     } elseif(is_page() || is_singular()){
         $post_id = $post->ID;
@@ -488,7 +460,7 @@ function kt_get_page_subtitle(){
     global $post;
     $subtitle = '';
     if ( is_front_page() && !is_singular('page') ) {
-        $subtitle =  esc_html__('Lastest posts', 'aquila');
+        $subtitle =  __('Lastest posts', THEME_LANG);
     }elseif( is_home() ){
         $page_for_posts = get_option('page_for_posts', true);
         $subtitle = nl2br(rwmb_meta('_kt_page_header_subtitle', array(), $page_for_posts))  ;
@@ -506,7 +478,7 @@ function kt_get_page_subtitle(){
                     $subtitle .= sprintf(
                         '<li class="active"><a href="%s">%s</a></li>',
                         get_category_link($category_current->term_id),
-                        esc_html__('All', 'aquila')
+                        __('All', THEME_LANG)
                     );
                     foreach($categories as $category){
                         $subtitle .= sprintf(
@@ -517,16 +489,16 @@ function kt_get_page_subtitle(){
                     }
                     $subtitle .= '</ul>';
                 }else{
-                    $subtitle = sprintf( esc_html__('%s posts', 'aquila'), $category_current->count);
+                    $subtitle = sprintf( __('%s posts', THEME_LANG), $category_current->count);
                 }
             }elseif(is_tag() || is_author() || is_year() || is_month() || is_day()){
                 global $wp_query;
-                $subtitle = sprintf( esc_html__('%s posts', 'aquila'), $wp_query->found_posts);
+                $subtitle = sprintf( __('%s posts', THEME_LANG), $wp_query->found_posts);
             }
         }
     }elseif(is_search()){
         global $wp_query;
-        $subtitle = sprintf( esc_html__('%s posts', 'aquila'), $wp_query->found_posts);
+        $subtitle = sprintf( __('%s posts', THEME_LANG), $wp_query->found_posts);
     }elseif( $post ){
         $post_id = $post->ID;
         $subtitle = nl2br(rwmb_meta('_kt_page_header_subtitle', array(), $post_id));
@@ -549,7 +521,7 @@ function kt_get_page_subtitle(){
 
 /*== Facebook ==*/
 function kt_get_facebook_post_share_count( $url ) {
-    $response = wp_remote_get( "https://graph.facebook.com/?id=$url" );
+    $response = wp_remote_get( 'https://graph.facebook.com/?id='.$url );
     if ( ! is_wp_error( $response ) && isset( $response['body'] ) ) {
         $data = json_decode( $response['body'] );
         if ( ! is_null( $data ) && isset( $data->shares ) )
@@ -560,7 +532,7 @@ function kt_get_facebook_post_share_count( $url ) {
 
 /*== Pinterest ==*/
 function kt_get_pinterest_post_share_count( $url ) {
-    $response = wp_remote_get( "http://api.pinterest.com/v1/urls/count.json?callback=receivecount&url=$url" );
+    $response = wp_remote_get( '.http://api.pinterest.com/v1/urls/count.json?callback=receivecount&url='.$url );
     if ( ! is_wp_error( $response ) && isset( $response['body'] ) ) {
         $data = json_decode( substr( $response['body'], 13, - 1 ) );
         if ( ! is_null( $data ) && isset( $data->count ) )

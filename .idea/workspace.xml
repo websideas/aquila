@@ -42,11 +42,11 @@
       <file leaf-file-name="functions.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/framework/functions.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6315789">
-              <caret line="574" column="13" selection-start-line="574" selection-start-column="13" selection-end-line="574" selection-end-column="13" />
+            <state vertical-scroll-proportion="9.175439">
+              <caret line="523" column="64" selection-start-line="523" selection-start-column="64" selection-end-line="523" selection-end-column="64" />
               <folding>
-                <marker date="1452158771000" expanded="true" signature="8851:9281" placeholder="..." />
-                <marker date="1452158771000" expanded="true" signature="10152:10273" placeholder="..." />
+                <marker date="1452158810000" expanded="true" signature="8851:9281" placeholder="..." />
+                <marker date="1452158810000" expanded="true" signature="10152:10273" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -901,11 +901,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/aquila/framework/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6315789">
-          <caret line="574" column="13" selection-start-line="574" selection-start-column="13" selection-end-line="574" selection-end-column="13" />
+        <state vertical-scroll-proportion="9.175439">
+          <caret line="523" column="64" selection-start-line="523" selection-start-column="64" selection-end-line="523" selection-end-column="64" />
           <folding>
-            <marker date="1452158771000" expanded="true" signature="8851:9281" placeholder="..." />
-            <marker date="1452158771000" expanded="true" signature="10152:10273" placeholder="..." />
+            <marker date="1452158810000" expanded="true" signature="8851:9281" placeholder="..." />
+            <marker date="1452158810000" expanded="true" signature="10152:10273" placeholder="..." />
           </folding>
         </state>
       </provider>
