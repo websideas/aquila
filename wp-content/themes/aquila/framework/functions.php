@@ -212,14 +212,14 @@ function kt_comment_form_before_fields(){
 function kt_contactmethods( $contactmethods ) {
 
     // Add Twitter, Facebook
-    $contactmethods['facebook'] = __('Facebook page/profile url', THEME_LANG);
-    $contactmethods['twitter'] = __('Twitter username (without @)', THEME_LANG);
-    $contactmethods['pinterest'] = __('Pinterest username', THEME_LANG);
-    $contactmethods['googleplus'] = __('Google+ page/profile URL', THEME_LANG);
-    $contactmethods['instagram'] = __('Instagram username', THEME_LANG);
-    $contactmethods['behance'] = __('Behance username', THEME_LANG);
-    $contactmethods['tumblr'] = __('Tumblr username', THEME_LANG);
-    $contactmethods['dribbble'] = __('Dribbble username', THEME_LANG);
+    $contactmethods['facebook'] = esc_html__('Facebook page/profile url', 'aquila');
+    $contactmethods['twitter'] = esc_html__('Twitter username (without @)', 'aquila');
+    $contactmethods['pinterest'] = esc_html__('Pinterest username', 'aquila');
+    $contactmethods['googleplus'] = esc_html__('Google+ page/profile URL', 'aquila');
+    $contactmethods['instagram'] = esc_html__('Instagram username', 'aquila');
+    $contactmethods['behance'] = esc_html__('Behance username', 'aquila');
+    $contactmethods['tumblr'] = esc_html__('Tumblr username', 'aquila');
+    $contactmethods['dribbble'] = esc_html__('Dribbble username', 'aquila');
 
     return $contactmethods;
 }
@@ -416,7 +416,7 @@ function kt_get_page_title(){
     $title = '';
 
     if ( is_front_page() && !is_singular('page') ) {
-        $title = __( 'Blog', THEME_LANG );
+        $title = esc_html__( 'Blog', 'aquila' );
     } elseif(is_category()){
         $title = single_tag_title( '', false );
     } elseif( is_home() ){
@@ -425,21 +425,21 @@ function kt_get_page_title(){
             $title = get_the_title($page_for_posts) ;
         }
     } elseif(is_search()){
-        $title = sprintf( __( '<i class="fa fa-search"></i> <span>%s</span>' ), get_search_query() );
+        $title = sprintf( esc_html__( '<i class="fa fa-search"></i> <span>%s</span>' ), get_search_query() );
     } elseif ( is_front_page() && is_singular('page') ){
         $page_on_front = get_option('page_on_front', true);
         $title = get_the_title($page_on_front) ;
     } elseif ( is_archive() ){
         if(is_tag()){
-            $title = sprintf( __( '<i class="fa fa-tags"></i> <span>%s</span>' ), single_tag_title( '', false ) );
+            $title = sprintf( esc_html__( '<i class="fa fa-tags"></i> <span>%s</span>' ), single_tag_title( '', false ) );
         } elseif(is_author()){
-            $title = sprintf( __( '<i class="fa fa-user"></i> <span>%s</span>' ), '<span class="vcard">' . get_the_author() . '</span>' );
+            $title = sprintf( esc_html__( '<i class="fa fa-user"></i> <span>%s</span>' ), '<span class="vcard">' . get_the_author() . '</span>' );
         } elseif ( is_year() ) {
-            $title = sprintf( __( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'Y', 'yearly archives date format' ) ) );
+            $title = sprintf( esc_html__( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'Y', 'yearly archives date format' ) ) );
         } elseif ( is_month() ) {
-            $title = sprintf( __( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'F Y', 'monthly archives date format' ) ) );
+            $title = sprintf( esc_html__( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'F Y', 'monthly archives date format' ) ) );
         } elseif ( is_day() ) {
-            $title = sprintf( __( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'F j, Y', 'daily archives date format' ) ) );
+            $title = sprintf( esc_html__( '<i class="fa fa-clock-o"></i> <span>%s</span>' ), get_the_date( _x( 'F j, Y', 'daily archives date format' ) ) );
         }
     } elseif(is_page() || is_singular()){
         $post_id = $post->ID;
@@ -460,7 +460,7 @@ function kt_get_page_subtitle(){
     global $post;
     $subtitle = '';
     if ( is_front_page() && !is_singular('page') ) {
-        $subtitle =  __('Lastest posts', THEME_LANG);
+        $subtitle =  esc_html__('Lastest posts', 'aquila');
     }elseif( is_home() ){
         $page_for_posts = get_option('page_for_posts', true);
         $subtitle = nl2br(rwmb_meta('_kt_page_header_subtitle', array(), $page_for_posts))  ;
@@ -478,7 +478,7 @@ function kt_get_page_subtitle(){
                     $subtitle .= sprintf(
                         '<li class="active"><a href="%s">%s</a></li>',
                         get_category_link($category_current->term_id),
-                        __('All', THEME_LANG)
+                        esc_html__('All', 'aquila')
                     );
                     foreach($categories as $category){
                         $subtitle .= sprintf(
@@ -489,16 +489,16 @@ function kt_get_page_subtitle(){
                     }
                     $subtitle .= '</ul>';
                 }else{
-                    $subtitle = sprintf( __('%s posts', THEME_LANG), $category_current->count);
+                    $subtitle = sprintf( esc_html__('%s posts', 'aquila'), $category_current->count);
                 }
             }elseif(is_tag() || is_author() || is_year() || is_month() || is_day()){
                 global $wp_query;
-                $subtitle = sprintf( __('%s posts', THEME_LANG), $wp_query->found_posts);
+                $subtitle = sprintf( esc_html__('%s posts', 'aquila'), $wp_query->found_posts);
             }
         }
     }elseif(is_search()){
         global $wp_query;
-        $subtitle = sprintf( __('%s posts', THEME_LANG), $wp_query->found_posts);
+        $subtitle = sprintf( esc_html__('%s posts', 'aquila'), $wp_query->found_posts);
     }elseif( $post ){
         $post_id = $post->ID;
         $subtitle = nl2br(rwmb_meta('_kt_page_header_subtitle', array(), $post_id));

@@ -10,21 +10,21 @@ $visibilities_arr = array('vc_empty_space');
 foreach($visibilities_arr as $item){
     vc_add_param($item, array(
         "type" => "dropdown",
-        "heading" => __("Visibility",THEME_LANG),
+        "heading" => esc_html__("Visibility",'aquila'),
         "param_name" => "visibility",
         "value" => array(
-            __('Always Visible', THEME_LANG) => '',
-            __('Visible on Phones', THEME_LANG) => 'visible-xs-block',
-            __('Visible on Tablets', THEME_LANG) => 'visible-sm-block',
-            __('Visible on Desktops', THEME_LANG) => 'visible-md-block',
-            __('Visible on Desktops Large', THEME_LANG) => 'visible-lg-block',
+            esc_html__('Always Visible', 'aquila') => '',
+            esc_html__('Visible on Phones', 'aquila') => 'visible-xs-block',
+            esc_html__('Visible on Tablets', 'aquila') => 'visible-sm-block',
+            esc_html__('Visible on Desktops', 'aquila') => 'visible-md-block',
+            esc_html__('Visible on Desktops Large', 'aquila') => 'visible-lg-block',
 
-            __('Hidden on Phones', THEME_LANG) => 'hidden-xs',
-            __('Hidden on Tablets', THEME_LANG) => 'hidden-sm',
-            __('Hidden on Desktops', THEME_LANG) => 'hidden-md',
-            __('Hidden on Desktops Large', THEME_LANG) => 'hidden-lg',
+            esc_html__('Hidden on Phones', 'aquila') => 'hidden-xs',
+            esc_html__('Hidden on Tablets', 'aquila') => 'hidden-sm',
+            esc_html__('Hidden on Desktops', 'aquila') => 'hidden-md',
+            esc_html__('Hidden on Desktops Large', 'aquila') => 'hidden-lg',
         ),
-        "description" => __("",THEME_LANG),
+        "description" => esc_html__("",'aquila'),
         "admin_label" => true,
     ));
 }
@@ -32,11 +32,11 @@ foreach($visibilities_arr as $item){
 vc_add_params("vc_custom_heading", array(
     array(
         "type" => "kt_number",
-        "heading" => __("Letter spacing", THEME_LANG),
+        "heading" => esc_html__("Letter spacing", 'aquila'),
         "param_name" => "letter_spacing",
         "min" => 0,
         "suffix" => "px",
-        'group' => __( 'Extra', 'js_composer' )
+        'group' => esc_html__( 'Extra', 'js_composer' )
     )
 ));
 

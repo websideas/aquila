@@ -13,7 +13,7 @@ if ( !defined('ABSPATH')) exit;
 add_filter('rwmb_image_advanced_select_string', 'kt_rwmb_image_advanced_select_string', 10, 2);
 function kt_rwmb_image_advanced_select_string($string, $field){
 	if($field['max_file_uploads'] == 1){
-		$string = __('Select your image', THEME_LANG);
+		$string = __('Select your image', 'aquila');
 	}
 	return $string;
 }
@@ -46,7 +46,7 @@ if ( ! class_exists( 'RWMB_RevSlider_Field' )){
 		static function get_options( $field )
 		{
 			$options = array();
-            $options[''] = __('Select Option', THEME_LANG);
+            $options[''] = esc_html__('Select Option', 'aquila');
             
             if ( class_exists( 'RevSlider' ) ) {
                 $revSlider = new RevSlider();
@@ -94,7 +94,7 @@ if ( ! class_exists( 'RWMB_Layerslider_Field' )){
 		static function get_options( $field )
 		{
 			$options = array();
-            $options[''] = __('Select Option', THEME_LANG);
+            $options[''] = esc_html__('Select Option', 'aquila');
             
             if ( is_plugin_active( 'LayerSlider/layerslider.php' ) ) {
             global $wpdb;
@@ -162,7 +162,7 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 					'repeat-y'  => 'Repeat Vertically',
 					'inherit'   => 'Inherit',
 				),
-				'placeholder' => __('Background Repeat', THEME_LANG)
+				'placeholder' => esc_html__('Background Repeat', 'aquila')
 			);
 
 			$ouput .= self::select_html($meta['repeat'], $bg_repeat);
@@ -176,7 +176,7 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 					'cover'   => 'Cover',
 					'contain' => 'Contain',
 				),
-				'placeholder' => __('Background Size', THEME_LANG)
+				'placeholder' => esc_html__('Background Size', 'aquila')
 			);
 
 			$ouput .= self::select_html($meta['size'], $bg_size);
@@ -190,7 +190,7 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 					'scroll'  => 'Scroll',
 					'inherit' => 'Inherit',
 				),
-				'placeholder' => __('Background Attachment', THEME_LANG)
+				'placeholder' => esc_html__('Background Attachment', 'aquila')
 			);
 
 			$ouput .= self::select_html($meta['attachment'], $bg_attachment);
@@ -211,7 +211,7 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 					'right center'  => 'Right center',
 					'right bottom'  => 'Right Bottom',
 				),
-				'placeholder' => __('Background Position', THEME_LANG)
+				'placeholder' => esc_html__('Background Position', 'aquila')
 			);
 
 			$ouput .= self::select_html($meta['position'], $bg_position);
@@ -222,16 +222,16 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 				'<div class="rwmb-field"><input type="text" readonly="" class="kt_image_url" name="%s" value="%s" placeholder="%s"/></div>',
 				$field['field_name'].'[url]',
 				$meta['url'],
-				__( 'No media selected', THEME_LANG )
+				esc_html__( 'No media selected', 'aquila' )
 			);
 
 			$remove_style = ($meta['media'] != '') ? 'inline-block' : 'none';
 
 			$ouput .= sprintf(
 				'<div class="upload_button_div"><span class="button kt_image_upload">%s</span> <span class="button kt_image_remove" style="display : %s">%s</span></div>',
-				__('Upload', THEME_LANG),
+				esc_html__('Upload', 'aquila'),
 				$remove_style,
-				__('Remove', THEME_LANG)
+				esc_html__('Remove', 'aquila')
 			);
 
 
@@ -321,7 +321,7 @@ if ( ! class_exists( 'RWMB_Background_Field' )){
 
 			wp_enqueue_script( 'kt_image', FW_JS . 'kt_image.js', array( 'jquery', 'underscore' ), RWMB_VER, true );
 			wp_localize_script( 'rwmb-file-background', 'kt_image_lange', array(
-				'frameTitle' => __( 'Select Image', THEME_LANG ),
+				'frameTitle' => esc_html__( 'Select Image', 'aquila' ),
 			) );
 		}
 

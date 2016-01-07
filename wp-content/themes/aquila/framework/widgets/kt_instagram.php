@@ -16,8 +16,8 @@ class Widget_KT_Instagram extends WP_Widget {
     private $userid;
     
     public function __construct() {
-        $widget_ops = array('classname' => 'widget_kt_instagram', 'description' => __( "Lasted images in instagram.", THEME_LANG) );
-        parent::__construct('kt_instagram', __('KT: Instagram', THEME_LANG), $widget_ops);
+        $widget_ops = array('classname' => 'widget_kt_instagram', 'description' => esc_html__( "Lasted images in instagram.", 'aquila') );
+        parent::__construct('kt_instagram', esc_html__('KT: Instagram', 'aquila'), $widget_ops);
         $this->alt_option_name = 'widget_kt_instagram';
         
         $this->client_id = get_option( 'kt_instagram_client_id' );
@@ -55,7 +55,7 @@ class Widget_KT_Instagram extends WP_Widget {
                 if($show_follow){
                     printf(
                         '<p>%s <a target="_blank" href="%s">@%s</a></p>',
-                        __('Follow Us', THEME_LANG),
+                        esc_html__('Follow Us', 'aquila'),
                         'https://instagram.com/'.$this->username,
                         $this->username
                     );
@@ -63,7 +63,7 @@ class Widget_KT_Instagram extends WP_Widget {
             }else{
                 printf(
                     '<strong>%s</strong>',
-                    __('Empty username or access token', THEME_LANG) 
+                    esc_html__('Empty username or access token', 'aquila') 
                 );
             }
 
@@ -71,7 +71,7 @@ class Widget_KT_Instagram extends WP_Widget {
         }else{
             printf(
                 '<strong>%s</strong>',
-                __('Please fill all widget settings!', THEME_LANG) 
+                esc_html__('Please fill all widget settings!', 'aquila') 
             );
         }
         
@@ -99,28 +99,28 @@ class Widget_KT_Instagram extends WP_Widget {
 
     public function form( $instance ) {
 
-        $defaults = array( 'title' => __( 'Instagram' , THEME_LANG), 'number' => 9, 'columns' => 3, 'show_follow' => true);
+        $defaults = array( 'title' => esc_html__( 'Instagram' , 'aquila'), 'number' => 9, 'columns' => 3, 'show_follow' => true);
         $instance = wp_parse_args( (array) $instance, $defaults );
 
         $title = strip_tags($instance['title']);
 
         ?>
 
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
         <?php if($this->access_token && $this->username ){ ?>
-            <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of image to show:', THEME_LANG ); ?></label>
+            <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of image to show:', 'aquila' ); ?></label>
                 <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $instance['number']; ?>" class="widefat" /></p>
     
-            <p><label for="<?php echo $this->get_field_id( 'columns' ); ?>"><?php _e( 'Columns:', THEME_LANG ); ?></label>
+            <p><label for="<?php echo $this->get_field_id( 'columns' ); ?>"><?php esc_html_e( 'Columns:', 'aquila' ); ?></label>
                 <select class="widefat" id="<?php echo $this->get_field_id('columns'); ?>" name="<?php echo $this->get_field_name('columns'); ?>">
-                    <option <?php selected( $instance['columns'], '2' ); ?> value="2"><?php _e('2',THEME_LANG); ?></option>
-                    <option <?php selected( $instance['columns'], '3' ); ?> value="3"><?php _e('3',THEME_LANG); ?></option>
-                    <option <?php selected( $instance['columns'], '4' ); ?> value="4"><?php _e('4',THEME_LANG); ?></option>
+                    <option <?php selected( $instance['columns'], '2' ); ?> value="2"><?php esc_html_e('2','aquila'); ?></option>
+                    <option <?php selected( $instance['columns'], '3' ); ?> value="3"><?php esc_html_e('3','aquila'); ?></option>
+                    <option <?php selected( $instance['columns'], '4' ); ?> value="4"><?php esc_html_e('4','aquila'); ?></option>
                 </select></p>
 
             <p><input class="checkbox" type="checkbox" <?php checked( $instance['show_follow'] ); ?> id="<?php echo $this->get_field_id( 'show_follow' ); ?>" name="<?php echo $this->get_field_name( 'show_follow' ); ?>" />
-                <label for="<?php echo $this->get_field_id( 'show_follow' ); ?>"><?php _e( 'Follow link', THEME_LANG ); ?></label></p>
+                <label for="<?php echo $this->get_field_id( 'show_follow' ); ?>"><?php esc_html_e( 'Follow link', 'aquila' ); ?></label></p>
 
         <?php }else{ 
             printf(

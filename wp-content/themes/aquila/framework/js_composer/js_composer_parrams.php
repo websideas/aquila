@@ -311,7 +311,7 @@ function vc_kt_animate_settings($settings, $value){
     $json_a = json_decode($string,true);
     
     $posts_fields = array();
-    $posts_fields[] = "<option value=''>".__('No Animation', THEME_LANG)."</option>";
+    $posts_fields[] = "<option value=''>".esc_html__('No Animation', 'aquila')."</option>";
     
     foreach($json_a as $jkey => $jvalue){
         $posts_fields[] = "<optgroup label='".ucwords(str_replace('_',' ',$jkey))."'>";
@@ -323,7 +323,7 @@ function vc_kt_animate_settings($settings, $value){
     }
     
     $output = '<div class="wrap-kt-animate">';
-        $output .= '<div class="animationSandbox"><h1>'.__('Animate', THEME_LANG).'</h1></div>';
+        $output .= '<div class="animationSandbox"><h1>'.esc_html__('Animate', 'aquila').'</h1></div>';
         $output .= '<select class="wpb_vc_param_value ' . $param_name . ' ' . $type . ' ' . $class . '" name="' . $param_name . '" '.$dependency.'>'
             .implode( $posts_fields )
             .'</select>';
@@ -345,7 +345,7 @@ function vc_kt_icons_settings($settings, $value){
     $output = '<input type="hidden" class="wpb_vc_param_value ' . $param_name . ' ' . $type . ' ' . $class . '" name="' . $param_name . '" value="'.esc_attr($value).'" '.$dependency.' />';
 
 
-    $placeholder = isset($settings['placeholder']) ? $settings['placeholder'] : __('Search icon ...', THEME_LANG);
+    $placeholder = isset($settings['placeholder']) ? $settings['placeholder'] : esc_html__('Search icon ...', 'aquila');
 
 
     $output .= '<div class="param-icon-header clearfix">';
@@ -359,7 +359,7 @@ function vc_kt_icons_settings($settings, $value){
     if(is_array($lists)){
         $icons = '';
         $output .= '<p><select name="param-icon-categories" class="param-icon-categories">';
-        $output .= '<option value="">'.__('From all categories', THEME_LANG).'</option>';
+        $output .= '<option value="">'.esc_html__('From all categories', 'aquila').'</option>';
         foreach($lists as $k => $v){
             $text = ucwords(str_replace('_', ' ', $k));
             $output .= '<option value="'.$k.'">'.$text.'</option>';

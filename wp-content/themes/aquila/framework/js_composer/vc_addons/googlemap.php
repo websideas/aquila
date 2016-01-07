@@ -48,70 +48,70 @@ class WPBakeryShortCode_Googlemap extends WPBakeryShortCode {
 }
 
 vc_map( array(
-    "name" => __( "Google map", THEME_LANG),
+    "name" => esc_html__( "Google map", 'aquila'),
     "base" => "googlemap",
-    "category" => __('by Theme'),
-    "description" => __( "", THEME_LANG),
+    "category" => esc_html__('by Theme'),
+    "description" => esc_html__( "", 'aquila'),
     "params" => array(
         array(
           "type" => "textfield",
-          "heading" => __("Height", THEME_LANG),
+          "heading" => esc_html__("Height", 'aquila'),
           "param_name" => "height",
           "value" => 300,
-          "description" => __("Enter height of map,units :'px',Leave empty to use '300px'.", THEME_LANG)
+          "description" => esc_html__("Enter height of map,units :'px',Leave empty to use '300px'.", 'aquila')
         ),
         array(
           "type" => "textfield",
-          "heading" => __("Location", THEME_LANG),
+          "heading" => esc_html__("Location", 'aquila'),
           "param_name" => "location",
           "admin_label" => true,
-          "description" => __("Enter location", THEME_LANG)
+          "description" => esc_html__("Enter location", 'aquila')
         ),
         array(
             "type" => "dropdown",
-        	"heading" => __("Map type",THEME_LANG),
+        	"heading" => esc_html__("Map type",'aquila'),
         	"param_name" => "type",
             'std' => 'ROADMAP',
         	"value" => array(
-                __('Roadmap', THEME_LANG) => 'roadmap',
-                __('Satellite', THEME_LANG) => 'satellite',
-                __('Hybrid', THEME_LANG) => 'hybrid',
-                __('Terrain', THEME_LANG) => 'terrain',
+                esc_html__('Roadmap', 'aquila') => 'roadmap',
+                esc_html__('Satellite', 'aquila') => 'satellite',
+                esc_html__('Hybrid', 'aquila') => 'hybrid',
+                esc_html__('Terrain', 'aquila') => 'terrain',
         	), 
             "admin_label" => true,            
-        	"description" => __('',THEME_LANG),
+        	"description" => esc_html__('','aquila'),
         ),
 
         array(
             "type" => "dropdown",
-            "heading" => __("Map stype",THEME_LANG),
+            "heading" => esc_html__("Map stype",'aquila'),
             "param_name" => "stype",
             'std' => '',
             "value" => array(
-                __('None', THEME_LANG) => '',
-                __('Simple & Light', THEME_LANG) => '1',
-                __('Light Grey & Blue', THEME_LANG) => '2',
-                __('Dark', THEME_LANG) => '3',
-                __('Pinkish Gray', THEME_LANG) => '4',
-                __('Elevation', THEME_LANG) => '5',
-                __('Mostly Grayscale', THEME_LANG) => '6',
-                __('Red Hat Antwerp', THEME_LANG) => '7',
-                __('Shades of Grey', THEME_LANG) => '8',
+                esc_html__('None', 'aquila') => '',
+                esc_html__('Simple & Light', 'aquila') => '1',
+                esc_html__('Light Grey & Blue', 'aquila') => '2',
+                esc_html__('Dark', 'aquila') => '3',
+                esc_html__('Pinkish Gray', 'aquila') => '4',
+                esc_html__('Elevation', 'aquila') => '5',
+                esc_html__('Mostly Grayscale', 'aquila') => '6',
+                esc_html__('Red Hat Antwerp', 'aquila') => '7',
+                esc_html__('Shades of Grey', 'aquila') => '8',
             ),
             "admin_label" => true,
-            "description" => __('',THEME_LANG),
+            "description" => esc_html__('','aquila'),
         ),
 
         array(
             "type" => "checkbox",
-        	"heading" => __("",THEME_LANG),
+        	"heading" => esc_html__("",'aquila'),
         	"param_name" => "scrollwheel",
-        	'value' => array( __( 'Disable map zoom on mouse wheel scroll' ) => true ),
-        	"description" => __('',THEME_LANG),
+        	'value' => array( esc_html__( 'Disable map zoom on mouse wheel scroll' ) => true ),
+        	"description" => esc_html__('','aquila'),
         ),
         array(
             "type" => "dropdown",
-        	"heading" => __("Map zoom",THEME_LANG),
+        	"heading" => esc_html__("Map zoom",'aquila'),
         	"param_name" => "zoom",
             'std' => '17',
         	"value" => array(
@@ -135,34 +135,34 @@ vc_map( array(
                 '18' => '18', 
                 '19' => '19'
         	),
-        	"description" => __("1 is the smallest zoom level, 19 the greatest",THEME_LANG),
+        	"description" => esc_html__("1 is the smallest zoom level, 19 the greatest",'aquila'),
             "admin_label" => true,
         ),
         array(
             "type" => "attach_image",
-            "heading" => __( "Image marker", "js_composer" ),
+            "heading" => esc_html__( "Image marker", "js_composer" ),
             "param_name" => "image",
-            "description" => __( "Select image show", "js_composer" ),
+            "description" => esc_html__( "Select image show", "js_composer" ),
         ),
         array(
             "type" => "textarea_html",
-            "heading" => __("Content", THEME_LANG),
+            "heading" => esc_html__("Content", 'aquila'),
             "param_name" => "content",
-            "description" => __("", THEME_LANG),
+            "description" => esc_html__("", 'aquila'),
         ),
         array(
             "type" => "textfield",
-            "heading" => __( "Extra class", "js_composer" ),
+            "heading" => esc_html__( "Extra class", "js_composer" ),
             "param_name" => "el_class",
-            "description" => __( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
+            "description" => esc_html__( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
         ),
         
         array(
 			'type' => 'css_editor',
-			'heading' => __( 'Css', 'js_composer' ),
+			'heading' => esc_html__( 'Css', 'js_composer' ),
 			'param_name' => 'css',
-			// 'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
-			'group' => __( 'Design options', 'js_composer' )
+			// 'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
+			'group' => esc_html__( 'Design options', 'js_composer' )
 		),
     ),
 ));

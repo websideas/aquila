@@ -63,9 +63,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                 //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
                 'allow_sub_menu'       => false,
                 // Show the sections below the admin menu item or not
-                'menu_title'           => __( 'Theme Options', THEME_LANG ),
+                'menu_title'           => __( 'Theme Options', 'aquila' ),
                 
-                'page_title'           => $theme->get( 'Name' ).' '.__( 'Theme Options', THEME_LANG ),
+                'page_title'           => $theme->get( 'Name' ).' '.esc_html__( 'Theme Options', 'aquila' ),
                 // You will need to generate a Google API key to use this feature.
                 // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
                 // You will need to generate a Google API key to use this feature.
@@ -136,17 +136,17 @@ if ( ! class_exists( 'KT_config' ) ) {
             // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
             $this->args['share_icons'][] = array(
                 'url'   => '#',
-                'title' => __('Like us on Facebook', THEME_LANG),
+                'title' => esc_html__('Like us on Facebook', 'aquila'),
                 'icon'  => 'el-icon-facebook'
             );
             $this->args['share_icons'][] = array(
                 'url'   => '#',
-                'title' => __('Follow us on Twitter', THEME_LANG),
+                'title' => esc_html__('Follow us on Twitter', 'aquila'),
                 'icon'  => 'el-icon-twitter'
             );
             $this->args['share_icons'][] = array(
                 'url'   => '#',
-                'title' => __('Find us on LinkedIn', THEME_LANG),
+                'title' => esc_html__('Find us on LinkedIn', 'aquila'),
                 'icon'  => 'el-icon-linkedin'
             );
             
@@ -162,7 +162,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
 			$this->sections[] = array(
 				'id'			=> 'footer',
-				'title'			=> __( 'Footer', THEME_LANG ),
+				'title'			=> esc_html__( 'Footer', 'aquila' ),
 				'desc'			=> '',
 				'subsection' => true,
 				'fields'		=> array(
@@ -171,75 +171,75 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'backtotop',
                         'type'     => 'switch',
-                        'title'    => __( 'Back to top', THEME_LANG ),
+                        'title'    => esc_html__( 'Back to top', 'aquila' ),
                         'default'  => true,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
+                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
+                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
                     ),
 
                     array(
                         'id'       => 'footer_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Footer settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer',
                         'type'     => 'switch',
-                        'title'    => __( 'Footer enable', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer enable', 'aquila' ),
                         'default'  => true,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
+                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
+                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
                     ),
 
                     // Footer Top settings
                     array(
                         'id'       => 'footer_top_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer top settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Footer top settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_top',
                         'type'     => 'switch',
-                        'title'    => __( 'Footer top enable', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer top enable', 'aquila' ),
                         'default'  => true,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
+                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
+                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
                     ),
 
                     // Footer widgets settings
                     array(
                         'id'       => 'footer_widgets_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer widgets settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Footer widgets settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_widgets',
                         'type'     => 'switch',
-                        'title'    => __( 'Footer widgets enable', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer widgets enable', 'aquila' ),
                         'default'  => true,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
+                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
+                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
                     ),
 
                     array(
                         'id'       => 'footer_widgets_layout',
                         'type'     => 'image_select',
                         'compiler' => true,
-                        'title'    => __( 'Footer widgets layout', THEME_LANG ),
-                        'subtitle' => __( 'Select your footer widgets layout', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer widgets layout', 'aquila' ),
+                        'subtitle' => esc_html__( 'Select your footer widgets layout', 'aquila' ),
                         'options'  => array(
-                            '3-3-3-3' => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'footer/footer-1.png' ),
-                            '6-3-3' => array( 'alt' => __( 'Layout 2', THEME_LANG ), 'img' => FW_IMG . 'footer/footer-2.png' ),
-                            '3-3-6' => array( 'alt' => __( 'Layout 3', THEME_LANG ), 'img' => FW_IMG . 'footer/footer-3.png' ),
-                            '6-6' => array( 'alt' => __( 'Layout 4', THEME_LANG ), 'img' => FW_IMG . 'footer/footer-4.png' ),
-                            '4-4-4' => array( 'alt' => __( 'Layout 5', THEME_LANG ), 'img' => FW_IMG . 'footer/footer-5.png' ),
-                            '8-4' => array( 'alt' => __( 'Layout 6', THEME_LANG ), 'img' => FW_IMG . 'footer/footer-6.png' ),
-                            '4-8' => array( 'alt' => __( 'Layout 7', THEME_LANG ), 'img' => FW_IMG . 'footer/footer-7.png' ),
-                            '3-6-3' => array( 'alt' => __( 'Layout 8', THEME_LANG ), 'img' => FW_IMG . 'footer/footer-8.png' ),
-                            '12' => array( 'alt' => __( 'Layout 9', THEME_LANG ), 'img' => FW_IMG . 'footer/footer-9.png' ),
+                            '3-3-3-3' => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'footer/footer-1.png' ),
+                            '6-3-3' => array( 'alt' => esc_html__( 'Layout 2', 'aquila' ), 'img' => FW_IMG . 'footer/footer-2.png' ),
+                            '3-3-6' => array( 'alt' => esc_html__( 'Layout 3', 'aquila' ), 'img' => FW_IMG . 'footer/footer-3.png' ),
+                            '6-6' => array( 'alt' => esc_html__( 'Layout 4', 'aquila' ), 'img' => FW_IMG . 'footer/footer-4.png' ),
+                            '4-4-4' => array( 'alt' => esc_html__( 'Layout 5', 'aquila' ), 'img' => FW_IMG . 'footer/footer-5.png' ),
+                            '8-4' => array( 'alt' => esc_html__( 'Layout 6', 'aquila' ), 'img' => FW_IMG . 'footer/footer-6.png' ),
+                            '4-8' => array( 'alt' => esc_html__( 'Layout 7', 'aquila' ), 'img' => FW_IMG . 'footer/footer-7.png' ),
+                            '3-6-3' => array( 'alt' => esc_html__( 'Layout 8', 'aquila' ), 'img' => FW_IMG . 'footer/footer-8.png' ),
+                            '12' => array( 'alt' => esc_html__( 'Layout 9', 'aquila' ), 'img' => FW_IMG . 'footer/footer-9.png' ),
                         ),
                         'default'  => '3-3-3-3'
                     ),
@@ -248,40 +248,40 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_bottom_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer bottom settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Footer bottom settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_bottom',
                         'type'     => 'switch',
-                        'title'    => __( 'Footer bottom enable', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer bottom enable', 'aquila' ),
                         'default'  => false,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
+                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
+                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
                     ),
                     /* Footer copyright */
                     array(
                         'id'       => 'footer_copyright_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer copyright settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Footer copyright settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_copyright',
                         'type'     => 'switch',
-                        'title'    => __( 'Footer copyright enable', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer copyright enable', 'aquila' ),
                         'default'  => true,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
+                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
+                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
                     ),
                     array(
                         'id'       => 'footer_copyright_layout',
                         'type'     => 'select',
-                        'title'    => __( 'Footer copyright layout', THEME_LANG ),
-                        'subtitle'     => __( 'Select your preferred footer layout.', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer copyright layout', 'aquila' ),
+                        'subtitle'     => esc_html__( 'Select your preferred footer layout.', 'aquila' ),
                         'options'  => array(
-                            'centered' => __('Centered', THEME_LANG),
-                            'sides' => __('Sides', THEME_LANG )
+                            'centered' => esc_html__('Centered', 'aquila'),
+                            'sides' => esc_html__('Sides', 'aquila' )
                         ),
                         'default'  => 'centered',
                         'clear' => false
@@ -289,36 +289,36 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_copyright_left',
                         'type'     => 'select',
-                        'title'    => __( 'Footer copyright left', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer copyright left', 'aquila' ),
                         'options'  => array(
-                            '' => __('Empty', THEME_LANG ),
-                            'navigation' => __('Navigation', THEME_LANG ),
-                            'socials' => __('Socials', THEME_LANG ),
-                            'copyright' => __('Copyright', THEME_LANG ),
+                            '' => esc_html__('Empty', 'aquila' ),
+                            'navigation' => esc_html__('Navigation', 'aquila' ),
+                            'socials' => esc_html__('Socials', 'aquila' ),
+                            'copyright' => esc_html__('Copyright', 'aquila' ),
                         ),
                         'default'  => ''
                     ),
                     array(
                         'id'       => 'footer_copyright_right',
                         'type'     => 'select',
-                        'title'    => __( 'Footer copyright right', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer copyright right', 'aquila' ),
                         'options'  => array(
-                            '' => __('Empty', THEME_LANG ),
-                            'navigation' => __('Navigation', THEME_LANG ),
-                            'socials' => __('Socials', THEME_LANG ),
-                            'copyright' => __('Copyright', THEME_LANG ),
+                            '' => esc_html__('Empty', 'aquila' ),
+                            'navigation' => esc_html__('Navigation', 'aquila' ),
+                            'socials' => esc_html__('Socials', 'aquila' ),
+                            'copyright' => esc_html__('Copyright', 'aquila' ),
                         ),
                         'default'  => 'copyright'
                     ),
                     array(
                          'id'   => 'footer_socials',
                          'type' => 'kt_socials',
-                         'title'    => __( 'Select your socials', THEME_LANG ),
+                         'title'    => esc_html__( 'Select your socials', 'aquila' ),
                     ),
                     array(
                         'id'       => 'footer_copyright_text',
                         'type'     => 'editor',
-                        'title'    => __( 'Footer Copyright Text', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer Copyright Text', 'aquila' ),
                         'default'  => '<p style="margin-bottom: 38px;"><a href="'.esc_url( home_url( '/' )).'"><img src="'.THEME_IMG.'logo-light.png" alt="Wingman" /></a></p><p style="margin-bottom: 24px;"><img src="'.THEME_IMG.'payment.png" alt="payment" /></p>Copyright © 2015 - <a href="'.esc_url( home_url( '/' )).'">Wing Man</a> - All rights reserved. <br />Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a>'
                     ),
                 )
@@ -330,13 +330,13 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
             $this->sections[] = array(
 				'id'			=> 'styling_general',
-				'title'			=> __( 'General', THEME_LANG ),
+				'title'			=> esc_html__( 'General', 'aquila' ),
 				'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'styling_accent',
                         'type'     => 'color',
-                        'title'    => __( 'Main Color', THEME_LANG ),
+                        'title'    => esc_html__( 'Main Color', 'aquila' ),
                         'default'  => '#82c14f',
                         'transparent' => false,
                     ),
@@ -344,7 +344,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'styling_link',
                         'type'     => 'link_color',
-                        'title'    => __( 'Links Color', THEME_LANG ),
+                        'title'    => esc_html__( 'Links Color', 'aquila' ),
                         'output'   => array( 'a' ),
                         'default'  => array(
                             'regular' => '#82c14f',
@@ -360,7 +360,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 			 **/
             $this->sections[] = array(
 				'id'			=> 'styling_header',
-				'title'			=> __( 'Header', THEME_LANG ),
+				'title'			=> esc_html__( 'Header', 'aquila' ),
 				'subsection' => true,
                 'fields'		=> array(
 
@@ -378,15 +378,15 @@ if ( ! class_exists( 'KT_config' ) ) {
                         array(
                             'id'       => 'header_background',
                             'type'     => 'background',
-                            'title'    => __( 'Header background', THEME_LANG ),
-                            'subtitle' => __( 'Header with image, color, etc.', THEME_LANG ),
+                            'title'    => esc_html__( 'Header background', 'aquila' ),
+                            'subtitle' => esc_html__( 'Header with image, color, etc.', 'aquila' ),
                             'default'   => '',
                             'output'      => array( '.header-background' ),
                         ),
                         array(
                             'id'            => 'header_opacity',
                             'type'          => 'slider',
-                            'title'         => __( 'Background opacity', THEME_LANG ),
+                            'title'         => esc_html__( 'Background opacity', 'aquila' ),
                             'default'       => 1,
                             'min'           => 0,
                             'step'          => .1,
@@ -463,9 +463,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                 //Specify if the admin menu should appear or not. Options: menu or submenu (Under appearance only)
                 'allow_sub_menu' => true,
                 // Show the sections below the admin menu item or not
-                'menu_title' => __('Theme Options', THEME_LANG),
+                'menu_title' => esc_html__('Theme Options', 'aquila'),
 
-                'page_title' => $theme->get('Name') . ' ' . __('Theme Options', THEME_LANG),
+                'page_title' => $theme->get('Name') . ' ' . esc_html__('Theme Options', 'aquila'),
                 // You will need to generate a Google API key to use this feature.
                 // Please visit: https://developers.google.com/fonts/docs/developer_api#Auth
                 // You will need to generate a Google API key to use this feature.
@@ -536,25 +536,25 @@ if ( ! class_exists( 'KT_config' ) ) {
             // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
             $this->args['share_icons'][] = array(
                 'url' => 'https://www.facebook.com/kitethemes/',
-                'title' => __('Like us on Facebook', THEME_LANG),
+                'title' => esc_html__('Like us on Facebook', 'aquila'),
                 'icon' => 'el-icon-facebook'
             );
 
             $this->args['share_icons'][] = array(
                 'url' => 'http://themeforest.net/user/Kite-Themes/follow?ref=Kite-Themes',
-                'title' => __('Follow us on Themeforest', THEME_LANG),
+                'title' => esc_html__('Follow us on Themeforest', 'aquila'),
                 'icon' => 'fa fa-wordpress'
             );
 
             $this->args['share_icons'][] = array(
                 'url' => '#',
-                'title' => __('Get Email Newsletter', THEME_LANG),
+                'title' => esc_html__('Get Email Newsletter', 'aquila'),
                 'icon' => 'fa fa-envelope-o'
             );
 
             $this->args['share_icons'][] = array(
                 'url' => 'http://themeforest.net/user/kite-themes/portfolio',
-                'title' => __('Check out our works', THEME_LANG),
+                'title' => esc_html__('Check out our works', 'aquila'),
                 'icon' => 'fa fa-briefcase'
             );
         }
@@ -566,25 +566,25 @@ if ( ! class_exists( 'KT_config' ) ) {
 
             $this->sections[] = array(
                 'id' 	=> 'general',
-                'title'  => __( 'General', THEME_LANG ),
-                'desc'   => __( '', THEME_LANG ),
+                'title'  => esc_html__( 'General', 'aquila' ),
+                'desc'   => esc_html__( '', 'aquila' ),
                 'icon'	=> 'fa fa-cogs'
             );
 
             $this->sections[] = array(
                 'id' 	=> 'general_layout',
-                'title'  => __( 'General', THEME_LANG ),
-                'desc'   => __( '', THEME_LANG ),
+                'title'  => esc_html__( 'General', 'aquila' ),
+                'desc'   => esc_html__( '', 'aquila' ),
                 'subsection' => true,
                 'fields' => array(
                     array(
                         'id'       => 'layout',
                         'type'     => 'select',
-                        'title'    => __( 'Site boxed mod(?)', THEME_LANG ),
-                        'subtitle'     => __( "Please choose page layout", THEME_LANG ),
+                        'title'    => esc_html__( 'Site boxed mod(?)', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose page layout", 'aquila' ),
                         'options'  => array(
-                            'full' => __('Full width Layout', THEME_LANG),
-                            'boxed' => __('Boxed Layout', THEME_LANG),
+                            'full' => esc_html__('Full width Layout', 'aquila'),
+                            'boxed' => esc_html__('Boxed Layout', 'aquila'),
                         ),
                         'default'  => 'full',
                         'clear' => false
@@ -594,8 +594,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'media',
                         'url'      => true,
                         'compiler' => true,
-                        'title'    => __( 'Placeholder', THEME_LANG ),
-                        'subtitle'     => __( "Placeholder for none image", THEME_LANG ),
+                        'title'    => esc_html__( 'Placeholder', 'aquila' ),
+                        'subtitle'     => esc_html__( "Placeholder for none image", 'aquila' ),
                     ),
                 )
             );
@@ -604,14 +604,14 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'logos_favicon',
-                'title'			=> __( 'Logos', THEME_LANG ),
+                'title'			=> esc_html__( 'Logos', 'aquila' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'logos_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Logos settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Logos settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
@@ -619,15 +619,15 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'media',
                         'url'      => true,
                         'compiler' => true,
-                        'title'    => __( 'Logo', THEME_LANG ),
+                        'title'    => esc_html__( 'Logo', 'aquila' ),
                     ),
                     array(
                         'id'       => 'logo_retina',
                         'type'     => 'media',
                         'url'      => true,
                         'compiler' => true,
-                        'title'    => __( 'Logo (Retina Version @2x)', THEME_LANG ),
-                        'desc'     => __('Select an image file for the retina version of the logo. It should be exactly 2x the size of main logo.', THEME_LANG)
+                        'title'    => esc_html__( 'Logo (Retina Version @2x)', 'aquila' ),
+                        'desc'     => esc_html__('Select an image file for the retina version of the logo. It should be exactly 2x the size of main logo.', 'aquila')
                     ),
                 )
             );
@@ -638,7 +638,7 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'Header',
-                'title'			=> __( 'Header', THEME_LANG ),
+                'title'			=> esc_html__( 'Header', 'aquila' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
@@ -647,11 +647,11 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'header',
                         'type'     => 'image_select',
                         'compiler' => true,
-                        'title'    => __( 'Header layout', THEME_LANG ),
-                        'subtitle' => __( 'Please choose header layout', THEME_LANG ),
+                        'title'    => esc_html__( 'Header layout', 'aquila' ),
+                        'subtitle' => esc_html__( 'Please choose header layout', 'aquila' ),
                         'options'  => array(
-                            1 => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'header/header-v1.jpg' ),
-                            2 => array( 'alt' => __( 'Layout 2', THEME_LANG ), 'img' => FW_IMG . 'header/header-v2.jpg' ),
+                            1 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'header/header-v1.jpg' ),
+                            2 => array( 'alt' => esc_html__( 'Layout 2', 'aquila' ), 'img' => FW_IMG . 'header/header-v2.jpg' ),
                         ),
                         'default'  => 1
                     ),
@@ -662,19 +662,19 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'header_shadow',
                         'type' => 'switch',
-                        'title' => __('Header shadow', THEME_LANG),
+                        'title' => esc_html__('Header shadow', 'aquila'),
                         "default" => 1,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
+                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
+                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
                     ),
                     array(
                         'id' => 'header_search',
                         'type' => 'switch',
-                        'title' => __('Search Icon', THEME_LANG),
-                        'desc' => __('Enable the search Icon in the header.', THEME_LANG),
+                        'title' => esc_html__('Search Icon', 'aquila'),
+                        'desc' => esc_html__('Enable the search Icon in the header.', 'aquila'),
                         "default" => 1,
-                        'on'		=> __( 'Enabled', THEME_LANG ),
-                        'off'		=> __( 'Disabled', THEME_LANG ),
+                        'on'		=> esc_html__( 'Enabled', 'aquila' ),
+                        'off'		=> esc_html__( 'Disabled', 'aquila' ),
                     ),
 
                 )
@@ -684,7 +684,7 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id' => 'footer',
-                'title' => __('Footer', THEME_LANG),
+                'title' => esc_html__('Footer', 'aquila'),
                 'desc' => '',
                 'subsection' => true,
                 'fields' => array(
@@ -693,75 +693,75 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'backtotop',
                         'type' => 'switch',
-                        'title' => __('Back to top', THEME_LANG),
+                        'title' => esc_html__('Back to top', 'aquila'),
                         'default' => true,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' => __('Disabled', THEME_LANG),
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' => esc_html__('Disabled', 'aquila'),
                     ),
 
                     array(
                         'id' => 'footer_heading',
                         'type' => 'raw',
-                        'content' => '<div class="section-heading">' . __('Footer settings', THEME_LANG) . '</div>',
+                        'content' => '<div class="section-heading">' . esc_html__('Footer settings', 'aquila') . '</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'footer',
                         'type' => 'switch',
-                        'title' => __('Footer enable', THEME_LANG),
+                        'title' => esc_html__('Footer enable', 'aquila'),
                         'default' => true,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' => __('Disabled', THEME_LANG),
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' => esc_html__('Disabled', 'aquila'),
                     ),
 
                     // Footer Top settings
                     array(
                         'id' => 'footer_top_heading',
                         'type' => 'raw',
-                        'content' => '<div class="section-heading">' . __('Footer top settings', THEME_LANG) . '</div>',
+                        'content' => '<div class="section-heading">' . esc_html__('Footer top settings', 'aquila') . '</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'footer_top',
                         'type' => 'switch',
-                        'title' => __('Footer top enable', THEME_LANG),
+                        'title' => esc_html__('Footer top enable', 'aquila'),
                         'default' => true,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' => __('Disabled', THEME_LANG),
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' => esc_html__('Disabled', 'aquila'),
                     ),
 
                     // Footer widgets settings
                     array(
                         'id' => 'footer_widgets_heading',
                         'type' => 'raw',
-                        'content' => '<div class="section-heading">' . __('Footer widgets settings', THEME_LANG) . '</div>',
+                        'content' => '<div class="section-heading">' . esc_html__('Footer widgets settings', 'aquila') . '</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'footer_widgets',
                         'type' => 'switch',
-                        'title' => __('Footer widgets enable', THEME_LANG),
+                        'title' => esc_html__('Footer widgets enable', 'aquila'),
                         'default' => true,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' => __('Disabled', THEME_LANG),
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' => esc_html__('Disabled', 'aquila'),
                     ),
 
                     array(
                         'id' => 'footer_widgets_layout',
                         'type' => 'image_select',
                         'compiler' => true,
-                        'title' => __('Footer widgets layout', THEME_LANG),
-                        'subtitle' => __('Select your footer widgets layout', THEME_LANG),
+                        'title' => esc_html__('Footer widgets layout', 'aquila'),
+                        'subtitle' => esc_html__('Select your footer widgets layout', 'aquila'),
                         'options' => array(
-                            '3-3-3-3' => array('alt' => __('Layout 1', THEME_LANG), 'img' => FW_IMG . 'footer/footer-1.png'),
-                            '6-3-3' => array('alt' => __('Layout 2', THEME_LANG), 'img' => FW_IMG . 'footer/footer-2.png'),
-                            '3-3-6' => array('alt' => __('Layout 3', THEME_LANG), 'img' => FW_IMG . 'footer/footer-3.png'),
-                            '6-6' => array('alt' => __('Layout 4', THEME_LANG), 'img' => FW_IMG . 'footer/footer-4.png'),
-                            '4-4-4' => array('alt' => __('Layout 5', THEME_LANG), 'img' => FW_IMG . 'footer/footer-5.png'),
-                            '8-4' => array('alt' => __('Layout 6', THEME_LANG), 'img' => FW_IMG . 'footer/footer-6.png'),
-                            '4-8' => array('alt' => __('Layout 7', THEME_LANG), 'img' => FW_IMG . 'footer/footer-7.png'),
-                            '3-6-3' => array('alt' => __('Layout 8', THEME_LANG), 'img' => FW_IMG . 'footer/footer-8.png'),
-                            '12' => array('alt' => __('Layout 9', THEME_LANG), 'img' => FW_IMG . 'footer/footer-9.png'),
+                            '3-3-3-3' => array('alt' => esc_html__('Layout 1', 'aquila'), 'img' => FW_IMG . 'footer/footer-1.png'),
+                            '6-3-3' => array('alt' => esc_html__('Layout 2', 'aquila'), 'img' => FW_IMG . 'footer/footer-2.png'),
+                            '3-3-6' => array('alt' => esc_html__('Layout 3', 'aquila'), 'img' => FW_IMG . 'footer/footer-3.png'),
+                            '6-6' => array('alt' => esc_html__('Layout 4', 'aquila'), 'img' => FW_IMG . 'footer/footer-4.png'),
+                            '4-4-4' => array('alt' => esc_html__('Layout 5', 'aquila'), 'img' => FW_IMG . 'footer/footer-5.png'),
+                            '8-4' => array('alt' => esc_html__('Layout 6', 'aquila'), 'img' => FW_IMG . 'footer/footer-6.png'),
+                            '4-8' => array('alt' => esc_html__('Layout 7', 'aquila'), 'img' => FW_IMG . 'footer/footer-7.png'),
+                            '3-6-3' => array('alt' => esc_html__('Layout 8', 'aquila'), 'img' => FW_IMG . 'footer/footer-8.png'),
+                            '12' => array('alt' => esc_html__('Layout 9', 'aquila'), 'img' => FW_IMG . 'footer/footer-9.png'),
                         ),
                         'default' => '4-4-4'
                     ),
@@ -769,26 +769,26 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'footer_bottom_heading',
                         'type' => 'raw',
-                        'content' => '<div class="section-heading">' . __('Footer bottom settings', THEME_LANG) . '</div>',
+                        'content' => '<div class="section-heading">' . esc_html__('Footer bottom settings', 'aquila') . '</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'footer_bottom',
                         'type' => 'switch',
-                        'title' => __('Footer bottom enable', THEME_LANG),
+                        'title' => esc_html__('Footer bottom enable', 'aquila'),
                         'default' => true,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' => __('Disabled', THEME_LANG),
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' => esc_html__('Disabled', 'aquila'),
                     ),
                     array(
                         'id' => 'footer_bottom_layout',
                         'type' => 'image_select',
                         'compiler' => true,
-                        'title' => __('Footer bottom layout', THEME_LANG),
-                        'subtitle' => __('Select your footer bottom layout', THEME_LANG),
+                        'title' => esc_html__('Footer bottom layout', 'aquila'),
+                        'subtitle' => esc_html__('Select your footer bottom layout', 'aquila'),
                         'options' => array(
-                            '1' => array('alt' => __('Layout 1', THEME_LANG), 'img' => FW_IMG . 'footer/footer-bottom-1.png'),
-                            '2' => array('alt' => __('Layout 2', THEME_LANG), 'img' => FW_IMG . 'footer/footer-bottom-2.png'),
+                            '1' => array('alt' => esc_html__('Layout 1', 'aquila'), 'img' => FW_IMG . 'footer/footer-bottom-1.png'),
+                            '2' => array('alt' => esc_html__('Layout 2', 'aquila'), 'img' => FW_IMG . 'footer/footer-bottom-2.png'),
                         ),
                         'default' => '1'
                     ),
@@ -796,21 +796,21 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'footer_copyright_heading',
                         'type' => 'raw',
-                        'content' => '<div class="section-heading">' . __('Footer copyright settings', THEME_LANG) . '</div>',
+                        'content' => '<div class="section-heading">' . esc_html__('Footer copyright settings', 'aquila') . '</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'footer_copyright',
                         'type' => 'switch',
-                        'title' => __('Footer copyright enable', THEME_LANG),
+                        'title' => esc_html__('Footer copyright enable', 'aquila'),
                         'default' => true,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' => __('Disabled', THEME_LANG),
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' => esc_html__('Disabled', 'aquila'),
                     ),
                     array(
                         'id' => 'footer_copyright_text',
                         'type' => 'editor',
-                        'title' => __('Footer Copyright Text', THEME_LANG),
+                        'title' => esc_html__('Footer Copyright Text', 'aquila'),
                         'default' => '© Copyright Alitstudio 2015 .All Rights Reserved.'
                     ),
                 )
@@ -821,36 +821,36 @@ if ( ! class_exists( 'KT_config' ) ) {
              *
              */
             $this->sections[] = array(
-                'title' => __('Page Loader', THEME_LANG),
-                'desc' => __('Page Loader Options', THEME_LANG),
+                'title' => esc_html__('Page Loader', 'aquila'),
+                'desc' => esc_html__('Page Loader Options', 'aquila'),
                 'subsection' => true,
                 'fields' => array(
                     array(
                         'id' => 'use_page_loader',
                         'type' => 'switch',
-                        'title' => __('Use Page Loader?', THEME_LANG),
-                        'desc' => __('', THEME_LANG),
+                        'title' => esc_html__('Use Page Loader?', 'aquila'),
+                        'desc' => esc_html__('', 'aquila'),
                         'default' => 1,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
                     ),
                     array(
                         'id'       => 'layout_loader',
                         'type'     => 'image_select',
                         'compiler' => true,
-                        'title'    => __( 'Loader layout', THEME_LANG ),
-                        'subtitle' => __( 'Please choose loader layout', THEME_LANG ),
+                        'title'    => esc_html__( 'Loader layout', 'aquila' ),
+                        'subtitle' => esc_html__( 'Please choose loader layout', 'aquila' ),
                         'options'  => array(
-                            'style-1' => array( 'alt' => __( 'Style 1', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v1.png' ),
-                            'style-2' => array( 'alt' => __( 'Style 2', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v2.png' ),
-                            'style-3' => array( 'alt' => __( 'Style 2', THEME_LANG ), 'img' => FW_IMG . 'loader/loader_v3.png' ),
+                            'style-1' => array( 'alt' => esc_html__( 'Style 1', 'aquila' ), 'img' => FW_IMG . 'loader/loader_v1.png' ),
+                            'style-2' => array( 'alt' => esc_html__( 'Style 2', 'aquila' ), 'img' => FW_IMG . 'loader/loader_v2.png' ),
+                            'style-3' => array( 'alt' => esc_html__( 'Style 2', 'aquila' ), 'img' => FW_IMG . 'loader/loader_v3.png' ),
                         ),
                         'default'  => 'style-1',
                     ),
                     array(
                         'id'       => 'background_page_loader',
                         'type'     => 'background',
-                        'title'    => __( 'Background Color Page Loader', THEME_LANG ),
+                        'title'    => esc_html__( 'Background Color Page Loader', 'aquila' ),
                         'background-repeat'     => false,
                         'background-attachment' => false,
                         'background-position'   => false,
@@ -867,7 +867,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'color_first_loader',
                         'type'     => 'color',
-                        'title'    => __( 'Color Loader', THEME_LANG ),
+                        'title'    => esc_html__( 'Color Loader', 'aquila' ),
                         'default'  => '#82c14f',
                         'transparent' => false,
                         'required' => array( 'use_page_loader', 'equals', array( 1 ) ),
@@ -875,7 +875,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'color_second_loader',
                         'type'     => 'color',
-                        'title'    => __( 'Color Second Loader', THEME_LANG ),
+                        'title'    => esc_html__( 'Color Second Loader', 'aquila' ),
                         'default'  => '#cccccc',
                         'transparent' => false,
                         'required' => array( 'use_page_loader', 'equals', array( 1 ) ),
@@ -888,7 +888,7 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'styling',
-                'title'			=> __( 'Styling', THEME_LANG ),
+                'title'			=> esc_html__( 'Styling', 'aquila' ),
                 'desc'			=> '',
                 'icon'	=> 'dashicons dashicons-art',
             );
@@ -899,7 +899,7 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'            => 'styling-logo',
-                'title'         => __( 'Logo', THEME_LANG ),
+                'title'         => esc_html__( 'Logo', 'aquila' ),
                 'subsection' => true,
                 'fields'        => array(
 
@@ -908,7 +908,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'           => 'dimensions',
                         'units'          => array( 'px'),
                         'units_extended' => 'true',
-                        'title'          => __( 'Logo width', THEME_LANG ),
+                        'title'          => esc_html__( 'Logo width', 'aquila' ),
                         'height'         => false,
                         'default'        => array( 'width'  => 25, 'unit'   => 'px' ),
                         'output'   => array( '.site-branding .site-logo img' ),
@@ -920,7 +920,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array( '.site-branding' ),
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Logo margin spacing Option', THEME_LANG ),
+                        'title'    => esc_html__( 'Logo margin spacing Option', 'aquila' ),
                         'default'  => array(
                             'margin-top'    => '27px',
                             'margin-right'  => '65px',
@@ -937,7 +937,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'           => 'dimensions',
                         'units'          => array( 'px'),
                         'units_extended' => 'true',
-                        'title'          => __( 'Logo mobile width', THEME_LANG ),
+                        'title'          => esc_html__( 'Logo mobile width', 'aquila' ),
                         'height'         => false,
                         'default'        => array(
                             'width'  => 25,
@@ -951,7 +951,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'mode'     => 'margin',
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Logo mobile margin spacing Option', THEME_LANG ),
+                        'title'    => esc_html__( 'Logo mobile margin spacing Option', 'aquila' ),
                         'default'  => array(
                             'margin-top'    => '20px',
                             'margin-right'  => '0px',
@@ -971,26 +971,26 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'styling_sticky',
-                'title'			=> __( 'Sticky', THEME_LANG ),
+                'title'			=> esc_html__( 'Sticky', 'aquila' ),
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'fixed_header',
                         'type'     => 'button_set',
-                        'title'    => __( 'Sticky header', THEME_LANG ),
+                        'title'    => esc_html__( 'Sticky header', 'aquila' ),
                         'options'  => array(
-                            '1' => __('Disabled', THEME_LANG),
-                            '2' => __('Fixed Sticky', THEME_LANG),
-                            '3' => __('Slide Down', THEME_LANG),
+                            '1' => esc_html__('Disabled', 'aquila'),
+                            '2' => esc_html__('Fixed Sticky', 'aquila'),
+                            '3' => esc_html__('Slide Down', 'aquila'),
                         ),
                         'default'  => '3',
-                        'desc' => __('Choose your sticky effect.', THEME_LANG)
+                        'desc' => esc_html__('Choose your sticky effect.', 'aquila')
                     ),
                     array(
                         'id'             => 'logo_sticky_width',
                         'type'           => 'dimensions',
                         'units'          => array( 'px'),
-                        'title'          => __( 'Logo width', THEME_LANG ),
+                        'title'          => esc_html__( 'Logo width', 'aquila' ),
                         'height'         => false,
                         'default'        => array(
                             'width'  => '25',
@@ -1005,7 +1005,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'mode'     => 'margin',
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Logo sticky margin spacing Option', THEME_LANG ),
+                        'title'    => esc_html__( 'Logo sticky margin spacing Option', 'aquila' ),
                         'default'  => array(
                             'margin-top'    => '0',
                             'margin-right'  => '0',
@@ -1020,8 +1020,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'           => 'dimensions',
                         'units'          => array('px'),
                         'units_extended' => 'true',
-                        'title'          => __( 'Main Navigation Sticky Height', THEME_LANG ),
-                        'desc'          => __( 'Change height of main navigation sticky', THEME_LANG ),
+                        'title'          => esc_html__( 'Main Navigation Sticky Height', 'aquila' ),
+                        'desc'          => esc_html__( 'Change height of main navigation sticky', 'aquila' ),
                         'width'         => false,
                         'default'        => array(
                             'height'  => '60',
@@ -1036,8 +1036,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'header_sticky_background',
                         'type'     => 'background',
-                        'title'    => __( 'Header sticky background', THEME_LANG ),
-                        'desc' => __( 'Header sticky with image, color, etc.', THEME_LANG ),
+                        'title'    => esc_html__( 'Header sticky background', 'aquila' ),
+                        'desc' => esc_html__( 'Header sticky with image, color, etc.', 'aquila' ),
                         'background-repeat'     => false,
                         'background-attachment' => false,
                         'background-position'   => false,
@@ -1054,7 +1054,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'            => 'header_sticky_opacity',
                         'type'          => 'slider',
-                        'title'         => __( 'Sticky Background opacity', THEME_LANG ),
+                        'title'         => esc_html__( 'Sticky Background opacity', 'aquila' ),
                         'default'       => 1,
                         'min'           => 0,
                         'step'          => .1,
@@ -1073,20 +1073,20 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'styling_footer',
-                'title'			=> __( 'Footer', THEME_LANG ),
+                'title'			=> esc_html__( 'Footer', 'aquila' ),
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'footer_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Footer settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_background',
                         'type'     => 'background',
-                        'title'    => __( 'Footer Background', THEME_LANG ),
-                        'subtitle' => __( 'Footer Background with image, color, etc.', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer Background', 'aquila' ),
+                        'subtitle' => esc_html__( 'Footer Background with image, color, etc.', 'aquila' ),
                         'default'   => array( 'background-color' => '#222222' ),
                         'output'      => array( '#footer' ),
                     ),
@@ -1094,7 +1094,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_border',
                         'type'     => 'border',
-                        'title'    => __( 'Footer Border', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer Border', 'aquila' ),
                         'output'   => array( '#footer' ),
                         'all'      => false,
                         'left'     => false,
@@ -1107,14 +1107,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_top_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer top settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Footer top settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_top_background',
                         'type'     => 'background',
-                        'title'    => __( 'Footer top Background', THEME_LANG ),
-                        'subtitle' => __( 'Footer top Background with image, color, etc.', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer top Background', 'aquila' ),
+                        'subtitle' => esc_html__( 'Footer top Background with image, color, etc.', 'aquila' ),
                         'default'   => array( ),
                         'output'      => array( '#footer-top' ),
                     ),
@@ -1127,13 +1127,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array( '#footer-top' ),
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Footer top padding', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer top padding', 'aquila' ),
                         'default'  => array( )
                     ),
                     array(
                         'id'       => 'footer_top_border',
                         'type'     => 'border',
-                        'title'    => __( 'Footer top Border', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer top Border', 'aquila' ),
                         'output'   => array( '#footer-top' ),
                         'all'      => false,
                         'left'     => false,
@@ -1147,14 +1147,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_widgets_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer widgets settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Footer widgets settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_widgets_background',
                         'type'     => 'background',
-                        'title'    => __( 'Footer widgets Background', THEME_LANG ),
-                        'subtitle' => __( 'Footer widgets Background with image, color, etc.', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer widgets Background', 'aquila' ),
+                        'subtitle' => esc_html__( 'Footer widgets Background with image, color, etc.', 'aquila' ),
                         'default'   => array(  ),
                         'output'      => array( '#footer-area' ),
                     ),
@@ -1167,14 +1167,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array( '#footer-area' ),
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Footer widgets padding', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer widgets padding', 'aquila' ),
                         'default'  => array( )
                     ),
 
                     array(
                         'id'       => 'footer_widgets_border',
                         'type'     => 'border',
-                        'title'    => __( 'Footer widgets Border', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer widgets Border', 'aquila' ),
                         'output'   => array( '#footer-area' ),
                         'all'      => false,
                         'left'     => false,
@@ -1187,14 +1187,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_bottom_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer bottom settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Footer bottom settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'footer_bottom_background',
                         'type'     => 'background',
-                        'title'    => __( 'Footer bottom Background', THEME_LANG ),
-                        'subtitle' => __( 'Footer bottom Background with image, color, etc.', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer bottom Background', 'aquila' ),
+                        'subtitle' => esc_html__( 'Footer bottom Background with image, color, etc.', 'aquila' ),
                         'default'   => array(  ),
                         'output'      => array( '#footer-bottom' ),
                     ),
@@ -1207,14 +1207,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array( '#footer-bottom.footer-bottom-2', '#footer-bottom.footer-bottom-1' ),
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Footer bottom padding', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer bottom padding', 'aquila' ),
                         'default'  => array( )
                     ),
 
                     array(
                         'id'       => 'footer_bottom_border',
                         'type'     => 'border',
-                        'title'    => __( 'Footer bottom Border', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer bottom Border', 'aquila' ),
                         'output'   => array( '#footer-bottom' ),
                         'all'      => false,
                         'left'     => false,
@@ -1227,7 +1227,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_copyright_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Footer copyright settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Footer copyright settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
 
@@ -1235,8 +1235,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'footer_copyright_background',
                         'type'     => 'background',
-                        'title'    => __( 'Footer Background', THEME_LANG ),
-                        'subtitle' => __( 'Footer Background with image, color, etc.', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer Background', 'aquila' ),
+                        'subtitle' => esc_html__( 'Footer Background with image, color, etc.', 'aquila' ),
                         'default'   => array( ),
                         'output'      => array( '#footer-copyright' ),
                     ),
@@ -1249,7 +1249,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array( '#footer-copyright' ),
                         'units'          => array( 'px' ),
                         'units_extended' => 'true',
-                        'title'    => __( 'Footer copyright padding', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer copyright padding', 'aquila' ),
                         'default'  => array( )
                     ),
                 )
@@ -1262,14 +1262,14 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'styling_navigation',
-                'title'			=> __( 'Main Navigation', THEME_LANG ),
+                'title'			=> esc_html__( 'Main Navigation', 'aquila' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'styling_navigation_general',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'General', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'General', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
@@ -1277,8 +1277,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'           => 'dimensions',
                         'units'          => array('px'),
                         'units_extended' => 'true',
-                        'title'          => __( 'Main Navigation Height', THEME_LANG ),
-                        'subtitle'          => __( 'Change height of main navigation', THEME_LANG ),
+                        'title'          => esc_html__( 'Main Navigation Height', 'aquila' ),
+                        'subtitle'          => esc_html__( 'Change height of main navigation', 'aquila' ),
                         'width'         => false,
                         'default'        => array(
                             'height'  => '80',
@@ -1301,7 +1301,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'navigation_box_background',
                         'type'     => 'background',
-                        'title'    => __( 'MegaMenu & Dropdown Box background', THEME_LANG ),
+                        'title'    => esc_html__( 'MegaMenu & Dropdown Box background', 'aquila' ),
                         'default'   => array(
                             'background-color'      => '#222222',
                         ),
@@ -1314,21 +1314,21 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'styling_navigation_general',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Top Level', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Top Level', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
 
                     array(
                         'id'            => 'navigation_space',
                         'type'          => 'slider',
-                        'title'         => __( 'Top Level space', THEME_LANG ),
+                        'title'         => esc_html__( 'Top Level space', 'aquila' ),
                         'default'       => 25,
                         'min'           => 0,
                         'step'          => 1,
                         'max'           => 50,
                         'resolution'    => 1,
                         'display_value' => 'text',
-                        'subtitle' => __( 'Margin left between top level.', THEME_LANG ),
+                        'subtitle' => esc_html__( 'Margin left between top level.', 'aquila' ),
                     ),
 
                     array(
@@ -1337,7 +1337,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array(
                             '#main-navigation > li > a'
                         ),
-                        'title'    => __( 'Top Level Color', THEME_LANG ),
+                        'title'    => esc_html__( 'Top Level Color', 'aquila' ),
                         'default'  => '#999999',
                         'transparent' => false
                     ),
@@ -1351,7 +1351,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li.current-menu-parent > a',
                             '#main-navigation > li.hovered > a',
                         ),
-                        'title'    => __( 'Top Level hover Color', THEME_LANG ),
+                        'title'    => esc_html__( 'Top Level hover Color', 'aquila' ),
                         'default'  => '#22dcce',
                         'transparent' => false
                     ),
@@ -1360,7 +1360,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'styling_navigation_dropdown',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Drop down', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Drop down', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
@@ -1368,8 +1368,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'           => 'dimensions',
                         'units'          => array('px'),
                         'units_extended' => 'true',
-                        'title'          => __( 'Dropdown width', THEME_LANG ),
-                        'subtitle'          => __( 'Change width of Dropdown', THEME_LANG ),
+                        'title'          => esc_html__( 'Dropdown width', 'aquila' ),
+                        'subtitle'          => esc_html__( 'Change width of Dropdown', 'aquila' ),
                         'height'         => false,
                         'default'        => array( 'width'  => 345, 'height' => 100 ),
                         'output'   => array( '#main-navigation > li ul.sub-menu-dropdown'),
@@ -1377,7 +1377,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'dropdown_background',
                         'type'     => 'background',
-                        'title'    => __( 'Dropdown Background Color', THEME_LANG ),
+                        'title'    => esc_html__( 'Dropdown Background Color', 'aquila' ),
                         'default'  => array(
                             'background-color'      => '',
                         ),
@@ -1396,7 +1396,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'dropdown_background_hover',
                         'type'     => 'background',
-                        'title'    => __( 'Dropdown Background Hover Color', THEME_LANG ),
+                        'title'    => esc_html__( 'Dropdown Background Hover Color', 'aquila' ),
                         'default'  => array(
                             'background-color'      => '',
                         ),
@@ -1421,7 +1421,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-nav-tool .kt-wpml-languages ul li > a',
                             '#main-navigation > li ul.sub-menu-dropdown > li > a',
                         ),
-                        'title'    => __( 'Dropdown Text Color', THEME_LANG ),
+                        'title'    => esc_html__( 'Dropdown Text Color', 'aquila' ),
                         'default'  => '#999999',
                         'transparent' => false
                     ),
@@ -1436,7 +1436,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li ul.sub-menu-dropdown > li:hover > a',
                             '#main-navigation > li ul.sub-menu-dropdown > li > a:hover',
                         ),
-                        'title'    => __( 'Dropdown Text Hover Color', THEME_LANG ),
+                        'title'    => esc_html__( 'Dropdown Text Hover Color', 'aquila' ),
                         'default'  => '#22dcce',
                         'transparent' => false
                     ),
@@ -1444,7 +1444,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'dropdown_border',
                         'type'     => 'border',
-                        'title'    => esc_html__( 'DropDown Border', THEME_LANG ),
+                        'title'    => esc_html__( 'DropDown Border', 'aquila' ),
                         'output'   => array( '#main-navigation > li ul.sub-menu-dropdown li' ),
                         'all'      => false,
                         'left'     => false,
@@ -1460,14 +1460,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'styling_navigation_mega',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Mega', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Mega', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
 
                     array(
                         'id'       => 'megamenu_border',
                         'type'     => 'color',
-                        'title'    => __( 'MegaMenu Border color', THEME_LANG ),
+                        'title'    => esc_html__( 'MegaMenu Border color', 'aquila' ),
                         'default'  => '#333333',
                         'transparent' => false
                     ),
@@ -1479,7 +1479,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span',
                             '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li .widget-title',
                         ),
-                        'title'    => __( 'MegaMenu Title color', THEME_LANG ),
+                        'title'    => esc_html__( 'MegaMenu Title color', 'aquila' ),
                         'default'  => '#FFFFFF',
                         'transparent' => false
                     ),
@@ -1489,7 +1489,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array(
                             '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a:hover',
                         ),
-                        'title'    => __( 'MegaMenu Title Hover Color', THEME_LANG ),
+                        'title'    => esc_html__( 'MegaMenu Title Hover Color', 'aquila' ),
                         'default'  => '#22dcce',
                         'transparent' => false
                     ),
@@ -1499,7 +1499,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array(
                             '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu a'
                         ),
-                        'title'    => __( 'MegaMenu Text color', THEME_LANG ),
+                        'title'    => esc_html__( 'MegaMenu Text color', 'aquila' ),
                         'default'  => '#999999',
                         'transparent' => false
                     ),
@@ -1511,7 +1511,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu  > li.current-menu-item a:hover',
                             '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu a:hover',
                         ),
-                        'title'    => __( 'MegaMenu Text Hover color', THEME_LANG ),
+                        'title'    => esc_html__( 'MegaMenu Text Hover color', 'aquila' ),
                         'default'  => '#22dcce',
                         'transparent' => false
                     ),
@@ -1533,14 +1533,14 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'styling_mobile_menu',
-                'title'			=> __( 'Mobile Menu', THEME_LANG ),
+                'title'			=> esc_html__( 'Mobile Menu', 'aquila' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'mobile_menu_background',
                         'type'     => 'background',
-                        'title'    => __( 'Background', THEME_LANG ),
+                        'title'    => esc_html__( 'Background', 'aquila' ),
                         'default'   => array(
                             'background-color'      => '#FFFFFF',
                         ),
@@ -1558,7 +1558,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array(
                             'ul.navigation-mobile > li > a'
                         ),
-                        'title'    => __( 'Top Level Color', THEME_LANG ),
+                        'title'    => esc_html__( 'Top Level Color', 'aquila' ),
                         'default'  => '#282828',
                         'transparent' => false
                     ),
@@ -1569,14 +1569,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'ul.navigation-mobile > li:hover > a',
                             'ul.navigation-mobile > li > a:hover'
                         ),
-                        'title'    => __( 'Top Level hover Color', THEME_LANG ),
+                        'title'    => esc_html__( 'Top Level hover Color', 'aquila' ),
                         'default'  => '#282828',
                         'transparent' => false
                     ),
                     array(
                         'id'       => 'mobile_menu_background',
                         'type'     => 'background',
-                        'title'    => __( 'Top Level Background Color', THEME_LANG ),
+                        'title'    => esc_html__( 'Top Level Background Color', 'aquila' ),
                         'default'  => array(
                             'background-color'      => '#FFFFFF',
                         ),
@@ -1595,7 +1595,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'mobile_menu_background_hover',
                         'type'     => 'background',
-                        'title'    => __( 'Top Level Hover Color', THEME_LANG ),
+                        'title'    => esc_html__( 'Top Level Hover Color', 'aquila' ),
                         'default'  => array(
                             'background-color'      => '#F5F5F5',
                         ),
@@ -1624,7 +1624,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'ul.navigation-mobile > li .sub-menu-dropdown > li > a',
                             'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li > a',
                         ),
-                        'title'    => __( 'Text color', THEME_LANG ),
+                        'title'    => esc_html__( 'Text color', 'aquila' ),
                         'default'  => '#282828',
                         'transparent' => false
                     ),
@@ -1636,7 +1636,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'ul.navigation-mobile > li .sub-menu-dropdown > li > a:hover',
                             'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li > a:hover',
                         ),
-                        'title'    => __( 'Text Hover color', THEME_LANG ),
+                        'title'    => esc_html__( 'Text Hover color', 'aquila' ),
                         'default'  => '#82c14f',
                         'transparent' => false
                     ),
@@ -1652,7 +1652,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > span',
                             'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li .widget-title',
                         ),
-                        'title'    => __( 'MegaMenu Title color', THEME_LANG ),
+                        'title'    => esc_html__( 'MegaMenu Title color', 'aquila' ),
                         'default'  => '#282828',
                         'transparent' => false
                     ),
@@ -1662,7 +1662,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array(
                             'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a:hover',
                         ),
-                        'title'    => __( 'MegaMenu Title Hover Color', THEME_LANG ),
+                        'title'    => esc_html__( 'MegaMenu Title Hover Color', 'aquila' ),
                         'default'  => '#82c14f',
                         'transparent' => false
                     ),
@@ -1682,7 +1682,7 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'typography',
-                'title'			=> __( 'Typography', THEME_LANG ),
+                'title'			=> esc_html__( 'Typography', 'aquila' ),
                 'desc'			=> '',
                 'icon_class'	=> 'fa fa-font',
             );
@@ -1693,14 +1693,14 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'typography_general',
-                'title'			=> __( 'General', THEME_LANG ),
+                'title'			=> esc_html__( 'General', 'aquila' ),
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'typography_body',
                         'type'     => 'typography',
-                        'title'    => __( 'Body Font', THEME_LANG ),
-                        'subtitle' => __( 'Specify the body font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Body Font', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the body font properties.', 'aquila' ),
                         'text-align' => false,
                         'letter-spacing'  => true,
                         'output'      => array(
@@ -1710,8 +1710,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_pragraph',
                         'type'     => 'typography',
-                        'title'    => __( 'Pragraph', THEME_LANG ),
-                        'subtitle' => __( 'Specify the pragraph font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Pragraph', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the pragraph font properties.', 'aquila' ),
                         'output'   => array( 'p' ),
                         'default'  => array( ),
                         'color'    => false,
@@ -1720,8 +1720,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_button',
                         'type'     => 'typography',
-                        'title'    => __( 'Button', THEME_LANG ),
-                        'subtitle' => __( 'Specify the button font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Button', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the button font properties.', 'aquila' ),
                         'output'   => array(
                             '.button',
                             '.wpcf7-submit',
@@ -1738,14 +1738,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Typography Heading settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Typography Heading settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'typography_heading1',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading 1', THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 1 font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Heading 1', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the heading 1 font properties.', 'aquila' ),
                         'letter-spacing'  => true,
                         'text-transform' => true,
                         'text-align' => false,
@@ -1755,8 +1755,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_heading2',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading 2', THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 2 font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Heading 2', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the heading 2 font properties.', 'aquila' ),
                         'letter-spacing'  => true,
                         'output'      => array( 'h2', '.h2' ),
                         'text-transform' => true,
@@ -1766,8 +1766,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_heading3',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading 3', THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 3 font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Heading 3', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the heading 3 font properties.', 'aquila' ),
                         'letter-spacing'  => true,
                         'output'      => array( 'h3', '.h3' ),
                         'text-transform' => true,
@@ -1777,8 +1777,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_heading4',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading 4', THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 4 font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Heading 4', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the heading 4 font properties.', 'aquila' ),
                         'letter-spacing'  => true,
                         'output'      => array( 'h4', '.h4' ),
                         'text-transform' => true,
@@ -1788,8 +1788,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_heading5',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading 5', THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 5 font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Heading 5', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the heading 5 font properties.', 'aquila' ),
                         'letter-spacing'  => true,
                         'output'      => array( 'h5', '.h5' ),
                         'text-transform' => true,
@@ -1799,8 +1799,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_heading6',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading 6', THEME_LANG ),
-                        'subtitle' => __( 'Specify the heading 6 font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Heading 6', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the heading 6 font properties.', 'aquila' ),
                         'letter-spacing'  => true,
                         'output'      => array( 'h6', '.h6' ),
                         'text-transform' => true,
@@ -1816,21 +1816,21 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'            => 'typography_footer',
-                'title'         => __( 'Footer', THEME_LANG ),
+                'title'         => esc_html__( 'Footer', 'aquila' ),
                 'desc'          => '',
                 'subsection'    => true,
                 'fields'        => array(
                     array(
                         'id'       => 'typography_footer_top_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Typography Footer top settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Typography Footer top settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'typography_footer_top',
                         'type'     => 'typography',
-                        'title'    => __( 'Footer top', THEME_LANG ),
-                        'subtitle' => __( 'Specify the footer top font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer top', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the footer top font properties.', 'aquila' ),
                         'google'   => true,
                         'text-align'      => false,
                         'output'      => array( '#footer-top' ),
@@ -1844,14 +1844,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_footer_widgets_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Typography Footer widgets settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Typography Footer widgets settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'typography_footer_widgets',
                         'type'     => 'typography',
-                        'title'    => __( 'Footer widgets', THEME_LANG ),
-                        'subtitle' => __( 'Specify the footer widgets font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer widgets', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the footer widgets font properties.', 'aquila' ),
                         'google'   => true,
                         'text-align'      => false,
                         'output'      => array( '#footer-area' ),
@@ -1865,8 +1865,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_footer_widgets_title',
                         'type'     => 'typography',
-                        'title'    => __( 'Footer widgets title', THEME_LANG ),
-                        'subtitle' => __( 'Specify the footer widgets title font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer widgets title', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the footer widgets title font properties.', 'aquila' ),
                         'letter-spacing'  => true,
                         'text-align'      => true,
                         'text-transform' => true,
@@ -1876,7 +1876,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_footer_widgets_link',
                         'type'     => 'link_color',
-                        'title'    => __( 'Footer widgets Links Color', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer widgets Links Color', 'aquila' ),
                         'output'      => array( '#footer-area a' ),
                         'default'  => array(
                             'regular' => '#ffffff',
@@ -1888,13 +1888,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_footer_copyright_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Typography Footer Bottom settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Typography Footer Bottom settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'typography_footer_bottom_link',
                         'type'     => 'link_color',
-                        'title'    => __( 'Footer Bottom Links Color', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer Bottom Links Color', 'aquila' ),
                         'output'      => array( '#footer-bottom a', '#footer-bottom button' ),
                         'default'  => array(
                             'regular' => '#ffffff',
@@ -1905,8 +1905,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_footer_bottom',
                         'type'     => 'typography',
-                        'title'    => __( 'Footer Bottom', THEME_LANG ),
-                        'subtitle' => __( 'Specify the footer font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer Bottom', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the footer font properties.', 'aquila' ),
                         'text-align'      => false,
                         'output'      => array( '#footer-bottom' ),
                         'default'  => array(
@@ -1920,13 +1920,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_footer_copyright_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Typography Footer copyright settings', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Typography Footer copyright settings', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'typography_footer_copyright_link',
                         'type'     => 'link_color',
-                        'title'    => __( 'Footer Copyright Links Color', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer Copyright Links Color', 'aquila' ),
                         'output'      => array( '#footer-copyright a' ),
                         'default'  => array(
                             'regular' => '#999999',
@@ -1937,8 +1937,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_footer_copyright',
                         'type'     => 'typography',
-                        'title'    => __( 'Footer copyright', THEME_LANG ),
-                        'subtitle' => __( 'Specify the footer font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Footer copyright', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the footer font properties.', 'aquila' ),
                         'text-align'      => false,
                         'output'      => array( '#footer-copyright' ),
                         'default'  => array(
@@ -1958,15 +1958,15 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'typography_header',
-                'title'			=> __( 'Header', THEME_LANG ),
+                'title'			=> esc_html__( 'Header', 'aquila' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'typography_header_content',
                         'type'     => 'typography',
-                        'title'    => __( 'Header', THEME_LANG ),
-                        'subtitle' => __( 'Specify the header title font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Header', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the header title font properties.', 'aquila' ),
                         'google'   => true,
                         'text-align' => false,
                         'output'      => array( '#header' )
@@ -1979,15 +1979,15 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'typography_sidebar',
-                'title'			=> __( 'Sidebar', THEME_LANG ),
+                'title'			=> esc_html__( 'Sidebar', 'aquila' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'typography_sidebar',
                         'type'     => 'typography',
-                        'title'    => __( 'Sidebar title', THEME_LANG ),
-                        'subtitle' => __( 'Specify the sidebar title font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Sidebar title', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the sidebar title font properties.', 'aquila' ),
                         'letter-spacing'  => true,
                         'text-transform' => true,
                         'output'      => array(
@@ -2001,8 +2001,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_sidebar_content',
                         'type'     => 'typography',
-                        'title'    => __( 'Sidebar text', THEME_LANG ),
-                        'subtitle' => __( 'Specify the sidebar title font properties.', THEME_LANG ),
+                        'title'    => esc_html__( 'Sidebar text', 'aquila' ),
+                        'subtitle' => esc_html__( 'Specify the sidebar title font properties.', 'aquila' ),
                         'text-algin' => true,
                         'output'      => array( '.sidebar', '.wpb_widgetised_column' ),
                         'default'  => array(
@@ -2018,14 +2018,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 
             $this->sections[] = array(
                 'id'			=> 'typography_navigation',
-                'title'			=> __( 'Main Navigation', THEME_LANG ),
+                'title'			=> esc_html__( 'Main Navigation', 'aquila' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'typography-navigation_top',
                         'type'     => 'typography',
-                        'title'    => __( 'Top Menu Level', THEME_LANG ),
+                        'title'    => esc_html__( 'Top Menu Level', 'aquila' ),
                         'letter-spacing'  => true,
                         'text-align'      => false,
                         'color'           => false,
@@ -2044,13 +2044,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_navigation_dropdown',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Dropdown menu', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Dropdown menu', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'typography_navigation_second',
                         'type'     => 'typography',
-                        'title'    => __( 'Second Menu Level', THEME_LANG ),
+                        'title'    => esc_html__( 'Second Menu Level', 'aquila' ),
                         'letter-spacing'  => true,
                         'text-align'      => false,
                         'color'           => false,
@@ -2066,13 +2066,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_navigation_mega',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Mega menu', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Mega menu', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'typography_navigation_heading',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading title', THEME_LANG ),
+                        'title'    => esc_html__( 'Heading title', 'aquila' ),
                         'letter-spacing'  => true,
                         'text-align'      => false,
                         'color'           => false,
@@ -2092,7 +2092,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_navigation_mega_link',
                         'type'     => 'typography',
-                        'title'    => __( 'Mega menu', THEME_LANG ),
+                        'title'    => esc_html__( 'Mega menu', 'aquila' ),
                         'google'   => true,
                         'text-align'      => false,
                         'color'           => false,
@@ -2114,14 +2114,14 @@ if ( ! class_exists( 'KT_config' ) ) {
 
             $this->sections[] = array(
                 'id'			=> 'typography_mobile_navigation',
-                'title'			=> __( 'Mobile Navigation', THEME_LANG ),
+                'title'			=> esc_html__( 'Mobile Navigation', 'aquila' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'typography_mobile_navigation_top',
                         'type'     => 'typography',
-                        'title'    => __( 'Top Menu Level', THEME_LANG ),
+                        'title'    => esc_html__( 'Top Menu Level', 'aquila' ),
                         'letter-spacing'  => true,
                         'text-align'      => false,
                         'color'           => false,
@@ -2139,7 +2139,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_mobile_navigation_second',
                         'type'     => 'typography',
-                        'title'    => __( 'Sub Menu Level', THEME_LANG ),
+                        'title'    => esc_html__( 'Sub Menu Level', 'aquila' ),
                         'letter-spacing'  => true,
                         'text-align'      => false,
                         'color'           => false,
@@ -2153,7 +2153,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'typography_mobile_navigation_heading',
                         'type'     => 'typography',
-                        'title'    => __( 'Heading title', THEME_LANG ),
+                        'title'    => esc_html__( 'Heading title', 'aquila' ),
                         'letter-spacing'  => true,
                         'text-align'      => false,
                         'color'           => false,
@@ -2177,28 +2177,28 @@ if ( ! class_exists( 'KT_config' ) ) {
              *
              */
             $this->sections[] = array(
-                'title' => __('Page', THEME_LANG),
-                'desc' => __('General Page Options', THEME_LANG),
+                'title' => esc_html__('Page', 'aquila'),
+                'desc' => esc_html__('General Page Options', 'aquila'),
                 'icon' => 'fa fa-suitcase',
                 'fields' => array(
                     array(
                         'id' => 'show_page_header',
                         'type' => 'switch',
-                        'title' => __('Show Page header', THEME_LANG),
-                        'desc' => __('Show page header or?.', THEME_LANG),
+                        'title' => esc_html__('Show Page header', 'aquila'),
+                        'desc' => esc_html__('Show page header or?.', 'aquila'),
                         "default" => 1,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
                     ),
                     array(
                         'id'       => 'page_sidebar',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar configuration', THEME_LANG ),
-                        'subtitle'     => __( "Please choose archive page ", THEME_LANG ),
+                        'title'    => esc_html__( 'Sidebar configuration', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose archive page ", 'aquila' ),
                         'options'  => array(
-                            '' => __('No sidebars', THEME_LANG),
-                            'left' => __('Left Sidebar', THEME_LANG),
-                            'right' => __('Right Layout', THEME_LANG)
+                            '' => esc_html__('No sidebars', 'aquila'),
+                            'left' => esc_html__('Left Sidebar', 'aquila'),
+                            'right' => esc_html__('Right Layout', 'aquila')
                         ),
                         'default'  => 'right',
                         'clear' => false
@@ -2206,8 +2206,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'page_sidebar_left',
                         'type' => 'select',
-                        'title'    => __( 'Sidebar left area', THEME_LANG ),
-                        'subtitle'     => __( "Please choose default layout", THEME_LANG ),
+                        'title'    => esc_html__( 'Sidebar left area', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose default layout", 'aquila' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('page_sidebar','equals','left')
@@ -2217,8 +2217,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'page_sidebar_right',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar right area', THEME_LANG ),
-                        'subtitle'     => __( "Please choose page layout", THEME_LANG ),
+                        'title'    => esc_html__( 'Sidebar right area', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose page layout", 'aquila' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('page_sidebar','equals','right')
@@ -2228,11 +2228,11 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'show_page_comment',
                         'type' => 'switch',
-                        'title' => __('Show comments on page ?', THEME_LANG),
-                        'desc' => __('Show or hide the readmore button.', THEME_LANG),
+                        'title' => esc_html__('Show comments on page ?', 'aquila'),
+                        'desc' => esc_html__('Show or hide the readmore button.', 'aquila'),
                         "default" => 1,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
                     ),
 
                 )
@@ -2243,9 +2243,9 @@ if ( ! class_exists( 'KT_config' ) ) {
              *
              */
             $this->sections[] = array(
-                'title' => __('Blog', THEME_LANG),
+                'title' => esc_html__('Blog', 'aquila'),
                 'icon' => 'fa fa-pencil',
-                'desc' => __('General Blog Options', THEME_LANG)
+                'desc' => esc_html__('General Blog Options', 'aquila')
             );
 
             /**
@@ -2253,34 +2253,34 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'            => 'archive_section',
-                'title'         => __( 'Archive', THEME_LANG ),
+                'title'         => esc_html__( 'Archive', 'aquila' ),
                 'desc'          => 'Archive post settings',
                 'subsection' => true,
                 'fields'        => array(
                     array(
                         'id'       => 'archive_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Archive post general', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Archive post general', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'archive_page_header',
                         'type' => 'switch',
-                        'title' => __('Show Page header', THEME_LANG),
-                        'desc' => __('Show page header or?.', THEME_LANG),
+                        'title' => esc_html__('Show Page header', 'aquila'),
+                        'desc' => esc_html__('Show page header or?.', 'aquila'),
                         "default" => 1,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
                     ),
                     array(
                         'id'       => 'archive_sidebar',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar configuration', THEME_LANG ),
-                        'subtitle'     => __( "Please choose archive page ", THEME_LANG ),
+                        'title'    => esc_html__( 'Sidebar configuration', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose archive page ", 'aquila' ),
                         'options'  => array(
-                            'full' => __('No sidebars', THEME_LANG),
-                            'left' => __('Left Sidebar', THEME_LANG),
-                            'right' => __('Right Layout', THEME_LANG)
+                            'full' => esc_html__('No sidebars', 'aquila'),
+                            'left' => esc_html__('Left Sidebar', 'aquila'),
+                            'right' => esc_html__('Right Layout', 'aquila')
                         ),
                         'default'  => 'right',
                         'clear' => false
@@ -2288,8 +2288,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'archive_sidebar_left',
                         'type' => 'select',
-                        'title'    => __( 'Sidebar left area', THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
+                        'title'    => esc_html__( 'Sidebar left area', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('archive_sidebar','equals','left'),
@@ -2298,8 +2298,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'archive_sidebar_right',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar right area', THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
+                        'title'    => esc_html__( 'Sidebar right area', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('archive_sidebar','equals','right'),
@@ -2312,34 +2312,34 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'archive_loop_style',
                         'type' => 'select',
-                        'title' => __('Loop Style', THEME_LANG),
+                        'title' => esc_html__('Loop Style', 'aquila'),
                         'desc' => '',
                         'options' => array(
-                            'list' => __( 'List', THEME_LANG ),
-                            'medium' => __( 'Medium', THEME_LANG ),
-                            'grid' => __( 'Grid', THEME_LANG ),
-                            'masonry' => __( 'Masonry', THEME_LANG ),
+                            'list' => esc_html__( 'List', 'aquila' ),
+                            'medium' => esc_html__( 'Medium', 'aquila' ),
+                            'grid' => esc_html__( 'Grid', 'aquila' ),
+                            'masonry' => esc_html__( 'Masonry', 'aquila' ),
                         ),
                         'default' => 'grid'
                     ),
                     array(
                         'id' => 'archive_first_featured',
                         'type' => 'switch',
-                        'title' => __('First featured', THEME_LANG),
-                        'desc' => __('Show First article featured or?.', THEME_LANG),
+                        'title' => esc_html__('First featured', 'aquila'),
+                        'desc' => esc_html__('Show First article featured or?.', 'aquila'),
                         "default" => 0,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
                     ),
                     array(
                         'id' => 'archive_columns',
                         'type' => 'select',
-                        'title' => __('Columns on desktop', THEME_LANG),
+                        'title' => esc_html__('Columns on desktop', 'aquila'),
                         'desc' => '',
                         'options' => array(
-                            '2' => __( '2 columns', 'js_composer' ) ,
-                            '3' => __( '3 columns', 'js_composer' ) ,
-                            '4' => __( '4 columns', 'js_composer' ) ,
+                            '2' => esc_html__( '2 columns', 'js_composer' ) ,
+                            '3' => esc_html__( '3 columns', 'js_composer' ) ,
+                            '4' => esc_html__( '4 columns', 'js_composer' ) ,
                         ),
                         'default' => '2',
                         'required' => array('archive_loop_style','equals', array( 'grid', 'masonry' ) ),
@@ -2351,25 +2351,25 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'archive_posts_per_page',
                         'type' => 'text',
-                        'title' => __('Posts per page', THEME_LANG),
-                        'desc' => __("Insert the total number of pages.", THEME_LANG),
+                        'title' => esc_html__('Posts per page', 'aquila'),
+                        'desc' => esc_html__("Insert the total number of pages.", 'aquila'),
                         'default' => 14,
                     ),
                     array(
                         'id' => 'archive_excerpt_length',
                         'type' => 'text',
-                        'title' => __('Excerpt Length', THEME_LANG),
-                        'desc' => __("Insert the number of words you want to show in the post excerpts.", THEME_LANG),
+                        'title' => esc_html__('Excerpt Length', 'aquila'),
+                        'desc' => esc_html__("Insert the number of words you want to show in the post excerpts.", 'aquila'),
                         'default' => 35,
                     ),
                     array(
                         'id' => 'archive_pagination',
                         'type' => 'select',
-                        'title' => __('Pagination Type', THEME_LANG),
-                        'desc' => __('Select the pagination type.', THEME_LANG),
+                        'title' => esc_html__('Pagination Type', 'aquila'),
+                        'desc' => esc_html__('Select the pagination type.', 'aquila'),
                         'options' => array(
-                            'normal' => __( 'Normal pagination', THEME_LANG ),
-                            'button' => __( 'Next - Previous button', THEME_LANG ),
+                            'normal' => esc_html__( 'Normal pagination', 'aquila' ),
+                            'button' => esc_html__( 'Next - Previous button', 'aquila' ),
                         ),
                         'default' => 'normal'
                     ),
@@ -2382,34 +2382,34 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'            => 'author_section',
-                'title'         => __( 'Author', THEME_LANG ),
+                'title'         => esc_html__( 'Author', 'aquila' ),
                 'desc'          => 'Author post settings',
                 'subsection' => true,
                 'fields'        => array(
                     array(
                         'id'       => 'author_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Author post general', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Author post general', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'author_page_header',
                         'type' => 'switch',
-                        'title' => __('Show Page header', THEME_LANG),
-                        'desc' => __('Show page header or?.', THEME_LANG),
+                        'title' => esc_html__('Show Page header', 'aquila'),
+                        'desc' => esc_html__('Show page header or?.', 'aquila'),
                         "default" => 1,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
                     ),
                     array(
                         'id'       => 'author_sidebar',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar configuration', THEME_LANG ),
-                        'subtitle'     => __( "Please choose archive page ", THEME_LANG ),
+                        'title'    => esc_html__( 'Sidebar configuration', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose archive page ", 'aquila' ),
                         'options'  => array(
-                            'full' => __('No sidebars', THEME_LANG),
-                            'left' => __('Left Sidebar', THEME_LANG),
-                            'right' => __('Right Layout', THEME_LANG)
+                            'full' => esc_html__('No sidebars', 'aquila'),
+                            'left' => esc_html__('Left Sidebar', 'aquila'),
+                            'right' => esc_html__('Right Layout', 'aquila')
                         ),
                         'default'  => 'full',
                         'clear' => false
@@ -2417,8 +2417,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'author_sidebar_left',
                         'type' => 'select',
-                        'title'    => __( 'Sidebar left area', THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
+                        'title'    => esc_html__( 'Sidebar left area', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('author_sidebar','equals','left'),
@@ -2427,8 +2427,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'author_sidebar_right',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar right area', THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
+                        'title'    => esc_html__( 'Sidebar right area', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('author_sidebar','equals','right'),
@@ -2441,41 +2441,41 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'author_posts_per_page',
                         'type' => 'text',
-                        'title' => __('Posts per page', THEME_LANG),
-                        'desc' => __("Insert the total number of pages.", THEME_LANG),
+                        'title' => esc_html__('Posts per page', 'aquila'),
+                        'desc' => esc_html__("Insert the total number of pages.", 'aquila'),
                         'default' => 9,
                     ),
                     array(
                         'id' => 'author_loop_style',
                         'type' => 'select',
-                        'title' => __('Loop Style', THEME_LANG),
+                        'title' => esc_html__('Loop Style', 'aquila'),
                         'desc' => '',
                         'options' => array(
-                            'list' => __( 'List', THEME_LANG ),
-                            'medium' => __( 'Medium', THEME_LANG ),
-                            'grid' => __( 'Grid', THEME_LANG ),
-                            'masonry' => __( 'Masonry', THEME_LANG ),
+                            'list' => esc_html__( 'List', 'aquila' ),
+                            'medium' => esc_html__( 'Medium', 'aquila' ),
+                            'grid' => esc_html__( 'Grid', 'aquila' ),
+                            'masonry' => esc_html__( 'Masonry', 'aquila' ),
                         ),
                         'default' => 'grid'
                     ),
                     array(
                         'id' => 'author_first_featured',
                         'type' => 'switch',
-                        'title' => __('First featured', THEME_LANG),
-                        'desc' => __('Show First article featured or?.', THEME_LANG),
+                        'title' => esc_html__('First featured', 'aquila'),
+                        'desc' => esc_html__('Show First article featured or?.', 'aquila'),
                         "default" => 0,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
                     ),
                     array(
                         'id' => 'author_columns',
                         'type' => 'select',
-                        'title' => __('Columns on desktop', THEME_LANG),
+                        'title' => esc_html__('Columns on desktop', 'aquila'),
                         'desc' => '',
                         'options' => array(
-                            '2' => __( '2 columns', 'js_composer' ) ,
-                            '3' => __( '3 columns', 'js_composer' ) ,
-                            '4' => __( '4 columns', 'js_composer' ) ,
+                            '2' => esc_html__( '2 columns', 'js_composer' ) ,
+                            '3' => esc_html__( '3 columns', 'js_composer' ) ,
+                            '4' => esc_html__( '4 columns', 'js_composer' ) ,
                         ),
                         'default' => 3,
                         'required' => array('author_loop_style','equals', array( 'grid', 'masonry' ) ),
@@ -2487,18 +2487,18 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'author_excerpt_length',
                         'type' => 'text',
-                        'title' => __('Excerpt Length', THEME_LANG),
-                        'desc' => __("Insert the number of words you want to show in the post excerpts.", THEME_LANG),
+                        'title' => esc_html__('Excerpt Length', 'aquila'),
+                        'desc' => esc_html__("Insert the number of words you want to show in the post excerpts.", 'aquila'),
                         'default' => 35,
                     ),
                     array(
                         'id' => 'author_pagination',
                         'type' => 'select',
-                        'title' => __('Pagination Type', THEME_LANG),
-                        'desc' => __('Select the pagination type.', THEME_LANG),
+                        'title' => esc_html__('Pagination Type', 'aquila'),
+                        'desc' => esc_html__('Select the pagination type.', 'aquila'),
                         'options' => array(
-                            'normal' => __( 'Normal pagination', THEME_LANG ),
-                            'button' => __( 'Next - Previous button', THEME_LANG ),
+                            'normal' => esc_html__( 'Normal pagination', 'aquila' ),
+                            'button' => esc_html__( 'Next - Previous button', 'aquila' ),
                         ),
                         'default' => 'normal'
                     ),
@@ -2510,41 +2510,41 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'post_single_section',
-                'title'			=> __( 'Single Post', THEME_LANG ),
+                'title'			=> esc_html__( 'Single Post', 'aquila' ),
                 'desc'			=> 'Single post settings',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'blog_single_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Single post general', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Single post general', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id'       => 'single_layout',
                         'type'     => 'image_select',
                         'compiler' => true,
-                        'title'    => __( 'Single layout', THEME_LANG ),
-                        'subtitle' => __( 'Please choose header layout', THEME_LANG ),
+                        'title'    => esc_html__( 'Single layout', 'aquila' ),
+                        'subtitle' => esc_html__( 'Please choose header layout', 'aquila' ),
                         'options'  => array(
-                            1 => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'single/layout-1.jpg' ),
-                            2 => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'single/layout-2.jpg' ),
-                            3 => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'single/layout-3.jpg' ),
-                            4 => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'single/layout-4.jpg' ),
-                            5 => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'single/layout-5.jpg' ),
-                            6 => array( 'alt' => __( 'Layout 1', THEME_LANG ), 'img' => FW_IMG . 'single/layout-6.jpg' ),
+                            1 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'single/layout-1.jpg' ),
+                            2 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'single/layout-2.jpg' ),
+                            3 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'single/layout-3.jpg' ),
+                            4 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'single/layout-4.jpg' ),
+                            5 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'single/layout-5.jpg' ),
+                            6 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'single/layout-6.jpg' ),
                         ),
                         'default'  => 1
                     ),
                     array(
                         'id'       => 'single_sidebar',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar configuration', THEME_LANG ),
-                        'subtitle'     => __( "Please choose sidebar for single post", THEME_LANG ),
+                        'title'    => esc_html__( 'Sidebar configuration', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose sidebar for single post", 'aquila' ),
                         'options'  => array(
-                            '' => __('No sidebars', THEME_LANG),
-                            'left' => __('Left Sidebar', THEME_LANG),
-                            'right' => __('Right Layout', THEME_LANG)
+                            '' => esc_html__('No sidebars', 'aquila'),
+                            'left' => esc_html__('Left Sidebar', 'aquila'),
+                            'right' => esc_html__('Right Layout', 'aquila')
                         ),
                         'default'  => 'right',
                         'clear' => false
@@ -2552,8 +2552,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'single_sidebar_left',
                         'type' => 'select',
-                        'title'    => __( 'Single post: Sidebar left area', THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
+                        'title'    => esc_html__( 'Single post: Sidebar left area', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('single_sidebar','equals','left'),
@@ -2562,8 +2562,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'single_sidebar_right',
                         'type'     => 'select',
-                        'title'    => __( 'Single post: Sidebar right area', THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
+                        'title'    => esc_html__( 'Single post: Sidebar right area', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('single_sidebar','equals','right'),
@@ -2577,8 +2577,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'   => 'single_image_size',
                         'type' => 'select',
                         'options' => $image_sizes,
-                        'title'    => __( 'Image size', THEME_LANG ),
-                        'desc' => __("Select image size.", THEME_LANG),
+                        'title'    => esc_html__( 'Image size', 'aquila' ),
+                        'desc' => esc_html__("Select image size.", 'aquila'),
                         'default' => 'blog_post'
                     ),
                     array(
@@ -2588,57 +2588,57 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'single_share_box',
                         'type' => 'switch',
-                        'title' => __('Share box in posts', THEME_LANG),
-                        'desc' => __('Show share box in blog posts.', THEME_LANG),
+                        'title' => esc_html__('Share box in posts', 'aquila'),
+                        'desc' => esc_html__('Show share box in blog posts.', 'aquila'),
                         "default" => 1,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
                     ),
                     array(
                         'id' => 'single_like_post',
                         'type' => 'switch',
-                        'title' => __('Show like article', THEME_LANG),
-                        'desc' => __('Show like article or?', THEME_LANG),
+                        'title' => esc_html__('Show like article', 'aquila'),
+                        'desc' => esc_html__('Show like article or?', 'aquila'),
                         "default" => 1,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
                     ),
                     array(
                         'id' => 'single_next_prev',
                         'type' => 'switch',
-                        'title' => __('Previous & next buttons', THEME_LANG),
-                        'desc' => __('Show Previous & next buttons in blog posts.', THEME_LANG),
+                        'title' => esc_html__('Previous & next buttons', 'aquila'),
+                        'desc' => esc_html__('Show Previous & next buttons in blog posts.', 'aquila'),
                         "default" => 0,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
                     ),
                     array(
                         'id' => 'single_author',
                         'type' => 'switch',
-                        'title' => __('Author info in posts', THEME_LANG),
-                        'desc' => __('Show author info in blog posts.', THEME_LANG),
+                        'title' => esc_html__('Author info in posts', 'aquila'),
+                        'desc' => esc_html__('Show author info in blog posts.', 'aquila'),
                         "default" => 1,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
                     ),
                     array(
                         'id' => 'single_related',
                         'type' => 'switch',
-                        'title' => __('Related posts', THEME_LANG),
-                        'desc' => __('Show related posts in blog posts.', THEME_LANG),
+                        'title' => esc_html__('Related posts', 'aquila'),
+                        'desc' => esc_html__('Show related posts in blog posts.', 'aquila'),
                         "default" => 1,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
                     ),
                     array(
                         'id'       => 'single_related_type',
                         'type'     => 'select',
-                        'title'    => __( 'Related Query Type', THEME_LANG ),
-                        'subtitle'     => __( "", THEME_LANG ),
+                        'title'    => esc_html__( 'Related Query Type', 'aquila' ),
+                        'subtitle'     => esc_html__( "", 'aquila' ),
                         'options'  => array(
-                            'categories' => __('Categories', THEME_LANG),
-                            'tags' => __('Tags', THEME_LANG),
-                            'author' => __('Author', THEME_LANG)
+                            'categories' => esc_html__('Categories', 'aquila'),
+                            'tags' => esc_html__('Tags', 'aquila'),
+                            'author' => esc_html__('Author', 'aquila')
                         ),
                         'default'  => 'categories',
                         'clear' => false,
@@ -2651,34 +2651,34 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'            => 'search_section',
-                'title'         => __( 'Search', THEME_LANG ),
+                'title'         => esc_html__( 'Search', 'aquila' ),
                 'desc'          => 'Search settings',
                 'icon'          => 'fa fa-search',
                 'fields'        => array(
                     array(
                         'id'       => 'search_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Search post general', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Search post general', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'search_page_header',
                         'type' => 'switch',
-                        'title' => __('Show Page header', THEME_LANG),
-                        'desc' => __('Show page header or?.', THEME_LANG),
+                        'title' => esc_html__('Show Page header', 'aquila'),
+                        'desc' => esc_html__('Show page header or?.', 'aquila'),
                         "default" => 1,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
                     ),
                     array(
                         'id'       => 'search_sidebar',
                         'type'     => 'select',
-                        'title'    => __( 'Sidebar configuration', THEME_LANG ),
-                        'subtitle'     => __( "Please choose archive page ", THEME_LANG ),
+                        'title'    => esc_html__( 'Sidebar configuration', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose archive page ", 'aquila' ),
                         'options'  => array(
-                            'full' => __('No sidebars', THEME_LANG),
-                            'left' => __('Left Sidebar', THEME_LANG),
-                            'right' => __('Right Layout', THEME_LANG)
+                            'full' => esc_html__('No sidebars', 'aquila'),
+                            'left' => esc_html__('Left Sidebar', 'aquila'),
+                            'right' => esc_html__('Right Layout', 'aquila')
                         ),
                         'default'  => 'full',
                         'clear' => false
@@ -2686,8 +2686,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'search_sidebar_left',
                         'type' => 'select',
-                        'title'    => __( 'Sidebar left area', THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
+                        'title'    => esc_html__( 'Sidebar left area', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('search_sidebar','equals','left'),
@@ -2696,8 +2696,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'       => 'search_sidebar_right',
                         'type'     => 'select',
-                        'title'    => __( 'Search: Sidebar right area', THEME_LANG ),
-                        'subtitle'     => __( "Please choose left sidebar ", THEME_LANG ),
+                        'title'    => esc_html__( 'Search: Sidebar right area', 'aquila' ),
+                        'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
                         'default'  => 'primary-widget-area',
                         'required' => array('search_sidebar','equals','right'),
@@ -2710,40 +2710,40 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'search_posts_per_page',
                         'type' => 'text',
-                        'title' => __('Posts per page', THEME_LANG),
-                        'desc' => __("Insert the total number of pages.", THEME_LANG),
+                        'title' => esc_html__('Posts per page', 'aquila'),
+                        'desc' => esc_html__("Insert the total number of pages.", 'aquila'),
                         'default' => 9,
                     ),
                     array(
                         'id' => 'search_loop_style',
                         'type' => 'select',
-                        'title' => __('Search Loop Style', THEME_LANG),
+                        'title' => esc_html__('Search Loop Style', 'aquila'),
                         'desc' => '',
                         'options' => array(
-                            'grid' => __( 'Grid', 'js_composer' ),
-                            'medium' => __( 'medium', 'js_composer' ),
-                            'masonry' => __( 'Masonry', 'js_composer' ),
+                            'grid' => esc_html__( 'Grid', 'js_composer' ),
+                            'medium' => esc_html__( 'medium', 'js_composer' ),
+                            'masonry' => esc_html__( 'Masonry', 'js_composer' ),
                         ),
                         'default' => 'grid'
                     ),
                     array(
                         'id' => 'search_first_featured',
                         'type' => 'switch',
-                        'title' => __('First featured', THEME_LANG),
-                        'desc' => __('Show First article featured or?.', THEME_LANG),
+                        'title' => esc_html__('First featured', 'aquila'),
+                        'desc' => esc_html__('Show First article featured or?.', 'aquila'),
                         "default" => 0,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
                     ),
                     array(
                         'id' => 'search_columns',
                         'type' => 'select',
-                        'title' => __('Columns on desktop', THEME_LANG),
+                        'title' => esc_html__('Columns on desktop', 'aquila'),
                         'desc' => '',
                         'options' => array(
-                            '2' => __( '2 columns', 'js_composer' ) ,
-                            '3' => __( '3 columns', 'js_composer' ) ,
-                            '4' => __( '4 columns', 'js_composer' ) ,
+                            '2' => esc_html__( '2 columns', 'js_composer' ) ,
+                            '3' => esc_html__( '3 columns', 'js_composer' ) ,
+                            '4' => esc_html__( '4 columns', 'js_composer' ) ,
                         ),
                         'default' => '3',
                         'required' => array('search_loop_style','equals', array( 'grid', 'masonry' ) ),
@@ -2751,19 +2751,19 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id' => 'search_pagination',
                         'type' => 'select',
-                        'title' => __('Pagination Type', THEME_LANG),
-                        'desc' => __('Select the pagination type.', THEME_LANG),
+                        'title' => esc_html__('Pagination Type', 'aquila'),
+                        'desc' => esc_html__('Select the pagination type.', 'aquila'),
                         'options' => array(
-                            'normal' => __( 'Normal pagination', THEME_LANG ),
-                            'button' => __( 'Next - Previous button', THEME_LANG ),
+                            'normal' => esc_html__( 'Normal pagination', 'aquila' ),
+                            'button' => esc_html__( 'Next - Previous button', 'aquila' ),
                         ),
                         'default' => 'normal'
                     ),
                     array(
                         'id' => 'search_excerpt_length',
                         'type' => 'text',
-                        'title' => __('Excerpt Length', THEME_LANG),
-                        'desc' => __("Insert the number of words you want to show in the post excerpts.", THEME_LANG),
+                        'title' => esc_html__('Excerpt Length', 'aquila'),
+                        'desc' => esc_html__("Insert the number of words you want to show in the post excerpts.", 'aquila'),
                         'default' => 35,
                     )
                 )
@@ -2771,93 +2771,93 @@ if ( ! class_exists( 'KT_config' ) ) {
 
             $this->sections[] = array(
                 'id'			=> 'social',
-                'title'			=> __( 'Socials', THEME_LANG ),
-                'desc'			=> __('Social and share settings', THEME_LANG),
+                'title'			=> esc_html__( 'Socials', 'aquila' ),
+                'desc'			=> esc_html__('Social and share settings', 'aquila'),
                 'icon'	=> 'fa fa-facebook',
                 'fields'		=> array(
 
                     array(
                         'id' => 'twitter',
                         'type' => 'text',
-                        'title' => __('Twitter', THEME_LANG),
-                        'subtitle' => __("Your Twitter username (no @).", THEME_LANG),
+                        'title' => esc_html__('Twitter', 'aquila'),
+                        'subtitle' => esc_html__("Your Twitter username (no @).", 'aquila'),
                         'default' => '#'
                     ),
                     array(
                         'id' => 'facebook',
                         'type' => 'text',
-                        'title' => __('Facebook', THEME_LANG),
-                        'subtitle' => __("Your Facebook page/profile url", THEME_LANG),
+                        'title' => esc_html__('Facebook', 'aquila'),
+                        'subtitle' => esc_html__("Your Facebook page/profile url", 'aquila'),
                         'default' => '#'
                     ),
                     array(
                         'id' => 'pinterest',
                         'type' => 'text',
-                        'title' => __('Pinterest', THEME_LANG),
-                        'subtitle' => __("Your Pinterest username", THEME_LANG),
+                        'title' => esc_html__('Pinterest', 'aquila'),
+                        'subtitle' => esc_html__("Your Pinterest username", 'aquila'),
                         'default' => '#'
                     ),
                     array(
                         'id' => 'dribbble',
                         'type' => 'text',
-                        'title' => __('Dribbble', THEME_LANG),
-                        'subtitle' => __("Your Dribbble username", THEME_LANG),
+                        'title' => esc_html__('Dribbble', 'aquila'),
+                        'subtitle' => esc_html__("Your Dribbble username", 'aquila'),
                         'desc' => '',
                         'default' => ''
                     ),
                     array(
                         'id' => 'vimeo',
                         'type' => 'text',
-                        'title' => __('Vimeo', THEME_LANG),
-                        'subtitle' => __("Your Vimeo username", THEME_LANG),
+                        'title' => esc_html__('Vimeo', 'aquila'),
+                        'subtitle' => esc_html__("Your Vimeo username", 'aquila'),
                         'desc' => '',
                         'default' => '#'
                     ),
                     array(
                         'id' => 'tumblr',
                         'type' => 'text',
-                        'title' => __('Tumblr', THEME_LANG),
-                        'subtitle' => __("Your Tumblr username", THEME_LANG),
+                        'title' => esc_html__('Tumblr', 'aquila'),
+                        'subtitle' => esc_html__("Your Tumblr username", 'aquila'),
                         'desc' => '',
                         'default' => '#'
                     ),
                     array(
                         'id' => 'skype',
                         'type' => 'text',
-                        'title' => __('Skype', THEME_LANG),
-                        'subtitle' => __("Your Skype username", THEME_LANG),
+                        'title' => esc_html__('Skype', 'aquila'),
+                        'subtitle' => esc_html__("Your Skype username", 'aquila'),
                         'desc' => '',
                         'default' => ''
                     ),
                     array(
                         'id' => 'linkedin',
                         'type' => 'text',
-                        'title' => __('LinkedIn', THEME_LANG),
-                        'subtitle' => __("Your LinkedIn page/profile url", THEME_LANG),
+                        'title' => esc_html__('LinkedIn', 'aquila'),
+                        'subtitle' => esc_html__("Your LinkedIn page/profile url", 'aquila'),
                         'desc' => '',
                         'default' => ''
                     ),
                     array(
                         'id' => 'googleplus',
                         'type' => 'text',
-                        'title' => __('Google+', THEME_LANG),
-                        'subtitle' => __("Your Google+ page/profile URL", THEME_LANG),
+                        'title' => esc_html__('Google+', 'aquila'),
+                        'subtitle' => esc_html__("Your Google+ page/profile URL", 'aquila'),
                         'desc' => '',
                         'default' => '#'
                     ),
                     array(
                         'id' => 'youtube',
                         'type' => 'text',
-                        'title' => __('YouTube', THEME_LANG),
-                        'subtitle' => __("Your YouTube username", THEME_LANG),
+                        'title' => esc_html__('YouTube', 'aquila'),
+                        'subtitle' => esc_html__("Your YouTube username", 'aquila'),
                         'desc' => '',
                         'default' => ''
                     ),
                     array(
                         'id' => 'instagram',
                         'type' => 'text',
-                        'title' => __('Instagram', THEME_LANG),
-                        'subtitle' => __("Your Instagram username", THEME_LANG),
+                        'title' => esc_html__('Instagram', 'aquila'),
+                        'subtitle' => esc_html__("Your Instagram username", 'aquila'),
                         'desc' => '',
                         'default' => ''
                     )
@@ -2872,7 +2872,7 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'sidebar_section',
-                'title'			=> __( 'Sidebar Widgets', THEME_LANG ),
+                'title'			=> esc_html__( 'Sidebar Widgets', 'aquila' ),
                 'desc'			=> '',
                 'icon'          => 'fa fa-columns',
                 'fields'		=> array(
@@ -2880,8 +2880,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'          => 'custom_sidebars',
                         'type'        => 'slides',
-                        'title'       => __('Slides Options', THEME_LANG ),
-                        'subtitle'    => __('Unlimited sidebar with drag and drop sortings.', THEME_LANG ),
+                        'title'       => esc_html__('Slides Options', 'aquila' ),
+                        'subtitle'    => esc_html__('Unlimited sidebar with drag and drop sortings.', 'aquila' ),
                         'desc'        => '',
                         'class'       => 'slider-no-image-preview',
                         'content_title' =>'Sidebar',
@@ -2891,8 +2891,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'url' => false,
                         ),
                         'placeholder' => array(
-                            'title'           => __('Sidebar title', THEME_LANG ),
-                            'description'     => __('Sidebar Description', THEME_LANG ),
+                            'title'           => esc_html__('Sidebar title', 'aquila' ),
+                            'description'     => esc_html__('Sidebar Description', 'aquila' ),
                         ),
                     ),
                 )
@@ -2903,35 +2903,35 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> '404_section',
-                'title'			=> __( '404 Page', THEME_LANG ),
+                'title'			=> esc_html__( '404 Page', 'aquila' ),
                 'desc'			=> '404 Page settings',
                 'icon'          => 'fa fa-times-circle',
                 'fields'		=> array(
                     array(
                         'id'       => 'notfound_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( '404 Page general', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( '404 Page general', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'notfound_page_header',
                         'type' => 'switch',
-                        'title' => __('Show Page header', THEME_LANG),
-                        'desc' => __('Show page header or?.', THEME_LANG),
+                        'title' => esc_html__('Show Page header', 'aquila'),
+                        'desc' => esc_html__('Show page header or?.', 'aquila'),
                         "default" => 0,
-                        'on' => __('Enabled', THEME_LANG),
-                        'off' =>__('Disabled', THEME_LANG)
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
                     ),
 
                     array(
                         'id' => 'notfound_page_type',
                         'type' => 'select',
-                        'title' => __('404 Page', THEME_LANG),
+                        'title' => esc_html__('404 Page', 'aquila'),
                         'desc' => '',
                         'options' => array(
-                            'default' => __( 'Default', THEME_LANG ) ,
-                            'page' => __( 'From Page', THEME_LANG ) ,
-                            'home' => __( 'Redirect Home', THEME_LANG ) ,
+                            'default' => esc_html__( 'Default', 'aquila' ) ,
+                            'page' => esc_html__( 'From Page', 'aquila' ) ,
+                            'home' => esc_html__( 'Redirect Home', 'aquila' ) ,
                         ),
                         'default' => 'default',
                     ),
@@ -2940,8 +2940,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'notfound_page_id',
                         'type'     => 'select',
                         'data'     => 'pages',
-                        'title'    => __( 'Pages Select Option', THEME_LANG ),
-                        'desc'     => __( 'Select your page 404 you want use', THEME_LANG ),
+                        'title'    => esc_html__( 'Pages Select Option', 'aquila' ),
+                        'desc'     => esc_html__( 'Select your page 404 you want use', 'aquila' ),
                         'required' => array( 'notfound_page_type', '=', 'page' ),
                     ),
 
@@ -2953,7 +2953,7 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'advanced',
-                'title'			=> __( 'Advanced', THEME_LANG ),
+                'title'			=> esc_html__( 'Advanced', 'aquila' ),
                 'desc'			=> '',
                 'icon'	=> 'fa fa-cog',
             );
@@ -2963,7 +2963,7 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'share_section',
-                'title'			=> __( 'Social Share', THEME_LANG ),
+                'title'			=> esc_html__( 'Social Share', 'aquila' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
@@ -2971,16 +2971,16 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'social_share',
                         'type'     => 'sortable',
                         'mode'     => 'checkbox', // checkbox or text
-                        'title'    => __( 'Social Share', THEME_LANG ),
-                        'desc'     => __( 'Reorder and Enable/Disable Social Share Buttons.', THEME_LANG ),
+                        'title'    => esc_html__( 'Social Share', 'aquila' ),
+                        'desc'     => esc_html__( 'Reorder and Enable/Disable Social Share Buttons.', 'aquila' ),
                         'options'  => array(
-                            'facebook' => __('Facebook', THEME_LANG),
-                            'twitter' => __('Twitter', THEME_LANG),
-                            'google_plus' => __('Google+', THEME_LANG),
-                            'pinterest' => __('Pinterest', THEME_LANG),
-                            'linkedin' => __('Linkedin', THEME_LANG),
-                            'tumblr' => __('Tumblr', THEME_LANG),
-                            'mail' => __('Mail', THEME_LANG),
+                            'facebook' => esc_html__('Facebook', 'aquila'),
+                            'twitter' => esc_html__('Twitter', 'aquila'),
+                            'google_plus' => esc_html__('Google+', 'aquila'),
+                            'pinterest' => esc_html__('Pinterest', 'aquila'),
+                            'linkedin' => esc_html__('Linkedin', 'aquila'),
+                            'tumblr' => esc_html__('Tumblr', 'aquila'),
+                            'mail' => esc_html__('Mail', 'aquila'),
                         ),
                         'default'  => array(
                             'facebook' => true,
@@ -3001,21 +3001,21 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'socials_api_section',
-                'title'			=> __( 'Socials API', THEME_LANG ),
+                'title'			=> esc_html__( 'Socials API', 'aquila' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'facebook_app_heading',
                         'type'     => 'raw',
-                        'content'  => '<div class="section-heading">'.__( 'Facebook App', THEME_LANG ).'</div>',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Facebook App', 'aquila' ).'</div>',
                         'full_width' => true
                     ),
                     array(
                         'id' => 'facebook_app',
                         'type' => 'text',
-                        'title' => __('Facebook App ID', THEME_LANG),
-                        'subtitle' => __("Add Facebook App ID.", THEME_LANG),
+                        'title' => esc_html__('Facebook App ID', 'aquila'),
+                        'subtitle' => esc_html__("Add Facebook App ID.", 'aquila'),
                         'default' => '417674911655656'
                     )
                 )
@@ -3027,15 +3027,15 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'advanced_css',
-                'title'			=> __( 'Custom CSS', THEME_LANG ),
+                'title'			=> esc_html__( 'Custom CSS', 'aquila' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'advanced_editor_css',
                         'type'     => 'ace_editor',
-                        'title'    => __( 'CSS Code', THEME_LANG ),
-                        'subtitle' => __( 'Paste your CSS code here.', THEME_LANG ),
+                        'title'    => esc_html__( 'CSS Code', 'aquila' ),
+                        'subtitle' => esc_html__( 'Paste your CSS code here.', 'aquila' ),
                         'mode'     => 'css',
                         'theme'    => 'chrome',
                         'full_width' => true
@@ -3047,15 +3047,15 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'advanced_js',
-                'title'			=> __( 'Custom JS', THEME_LANG ),
+                'title'			=> esc_html__( 'Custom JS', 'aquila' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'advanced_editor_js',
                         'type'     => 'ace_editor',
-                        'title'    => __( 'JS Code', THEME_LANG ),
-                        'subtitle' => __( 'Paste your JS code here.', THEME_LANG ),
+                        'title'    => esc_html__( 'JS Code', 'aquila' ),
+                        'subtitle' => esc_html__( 'Paste your JS code here.', 'aquila' ),
                         'mode'     => 'javascript',
                         'theme'    => 'chrome',
                         'default'  => "jQuery(document).ready(function(){\n\n});",
@@ -3068,15 +3068,15 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'advanced_tracking',
-                'title'			=> __( 'Tracking Code', THEME_LANG ),
+                'title'			=> esc_html__( 'Tracking Code', 'aquila' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(
                     array(
                         'id'       => 'advanced_tracking_code',
                         'type'     => 'textarea',
-                        'title'    => __( 'Tracking Code', THEME_LANG ),
-                        'desc'     => __( 'Paste your Google Analytics (or other) tracking code here. This will be added into the header template of your theme. Please put code inside script tags.', THEME_LANG ),
+                        'title'    => esc_html__( 'Tracking Code', 'aquila' ),
+                        'desc'     => esc_html__( 'Paste your Google Analytics (or other) tracking code here. This will be added into the header template of your theme. Please put code inside script tags.', 'aquila' ),
                     )
                 )
             );
@@ -3084,10 +3084,10 @@ if ( ! class_exists( 'KT_config' ) ) {
             $info_arr = array();
             $theme = wp_get_theme();
 
-            $info_arr[] = "<li><span>".__('Theme Name:', THEME_LANG)." </span>". $theme->get('Name').'</li>';
-            $info_arr[] = "<li><span>".__('Theme Version:', THEME_LANG)." </span>". $theme->get('Version').'</li>';
-            $info_arr[] = "<li><span>".__('Theme URI:', THEME_LANG)." </span>". $theme->get('ThemeURI').'</li>';
-            $info_arr[] = "<li><span>".__('Author:', THEME_LANG)." </span>". $theme->get('Author').'</li>';
+            $info_arr[] = "<li><span>".esc_html__('Theme Name:', 'aquila')." </span>". $theme->get('Name').'</li>';
+            $info_arr[] = "<li><span>".esc_html__('Theme Version:', 'aquila')." </span>". $theme->get('Version').'</li>';
+            $info_arr[] = "<li><span>".esc_html__('Theme URI:', 'aquila')." </span>". $theme->get('ThemeURI').'</li>';
+            $info_arr[] = "<li><span>".esc_html__('Author:', 'aquila')." </span>". $theme->get('Author').'</li>';
 
             $system_info = sprintf("<div class='troubleshooting'><ul>%s</ul></div>", implode('', $info_arr));
 
@@ -3096,7 +3096,7 @@ if ( ! class_exists( 'KT_config' ) ) {
              **/
             $this->sections[] = array(
                 'id'			=> 'advanced_troubleshooting',
-                'title'			=> __( 'Troubleshooting', THEME_LANG ),
+                'title'			=> esc_html__( 'Troubleshooting', 'aquila' ),
                 'desc'			=> '',
                 'subsection' => true,
                 'fields'		=> array(

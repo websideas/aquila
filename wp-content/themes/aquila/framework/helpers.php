@@ -76,17 +76,17 @@ if (!function_exists('kt_get_image_sizes')){
             if( isset($sizes[ $_size ]) ){
                 $option_text[] = '('.$sizes[ $_size ]['width'].' x '.$sizes[ $_size ]['height'].')';
                 if($sizes[ $_size ]['crop']){
-                    $option_text[] = __('Crop', THEME_LANG);
+                    $option_text[] = esc_html__('Crop', 'aquila');
                 }
                 $sizes[ $_size ] = implode(' - ', $option_text);
             }
         }
 
         if($full){
-            $sizes[ 'full' ] = __('Full', THEME_LANG);
+            $sizes[ 'full' ] = esc_html__('Full', 'aquila');
         }
         if($custom){
-            $sizes[ 'custom' ] = __('Custom size', THEME_LANG);
+            $sizes[ 'custom' ] = esc_html__('Custom size', 'aquila');
         }
 
 

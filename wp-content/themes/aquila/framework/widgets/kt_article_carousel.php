@@ -11,8 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Widget_KT_Posts_Carousel extends WP_Widget {
 
     public function __construct() {
-        $widget_ops = array('classname' => 'widget_kt_posts_carousel', 'description' => __( "Show posts of categories.") );
-        parent::__construct('kt_posts_carousel', __('KT: Posts Carousel', THEME_LANG), $widget_ops);
+        $widget_ops = array('classname' => 'widget_kt_posts_carousel', 'description' => esc_html__( "Show posts of categories.") );
+        parent::__construct('kt_posts_carousel', esc_html__('KT: Posts Carousel', 'aquila'), $widget_ops);
         $this->alt_option_name = 'widget_kt_posts_carousel';
 
         add_action( 'save_post', array($this, 'flush_widget_cache') );
@@ -162,13 +162,13 @@ class Widget_KT_Posts_Carousel extends WP_Widget {
         $categories = get_terms( 'category', array('hide_empty' => false));
 
         ?>
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-        <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts to show:' ); ?></label>
             <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" class="widefat" /></p>
 
-        <div><label for="<?php echo $this->get_field_id('category'); ?>"><?php _e('Categories:',THEME_LANG); ?> </label>
+        <div><label for="<?php echo $this->get_field_id('category'); ?>"><?php esc_html_e('Categories:','aquila'); ?> </label>
             <select class="widefat categories-chosen" id="<?php echo $this->get_field_id('category'); ?>" name="<?php echo $this->get_field_name('category'); ?>[]" multiple="multiple">
                 <?php foreach($categories as $item){ ?>
                     <option <?php if (in_array($item->term_id, $category)){ echo 'selected="selected"';} ?> value="<?php echo $item->term_id ?>"><?php echo $item->name; ?></option>
@@ -176,22 +176,22 @@ class Widget_KT_Posts_Carousel extends WP_Widget {
             </select>
         </div>
 
-        <p><label for="<?php echo $this->get_field_id('orderby'); ?>"><?php _e('Order by:', THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('orderby'); ?>"><?php esc_html_e('Order by:', 'aquila'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('orderby'); ?>" name="<?php echo $this->get_field_name('orderby'); ?>">
-                <option <?php selected( $orderby, 'name' ); ?> value="name"><?php _e('Name',THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'id' ); ?> value="id"><?php _e('ID',THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'date' ); ?> value="date"><?php _e('Date',THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'author' ); ?> value="author"><?php _e('Author',THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'modified' ); ?> value="modified"><?php _e('Modified',THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'rand' ); ?> value="rand"><?php _e('Rand',THEME_LANG); ?></option>
-                <option <?php selected( $orderby, 'comment_count' ); ?> value="comment_count "><?php _e('Comment count',THEME_LANG); ?></option>
+                <option <?php selected( $orderby, 'name' ); ?> value="name"><?php esc_html_e('Name','aquila'); ?></option>
+                <option <?php selected( $orderby, 'id' ); ?> value="id"><?php esc_html_e('ID','aquila'); ?></option>
+                <option <?php selected( $orderby, 'date' ); ?> value="date"><?php esc_html_e('Date','aquila'); ?></option>
+                <option <?php selected( $orderby, 'author' ); ?> value="author"><?php esc_html_e('Author','aquila'); ?></option>
+                <option <?php selected( $orderby, 'modified' ); ?> value="modified"><?php esc_html_e('Modified','aquila'); ?></option>
+                <option <?php selected( $orderby, 'rand' ); ?> value="rand"><?php esc_html_e('Rand','aquila'); ?></option>
+                <option <?php selected( $orderby, 'comment_count' ); ?> value="comment_count "><?php esc_html_e('Comment count','aquila'); ?></option>
             </select>
         </p>
 
-        <p><label for="<?php echo $this->get_field_id('order'); ?>"><?php _e('Order:',THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('order'); ?>"><?php esc_html_e('Order:','aquila'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('order'); ?>" name="<?php echo $this->get_field_name('order'); ?>">
-                <option <?php selected( $order, 'DESC' ); ?> value="DESC"><?php _e('Desc',THEME_LANG); ?></option>
-                <option <?php selected( $order, 'ASC' ); ?> value="ASC"><?php _e('ASC',THEME_LANG); ?></option>
+                <option <?php selected( $order, 'DESC' ); ?> value="DESC"><?php esc_html_e('Desc','aquila'); ?></option>
+                <option <?php selected( $order, 'ASC' ); ?> value="ASC"><?php esc_html_e('ASC','aquila'); ?></option>
             </select>
         </p>
 

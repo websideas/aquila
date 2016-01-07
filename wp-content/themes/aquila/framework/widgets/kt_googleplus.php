@@ -11,8 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Widget_KT_Goolge extends WP_Widget {
 
     public function __construct() {
-        $widget_ops = array('classname' => 'widget_kt_google', 'description' => __( "Embed Google+ Badge.", THEME_LANG) );
-        parent::__construct('widget_kt_google', __('KT: Google+ Badge', THEME_LANG), $widget_ops);
+        $widget_ops = array('classname' => 'widget_kt_google', 'description' => esc_html__( "Embed Google+ Badge.", 'aquila') );
+        parent::__construct('widget_kt_google', esc_html__('KT: Google+ Badge', 'aquila'), $widget_ops);
         $this->alt_option_name = 'widget_kt_google';
 
         add_action('wp_footer', array($this, 'footer'));
@@ -99,48 +99,48 @@ class Widget_KT_Goolge extends WP_Widget {
 
     public function form( $instance ) {
 
-        $defaults = array( 'title' => __( 'Google Plus' , THEME_LANG), 'href' => '', 'layout' => 'portrait', 'type' => 'person', 'color' => 'light', 'cover' => true, 'tagline' => true);
+        $defaults = array( 'title' => esc_html__( 'Google Plus' , 'aquila'), 'href' => '', 'layout' => 'portrait', 'type' => 'person', 'color' => 'light', 'cover' => true, 'tagline' => true);
         $instance = wp_parse_args( (array) $instance, $defaults );
 
         $title = strip_tags($instance['title']);
 
         ?>
 
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-        <p><label for="<?php echo $this->get_field_id('type'); ?>"><?php _e('Type:',THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('type'); ?>"><?php esc_html_e('Type:','aquila'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('type'); ?>" name="<?php echo $this->get_field_name('type'); ?>">
-                <option <?php selected( $instance['type'], 'person' ); ?> value="person"><?php _e('Profile badge',THEME_LANG); ?></option>
-                <option <?php selected( $instance['type'], 'page' ); ?> value="page"><?php _e('Google+ page',THEME_LANG); ?></option>
-                <option <?php selected( $instance['type'], 'community' ); ?> value="community"><?php _e('Community page',THEME_LANG); ?></option>
+                <option <?php selected( $instance['type'], 'person' ); ?> value="person"><?php esc_html_e('Profile badge','aquila'); ?></option>
+                <option <?php selected( $instance['type'], 'page' ); ?> value="page"><?php esc_html_e('Google+ page','aquila'); ?></option>
+                <option <?php selected( $instance['type'], 'community' ); ?> value="community"><?php esc_html_e('Community page','aquila'); ?></option>
             </select>
         </p>
 
-        <p><label for="<?php echo $this->get_field_id( 'href' ); ?>"><?php _e( 'The URL of the Google plus Page:', THEME_LANG ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'href' ); ?>"><?php esc_html_e( 'The URL of the Google plus Page:', 'aquila' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'href' ); ?>" name="<?php echo $this->get_field_name( 'href' ); ?>" type="text" value="<?php echo $instance['href']; ?>" /></p>
 
-        <p><label for="<?php echo $this->get_field_id('layout'); ?>"><?php _e('Layout:',THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('layout'); ?>"><?php esc_html_e('Layout:','aquila'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('layout'); ?>" name="<?php echo $this->get_field_name('layout'); ?>">
-                <option <?php selected( $instance['layout'], 'portrait' ); ?> value="portrait"><?php _e('Portrait',THEME_LANG); ?></option>
-                <option <?php selected( $instance['layout'], 'landscape' ); ?> value="landscape"><?php _e('Landscape',THEME_LANG); ?></option>
+                <option <?php selected( $instance['layout'], 'portrait' ); ?> value="portrait"><?php esc_html_e('Portrait','aquila'); ?></option>
+                <option <?php selected( $instance['layout'], 'landscape' ); ?> value="landscape"><?php esc_html_e('Landscape','aquila'); ?></option>
             </select>
         </p>
 
-        <p><label for="<?php echo $this->get_field_id('color'); ?>"><?php _e('Color theme:',THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('color'); ?>"><?php esc_html_e('Color theme:','aquila'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('color'); ?>" name="<?php echo $this->get_field_name('color'); ?>">
-                <option <?php selected( $instance['color'], 'light' ); ?> value="light"><?php _e('Light',THEME_LANG); ?></option>
-                <option <?php selected( $instance['color'], 'dark' ); ?> value="dark"><?php _e('Dark',THEME_LANG); ?></option>
+                <option <?php selected( $instance['color'], 'light' ); ?> value="light"><?php esc_html_e('Light','aquila'); ?></option>
+                <option <?php selected( $instance['color'], 'dark' ); ?> value="dark"><?php esc_html_e('Dark','aquila'); ?></option>
             </select>
         </p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $instance['cover'] ); ?> id="<?php echo $this->get_field_id( 'cover' ); ?>" name="<?php echo $this->get_field_name( 'cover' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'cover' ); ?>"><?php _e( 'Cover Photo', THEME_LANG ); ?></label>
-            <br/><small><?php _e('Only work with portrait layout', THEME_LANG); ?></small></p>
+            <label for="<?php echo $this->get_field_id( 'cover' ); ?>"><?php esc_html_e( 'Cover Photo', 'aquila' ); ?></label>
+            <br/><small><?php esc_html_e('Only work with portrait layout', 'aquila'); ?></small></p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $instance['tagline'] ); ?> id="<?php echo $this->get_field_id( 'tagline' ); ?>" name="<?php echo $this->get_field_name( 'tagline' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'tagline' ); ?>"><?php _e( 'Tagline', THEME_LANG ); ?></label>
-            <br/><small><?php _e('Only work with portrait layout', THEME_LANG); ?></small></p>
+            <label for="<?php echo $this->get_field_id( 'tagline' ); ?>"><?php esc_html_e( 'Tagline', 'aquila' ); ?></label>
+            <br/><small><?php esc_html_e('Only work with portrait layout', 'aquila'); ?></small></p>
 
     <?php
     }

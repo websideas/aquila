@@ -13,8 +13,8 @@ class WP_Widget_KT_Tabs extends WP_Widget {
 
 	public function __construct() {
 
-        $widget_ops = array('classname' => 'widget_kt_post_tabs', 'description' => __( "Display popular posts, recent posts and comments in tabbed format.") );
-        parent::__construct('kt_post_tabs', __('KT: Post Tabs', THEME_LANG), $widget_ops);
+        $widget_ops = array('classname' => 'widget_kt_post_tabs', 'description' => esc_html__( "Display popular posts, recent posts and comments in tabbed format.") );
+        parent::__construct('kt_post_tabs', esc_html__('KT: Post Tabs', 'aquila'), $widget_ops);
         $this->alt_option_name = 'widget_kt_post_tabs';
 
         add_action( 'save_post', array($this, 'flush_widget_cache') );
@@ -74,9 +74,9 @@ class WP_Widget_KT_Tabs extends WP_Widget {
             ?>
             <div class="kt_widget_tabs">
                 <ul class="clearfix kt-tabs-nav">
-                    <?php if( $select_view ){ ?><li><a href="#kt_tab_view<?php echo $rand; ?>"><span><?php _e( 'Most View', THEME_LANG ); ?></span><i class="fa fa-eye"></i></a></li><?php } ?>
-                    <?php if( $select_recent ){ ?><li><a href="#kt_tab_recent<?php echo $rand; ?>"><span><?php _e( 'Most recent', THEME_LANG ); ?></span><i class="fa fa-newspaper-o"></i></a></li><?php } ?>
-                    <?php if( $select_comments ){ ?><li><a href="#kt_tab_comments<?php echo $rand; ?>"><span><?php _e( 'Most comment', THEME_LANG ); ?></span><i class="fa fa-comments-o"></i></a></li><?php } ?>
+                    <?php if( $select_view ){ ?><li><a href="#kt_tab_view<?php echo $rand; ?>"><span><?php esc_html_e( 'Most View', 'aquila' ); ?></span><i class="fa fa-eye"></i></a></li><?php } ?>
+                    <?php if( $select_recent ){ ?><li><a href="#kt_tab_recent<?php echo $rand; ?>"><span><?php esc_html_e( 'Most recent', 'aquila' ); ?></span><i class="fa fa-newspaper-o"></i></a></li><?php } ?>
+                    <?php if( $select_comments ){ ?><li><a href="#kt_tab_comments<?php echo $rand; ?>"><span><?php esc_html_e( 'Most comment', 'aquila' ); ?></span><i class="fa fa-comments-o"></i></a></li><?php } ?>
                 </ul>
                 <div class="tabs-container">
                     <?php
@@ -167,27 +167,27 @@ class WP_Widget_KT_Tabs extends WP_Widget {
         $number    = isset( $instance['number'] ) ? absint( $instance['number'] ) : 5;
 		
 	?>
-    <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+    <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
     <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
     
-    <h4><?php _e('Select Tabs', THEME_LANG); ?></h4>
+    <h4><?php esc_html_e('Select Tabs', 'aquila'); ?></h4>
     <p>
         <input class="checkbox" type="checkbox" <?php checked( $select_view ); ?> id="<?php echo $this->get_field_id( 'select_view' ); ?>" name="<?php echo $this->get_field_name( 'select_view' ); ?>" />
-        <label for="<?php echo $this->get_field_id( 'select_view' ); ?>"><?php _e( 'Display Most View',THEME_LANG ); ?></label>
+        <label for="<?php echo $this->get_field_id( 'select_view' ); ?>"><?php esc_html_e( 'Display Most View','aquila' ); ?></label>
     </p>
     <p>
         <input class="checkbox" type="checkbox" <?php checked( $select_recent ); ?> id="<?php echo $this->get_field_id( 'select_recent' ); ?>" name="<?php echo $this->get_field_name( 'select_recent' ); ?>" />
-        <label for="<?php echo $this->get_field_id( 'select_recent' ); ?>"><?php _e( 'Display Recent Posts',THEME_LANG ); ?></label>
+        <label for="<?php echo $this->get_field_id( 'select_recent' ); ?>"><?php esc_html_e( 'Display Recent Posts','aquila' ); ?></label>
     </p>
     <p>
         <input class="checkbox" type="checkbox" <?php checked( $select_comments ); ?> id="<?php echo $this->get_field_id( 'select_comments' ); ?>" name="<?php echo $this->get_field_name( 'select_comments' ); ?>" />
-        <label for="<?php echo $this->get_field_id( 'select_comments' ); ?>"><?php _e( 'Display Most Comments',THEME_LANG ); ?></label>
+        <label for="<?php echo $this->get_field_id( 'select_comments' ); ?>"><?php esc_html_e( 'Display Most Comments','aquila' ); ?></label>
     </p>
     
-    <h4><?php _e('Options Tabs', THEME_LANG); ?></h4>
+    <h4><?php esc_html_e('Options Tabs', 'aquila'); ?></h4>
     
     <p>
-        <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of posts to show:' ); ?></label>
+        <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts to show:' ); ?></label>
         <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" class="widefat" />
     </p>
 <?php

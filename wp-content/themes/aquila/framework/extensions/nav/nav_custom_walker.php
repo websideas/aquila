@@ -246,7 +246,7 @@ class KTMegaWalker extends Walker_Nav_Menu{
                 $item_output .= sprintf(
                     '<a href="%s">%s</a>',
                     get_category_link( $item->object_id ),
-                    __('See all', THEME_LANG)
+                    __('See all', 'aquila')
                 );
                 $item_output .= '</div>';
 

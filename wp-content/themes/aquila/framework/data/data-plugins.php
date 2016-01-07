@@ -64,6 +64,11 @@ function kt_register_plugins() {
             'slug' => 'breadcrumb-navxt',
             'required' => false,
         ),
+        array(
+            'name' => 'WP Instagram Widget',
+            'slug' => 'wp-instagram-widget',
+            'required' => false,
+        ),
 
 
         //Breadcrumb NavXT
@@ -71,7 +76,7 @@ function kt_register_plugins() {
     );
   
     // Change this to your theme text domain, used for internationalising strings
-    $theme_text_domain = THEME_LANG;
+    $theme_text_domain = 'aquila';
   
     /**
      * Array of configuration settings. Amend each line as needed.

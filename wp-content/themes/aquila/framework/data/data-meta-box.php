@@ -19,7 +19,7 @@ function kt_register_meta_boxes( $meta_boxes )
     $image_sizes = kt_get_image_sizes();
     $menus = wp_get_nav_menus();
 
-    $menus_arr = array('' => __('Default', THEME_LANG));
+    $menus_arr = array('' => esc_html__('Default', 'aquila'));
     foreach ( $menus as $menu ) {
         $menus_arr[$menu->term_id] = esc_html( $menu->name );
     }
@@ -35,24 +35,24 @@ function kt_register_meta_boxes( $meta_boxes )
      *
      */
     $meta_boxes[] = array(
-        'title'  => __('Audio Settings',THEME_LANG),
+        'title'  => esc_html__('Audio Settings','aquila'),
         'pages'  => array( 'post' ),
         'show'   => array(
             'post_format' => array( 'Audio'),
         ),
         'fields' => array(
             array(
-                'name' => __('Audio Type', THEME_LANG),
+                'name' => esc_html__('Audio Type', 'aquila'),
                 'id' => $prefix . 'audio_type',
                 'type'     => 'select',
                 'options'  => array(
-                    '' => __('Select Option', THEME_LANG),
-                    'upload' => __('Upload', THEME_LANG),
-                    'soundcloud' => __('Soundcloud', THEME_LANG),
+                    '' => esc_html__('Select Option', 'aquila'),
+                    'upload' => esc_html__('Upload', 'aquila'),
+                    'soundcloud' => esc_html__('Soundcloud', 'aquila'),
                 ),
             ),
             array(
-                'name'             => __( 'Upload MP3 File', THEME_LANG ),
+                'name'             => __( 'Upload MP3 File', 'aquila' ),
                 'id'               => "{$prefix}audio_mp3",
                 'type'             => 'file_advanced',
                 'max_file_uploads' => 1,
@@ -60,8 +60,8 @@ function kt_register_meta_boxes( $meta_boxes )
                 'visible' => array($prefix . 'audio_type', '=', 'upload')
             ),
             array(
-                'name' => __( 'Soundcloud', THEME_LANG ),
-                'desc' => __( 'Paste embed iframe or Wordpress shortcode.', THEME_LANG ),
+                'name' => esc_html__( 'Soundcloud', 'aquila' ),
+                'desc' => esc_html__( 'Paste embed iframe or Wordpress shortcode.', 'aquila' ),
                 'id'   => "{$prefix}audio_soundcloud",
                 'type' => 'textarea',
                 'cols' => 20,
@@ -77,7 +77,7 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Video Settings',THEME_LANG),
+        'title'  => esc_html__('Video Settings','aquila'),
         'pages'  => array( 'post' ),
         'show'   => array(
             'post_format' => array( 'Video'),
@@ -85,28 +85,28 @@ function kt_register_meta_boxes( $meta_boxes )
 
         'fields' => array(
             array(
-                'name' => __('Video Type', THEME_LANG),
+                'name' => esc_html__('Video Type', 'aquila'),
                 'id' => $prefix . 'video_type',
                 'type'     => 'select',
                 'options'  => array(
-                    '' => __('Select Option', THEME_LANG),
-                    'external' => __('External url', THEME_LANG),
+                    '' => esc_html__('Select Option', 'aquila'),
+                    'external' => esc_html__('External url', 'aquila'),
                 ),
             ),
             array(
-                'name' => __('Choose Video', THEME_LANG),
+                'name' => esc_html__('Choose Video', 'aquila'),
                 'id' => $prefix . 'choose_video',
                 'type'     => 'select',
                 'options'  => array(
-                    'youtube' => __('Youtube', THEME_LANG),
-                    'vimeo' => __('Vimeo', THEME_LANG),
+                    'youtube' => esc_html__('Youtube', 'aquila'),
+                    'vimeo' => esc_html__('Vimeo', 'aquila'),
                 ),
                 'visible' => array($prefix . 'video_type', '=', 'external')
             ),
             array(
-                'name' => __( 'Video id', THEME_LANG ),
+                'name' => esc_html__( 'Video id', 'aquila' ),
                 'id' => $prefix . 'video_id',
-                'desc' => sprintf( __( 'Enter id of video .Example: <br />- Link video youtube: https://www.youtube.com/watch?v=nPOO1Coe2DI id of video: nPOO1Coe2DI <br /> -Link vimeo: https://vimeo.com/70296428 id video: 70296428.', THEME_LANG ) ),
+                'desc' => sprintf( esc_html__( 'Enter id of video .Example: <br />- Link video youtube: https://www.youtube.com/watch?v=nPOO1Coe2DI id of video: nPOO1Coe2DI <br /> -Link vimeo: https://vimeo.com/70296428 id video: 70296428.', 'aquila' ) ),
                 'type'  => 'text',
                 'visible' => array($prefix . 'video_type', '=', 'external')
             ),
@@ -119,7 +119,7 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Gallery Settings',THEME_LANG),
+        'title'  => esc_html__('Gallery Settings','aquila'),
         'pages'  => array( 'post' ),
         'show'   => array(
             'post_format' => array( 'Gallery'),
@@ -127,35 +127,35 @@ function kt_register_meta_boxes( $meta_boxes )
 
         'fields' => array(
             array(
-                'name' => __('Gallery Type', THEME_LANG),
+                'name' => esc_html__('Gallery Type', 'aquila'),
                 'id' => $prefix . 'gallery_type',
                 'type'     => 'select',
                 'options'  => array(
-                    'slider' => __('Default', THEME_LANG),
-                    'grid' => __('Grid', THEME_LANG),
-                    'revslider' => __('Revolution Slider', THEME_LANG),
-                    'layerslider' => __('Layer Slider', THEME_LANG)
+                    'slider' => esc_html__('Default', 'aquila'),
+                    'grid' => esc_html__('Grid', 'aquila'),
+                    'revslider' => esc_html__('Revolution Slider', 'aquila'),
+                    'layerslider' => esc_html__('Layer Slider', 'aquila')
                 ),
             ),
             array(
-                'name' => __('Select Revolution Slider', THEME_LANG),
+                'name' => esc_html__('Select Revolution Slider', 'aquila'),
                 'id' => $prefix . 'gallery_rev_slider',
                 'default' => true,
                 'type' => 'revSlider',
                 'visible' => array($prefix . 'gallery_type','=', 'revslider' ),
             ),
             array(
-                'name' => __('Select Layer Slider', THEME_LANG),
+                'name' => esc_html__('Select Layer Slider', 'aquila'),
                 'id' => $prefix . 'gallery_layerslider',
                 'default' => true,
                 'type' => 'layerslider',
                 'visible' => array($prefix . 'gallery_type','=', 'layerslider' ),
             ),
             array(
-                'name' => __( 'Gallery images', THEME_LANG ),
+                'name' => esc_html__( 'Gallery images', 'aquila' ),
                 'id'  => "{$prefix}gallery_images",
                 'type' => 'image_advanced',
-                'desc' => __( "You can drag and drop for change order image", THEME_LANG ),
+                'desc' => esc_html__( "You can drag and drop for change order image", 'aquila' ),
                 'visible' => array($prefix . 'gallery_type', 'in', array('slider', 'grid' )),
             ),
         ),
@@ -169,16 +169,16 @@ function kt_register_meta_boxes( $meta_boxes )
      */
     /*
     $meta_boxes[] = array(
-        'title'  => __('Link Settings',THEME_LANG),
+        'title'  => esc_html__('Link Settings','aquila'),
         'pages'  => array( 'post' ),
         'show'   => array(
             'post_format' => array( 'Link'),
         ),
         'fields' => array(
             array(
-                'name' => __( 'External URL', THEME_LANG ),
+                'name' => esc_html__( 'External URL', 'aquila' ),
                 'id' => $prefix . 'external_url',
-                'desc' => __( "Input your link in here", THEME_LANG ),
+                'desc' => esc_html__( "Input your link in here", 'aquila' ),
                 'type'  => 'text',
             ),
 
@@ -192,24 +192,24 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Quote Settings',THEME_LANG),
+        'title'  => esc_html__('Quote Settings','aquila'),
         'pages'  => array( 'post' ),
         'show'   => array(
             'post_format' => array( 'Quote'),
         ),
         'fields' => array(
             array(
-                'name' => __( 'Quote Content', THEME_LANG ),
-                'desc' => __( 'Please type the text for your quote here.', THEME_LANG ),
+                'name' => esc_html__( 'Quote Content', 'aquila' ),
+                'desc' => esc_html__( 'Please type the text for your quote here.', 'aquila' ),
                 'id'   => "{$prefix}quote_content",
                 'type' => 'textarea',
                 'cols' => 20,
                 'rows' => 3,
             ),
             array(
-                'name' => __( 'Author', THEME_LANG ),
+                'name' => esc_html__( 'Author', 'aquila' ),
                 'id' => $prefix . 'quote_author',
-                'desc' => __( "Please type the text for author quote here.", THEME_LANG ),
+                'desc' => esc_html__( "Please type the text for author quote here.", 'aquila' ),
                 'type'  => 'text',
             ),
 
@@ -222,25 +222,25 @@ function kt_register_meta_boxes( $meta_boxes )
      */
 
     $meta_boxes[] = array(
-        'title'  => __('Post Slider Settings',THEME_LANG),
+        'title'  => esc_html__('Post Slider Settings','aquila'),
         'pages'  => array( 'kt-post-slider' ),
         'fields' => array(
 
             array(
-                'name' => __('Data source', THEME_LANG),
+                'name' => esc_html__('Data source', 'aquila'),
                 'id'   => "{$prefix}slideshow_source",
                 'type' => 'select',
                 'options' => array(
-                    ''              => __('All', THEME_LANG),
-                    'categories'    => __('Specific Categories', THEME_LANG),
-                    'authors'		=> __('Specific Authors', THEME_LANG),
-                    'posts'		=> __('Specific Posts', THEME_LANG),
+                    ''              => esc_html__('All', 'aquila'),
+                    'categories'    => esc_html__('Specific Categories', 'aquila'),
+                    'authors'		=> esc_html__('Specific Authors', 'aquila'),
+                    'posts'		=> esc_html__('Specific Posts', 'aquila'),
                 ),
                 'std'  => '',
             ),
             // Categories
             array(
-                'name'    => __( 'Specific Categories', THEME_LANG ),
+                'name'    => esc_html__( 'Specific Categories', 'aquila' ),
                 'id'      => "{$prefix}slideshow_categories",
                 'type'    => 'taxonomy_advanced',
                 'multiple'=> true,
@@ -254,7 +254,7 @@ function kt_register_meta_boxes( $meta_boxes )
 
             // Authors
             array(
-                'name'    => __( 'Specific Authors', THEME_LANG ),
+                'name'    => esc_html__( 'Specific Authors', 'aquila' ),
                 'id'      => "{$prefix}slideshow_authors",
                 'type'    => 'user',
                 'multiple'=> true,
@@ -265,7 +265,7 @@ function kt_register_meta_boxes( $meta_boxes )
             ),
             // Posts
             array(
-                'name'        => __( 'Posts', THEME_LANG ),
+                'name'        => esc_html__( 'Posts', 'aquila' ),
                 'id'          => "{$prefix}slideshow_posts",
                 'type'        => 'post',
                 'post_type'   => 'post',
@@ -278,59 +278,59 @@ function kt_register_meta_boxes( $meta_boxes )
                 'visible' => array($prefix . 'slideshow_source', '=', 'posts'),
             ),
             array(
-                'name' => __('Posts Slider style', THEME_LANG),
+                'name' => esc_html__('Posts Slider style', 'aquila'),
                 'id'   => "{$prefix}slideshow_slider_style",
                 'type' => 'select',
                 'options' => array(
-                    'normal'        => __('Normal Carousel', THEME_LANG),
-                    'big'           => __('Big Carousel', THEME_LANG),
-                    'slider'        => __('Posts slider', THEME_LANG),
-                    'thumb'         => __('Thumb slider', THEME_LANG),
-                    //'carousel'      => __('Small Carousel', THEME_LANG),
+                    'normal'        => esc_html__('Normal Carousel', 'aquila'),
+                    'big'           => esc_html__('Big Carousel', 'aquila'),
+                    'slider'        => esc_html__('Posts slider', 'aquila'),
+                    'thumb'         => esc_html__('Thumb slider', 'aquila'),
+                    //'carousel'      => esc_html__('Small Carousel', 'aquila'),
                 ),
                 'std'  => '',
             ),
             array(
                 'type' => 'text',
-                'name' => __( 'Number of items', THEME_LANG ),
+                'name' => esc_html__( 'Number of items', 'aquila' ),
                 'id' => $prefix.'slideshow_max_items',
                 'std' => 10, // default value
-                'desc' => __( 'Set max limit for items in grid or enter -1 to display all (limited to 1000).', THEME_LANG ),
+                'desc' => esc_html__( 'Set max limit for items in grid or enter -1 to display all (limited to 1000).', 'aquila' ),
             ),
             array(
                 'type' => 'select',
-                'name' => __( 'Order by', THEME_LANG ),
+                'name' => esc_html__( 'Order by', 'aquila' ),
                 'id' => $prefix.'slideshow_orderby',
                 'options' => array(
-                    'date' => __( 'Date', THEME_LANG ),
-                    'ID' => __( 'Order by post ID', THEME_LANG ),
-                    'author' => __( 'Author', THEME_LANG ),
-                    'title' => __( 'Title', THEME_LANG ),
-                    'modified' => __( 'Last modified date', THEME_LANG ),
-                    'parent' => __( 'Post/page parent ID', THEME_LANG ),
-                    'comment_count' => __( 'Number of comments', THEME_LANG ),
-                    'menu_order' => __( 'Menu order/Page Order', THEME_LANG ),
-                    'meta_value' => __( 'Meta value', THEME_LANG ),
-                    'meta_value_num' => __( 'Meta value number', THEME_LANG )
+                    'date' => esc_html__( 'Date', 'aquila' ),
+                    'ID' => esc_html__( 'Order by post ID', 'aquila' ),
+                    'author' => esc_html__( 'Author', 'aquila' ),
+                    'title' => esc_html__( 'Title', 'aquila' ),
+                    'modified' => esc_html__( 'Last modified date', 'aquila' ),
+                    'parent' => esc_html__( 'Post/page parent ID', 'aquila' ),
+                    'comment_count' => esc_html__( 'Number of comments', 'aquila' ),
+                    'menu_order' => esc_html__( 'Menu order/Page Order', 'aquila' ),
+                    'meta_value' => esc_html__( 'Meta value', 'aquila' ),
+                    'meta_value_num' => esc_html__( 'Meta value number', 'aquila' )
                 ),
-                'desc' => __( 'Select order type. If "Meta value" or "Meta value Number" is chosen then meta key is required.', THEME_LANG ),
+                'desc' => esc_html__( 'Select order type. If "Meta value" or "Meta value Number" is chosen then meta key is required.', 'aquila' ),
             ),
             array(
                 'type' => 'text',
-                'name' => __( 'Meta key', THEME_LANG ),
+                'name' => esc_html__( 'Meta key', 'aquila' ),
                 'id' => $prefix.'slideshow_meta_key',
                 'visible' => array($prefix . 'slideshow_orderby', 'in', array('meta_value', 'meta_value_num'))
             ),
             array(
                 'type' => 'select',
-                'name' => __( 'Sorting', THEME_LANG ),
+                'name' => esc_html__( 'Sorting', 'aquila' ),
                 'id' => $prefix.'slideshow_order',
                 'tab' => 'slideshow_displays',
                 'options' => array(
-                    'DESC' => __( 'Descending', THEME_LANG ),
-                    'ASC' => __( 'Ascending', THEME_LANG ),
+                    'DESC' => esc_html__( 'Descending', 'aquila' ),
+                    'ASC' => esc_html__( 'Ascending', 'aquila' ),
                 ),
-                'desc' => __( 'Select sorting order.', THEME_LANG ),
+                'desc' => esc_html__( 'Select sorting order.', 'aquila' ),
             ),
         ),
     );
@@ -352,60 +352,60 @@ function kt_register_meta_boxes( $meta_boxes )
         ),
         'tabs'      => array(
             'frontpage_general'  => array(
-                'label' => __( 'General', THEME_LANG ),
+                'label' => esc_html__( 'General', 'aquila' ),
                 'icon'  => 'fa fa-cogs',
             ),
             'frontpage_layout'  => array(
-                'label' => __( 'Layout', THEME_LANG ),
+                'label' => esc_html__( 'Layout', 'aquila' ),
                 'icon'  => 'fa fa-columns',
             ),
             'frontpage_displays'  => array(
-                'label' => __( 'Displays', THEME_LANG ),
+                'label' => esc_html__( 'Displays', 'aquila' ),
                 'icon'  => 'fa fa-paint-brush',
             ),
         ),
         'fields' => array(
             //General
             array(
-                'name' => __('Content', THEME_LANG),
+                'name' => esc_html__('Content', 'aquila'),
                 'id'   => "{$prefix}frontpage_content",
                 'type' => 'select',
                 'options' => array(
-                    0		=> __('This content', THEME_LANG),
-                    1		=> __('Special content', THEME_LANG),
-                    //2		=> __('Both', THEME_LANG),
+                    0		=> esc_html__('This content', 'aquila'),
+                    1		=> esc_html__('Special content', 'aquila'),
+                    //2		=> esc_html__('Both', 'aquila'),
                 ),
                 'std'  => -1,
                 'tab'  => 'frontpage_general',
             ),
             array(
-                'name' => __('Data source', THEME_LANG),
+                'name' => esc_html__('Data source', 'aquila'),
                 'id'   => "{$prefix}frontpage_source",
                 'type' => 'select',
                 'options' => array(
-                    ''              => __('All', THEME_LANG),
-                    'categories'    => __('Specific Categories', THEME_LANG),
-                    'authors'		=> __('Specific Authors', THEME_LANG),
-                    'posts'		=> __('Specific Posts', THEME_LANG),
+                    ''              => esc_html__('All', 'aquila'),
+                    'categories'    => esc_html__('Specific Categories', 'aquila'),
+                    'authors'		=> esc_html__('Specific Authors', 'aquila'),
+                    'posts'		=> esc_html__('Specific Posts', 'aquila'),
                 ),
                 'std'  => '',
                 'tab'  => 'frontpage_general',
                 'visible' => array($prefix . 'frontpage_content', '=', '1')
             ),
             array(
-                'name' => __('Show Promo Widget', THEME_LANG),
+                'name' => esc_html__('Show Promo Widget', 'aquila'),
                 'id'   => "{$prefix}promo_widget",
                 'type' => 'select',
                 'options' => array(
-                    'no'    => __('No', THEME_LANG),
-                    'yes'       => __('Yes', THEME_LANG),
+                    'no'    => esc_html__('No', 'aquila'),
+                    'yes'       => esc_html__('Yes', 'aquila'),
                 ),
                 'std'  => 'no',
                 'tab'  => 'frontpage_general',
             ),
             // Categories
             array(
-                'name'    => __( 'Specific Categories', THEME_LANG ),
+                'name'    => esc_html__( 'Specific Categories', 'aquila' ),
                 'id'      => "{$prefix}categories",
                 'type'    => 'taxonomy_advanced',
                 'multiple'=> true,
@@ -419,7 +419,7 @@ function kt_register_meta_boxes( $meta_boxes )
             ),
             // Authors
             array(
-                'name'    => __( 'Specific Authors', THEME_LANG ),
+                'name'    => esc_html__( 'Specific Authors', 'aquila' ),
                 'id'      => "{$prefix}authors",
                 'type'    => 'user',
                 'multiple'=> true,
@@ -431,7 +431,7 @@ function kt_register_meta_boxes( $meta_boxes )
             ),
             // POST
             array(
-                'name'        => __( 'Posts', THEME_LANG ),
+                'name'        => esc_html__( 'Posts', 'aquila' ),
                 'id'          => "{$prefix}posts",
                 'type'        => 'post',
                 'post_type'   => 'post',
@@ -446,39 +446,39 @@ function kt_register_meta_boxes( $meta_boxes )
             ),
 
             array(
-                'name' => __('Blog type', THEME_LANG),
+                'name' => esc_html__('Blog type', 'aquila'),
                 'id'   => "{$prefix}frontpage_type",
                 'type' => 'select',
                 'options' => array(
-                    'list'      => __('List', THEME_LANG),
-                    'medium'    => __('Medium', THEME_LANG),
-                    'grid'		=> __('Grid', THEME_LANG),
-                    'masonry'   => __('Masonry', THEME_LANG),
+                    'list'      => esc_html__('List', 'aquila'),
+                    'medium'    => esc_html__('Medium', 'aquila'),
+                    'grid'		=> esc_html__('Grid', 'aquila'),
+                    'masonry'   => esc_html__('Masonry', 'aquila'),
                 ),
                 'std'  => 'standard',
                 'tab'  => 'frontpage_layout',
             ),
 
             array(
-                'name' => __('Blog columns', THEME_LANG),
+                'name' => esc_html__('Blog columns', 'aquila'),
                 'id'   => "{$prefix}frontpage_columns",
                 'type' => 'select',
                 'options' => array(
-                    '2'    => __('2', THEME_LANG),
-                    '3'    => __('3', THEME_LANG),
-                    '4'    => __('4', THEME_LANG),
+                    '2'    => esc_html__('2', 'aquila'),
+                    '3'    => esc_html__('3', 'aquila'),
+                    '4'    => esc_html__('4', 'aquila'),
                 ),
                 'std'  => '2',
                 'tab'  => 'frontpage_layout',
                 'visible' => array($prefix . 'frontpage_type','in', array('masonry', 'grid' )),
             ),
             array(
-                'name' => __( 'First featured', THEME_LANG ),
+                'name' => esc_html__( 'First featured', 'aquila' ),
                 'id'   => "{$prefix}first_featured",
                 'type' => 'checkbox',
                 'std'  => 1,
                 'tab'  => 'frontpage_layout',
-                'desc' => __( 'Check it if you want the first article is featured.', 'js_composer' ),
+                'desc' => esc_html__( 'Check it if you want the first article is featured.', 'js_composer' ),
             ),
 
 
@@ -486,12 +486,12 @@ function kt_register_meta_boxes( $meta_boxes )
 
             /*
             array(
-                'name' => __('Blog type', THEME_LANG),
+                'name' => esc_html__('Blog type', 'aquila'),
                 'id'   => "{$prefix}frontpage_type",
                 'type' => 'select',
                 'options' => array(
-                    'full' => __('Full text', THEME_LANG),
-                    'summary' => __('Summary', THEME_LANG)
+                    'full' => esc_html__('Full text', 'aquila'),
+                    'summary' => esc_html__('Summary', 'aquila')
                 ),
                 'std'  => 'summary',
                 'tab'  => 'frontpage_layout',
@@ -501,34 +501,34 @@ function kt_register_meta_boxes( $meta_boxes )
             //Displays
             array(
                 'type' => 'text',
-                'name' => __( 'Number of items', THEME_LANG ),
+                'name' => esc_html__( 'Number of items', 'aquila' ),
                 'id' => $prefix.'max_items',
                 'std' => 10, // default value
-                'desc' => __( 'Set max limit for items in grid or enter -1 to display all (limited to 1000).', THEME_LANG ),
+                'desc' => esc_html__( 'Set max limit for items in grid or enter -1 to display all (limited to 1000).', 'aquila' ),
                 'tab'  => 'frontpage_displays',
             ),
             array(
                 'type' => 'select',
-                'name' => __( 'Order by', THEME_LANG ),
+                'name' => esc_html__( 'Order by', 'aquila' ),
                 'id' => $prefix.'frontpage_orderby',
                 'options' => array(
-                    'date' => __( 'Date', THEME_LANG ),
-                    'ID' => __( 'Order by post ID', THEME_LANG ),
-                    'author' => __( 'Author', THEME_LANG ),
-                    'title' => __( 'Title', THEME_LANG ),
-                    'modified' => __( 'Last modified date', THEME_LANG ),
-                    'parent' => __( 'Post/page parent ID', THEME_LANG ),
-                    'comment_count' => __( 'Number of comments', THEME_LANG ),
-                    'menu_order' => __( 'Menu order/Page Order', THEME_LANG ),
-                    'meta_value' => __( 'Meta value', THEME_LANG ),
-                    'meta_value_num' => __( 'Meta value number', THEME_LANG )
+                    'date' => esc_html__( 'Date', 'aquila' ),
+                    'ID' => esc_html__( 'Order by post ID', 'aquila' ),
+                    'author' => esc_html__( 'Author', 'aquila' ),
+                    'title' => esc_html__( 'Title', 'aquila' ),
+                    'modified' => esc_html__( 'Last modified date', 'aquila' ),
+                    'parent' => esc_html__( 'Post/page parent ID', 'aquila' ),
+                    'comment_count' => esc_html__( 'Number of comments', 'aquila' ),
+                    'menu_order' => esc_html__( 'Menu order/Page Order', 'aquila' ),
+                    'meta_value' => esc_html__( 'Meta value', 'aquila' ),
+                    'meta_value_num' => esc_html__( 'Meta value number', 'aquila' )
                 ),
-                'desc' => __( 'Select order type. If "Meta value" or "Meta value Number" is chosen then meta key is required.', THEME_LANG ),
+                'desc' => esc_html__( 'Select order type. If "Meta value" or "Meta value Number" is chosen then meta key is required.', 'aquila' ),
                 'tab' => 'frontpage_displays'
             ),
             array(
                 'type' => 'text',
-                'name' => __( 'Meta key', THEME_LANG ),
+                'name' => esc_html__( 'Meta key', 'aquila' ),
                 'id' => $prefix.'frontpage_meta_key',
                 'tab' => 'frontpage_displays',
                 'visible' => array($prefix . 'frontpage_orderby', 'in', array('meta_value', 'meta_value_num'))
@@ -536,21 +536,21 @@ function kt_register_meta_boxes( $meta_boxes )
             ),
             array(
                 'type' => 'select',
-                'name' => __( 'Sorting', THEME_LANG ),
+                'name' => esc_html__( 'Sorting', 'aquila' ),
                 'id' => $prefix.'frontpage_order',
                 'tab' => 'frontpage_displays',
                 'options' => array(
-                    'DESC' => __( 'Descending', THEME_LANG ),
-                    'ASC' => __( 'Ascending', THEME_LANG ),
+                    'DESC' => esc_html__( 'Descending', 'aquila' ),
+                    'ASC' => esc_html__( 'Ascending', 'aquila' ),
                 ),
-                'desc' => __( 'Select sorting order.', THEME_LANG ),
+                'desc' => esc_html__( 'Select sorting order.', 'aquila' ),
             ),
             array(
                 'type' => 'text',
-                'name' => __( 'Excerpt Length', THEME_LANG ),
+                'name' => esc_html__( 'Excerpt Length', 'aquila' ),
                 'id' => $prefix.'excerpt_length',
                 'std' => 30, // default value
-                'desc' => __( 'Insert the number of words you want to show in the post excerpts.',THEME_LANG ),
+                'desc' => esc_html__( 'Insert the number of words you want to show in the post excerpts.','aquila' ),
                 'tab'  => 'frontpage_displays',
             ),
         )
@@ -560,11 +560,11 @@ function kt_register_meta_boxes( $meta_boxes )
 
     $tabs = array(
         'page_layout' => array(
-            'label' => __( 'Layout', THEME_LANG ),
+            'label' => esc_html__( 'Layout', 'aquila' ),
             'icon'  => 'fa fa-columns',
         ),
         'page_background' => array(
-            'label' => __( 'Background', THEME_LANG ),
+            'label' => esc_html__( 'Background', 'aquila' ),
             'icon'  => 'fa fa-picture-o',
         )
 
@@ -576,84 +576,84 @@ function kt_register_meta_boxes( $meta_boxes )
 
         //Page layout
         array(
-            'name' => __('Page layout', THEME_LANG),
+            'name' => esc_html__('Page layout', 'aquila'),
             'id' => $prefix . 'layout',
-            'desc' => __("Please choose this page's layout.", THEME_LANG),
+            'desc' => esc_html__("Please choose this page's layout.", 'aquila'),
             'type' => 'select',
             'options' => array(
-                'default' => __('Default', THEME_LANG),
-                'full' => __('Full width Layout', THEME_LANG),
-                'boxed' => __('Boxed Layout', THEME_LANG),
+                'default' => esc_html__('Default', 'aquila'),
+                'full' => esc_html__('Full width Layout', 'aquila'),
+                'boxed' => esc_html__('Boxed Layout', 'aquila'),
             ),
             'std' => 'default',
             'tab'  => 'page_layout',
         ),
         array(
-            'name' => __('Sidebar configuration', THEME_LANG),
+            'name' => esc_html__('Sidebar configuration', 'aquila'),
             'id' => $prefix . 'sidebar',
-            'desc' => __("Choose the sidebar configuration for the detail page.<br/><b>Note: Cart and checkout, My account page always use no sidebars.</b>", THEME_LANG),
+            'desc' => esc_html__("Choose the sidebar configuration for the detail page.<br/><b>Note: Cart and checkout, My account page always use no sidebars.</b>", 'aquila'),
             'type' => 'select',
             'options' => array(
-                0 => __('Default', THEME_LANG),
-                'full' => __('No sidebars', THEME_LANG),
-                'left' => __('Left Sidebar', THEME_LANG),
-                'right' => __('Right Sidebar', THEME_LANG)
+                0 => esc_html__('Default', 'aquila'),
+                'full' => esc_html__('No sidebars', 'aquila'),
+                'left' => esc_html__('Left Sidebar', 'aquila'),
+                'right' => esc_html__('Right Sidebar', 'aquila')
             ),
             'std' => 'default',
             'tab'  => 'page_layout',
         ),
         array(
-            'name' => __('Left sidebar', THEME_LANG),
+            'name' => esc_html__('Left sidebar', 'aquila'),
             'id' => $prefix . 'left_sidebar',
             'type' => 'select',
             'tab'  => 'page_layout',
             'options' => $sidebars,
-            'desc' => __("Select your sidebar.", THEME_LANG),
+            'desc' => esc_html__("Select your sidebar.", 'aquila'),
             'visible' => array($prefix . 'sidebar','=', 'left' ),
         ),
         array(
-            'name' => __('Right sidebar', THEME_LANG),
+            'name' => esc_html__('Right sidebar', 'aquila'),
             'id' => $prefix . 'right_sidebar',
             'type' => 'select',
             'tab'  => 'page_layout',
             'options' => $sidebars,
-            'desc' => __("Select your sidebar.", THEME_LANG),
+            'desc' => esc_html__("Select your sidebar.", 'aquila'),
             'visible' => array($prefix . 'sidebar','=', 'right' ),
         ),
         array(
-            'name' => __('Page top spacing', THEME_LANG),
+            'name' => esc_html__('Page top spacing', 'aquila'),
             'id' => $prefix . 'page_top_spacing',
-            'desc' => __("Enter your page top spacing (Example: 100px).", THEME_LANG ),
+            'desc' => esc_html__("Enter your page top spacing (Example: 100px).", 'aquila' ),
             'type'  => 'text',
             'tab'  => 'page_layout',
         ),
         array(
-            'name' => __('Page bottom spacing', THEME_LANG),
+            'name' => esc_html__('Page bottom spacing', 'aquila'),
             'id' => $prefix . 'page_bottom_spacing',
-            'desc' => __("Enter your page bottom spacing (Example: 100px).", THEME_LANG ),
+            'desc' => esc_html__("Enter your page bottom spacing (Example: 100px).", 'aquila' ),
             'type'  => 'text',
             'tab'  => 'page_layout',
         ),
         array(
-            'name' => __('Extra page class', THEME_LANG),
+            'name' => esc_html__('Extra page class', 'aquila'),
             'id' => $prefix . 'extra_page_class',
-            'desc' => __('If you wish to add extra classes to the body class of the page (for custom css use), then please add the class(es) here.', THEME_LANG ),
+            'desc' => esc_html__('If you wish to add extra classes to the body class of the page (for custom css use), then please add the class(es) here.', 'aquila' ),
             'type'  => 'text',
             'tab'  => 'page_layout',
         ),
         array(
-            'name' => __('Background', THEME_LANG),
+            'name' => esc_html__('Background', 'aquila'),
             'id' => $prefix.'background_body',
             'type'  => 'background',
             'tab'  => 'page_background',
-            'desc' => __('The option that will be used as the OUTER page.', THEME_LANG ),
+            'desc' => esc_html__('The option that will be used as the OUTER page.', 'aquila' ),
         ),
         array(
-            'name' => __('Inner Background', THEME_LANG),
+            'name' => esc_html__('Inner Background', 'aquila'),
             'id' => $prefix.'background_inner',
             'type'  => 'background',
             'tab'  => 'page_background',
-            'desc' => __('The option that will be used as the INNER page.', THEME_LANG ),
+            'desc' => esc_html__('The option that will be used as the INNER page.', 'aquila' ),
         )
     );
 
@@ -661,11 +661,11 @@ function kt_register_meta_boxes( $meta_boxes )
 
     $tabs_page = array(
         'header'  => array(
-            'label' => __( 'Header', THEME_LANG ),
+            'label' => esc_html__( 'Header', 'aquila' ),
             'icon'  => 'fa fa-desktop',
         ),
         'page_header' => array(
-            'label' => __( 'Page Header', THEME_LANG ),
+            'label' => esc_html__( 'Page Header', 'aquila' ),
             'icon'  => 'fa fa-bars',
         )
     );
@@ -674,30 +674,30 @@ function kt_register_meta_boxes( $meta_boxes )
         // Page Header
         array(
 
-            'name' => __( 'Page Header', THEME_LANG ),
+            'name' => esc_html__( 'Page Header', 'aquila' ),
             'id' => $prefix . 'page_header',
-            'desc' => __( "Show Page Header.", THEME_LANG ),
+            'desc' => esc_html__( "Show Page Header.", 'aquila' ),
             'type' => 'select',
             'options' => array(
-                ''          => __('Default', THEME_LANG),
-                'off'	    => __('Hidden', THEME_LANG),
-                'on'		=> __('Show', THEME_LANG),
+                ''          => esc_html__('Default', 'aquila'),
+                'off'	    => esc_html__('Hidden', 'aquila'),
+                'on'		=> esc_html__('Show', 'aquila'),
             ),
             'std'  => '',
             'tab'  => 'page_header',
         ),
         array(
-            'name' => __( 'Page Header Custom Text', THEME_LANG ),
+            'name' => esc_html__( 'Page Header Custom Text', 'aquila' ),
             'id' => $prefix . 'page_header_custom',
-            'desc' => __( "Enter cstom Text for page header.", THEME_LANG ),
+            'desc' => esc_html__( "Enter cstom Text for page header.", 'aquila' ),
             'type'  => 'text',
             'tab'  => 'page_header',
             'visible' => array($prefix . 'page_header', '!=', 'off')
         ),
         array(
-            'name' => __( 'Page header subtitle', THEME_LANG ),
+            'name' => esc_html__( 'Page header subtitle', 'aquila' ),
             'id' => $prefix . 'page_header_subtitle',
-            'desc' => __( "Enter subtitle for page.", THEME_LANG ),
+            'desc' => esc_html__( "Enter subtitle for page.", 'aquila' ),
             'type'  => 'text',
             'tab'  => 'page_header',
             'visible' => array($prefix . 'page_header', '!=', 'off')
@@ -705,51 +705,51 @@ function kt_register_meta_boxes( $meta_boxes )
 
         // Header
         array(
-            'name' => __('Header shadow', THEME_LANG),
+            'name' => esc_html__('Header shadow', 'aquila'),
             'id'   => "{$prefix}header_shadow",
             'type' => 'select',
             'options' => array(
-                ''    => __('Default', THEME_LANG),
-                'off'		=> __('Hidden', THEME_LANG),
-                'on'		=> __('Show', THEME_LANG),
+                ''    => esc_html__('Default', 'aquila'),
+                'off'		=> esc_html__('Hidden', 'aquila'),
+                'on'		=> esc_html__('Show', 'aquila'),
             ),
             'std'  => '',
             'tab'  => 'header',
-            'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
+            'desc' => esc_html__('Select "Default" to use settings in Theme Options', 'aquila')
         ),
         array(
-            'name'    => __( 'Header position', THEME_LANG ),
+            'name'    => esc_html__( 'Header position', 'aquila' ),
             'type'     => 'select',
             'id'       => $prefix.'header_position',
-            'desc'     => __( "Please choose header position", THEME_LANG ),
+            'desc'     => esc_html__( "Please choose header position", 'aquila' ),
             'options'  => array(
-                'default' => __('Default', THEME_LANG),
-                'below' => __('Below Slideshow', THEME_LANG),
+                'default' => esc_html__('Default', 'aquila'),
+                'below' => esc_html__('Below Slideshow', 'aquila'),
             ),
             'std'  => 'default',
             'tab'  => 'header',
         ),
         array(
-            'name' => __('Select Your Slideshow Type', THEME_LANG),
+            'name' => esc_html__('Select Your Slideshow Type', 'aquila'),
             'id' => $prefix . 'slideshow_type',
-            'desc' => __("You can select the slideshow type using this option.", THEME_LANG),
+            'desc' => esc_html__("You can select the slideshow type using this option.", 'aquila'),
             'type' => 'select',
             'options' => array(
-                '' => __('Select Option', THEME_LANG),
-                'postslider' => __('Post Slider', THEME_LANG),
-                'revslider' => __('Revolution Slider', THEME_LANG),
-                'layerslider' => __('Layer Slider', THEME_LANG),
-                'page' => __('From Page content', THEME_LANG),
+                '' => esc_html__('Select Option', 'aquila'),
+                'postslider' => esc_html__('Post Slider', 'aquila'),
+                'revslider' => esc_html__('Revolution Slider', 'aquila'),
+                'layerslider' => esc_html__('Layer Slider', 'aquila'),
+                'page' => esc_html__('From Page content', 'aquila'),
             ),
             'tab'  => 'header',
         ),
         array(
-            'name'        => __( 'Post Slider', THEME_LANG ),
+            'name'        => esc_html__( 'Post Slider', 'aquila' ),
             'id'          => "{$prefix}slideshow_postslider",
             'type'        => 'post',
             'post_type'   => 'kt-post-slider',
             'field_type'  => 'select',
-            'title'    => __( 'Slider Select Option', THEME_LANG ),
+            'title'    => esc_html__( 'Slider Select Option', 'aquila' ),
             'query_args'  => array(
                 'post_status'    => 'publish',
                 'posts_per_page' => - 1,
@@ -758,30 +758,30 @@ function kt_register_meta_boxes( $meta_boxes )
             'visible' => array($prefix . 'slideshow_type', '=', 'postslider')
         ),
         array(
-            'name' => __('Select Revolution Slider', THEME_LANG),
+            'name' => esc_html__('Select Revolution Slider', 'aquila'),
             'id' => $prefix . 'rev_slider',
             'default' => true,
             'type' => 'revSlider',
             'tab'  => 'header',
-            'desc' => __('Select the Revolution Slider.', THEME_LANG),
+            'desc' => esc_html__('Select the Revolution Slider.', 'aquila'),
             'visible' => array($prefix . 'slideshow_type', '=', 'revslider')
         ),
         array(
-            'name' => __('Select Layer Slider', THEME_LANG),
+            'name' => esc_html__('Select Layer Slider', 'aquila'),
             'id' => $prefix . 'layerslider',
             'default' => true,
             'type' => 'layerslider',
             'tab'  => 'header',
-            'desc' => __('Select the Layer Slider.', THEME_LANG),
+            'desc' => esc_html__('Select the Layer Slider.', 'aquila'),
             'visible' => array($prefix . 'slideshow_type', '=', 'layerslider')
         ),
         array(
-            'name'        => __( 'Page', THEME_LANG ),
+            'name'        => esc_html__( 'Page', 'aquila' ),
             'id'          => "{$prefix}slideshow_page",
             'type'        => 'post',
             'post_type'   => 'page',
             'field_type'  => 'select',
-            'title'    => __( 'Page Select Option', THEME_LANG ),
+            'title'    => esc_html__( 'Page Select Option', 'aquila' ),
             'query_args'  => array(
                 'post_status'    => 'publish',
                 'posts_per_page' => - 1,
@@ -797,7 +797,7 @@ function kt_register_meta_boxes( $meta_boxes )
      */
     $meta_boxes[] = array(
         'id'        => 'page_meta_boxes',
-        'title'     => __('Page Options', THEME_LANG),
+        'title'     => esc_html__('Page Options', 'aquila'),
         'pages'     => array( 'page' ),
         'tabs'      => array_merge( $tabs,$tabs_page),
         'fields'    => array_merge( $fields,$fields_page),
@@ -806,7 +806,7 @@ function kt_register_meta_boxes( $meta_boxes )
 
     $tabs_post = array(
         'post_general'  => array(
-            'label' => __( 'General', THEME_LANG ),
+            'label' => esc_html__( 'General', 'aquila' ),
             'icon'  => 'fa fa-bars',
         )
     );
@@ -814,86 +814,86 @@ function kt_register_meta_boxes( $meta_boxes )
     $fields_post = array(
         //General
         array(
-            'name' => __('Featured Post', THEME_LANG),
+            'name' => esc_html__('Featured Post', 'aquila'),
             'id'   => "{$prefix}post_featured",
             'type' => 'select',
             'options' => array(
-                'no'		=> __('No', THEME_LANG),
-                'yes'		=> __('Yes', THEME_LANG),
+                'no'		=> esc_html__('No', 'aquila'),
+                'yes'		=> esc_html__('Yes', 'aquila'),
             ),
             'std'  => 'no',
             'tab'  => 'post_general',
-            'desc' => __('Make this post featured', THEME_LANG)
+            'desc' => esc_html__('Make this post featured', 'aquila')
         ),
 
         array(
             'type' => 'select',
-            'name' => __('Post layouts', THEME_LANG),
-            'desc' => __('Select the your post layout.', THEME_LANG),
+            'name' => esc_html__('Post layouts', 'aquila'),
+            'desc' => esc_html__('Select the your post layout.', 'aquila'),
             'id'   => "{$prefix}blog_post_layout",
             'options' => array(
-                ''    => __('Default', THEME_LANG),
-                1 => __( 'Layout 1', THEME_LANG ),
-                2 => __( 'layout 2', THEME_LANG ),
-                3 => __( 'layout 3', THEME_LANG ),
-                4 => __( 'layout 4', THEME_LANG ),
-                5 => __( 'layout 5', THEME_LANG ),
-                6 => __( 'layout 6', THEME_LANG ),
+                ''    => esc_html__('Default', 'aquila'),
+                1 => esc_html__( 'Layout 1', 'aquila' ),
+                2 => esc_html__( 'layout 2', 'aquila' ),
+                3 => esc_html__( 'layout 3', 'aquila' ),
+                4 => esc_html__( 'layout 4', 'aquila' ),
+                5 => esc_html__( 'layout 5', 'aquila' ),
+                6 => esc_html__( 'layout 6', 'aquila' ),
             ),
             'std' => '',
             'tab'  => 'post_general',
         ),
         array(
-            'name' => __('Previous & next buttons', THEME_LANG),
+            'name' => esc_html__('Previous & next buttons', 'aquila'),
             'id'   => "{$prefix}prev_next",
             'type' => 'select',
             'options' => array(
-                ''    => __('Default', THEME_LANG),
-                'off'		=> __('Hidden', THEME_LANG),
-                'on'		=> __('Show', THEME_LANG),
+                ''    => esc_html__('Default', 'aquila'),
+                'off'		=> esc_html__('Hidden', 'aquila'),
+                'on'		=> esc_html__('Show', 'aquila'),
             ),
             'std'  => '',
             'tab'  => 'post_general',
-            'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
+            'desc' => esc_html__('Select "Default" to use settings in Theme Options', 'aquila')
         ),
         array(
-            'name' => __('Author info', THEME_LANG),
+            'name' => esc_html__('Author info', 'aquila'),
             'id'   => "{$prefix}author_info",
             'type' => 'select',
             'options' => array(
-                ''    => __('Default', THEME_LANG),
-                'off'		=> __('Hidden', THEME_LANG),
-                'on'		=> __('Show', THEME_LANG),
+                ''    => esc_html__('Default', 'aquila'),
+                'off'		=> esc_html__('Hidden', 'aquila'),
+                'on'		=> esc_html__('Show', 'aquila'),
             ),
             'std'  => '',
             'tab'  => 'post_general',
-            'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
+            'desc' => esc_html__('Select "Default" to use settings in Theme Options', 'aquila')
         ),
         array(
-            'name' => __('Social sharing', THEME_LANG),
+            'name' => esc_html__('Social sharing', 'aquila'),
             'id'   => "{$prefix}social_sharing",
             'type' => 'select',
             'options' => array(
-                ''    => __('Default', THEME_LANG),
-                'off'		=> __('Hidden', THEME_LANG),
-                'on'		=> __('Show', THEME_LANG),
+                ''    => esc_html__('Default', 'aquila'),
+                'off'		=> esc_html__('Hidden', 'aquila'),
+                'on'		=> esc_html__('Show', 'aquila'),
             ),
             'std'  => '',
             'tab'  => 'post_general',
-            'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
+            'desc' => esc_html__('Select "Default" to use settings in Theme Options', 'aquila')
         ),
         array(
-            'name' => __('Related articles', THEME_LANG),
+            'name' => esc_html__('Related articles', 'aquila'),
             'id'   => "{$prefix}related_acticles",
             'type' => 'select',
             'options' => array(
-                ''      => __('Default', THEME_LANG),
-                'off'    => __('Hidden', THEME_LANG),
-                'on'	=> __('Show', THEME_LANG),
+                ''      => esc_html__('Default', 'aquila'),
+                'off'    => esc_html__('Hidden', 'aquila'),
+                'on'	=> esc_html__('Show', 'aquila'),
             ),
             'std'  => '',
             'tab'  => 'post_general',
-            'desc' => __('Select "Default" to use settings in Theme Options', THEME_LANG)
+            'desc' => esc_html__('Select "Default" to use settings in Theme Options', 'aquila')
         )
     );
 

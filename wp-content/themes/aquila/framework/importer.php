@@ -45,10 +45,10 @@ if ( !function_exists( 'kt_wbc_extended_imported' ) ) {
          * Setting Menus
          *************************************************************************/
 
-        $main_menu = get_term_by( 'name', __('Main menu', THEME_LANG), 'nav_menu' );
-        $mobile = get_term_by( 'name', __('(Mobile Devices) Main Navigation Menu', THEME_LANG), 'nav_menu' );
-        $footer_menu = get_term_by( 'name', __('Footer Navigation Menu', THEME_LANG), 'nav_menu' );
-        $bottom = get_term_by( 'name', __('Bottom Menu', THEME_LANG), 'nav_menu' );
+        $main_menu = get_term_by( 'name', esc_html__('Main menu', 'aquila'), 'nav_menu' );
+        $mobile = get_term_by( 'name', esc_html__('(Mobile Devices) Main Navigation Menu', 'aquila'), 'nav_menu' );
+        $footer_menu = get_term_by( 'name', esc_html__('Footer Navigation Menu', 'aquila'), 'nav_menu' );
+        $bottom = get_term_by( 'name', esc_html__('Bottom Menu', 'aquila'), 'nav_menu' );
 
         set_theme_mod( 'nav_menu_locations', array(
                 'primary' => $main_menu->term_id,
@@ -64,7 +64,7 @@ if ( !function_exists( 'kt_wbc_extended_imported' ) ) {
 
         // array of demos/homepages to check/select from
         $wbc_home_pages = array(
-            'demo1' => 'Home Standard'
+            'demo1' => 'Home'
         );
 
         if ( isset( $demo_active_import[$current_key]['directory'] ) && !empty( $demo_active_import[$current_key]['directory'] ) && array_key_exists( $demo_active_import[$current_key]['directory'], $wbc_home_pages ) ) {

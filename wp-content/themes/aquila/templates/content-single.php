@@ -28,11 +28,11 @@ $post_class = array('post-single', 'post-layout-'.$layout);
         <?php
         if( ! post_password_required( ) ):
             wp_link_pages( array(
-                'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', THEME_LANG ) . '</span>',
+                'before'      => '<div class="page-links"><span class="page-links-title">' . esc_html__( 'Pages:', 'aquila' ) . '</span>',
                 'after'       => '</div>',
                 'link_before' => '<span>',
                 'link_after'  => '</span>',
-                'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', THEME_LANG ) . ' </span>%',
+                'pagelink'    => '<span class="screen-reader-text">' . esc_html__( 'Page', 'aquila' ) . ' </span>%',
                 'separator'   => '<span class="screen-reader-text">, </span>',
             ) );
         endif;
@@ -44,7 +44,7 @@ $post_class = array('post-single', 'post-layout-'.$layout);
         kt_entry_meta_tags('<div class="tags-container pull-left">', '</div>');
 
         echo '<div class="entry-footer-right pull-right">';
-        edit_post_link( '<i class="fa fa-pencil"></i>', '<span class="edit-link" title="'.__( 'Edit', THEME_LANG ).'">', '</span>' );
+        edit_post_link( '<i class="fa fa-pencil"></i>', '<span class="edit-link" title="'.esc_html__( 'Edit', 'aquila' ).'">', '</span>' );
         if(kt_option('single_like_post', 1)){
             kt_like_post();
         }

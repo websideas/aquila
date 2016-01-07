@@ -83,16 +83,16 @@ function theme_setup() {
         add_image_size( 'widget_article_carousel', 335, 250, true );
     }
     
-    load_theme_textdomain( THEME_LANG, THEME_DIR . '/languages' );
+    load_theme_textdomain( 'aquila', THEME_DIR . '/languages' );
     
     /**
 	 * This theme uses wp_nav_menu() in one location.
 	 */
 	register_nav_menus(array(
-        'primary' => __('Main Navigation Menu', THEME_LANG),
-        'mobile' => __('(Mobile Devices) Main Navigation Menu', THEME_LANG),
-        'footer'	  => __( 'Footer Navigation Menu', THEME_LANG ),
-        'bottom'	  => __( 'Bottom Menu', THEME_LANG ),
+        'primary' => esc_html__('Main Navigation Menu', 'aquila'),
+        'mobile' => esc_html__('(Mobile Devices) Main Navigation Menu', 'aquila'),
+        'footer'	  => esc_html__( 'Footer Navigation Menu', 'aquila' ),
+        'bottom'	  => esc_html__( 'Bottom Menu', 'aquila' ),
     ));
 
 }
@@ -335,7 +335,7 @@ if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
                     printf(
                         '<img src="%s" alt="%s" class="%s"/>',
                         $image,
-                        __('No image', THEME_LANG),
+                        esc_html__('No image', 'aquila'),
                         $class_img.' no-image'
                     )
                 ?>
@@ -508,14 +508,14 @@ if ( ! function_exists( 'kt_comment_nav' ) ) :
         if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
             ?>
             <nav class="navigation comment-navigation clearfix">
-                <h2 class="screen-reader-text"><?php _e( 'Comment navigation', THEME_LANG ); ?></h2>
+                <h2 class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'aquila' ); ?></h2>
                 <div class="nav-links">
                     <?php
-                    if ( $prev_link = get_previous_comments_link( '<i class="fa fa-angle-double-left"></i> '.__( 'Older Comments', THEME_LANG ) ) ) :
+                    if ( $prev_link = get_previous_comments_link( '<i class="fa fa-angle-double-left"></i> '.esc_html__( 'Older Comments', 'aquila' ) ) ) :
                         printf( '<div class="nav-previous">%s</div>', $prev_link );
                     endif;
 
-                    if ( $next_link = get_next_comments_link( '<i class="fa fa-angle-double-right"></i> '.__( 'Newer Comments',  THEME_LANG ) ) ) :
+                    if ( $next_link = get_next_comments_link( '<i class="fa fa-angle-double-right"></i> '.esc_html__( 'Newer Comments',  'aquila' ) ) ) :
                         printf( '<div class="nav-next">%s</div>', $next_link );
                     endif;
 
@@ -568,21 +568,21 @@ function kt_comments($comment, $args, $depth) {
                     <?php comment_author_link(); ?>
                 </h5>
                 <span class="comment-date">
-                    <?php printf( _x( '%s ago', '%s = human-readable time difference', THEME_LANG ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
+                    <?php printf( _x( '%s ago', '%s = human-readable time difference', 'aquila' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
                 </span>
             </div>
             <div class="comment-entry entry-content">
                 <?php comment_text() ?>
                 <?php if ($comment->comment_approved == '0') : ?>
-                    <em><?php _e('Your comment is awaiting moderation.', THEME_LANG) ?></em>
+                    <em><?php esc_html_e('Your comment is awaiting moderation.', 'aquila') ?></em>
                 <?php endif; ?>
             </div>
             <div class="comment-actions">
-                <?php edit_comment_link( '<span class="icon-pencil"></span> '.__('Edit', THEME_LANG),'  ',' ') ?>
+                <?php edit_comment_link( '<span class="icon-pencil"></span> '.esc_html__('Edit', 'aquila'),'  ',' ') ?>
                 <?php comment_reply_link( array_merge( $args,
                     array('depth' => $depth,
                         'max_depth' => $args['max_depth'],
-                        'reply_text' =>'<span class="icon-action-undo"></span> '.__('Reply')
+                        'reply_text' =>'<span class="icon-action-undo"></span> '.esc_html__('Reply')
                     ))) ?>
             </div>
         </div>
@@ -619,15 +619,15 @@ if ( ! function_exists( 'kt_post_nav' ) ) :
 
                     
                     if(!get_previous_post_link('&laquo; %link', '', true)){
-                        printf('<div class="nav-previous meta-nav"><span>%s</span></div>', __( '<span>Previous Article</span>', THEME_LANG ));
+                        printf('<div class="nav-previous meta-nav"><span>%s</span></div>', esc_html__( '<span>Previous Article</span>', 'aquila' ));
                     }else{
-                        previous_post_link('<div class="nav-previous meta-nav">%link</div>', __( '<span>Previous Article</span>', THEME_LANG ), TRUE);
+                        previous_post_link('<div class="nav-previous meta-nav">%link</div>', esc_html__( '<span>Previous Article</span>', 'aquila' ), TRUE);
                     }
 
                     if(!get_next_post_link('&laquo; %link', '', true)){
-                        printf('<div class="nav-next meta-nav"><span>%s</span></div>', __( '<span>Next Article</span>', THEME_LANG ));
+                        printf('<div class="nav-next meta-nav"><span>%s</span></div>', esc_html__( '<span>Next Article</span>', 'aquila' ));
                     }else{
-                        next_post_link('<div class="nav-next meta-nav">%link</div>', __( '<span>Next Article</span>', THEME_LANG ), TRUE);
+                        next_post_link('<div class="nav-next meta-nav">%link</div>', esc_html__( '<span>Next Article</span>', 'aquila' ), TRUE);
                     }
                 ?>
             </div><!-- .nav-links -->
@@ -654,13 +654,13 @@ if ( ! function_exists( 'kt_paging_nav' ) ) :
             return ;
         }elseif($type == 'button'){ ?>
             <nav class="navigation post-navigation clearfix">
-                <h1 class="screen-reader-text"><?php _e( 'Posts navigation', THEME_LANG ); ?></h1>
+                <h1 class="screen-reader-text"><?php esc_html_e( 'Posts navigation', 'aquila' ); ?></h1>
                 <div class="nav-links">
                     <?php if ( get_next_posts_link() ) : ?>
-                        <div class="nav-previous"><?php next_posts_link( '<i class="fa fa-long-arrow-left"></i> '.__( 'Older posts', THEME_LANG ) ); ?></div>
+                        <div class="nav-previous"><?php next_posts_link( '<i class="fa fa-long-arrow-left"></i> '.esc_html__( 'Older posts', 'aquila' ) ); ?></div>
                     <?php endif; ?>
                     <?php if ( get_previous_posts_link() ) : ?>
-                        <div class="nav-next"><?php previous_posts_link( __( 'Newer posts', THEME_LANG ).' <i class="fa fa-long-arrow-right"></i>' ); ?></div>
+                        <div class="nav-next"><?php previous_posts_link( esc_html__( 'Newer posts', 'aquila' ).' <i class="fa fa-long-arrow-right"></i>' ); ?></div>
                     <?php endif; ?>
                 </div><!-- .nav-links -->
             </nav><!-- .navigation -->
@@ -682,10 +682,10 @@ if ( ! function_exists( 'kt_entry_meta_categories' ) ) :
      */
     function kt_entry_meta_categories( $separator = ', ') {
         if ( 'post' == get_post_type() ) {
-            $categories_list = get_the_category_list( _x( $separator, 'Used between list items, there is a space after the comma.', THEME_LANG ) );
+            $categories_list = get_the_category_list( _x( $separator, 'Used between list items, there is a space after the comma.', 'aquila' ) );
             if ( $categories_list ) {
                 printf( '<span class="cat-links"><span class="screen-reader-text">%1$s </span> %2$s</span>',
-                    _x( 'Categories', 'Used before category names.', THEME_LANG ),
+                    _x( 'Categories', 'Used before category names.', 'aquila' ),
                     $categories_list
                 );
             }
@@ -721,10 +721,10 @@ if ( ! function_exists( 'kt_entry_meta_tags' ) ) :
      */
     function kt_entry_meta_tags($before = '', $after = '') {
         if ( 'post' == get_post_type() ) {
-            $tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', THEME_LANG ) );
+            $tags_list = get_the_tag_list( '', _x( ', ', 'Used between list items, there is a space after the comma.', 'aquila' ) );
             if ( $tags_list ) {
                 printf( '%3$s<span class="tags-links"><span class="tags-links-text">%1$s</span> %2$s</span>%4$s',
-                    _x( 'Tags: ', 'Used before tag names.', THEME_LANG ),
+                    _x( 'Tags: ', 'Used before tag names.', 'aquila' ),
                     $tags_list,
                     $before,
                     $after
@@ -744,10 +744,10 @@ if ( ! function_exists( 'kt_entry_meta_author' ) ) :
     function kt_entry_meta_author() {
         if ( 'post' === get_post_type() ) {
             printf( '<span class="author vcard">%4$s <span class="screen-reader-text">%1$s </span><a class="url fn n" href="%2$s">%3$s</a></span>',
-                _x( 'Author', 'Used before post author name.', THEME_LANG ),
+                _x( 'Author', 'Used before post author name.', 'aquila' ),
                 esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
                 get_the_author(),
-                __('By:', THEME_LANG )
+                esc_html__('By:', 'aquila' )
             );
         }
     }
@@ -794,7 +794,7 @@ if ( ! function_exists( 'kt_entry_date' ) ) {
                 $time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
             }
 
-            $time_show = ($format == 'time') ? human_time_diff( get_the_time('U'), current_time('timestamp') ) . __(' ago', THEME_LANG) : get_the_date($format);
+            $time_show = ($format == 'time') ? human_time_diff( get_the_time('U'), current_time('timestamp') ) . esc_html__(' ago', 'aquila') : get_the_date($format);
 
             $time_string = sprintf( $time_string,
                 esc_attr( get_the_date( 'c' ) ),
@@ -804,7 +804,7 @@ if ( ! function_exists( 'kt_entry_date' ) ) {
             );
 
             printf( '<span class="posted-on"><span class="screen-reader-text">%1$s </span>%2$s</span>',
-                _x( 'Posted on', 'Used before publish date.', THEME_LANG ),
+                _x( 'Posted on', 'Used before publish date.', 'aquila' ),
                 //esc_url( get_permalink() ),
                 $time_string
             );
@@ -834,7 +834,7 @@ if ( ! function_exists( 'kt_get_post_views' ) ){
                 add_post_meta($post_id, $count_key, '0');
                 $count = 0;
             }
-            $text = ($count == 0 || $count == 1) ? __('View',THEME_LANG) : __('Views',THEME_LANG);
+            $text = ($count == 0 || $count == 1) ? esc_html__('View','aquila') : esc_html__('Views','aquila');
             printf(
                 '<span class="post-view">%s<span class="screen-reader-text">%s</span></span>',
                 $count,
@@ -857,8 +857,8 @@ if ( ! function_exists( 'kt_like_post' ) ){
         }
 
         $class = 'kt_likepost';
-        $title = __('Like this post', THEME_LANG);
-        $already =  __('You already like this!', THEME_LANG);
+        $title = esc_html__('Like this post', 'aquila');
+        $already =  esc_html__('You already like this!', 'aquila');
 
         if( isset($_COOKIE['like_post_'. $post_id]) ){
             $class .= ' liked';
@@ -895,37 +895,37 @@ if( ! function_exists( 'kt_share_box' ) ){
                 if($key == 'facebook'){
                     // Facebook
                     $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.facebook.com/sharer.php?s=100&amp;p[title]=' . $title . '&amp;p[url]=' . $link.'\', \'sharer\', \'toolbar=0,status=0,width=620,height=280\');popUp.focus();return false;">';
-                    $html .= '<i class="fa fa-facebook"></i><span>'.__('Facebook', THEME_LANG).'</span>';
+                    $html .= '<i class="fa fa-facebook"></i><span>'.esc_html__('Facebook', 'aquila').'</span>';
                     $html .= '</a></li>';
                 }elseif($key == 'twitter'){
                     // Twitter
                     $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://twitter.com/home?status=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false;">';
-                    $html .= '<i class="fa fa-twitter"></i><span>'.__('Twitter', THEME_LANG).'</span>';
+                    $html .= '<i class="fa fa-twitter"></i><span>'.esc_html__('Twitter', 'aquila').'</span>';
                     $html .= '</a></li>';
                 }elseif($key == 'google_plus'){
                     // Google plus
                     $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'https://plus.google.com/share?url=' . $link . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
-                    $html .= '<i class="fa fa-google-plus"></i><span>'.__('Google+', THEME_LANG).'</span>';
+                    $html .= '<i class="fa fa-google-plus"></i><span>'.esc_html__('Google+', 'aquila').'</span>';
                     $html .= "</a></li>";
                 }elseif($key == 'pinterest'){
                     // Pinterest
                     $html .= '<li><a class="share_link" href="#" onclick="popUp=window.open(\'http://pinterest.com/pin/create/button/?url=' . $link . '&amp;description=' . $title . '&amp;media=' . urlencode($image[0]) . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
-                    $html .= '<i class="fa fa-pinterest"></i><span>'.__('Pinterest', THEME_LANG).'</span>';
+                    $html .= '<i class="fa fa-pinterest"></i><span>'.esc_html__('Pinterest', 'aquila').'</span>';
                     $html .= "</a></li>";
                 }elseif($key == 'linkedin'){
                     // linkedin
                     $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://linkedin.com/shareArticle?mini=true&amp;url=' . $link . '&amp;title=' . $title. '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
-                    $html .= '<i class="fa fa-linkedin"></i><span>'.__('LinkedIn', THEME_LANG).'</span>';
+                    $html .= '<i class="fa fa-linkedin"></i><span>'.esc_html__('LinkedIn', 'aquila').'</span>';
                     $html .= "</a></li>";
                 }elseif($key == 'tumblr'){
                     // Tumblr
                     $html .= '<li><a class="'.$style.'" href="#" onclick="popUp=window.open(\'http://www.tumblr.com/share/link?url=' . $link . '&amp;name=' . $title . '&amp;description=' . $excerpt . '\', \'popupwindow\', \'scrollbars=yes,width=800,height=400\');popUp.focus();return false">';
-                    $html .= '<i class="fa fa-tumblr"></i><span>'.__('Tumblr', THEME_LANG).'</span>';
+                    $html .= '<i class="fa fa-tumblr"></i><span>'.esc_html__('Tumblr', 'aquila').'</span>';
                     $html .= "</a></li>";
                 }elseif($key == 'email'){
                     // Email
                     $html .= '<li><a class="'.$style.'" href="mailto:?subject='.$title.'&amp;body='.$link.'">';
-                    $html .= '<i class="fa fa-envelope-o"></i><span>'.__('Mail', THEME_LANG).'</span>';
+                    $html .= '<i class="fa fa-envelope-o"></i><span>'.esc_html__('Mail', 'aquila').'</span>';
                     $html .= "</a></li>";
                 }
             }
@@ -980,7 +980,7 @@ if ( ! function_exists( 'kt_related_article' ) ) :
         ?>
         <?php if($query->have_posts()){ ?>
             <div id="related-article">
-                <h3 class="post-single-heading"><?php _e('Related Article', THEME_LANG); ?></h3>
+                <h3 class="post-single-heading"><?php esc_html_e('Related Article', 'aquila'); ?></h3>
                 <div class="blog-posts-related">
                 <?php
                 while ( $query->have_posts() ) : $query->the_post();

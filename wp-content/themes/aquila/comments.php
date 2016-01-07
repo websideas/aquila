@@ -22,7 +22,7 @@ if ( post_password_required() ) {
     <?php if ( have_comments() ) : ?>
         <h2 class="comments-title post-single-heading">
             <?php
-            printf( _nx( 'One comment', '%1$s comments', get_comments_number(), 'comments title', THEME_LANG ),
+            printf( _nx( 'One comment', '%1$s comments', get_comments_number(), 'comments title', 'aquila' ),
                 number_format_i18n( get_comments_number() ), get_the_title() );
             ?>
         </h2>
@@ -46,7 +46,7 @@ if ( post_password_required() ) {
     // If comments are closed and there are comments, let's leave a little note, shall we?
     if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
         ?>
-        <p class="no-comments"><?php _e( 'Comments are closed.', 'twentyfifteen' ); ?></p>
+        <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'twentyfifteen' ); ?></p>
     <?php endif; ?>
     
     <?php
@@ -57,23 +57,23 @@ if ( post_password_required() ) {
     $aria_req = ( $req ? " aria-required='true'" : '' );
     $html_req = ( $req ? " required='required'" : '' );
 
-    $required = ' '.__('(required)', THEME_LANG);
+    $required = ' '.esc_html__('(required)', 'aquila');
 
     $new_fields = array(
         'author' => '<p class="comment_field-column comment-form-author">' .
-            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  placeholder="'.__('Name', THEME_LANG).'"' . $aria_req . $html_req . ' /></p>',
+            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  placeholder="'.esc_html__('Name', 'aquila').'"' . $aria_req . $html_req . ' /></p>',
         'email'  => '<p class="comment_field-column comment-form-email">' .
-            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="'.__('Email', THEME_LANG).'"' . $aria_req . $html_req . ' /></p></div>',
+            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="'.esc_html__('Email', 'aquila').'"' . $aria_req . $html_req . ' /></p></div>',
         'url'    => '<p class="comment-form-url">' .
-            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="'.__('Website', THEME_LANG).'" /></p>',
+            '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="'.esc_html__('Website', 'aquila').'" /></p>',
     );
 
     $comments_args = array(
-        'label_submit'      => __( 'send' ),
+        'label_submit'      => esc_html__( 'send' ),
         'fields' => apply_filters( 'comment_form_default_fields', $new_fields ),
         //'comment_form_before_fields' => '<div>',
         //'comment_form_after_fields' => '</div>',
-        'comment_field' => '<p><textarea id="comment" name="comment" placeholder="'.__('Your Comment', THEME_LANG).'"  aria-required="true" rows="6"></textarea></p>',
+        'comment_field' => '<p><textarea id="comment" name="comment" placeholder="'.esc_html__('Your Comment', 'aquila').'"  aria-required="true" rows="6"></textarea></p>',
         'class_submit'      => 'btn btn-default btn-lg',
         'title_reply_before'   => '<h3 id="reply-title" class="comment-reply-title post-single-heading">',
     );

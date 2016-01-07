@@ -7,7 +7,6 @@ if ( !defined('ABSPATH')) exit;
 define( 'THEME_VER', '1.0' );
 
 define( 'THEME_OPTIONS', 'aquila_option' );
-define( 'THEME_LANG', 'valorous');
 
 define( 'THEME_DIR', trailingslashit(get_template_directory()));
 define( 'THEME_URL', trailingslashit(get_template_directory_uri()));

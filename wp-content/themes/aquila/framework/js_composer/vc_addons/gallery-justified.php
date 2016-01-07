@@ -65,7 +65,7 @@ class WPBakeryShortCode_KT_Gallery_Justified extends WPBakeryShortCode_VC_Custom
 		$old_names = array( 'yellow_message', 'blue_message', 'green_message', 'button_green', 'button_grey', 'button_yellow', 'button_blue', 'button_red', 'button_orange' );
 		$new_names = array( 'alert-block', 'alert-info', 'alert-success', 'btn-success', 'btn', 'btn-info', 'btn-primary', 'btn-danger', 'btn-warning' );
 		$value = str_ireplace( $old_names, $new_names, $value );
-		//$value = __($value, "js_composer");
+		//$value = esc_html__($value, "js_composer");
 		//
 		$param_name = isset( $param['param_name'] ) ? $param['param_name'] : '';
 		$type = isset( $param['type'] ) ? $param['type'] : '';
@@ -82,7 +82,7 @@ class WPBakeryShortCode_KT_Gallery_Justified extends WPBakeryShortCode_VC_Custom
 				$output .= ( $img ? '<li>' . $img['thumbnail'] . '</li>' : '<li><img width="150" height="150" class="attachment-thumbnail" alt="" title="" /></li>' );
 			}
 			$output .= '</ul>';
-			$output .= '<a href="#" class="column_edit_trigger' . ( ! empty( $images_ids ) ? ' image-exists' : '' ) . '">' . __( 'Add images', 'js_composer' ) . '</a>';
+			$output .= '<a href="#" class="column_edit_trigger' . ( ! empty( $images_ids ) ? ' image-exists' : '' ) . '">' . esc_html__( 'Add images', 'js_composer' ) . '</a>';
 
 		}
 		return $output;
@@ -93,53 +93,53 @@ class WPBakeryShortCode_KT_Gallery_Justified extends WPBakeryShortCode_VC_Custom
 
 // Add your Visual Composer logic here
 vc_map( array(
-    "name" => __( "KT Gallery Justified", THEME_LANG),
+    "name" => esc_html__( "KT Gallery Justified", 'aquila'),
     "base" => "kt_gallery_justified",
-    "category" => __('by Theme', THEME_LANG ),
-    "description" => __( "", THEME_LANG),
+    "category" => esc_html__('by Theme', 'aquila' ),
+    "description" => esc_html__( "", 'aquila'),
     "params" => array(
         //Image
         array(
 			'type' => 'attach_images',
-			'heading' => __( 'Image Gallery', THEME_LANG ),
+			'heading' => esc_html__( 'Image Gallery', 'aquila' ),
 			'param_name' => 'image_gallery',
-			'description' => __( 'Select image from media library.', 'js_composer' ),
+			'description' => esc_html__( 'Select image from media library.', 'js_composer' ),
 		),
         array(
             "type" => "kt_image_sizes",
-            "heading" => __( "Select image sizes", THEME_LANG ),
+            "heading" => esc_html__( "Select image sizes", 'aquila' ),
             "param_name" => "image_size",
         ),
         array(
             "type" => "kt_number",
-            "heading" => __("Row Height", THEME_LANG),
+            "heading" => esc_html__("Row Height", 'aquila'),
             "param_name" => "row_height",
             "value" => 150,
             "min" => 0,
             "max" => 1000,
             "suffix" => "px",
-            "description" => __( "The preferred height of rows in pixel.", THEME_LANG ),
+            "description" => esc_html__( "The preferred height of rows in pixel.", 'aquila' ),
         ),
         array(
             "type" => "kt_number",
-            "heading" => __("Margin", THEME_LANG),
+            "heading" => esc_html__("Margin", 'aquila'),
             "param_name" => "margin_image",
             "value" => 10,
             "min" => 0,
             "max" => 50,
             "suffix" => "px",
-            "description" => __( "Decide the margins between the images.", THEME_LANG ),
+            "description" => esc_html__( "Decide the margins between the images.", 'aquila' ),
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Gallery Popup', THEME_LANG ),
+            'heading' => esc_html__( 'Gallery Popup', 'aquila' ),
             'param_name' => 'gallery_popup',
             'value' => 'true',
-            "description" => __("Use or don't use popup gallery.", THEME_LANG),
+            "description" => esc_html__("Use or don't use popup gallery.", 'aquila'),
         ),
         array(
             "type" => "kt_image_sizes",
-            "heading" => __( "Select image sizes popup gallery", THEME_LANG ),
+            "heading" => esc_html__( "Select image sizes popup gallery", 'aquila' ),
             "param_name" => "image_size_popup",
             "std" => "full",
             "dependency" => array("element" => "gallery_popup","value" => array('true'),'not_empty' => true,),
@@ -147,17 +147,17 @@ vc_map( array(
         
         array(
             "type" => "textfield",
-            "heading" => __( "Extra class name", "js_composer" ),
+            "heading" => esc_html__( "Extra class name", "js_composer" ),
             "param_name" => "el_class",
-            "description" => __( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
+            "description" => esc_html__( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
         ),
         //Design options
         array(
             'type' => 'css_editor',
-            'heading' => __( 'Css', 'js_composer' ),
+            'heading' => esc_html__( 'Css', 'js_composer' ),
             'param_name' => 'css',
-            // 'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
-            'group' => __( 'Design options', 'js_composer' )
+            // 'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
+            'group' => esc_html__( 'Design options', 'js_composer' )
         ),
 
     ),

@@ -195,7 +195,7 @@ get_header(); ?>
                 edit_post_link(
                     sprintf(
                     /* translators: %s: Name of current post */
-                        __( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ),
+                        wp_kses(__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ), array( 'span' => array() ) ),
                         get_the_title()
                     ),
                     '<footer class="entry-footer"><span class="edit-link">',

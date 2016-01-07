@@ -11,8 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Widget_KT_Flickr extends WP_Widget {
     
     public function __construct() {
-        $widget_ops = array('classname' => 'widget_kt_flickr', 'description' => __( "Lasted images in flickr.", THEME_LANG) );
-        parent::__construct('kt_flickr', __('KT: Flickr', THEME_LANG), $widget_ops);
+        $widget_ops = array('classname' => 'widget_kt_flickr', 'description' => esc_html__( "Lasted images in flickr.", 'aquila') );
+        parent::__construct('kt_flickr', esc_html__('KT: Flickr', 'aquila'), $widget_ops);
     }
 
     public function widget($args, $instance) {
@@ -87,24 +87,24 @@ class Widget_KT_Flickr extends WP_Widget {
 
     public function form( $instance ) {
 
-        $defaults = array( 'title' => __( 'Flickr' , THEME_LANG), 'type' => '', 'user_id' => '', 'number' => 9, 'ordering' => '', 'api' => '6346cf3fc74387e93b84f0d22c78939a' );
+        $defaults = array( 'title' => esc_html__( 'Flickr' , 'aquila'), 'type' => '', 'user_id' => '', 'number' => 9, 'ordering' => '', 'api' => '6346cf3fc74387e93b84f0d22c78939a' );
         $instance = wp_parse_args( (array) $instance, $defaults );
 
         $title = strip_tags($instance['title']);
 
         ?>
 
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
         
-        <p><label for="<?php echo $this->get_field_id( 'user_id' ); ?>"><?php _e( 'Flickr ID:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'user_id' ); ?>"><?php esc_html_e( 'Flickr ID:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'user_id' ); ?>" name="<?php echo $this->get_field_name( 'user_id' ); ?>" type="text" value="<?php echo $instance['user_id']; ?>" />
-            <small><?php _e('To find your flickID visit',THEME_LANG); ?> <a target="_blank" href="http://idgettr.com/"><?php _e('idGettr.',THEME_LANG); ?></a></small>
+            <small><?php esc_html_e('To find your flickID visit','aquila'); ?> <a target="_blank" href="http://idgettr.com/"><?php esc_html_e('idGettr.','aquila'); ?></a></small>
         </p>
         
-        <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php _e( 'Number of image to show:', THEME_LANG ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of image to show:', 'aquila' ); ?></label>
             <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $instance['number']; ?>" class="widefat" />
-            <small><?php _e('Select number of photos to display.',THEME_LANG); ?></small>
+            <small><?php esc_html_e('Select number of photos to display.','aquila'); ?></small>
         </p>
         
         <p>

@@ -14,8 +14,8 @@
     </div><!-- .author-avatar -->
     <div class="author-description">
         <h2 class="author-title">
-            <a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author" title="<?php echo esc_attr(sprintf( __( 'View all posts by %s', THEME_LANG ), get_the_author() ) ); ?>">
-                <?php printf( __( 'About %s', THEME_LANG ), get_the_author() ); ?>
+            <a class="author-link" href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ); ?>" rel="author" title="<?php echo esc_attr(sprintf( esc_html__( 'View all posts by %s', 'aquila' ), get_the_author() ) ); ?>">
+                <?php printf( esc_html__( 'About %s', 'aquila' ), get_the_author() ); ?>
             </a>
         </h2>
 

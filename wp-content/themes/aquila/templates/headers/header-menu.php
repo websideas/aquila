@@ -17,6 +17,6 @@ if ( has_nav_menu( 'primary' ) ) {
 }else{
     printf(
         '<ul><li><a href="#">%s</a></li></ul>',
-        __("Define your site main menu!", THEME_LANG)
+        esc_html__("Define your site main menu!", 'aquila')
     );
 }

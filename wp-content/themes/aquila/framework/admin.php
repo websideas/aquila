@@ -24,7 +24,7 @@ if ( !function_exists( 'kt_admin_enqueue_scripts' ) ) {
 
         wp_enqueue_media();
         wp_localize_script( 'kt_image', 'kt_image_lange', array(
-            'frameTitle' => __('Select your image', THEME_LANG )
+            'frameTitle' => esc_html__('Select your image', 'aquila' )
         ));
 
         wp_register_script( 'framework-core', FW_JS.'framework-core.js', array('jquery', 'jquery-ui-tabs'), FW_VER, true);

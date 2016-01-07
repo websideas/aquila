@@ -42,71 +42,71 @@ class WPBakeryShortCode_Blockquote extends WPBakeryShortCode {
 }
 
 vc_map( array(
-    "name" => __( "Blockquote", THEME_LANG),
+    "name" => esc_html__( "Blockquote", 'aquila'),
     "base" => "blockquote",
-    "category" => __('by Theme', THEME_LANG ),
+    "category" => esc_html__('by Theme', 'aquila' ),
     "wrapper_class" => "clearfix",
     "params" => array(
 
         array(
             "type" => "textarea_html",
-            "heading" => __("Content", THEME_LANG),
+            "heading" => esc_html__("Content", 'aquila'),
             "param_name" => "content",
-            "description" => __("", THEME_LANG),
+            "description" => esc_html__("", 'aquila'),
             'holder' => 'div',
         ),
         array(
             "type" => "textfield",
-            'heading' => __( 'Author', 'js_composer' ),
+            'heading' => esc_html__( 'Author', 'js_composer' ),
             'param_name' => 'author',
             "admin_label" => true,
         ),
         array(
             'type' => 'dropdown',
-            'heading' => __( 'Style', THEME_LANG ),
+            'heading' => esc_html__( 'Style', 'aquila' ),
             'param_name' => 'style',
             'value' => array(
-                __( 'Normal', THEME_LANG ) => '',
-                __( 'Post quote', THEME_LANG ) => 'post-item-quote',
-                __( 'Simple', THEME_LANG ) => 'simple',
+                esc_html__( 'Normal', 'aquila' ) => '',
+                esc_html__( 'Post quote', 'aquila' ) => 'post-item-quote',
+                esc_html__( 'Simple', 'aquila' ) => 'simple',
             ),
-            'description' => __( 'Position of content.', THEME_LANG ),
+            'description' => esc_html__( 'Position of content.', 'aquila' ),
         ),
         array(
             'type' => 'kt_switch',
-            'heading' => __( 'Reverse Blockquote', THEME_LANG ),
+            'heading' => esc_html__( 'Reverse Blockquote', 'aquila' ),
             'param_name' => 'reverse',
             'value' => 'false',
-            "description" => __("", THEME_LANG),
+            "description" => esc_html__("", 'aquila'),
         ),
         
         array(
         	'type' => 'dropdown',
-        	'heading' => __( 'CSS Animation', 'js_composer' ),
+        	'heading' => esc_html__( 'CSS Animation', 'js_composer' ),
         	'param_name' => 'css_animation',
         	'admin_label' => true,
         	'value' => array(
-        		__( 'No', 'js_composer' ) => '',
-        		__( 'Top to bottom', 'js_composer' ) => 'top-to-bottom',
-        		__( 'Bottom to top', 'js_composer' ) => 'bottom-to-top',
-        		__( 'Left to right', 'js_composer' ) => 'left-to-right',
-        		__( 'Right to left', 'js_composer' ) => 'right-to-left',
-        		__( 'Appear from center', 'js_composer' ) => "appear"
+        		esc_html__( 'No', 'js_composer' ) => '',
+        		esc_html__( 'Top to bottom', 'js_composer' ) => 'top-to-bottom',
+        		esc_html__( 'Bottom to top', 'js_composer' ) => 'bottom-to-top',
+        		esc_html__( 'Left to right', 'js_composer' ) => 'left-to-right',
+        		esc_html__( 'Right to left', 'js_composer' ) => 'right-to-left',
+        		esc_html__( 'Appear from center', 'js_composer' ) => "appear"
         	),
-        	'description' => __( 'Select type of animation if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.', 'js_composer' )
+        	'description' => esc_html__( 'Select type of animation if you want this element to be animated when it enters into the browsers viewport. Note: Works only in modern browsers.', 'js_composer' )
         ),
         array(
             "type" => "textfield",
-            "heading" => __( "Extra class name", "js_composer"),
+            "heading" => esc_html__( "Extra class name", "js_composer"),
             "param_name" => "el_class",
-            "description" => __( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
+            "description" => esc_html__( "If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.", "js_composer" ),
         ),
         array(
 			'type' => 'css_editor',
-			'heading' => __( 'Css', 'js_composer' ),
+			'heading' => esc_html__( 'Css', 'js_composer' ),
 			'param_name' => 'css',
-			// 'description' => __( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
-			'group' => __( 'Design options', 'js_composer' )
+			// 'description' => esc_html__( 'If you wish to style particular content element differently, then use this field to add a class name and then refer to it in your css file.', 'js_composer' ),
+			'group' => esc_html__( 'Design options', 'js_composer' )
 		),
     ),
 ));

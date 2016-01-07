@@ -12,7 +12,7 @@ class Widget_KT_ContactInfo extends WP_Widget {
 
     public function __construct() {
         $widget_ops = array('classname' => 'widget_kt_contactinfo', 'description' => '' );
-        parent::__construct('kt_contactinfo', __('KT: Contact info', THEME_LANG), $widget_ops);
+        parent::__construct('kt_contactinfo', esc_html__('KT: Contact info', 'aquila'), $widget_ops);
         $this->alt_option_name = 'widget_kt_contactinfo';
 
     }
@@ -54,22 +54,22 @@ class Widget_KT_ContactInfo extends WP_Widget {
 
     public function form( $instance ) {
 
-        $defaults = array( 'title' => __('Contact info', THEME_LANG), 'address' => '', 'phone' => '', 'email' => '');
+        $defaults = array( 'title' => esc_html__('Contact info', 'aquila'), 'address' => '', 'phone' => '', 'email' => '');
         $instance = wp_parse_args( (array) $instance, $defaults );
         $title = strip_tags($instance['title']);
 
         ?>
 
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-        <p><label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php _e( 'Address:', THEME_LANG ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'address' ); ?>"><?php esc_html_e( 'Address:', 'aquila' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'address' ); ?>" name="<?php echo $this->get_field_name( 'address' ); ?>" type="text" value="<?php echo $instance['address']; ?>" /></p>
 
-        <p><label for="<?php echo $this->get_field_id( 'phone' ); ?>"><?php _e( 'Phone:', THEME_LANG ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'phone' ); ?>"><?php esc_html_e( 'Phone:', 'aquila' ); ?></label>
             <input  id="<?php echo $this->get_field_id( 'phone' ); ?>" name="<?php echo $this->get_field_name( 'phone' ); ?>" type="text" value="<?php echo $instance['phone']; ?>" class="widefat" /></p>
 
-        <p><label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php _e( 'Email:', THEME_LANG ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'email' ); ?>"><?php esc_html_e( 'Email:', 'aquila' ); ?></label>
             <input  id="<?php echo $this->get_field_id( 'email' ); ?>" name="<?php echo $this->get_field_name( 'email' ); ?>" type="text" value="<?php echo $instance['email']; ?>" class="widefat" /></p>
 
         <?php

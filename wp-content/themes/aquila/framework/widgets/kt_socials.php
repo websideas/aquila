@@ -12,8 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 class WP_Widget_KT_Socials extends WP_Widget {
 
 	public function __construct() {
-		$widget_ops = array('classname' => 'widget_kt_socials', 'description' => __( 'Socials for widget.', THEME_LANG ) );
-		parent::__construct('kt_socials', __('KT: Socials', THEME_LANG ), $widget_ops);
+		$widget_ops = array('classname' => 'widget_kt_socials', 'description' => esc_html__( 'Socials for widget.', 'aquila' ) );
+		parent::__construct('kt_socials', esc_html__('KT: Socials', 'aquila' ), $widget_ops);
 	}
 
 	public function widget( $args, $instance ) {
@@ -80,7 +80,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
 
 	public function form( $instance ) {
 		//Defaults
-		$instance = wp_parse_args( (array) $instance, array( 'title' => __('Socials', THEME_LANG), 'target' => '_self', 'value' => '', 'style' => 'accent', 'background_style' => '', 'size' => 'standard', 'tooltip' => '', 'align' => '', 'space_between_item' => 3, 'custom_color' => '#707070' ) );
+		$instance = wp_parse_args( (array) $instance, array( 'title' => esc_html__('Socials', 'aquila'), 'target' => '_self', 'value' => '', 'style' => 'accent', 'background_style' => '', 'size' => 'standard', 'tooltip' => '', 'align' => '', 'space_between_item' => 3, 'custom_color' => '#707070' ) );
         $title = strip_tags($instance['title']);
         
         $value = isset( $instance['value'] ) ? $instance['value'] : '';
@@ -92,7 +92,7 @@ class WP_Widget_KT_Socials extends WP_Widget {
         $space_between_item    = isset( $instance['space_between_item'] ) ? absint( $instance['space_between_item'] ) : 3;
         $custom_color    = isset( $instance['custom_color'] ) ? $instance['custom_color'] : '#22dcce';
 	?>
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
         
         <?php
@@ -131,58 +131,58 @@ class WP_Widget_KT_Socials extends WP_Widget {
             </ul><!-- .kt-socials-profiles -->
             <input id="<?php echo $this->get_field_id( 'value' ); ?>" type="hidden" class="wpb_vc_param_value kt-socials-value" name="<?php echo $this->get_field_name( 'value' ); ?>" value="<?php echo esc_attr($value); ?>" />
         </div><!-- .kt-socials-options -->
-        <small><?php _e( 'Empty for select all, Drop and sortable social',THEME_LANG ); ?></small>
+        <small><?php esc_html_e( 'Empty for select all, Drop and sortable social','aquila' ); ?></small>
         <?php wp_enqueue_script( 'socials_js', FW_JS.'kt_socials.js', array('jquery'), FW_VER, true); ?>
         
-        <p><label for="<?php echo $this->get_field_id('style'); ?>"><?php _e('Style:', THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('style'); ?>"><?php esc_html_e('Style:', 'aquila'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('style'); ?>" name="<?php echo $this->get_field_name('style'); ?>">
-                <option <?php selected( $style, 'accent' ); ?> value="accent"><?php _e('Accent',THEME_LANG); ?></option>
-                <option <?php selected( $style, 'dark' ); ?> value="dark"><?php _e('Dark',THEME_LANG); ?></option>
-                <option <?php selected( $style, 'light' ); ?> value="light"><?php _e('Light',THEME_LANG); ?></option>
-                <option <?php selected( $style, 'color' ); ?> value="color"><?php _e('Color',THEME_LANG); ?></option>
-                <option <?php selected( $style, 'custom' ); ?> value="custom"><?php _e('Custom Color',THEME_LANG); ?></option>
+                <option <?php selected( $style, 'accent' ); ?> value="accent"><?php esc_html_e('Accent','aquila'); ?></option>
+                <option <?php selected( $style, 'dark' ); ?> value="dark"><?php esc_html_e('Dark','aquila'); ?></option>
+                <option <?php selected( $style, 'light' ); ?> value="light"><?php esc_html_e('Light','aquila'); ?></option>
+                <option <?php selected( $style, 'color' ); ?> value="color"><?php esc_html_e('Color','aquila'); ?></option>
+                <option <?php selected( $style, 'custom' ); ?> value="custom"><?php esc_html_e('Custom Color','aquila'); ?></option>
             </select>
         </p>
-        <p><label for="<?php echo $this->get_field_id( 'custom_color' ); ?>"><?php _e( 'Custom Color:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'custom_color' ); ?>"><?php esc_html_e( 'Custom Color:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'custom_color' ); ?>" name="<?php echo $this->get_field_name( 'custom_color' ); ?>" type="text" value="<?php echo $custom_color; ?>" /></p>
-        <p><label for="<?php echo $this->get_field_id('background_style'); ?>"><?php _e('Background Style:', THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('background_style'); ?>"><?php esc_html_e('Background Style:', 'aquila'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('background_style'); ?>" name="<?php echo $this->get_field_name('background_style'); ?>">
-                <option <?php selected( $background_style, 'empty' ); ?> value=""><?php _e('None',THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'text' ); ?> value="text"><?php _e('Text',THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'rounded' ); ?> value="rounded"><?php _e('Circle',THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'boxed' ); ?> value="boxed"><?php _e('Square',THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'rounded-less' ); ?> value="rounded-less"><?php _e('Rounded',THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'rounded-outline' ); ?> value="rounded-outline"><?php _e('Outline Circle',THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'boxed-outline' ); ?> value="boxed-outline"><?php _e('Outline Square',THEME_LANG); ?></option>
-                <option <?php selected( $background_style, 'rounded-less-outline' ); ?> value="rounded-less-outline"><?php _e('Outline Rounded',THEME_LANG); ?></option>
+                <option <?php selected( $background_style, 'empty' ); ?> value=""><?php esc_html_e('None','aquila'); ?></option>
+                <option <?php selected( $background_style, 'text' ); ?> value="text"><?php esc_html_e('Text','aquila'); ?></option>
+                <option <?php selected( $background_style, 'rounded' ); ?> value="rounded"><?php esc_html_e('Circle','aquila'); ?></option>
+                <option <?php selected( $background_style, 'boxed' ); ?> value="boxed"><?php esc_html_e('Square','aquila'); ?></option>
+                <option <?php selected( $background_style, 'rounded-less' ); ?> value="rounded-less"><?php esc_html_e('Rounded','aquila'); ?></option>
+                <option <?php selected( $background_style, 'rounded-outline' ); ?> value="rounded-outline"><?php esc_html_e('Outline Circle','aquila'); ?></option>
+                <option <?php selected( $background_style, 'boxed-outline' ); ?> value="boxed-outline"><?php esc_html_e('Outline Square','aquila'); ?></option>
+                <option <?php selected( $background_style, 'rounded-less-outline' ); ?> value="rounded-less-outline"><?php esc_html_e('Outline Rounded','aquila'); ?></option>
             </select>
-            <small><?php _e('Select background shape and style for social.',THEME_LANG); ?></small>
+            <small><?php esc_html_e('Select background shape and style for social.','aquila'); ?></small>
         </p>
-        <p><label for="<?php echo $this->get_field_id('size'); ?>"><?php _e('Size:', THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('size'); ?>"><?php esc_html_e('Size:', 'aquila'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('size'); ?>" name="<?php echo $this->get_field_name('size'); ?>">
-                <option <?php selected( $size, 'standard' ); ?> value="standard"><?php _e('Standard',THEME_LANG); ?></option>
-                <option <?php selected( $size, 'small' ); ?> value="small"><?php _e('Small',THEME_LANG); ?></option>
+                <option <?php selected( $size, 'standard' ); ?> value="standard"><?php esc_html_e('Standard','aquila'); ?></option>
+                <option <?php selected( $size, 'small' ); ?> value="small"><?php esc_html_e('Small','aquila'); ?></option>
             </select>
         </p>
-        <p><label for="<?php echo $this->get_field_id('tooltip'); ?>"><?php _e('Tooltip:', THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('tooltip'); ?>"><?php esc_html_e('Tooltip:', 'aquila'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('tooltip'); ?>" name="<?php echo $this->get_field_name('tooltip'); ?>">
-                <option <?php selected( $tooltip, '' ); ?> value=""><?php _e('None',THEME_LANG); ?></option>
-                <option <?php selected( $tooltip, 'top' ); ?> value="top"><?php _e('Top',THEME_LANG); ?></option>
-                <option <?php selected( $tooltip, 'right' ); ?> value="right"><?php _e('Right',THEME_LANG); ?></option>
-                <option <?php selected( $tooltip, 'bottom' ); ?> value="bottom"><?php _e('Bottom',THEME_LANG); ?></option>
-                <option <?php selected( $tooltip, 'left' ); ?> value="left"><?php _e('Left',THEME_LANG); ?></option>
+                <option <?php selected( $tooltip, '' ); ?> value=""><?php esc_html_e('None','aquila'); ?></option>
+                <option <?php selected( $tooltip, 'top' ); ?> value="top"><?php esc_html_e('Top','aquila'); ?></option>
+                <option <?php selected( $tooltip, 'right' ); ?> value="right"><?php esc_html_e('Right','aquila'); ?></option>
+                <option <?php selected( $tooltip, 'bottom' ); ?> value="bottom"><?php esc_html_e('Bottom','aquila'); ?></option>
+                <option <?php selected( $tooltip, 'left' ); ?> value="left"><?php esc_html_e('Left','aquila'); ?></option>
             </select>
-            <small><?php _e('Select the tooltip position',THEME_LANG); ?></small>
+            <small><?php esc_html_e('Select the tooltip position','aquila'); ?></small>
         </p>
-        <p><label for="<?php echo $this->get_field_id('align'); ?>"><?php _e('Align:', THEME_LANG); ?></label>
+        <p><label for="<?php echo $this->get_field_id('align'); ?>"><?php esc_html_e('Align:', 'aquila'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('align'); ?>" name="<?php echo $this->get_field_name('align'); ?>">
-                <option <?php selected( $align, '' ); ?> value=""><?php _e('None',THEME_LANG); ?></option>
-                <option <?php selected( $align, 'center' ); ?> value="center"><?php _e('Center',THEME_LANG); ?></option>
-                <option <?php selected( $align, 'left' ); ?> value="left"><?php _e('Left',THEME_LANG); ?></option>
-                <option <?php selected( $align, 'right' ); ?> value="right"><?php _e('Right',THEME_LANG); ?></option>
+                <option <?php selected( $align, '' ); ?> value=""><?php esc_html_e('None','aquila'); ?></option>
+                <option <?php selected( $align, 'center' ); ?> value="center"><?php esc_html_e('Center','aquila'); ?></option>
+                <option <?php selected( $align, 'left' ); ?> value="left"><?php esc_html_e('Left','aquila'); ?></option>
+                <option <?php selected( $align, 'right' ); ?> value="right"><?php esc_html_e('Right','aquila'); ?></option>
             </select>
         </p>
-        <p><label for="<?php echo $this->get_field_id( 'space_between_item' ); ?>"><?php _e( 'Space Between item:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'space_between_item' ); ?>"><?php esc_html_e( 'Space Between item:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'space_between_item' ); ?>" name="<?php echo $this->get_field_name( 'space_between_item' ); ?>" type="text" value="<?php echo $space_between_item; ?>" /></p>
         <script type="text/javascript">
             (function($){

@@ -56,13 +56,6 @@ require_once ( FW_DIR . 'helpers.php' );
 
 
 /**
- * Add scripts for backend
- *
- */
-require_once ( FW_DIR . 'scripts.php' );
-
-
-/**
  * get custom walker for wp_nav_menu
  *
  */

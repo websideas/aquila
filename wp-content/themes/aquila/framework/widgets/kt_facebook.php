@@ -11,8 +11,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 class Widget_KT_Facebook extends WP_Widget {
 
     public function __construct() {
-        $widget_ops = array('classname' => 'widget_kt_facebook', 'description' => __( "Embed facebook Like page.", THEME_LANG) );
-        parent::__construct('kt_facebook', __('KT: Page Plugin facebook', THEME_LANG), $widget_ops);
+        $widget_ops = array('classname' => 'widget_kt_facebook', 'description' => esc_html__( "Embed facebook Like page.", 'aquila') );
+        parent::__construct('kt_facebook', esc_html__('KT: Page Plugin facebook', 'aquila'), $widget_ops);
         $this->alt_option_name = 'widget_kt_facebook';
 
         add_action('wp_footer', array($this, 'footer'));
@@ -84,40 +84,40 @@ class Widget_KT_Facebook extends WP_Widget {
 
     public function form( $instance ) {
 
-        $defaults = array( 'title' => __( 'Facebook' , THEME_LANG), 'height' => 500, 'small_header' => false, 'adapt_container_width' => true, 'hide_cover' => false, 'show_facepile' => true, 'show_posts' => false, 'href' => '');
+        $defaults = array( 'title' => esc_html__( 'Facebook' , 'aquila'), 'height' => 500, 'small_header' => false, 'adapt_container_width' => true, 'hide_cover' => false, 'show_facepile' => true, 'show_posts' => false, 'href' => '');
         $instance = wp_parse_args( (array) $instance, $defaults );
 
         $title = strip_tags($instance['title']);
 
         ?>
 
-        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title:' ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
 
-        <p><label for="<?php echo $this->get_field_id( 'href' ); ?>"><?php _e( 'The URL of the Facebook Page:', THEME_LANG ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'href' ); ?>"><?php esc_html_e( 'The URL of the Facebook Page:', 'aquila' ); ?></label>
             <input class="widefat" id="<?php echo $this->get_field_id( 'href' ); ?>" name="<?php echo $this->get_field_name( 'href' ); ?>" type="text" value="<?php echo $instance['href']; ?>" /></p>
 
-        <p><label for="<?php echo $this->get_field_id( 'height' ); ?>"><?php _e( 'Height', THEME_LANG ); ?></label>
+        <p><label for="<?php echo $this->get_field_id( 'height' ); ?>"><?php esc_html_e( 'Height', 'aquila' ); ?></label>
             <input id="<?php echo $this->get_field_id( 'height' ); ?>" name="<?php echo $this->get_field_name( 'height' ); ?>" type="text" value="<?php echo $instance['height']; ?>" class="widefat" /></p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $instance['small_header'] ); ?> id="<?php echo $this->get_field_id( 'small_header' ); ?>" name="<?php echo $this->get_field_name( 'small_header' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'small_header' ); ?>"><?php _e( 'Use Small Header', THEME_LANG ); ?></label>
-        <br/><small><?php _e('Use the small header instead', THEME_LANG); ?></small></p>
+            <label for="<?php echo $this->get_field_id( 'small_header' ); ?>"><?php esc_html_e( 'Use Small Header', 'aquila' ); ?></label>
+        <br/><small><?php esc_html_e('Use the small header instead', 'aquila'); ?></small></p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $instance['adapt_container_width'] ); ?> id="<?php echo $this->get_field_id( 'adapt_container_width' ); ?>" name="<?php echo $this->get_field_name( 'adapt_container_width' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'adapt_container_width' ); ?>"><?php _e( 'Adapt to plugin container width', THEME_LANG ); ?></label>
-            <br/><small><?php _e('Try to fit inside the container width', THEME_LANG); ?></small></p>
+            <label for="<?php echo $this->get_field_id( 'adapt_container_width' ); ?>"><?php esc_html_e( 'Adapt to plugin container width', 'aquila' ); ?></label>
+            <br/><small><?php esc_html_e('Try to fit inside the container width', 'aquila'); ?></small></p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $instance['hide_cover'] ); ?> id="<?php echo $this->get_field_id( 'hide_cover' ); ?>" name="<?php echo $this->get_field_name( 'hide_cover' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'hide_cover' ); ?>"><?php _e( 'Hide Cover Photo', THEME_LANG ); ?></label></p>
+            <label for="<?php echo $this->get_field_id( 'hide_cover' ); ?>"><?php esc_html_e( 'Hide Cover Photo', 'aquila' ); ?></label></p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $instance['show_facepile'] ); ?> id="<?php echo $this->get_field_id( 'show_facepile' ); ?>" name="<?php echo $this->get_field_name( 'show_facepile' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_facepile' ); ?>"><?php _e( 'Show Friend\'s Faces', THEME_LANG ); ?></label></p>
+            <label for="<?php echo $this->get_field_id( 'show_facepile' ); ?>"><?php esc_html_e( 'Show Friend\'s Faces', 'aquila' ); ?></label></p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $instance['show_posts'] ); ?> id="<?php echo $this->get_field_id( 'show_posts' ); ?>" name="<?php echo $this->get_field_name( 'show_posts' ); ?>" />
-            <label for="<?php echo $this->get_field_id( 'show_posts' ); ?>"><?php _e( 'Show Page Posts', THEME_LANG ); ?></label></p>
+            <label for="<?php echo $this->get_field_id( 'show_posts' ); ?>"><?php esc_html_e( 'Show Page Posts', 'aquila' ); ?></label></p>
 
-        <p class="description"><?php _e('For use widget, You need config Facebook App ID in Theme options', THEME_LANG); ?></p>
+        <p class="description"><?php esc_html_e('For use widget, You need config Facebook App ID in Theme options', 'aquila'); ?></p>
 
     <?php
     }

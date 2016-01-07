@@ -13,9 +13,9 @@ if ( function_exists('register_sidebar')) {
     function kt_register_sidebars(){
 
         register_sidebar( array(
-            'name' => __( 'Primary Widget Area', THEME_LANG),
+            'name' => esc_html__( 'Primary Widget Area', 'aquila'),
             'id' => 'primary-widget-area',
-            'description' => __( 'The primary widget area', THEME_LANG),
+            'description' => esc_html__( 'The primary widget area', 'aquila'),
             'before_widget' => '<div id="%1$s" class="widget-container %2$s"><div class="widget-inner">',
             'after_widget' => '</div></div>',
             'before_title' => '<h3 class="widget-title">',
@@ -23,9 +23,9 @@ if ( function_exists('register_sidebar')) {
         ) );
 
         register_sidebar( array(
-            'name' => __( 'Side Area', THEME_LANG),
+            'name' => esc_html__( 'Side Area', 'aquila'),
             'id' => 'side-widget-area',
-            'description' => __( 'The side widget area', THEME_LANG),
+            'description' => esc_html__( 'The side widget area', 'aquila'),
             'before_widget' => '<div id="%1$s" class="widget-container %2$s"><div class="widget-inner">',
             'after_widget' => '</div></div>',
             'before_title' => '<h3 class="widget-title">',
@@ -33,9 +33,9 @@ if ( function_exists('register_sidebar')) {
         ) );
 
         register_sidebar( array(
-            'name' => __( 'Promo Area', THEME_LANG),
+            'name' => esc_html__( 'Promo Area', 'aquila'),
             'id' => 'promo-area',
-            'description' => __( 'IMPORTANT: For best result select set number of widget to 3.', THEME_LANG),
+            'description' => esc_html__( 'IMPORTANT: For best result select set number of widget to 3.', 'aquila'),
             'before_widget' => '<div id="%1$s" class="widget-container %2$s"><div class="widget-inner">',
             'after_widget' => '</div></div>',
             'before_title' => '<h3 class="widget-title">',
@@ -46,9 +46,9 @@ if ( function_exists('register_sidebar')) {
 
         for($i=1; $i<=$count;$i++){
             register_sidebar( array(
-                'name' => __( 'Sidebar '.$i, THEME_LANG),
+                'name' => esc_html__( 'Sidebar '.$i, 'aquila'),
                 'id' => 'sidebar-column-'.$i,
-                'description' => __( 'The sidebar column '.$i.' widget area', THEME_LANG),
+                'description' => esc_html__( 'The sidebar column '.$i.' widget area', 'aquila'),
                 'before_widget' => '<div class="widget-container %2$s"><div class="widget-inner">',
                 'after_widget' => '</div></div>',
                 'before_title' => '<h3 class="widget-title">',
@@ -57,19 +57,19 @@ if ( function_exists('register_sidebar')) {
         }
 
         register_sidebar(array(
-            'name' => __( 'Instagram Footer', THEME_LANG),
+            'name' => esc_html__( 'Instagram Footer', 'aquila'),
             'id' => 'instagram-footer',
             'before_widget' => '<div id="%1$s" class="instagram-widget %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<h4 class="instagram-title">',
             'after_title' => '</h4>',
-            'description' => __('Use the Instagram widget here. IMPORTANT: For best result select "Large" under "Photo Size" and set number of photos to 6.', THEME_LANG),
+            'description' => esc_html__('Use the Instagram widget here. IMPORTANT: For best result select "Large" under "Photo Size" and set number of photos to 6.', 'aquila'),
         ));
 
         register_sidebar( array(
-            'name' => __( 'Footer top', THEME_LANG),
+            'name' => esc_html__( 'Footer top', 'aquila'),
             'id' => 'footer-top',
-            'description' => __( 'The footer top widget area', THEME_LANG),
+            'description' => esc_html__( 'The footer top widget area', 'aquila'),
             'before_widget' => '<div id="%1$s" class="widget-container %2$s"><div class="widget-inner">',
             'after_widget' => '</div></div>',
             'before_title' => '<h4 class="widget-title">',
@@ -81,9 +81,9 @@ if ( function_exists('register_sidebar')) {
 
         for($i=1; $i<=$count;$i++){
             register_sidebar( array(
-                'name' => __( 'Footer column '.$i, THEME_LANG),
+                'name' => esc_html__( 'Footer column '.$i, 'aquila'),
                 'id' => 'footer-column-'.$i,
-                'description' => __( 'The footer column '.$i.' widget area', THEME_LANG),
+                'description' => esc_html__( 'The footer column '.$i.' widget area', 'aquila'),
                 'before_widget' => '<div id="%1$s" class="widget-container %2$s"><div class="widget-inner">',
                 'after_widget' => '</div></div>',
                 'before_title' => '<h3 class="widget-title">',
@@ -92,9 +92,9 @@ if ( function_exists('register_sidebar')) {
         }
 
         register_sidebar( array(
-            'name' => __( 'Footer bottom column 1', THEME_LANG),
+            'name' => esc_html__( 'Footer bottom column 1', 'aquila'),
             'id' => 'footer-bottom-1',
-            'description' => __( 'The footer bottom widget area', THEME_LANG),
+            'description' => esc_html__( 'The footer bottom widget area', 'aquila'),
             'before_widget' => '<div id="%1$s" class="widget-footer-bottom %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<!--',
@@ -102,9 +102,9 @@ if ( function_exists('register_sidebar')) {
         ) );
 
         register_sidebar( array(
-            'name' => __( 'Footer bottom column 2', THEME_LANG),
+            'name' => esc_html__( 'Footer bottom column 2', 'aquila'),
             'id' => 'footer-bottom-2',
-            'description' => __( 'The footer bottom widget area', THEME_LANG),
+            'description' => esc_html__( 'The footer bottom widget area', 'aquila'),
             'before_widget' => '<div id="%1$s" class="widget-footer-bottom %2$s">',
             'after_widget' => '</div>',
             'before_title' => '<!--',
