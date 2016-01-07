@@ -10,7 +10,7 @@ if ( !function_exists( 'kt_admin_enqueue_scripts' ) ) {
      * @access      public
      */
     function kt_admin_enqueue_scripts(){
-        wp_enqueue_style( 'kt-font-awesome', KT_THEME_FONTS.'font-awesome/css/font-awesome.min.css');
+        wp_enqueue_style( 'kt-font-awesome', KT_THEME_LIBS.'font-awesome/css/font-awesome.min.css');
         wp_enqueue_style( 'framework-core', KT_FW_CSS.'framework-core.css');
         wp_enqueue_style( 'chosen', KT_FW_LIBS.'chosen/chosen.min.css');
 

@@ -6,22 +6,11 @@
  *
  */
 ?>
-                <?php
-                /**
-                 * @hooked
-                 *
-                 */
-                do_action( 'kt_content_bottom' ); ?>
+                <?php do_action( 'kt_content_bottom' ); ?>
             </div><!-- #content -->
         </div><!-- #wrapper-content -->
         <?php if(kt_option('footer', true)){ ?>
-            <?php
-        	/**
-        	 * @hooked 
-             * theme_after_footer_addscroll 10
-             * 
-        	 */
-        	do_action( 'kt_before_footer' ); ?>
+            <?php do_action( 'kt_before_footer' ); ?>
             <div id="footer">
                 <?php if(is_active_sidebar( 'instagram-footer' )){ ?>
                     <footer id="instagram-footer">
@@ -55,15 +44,10 @@
                     </footer><!-- #footer-copyright -->
                 <?php } ?>
             </div><!-- #footer -->
-            <?php
-        	/**
-        	 * @hooked 
-        	 */
-        	do_action( 'kt_after_footer' ); ?>
+            <?php do_action( 'kt_after_footer' ); ?>
         <?php } ?>
     </div><!-- #page -->
 </div><!-- #page_outter -->
 <?php wp_footer(); ?>
-
 </body>
 </html>

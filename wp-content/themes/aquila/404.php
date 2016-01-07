@@ -10,6 +10,7 @@
 
 
 $type = kt_option('notfound_page_type', 'default');
+
 /* Redirect Home */
 if( $type == 'home'){
     wp_redirect( home_url() ); exit;
@@ -17,11 +18,7 @@ if( $type == 'home'){
 
 get_header(); ?>
     <div class="container">
-        <?php
-        /**
-         * @hooked
-         */
-        do_action( 'kt_before_main' ); ?>
+        <?php do_action( 'kt_before_main' ); ?>
         <div id="main">
             <?php
                 if($type == 'page'){
@@ -36,10 +33,6 @@ get_header(); ?>
                 }
             ?>
         </div><!-- #main -->
-        <?php
-        /**
-         * @hooked
-         */
-        do_action( 'kt_after_main' ); ?>
+        <?php do_action( 'kt_after_main' ); ?>
     </div><!-- .container -->
 <?php get_footer(); ?>

@@ -33,19 +33,19 @@
     <div id="page_outter">
         <div id="page">
             <div id="wrapper-content" class="content-header-<?php echo esc_attr($header_layout); ?>">
-                <?php do_action( 'kt_before_header' ); ?>
-
                 <?php
+
+                do_action( 'kt_before_header' );
+
                 if($position == 'below'){
-                    /**
-                     * @hooked kt_slideshows_position_callback 10
-                     */
                     do_action( 'kt_slideshows_position' );
                 }
-                ?>
 
-                <?php get_template_part( 'templates/headers/header',  'mobile'); ?>
-                <?php get_template_part( 'templates/headers/header',  'mobilenav'); ?>
+                get_template_part( 'templates/headers/header',  'mobile');
+
+                get_template_part( 'templates/headers/header',  'mobilenav');
+
+                ?>
 
                 <div class="header-container header-layout<?php echo esc_attr($header_layout); ?>  header-<?php echo esc_attr($position); ?> <?php echo esc_attr(apply_filters('kt_header_class', '', $header_layout)); ?>">
                     <header id="header" class="<?php echo apply_filters('theme_header_content_class', 'header-content', $header_layout) ?>">
@@ -55,13 +55,9 @@
 
                 <?php
                 if($position != 'below'){
-                    /**
-                     * @hooked kt_slideshows_position_callback 10
-                     */
                     do_action( 'kt_slideshows_position' );
                 }
+                do_action( 'kt_before_content' , $position);
                 ?>
-
-                <?php do_action( 'kt_before_content' , $position); ?>
                 <div id="content" class="<?php echo apply_filters('kt_content_class', 'site-content') ?>">
                     <?php do_action( 'kt_content_top' ); ?>

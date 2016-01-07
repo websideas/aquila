@@ -46,7 +46,7 @@ if ( function_exists('register_sidebar')) {
 
         for($i=1; $i<=$count;$i++){
             register_sidebar( array(
-                'name' => esc_html__( 'Sidebar '.$i, 'aquila'),
+                'name' => sprintf(esc_html__( 'Sidebar %s', 'aquila'), $i) ,
                 'id' => 'sidebar-column-'.$i,
                 'description' => sprintf(esc_html__( 'The sidebar column %s widget area', 'aquila'),$i),
                 'before_widget' => '<div class="widget-container %2$s"><div class="widget-inner">',
@@ -81,7 +81,8 @@ if ( function_exists('register_sidebar')) {
 
         for($i=1; $i<=$count;$i++){
             register_sidebar( array(
-                'name' => esc_html__( 'Footer column '.$i, 'aquila'),
+                'name' => sprintf(esc_html__( 'Footer column %s', 'aquila'), $i) ,
+                'name' => sprintf(esc_html__( 'Footer column %s', 'aquila'), $i) ,
                 'id' => 'footer-column-'.$i,
                 'description' => sprintf(esc_html__( 'The footer column %s widget area', 'aquila'),$i),
                 'before_widget' => '<div id="%1$s" class="widget-container %2$s"><div class="widget-inner">',

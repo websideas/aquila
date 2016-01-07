@@ -33,33 +33,33 @@ define( 'KT_FW_DATA', trailingslashit( KT_FW_DIR . 'data' ) );
  * All ajax functions
  *
  */
-require_once ( KT_FW_DIR . 'ajax.php' );
+require  KT_FW_DIR . 'ajax.php';
 
 
 /**
  * Get all functions for frontend
  *
  */
-require_once ( KT_FW_DIR . 'frontend.php' );
+require_once KT_FW_DIR . 'frontend.php';
 
 /**
  * Get functions for framework
  *
  */
-require_once ( KT_FW_DIR . 'functions.php' );
+require_once KT_FW_DIR . 'functions.php';
 
 /**
  * Get class helpers in framework
  *
  */
-require_once ( KT_FW_DIR . 'helpers.php' );
+require_once KT_FW_DIR . 'helpers.php';
 
 
 /**
  * get custom walker for wp_nav_menu
  *
  */
-require_once ( KT_FW_EXT_DIR .'nav/nav_custom_walker.php' );
+require KT_FW_EXT_DIR .'nav/nav_custom_walker.php';
 
 
 /**
@@ -70,24 +70,24 @@ require_once ( KT_FW_EXT_DIR .'nav/nav_custom_walker.php' );
 define( 'RWMB_URL', trailingslashit( KT_FW_EXT_URL . 'meta-box' ) );
 define( 'RWMB_DIR', trailingslashit( KT_FW_EXT_DIR . 'meta-box' ) );
 
-require_once (RWMB_DIR . 'meta-box.php');
+require RWMB_DIR . 'meta-box.php';
 
 if ( class_exists( 'RW_Meta_Box' ) && is_admin() ) {
 
     // Add fields to metabox
-    require_once (KT_FW_EXT_CUSTOM_DIR . 'meta-box-custom.php');
+    require KT_FW_EXT_CUSTOM_DIR . 'meta-box-custom.php';
 
     // Add plugin meta-box-show-hide
-    require_once (KT_FW_EXT_DIR . 'meta-box-show-hide/meta-box-show-hide.php');
+    require KT_FW_EXT_DIR . 'meta-box-show-hide/meta-box-show-hide.php';
 
     // Add plugin meta-box-tabs
-    require_once (KT_FW_EXT_DIR . 'meta-box-tabs/meta-box-tabs.php');
+    require KT_FW_EXT_DIR . 'meta-box-tabs/meta-box-tabs.php';
 
     // Add plugin meta-box-conditional-logic
     define( 'MBC_URL', trailingslashit( KT_FW_EXT_URL . 'meta-box-conditional-logic' ) );
-    require_once (KT_FW_EXT_DIR . 'meta-box-conditional-logic/meta-box-conditional-logic.php');
+    require KT_FW_EXT_DIR . 'meta-box-conditional-logic/meta-box-conditional-logic.php';
 
-    require_once(KT_FW_DATA . 'data-meta-box.php');
+    require KT_FW_DATA . 'data-meta-box.php';
 
 }
 
@@ -111,7 +111,7 @@ if(!function_exists('redux_register_custom_extension_loader')) :
 				$class_file = $path . $folder . '/extension_' . $folder . '.php';
 				$class_file = apply_filters( 'redux/extension/'.$ReduxFramework->args['opt_name'].'/'.$folder, $class_file );
 				if( $class_file ) {
-					require_once( $class_file );
+					require $class_file;
 					$extension = new $extension_class( $ReduxFramework );
 				}
 			}
@@ -125,7 +125,7 @@ endif;
 add_action('init', 'kt_admin_options_init');
 function  kt_admin_options_init(){
     if (file_exists( KT_FW_DATA . 'data-options.php' ) ) {
-        require_once( KT_FW_DATA . 'data-options.php' );
+        require  KT_FW_DATA . 'data-options.php';
     }
 }
 
@@ -137,33 +137,33 @@ if (is_admin() ) {
 	 * Get plugin require for theme
 	 *
 	 */
-	require_once ( KT_FW_CLASS . 'class-tgm-plugin-activation.php' );
+	require KT_FW_CLASS . 'class-tgm-plugin-activation.php';
 
 	/**
 	 * Install Plugins
      * 
 	 */ 
- 	require_once (KT_FW_DATA . 'data-plugins.php');
+ 	require KT_FW_DATA . 'data-plugins.php';
 
     /**
      * Get Navigation nav
      *
      */
-    require_once ( KT_FW_EXT_DIR . 'nav/nav.php' );
+    require KT_FW_EXT_DIR . 'nav/nav.php';
 
 
 	/**
 	 * Add importer
 	 *
 	 */
-	require_once ( KT_FW_DIR . 'importer.php' );
+	require KT_FW_DIR . 'importer.php';
 
 
     /**
      * Add Admin function
      *
      */
-    require_once ( KT_FW_DIR . 'admin.php' );
+    require KT_FW_DIR . 'admin.php';
 
 
 }
@@ -196,8 +196,8 @@ if ( class_exists( 'Vc_Manager', false ) ) {
 
     if ( !function_exists('kt_js_composer_bridge') ) {
 		function kt_js_composer_bridge() {
-			require_once(KT_FW_DIR . 'js_composer/js_composer_parrams.php');
-            require_once(KT_FW_DIR . 'js_composer/js_composer_bridge.php');
+			require KT_FW_DIR . 'js_composer/js_composer_parrams.php';
+            require KT_FW_DIR . 'js_composer/js_composer_bridge.php';
 		}
 
         if ( function_exists( 'vc_set_shortcodes_templates_dir' ) ) {
@@ -213,4 +213,4 @@ if ( class_exists( 'Vc_Manager', false ) ) {
  * Include Widgets register and define all sidebars.
  *
  */
-require_once ( KT_FW_DIR . 'widgets.php' );
+require KT_FW_DIR . 'widgets.php';

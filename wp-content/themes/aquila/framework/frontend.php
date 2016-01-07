@@ -112,7 +112,7 @@ function kt_add_scripts() {
 
     wp_enqueue_style( 'kt-wp-style', get_stylesheet_uri(), array('mediaelement', 'wp-mediaelement') );
     wp_enqueue_style( 'bootstrap', KT_THEME_LIBS . 'bootstrap/css/bootstrap.css', array());
-    wp_enqueue_style( 'font-awesome', KT_THEME_FONTS . 'font-awesome/css/font-awesome.min.css', array());
+    wp_enqueue_style( 'font-awesome', KT_THEME_LIBS . 'font-awesome/css/font-awesome.min.css', array());
     wp_enqueue_style( 'kt-plugins', KT_THEME_CSS . 'plugins.css', array());
 
 	// Load our main stylesheet.
@@ -771,8 +771,6 @@ if ( ! function_exists( 'kt_entry_meta' ) ) {
 if ( ! function_exists( 'kt_entry_date' ) ) {
     /**
      * Prints HTML with date information for current post.
-     *
-     * Create your own twentysixteen_entry_date() function to override in a child theme.
      *
      */
     function kt_entry_date($format = 'd F Y') {

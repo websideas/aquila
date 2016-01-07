@@ -46,7 +46,7 @@ if ( post_password_required() ) {
     // If comments are closed and there are comments, let's leave a little note, shall we?
     if ( ! comments_open() && get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
         ?>
-        <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'twentyfifteen' ); ?></p>
+        <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'aquila' ); ?></p>
     <?php endif; ?>
     
     <?php
@@ -61,9 +61,9 @@ if ( post_password_required() ) {
 
     $new_fields = array(
         'author' => '<p class="comment_field-column comment-form-author">' .
-            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  placeholder="'.esc_html__('Name', 'aquila').'"' . $aria_req . $html_req . ' /></p>',
+            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '"  placeholder="'.esc_html__('Name', 'aquila').'"'. $aria_req . $html_req .'/></p>',
         'email'  => '<p class="comment_field-column comment-form-email">' .
-            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="'.esc_html__('Email', 'aquila').'"' . $aria_req . $html_req . ' /></p></div>',
+            '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" placeholder="'.esc_html__('Email', 'aquila').'"'. $aria_req . $html_req.'/></p></div>',
         'url'    => '<p class="comment-form-url">' .
             '<input id="url" name="url" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" placeholder="'.esc_html__('Website', 'aquila').'" /></p>',
     );
@@ -79,7 +79,5 @@ if ( post_password_required() ) {
     );
 
     ?>
-    
     <?php comment_form($comments_args); ?>
-
 </div><!-- .comments-area -->

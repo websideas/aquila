@@ -152,15 +152,6 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
         protected $menu = 'tgmpa-install-plugins';
 
         /**
-         * Parent menu file slug.
-         *
-         * @since 2.5.0
-         *
-         * @var string
-         */
-        public $parent_slug = 'themes.php';
-
-        /**
          * Capability needed to view the plugin installation menu item.
          *
          * @since 2.5.0
@@ -431,9 +422,10 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
                     add_action( 'admin_init', array( $this, 'admin_init' ), 1 );
                     add_action( 'admin_enqueue_scripts', array( $this, 'thickbox' ) );
                 }
-
-                add_action( 'load-plugins.php', array( $this, 'add_plugin_action_link_filters' ), 1 );
             }
+
+            // If needed, filter plugin action links.
+            add_action( 'load-plugins.php', array( $this, 'add_plugin_action_link_filters' ), 1 );
 
             // Make sure things get reset on switch theme.
             add_action( 'switch_theme', array( $this, 'flush_plugins_cache' ) );
@@ -454,8 +446,11 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
         }
 
         /**
-         * Prevent activation of plugins which don't meet the minimum version requirement from the
-         * WP native plugins page.
+         * Hook in plugin action link filters for the WP native plugins page.
+         *
+         * - Prevent activation of plugins which don't meet the minimum version requirements.
+         * - Prevent deactivation of force-activated plugins.
+         * - Add update notice if update available.
          *
          * @since 2.5.0
          */
@@ -611,7 +606,6 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
             $args = apply_filters(
                 'tgmpa_admin_menu_args',
                 array(
-                    'parent_slug' => $this->parent_slug,                     // Parent Menu slug.
                     'page_title'  => $this->strings['page_title'],           // Page title.
                     'menu_title'  => $this->strings['menu_title'],           // Menu title.
                     'capability'  => $this->capability,                      // Capability.
@@ -632,14 +626,10 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
          */
         protected function add_admin_menu( array $args ) {
             if ( has_filter( 'tgmpa_admin_menu_use_add_theme_page' ) ) {
-                _deprecated_function( 'The "tgmpa_admin_menu_use_add_theme_page" filter', '2.5.0', esc_html__( 'Set the parent_slug config variable instead.', 'tgmpa' ) );
+                _deprecated_function( 'The "tgmpa_admin_menu_use_add_theme_page" filter', '2.5.0', esc_html__( 'The tgmpa_admin_menu_use_add_theme_page filter is deprecated.', 'tgmpa' ) );
             }
 
-            if ( 'themes.php' === $this->parent_slug ) {
-                $this->page_hook = call_user_func( 'add_theme_page', $args['page_title'], $args['menu_title'], $args['capability'], $args['menu_slug'], $args['function'] );
-            } else {
-                $this->page_hook = call_user_func( 'add_submenu_page', $args['parent_slug'], $args['page_title'], $args['menu_title'], $args['capability'], $args['menu_slug'], $args['function'] );
-            }
+            $this->page_hook = add_theme_page( $args['page_title'], $args['menu_title'], $args['capability'], $args['menu_slug'], $args['function'] );
         }
 
         /**
@@ -1347,7 +1337,6 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
                 'dismissable',
                 'dismiss_msg',
                 'menu',
-                'parent_slug',
                 'capability',
                 'is_automatic',
                 'message',
@@ -1594,15 +1583,11 @@ if ( ! class_exists( 'TGM_Plugin_Activation' ) ) {
             static $url;
 
             if ( ! isset( $url ) ) {
-                $parent = $this->parent_slug;
-                if ( false === strpos( $parent, '.php' ) ) {
-                    $parent = 'admin.php';
-                }
                 $url = add_query_arg(
                     array(
                         'page' => urlencode( $this->menu ),
                     ),
-                    self_admin_url( $parent )
+                    self_admin_url( 'themes.php' )
                 );
             }
 

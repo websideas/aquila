@@ -19,11 +19,11 @@
             </a>
         </h2>
 
-        <?php if($description = get_the_author_meta('description')){ ?>
-            <div class="author-bio"><?php echo $description; ?></div>
-        <?php } ?>
-
         <?php
+        if($description = get_the_author_meta('description')){
+            printf('<div class="author-bio">%s</div>', $description);
+        }
+
         $googleplus = get_the_author_meta('googleplus');
         $url = get_the_author_meta('url');
         $twitter = get_the_author_meta('twitter');
@@ -35,25 +35,25 @@
         <?php if($facebook || $twitter || $pinterest || $googleplus || $instagram || $tumblr || $url){ ?>
             <p class="author-social">
                 <?php if($facebook){ ?>
-                    <a href="<?php echo $facebook; ?>" target="_blank"><i class="fa fa-facebook"></i></a>
+                    <a href="<?php echo esc_url($facebook); ?>" target="_blank"><i class="fa fa-facebook"></i></a>
                 <?php } ?>
                 <?php if($twitter){ ?>
-                    <a href="http://www.twitter.com/<?php echo $twitter; ?>" target="_blank"><i class="fa fa-twitter"></i></a>
+                    <a href="http://www.twitter.com/<?php echo esc_attr($twitter); ?>" target="_blank"><i class="fa fa-twitter"></i></a>
                 <?php } ?>
                 <?php if($pinterest){ ?>
-                    <a href="http://www.pinterest.com/<?php echo $pinterest; ?>" target="_blank"><i class="fa fa-pinterest"></i></a>
+                    <a href="http://www.pinterest.com/<?php echo esc_attr($pinterest); ?>" target="_blank"><i class="fa fa-pinterest"></i></a>
                 <?php } ?>
                 <?php if($googleplus){ ?>
-                    <a href="<?php echo $googleplus; ?>" target="_blank"><i class="fa fa-google-plus"></i></a>
+                    <a href="<?php echo esc_url($googleplus); ?>" target="_blank"><i class="fa fa-google-plus"></i></a>
                 <?php } ?>
                 <?php if($instagram){ ?>
-                    <a href="http://instagram.com/<?php echo $instagram; ?>" target="_blank"><i class="fa fa-instagram"></i></a>
+                    <a href="http://instagram.com/<?php echo esc_attr($instagram); ?>" target="_blank"><i class="fa fa-instagram"></i></a>
                 <?php } ?>
                 <?php if($tumblr){ ?>
-                    <a href="http://<?php echo $tumblr; ?>.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a>
+                    <a href="http://<?php echo esc_attr($tumblr); ?>.tumblr.com/" target="_blank"><i class="fa fa-tumblr"></i></a>
                 <?php } ?>
                 <?php if($url){ ?>
-                    <a href="<?php echo $url; ?>" target="_blank"><i class="fa fa-globe"></i></a>
+                    <a href="<?php echo esc_url($url); ?>" target="_blank"><i class="fa fa-globe"></i></a>
                 <?php } ?>
             </p>
         <?php } ?>

@@ -300,40 +300,6 @@ WpbakeryShortcodeParams::addField('kt_image_sizes', 'vc_kt_image_sizes_settings_
 
 
 
-function vc_kt_animate_settings($settings, $value){
-    
-    $dependency = '';
-    $param_name = isset($settings['param_name']) ? $settings['param_name'] : '';
-    $type = isset($settings['type']) ? $settings['type'] : '';
-    $class = isset($settings['class']) ? $settings['class'] : '';
-    
-    $string = file_get_contents(KT_FW_URL.'js_composer/animate-config.json');
-    $json_a = json_decode($string,true);
-    
-    $posts_fields = array();
-    $posts_fields[] = "<option value=''>".esc_html__('No Animation', 'aquila')."</option>";
-    
-    foreach($json_a as $jkey => $jvalue){
-        $posts_fields[] = "<optgroup label='".ucwords(str_replace('_',' ',$jkey))."'>";
-            foreach( $jvalue as $k=>$v ){
-                $selected = ($value == $k) ? ' selected="selected"' : '';
-                $posts_fields[] .= "<option value='{$k}' {$selected}>".$k."</option>";
-            }
-        $posts_fields[] .= "</optgroup>";
-    }
-    
-    $output = '<div class="wrap-kt-animate">';
-        $output .= '<div class="animationSandbox"><h1>'.esc_html__('Animate', 'aquila').'</h1></div>';
-        $output .= '<select class="wpb_vc_param_value ' . $param_name . ' ' . $type . ' ' . $class . '" name="' . $param_name . '" '.$dependency.'>'
-            .implode( $posts_fields )
-            .'</select>';
-    $output .= '</div>';
-    return $output;
-}
-WpbakeryShortcodeParams::addField('kt_animate', 'vc_kt_animate_settings',  KT_FW_JS.'kt_animate.js');
-
-
-
 
 
 function vc_kt_icons_settings($settings, $value){

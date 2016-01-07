@@ -17,34 +17,13 @@ class WP_Widget_KT_Popular extends WP_Widget {
         parent::__construct('kt_post_popular', esc_html__('KT: Post Popular', 'aquila'), $widget_ops);
         $this->alt_option_name = 'widget_kt_post_popular';
 
-        add_action( 'save_post', array($this, 'flush_widget_cache') );
-        add_action( 'deleted_post', array($this, 'flush_widget_cache') );
-        add_action( 'switch_theme', array($this, 'flush_widget_cache') );
-
 	}
 
 	public function widget( $args, $instance ) {
-        $cache = array();
-        if ( ! $this->is_preview() ) {
-            $cache = wp_cache_get( 'widget_kt_post_popular', 'widget' );
-        }
-
-        if ( ! is_array( $cache ) ) {
-            $cache = array();
-        }
 
         if ( ! isset( $args['widget_id'] ) ) {
             $args['widget_id'] = $this->id;
         }
-
-        if ( isset( $cache[ $args['widget_id'] ] ) ) {
-            echo $cache[ $args['widget_id'] ];
-            return;
-        }
-
-        ob_start();
-
-
 
         $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
         
@@ -167,12 +146,6 @@ class WP_Widget_KT_Popular extends WP_Widget {
         
         echo $args['after_widget'];
 
-        if ( ! $this->is_preview() ) {
-            $cache[ $args['widget_id'] ] = ob_get_flush();
-            wp_cache_set( 'widget_kt_post_popular', $cache, 'widget' );
-        } else {
-            ob_end_flush();
-        }
 
 	}
 
@@ -187,18 +160,8 @@ class WP_Widget_KT_Popular extends WP_Widget {
         $instance['number'] = (int) $new_instance['number'];
         $instance['show_thumbnail'] = isset( $new_instance['show_thumbnail'] ) ? (bool) $new_instance['show_thumbnail'] : false;
 
-        $this->flush_widget_cache();
-
-        $alloptions = wp_cache_get( 'alloptions', 'options' );
-        if ( isset($alloptions['widget_kt_post_popular']) )
-            delete_option('widget_kt_post_popular');
-
         return $instance;
 	}
-
-    public function flush_widget_cache() {
-        wp_cache_delete('widget_kt_post_popular', 'widget');
-    }
 
 	public function form( $instance ) {
 		$title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : esc_html__( 'Widget Tabs' , 'aquila');

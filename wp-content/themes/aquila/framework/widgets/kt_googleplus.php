@@ -26,7 +26,6 @@ class Widget_KT_Goolge extends WP_Widget {
     <?php
     }
 
-
     public function widget($args, $instance) {
 
         $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
@@ -91,10 +90,6 @@ class Widget_KT_Goolge extends WP_Widget {
 
         return $instance;
 
-    }
-
-    public function flush_widget_cache() {
-        wp_cache_delete('widget_kt_google', 'widget');
     }
 
     public function form( $instance ) {

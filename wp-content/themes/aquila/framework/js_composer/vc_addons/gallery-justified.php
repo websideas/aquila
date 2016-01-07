@@ -43,11 +43,9 @@ class WPBakeryShortCode_KT_Gallery_Justified extends WPBakeryShortCode_VC_Custom
                     	}
                         $output .= '<div class="kt-gallery-item">';
                             if( $gallery_popup == 'true' ){
-                                $output .= '<a href="call.jpg">';
-                            }
-                            $output .= $image['thumbnail'];
-                            if( $gallery_popup == 'true' ){
-                                $output .= "</a>";
+                                $output .= sprintf('a href="%s">%s</a>',$image_popup, $image['thumbnail']);
+                            }else{
+                                $output .= $image['thumbnail'];
                             }
                         $output .= '</div>';
                     }
@@ -65,8 +63,7 @@ class WPBakeryShortCode_KT_Gallery_Justified extends WPBakeryShortCode_VC_Custom
 		$old_names = array( 'yellow_message', 'blue_message', 'green_message', 'button_green', 'button_grey', 'button_yellow', 'button_blue', 'button_red', 'button_orange' );
 		$new_names = array( 'alert-block', 'alert-info', 'alert-success', 'btn-success', 'btn', 'btn-info', 'btn-primary', 'btn-danger', 'btn-warning' );
 		$value = str_ireplace( $old_names, $new_names, $value );
-		//$value = esc_html__($value, "js_composer");
-		//
+
 		$param_name = isset( $param['param_name'] ) ? $param['param_name'] : '';
 		$type = isset( $param['type'] ) ? $param['type'] : '';
 		$class = isset( $param['class'] ) ? $param['class'] : '';

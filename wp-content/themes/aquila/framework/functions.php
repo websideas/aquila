@@ -212,14 +212,14 @@ function kt_comment_form_before_fields(){
 function kt_contactmethods( $contactmethods ) {
 
     // Add Twitter, Facebook
-    $contactmethods['facebook'] = __('Facebook page/profile url', THEME_LANG);
-    $contactmethods['twitter'] = __('Twitter username (without @)', THEME_LANG);
-    $contactmethods['pinterest'] = __('Pinterest username', THEME_LANG);
-    $contactmethods['googleplus'] = __('Google+ page/profile URL', THEME_LANG);
-    $contactmethods['instagram'] = __('Instagram username', THEME_LANG);
-    $contactmethods['behance'] = __('Behance username', THEME_LANG);
-    $contactmethods['tumblr'] = __('Tumblr username', THEME_LANG);
-    $contactmethods['dribbble'] = __('Dribbble username', THEME_LANG);
+    $contactmethods['facebook'] = __('Facebook page/profile url', 'aquila');
+    $contactmethods['twitter'] = __('Twitter username (without @)', 'aquila');
+    $contactmethods['pinterest'] = __('Pinterest username', 'aquila');
+    $contactmethods['googleplus'] = __('Google+ page/profile URL', 'aquila');
+    $contactmethods['instagram'] = __('Instagram username', 'aquila');
+    $contactmethods['behance'] = __('Behance username', 'aquila');
+    $contactmethods['tumblr'] = __('Tumblr username', 'aquila');
+    $contactmethods['dribbble'] = __('Dribbble username', 'aquila');
 
     return $contactmethods;
 }
@@ -416,7 +416,7 @@ function kt_get_page_title(){
     $title = '';
 
     if ( is_front_page() && !is_singular('page') ) {
-        $title = __( 'Blog', THEME_LANG );
+        $title = __( 'Blog', 'aquila' );
     } elseif(is_category()){
         $title = single_tag_title( '', false );
     } elseif( is_home() ){
@@ -469,7 +469,7 @@ function kt_get_page_subtitle(){
     global $post;
     $subtitle = '';
     if ( is_front_page() && !is_singular('page') ) {
-        $subtitle =  __('Lastest posts', THEME_LANG);
+        $subtitle =  __('Lastest posts', 'aquila');
     }elseif( is_home() ){
         $page_for_posts = get_option('page_for_posts', true);
         $subtitle = nl2br(rwmb_meta('_kt_page_header_subtitle', array(), $page_for_posts))  ;
@@ -487,7 +487,7 @@ function kt_get_page_subtitle(){
                     $subtitle .= sprintf(
                         '<li class="active"><a href="%s">%s</a></li>',
                         get_category_link($category_current->term_id),
-                        __('All', THEME_LANG)
+                        __('All', 'aquila')
                     );
                     foreach($categories as $category){
                         $subtitle .= sprintf(
@@ -498,16 +498,16 @@ function kt_get_page_subtitle(){
                     }
                     $subtitle .= '</ul>';
                 }else{
-                    $subtitle = sprintf( __('%s posts', THEME_LANG), $category_current->count);
+                    $subtitle = sprintf( __('%s posts', 'aquila'), $category_current->count);
                 }
             }elseif(is_tag() || is_author() || is_year() || is_month() || is_day()){
                 global $wp_query;
-                $subtitle = sprintf( __('%s posts', THEME_LANG), $wp_query->found_posts);
+                $subtitle = sprintf( __('%s posts', 'aquila'), $wp_query->found_posts);
             }
         }
     }elseif(is_search()){
         global $wp_query;
-        $subtitle = sprintf( __('%s posts', THEME_LANG), $wp_query->found_posts);
+        $subtitle = sprintf( __('%s posts', 'aquila'), $wp_query->found_posts);
     }elseif( $post ){
         $post_id = $post->ID;
         $subtitle = nl2br(rwmb_meta('_kt_page_header_subtitle', array(), $post_id));

@@ -35,7 +35,7 @@
     edit_post_link(
         sprintf(
         /* translators: %s: Name of current post */
-            wp_kses(__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ), array( 'span' => array() ) ),
+            wp_kses(__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'aquila' ), array( 'span' => array() ) ),
             get_the_title()
         ),
         '<footer class="entry-footer"><span class="edit-link">',

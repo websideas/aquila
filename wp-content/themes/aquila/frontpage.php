@@ -24,8 +24,8 @@ get_header(); ?>
         $main_column = ($sidebar['sidebar']) ? '8' : '12';
         $sidebar_class = ($sidebar['sidebar']) ? 'sidebar-'.$sidebar['sidebar'] : 'no-sidebar';
         $pull_class = ($sidebar['sidebar'] == 'left') ? 'pull-right' : '';
-        echo '<div class="row main '.$sidebar_class.'">';
-        echo '<div class="col-md-'.$main_column.' col-sm-12 col-xs-12 main-content '.$pull_class.'">';
+        echo '<div class="row main '.esc_attr($sidebar_class).'">';
+        echo '<div class="col-md-'.esc_attr($main_column).' col-sm-12 col-xs-12 main-content '.esc_attr($pull_class).'">';
             get_template_part( 'templates/content', 'page');
         echo '</div><!-- .main-content -->';
         if($sidebar['sidebar']){
@@ -100,8 +100,6 @@ get_header(); ?>
             <div class='blog-posts'>
                 <?php
                 do_action('kt_before_blog_posts_loop');
-
-
 
                 if($type == 'medium' || $type == 'list'){
                     $column = 1;
@@ -194,8 +192,7 @@ get_header(); ?>
 
                 edit_post_link(
                     sprintf(
-                    /* translators: %s: Name of current post */
-                        wp_kses(__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'twentysixteen' ), array( 'span' => array() ) ),
+                        wp_kses(__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'aquila' ), array( 'span' => array() ) ),
                         get_the_title()
                     ),
                     '<footer class="entry-footer"><span class="edit-link">',

@@ -17,33 +17,13 @@ class WP_Widget_KT_Tabs extends WP_Widget {
         parent::__construct('kt_post_tabs', esc_html__('KT: Post Tabs', 'aquila'), $widget_ops);
         $this->alt_option_name = 'widget_kt_post_tabs';
 
-        add_action( 'save_post', array($this, 'flush_widget_cache') );
-        add_action( 'deleted_post', array($this, 'flush_widget_cache') );
-        add_action( 'switch_theme', array($this, 'flush_widget_cache') );
-
 	}
 
 	public function widget( $args, $instance ) {
-        $cache = array();
-        if ( ! $this->is_preview() ) {
-            $cache = wp_cache_get( 'widget_kt_post_tabs', 'widget' );
-        }
-
-        if ( ! is_array( $cache ) ) {
-            $cache = array();
-        }
 
         if ( ! isset( $args['widget_id'] ) ) {
             $args['widget_id'] = $this->id;
         }
-
-        if ( isset( $cache[ $args['widget_id'] ] ) ) {
-            echo $cache[ $args['widget_id'] ];
-            return;
-        }
-
-        ob_start();
-
         $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 
         $select_recent = isset( $instance['select_recent'] ) ? $instance['select_recent'] : true;
@@ -105,7 +85,7 @@ class WP_Widget_KT_Tabs extends WP_Widget {
                                     <ul class="kt_posts_widget">
                                         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                                             <li <?php post_class('article-widget clearfix'); ?>>
-                                                <?php kt_post_thumbnail_image( 'kt_recent_posts', 'img-responsive' ); ?>
+                                                <?php kt_post_thumbnail_image( 'kt_widget_article', 'img-responsive' ); ?>
                                                 <div class="article-attr">
                                                     <h3 class="title"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h3>
                                                     <?php kt_entry_date();?>
@@ -125,12 +105,6 @@ class WP_Widget_KT_Tabs extends WP_Widget {
         
         echo $args['after_widget'];
 
-        if ( ! $this->is_preview() ) {
-            $cache[ $args['widget_id'] ] = ob_get_flush();
-            wp_cache_set( 'widget_kt_post_tabs', $cache, 'widget' );
-        } else {
-            ob_end_flush();
-        }
 
 	}
 
@@ -144,18 +118,9 @@ class WP_Widget_KT_Tabs extends WP_Widget {
         
         $instance['number'] = (int) $new_instance['number'];
 
-        $this->flush_widget_cache();
-
-        $alloptions = wp_cache_get( 'alloptions', 'options' );
-        if ( isset($alloptions['widget_kt_post_tabs']) )
-            delete_option('widget_kt_post_tabs');
-
         return $instance;
 	}
 
-    public function flush_widget_cache() {
-        wp_cache_delete('widget_kt_post_tabs', 'widget');
-    }
 
 	public function form( $instance ) {
 		$title = isset( $instance['title'] ) ? esc_attr( $instance['title'] ) : '';

@@ -14,7 +14,7 @@ function kt_import_demo_aquila( $demos ){
         'status' => sprintf(
             '<span class="%s">%s</span>',
             'demo-main',
-            __('Main', 'wingman')
+            __('Main', 'aquila')
         )
     );
 
@@ -38,7 +38,7 @@ if ( !function_exists( 'kt_extended_imported' ) ) {
          * Setting Menus
          *************************************************************************/
 
-        $main_menu = get_term_by( 'name', __('Main menu', 'wingman'), 'nav_menu' );
+        $main_menu = get_term_by( 'name', __('Main menu', 'aquila'), 'nav_menu' );
         set_theme_mod( 'nav_menu_locations', array(
                 'primary' => $main_menu->term_id
             )
