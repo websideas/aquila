@@ -610,9 +610,8 @@ function kt_total_post_share_count( $url ){
     $pt = kt_get_pinterest_post_share_count( $url ) ;
     $li = kt_get_linkedin_post_share_count( $url ) ;
 
+    $count =  $fb + $gp + $pt + $li;
 
-    $total =  $fb + $gp + $pt + $li;
-
-    return $total;
+    return $count;
 }
 
