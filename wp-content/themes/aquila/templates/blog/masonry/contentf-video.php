@@ -11,7 +11,7 @@
 
     <div class="row row-eq-height">
         <div class="col-md-6 col-sm-6 post-item-thumb">
-            <?php the_post_thumbnail('first_featured'); ?>
+            <?php the_post_thumbnail('kt_first_featured'); ?>
         </div>
         <div class="col-md-6 col-sm-6 post-item-info">
             <?php

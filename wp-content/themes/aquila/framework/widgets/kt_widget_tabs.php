@@ -105,7 +105,7 @@ class WP_Widget_KT_Tabs extends WP_Widget {
                                     <ul class="kt_posts_widget">
                                         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                                             <li <?php post_class('article-widget clearfix'); ?>>
-                                                <?php kt_post_thumbnail_image( 'recent_posts', 'img-responsive' ); ?>
+                                                <?php kt_post_thumbnail_image( 'kt_recent_posts', 'img-responsive' ); ?>
                                                 <div class="article-attr">
                                                     <h3 class="title"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h3>
                                                     <?php kt_entry_date();?>

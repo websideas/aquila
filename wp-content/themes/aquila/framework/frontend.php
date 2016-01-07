@@ -69,18 +69,18 @@ function kt_theme_setup() {
     
     
     if (function_exists( 'add_image_size' ) ) {
-        add_image_size( 'recent_posts', 570, 355, true);
-        add_image_size( 'recent_posts_masonry', 570);
-        add_image_size( 'first_featured', 670, 500, true);
+        add_image_size( 'kt_recent_posts', 570, 355, true);
+        add_image_size( 'kt_recent_posts_masonry', 570);
+        add_image_size( 'kt_first_featured', 670, 500, true);
 
-        add_image_size( 'small', 170, 170, true );
-        add_image_size( 'blog_post', 1140, 600, true );
+        add_image_size( 'kt_small', 170, 170, true );
+        add_image_size( 'kt_blog_post', 1140, 600, true );
 
-        add_image_size( 'blog_post_sidebar', 1140 );
-        add_image_size( 'blog_post_slider', 1460, 800, true );
+        add_image_size( 'kt_blog_post_sidebar', 1140 );
+        add_image_size( 'kt_blog_post_slider', 1460, 800, true );
 
-        add_image_size( 'widget_article', 120, 75, true );
-        add_image_size( 'widget_article_carousel', 335, 250, true );
+        add_image_size( 'kt_widget_article', 120, 75, true );
+        add_image_size( 'kt_widget_article_carousel', 335, 250, true );
     }
     
     load_theme_textdomain( 'aquila', KT_THEME_DIR . '/languages' );
@@ -370,7 +370,7 @@ if ( ! function_exists( 'kt_post_thumbnail' ) ) :
         <?php }elseif($format == 'gallery'){
             $type = get_post_meta($post_id, '_kt_gallery_type', true);
             if($type == 'slider' ||!$type){
-                $images = kt_get_galleries_post('_kt_gallery_images', 'blog_post');
+                $images = kt_get_galleries_post('_kt_gallery_images', 'kt_blog_post');
                 if($images){
                     $slider_class = array('blog-posts-slick');
                     $slider_option = '{}';
@@ -389,7 +389,7 @@ if ( ! function_exists( 'kt_post_thumbnail' ) ) :
                     );
                 }
             }elseif($type == 'grid'){
-                $images = kt_get_galleries_post('_kt_gallery_images', 'recent_posts_masonry');
+                $images = kt_get_galleries_post('_kt_gallery_images', 'kt_recent_posts_masonry');
                 $gallery = '';
                 if($images){
                     foreach($images as $image){

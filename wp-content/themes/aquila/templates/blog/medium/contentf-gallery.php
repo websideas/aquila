@@ -7,7 +7,7 @@
     <?php if($type == 'grid'){ ?>
         <div class="row row-eq-height">
             <div class="col-md-6 col-sm-6 post-item-thumb">
-                <?php the_post_thumbnail('first_featured'); ?>
+                <?php the_post_thumbnail('kt_first_featured'); ?>
             </div>
             <div class="col-md-6 col-sm-6 post-item-info">
                 <?php
@@ -32,7 +32,7 @@
     <?php
 
     if($type == 'slider' ||!$type){
-        $images = kt_get_galleries_post('_kt_gallery_images', 'blog_post');
+        $images = kt_get_galleries_post('_kt_gallery_images', 'kt_blog_post');
         if($images){
             $slider_class = array('blog-posts-slick');
             $slider_option = '{"arrows": false}';
@@ -51,7 +51,7 @@
             );
         }
     }elseif($type == 'grid'){
-        $images = kt_get_galleries_post('_kt_gallery_images', 'small');
+        $images = kt_get_galleries_post('_kt_gallery_images', 'kt_small');
         $gallery = '';
         if($images){
             foreach($images as $image){

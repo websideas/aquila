@@ -142,7 +142,7 @@ class WP_Widget_KT_Popular extends WP_Widget {
                                     <ul>
                                         <?php while ( $query->have_posts() ) : $query->the_post(); ?>
                                             <li <?php post_class('article-widget clearfix'); ?>>
-                                                <?php if($show_thumbnail){ kt_post_thumbnail_image( 'small', 'img-responsive' ); } ?>
+                                                <?php if($show_thumbnail){ kt_post_thumbnail_image( 'kt_small', 'img-responsive' ); } ?>
                                                 <div class="article-attr">
                                                     <h3 class="title"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h3>
                                                     <div class="entry-meta-data">

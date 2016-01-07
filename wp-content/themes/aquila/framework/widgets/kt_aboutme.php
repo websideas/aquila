@@ -93,7 +93,7 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
 
     public function form( $instance ) {
         //Defaults
-        $instance = wp_parse_args( (array) $instance, array( 'title' => esc_html__('About me', 'aquila'), 'target' => '_self', 'attachment' => '', 'size' => 'recent_posts', 'description' => '') );
+        $instance = wp_parse_args( (array) $instance, array( 'title' => esc_html__('About me', 'aquila'), 'target' => '_self', 'attachment' => '', 'size' => 'kt_recent_posts', 'description' => '') );
         $title = strip_tags($instance['title']);
 
         $attachment = esc_attr( $instance['attachment'] );

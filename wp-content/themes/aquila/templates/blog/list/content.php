@@ -1,7 +1,7 @@
 <article <?php post_class('post-item-content'); ?>>
     <?php
     echo '<div class="post-item-thumb">';
-    kt_post_thumbnail_image('blog_post');
+    kt_post_thumbnail_image('kt_blog_post');
     echo '</div>';
     ?>
     <div class="post-item-inner">

@@ -459,14 +459,14 @@ function kt_render_postSlider($post_id){
 
 
         $slider_class = array('blog-posts-slick', 'posts-slick-'.$style);
-        $image_size = 'blog_post';
+        $image_size = 'kt_blog_post';
         $slider_option = '{}';
         $slider_thumbnail = '';
 
         if($style == 'big'){
             $slider_class[] = 'slideAnimation';
             $slider_class[] = 'slide-visible';
-            $image_size = 'blog_post_slider';
+            $image_size = 'kt_blog_post_slider';
         } elseif ($style == 'thumb'){
             $slider_option = '{"arrows": false, "asNavFor": ".blog-posts-thumb", "fade": true}';
             $slider_thumbnail .= '<div class="blog-posts-thumb">';

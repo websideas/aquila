@@ -1,7 +1,7 @@
 <article <?php post_class('post-item-content first-featured'); ?>>
     <div class="row row-eq-height">
         <div class="col-md-7">
-            <?php kt_post_thumbnail_image('first_featured'); ?>
+            <?php kt_post_thumbnail_image('kt_first_featured'); ?>
         </div>
         <div class="col-md-5 post-item-info">
             <?php

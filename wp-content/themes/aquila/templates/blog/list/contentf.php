@@ -4,7 +4,7 @@
     $type = get_post_meta($post_id, '_kt_gallery_type', true);
 
     if($type == 'slider' ||!$type){
-        $images = kt_get_galleries_post('_kt_gallery_images', 'blog_post');
+        $images = kt_get_galleries_post('_kt_gallery_images', 'kt_blog_post');
         if($images){
             $slider_class = array('blog-posts-slick');
             $slider_option = '{"arrows": false}';
@@ -23,7 +23,7 @@
             );
         }
     }elseif($type == 'grid'){
-        $images = kt_get_galleries_post('_kt_gallery_images', 'recent_posts_masonry');
+        $images = kt_get_galleries_post('_kt_gallery_images', 'kt_recent_posts_masonry');
         $gallery = '';
         if($images){
             $i = 1;
