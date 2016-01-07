@@ -40,7 +40,7 @@ class Widget_KT_Instagram extends WP_Widget {
                 if ( ! $number )
                     $number = 9;
             
-            require_once ( FW_CLASS . 'instagram-api.php' );
+            require_once ( KT_FW_CLASS . 'instagram-api.php' );
             
             $kt_instagram = new KT_Instagram();
             $data = $kt_instagram->getUserMedia( array('count' => $number ));

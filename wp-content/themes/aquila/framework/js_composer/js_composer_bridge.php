@@ -51,5 +51,5 @@ $composer_addons = array(
 );
 
 foreach ( $composer_addons as $addon ) {
-	require_once( FW_DIR . 'js_composer/vc_addons/' . $addon );
+	require_once( KT_FW_DIR . 'js_composer/vc_addons/' . $addon );
 }

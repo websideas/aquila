@@ -19,7 +19,7 @@ class WPBakeryShortCode_KT_Gallery_Grid extends WPBakeryShortCode {
         ), $atts );
         extract($atts);
 
-        $gallery_popup = apply_filters('sanitize_boolean', $gallery_popup);
+        $gallery_popup = apply_filters('kt_sanitize_boolean', $gallery_popup);
         
         $elementClass = array(
             'base' => apply_filters( VC_SHORTCODE_CUSTOM_CSS_FILTER_TAG, 'wrapper-gallery-grid ', $this->settings['base'], $atts ),

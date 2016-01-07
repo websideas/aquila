@@ -18,7 +18,7 @@ class WP_Widget_KT_Promo extends WP_Widget {
 
 	public function widget( $args, $instance ) {
 
-        $attachment = get_thumbnail_attachment($instance['attachment'], $instance['size']);
+        $attachment = kt_get_thumbnail_attachment($instance['attachment'], $instance['size']);
 
         if($attachment){
     		echo $args['before_widget'];
@@ -59,7 +59,7 @@ class WP_Widget_KT_Promo extends WP_Widget {
         $preview = false;
         $img_preview = "";
         if($instance['attachment']){
-            $file = get_thumbnail_attachment($instance['attachment'], 'full');
+            $file = kt_get_thumbnail_attachment($instance['attachment'], 'full');
             $preview = true;
             $img_preview = $file['url'];
         }

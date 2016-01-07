@@ -32,7 +32,7 @@
     <?php
 
     if($type == 'slider' ||!$type){
-        $images = get_galleries_post('_kt_gallery_images', 'blog_post');
+        $images = kt_get_galleries_post('_kt_gallery_images', 'blog_post');
         if($images){
             $slider_class = array('blog-posts-slick');
             $slider_option = '{"arrows": false}';
@@ -51,7 +51,7 @@
             );
         }
     }elseif($type == 'grid'){
-        $images = get_galleries_post('_kt_gallery_images', 'small');
+        $images = kt_get_galleries_post('_kt_gallery_images', 'small');
         $gallery = '';
         if($images){
             foreach($images as $image){

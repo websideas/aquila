@@ -10,7 +10,7 @@
             <div class="container">
                 <p class="logo-footer">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <img src="<?php echo THEME_IMG.'footer-logo.png' ?>"  alt="<?php bloginfo( 'name' ); ?>"/>
+                        <img src="<?php echo KT_THEME_IMG.'footer-logo.png' ?>"  alt="<?php bloginfo( 'name' ); ?>"/>
                     </a>
                 </p>
                 <?php dynamic_sidebar('footer-bottom-1') ?>

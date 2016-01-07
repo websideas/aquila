@@ -16,8 +16,8 @@
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="<?php echo THEME_JS; ?>html5shiv.min.js"></script>
-      <script src="<?php echo THEME_JS; ?>respond.min.js"></script>
+      <script src="<?php echo KT_THEME_JS; ?>html5shiv.min.js"></script>
+      <script src="<?php echo KT_THEME_JS; ?>respond.min.js"></script>
     <![endif]-->
 
 	<?php wp_head(); ?>
@@ -47,7 +47,7 @@
                 <?php get_template_part( 'templates/headers/header',  'mobile'); ?>
                 <?php get_template_part( 'templates/headers/header',  'mobilenav'); ?>
 
-                <div class="header-container header-layout<?php echo esc_attr($header_layout); ?>  header-<?php echo esc_attr($position); ?> <?php echo esc_attr(apply_filters('theme_header_class', '', $header_layout)); ?>">
+                <div class="header-container header-layout<?php echo esc_attr($header_layout); ?>  header-<?php echo esc_attr($position); ?> <?php echo esc_attr(apply_filters('kt_header_class', '', $header_layout)); ?>">
                     <header id="header" class="<?php echo apply_filters('theme_header_content_class', 'header-content', $header_layout) ?>">
                         <?php get_template_part( 'templates/headers/header',  'layout'.$header_layout); ?>
                     </header><!-- #header -->

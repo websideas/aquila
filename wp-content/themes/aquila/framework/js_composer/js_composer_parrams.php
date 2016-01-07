@@ -64,7 +64,7 @@ function vc_kt_radio_settings_field($settings, $value) {
     
     return $output."<div class='".$class_input."'>".implode(' ', $radios)."</div>";
 }
-vc_add_shortcode_param('kt_radio', 'vc_kt_radio_settings_field', FW_JS.'kt_radio.js');
+vc_add_shortcode_param('kt_radio', 'vc_kt_radio_settings_field', KT_FW_JS.'kt_radio.js');
 
 
 /**
@@ -89,7 +89,7 @@ function kt_switch_settings_field($settings, $value) {
     
     return $output;
 }
-vc_add_shortcode_param('kt_switch', 'kt_switch_settings_field', FW_JS.'kt_switch.js');
+vc_add_shortcode_param('kt_switch', 'kt_switch_settings_field', KT_FW_JS.'kt_switch.js');
 
 
 
@@ -137,7 +137,7 @@ function vc_kt_taxonomy_settings_field( $settings, $value ) {
     return $output;
 }
 
-vc_add_shortcode_param('kt_taxonomy', 'vc_kt_taxonomy_settings_field', FW_JS.'kt_select.js');
+vc_add_shortcode_param('kt_taxonomy', 'vc_kt_taxonomy_settings_field', KT_FW_JS.'kt_select.js');
 
 /**
  * Posts field.
@@ -176,7 +176,7 @@ function vc_kt_posts_settings_field($settings, $value) {
     return $output;
 
 }
-vc_add_shortcode_param('kt_posts', 'vc_kt_posts_settings_field', FW_JS.'kt_select.js');
+vc_add_shortcode_param('kt_posts', 'vc_kt_posts_settings_field', KT_FW_JS.'kt_select.js');
 
 
 
@@ -216,7 +216,7 @@ function vc_kt_authors_settings_field($settings, $value) {
     return $output;
 
 }
-vc_add_shortcode_param('kt_authors', 'vc_kt_authors_settings_field', FW_JS.'kt_select.js');
+vc_add_shortcode_param('kt_authors', 'vc_kt_authors_settings_field', KT_FW_JS.'kt_select.js');
 
 
 /**
@@ -267,7 +267,7 @@ function vc_kt_socials_settings_field($settings, $value) {
     return $output;
 
 }
-vc_add_shortcode_param('kt_socials', 'vc_kt_socials_settings_field', FW_JS.'kt_socials.js');
+vc_add_shortcode_param('kt_socials', 'vc_kt_socials_settings_field', KT_FW_JS.'kt_socials.js');
 
 
 
@@ -307,7 +307,7 @@ function vc_kt_animate_settings($settings, $value){
     $type = isset($settings['type']) ? $settings['type'] : '';
     $class = isset($settings['class']) ? $settings['class'] : '';
     
-    $string = file_get_contents(FW_URL.'js_composer/animate-config.json');
+    $string = file_get_contents(KT_FW_URL.'js_composer/animate-config.json');
     $json_a = json_decode($string,true);
     
     $posts_fields = array();
@@ -330,7 +330,7 @@ function vc_kt_animate_settings($settings, $value){
     $output .= '</div>';
     return $output;
 }
-vc_add_shortcode_param('kt_animate', 'vc_kt_animate_settings',  FW_JS.'kt_animate.js');
+vc_add_shortcode_param('kt_animate', 'vc_kt_animate_settings',  KT_FW_JS.'kt_animate.js');
 
 
 
@@ -379,4 +379,4 @@ function vc_kt_icons_settings($settings, $value){
 
     return $output;
 }
-vc_add_shortcode_param('kt_icons', 'vc_kt_icons_settings',  FW_JS.'kt_icons.js');
+vc_add_shortcode_param('kt_icons', 'vc_kt_icons_settings',  KT_FW_JS.'kt_icons.js');

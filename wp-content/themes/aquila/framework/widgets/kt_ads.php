@@ -20,10 +20,10 @@ class WP_Widget_KT_Ads extends WP_Widget {
 
         $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
         
-        if(isset($instance['attachment1'])){ $attachment1 = get_thumbnail_attachment($instance['attachment1'], 'small'); }
-        if(isset($instance['attachment2'])){ $attachment2 = get_thumbnail_attachment($instance['attachment2'], 'small'); }
-        if(isset($instance['attachment3'])){ $attachment3 = get_thumbnail_attachment($instance['attachment3'], 'small'); }
-        if(isset($instance['attachment4'])){ $attachment4 = get_thumbnail_attachment($instance['attachment4'], 'small'); }
+        if(isset($instance['attachment1'])){ $attachment1 = kt_get_thumbnail_attachment($instance['attachment1'], 'small'); }
+        if(isset($instance['attachment2'])){ $attachment2 = kt_get_thumbnail_attachment($instance['attachment2'], 'small'); }
+        if(isset($instance['attachment3'])){ $attachment3 = kt_get_thumbnail_attachment($instance['attachment3'], 'small'); }
+        if(isset($instance['attachment4'])){ $attachment4 = kt_get_thumbnail_attachment($instance['attachment4'], 'small'); }
         
 		echo $args['before_widget'];
 
@@ -103,7 +103,7 @@ class WP_Widget_KT_Ads extends WP_Widget {
 		$link1 = esc_attr( $instance['link1'] );
         $attachment1 = esc_attr( $instance['attachment1'] );
         if($instance['attachment1']){
-            $file1 = get_thumbnail_attachment($instance['attachment1'], 'small');
+            $file1 = kt_get_thumbnail_attachment($instance['attachment1'], 'small');
             $preview1 = true;
             $img_preview1 = $file1['url'];
         }
@@ -111,7 +111,7 @@ class WP_Widget_KT_Ads extends WP_Widget {
         $link2 = esc_attr( $instance['link2'] );
         $attachment2 = esc_attr( $instance['attachment2'] );
         if($instance['attachment2']){
-            $file2 = get_thumbnail_attachment($instance['attachment2'], 'small');
+            $file2 = kt_get_thumbnail_attachment($instance['attachment2'], 'small');
             $preview2 = true;
             $img_preview2 = $file2['url'];
         }
@@ -119,7 +119,7 @@ class WP_Widget_KT_Ads extends WP_Widget {
         $link3 = esc_attr( $instance['link3'] );
         $attachment3 = esc_attr( $instance['attachment3'] );
         if($instance['attachment3']){
-            $file3 = get_thumbnail_attachment($instance['attachment3'], 'small');
+            $file3 = kt_get_thumbnail_attachment($instance['attachment3'], 'small');
             $preview3 = true;
             $img_preview3 = $file3['url'];
         }
@@ -127,7 +127,7 @@ class WP_Widget_KT_Ads extends WP_Widget {
         $link4 = esc_attr( $instance['link4'] );
         $attachment4 = esc_attr( $instance['attachment4'] );
         if($instance['attachment4']){
-            $file4 = get_thumbnail_attachment($instance['attachment4'], 'small');
+            $file4 = kt_get_thumbnail_attachment($instance['attachment4'], 'small');
             $preview4 = true;
             $img_preview4 = $file4['url'];
         }

@@ -193,8 +193,6 @@ $kt_widgets = array(
 );
 
 foreach ( $kt_widgets as $widget ) {
-	require_once( FW_WIDGETS . $widget );
+	require_once( KT_FW_WIDGETS . $widget );
 
 }
-
-

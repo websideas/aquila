@@ -80,7 +80,7 @@ function kt_add_custom_fields( $item_id, $item, $depth, $args ) { ?>
                             $preview = false;
                             $img_preview = "";
                             if($item->image){
-                                $file = get_thumbnail_attachment($item->image, 'full');
+                                $file = kt_get_thumbnail_attachment($item->image, 'full');
                                 $preview = true;
                                 $img_preview = $file['src'];
                             }

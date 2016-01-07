@@ -26,7 +26,7 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
             echo $args['before_title'] . $title . $args['after_title'];
         }
 
-        $attachment = get_thumbnail_attachment($instance['attachment'], $instance['size']);
+        $attachment = kt_get_thumbnail_attachment($instance['attachment'], $instance['size']);
         $value = isset( $instance['value'] ) ? $instance['value'] : '';
         
         if($attachment){
@@ -100,7 +100,7 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
         $preview = false;
         $img_preview = "";
         if($instance['attachment']){
-            $file = get_thumbnail_attachment($instance['attachment'], 'full');
+            $file = kt_get_thumbnail_attachment($instance['attachment'], 'full');
             $preview = true;
             $img_preview = $file['url'];
         }
@@ -183,7 +183,7 @@ class WP_Widget_KT_AboutMe extends WP_Widget {
             </ul><!-- .kt-socials-profiles -->
             <input id="<?php echo $this->get_field_id( 'value' ); ?>" type="hidden" class="wpb_vc_param_value kt-socials-value" name="<?php echo $this->get_field_name( 'value' ); ?>" value="<?php echo esc_attr($value); ?>" />
         </div><!-- .kt-socials-options -->
-        <?php wp_enqueue_script( 'cosials_js', FW_JS.'kt_socials.js', array('jquery'), FW_VER, true); ?>
+        <?php wp_enqueue_script( 'cosials_js', KT_FW_JS.'kt_socials.js', array('jquery'), KT_FW_VER, true); ?>
         
         <script type="text/javascript">
             (function($){

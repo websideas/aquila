@@ -24,12 +24,12 @@
     if($video == 'youtube'){
         printf(
             '<div class="embed-responsive embed-responsive-16by9">%s</div>',
-            video_youtube($video_id)
+            kt_video_youtube($video_id)
         );
     }elseif($video == 'vimeo'){
         printf(
             '<div class="embed-responsive embed-responsive-16by9">%s</div>',
-            video_vimeo($video_id)
+            kt_video_vimeo($video_id)
         );
     }
     ?>

@@ -53,7 +53,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 
             $this->args = array(
                 // TYPICAL -> Change these values as you need/desire
-                'opt_name'             => THEME_OPTIONS,
+                'opt_name'             => KT_THEME_OPTIONS,
                 // This is where your data is stored in the database and also becomes your global variable name.
                 'display_name'         => $theme->get( 'Name' ),
                 // Name that appears at the top of your panel
@@ -231,15 +231,15 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Footer widgets layout', 'aquila' ),
                         'subtitle' => esc_html__( 'Select your footer widgets layout', 'aquila' ),
                         'options'  => array(
-                            '3-3-3-3' => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'footer/footer-1.png' ),
-                            '6-3-3' => array( 'alt' => esc_html__( 'Layout 2', 'aquila' ), 'img' => FW_IMG . 'footer/footer-2.png' ),
-                            '3-3-6' => array( 'alt' => esc_html__( 'Layout 3', 'aquila' ), 'img' => FW_IMG . 'footer/footer-3.png' ),
-                            '6-6' => array( 'alt' => esc_html__( 'Layout 4', 'aquila' ), 'img' => FW_IMG . 'footer/footer-4.png' ),
-                            '4-4-4' => array( 'alt' => esc_html__( 'Layout 5', 'aquila' ), 'img' => FW_IMG . 'footer/footer-5.png' ),
-                            '8-4' => array( 'alt' => esc_html__( 'Layout 6', 'aquila' ), 'img' => FW_IMG . 'footer/footer-6.png' ),
-                            '4-8' => array( 'alt' => esc_html__( 'Layout 7', 'aquila' ), 'img' => FW_IMG . 'footer/footer-7.png' ),
-                            '3-6-3' => array( 'alt' => esc_html__( 'Layout 8', 'aquila' ), 'img' => FW_IMG . 'footer/footer-8.png' ),
-                            '12' => array( 'alt' => esc_html__( 'Layout 9', 'aquila' ), 'img' => FW_IMG . 'footer/footer-9.png' ),
+                            '3-3-3-3' => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => KT_FW_IMG . 'footer/footer-1.png' ),
+                            '6-3-3' => array( 'alt' => esc_html__( 'Layout 2', 'aquila' ), 'img' => KT_FW_IMG . 'footer/footer-2.png' ),
+                            '3-3-6' => array( 'alt' => esc_html__( 'Layout 3', 'aquila' ), 'img' => KT_FW_IMG . 'footer/footer-3.png' ),
+                            '6-6' => array( 'alt' => esc_html__( 'Layout 4', 'aquila' ), 'img' => KT_FW_IMG . 'footer/footer-4.png' ),
+                            '4-4-4' => array( 'alt' => esc_html__( 'Layout 5', 'aquila' ), 'img' => KT_FW_IMG . 'footer/footer-5.png' ),
+                            '8-4' => array( 'alt' => esc_html__( 'Layout 6', 'aquila' ), 'img' => KT_FW_IMG . 'footer/footer-6.png' ),
+                            '4-8' => array( 'alt' => esc_html__( 'Layout 7', 'aquila' ), 'img' => KT_FW_IMG . 'footer/footer-7.png' ),
+                            '3-6-3' => array( 'alt' => esc_html__( 'Layout 8', 'aquila' ), 'img' => KT_FW_IMG . 'footer/footer-8.png' ),
+                            '12' => array( 'alt' => esc_html__( 'Layout 9', 'aquila' ), 'img' => KT_FW_IMG . 'footer/footer-9.png' ),
                         ),
                         'default'  => '3-3-3-3'
                     ),
@@ -319,7 +319,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'footer_copyright_text',
                         'type'     => 'editor',
                         'title'    => esc_html__( 'Footer Copyright Text', 'aquila' ),
-                        'default'  => '<p style="margin-bottom: 38px;"><a href="'.esc_url( home_url( '/' )).'"><img src="'.THEME_IMG.'logo-light.png" alt="Wingman" /></a></p><p style="margin-bottom: 24px;"><img src="'.THEME_IMG.'payment.png" alt="payment" /></p>Copyright © 2015 - <a href="'.esc_url( home_url( '/' )).'">Wing Man</a> - All rights reserved. <br />Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a>'
+                        'default'  => '<p style="margin-bottom: 38px;"><a href="'.esc_url( home_url( '/' )).'"><img src="'.KT_THEME_IMG.'logo-light.png" alt="Wingman" /></a></p><p style="margin-bottom: 24px;"><img src="'.KT_THEME_IMG.'payment.png" alt="payment" /></p>Copyright © 2015 - <a href="'.esc_url( home_url( '/' )).'">Wing Man</a> - All rights reserved. <br />Powered by <a href="http://wordpress.org" target="_blank">Wordpress</a>'
                     ),
                 )
             );
@@ -453,7 +453,7 @@ if ( ! class_exists( 'KT_config' ) ) {
 
             $this->args = array(
                 // TYPICAL -> Change these values as you need/desire
-                'opt_name' => THEME_OPTIONS,
+                'opt_name' => KT_THEME_OPTIONS,
                 // This is where your data is stored in the database and also becomes your global variable name.
                 'display_name' => $theme->get('Name'),
                 // Name that appears at the top of your panel
@@ -650,8 +650,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Header layout', 'aquila' ),
                         'subtitle' => esc_html__( 'Please choose header layout', 'aquila' ),
                         'options'  => array(
-                            1 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'header/header-v1.jpg' ),
-                            2 => array( 'alt' => esc_html__( 'Layout 2', 'aquila' ), 'img' => FW_IMG . 'header/header-v2.jpg' ),
+                            1 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => KT_FW_IMG . 'header/header-v1.jpg' ),
+                            2 => array( 'alt' => esc_html__( 'Layout 2', 'aquila' ), 'img' => KT_FW_IMG . 'header/header-v2.jpg' ),
                         ),
                         'default'  => 1
                     ),
@@ -759,15 +759,15 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title' => esc_html__('Footer widgets layout', 'aquila'),
                         'subtitle' => esc_html__('Select your footer widgets layout', 'aquila'),
                         'options' => array(
-                            '3-3-3-3' => array('alt' => esc_html__('Layout 1', 'aquila'), 'img' => FW_IMG . 'footer/footer-1.png'),
-                            '6-3-3' => array('alt' => esc_html__('Layout 2', 'aquila'), 'img' => FW_IMG . 'footer/footer-2.png'),
-                            '3-3-6' => array('alt' => esc_html__('Layout 3', 'aquila'), 'img' => FW_IMG . 'footer/footer-3.png'),
-                            '6-6' => array('alt' => esc_html__('Layout 4', 'aquila'), 'img' => FW_IMG . 'footer/footer-4.png'),
-                            '4-4-4' => array('alt' => esc_html__('Layout 5', 'aquila'), 'img' => FW_IMG . 'footer/footer-5.png'),
-                            '8-4' => array('alt' => esc_html__('Layout 6', 'aquila'), 'img' => FW_IMG . 'footer/footer-6.png'),
-                            '4-8' => array('alt' => esc_html__('Layout 7', 'aquila'), 'img' => FW_IMG . 'footer/footer-7.png'),
-                            '3-6-3' => array('alt' => esc_html__('Layout 8', 'aquila'), 'img' => FW_IMG . 'footer/footer-8.png'),
-                            '12' => array('alt' => esc_html__('Layout 9', 'aquila'), 'img' => FW_IMG . 'footer/footer-9.png'),
+                            '3-3-3-3' => array('alt' => esc_html__('Layout 1', 'aquila'), 'img' => KT_FW_IMG . 'footer/footer-1.png'),
+                            '6-3-3' => array('alt' => esc_html__('Layout 2', 'aquila'), 'img' => KT_FW_IMG . 'footer/footer-2.png'),
+                            '3-3-6' => array('alt' => esc_html__('Layout 3', 'aquila'), 'img' => KT_FW_IMG . 'footer/footer-3.png'),
+                            '6-6' => array('alt' => esc_html__('Layout 4', 'aquila'), 'img' => KT_FW_IMG . 'footer/footer-4.png'),
+                            '4-4-4' => array('alt' => esc_html__('Layout 5', 'aquila'), 'img' => KT_FW_IMG . 'footer/footer-5.png'),
+                            '8-4' => array('alt' => esc_html__('Layout 6', 'aquila'), 'img' => KT_FW_IMG . 'footer/footer-6.png'),
+                            '4-8' => array('alt' => esc_html__('Layout 7', 'aquila'), 'img' => KT_FW_IMG . 'footer/footer-7.png'),
+                            '3-6-3' => array('alt' => esc_html__('Layout 8', 'aquila'), 'img' => KT_FW_IMG . 'footer/footer-8.png'),
+                            '12' => array('alt' => esc_html__('Layout 9', 'aquila'), 'img' => KT_FW_IMG . 'footer/footer-9.png'),
                         ),
                         'default' => '4-4-4'
                     ),
@@ -793,8 +793,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title' => esc_html__('Footer bottom layout', 'aquila'),
                         'subtitle' => esc_html__('Select your footer bottom layout', 'aquila'),
                         'options' => array(
-                            '1' => array('alt' => esc_html__('Layout 1', 'aquila'), 'img' => FW_IMG . 'footer/footer-bottom-1.png'),
-                            '2' => array('alt' => esc_html__('Layout 2', 'aquila'), 'img' => FW_IMG . 'footer/footer-bottom-2.png'),
+                            '1' => array('alt' => esc_html__('Layout 1', 'aquila'), 'img' => KT_FW_IMG . 'footer/footer-bottom-1.png'),
+                            '2' => array('alt' => esc_html__('Layout 2', 'aquila'), 'img' => KT_FW_IMG . 'footer/footer-bottom-2.png'),
                         ),
                         'default' => '1'
                     ),
@@ -847,9 +847,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Loader layout', 'aquila' ),
                         'subtitle' => esc_html__( 'Please choose loader layout', 'aquila' ),
                         'options'  => array(
-                            'style-1' => array( 'alt' => esc_html__( 'Style 1', 'aquila' ), 'img' => FW_IMG . 'loader/loader_v1.png' ),
-                            'style-2' => array( 'alt' => esc_html__( 'Style 2', 'aquila' ), 'img' => FW_IMG . 'loader/loader_v2.png' ),
-                            'style-3' => array( 'alt' => esc_html__( 'Style 2', 'aquila' ), 'img' => FW_IMG . 'loader/loader_v3.png' ),
+                            'style-1' => array( 'alt' => esc_html__( 'Style 1', 'aquila' ), 'img' => KT_FW_IMG . 'loader/loader_v1.png' ),
+                            'style-2' => array( 'alt' => esc_html__( 'Style 2', 'aquila' ), 'img' => KT_FW_IMG . 'loader/loader_v2.png' ),
+                            'style-3' => array( 'alt' => esc_html__( 'Style 2', 'aquila' ), 'img' => KT_FW_IMG . 'loader/loader_v3.png' ),
                         ),
                         'default'  => 'style-1',
                     ),
@@ -2533,12 +2533,12 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Single layout', 'aquila' ),
                         'subtitle' => esc_html__( 'Please choose header layout', 'aquila' ),
                         'options'  => array(
-                            1 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'single/layout-1.jpg' ),
-                            2 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'single/layout-2.jpg' ),
-                            3 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'single/layout-3.jpg' ),
-                            4 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'single/layout-4.jpg' ),
-                            5 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'single/layout-5.jpg' ),
-                            6 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => FW_IMG . 'single/layout-6.jpg' ),
+                            1 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-1.jpg' ),
+                            2 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-2.jpg' ),
+                            3 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-3.jpg' ),
+                            4 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-4.jpg' ),
+                            5 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-5.jpg' ),
+                            6 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-6.jpg' ),
                         ),
                         'default'  => 1
                     ),

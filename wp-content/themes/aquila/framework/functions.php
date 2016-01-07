@@ -10,11 +10,11 @@ if ( !defined('ABSPATH')) exit;
  * @param $input string
  * @return boolean
  */
-function kt_sanitize_boolean( $input = '' ) {
+function kt_sanitize_boolean_callback( $input = '' ) {
     $input = (string)$input;
     return in_array($input, array('1', 'true', 'y', 'on'));
 }
-add_filter( 'sanitize_boolean', 'kt_sanitize_boolean', 15 );
+add_filter( 'kt_sanitize_boolean', 'kt_sanitize_boolean_callback', 15 );
 
 
 
@@ -81,7 +81,7 @@ add_action( 'wp_head', 'kt_track_post_views');
  * @param array $classes A list of existing body class values.
  * @return array The filtered body class list.
  */
-function theme_body_classes( $classes ) {
+function kt_body_classes( $classes ) {
     global $post;
 
     if ( is_multi_author() ) {
@@ -109,12 +109,12 @@ function theme_body_classes( $classes ) {
 
     return $classes;
 }
-add_filter( 'body_class', 'theme_body_classes' );
+add_filter( 'body_class', 'kt_body_classes' );
 
 /**
  * Add class sticky to header
  */
-function theme_header_class_callback($classes, $layout){
+function kt_header_class_callback($classes, $layout){
     global $post;
 
     $fixed_header = kt_option('fixed_header', 2);
@@ -147,7 +147,7 @@ function theme_header_class_callback($classes, $layout){
     return $classes;
 }
 
-add_filter('theme_header_class', 'theme_header_class_callback', 10, 2);
+add_filter('kt_header_class', 'kt_header_class_callback', 10, 2);
 
 
 /**
@@ -237,14 +237,14 @@ if(!function_exists('kt_placeholder_callback')) {
 
         $placeholder = kt_option('archive_placeholder');
         if(is_array($placeholder) && $placeholder['id'] != '' ){
-            $obj = get_thumbnail_attachment($placeholder['id'], $size);
+            $obj = kt_get_thumbnail_attachment($placeholder['id'], $size);
             $imgage = $obj['url'];
         }elseif($size == 'recent_posts' || $size == 'recent_posts_masonry') {
-            $imgage = THEME_IMG . 'placeholder-recent.jpg';
+            $imgage = KT_THEME_IMG . 'placeholder-recent.jpg';
         }elseif ($size == 'blog_post' || $size == 'blog_post_sidebar'){
-            $imgage = THEME_IMG . 'placeholder-blogpost.jpg';
+            $imgage = KT_THEME_IMG . 'placeholder-blogpost.jpg';
         }else{
-            $imgage = THEME_IMG . 'placeholder-post.jpg';
+            $imgage = KT_THEME_IMG . 'placeholder-post.jpg';
         }
 
         return $imgage;
@@ -295,7 +295,7 @@ endif;
 
 
 
-function add_search_full(){
+function kt_add_search_full(){
     if(kt_option('header_search', 1)){
 
         if(kt_is_wc()){
@@ -312,9 +312,9 @@ function add_search_full(){
         );
     }
 }
-add_action('kt_body_top', 'add_search_full');
+add_action('kt_body_top', 'kt_add_search_full');
 
-function add_socials_mobile(){
+function kt_add_socials_mobile(){
     $social = kt_option('footer_socials');
     
     $socials_arr = array(
@@ -359,7 +359,7 @@ function add_socials_mobile(){
         $socials
     );
 }
-add_action('kt_body_top', 'add_socials_mobile', 10);
+add_action('kt_body_top', 'kt_add_socials_mobile', 10);
 
 
 //Remove Facebook comment box in the content
@@ -393,8 +393,8 @@ function kt_navigation_markup_template($template, $class){
  *
  * @since 1.0
  */
-add_action( 'kt_before_content', 'get_page_header', 20 );
-function get_page_header( ){
+add_action( 'kt_before_content', 'kt_get_page_header', 20 );
+function kt_get_page_header( ){
     global $post;
     $show_title = false;
 

@@ -273,11 +273,11 @@ if (!function_exists('kt_option')){
         if($option === FALSE){
             return FALSE;
         }
-        $kt_options = wp_cache_get( THEME_OPTIONS );
+        $kt_options = wp_cache_get( KT_THEME_OPTIONS );
         if(  !$kt_options ){
-            $kt_options = get_option( THEME_OPTIONS );
-            wp_cache_delete( THEME_OPTIONS );
-            wp_cache_add( THEME_OPTIONS, $kt_options );
+            $kt_options = get_option( KT_THEME_OPTIONS );
+            wp_cache_delete( KT_THEME_OPTIONS );
+            wp_cache_add( KT_THEME_OPTIONS, $kt_options );
         }
 
         if(isset($kt_options[$option]) && $kt_options[$option] !== ''){
@@ -310,11 +310,11 @@ if (!function_exists('kt_get_logo')){
         }
 
         if(!$logo['default']){
-            $logo['default'] = THEME_IMG.'logo.png';
-            $logo['retina'] = THEME_IMG.'logo-2x.png';
-            $logo['alt'] = THEME_IMG.'logo-alt.png';
-            $logo['altretina'] = THEME_IMG.'logo-alt-2x.png';
-        }
+            $logo['default'] = KT_THEME_IMG.'logo.png';
+            $logo['retina'] = KT_THEME_IMG.'logo-2x.png';
+            $logo['alt'] = KT_THEME_IMG.'logo-alt.png';
+            $logo['altretina'] = KT_THEME_IMG.'logo-alt-2x.png';
+        } 
 
         return $logo;
     }
@@ -579,7 +579,7 @@ if (!function_exists('kt_get_header_layout')) {
 
 
 
-if (!function_exists('get_thumbnail_attachment')){
+if (!function_exists('kt_get_thumbnail_attachment')){
     /**
      * Get link attach from thumbnail_id.
      *
@@ -588,7 +588,7 @@ if (!function_exists('get_thumbnail_attachment')){
      * @return array
      */
 
-    function get_thumbnail_attachment($thumbnail_id ,$size = 'post-thumbnail'){
+    function kt_get_thumbnail_attachment($thumbnail_id ,$size = 'post-thumbnail'){
         if(!$thumbnail_id) return false;
         
         $attachment = get_post( $thumbnail_id );
@@ -607,7 +607,7 @@ if (!function_exists('get_thumbnail_attachment')){
 }
 
 
-if (!function_exists('get_link_image_post')) {
+if (!function_exists('kt_get_link_image_post')) {
     /**
      * Get image form meta.
      *
@@ -617,7 +617,7 @@ if (!function_exists('get_link_image_post')) {
      * @return array
      */
 
-    function get_link_image_post($meta, $post_id = null, $size = 'screen')
+    function kt_get_link_image_post($meta, $post_id = null, $size = 'screen')
     {
         global $post;
         if (!$post_id) $post_id = $post->ID;
@@ -634,7 +634,7 @@ if (!function_exists('get_link_image_post')) {
 }
 
 
-if (!function_exists('get_galleries_post')) {
+if (!function_exists('kt_get_galleries_post')) {
     /**
      * Get all image form meta box.
      *
@@ -643,7 +643,7 @@ if (!function_exists('get_galleries_post')) {
      * @param array $post_id Optional. ID of article.
      * @return array
      */
-    function get_galleries_post($meta, $size = 'screen', $post_id = null)
+    function kt_get_galleries_post($meta, $size = 'screen', $post_id = null)
     {
         global $post;
         if (!$post_id) $post_id = $post->ID;
@@ -696,7 +696,7 @@ if (!function_exists('kt_post_option')) {
         if ($meta_v == '' || $meta_v == 0) {
             $meta_v = kt_option($option, $default);
         }
-        $ouput = ($boolean) ? apply_filters('sanitize_boolean', $meta_v) : $meta_v;
+        $ouput = ($boolean) ? apply_filters('kt_sanitize_boolean', $meta_v) : $meta_v;
         return $ouput;
     }
 }
@@ -832,28 +832,28 @@ if(!function_exists('kt_color2hecxa')){
     }
 }
 
-if(!function_exists('video_youtube')) {
+if(!function_exists('kt_video_youtube')) {
     /**
      * Video youtube Embed
      *
      * @param $video_id
      * @return string
      */
-    function video_youtube($video_id)
+    function kt_video_youtube($video_id)
     {
         return '<iframe src="http://www.youtube.com/embed/' . $video_id . '?wmode=transparent" ></iframe>';
     }
 }
 
 
-if(!function_exists('video_vimeo')) {
+if(!function_exists('kt_video_vimeo')) {
     /**
      * Video Vimeo Embed
      *
      * @param $video_id
      * @return string
      */
-    function video_vimeo($video_id, $args = 'title=0&amp;byline=0&amp;portrait=0?wmode=transparent')
+    function kt_video_vimeo($video_id, $args = 'title=0&amp;byline=0&amp;portrait=0?wmode=transparent')
     {
         return '<iframe src="http://player.vimeo.com/video/' . $video_id . '?'.$args.'"></iframe>';
     }

@@ -32,7 +32,7 @@ if ( !function_exists( 'kt_wbc_extended_imported' ) ) {
 			);
 
             foreach( $wbc_sliders_array as $k => $wbc_slider_import ){
-                $revslider = THEME_DIR.'dummy-data/revslider/'.$wbc_slider_import;
+                $revslider = KT_THEME_DIR.'dummy-data/revslider/'.$wbc_slider_import;
                 if ( file_exists( $revslider ) ) {
                     $slider = new RevSlider();
                     $slider->importSliderFromPost( true, true, $revslider );
@@ -92,7 +92,7 @@ if(!function_exists('wbc_change_demo_directory_path')){
      */
 
     function wbc_change_demo_directory_path( $demo_directory_path ) {
-        $demo_directory_path = THEME_DIR.'dummy-data/';
+        $demo_directory_path = KT_THEME_DIR.'dummy-data/';
         return $demo_directory_path;
     }
     add_filter('wbc_importer_dir_path', 'wbc_change_demo_directory_path' );

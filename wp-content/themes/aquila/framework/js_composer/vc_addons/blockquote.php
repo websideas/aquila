@@ -18,7 +18,7 @@ class WPBakeryShortCode_Blockquote extends WPBakeryShortCode {
         extract($atts);
         $output = '';
 
-        $reverse = apply_filters('sanitize_boolean', $reverse);
+        $reverse = apply_filters('kt_sanitize_boolean', $reverse);
 
         $elementClass = array(
             'extra' => $this->getExtraClass( $el_class ),
