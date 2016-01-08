@@ -2010,11 +2010,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span',
                             '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li .widget-title'
                         ),
-                        'default'  => array(
-                            'font-family'     => 'Josefin Slab',
-                            'text-transform' => 'uppercase',
-                            'font-weight'  => '700'
-                        ),
+                        'default'  => array( ),
                     ),
                     array(
                         'id'       => 'typography_navigation_mega_link',
@@ -2455,11 +2451,11 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'subtitle' => esc_html__( 'Please choose header layout', 'aquila' ),
                         'options'  => array(
                             1 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-1.jpg' ),
-                            2 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-2.jpg' ),
-                            3 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-3.jpg' ),
-                            4 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-4.jpg' ),
-                            5 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-5.jpg' ),
-                            6 => array( 'alt' => esc_html__( 'Layout 1', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-6.jpg' ),
+                            2 => array( 'alt' => esc_html__( 'Layout 2', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-2.jpg' ),
+                            3 => array( 'alt' => esc_html__( 'Layout 3', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-3.jpg' ),
+                            4 => array( 'alt' => esc_html__( 'Layout 4', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-4.jpg' ),
+                            5 => array( 'alt' => esc_html__( 'Layout 5', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-5.jpg' ),
+                            6 => array( 'alt' => esc_html__( 'Layout 6', 'aquila' ), 'img' => KT_FW_IMG . 'single/layout-6.jpg' ),
                         ),
                         'default'  => 1
                     ),

@@ -10,7 +10,7 @@ function kt_import_demo_aquila( $demos ){
     $demos['demo1'] = array(
         'title' => 'Classic',
         'previewlink' => 'http://aquila.kitethemes.com/',
-        'xml_count' => 2,
+        'xml_count' => 1,
         'status' => sprintf(
             '<span class="%s">%s</span>',
             'demo-main',

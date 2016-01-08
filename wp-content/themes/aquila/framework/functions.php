@@ -241,12 +241,12 @@ if(!function_exists('kt_placeholder_callback')) {
         if(is_array($placeholder) && $placeholder['id'] != '' ){
             $obj = get_thumbnail_attachment($placeholder['id'], $size);
             $imgage = $obj['url'];
-        }elseif($size == 'recent_posts' || $size == 'recent_posts_masonry') {
-            $imgage = THEME_IMG . 'placeholder-recent.jpg';
-        }elseif ($size == 'blog_post' || $size == 'blog_post_sidebar'){
-            $imgage = THEME_IMG . 'placeholder-blogpost.jpg';
+        }elseif($size == 'kt_recent_posts' || $size == 'kt_recent_posts_masonry') {
+            $imgage = KT_THEME_IMG . 'placeholder-recent.jpg';
+        }elseif ($size == 'kt_blog_post' || $size == 'kt_blog_post_sidebar'){
+            $imgage = KT_THEME_IMG . 'placeholder-blogpost.jpg';
         }else{
-            $imgage = THEME_IMG . 'placeholder-post.jpg';
+            $imgage = KT_THEME_IMG . 'placeholder-post.jpg';
         }
 
         return $imgage;
@@ -295,27 +295,6 @@ if ( ! function_exists( 'kt_page_loader' ) ) :
     add_action( 'kt_body_top', 'kt_page_loader');
 endif;
 
-
-
-function add_search_full(){
-    if(kt_option('header_search', 1)){
-
-        if(kt_is_wc()){
-            $search = get_product_search_form(false);
-        }else{
-            $search = get_search_form(false);
-        }
-
-        printf(
-            '<div id="%1$s" class="%2$s">%3$s</div>',
-            'search-fullwidth',
-            'mfp-hide mfp-with-anim',
-            $search
-        );
-    }
-}
-add_action('kt_body_top', 'add_search_full');
-
 function add_socials_mobile(){
     $socials = '<div class="main-nav-socials">
                     <a href="#"><i class="fa fa-facebook"></i> </a>
@@ -338,7 +317,6 @@ add_action('kt_body_top', 'add_socials_mobile', 10);
 
 //Remove Facebook comment box in the content
 remove_filter ('the_content', 'fbcommentbox', 100);
-
 
 
 add_filter('navigation_markup_template', 'kt_navigation_markup_template', 10, 2);

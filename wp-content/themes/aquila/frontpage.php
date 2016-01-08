@@ -192,7 +192,7 @@ get_header(); ?>
 
                 edit_post_link(
                     sprintf(
-                        wp_kses(__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'aquila' ), array( 'span' => array() ) ),
+                        wp_kses(__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'aquila' ), array( 'span' => array('class' => true) ) ),
                         get_the_title()
                     ),
                     '<footer class="entry-footer"><span class="edit-link">',

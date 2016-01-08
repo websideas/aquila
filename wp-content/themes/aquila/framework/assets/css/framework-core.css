@@ -555,3 +555,21 @@ div#post-body .rwmb-text{
 .widget-content .chosen-container + .chosen-container{
     display: none;
 }
+
+.rwmb-image_radio-wrapper label{
+    display: inline-block;
+    margin: 0 10px 15px;
+    padding: 2px 2px 2px 0;
+    text-align: center;
+}
+.rwmb-image_radio-wrapper label img{
+    display: block;
+    border: 4px solid #d9d9d9;
+    margin-bottom: 10px;
+}
+.rwmb-image_radio-wrapper input{
+    display: none;
+}
+.rwmb-image_radio-wrapper input:checked + img{
+    border-color: #0073aa;
+}
