@@ -192,26 +192,121 @@ function kt_setting_script() {
             '.widget_meta ul > li a:hover::before',
             '.widget_archive ul > li a:hover::before',
             '.widget_categories ul > li a:hover::before',
-            '.widget_product_categories ul > li a:hover::before'
+            '.widget_product_categories ul > li a:hover::before',
+            'div.post-item-content.first-featured .entry-title a:hover',
+            'article.post-item-content.first-featured .entry-title a:hover',
+            'div.post-item-content .cat-links a:hover',
+            'article.post-item-content .cat-links a:hover',
+            '.post-item-meta a:hover',
+            '.post-item-share ul a:hover',
+            'blockquote::before',
+            '.widget_kt_aboutme .kt-aboutwidget-socials a:hover',
+            '.widget_kt_aboutme .kt-aboutwidget-socials a:focus',
+            'ul.kt_posts_widget li h3.title a:hover',
+            '.main-content div.post-item-content .entry-title a:hover',
+            '.main-content div.post-item-content .entry-title a:hover em',
+            '.main-content article.post-item-content .entry-title a:hover',
+            '.main-content article.post-item-content .entry-title a:hover em',
+            'div.post-item-content .entry-title-featured a:hover',
+            'article.post-item-content .entry-title-featured a:hover',
+            'div.post-item-content .post-item-meta-featured > span a:hover',
+            'article.post-item-content .post-item-meta-featured > span a:hover',
+            '#footer-navigation ul li a:hover',
+            '.post-single .post-edit-link:hover',
+            '.post-single .kt_likepost:hover',
+            '.post-single .post-single-share ul li a:hover',
+            '.author-info .author-social a:hover',
+            '#related-article .slick-arrow:hover',
+            '#related-article .entry-title a:hover',
+            '.widget_kt_posts_carousel ul.kt_posts_carousel_widget .article-widget .article-attr h3.title a:hover',
+            '.author-info h2.author-title a:hover',
+            '.post-single .tags-container .tags-links-text',
+            '.post-single .tags-container a:hover',
+            '.pagination a:hover',
+            '.pagination a:focus',
+            '.pagination .current',
+            '#main-navigation > li.menu-item-object-category .megamenu-posts > a:hover',
+            '.page-header .category_children li.active a',
+            '.page-header .category_children li a:hover'
         );
         $css .= implode($selections_color, ',').'{color: '.$accent.';}';
 
+        $selections_color_important = array(
+            '.social-style-light.social-text a:hover',
+            '.social-style-light.social-background-empty a:hover',
+            '.social-style-light.social-background-outline a:hover',
+            '.social-style-accent.social-text a',
+            '.social-style-accent.social-background-empty a',
+            '.social-style-accent.social-background-outline a'
+        );
+        $css .= implode($selections_color_important, ',').'{color: '.$accent.'!important;}';
+
 
         $selections_background = array(
+            '.btn-accent',
             '.hamburger-icon:hover .line', 
             '.hamburger-icon.active .line',
             '.widget_product_tag_cloud .tagcloud a:hover',
             '.widget_product_tag_cloud .tagcloud a:focus',
             '.widget_tag_cloud .tagcloud a:hover',
-            '.widget_tag_cloud .tagcloud a:focus'
+            '.widget_tag_cloud .tagcloud a:focus',
+            'div.post-item-content.first-featured .post-item-meta::after',
+            'article.post-item-content.first-featured .post-item-meta::after',
+            '#footer-navigation ul li a::before',
+            '#back-to-top',
+            '.post-single .post-item-meta::after',
+            '.btn-default:hover',
+            '.btn-default:focus',
+            '.btn-default:active',
+            '.page-header .page-title',
+            '.pagination .page-numbers::before',
+            'ul.style-list.style3 li::after'
         );
         $css .= implode($selections_background, ',').'{background-color: '.$accent.';}';
 
+        $selections_background_important = array(
+            '.social-style-accent.social-background-fill a',
+        );
+        $css .= implode($selections_background_important, ',').'{background-color: '.$accent.'!important;}';
+
         $selections_border_color = array(
+            '.btn-accent',
             '.widget_product_tag_cloud .tagcloud a:hover',
             '.widget_product_tag_cloud .tagcloud a:focus',
             '.widget_tag_cloud .tagcloud a:hover',
-            '.widget_tag_cloud .tagcloud a:focus'
+            '.widget_tag_cloud .tagcloud a:focus',
+            'div.post-item-content.first-featured .entry-title a::before', 
+            'article.post-item-content.first-featured .entry-title a::before',
+            'div.post-item-content.first-featured .post-item-meta',
+            'article.post-item-content.first-featured .post-item-meta',
+            'blockquote.post-item-quote::before',
+            'div.post-item-content.post-item-featured.format-gallery .entry-title a::before',
+            'div.post-item-content.post-item-featured.format-video .entry-title a::before',
+            'div.post-item-content.post-item-featured.format-standard .entry-title a::before',
+            'div.post-item-content.post-item-featured.format-audio .entry-title a::before',
+            'article.post-item-content.post-item-featured.format-gallery .entry-title a::before',
+            'article.post-item-content.post-item-featured.format-video .entry-title a::before',
+            'article.post-item-content.post-item-featured.format-standard .entry-title a::before',
+            'article.post-item-content.post-item-featured.format-audio .entry-title a::before',
+            '.social-style-light.social-text a:hover', 
+            '.social-style-light.social-background-empty a:hover',
+            '.social-style-light.social-background-outline a:hover',
+            '.post-single .post-item-meta',
+            '.post-single .post-edit-link:hover', 
+            '.post-single .kt_likepost:hover',
+            '.post-single .post-single-share ul li a:hover',
+            'input[type="email"]:focus',
+            'input[type="password"]:focus',
+            'input[type="phone"]:focus',
+            'input[type="tel"]:focus',
+            'input[type="text"]:focus',
+            'textarea:focus',
+            '.btn-default:hover',
+            '.btn-default:focus',
+            '.btn-default:active',
+            '.social-style-accent.social-text a',
+            '.social-style-accent.social-background-empty a',
+            '.social-style-accent.social-background-outline a'
         );
         $css .= implode($selections_border_color, ',').'{border-color: '.$accent.';}';
     }

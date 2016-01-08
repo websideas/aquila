@@ -124,6 +124,7 @@ function kt_header_class_callback($classes, $layout){
             $classes .= ' sticky-header-down';
         }
     }
+    $header_shadow = '';
     if($layout == 1){
         if(is_page() || is_singular()){
             $post_id = $post->ID;

@@ -43,7 +43,7 @@ class WPBakeryShortCode_KT_Gallery_Justified extends WPBakeryShortCode_VC_Custom
                     	}
                         $output .= '<div class="kt-gallery-item">';
                             if( $gallery_popup == 'true' ){
-                                $output .= sprintf('a href="%s">%s</a>',$image_popup, $image['thumbnail']);
+                                $output .= sprintf('<a href="%s">%s</a>',$image_popup[0], $image['thumbnail']);
                             }else{
                                 $output .= $image['thumbnail'];
                             }
