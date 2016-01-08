@@ -209,7 +209,7 @@ function kt_setting_script() {
     }
     if($navigation_height_fixed = kt_option('navigation_height_fixed')){
         if(isset($navigation_height_fixed['height'])){
-            $navigation_arr = array(
+            $navigation_arr_fixed = array(
                 '.header-container.header-layout1.is-sticky #main-navigation > li',
                 '.header-container.is-sticky.header-layout1 #main-nav-tool > a',
                 '.header-container.is-sticky.header-layout1 #main-nav-tool > li > a',
@@ -221,7 +221,7 @@ function kt_setting_script() {
                 '.header-container.is-sticky.header-layout2 .main-nav-socials > a',
                 '.header-container.is-sticky.header-layout2 .main-nav-socials > li > a'
             );
-            $css .= implode($navigation_arr, ',').'{line-height: '.intval($navigation_height_fixed['height']).'px;}';
+            $css .= implode($navigation_arr_fixed, ',').'{line-height: '.intval($navigation_height_fixed['height']).'px;}';
         }
     }
 
