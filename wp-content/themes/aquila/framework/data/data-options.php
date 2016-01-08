@@ -826,7 +826,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'styling_accent',
                         'type'     => 'color',
                         'title'    => esc_html__( 'Main Color', 'wingman' ),
-                        'default'  => '#82c14f',
+                        'default'  => '#22dcce',
                         'transparent' => false,
                     ),
 
