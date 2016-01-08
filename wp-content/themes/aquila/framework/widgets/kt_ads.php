@@ -176,7 +176,7 @@ class WP_Widget_KT_Ads extends WP_Widget {
         <h4><?php esc_html_e('Image 1','aquila'); ?></h4>
         <div class="wrapper_kt_image_upload">
             <p style="text-align: center;">
-                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attresc_html_e('Select your image 1', 'aquila') ?>" />
+                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr(esc_html_e('Select your image 1', 'aquila')) ?>" />
                 <input class="widefat kt_image_attachment" id="<?php echo $this->get_field_id('attachment1'); ?>" name="<?php echo $this->get_field_name('attachment1'); ?>" type="hidden" value="<?php echo esc_attr($attachment1); ?>" />
             </p>
             <p class="kt_image_preview" style="<?php if($preview1){ echo "display: block;";} ?>">
@@ -191,7 +191,7 @@ class WP_Widget_KT_Ads extends WP_Widget {
         <h4><?php esc_html_e('Image 2','aquila'); ?></h4>
         <div class="wrapper_kt_image_upload">
             <p style="text-align: center;">
-                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attresc_html_e('Select your image 2', 'aquila') ?>" />
+                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr(esc_html_e('Select your image 2', 'aquila')) ?>" />
                 <input class="widefat kt_image_attachment" id="<?php echo $this->get_field_id('attachment2'); ?>" name="<?php echo $this->get_field_name('attachment2'); ?>" type="hidden" value="<?php echo esc_attr($attachment2); ?>" />
             </p>
             <p class="kt_image_preview" style="<?php if($preview2){ echo "display: block;";} ?>">
@@ -206,7 +206,7 @@ class WP_Widget_KT_Ads extends WP_Widget {
         <h4><?php esc_html_e('Image 3','aquila'); ?></h4>
         <div class="wrapper_kt_image_upload">
             <p style="text-align: center;">
-                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attresc_html_e('Select your image 3', 'aquila') ?>" />
+                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr(esc_html_e('Select your image 3', 'aquila')) ?>" />
                 <input class="widefat kt_image_attachment" id="<?php echo $this->get_field_id('attachment3'); ?>" name="<?php echo $this->get_field_name('attachment3'); ?>" type="hidden" value="<?php echo esc_attr($attachment3); ?>" />
             </p>
             <p class="kt_image_preview" style="<?php if($preview3){ echo "display: block;";} ?>">
@@ -221,7 +221,7 @@ class WP_Widget_KT_Ads extends WP_Widget {
         <h4><?php esc_html_e('Image 4','aquila'); ?></h4>
         <div class="wrapper_kt_image_upload">
             <p style="text-align: center;">
-                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attresc_html_e('Select your image 4', 'aquila') ?>" />
+                <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attr(esc_html_e('Select your image 4', 'aquila')) ?>" />
                 <input class="widefat kt_image_attachment" id="<?php echo $this->get_field_id('attachment4'); ?>" name="<?php echo $this->get_field_name('attachment4'); ?>" type="hidden" value="<?php echo esc_attr($attachment4); ?>" />
             </p>
             <p class="kt_image_preview" style="<?php if($preview4){ echo "display: block;";} ?>">

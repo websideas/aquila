@@ -63,7 +63,7 @@ if ( function_exists('register_sidebar')) {
             'after_widget' => '</div>',
             'before_title' => '<h4 class="instagram-title">',
             'after_title' => '</h4>',
-            'description' => esc_html__('Use the Instagram widget here. IMPORTANT: For best result select "Large" under "Photo Size" and set number of photos to 6.', 'aquila'),
+            'description' => esc_html__('Use the Instagram widget here. IMPORTANT: For best result select "Small" under "Photo Size" and set number of photos to 6.', 'aquila'),
         ));
 
         register_sidebar( array(
@@ -81,7 +81,6 @@ if ( function_exists('register_sidebar')) {
 
         for($i=1; $i<=$count;$i++){
             register_sidebar( array(
-                'name' => sprintf(esc_html__( 'Footer column %s', 'aquila'), $i) ,
                 'name' => sprintf(esc_html__( 'Footer column %s', 'aquila'), $i) ,
                 'id' => 'footer-column-'.$i,
                 'description' => sprintf(esc_html__( 'The footer column %s widget area', 'aquila'),$i),
