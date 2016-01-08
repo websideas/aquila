@@ -592,7 +592,6 @@ function kt_get_googleplus_post_share_count( $url ) {
 }
 
 function kt_total_post_share_count( $url ){
-    $count = 0;
     $fb = kt_get_facebook_post_share_count( $url );
     $gp = kt_get_googleplus_post_share_count( $url );
     $pt = kt_get_pinterest_post_share_count( $url ) ;
