@@ -23,6 +23,16 @@ if ( function_exists('register_sidebar')) {
         ) );
 
         register_sidebar( array(
+            'name' => esc_html__( 'Blog Widget Area', 'aquila'),
+            'id' => 'blog-widget-area',
+            'description' => esc_html__( 'The blog widget area', 'aquila'),
+            'before_widget' => '<div id="%1$s" class="widget-container %2$s"><div class="widget-inner">',
+            'after_widget' => '</div></div>',
+            'before_title' => '<h3 class="widget-title">',
+            'after_title' => '</h3>',
+        ) );
+
+        register_sidebar( array(
             'name' => esc_html__( 'Side Area', 'aquila'),
             'id' => 'side-widget-area',
             'description' => esc_html__( 'The side widget area', 'aquila'),
