@@ -227,7 +227,8 @@ function kt_setting_script() {
             '.pagination .current',
             '#main-navigation > li.menu-item-object-category .megamenu-posts > a:hover',
             '.page-header .category_children li.active a',
-            '.page-header .category_children li a:hover'
+            '.page-header .category_children li a:hover',
+            '#close-side-slideout-right:hover'
         );
         $css .= implode($selections_color, ',').'{color: '.$accent.';}';
 
@@ -260,7 +261,8 @@ function kt_setting_script() {
             '.btn-default:active',
             '.page-header .page-title',
             '.pagination .page-numbers::before',
-            'ul.style-list.style3 li::after'
+            'ul.style-list.style3 li::after',
+            '#side-slideout-right #side-widget-area .kt_posts_widget .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar'
         );
         $css .= implode($selections_background, ',').'{background-color: '.$accent.';}';
 
