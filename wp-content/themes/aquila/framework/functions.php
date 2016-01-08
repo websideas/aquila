@@ -10,11 +10,11 @@ if ( !defined('ABSPATH')) exit;
  * @param $input string
  * @return boolean
  */
-function kt_sanitize_boolean( $input = '' ) {
+function kt_sanitize_boolean_callback( $input = '' ) {
     $input = (string)$input;
     return in_array($input, array('1', 'true', 'y', 'on'));
 }
-add_filter( 'sanitize_boolean', 'kt_sanitize_boolean', 15 );
+add_filter( 'kt_sanitize_boolean', 'kt_sanitize_boolean_callback', 15 );
 
 
 
@@ -292,7 +292,7 @@ if ( ! function_exists( 'kt_page_loader' ) ) :
             </div>
         <?php }
     }
-    add_action( 'theme_body_top', 'kt_page_loader');
+    add_action( 'kt_body_top', 'kt_page_loader');
 endif;
 
 
@@ -314,7 +314,7 @@ function add_search_full(){
         );
     }
 }
-add_action('theme_body_top', 'add_search_full');
+add_action('kt_body_top', 'add_search_full');
 
 function add_socials_mobile(){
     $socials = '<div class="main-nav-socials">
@@ -333,7 +333,7 @@ function add_socials_mobile(){
         $socials
     );
 }
-add_action('theme_body_top', 'add_socials_mobile', 10);
+add_action('kt_body_top', 'add_socials_mobile', 10);
 
 
 //Remove Facebook comment box in the content
@@ -367,7 +367,7 @@ function kt_navigation_markup_template($template, $class){
  *
  * @since 1.0
  */
-add_action( 'theme_before_content', 'get_page_header', 20 );
+add_action( 'kt_before_content', 'get_page_header', 20 );
 function get_page_header( ){
     global $post;
     $show_title = false;

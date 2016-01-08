@@ -158,13 +158,62 @@ function kt_setting_script() {
     $css = $advanced_css;
 
     $styling_link = kt_option('styling_link');
+    if($styling_link['hover']){
+        $css .= 'a:hover{color: '.$styling_link['hover'].';}';
+        $css .= 'a:focus{color: '.$styling_link['hover'].';}';
+    }
     if($styling_link['active']){
-        $css .= 'a:focus{color: '.$styling_link['active'].';}';
+        $css .= 'a:active{color: '.$styling_link['active'].';}';
     }
 
 
-    if( $accent !='#82c14f' ){
+    if( $accent !='#22dcce' ){
+        $css .= '::-moz-selection{color:#fff;background:'.$accent.'}';
+        $css .= '::selection{color:#fff;background:'.$accent.'}';
+        $selections_color = array(
+            '#main-nav-tool li a:hover',
+            '.main-nav-socials a:hover',
+            '#main-slideshow.post-slider-slider .slick-arrow:hover::before',
+            '#main-slideshow.post-slider-normal .slick-arrow:hover::before',
+            '.blog-posts-slick .article-post h3 a:hover', 
+            '.blog-posts-slick .article-post h3 a:focus',
+            '.widget_rss ul li a:hover', 
+            '.widget_pages ul li a:hover', 
+            '.widget_recent_comments ul li a:hover', 
+            '.widget_recent_entries ul li a:hover', 
+            '.widget_nav_menu ul li a:hover', 
+            '.widget_meta ul li a:hover', 
+            '.widget_archive ul li a:hover', 
+            '.widget_categories ul li a:hover', 
+            '.widget_product_categories ul li a:hover', 
+            '.yith-woocompare-widget ul li a:hover',
+            '.widget_recent_entries ul > li a:hover::before',
+            '.widget_nav_menu ul > li a:hover::before',
+            '.widget_meta ul > li a:hover::before',
+            '.widget_archive ul > li a:hover::before',
+            '.widget_categories ul > li a:hover::before',
+            '.widget_product_categories ul > li a:hover::before'
+        );
+        $css .= implode($selections_color, ',').'{color: '.$accent.';}';
 
+
+        $selections_background = array(
+            '.hamburger-icon:hover .line', 
+            '.hamburger-icon.active .line',
+            '.widget_product_tag_cloud .tagcloud a:hover',
+            '.widget_product_tag_cloud .tagcloud a:focus',
+            '.widget_tag_cloud .tagcloud a:hover',
+            '.widget_tag_cloud .tagcloud a:focus'
+        );
+        $css .= implode($selections_background, ',').'{background-color: '.$accent.';}';
+
+        $selections_border_color = array(
+            '.widget_product_tag_cloud .tagcloud a:hover',
+            '.widget_product_tag_cloud .tagcloud a:focus',
+            '.widget_tag_cloud .tagcloud a:hover',
+            '.widget_tag_cloud .tagcloud a:focus'
+        );
+        $css .= implode($selections_border_color, ',').'{border-color: '.$accent.';}';
     }
 
     if(is_page() || is_singular()){
@@ -224,6 +273,13 @@ function kt_setting_script() {
             $css .= implode($navigation_arr_fixed, ',').'{line-height: '.intval($navigation_height_fixed['height']).'px;}';
         }
     }
+
+    $color_first_loader = kt_option('color_first_loader', $accent);
+    $color_second_loader = kt_option('color_second_loader', '#cccccc');
+    $css .= '.kt_page_loader.style-1 .page_loader_inner{border-color: '.$color_first_loader.';}';
+    $css .= '.kt_page_loader.style-1 .kt_spinner,.kt_page_loader.style-2 .kt_spinner::after{background-color: '.$color_first_loader.';}';
+    $css .= '.kt_page_loader.style-2 .kt_spinner,.kt_page_loader.style-3 .kt_spinner{ border-color:'.$color_second_loader.'; }';
+    $css .= '.kt_page_loader.style-3 .kt_spinner{ border-bottom-color:'.$color_first_loader.'; }';
 
 
 

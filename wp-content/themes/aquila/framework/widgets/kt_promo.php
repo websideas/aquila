@@ -19,6 +19,7 @@ class WP_Widget_KT_Promo extends WP_Widget {
 	public function widget( $args, $instance ) {
 
         $attachment = kt_get_thumbnail_attachment($instance['attachment'], $instance['size']);
+        $promo_text = $instance['promo_text'];
 
         if($attachment){
     		echo $args['before_widget'];
@@ -31,17 +32,25 @@ class WP_Widget_KT_Promo extends WP_Widget {
             );
 
             if($instance['link']){
-                $image = sprintf(
-                    '<a href="%s" target="%s">%s</a>',
+                $link_promo = sprintf(
+                    '<a href="%s" target="%s"></a>',
                     esc_attr($instance['link']),
-                    esc_attr($instance['target']),
-                    $image
+                    esc_attr($instance['target'])
+                );
+            }
+
+            if($promo_text){
+                $promo_text_html = sprintf(
+                    '<div class="promo-text"><div class="promo-text-inner"><h4>%s</h4></div></div>',
+                    esc_attr($promo_text)
                 );
             }
 
             printf(
-                '<div class="kt-promo-content">%s</div>',
-                $image
+                '<div class="kt-promo-content">%s %s %s</div>',
+                $image,
+                $link_promo,
+                $promo_text_html
             );
 
     		echo $args['after_widget'];

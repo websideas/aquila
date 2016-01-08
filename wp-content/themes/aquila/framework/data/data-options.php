@@ -703,7 +703,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'color_first_loader',
                         'type'     => 'color',
                         'title'    => esc_html__( 'Color Loader', 'aquila' ),
-                        'default'  => '#82c14f',
+                        'default'  => '#22dcce',
                         'transparent' => false,
                         'required' => array( 'use_page_loader', 'equals', array( 1 ) ),
                     ),
@@ -718,6 +718,38 @@ if ( ! class_exists( 'KT_config' ) ) {
                 )
             );
 
+
+            $this->sections[] = array(
+                'icon'      => 'el-icon-cog',
+                'title'     => esc_html__('Preset', 'wingman'),
+                'fields'    => array(
+                    array(
+                        'id'       => 'kt-presets',
+                        'type'     => 'image_select', 
+                        'presets'  => true,
+                        'title'    => esc_html__('Color Preset', 'wingman'),
+                        'subtitle' => esc_html__('Select the color you want to use for the theme.', 'wingman'),
+                        'default'  => 0,
+                        'options'  => array(
+                            'color_default'      => array(
+                                'alt'   => 'Default', 
+                                'img'   => KT_FW_IMG.'/preset/default.jpg',
+                                'presets'   => array(
+                                    'color_second_loader' => '#22dcce',
+                                    'navigation_color_hover' => '#22dcce',
+                                    'dropdown_color_hover' => '#22dcce',
+                                    'mega_title_color_hover' => '#22dcce',
+                                    'mega_color_hover' => '#22dcce',
+                                    'navigation_color_hover' => '#22dcce',
+                                    'dropdown_color_hover' => '#22dcce',
+                                )
+                            ),
+                        )
+                    ),
+                )
+            );
+
+
             /**
              *  Styling
              **/
@@ -728,6 +760,35 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'icon'  => 'dashicons dashicons-art',
             );
 
+            /**
+             *  Styling General
+             **/
+            $this->sections[] = array(
+                'id'            => 'styling_general',
+                'title'         => esc_html__( 'General', 'wingman' ),
+                'subsection' => true,
+                'fields'        => array(
+                    array(
+                        'id'       => 'styling_accent',
+                        'type'     => 'color',
+                        'title'    => esc_html__( 'Main Color', 'wingman' ),
+                        'default'  => '#82c14f',
+                        'transparent' => false,
+                    ),
+
+                    array(
+                        'id'       => 'styling_link',
+                        'type'     => 'link_color',
+                        'title'    => esc_html__( 'Links Color', 'wingman' ),
+                        'output'   => array( 'a' ),
+                        'default'  => array(
+                            'regular' => '#22dcce',
+                            'hover' => '#000000',
+                            'active' => '#000000'
+                        )
+                    ),
+                )
+            );
 
             /**
              *  Styling Logo
