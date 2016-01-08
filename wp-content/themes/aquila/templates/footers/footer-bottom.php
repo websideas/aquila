@@ -10,7 +10,15 @@
             <div class="container">
                 <p class="logo-footer">
                     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                        <img src="<?php echo KT_THEME_IMG.'footer-logo.png' ?>"  alt="<?php bloginfo( 'name' ); ?>"/>
+                        <?php 
+                            $logo_footer = kt_option('logo_footer');
+                            if( $logo_footer['url'] ){
+                                $logo_footer_url = $logo_footer['url'];
+                            }else{
+                                $logo_footer_url = KT_THEME_IMG.'footer-logo.png';
+                            }
+                        ?>
+                        <img src="<?php echo $logo_footer_url; ?>"  alt="<?php bloginfo( 'name' ); ?>"/>
                     </a>
                 </p>
                 <?php dynamic_sidebar('footer-bottom-1') ?>

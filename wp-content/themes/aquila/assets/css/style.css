@@ -2563,6 +2563,8 @@ ul.style-list {
   font-size: 10px; }
   .main-nav-socials a:hover {
     color: #22dcce; }
+  .main-nav-socials a:first-child {
+    padding-left: 0; }
 
 /*
  * 7.3. Main navigation
