@@ -399,7 +399,11 @@ if (!function_exists('kt_show_slideshow')) {
         };
 
         if($output != ''){
-            echo '<div id="main-slideshow" class="'.esc_attr(implode(' ', $sideshow_class)).'"><div id="sideshow-inner">'.$output.'</div></div>';
+            printf(
+                '<div id="main-slideshow" class="%s"><div id="sideshow-inner">%s</div></div>',
+                esc_attr(implode(' ', $sideshow_class)),
+                $output
+            );
         }
     }
 }

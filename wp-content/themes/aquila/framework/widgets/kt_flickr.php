@@ -109,7 +109,7 @@ class Widget_KT_Flickr extends WP_Widget {
         
         <p>
 			<label for="<?php echo $this->get_field_id('api'); ?>"><?php esc_html_e( 'API key (Use default or get your own from <a href="%s">Flickr APP Garden</a>):', 'aquila' ); ?>http://www.flickr.com/services/apps/create/apply"></label>
-			<input class="widefat" type="text" id="<?php echo $this->get_field_id('api'); ?>" name="<?php echo $this->get_field_name('api'); ?>" value="<?php echo $instance['api']; ?>" />
+			<input class="widefat" type="text" id="<?php echo $this->get_field_id('api'); ?>" name="<?php echo $this->get_field_name('api'); ?>" value="<?php echo esc_attr($instance['api']); ?>" />
 			<small>Default key is: 6346cf3fc74387e93b84f0d22c78939a</small>
 		</p>
     <?php

@@ -315,7 +315,7 @@ if ( ! function_exists( 'kt_post_thumbnail_image' ) ) :
         }
 
         if(has_post_thumbnail() || $placeholder){ ?>
-            <<?php echo $tag ?> <?php echo $attrs ?> class="<?php echo $class; ?>">
+            <<?php echo $tag ?> <?php echo $attrs ?> class="<?php echo esc_attr($class); ?>">
             <?php if(has_post_thumbnail()){ ?>
                 <?php the_post_thumbnail( $size, array( 'alt' => get_the_title(), 'class' => $class_img ) ); ?>
             <?php }elseif($placeholder){ ?>
@@ -696,9 +696,9 @@ if ( ! function_exists( 'kt_entry_excerpt' ) ) :
 	function kt_entry_excerpt( $class = 'entry-summary' ) {
 		$class = esc_attr( $class );
 		 ?>
-			<div class="<?php echo $class; ?>">
+			<div class="<?php echo esc_attr($class); ?>">
 				<?php the_excerpt(); ?>
-			</div><!-- .<?php echo $class; ?> -->
+			</div><!-- .<?php echo esc_attr($class); ?> -->
 		<?php
 	}
 endif;

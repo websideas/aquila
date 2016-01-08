@@ -126,8 +126,8 @@ class WP_Widget_KT_Popular extends WP_Widget {
                                                     <h3 class="title"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h3>
                                                     <div class="entry-meta-data">
                                                         <?php 
-                                                            kt_entry_meta_time();
-                                                            echo kt_get_post_views( get_the_ID() );
+                                                            kt_entry_date( );
+                                                            kt_get_post_views( );
                                                         ?>
                                                     </div>
                                                 </div>
@@ -175,7 +175,7 @@ class WP_Widget_KT_Popular extends WP_Widget {
 		
 	?>
     <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:','aquila' ); ?></label>
-    <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
+    <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
     
     <h4><?php esc_html_e('Select Tabs', 'aquila'); ?></h4>
     <p>
@@ -195,7 +195,7 @@ class WP_Widget_KT_Popular extends WP_Widget {
     
     <p> 
         <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts to show:','aquila' ); ?></label>
-        <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" class="widefat" />
+        <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr($number); ?>" class="widefat" />
     </p>
     <p>
         <input class="checkbox" type="checkbox" <?php checked( $show_thumbnail ); ?> id="<?php echo $this->get_field_id( 'show_thumbnail' ); ?>" name="<?php echo $this->get_field_name( 'show_thumbnail' ); ?>" />

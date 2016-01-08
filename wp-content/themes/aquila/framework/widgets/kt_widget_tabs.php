@@ -87,7 +87,9 @@ class WP_Widget_KT_Tabs extends WP_Widget {
                                             <li <?php post_class('article-widget clearfix'); ?>>
                                                 <?php kt_post_thumbnail_image( 'kt_widget_article', 'img-responsive' ); ?>
                                                 <div class="article-attr">
-                                                    <h3 class="title"><a href="<?php the_permalink(); ?>"><?php get_the_title() ? the_title() : the_ID(); ?></a></h3>
+                                                    <h3 class="title">
+                                                        <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                                                    </h3>
                                                     <?php kt_entry_date();?>
                                                 </div>
                                             </li>
@@ -133,7 +135,7 @@ class WP_Widget_KT_Tabs extends WP_Widget {
 		
 	?>
     <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:','aquila' ); ?></label>
-    <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
+    <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
     
     <h4><?php esc_html_e('Select Tabs', 'aquila'); ?></h4>
     <p>
@@ -153,7 +155,7 @@ class WP_Widget_KT_Tabs extends WP_Widget {
     
     <p>
         <label for="<?php echo $this->get_field_id( 'number' ); ?>"><?php esc_html_e( 'Number of posts to show:','aquila' ); ?></label>
-        <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo $number; ?>" class="widefat" />
+        <input id="<?php echo $this->get_field_id( 'number' ); ?>" name="<?php echo $this->get_field_name( 'number' ); ?>" type="text" value="<?php echo esc_attr($number); ?>" class="widefat" />
     </p>
 <?php
 	}

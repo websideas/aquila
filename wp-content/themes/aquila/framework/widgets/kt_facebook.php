@@ -15,24 +15,7 @@ class Widget_KT_Facebook extends WP_Widget {
         parent::__construct('kt_facebook', esc_html__('KT: Page Plugin facebook', 'aquila'), $widget_ops);
         $this->alt_option_name = 'widget_kt_facebook';
 
-        add_action('wp_footer', array($this, 'footer'));
-
     }
-
-    function footer() {
-        $appID = kt_option('facebook_app', '417674911655656');
-        ?>
-        <div id="fb-root"></div>
-        <script>(function(d, s, id) {
-                var js, fjs = d.getElementsByTagName(s)[0];
-                if (d.getElementById(id)) return;
-                js = d.createElement(s); js.id = id;
-                js.src = "//connect.facebook.net/<?php echo get_locale(); ?>/sdk.js#xfbml=1&version=v2.3&appId=<?php echo $appID; ?>";
-                fjs.parentNode.insertBefore(js, fjs);
-            }(document, 'script', 'facebook-jssdk'));</script>
-        <?php
-    }
-
 
     public function widget($args, $instance) {
 
@@ -58,7 +41,17 @@ class Widget_KT_Facebook extends WP_Widget {
                     echo $args['before_title'] . $title . $args['after_title'];
                 }
             ?>
-            <div class="fb-page" data-href="<?php echo esc_attr($href) ?>" data-height="<?php echo $height; ?>" data-small-header="<?php echo $small_header ? 'true' : 'false' ?>" data-adapt-container-width="<?php echo $adapt_container_width ? 'true' : 'false'; ?>" data-hide-cover="<?php echo $hide_cover ? 'true' : 'false'; ?>" data-show-facepile="<?php echo $show_facepile ? 'true' : 'false'; ?>" data-show-posts="<?php echo $show_posts ? 'true' : 'false'; ?>"><div class="fb-xfbml-parse-ignore"><blockquote cite="<?php echo $href ?>"><a href="<?php echo $href ?>">Facebook</a></blockquote></div></div>
+            <div class="fb-page" data-href="<?php echo esc_attr($href) ?>" data-height="<?php echo esc_attr($height); ?>" data-small-header="<?php echo ($small_header) ? 'true' : 'false' ?>" data-adapt-container-width="<?php echo ($adapt_container_width) ? 'true' : 'false'; ?>" data-hide-cover="<?php echo ($hide_cover) ? 'true' : 'false'; ?>" data-show-facepile="<?php echo ($show_facepile) ? 'true' : 'false'; ?>" data-show-posts="<?php echo ($show_posts) ? 'true' : 'false'; ?>"><div class="fb-xfbml-parse-ignore"><blockquote cite="<?php echo esc_attr($href) ?>"><a href="<?php echo esc_url($href) ?>">Facebook</a></blockquote></div></div>
+
+            <?php $appID = kt_option('facebook_app'); ?>
+            <div id="fb-root"></div>
+            <script>(function(d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s); js.id = id;
+                    js.src = "//connect.facebook.net/<?php echo get_locale(); ?>/sdk.js#xfbml=1&version=v2.3&appId=<?php echo $appID; ?>";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'facebook-jssdk'));</script>
 
             <?php echo $args['after_widget']; ?>
         <?php
@@ -92,13 +85,13 @@ class Widget_KT_Facebook extends WP_Widget {
         ?>
 
         <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:','aquila' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 
         <p><label for="<?php echo $this->get_field_id( 'href' ); ?>"><?php esc_html_e( 'The URL of the Facebook Page:', 'aquila' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'href' ); ?>" name="<?php echo $this->get_field_name( 'href' ); ?>" type="text" value="<?php echo $instance['href']; ?>" /></p>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'href' ); ?>" name="<?php echo $this->get_field_name( 'href' ); ?>" type="text" value="<?php echo esc_url($instance['href']); ?>" /></p>
 
         <p><label for="<?php echo $this->get_field_id( 'height' ); ?>"><?php esc_html_e( 'Height', 'aquila' ); ?></label>
-            <input id="<?php echo $this->get_field_id( 'height' ); ?>" name="<?php echo $this->get_field_name( 'height' ); ?>" type="text" value="<?php echo $instance['height']; ?>" class="widefat" /></p>
+            <input id="<?php echo $this->get_field_id( 'height' ); ?>" name="<?php echo $this->get_field_name( 'height' ); ?>" type="text" value="<?php echo esc_attr($instance['height']); ?>" class="widefat" /></p>
 
         <p><input class="checkbox" type="checkbox" <?php checked( $instance['small_header'] ); ?> id="<?php echo $this->get_field_id( 'small_header' ); ?>" name="<?php echo $this->get_field_name( 'small_header' ); ?>" />
             <label for="<?php echo $this->get_field_id( 'small_header' ); ?>"><?php esc_html_e( 'Use Small Header', 'aquila' ); ?></label>

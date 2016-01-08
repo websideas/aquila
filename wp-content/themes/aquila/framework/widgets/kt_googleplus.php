@@ -15,17 +15,8 @@ class Widget_KT_Goolge extends WP_Widget {
         parent::__construct('widget_kt_google', esc_html__('KT: Google+ Badge', 'aquila'), $widget_ops);
         $this->alt_option_name = 'widget_kt_google';
 
-        add_action('wp_footer', array($this, 'footer'));
 
     }
-
-    function footer() {
-        ?>
-        <!-- Place this tag in your head or just before your close body tag. -->
-        <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <?php
-    }
-
     public function widget($args, $instance) {
 
         $title = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
@@ -55,7 +46,8 @@ class Widget_KT_Goolge extends WP_Widget {
 
             ?>
             <!-- Place this tag where you want the widget to render. -->
-            <div class="g-<?php echo esc_attr($instance['type']) ?>" data-href="<?php echo esc_attr($href) ?>" <?php echo $badge_attr; ?> data-width="335" data-layout="<?php echo esc_attr($layout) ?>" data-theme="<?php echo esc_attr($color) ?>" data-showtagline="<?php echo $tagline ? 'true' : 'false' ?>" data-showphoto="<?php echo $cover ? 'true' : 'false' ?>"></div>
+            <div class="g-<?php echo esc_attr($instance['type']) ?>" data-href="<?php echo esc_attr($href) ?>" <?php echo $badge_attr; ?> data-width="335" data-layout="<?php echo esc_attr($layout) ?>" data-theme="<?php echo esc_attr($color) ?>" data-showtagline="<?php echo ($tagline) ? 'true' : 'false' ?>" data-showphoto="<?php echo ($cover) ? 'true' : 'false' ?>"></div>
+            <script src="https://apis.google.com/js/platform.js" async defer></script>
             <?php
             echo $args['after_widget'];
         }
@@ -102,7 +94,7 @@ class Widget_KT_Goolge extends WP_Widget {
         ?>
 
         <p><label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:','aquila' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo $title; ?>" /></p>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr($title); ?>" /></p>
 
         <p><label for="<?php echo $this->get_field_id('type'); ?>"><?php esc_html_e('Type:','aquila'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('type'); ?>" name="<?php echo $this->get_field_name('type'); ?>">
@@ -113,7 +105,7 @@ class Widget_KT_Goolge extends WP_Widget {
         </p>
 
         <p><label for="<?php echo $this->get_field_id( 'href' ); ?>"><?php esc_html_e( 'The URL of the Google plus Page:', 'aquila' ); ?></label>
-            <input class="widefat" id="<?php echo $this->get_field_id( 'href' ); ?>" name="<?php echo $this->get_field_name( 'href' ); ?>" type="text" value="<?php echo $instance['href']; ?>" /></p>
+            <input class="widefat" id="<?php echo $this->get_field_id( 'href' ); ?>" name="<?php echo $this->get_field_name( 'href' ); ?>" type="text" value="<?php echo esc_attr($instance['href']); ?>" /></p>
 
         <p><label for="<?php echo $this->get_field_id('layout'); ?>"><?php esc_html_e('Layout:','aquila'); ?></label>
             <select class="widefat" id="<?php echo $this->get_field_id('layout'); ?>" name="<?php echo $this->get_field_name('layout'); ?>">

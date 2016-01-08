@@ -34,42 +34,81 @@ class WP_Widget_KT_Ads extends WP_Widget {
         echo "<div class='kt-ads-content clearfix'>";
 
         if(isset($attachment1)){
+            $image1 = sprintf(
+                '<img src="%s" alt="%s" title="%s"/>',
+                $attachment1['url'],
+                esc_attr($attachment1['alt']),
+                esc_attr($attachment1['title'])
+            );
             if($instance['link1']){
-                echo "<a href='".esc_attr($instance['link1'])."' target='".esc_attr($instance['target'])."'>";
-            }
-            echo "<img src='".$attachment1['url']."' alt='".esc_attr($attachment1['alt'])."' title='".esc_attr($attachment1['title'])."'/>";
-            if($instance['link1']){
-                echo "</a>";
+                printf(
+                    '<a href="%s" target="%s">%s</a>',
+                    esc_attr($instance['link1']),
+                    esc_attr($instance['target']),
+                    $image1
+                );
+            }else{
+                echo $image1;
             }
         }
+
         if(isset($attachment2)){
+            $image2 = sprintf(
+                '<img src="%s" alt="%s" title="%s"/>',
+                $attachment2['url'],
+                esc_attr($attachment2['alt']),
+                esc_attr($attachment2['title'])
+            );
             if($instance['link2']){
-                echo "<a href='".esc_attr($instance['link2'])."' target='".esc_attr($instance['target'])."'>";
-            }
-            echo "<img src='".$attachment2['url']."' alt='".esc_attr($attachment2['alt'])."' title='".esc_attr($attachment2['title'])."'/>";
-            if($instance['link2']){
-                echo "</a>";
+                printf(
+                    '<a href="%s" target="%s">%s</a>',
+                    esc_attr($instance['link2']),
+                    esc_attr($instance['target']),
+                    $image2
+                );
+            }else{
+                echo $image2;
             }
         }
+
         if(isset($attachment3)){
+            $image3 = sprintf(
+                '<img src="%s" alt="%s" title="%s"/>',
+                $attachment3['url'],
+                esc_attr($attachment3['alt']),
+                esc_attr($attachment3['title'])
+            );
             if($instance['link3']){
-                echo "<a href='".esc_attr($instance['link3'])."' target='".esc_attr($instance['target'])."'>";
-            }
-            echo "<img src='".$attachment3['url']."' alt='".esc_attr($attachment3['alt'])."' title='".esc_attr($attachment3['title'])."'/>";
-            if($instance['link3']){
-                echo "</a>";
+                printf(
+                    '<a href="%s" target="%s">%s</a>',
+                    esc_attr($instance['link3']),
+                    esc_attr($instance['target']),
+                    $image3
+                );
+            }else{
+                echo $image3;
             }
         }
+
         if(isset($attachment4)){
+            $image4 = sprintf(
+                '<img src="%s" alt="%s" title="%s"/>',
+                esc_url($attachment4['url']),
+                esc_attr($attachment4['alt']),
+                esc_attr($attachment4['title'])
+            );
             if($instance['link4']){
-                echo "<a href='".esc_attr($instance['link4'])."' target='".esc_attr($instance['target'])."'>";
-            }
-            echo "<img src='".$attachment4['url']."' alt='".esc_attr($attachment4['alt'])."' title='".esc_attr($attachment4['title'])."'/>";
-            if($instance['link4']){
-                echo "</a>";
+                printf(
+                    '<a href="%s" target="%s">%s</a>',
+                    esc_attr($instance['link4']),
+                    esc_attr($instance['target']),
+                    $image4
+                );
+            }else{
+                echo $image4;
             }
         }
-        
+
         echo "</div>";
 		echo $args['after_widget'];
 	}

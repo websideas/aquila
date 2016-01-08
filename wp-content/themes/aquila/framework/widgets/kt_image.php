@@ -29,15 +29,28 @@ class WP_Widget_KT_Image extends WP_Widget {
                 echo $args['before_title'] . $title . $args['after_title'];
             }
 
-            echo "<div class='kt-image-content text-".$instance['align']."'>";
+            $image = sprintf(
+                '<img src="%s" alt="%s" title="%s"/>',
+                $attachment['url'],
+                esc_attr($attachment['alt']),
+                esc_attr($attachment['title'])
+            );
+
             if($instance['link']){
-                echo "<a href='".esc_attr($instance['link'])."' target='".esc_attr($instance['target'])."'>";
+                $image = sprintf(
+                    '<a href="%s" target="%s">%s</a>',
+                    esc_attr($instance['link']),
+                    esc_attr($instance['target']),
+                    $image
+                );
             }
-            echo "<img src='".$attachment['url']."' alt='".esc_attr($attachment['alt'])."' title='".esc_attr($attachment['title'])."'/>";
-            if($instance['link']){
-                echo "</a>";
-            }
-            echo "</div>";
+
+            printf(
+                '<div class="kt-image-content text-%s">%s</div>',
+                esc_attr($instance['align']),
+                $image
+            );
+
     		echo $args['after_widget'];
 		}
 	}

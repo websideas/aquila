@@ -14,13 +14,13 @@ add_action( 'wp_ajax_nopriv_fronted_likepost', 'wp_ajax_fronted_likepost_callbac
 
 function wp_ajax_fronted_likepost_callback() {
     check_ajax_referer( 'ajax_frontend', 'security' );
-    
+
     if(!isset($_POST['post_id']) || !is_numeric($_POST['post_id'])) return;
-     
+
     $post_id = $_POST['post_id'];
-     
-    $output = array();    
-    
+
+    $output = array();
+
     $like_count = get_post_meta($post_id, '_like_post', true);
 
     if( !isset($_COOKIE['like_post_'. $post_id]) ){

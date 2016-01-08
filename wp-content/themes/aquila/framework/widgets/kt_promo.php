@@ -23,16 +23,27 @@ class WP_Widget_KT_Promo extends WP_Widget {
         if($attachment){
     		echo $args['before_widget'];
 
-            echo "<div class='kt-promo-content'>";
+            $image = sprintf(
+                '<img src="%s" alt="%s" title="%s"/>',
+                $attachment['url'],
+                esc_attr($attachment['alt']),
+                esc_attr($attachment['title'])
+            );
+
             if($instance['link']){
-                echo "<a href='".esc_attr($instance['link'])."' target='".esc_attr($instance['target'])."'></a>";
-            }
-            echo "<img src='".$attachment['url']."' alt='".esc_attr($attachment['alt'])."' title='".esc_attr($attachment['title'])."'/>";
-            if( $instance['promo_text'] ){
-                echo '<div class="promo-text"><div class="promo-text-inner"><h4>'.$instance['promo_text'].'</h4></div></div>';
+                $image = sprintf(
+                    '<a href="%s" target="%s">%s</a>',
+                    esc_attr($instance['link']),
+                    esc_attr($instance['target']),
+                    $image
+                );
             }
 
-            echo "</div>";
+            printf(
+                '<div class="kt-promo-content">%s</div>',
+                $image
+            );
+
     		echo $args['after_widget'];
 		}
 	}
@@ -65,6 +76,10 @@ class WP_Widget_KT_Promo extends WP_Widget {
         }
 		
 	?>
+        <p style="clear: both;">
+            <label for="<?php echo $this->get_field_id('promo_text'); ?>"><?php esc_html_e('Promo Text:', 'aquila'); ?></label>
+            <input class="widefat" id="<?php echo $this->get_field_id('promo_text'); ?>" name="<?php echo $this->get_field_name('promo_text'); ?>" type="text" value="<?php echo esc_attr($promo_text); ?>" />
+        </p>
         <div class="wrapper_kt_image_upload">
             <p style="text-align: center;">
                 <input type="button" style="width: 100%; padding: 10px; height: auto;" class="button kt_image_upload" value="<?php esc_attresc_html_e('Select your image', 'aquila') ?>" />
@@ -109,10 +124,7 @@ class WP_Widget_KT_Promo extends WP_Widget {
                 <?php } ?>
 			</select>
 		</p>
-        <p style="clear: both;">
-            <label for="<?php echo $this->get_field_id('promo_text'); ?>"><?php esc_html_e('Promo Text:', 'aquila'); ?></label> 
-            <input class="widefat" id="<?php echo $this->get_field_id('promo_text'); ?>" name="<?php echo $this->get_field_name('promo_text'); ?>" type="text" value="<?php echo esc_attr($promo_text); ?>" />
-        </p>
+
 <?php
 	}
 

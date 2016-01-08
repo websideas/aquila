@@ -173,7 +173,8 @@ function kt_slideshows_position_callback(){
 /**
  * Add CustomCss
  **/
-add_action( 'wp_head', 'kt_addFrontCss', 1000 );
+
+add_action('wp_enqueue_scripts', 'kt_addFrontCss', 1000);
 function kt_addFrontCss( $post_id = null ){
 
     if(is_page()){
@@ -192,17 +193,18 @@ function kt_addFrontCss( $post_id = null ){
     }
     if ( ! empty( $shortcodes_custom_css ) ) {
         $shortcodes_custom_css = strip_tags( $shortcodes_custom_css );
-        echo '<style type="text/css" data-type="vc_shortcodes-custom-css">';
-        echo $shortcodes_custom_css;
-        echo '</style>';
+        wp_add_inline_style( 'kt-main', $shortcodes_custom_css );
     }
 }
 
+
+/**
+ * Add div before fields
+ */
 add_action( 'comment_form_before_fields', 'kt_comment_form_before_fields', 1 );
 function kt_comment_form_before_fields(){
     echo '<div class="comment-form-fields clearfix">';
 }
-
 
 
 /*

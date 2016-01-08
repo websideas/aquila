@@ -16,7 +16,6 @@ function kt_register_meta_boxes( $meta_boxes )
 {
 
     $prefix = '_kt_';
-    $image_sizes = kt_get_image_sizes();
     $menus = wp_get_nav_menus();
 
     $menus_arr = array('' => esc_html__('Default', 'aquila'));
