@@ -2381,16 +2381,16 @@ ul.style-list{
           }
         }
       }
-      &.megamenu-columns-4{
-        > .sub-menu-megamenu{
+      .kt-megamenu-wrapper.megamenu-columns-4{
+        .kt-megamenu-ul{
           > li{
             width: 25%;
           }
         }
 
       }
-      &.megamenu-columns-2{
-        > .sub-menu-megamenu{
+      .kt-megamenu-wrapper.megamenu-columns-2{
+        .kt-megamenu-ul{
           > li{
             width: 50%;
           }
@@ -2713,6 +2713,11 @@ ul.style-list{
       div.kt-megamenu-wrapper{
         border-bottom: 1px solid $border-color;
         display: none;
+        a{
+          > .open-submenu {
+            line-height: 25px;
+          } 
+        }
       }
       ul.sub-menu,
       ul.sub-menu-dropdown,

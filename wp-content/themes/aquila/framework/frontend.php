@@ -207,7 +207,23 @@ function kt_setting_script() {
             $css .= implode($navigation_arr, ',').'{line-height: '.intval($navigation_height['height']).'px;}';
         }
     }
-
+    if($navigation_height_fixed = kt_option('navigation_height_fixed')){
+        if(isset($navigation_height_fixed['height'])){
+            $navigation_arr = array(
+                '.header-container.header-layout1.is-sticky #main-navigation > li',
+                '.header-container.is-sticky.header-layout1 #main-nav-tool > a',
+                '.header-container.is-sticky.header-layout1 #main-nav-tool > li > a',
+                '.header-container.is-sticky.header-layout1 .main-nav-socials > a',
+                '.header-container.is-sticky.header-layout1 .main-nav-socials > li > a',
+                '.header-container.header-layout2.is-sticky #main-navigation > li',
+                '.header-container.is-sticky.header-layout2 #main-nav-tool > a',
+                '.header-container.is-sticky.header-layout2 #main-nav-tool > li > a',
+                '.header-container.is-sticky.header-layout2 .main-nav-socials > a',
+                '.header-container.is-sticky.header-layout2 .main-nav-socials > li > a'
+            );
+            $css .= implode($navigation_arr, ',').'{line-height: '.intval($navigation_height_fixed['height']).'px;}';
+        }
+    }
 
 
 

@@ -81,7 +81,7 @@ add_action( 'wp_head', 'kt_track_post_views');
  * @param array $classes A list of existing body class values.
  * @return array The filtered body class list.
  */
-function theme_body_classes( $classes ) {
+function kt_body_classes( $classes ) {
     global $post;
 
     if ( is_multi_author() ) {
@@ -109,12 +109,12 @@ function theme_body_classes( $classes ) {
 
     return $classes;
 }
-add_filter( 'body_class', 'theme_body_classes' );
+add_filter( 'body_class', 'kt_body_classes' );
 
 /**
  * Add class sticky to header
  */
-function theme_header_class_callback($classes, $layout){
+function kt_header_class_callback($classes, $layout){
     global $post;
 
     $fixed_header = kt_option('fixed_header', 2);
@@ -144,10 +144,10 @@ function theme_header_class_callback($classes, $layout){
         $classes .= ' header-layout-normal';
     }
 
-    return $classes;
+    return $classes; 
 }
 
-add_filter('theme_header_class', 'theme_header_class_callback', 10, 2);
+add_filter('kt_header_class', 'kt_header_class_callback', 10, 2);
 
 
 /**

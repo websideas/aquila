@@ -842,9 +842,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'units_extended' => 'true',
                         'title'    => esc_html__( 'Logo sticky margin spacing Option', 'aquila' ),
                         'default'  => array(
-                            'margin-top'    => '0',
-                            'margin-right'  => '0',
-                            'margin-bottom' => '0',
+                            'margin-top'    => '17px',
+                            'margin-right'  => '65px',
+                            'margin-bottom' => '17px',
                             'margin-left'   => '0'
                         ),
                         'output'   => array( '.header-layout1.header-container.is-sticky .site-branding'),
@@ -864,8 +864,16 @@ if ( ! class_exists( 'KT_config' ) ) {
                         ),
 
                         'output'   => array(
-                            '.header-container.is-sticky #main-navigation > li',
-                            '.header-container.header-layout1.is-sticky .nav-container-inner',
+                            '.header-container.header-layout1.is-sticky #main-navigation > li',
+                            '.header-container.is-sticky.header-layout1 #main-nav-tool > a',
+                            '.header-container.is-sticky.header-layout1 #main-nav-tool > li > a',
+                            '.header-container.is-sticky.header-layout1 .main-nav-socials > a',
+                            '.header-container.is-sticky.header-layout1 .main-nav-socials > li > a',
+                            '.header-container.header-layout2.is-sticky #main-navigation > li',
+                            '.header-container.is-sticky.header-layout2 #main-nav-tool > a',
+                            '.header-container.is-sticky.header-layout2 #main-nav-tool > li > a',
+                            '.header-container.is-sticky.header-layout2 .main-nav-socials > a',
+                            '.header-container.is-sticky.header-layout2 .main-nav-socials > li > a'
                         ),
                     ),
                     array(
@@ -881,9 +889,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'preview'               => false,
                         'transparent'           => false,
                         'default'   => array(
-                            'background-color'      => '#252525',
+                            'background-color'      => '#ffffff',
                         ),
-                        'output'      => array( '.header-sticky-background' ),
+                        'output'      => array( '.header-container.is-sticky .header-sticky-background' ),
                     ),
 
                     array(
@@ -978,6 +986,37 @@ if ( ! class_exists( 'KT_config' ) ) {
 
                         )
                     ),
+
+                    //Footer navigation settings
+                    array(
+                        'id'       => 'footer_navigation_heading',
+                        'type'     => 'raw',
+                        'content'  => '<div class="section-heading">'.esc_html__( 'Footer Navigation settings', 'aquila' ).'</div>',
+                        'full_width' => true
+                    ),
+
+
+                    array(
+                        'id'       => 'footer_navigation_background',
+                        'type'     => 'background',
+                        'title'    => esc_html__( 'Footer navigation Background', 'aquila' ),
+                        'subtitle' => esc_html__( 'Footer Background with image, color, etc.', 'aquila' ),
+                        'default'   => array( ),
+                        'output'      => array( '#footer-navigation' ),
+                    ),
+                    array(
+                        'id'       => 'footer_navigation_padding',
+                        'type'     => 'spacing',
+                        'mode'     => 'padding',
+                        'left'     => false,
+                        'right'    => false,
+                        'output'   => array( '#footer-navigation' ),
+                        'units'          => array( 'px' ),
+                        'units_extended' => 'true',
+                        'title'    => esc_html__( 'Footer navigation padding', 'aquila' ),
+                        'default'  => array( )
+                    ),
+
                     // Footer widgets settings
                     array(
                         'id'       => 'footer_widgets_heading',
@@ -1206,7 +1245,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'          => esc_html__( 'Dropdown width', 'aquila' ),
                         'subtitle'          => esc_html__( 'Change width of Dropdown', 'aquila' ),
                         'height'         => false,
-                        'default'        => array( 'width'  => 345, 'height' => 100 ),
+                        'default'        => array( 'width'  => 300, 'units' => 'px' ),
                         'output'   => array( '#main-navigation > li ul.sub-menu-dropdown'),
                     ),
                     array(
@@ -1300,19 +1339,30 @@ if ( ! class_exists( 'KT_config' ) ) {
                     ),
 
                     array(
-                        'id'       => 'megamenu_border',
-                        'type'     => 'color',
-                        'title'    => esc_html__( 'MegaMenu Border color', 'aquila' ),
-                        'default'  => '#333333',
+                        'id'       => 'megamenu_background',
+                        'type'     => 'background',
+                        'title'    => esc_html__( 'MegaMenu Background color', 'aquila' ),
+                        'default'  => array('background-color' => '#222222', ),
+                        'output'   => array(
+                            '#main-navigation > li > .kt-megamenu-wrapper'
+                        ),
+                        'background-repeat'     => false,
+                        'background-attachment' => false,
+                        'background-position'   => false,
+                        'background-image'      => false,
+                        'background-size'       => false,
+                        'preview'               => false,
+                        'transparent'           => true,
                         'transparent' => false
                     ),
                     array(
                         'id'       => 'mega_title_color',
                         'type'     => 'color',
                         'output'   => array(
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > a',
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li > span',
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li .widget-title',
+                            '#main-navigation > li.menu-item-object-category > .kt-megamenu-wrapper .blog-posts-menu .post-item-content .entry-title a',
+                            '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > a', 
+                            '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > span',
+                            '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li .widget-title',
                         ),
                         'title'    => esc_html__( 'MegaMenu Title color', 'aquila' ),
                         'default'  => '#FFFFFF',
@@ -1322,7 +1372,10 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'mega_title_color_hover',
                         'type'     => 'color',
                         'output'   => array(
-                            '#main-navigation > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a:hover',
+                            '#main-navigation > li.menu-item-object-category > .kt-megamenu-wrapper .blog-posts-menu .post-item-content .entry-title a:hover',
+                            '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > a:hover', 
+                            '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > span:hover',
+                            '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li .widget-title:hover',
                         ),
                         'title'    => esc_html__( 'MegaMenu Title Hover Color', 'aquila' ),
                         'default'  => '#22dcce',
@@ -1332,7 +1385,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'mega_color',
                         'type'     => 'color',
                         'output'   => array(
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu a'
+                            '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > ul.sub-menu-megamenu a',
+                            '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > ul.sub-menu-megamenu span',
                         ),
                         'title'    => esc_html__( 'MegaMenu Text color', 'aquila' ),
                         'default'  => '#999999',
@@ -1343,8 +1397,9 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'mega_color_hover',
                         'type'     => 'color',
                         'output'   => array(
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu  > li.current-menu-item a:hover',
-                            '#main-navigation > li > .kt-megamenu-wrapper > .kt-megamenu-ul > li ul.sub-menu-megamenu a:hover',
+                            '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > ul.sub-menu-megamenu  > li.current-menu-item a:hover',
+                            '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > ul.sub-menu-megamenu a:hover',
+                            '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > ul.sub-menu-megamenu span:hover',
                         ),
                         'title'    => esc_html__( 'MegaMenu Text Hover color', 'aquila' ),
                         'default'  => '#22dcce',
@@ -1379,7 +1434,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'default'   => array(
                             'background-color'      => '#FFFFFF',
                         ),
-                        'output'      => array( '#mobile-nav-holder'),
+                        'output'      => array( '#main-nav-mobile'),
                         'transparent'           => false,
                     ),
                     array(
@@ -1394,7 +1449,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'ul.navigation-mobile > li > a'
                         ),
                         'title'    => esc_html__( 'Top Level Color', 'aquila' ),
-                        'default'  => '#282828',
+                        'default'  => '#999999',
                         'transparent' => false
                     ),
                     array(
@@ -1405,7 +1460,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'ul.navigation-mobile > li > a:hover'
                         ),
                         'title'    => esc_html__( 'Top Level hover Color', 'aquila' ),
-                        'default'  => '#282828',
+                        'default'  => '#22dcce',
                         'transparent' => false
                     ),
                     array(
@@ -1437,8 +1492,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array(
                             'ul.navigation-mobile > li:hover > a',
                             'ul.navigation-mobile > li > a:hover',
-                            //'ul.navigation-mobile > li.current-menu-item > a',
-                            //'ul.navigation-mobile > li.active-menu-item > a',
                         ),
                         'background-repeat'     => false,
                         'background-attachment' => false,
@@ -1456,11 +1509,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'mobile_sub_color',
                         'type'     => 'color',
                         'output'   => array(
-                            'ul.navigation-mobile > li .sub-menu-dropdown > li > a',
+                            '.main-nav-mobile > ul > li ul.sub-menu li a',
+                            '.main-nav-mobile > ul > li ul.sub-menu-megamenu li a',
+                            '.main-nav-mobile > ul > li ul.sub-menu-dropdown li a',
                             'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li > a',
                         ),
                         'title'    => esc_html__( 'Text color', 'aquila' ),
-                        'default'  => '#282828',
+                        'default'  => '#999999',
                         'transparent' => false
                     ),
 
@@ -1468,37 +1523,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'       => 'mobile_sub_color_hover',
                         'type'     => 'color',
                         'output'   => array(
-                            'ul.navigation-mobile > li .sub-menu-dropdown > li > a:hover',
+                            '.main-nav-mobile > ul > li ul.sub-menu li a:hover',
+                            '.main-nav-mobile > ul > li ul.sub-menu-megamenu li a:hover',
+                            '.main-nav-mobile > ul > li ul.sub-menu-dropdown li a:hover',
                             'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > .sub-menu-megamenu > li > a:hover',
                         ),
                         'title'    => esc_html__( 'Text Hover color', 'aquila' ),
-                        'default'  => '#82c14f',
-                        'transparent' => false
-                    ),
-                    array(
-                        'type' => 'divide',
-                        'id' => 'divide_fake',
-                    ),
-                    array(
-                        'id'       => 'mobile_title_color',
-                        'type'     => 'color',
-                        'output'   => array(
-                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a',
-                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > span',
-                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li .widget-title',
-                        ),
-                        'title'    => esc_html__( 'MegaMenu Title color', 'aquila' ),
-                        'default'  => '#282828',
-                        'transparent' => false
-                    ),
-                    array(
-                        'id'       => 'mobile_title_color_hover',
-                        'type'     => 'color',
-                        'output'   => array(
-                            'ul.navigation-mobile > li .kt-megamenu-wrapper > ul.kt-megamenu-ul > li > a:hover',
-                        ),
-                        'title'    => esc_html__( 'MegaMenu Title Hover Color', 'aquila' ),
-                        'default'  => '#82c14f',
+                        'default'  => '#22dcce',
                         'transparent' => false
                     ),
 
