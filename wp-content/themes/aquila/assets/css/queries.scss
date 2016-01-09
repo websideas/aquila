@@ -205,6 +205,45 @@ only screen and (min-resolution: 144dpi) {
       }
     }
   }
+
+  .no-sidebar{
+    .blog-posts-medium{
+      .entry-thumb{
+        margin-bottom: 30px;
+        display: block;
+      }
+      .entry-title{
+        padding: 0;
+        border: none;
+        margin-top: 0;
+        a:before{
+          border: none;
+        }
+      }
+    }
+  }
+  .blog-posts-medium{
+    article.post-item-content,
+    div.post-item-content{
+      &.post-item-featured{
+        &.format-gallery,
+        &.format-video,
+        &.format-standard,
+        &.format-audio{
+          .entry-title{
+            padding: 0;
+            margin-top: 0;
+            a:before{
+              border: none;
+            }
+          }
+          .post-item-thumb{
+            margin-bottom: 30px;
+          }
+        }
+      }
+    }
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
