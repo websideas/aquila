@@ -19,9 +19,25 @@ function kt_import_demo_aquila( $demos ){
     );
 
     $demos['demo2'] = array(
-        'title' => 'Coming soon',
-        'previewlink' => '#',
-        'coming' => true
+        'title' => 'Demo2',
+        'previewlink' => 'http://aquila.kitethemes.com/',
+        'xml_count' => 1,
+        'status' => sprintf(
+            '<span class="%s">%s</span>',
+            'demo-main',
+            __('Demo2', 'aquila')
+        )
+    );
+
+    $demos['demo3'] = array(
+        'title' => 'Demo3',
+        'previewlink' => 'http://aquila.kitethemes.com/',
+        'xml_count' => 1,
+        'status' => sprintf(
+            '<span class="%s">%s</span>',
+            'demo-main',
+            __('Demo3', 'aquila')
+        )
     );
 
 
