@@ -41,12 +41,29 @@ if ( !function_exists( 'kt_extended_imported' ) ) {
         $main_menu = get_term_by( 'name', __('Main menu', 'aquila'), 'nav_menu' );
         $mobile = get_term_by( 'name', __('Main Menu', 'aquila'), 'nav_menu' );
         $footer = get_term_by( 'name', __('Footer Navigation Menu', 'aquila'), 'nav_menu' );
-        set_theme_mod( 'nav_menu_locations', array(
+
+        // array of demos/homepages to check/select from
+        $kt_menus = array(
+            'demo1' => array(
                 'primary' => $main_menu->term_id,
                 'mobile' => $mobile->term_id,
-                'footer' => $footer->term_id,
-            )
+                'footer' => $footer->term_id
+            ),
+            'demo2'  => array(
+                'primary' => $main_menu->term_id,
+                'mobile' => $mobile->term_id,
+                'footer' => $footer->term_id
+            ),
+            'demo3'=> array(
+                'primary' => $main_menu->term_id,
+                'mobile' => $mobile->term_id,
+            ),
         );
+
+        if ( isset( $kt_menus[$demoid]  ) ) {
+            set_theme_mod( 'nav_menu_locations',$kt_menus[$demoid]);
+        }
+
 
         /************************************************************************
          * Set HomePage
