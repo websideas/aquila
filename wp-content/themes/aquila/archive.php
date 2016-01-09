@@ -42,12 +42,12 @@ if ( have_posts() ) { ?>
 
             if($type == 'medium' || $type == 'list'){
                 $column = 1;
-                $col_tab = 12;
+                $column_tab = 12;
             }else{
-                $col_tab = 6;
+                $column_tab = 6;
             }
             $article_column = 12/$column;
-            $article_column_tab = 12/$col_tab;
+            $article_column_tab = 12/$column_tab;
             $i = 1;
             $j = $k = 0;
 
