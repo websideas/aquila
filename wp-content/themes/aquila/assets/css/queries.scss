@@ -7,14 +7,21 @@
 [Table of contents]
 
 1. Retina logo
-2. Styles for devices(<=1199px)
-3. Styles for devices(<=991px )
-4. Styles for devices(>=768px and <= 991px)
-5. Styles for devices(<=767px )
-6. Styles for devices(>=481px and <= 767px)
-7. Styles for devices(<=480px )
-8. Styles for devices(<=320px )
+2. Styles for devices(>=1490px)
+3. Styles for devices(>=1200px)
+4. Styles for devices(<=1199px)
+5. Styles for devices(>=992px and <= 1199px)
+6. Styles for devices(<=991px )
+7. Styles for devices(>=768px and <= 991px)
+8. Styles for devices(<=767px )
+9. Styles for devices(>=481px and <= 767px)
+10. Styles for devices(<=600 )
+11. Styles for devices(<=480px )
+12. Styles for devices(<=320px )
 */
+
+
+
 
 @import 'mixin';
 @import 'variables';
@@ -28,7 +35,7 @@ only screen and (min-resolution: 144dpi) {
   .site-branding .site-logo.retina-logo-wrapper .default-logo { display: none; }
 }
 
-
+/* 2. Styles for devices(>=1490) */
 @media (max-width: 1490px) {
   #main-slideshow{
     &.post-slider-big{
@@ -52,7 +59,7 @@ only screen and (min-resolution: 144dpi) {
   }
 }
 
-
+/* 3. Styles for devices(>=1200px) */
 @media (min-width: 1200px) {
   .col-lg-clear{
     clear: left;
@@ -80,7 +87,7 @@ only screen and (min-resolution: 144dpi) {
 
 
 
-/* 2. Styles for devices(<=1199px) */
+/* 4. Styles for devices(<=1199px) */
 @media (max-width: 1199px) {
   .header-container{
     display: none;
@@ -93,10 +100,9 @@ only screen and (min-resolution: 144dpi) {
   #header-content-mobile{
     display: block;
   }
-
-
-
 }
+
+/* 5. Styles for devices(>=992px and <= 1199px) */
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .col-md-clear {
@@ -246,6 +252,14 @@ only screen and (min-resolution: 144dpi) {
   }
 }
 
+
+/* 6. Styles for devices(<=991px ) */
+@media (max-width: 991px) {
+
+}
+
+
+/* 7. Styles for devices(>=768px and <= 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
   .col-sm-clear {
     clear: left;
@@ -264,8 +278,7 @@ only screen and (min-resolution: 144dpi) {
   }
 }
 
-
-
+/* 8. Styles for devices(<=767px ) */
 @media (max-width: 767px) {
   .col-xs-clear {
     clear: left;
@@ -279,6 +292,13 @@ only screen and (min-resolution: 144dpi) {
       }
     }
   }
+  #main-slideshow{
+    .slick-arrow{
+      display: none!important;
+    }
+  }
+
+
   .blog-posts-medium{
     article.post-item-content{
       .entry-title{
@@ -343,7 +363,14 @@ only screen and (min-resolution: 144dpi) {
     }
   }
 }
+/* 9. Styles for devices(>=481px and <= 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
 
+
+}
+
+
+/* 10. Styles for devices(<=600 ) */
 @media (max-width: 600px) {
   body.opened-nav-animate{
     &.admin-bar{
@@ -383,6 +410,8 @@ only screen and (min-resolution: 144dpi) {
     }
   }
 }
+
+/* 11. Styles for devices(<=480px ) */
 @media (max-width: 480px) {
   .post-item-meta{
     padding-right: 15px;
@@ -491,4 +520,9 @@ only screen and (min-resolution: 144dpi) {
       }
     }
   }
+}
+
+/* 12. Styles for devices(<=320px ) */
+@media (max-width: 320px) {
+
 }
