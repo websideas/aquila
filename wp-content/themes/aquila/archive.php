@@ -49,9 +49,11 @@ if ( have_posts() ) { ?>
             $article_column = 12/$column;
             $article_column_tab = 12/$col_tab;
             $i = 1;
+            $j = $k = 0;
 
             global $wp_query;
             while ( have_posts() ) : the_post();
+                $featured = get_post_meta(get_the_ID(), '_kt_post_featured', true);
                 if($i == 1){
                     if($first_featured){
                         get_template_part( 'templates/blog/grid/content', 'first');
@@ -61,36 +63,52 @@ if ( have_posts() ) { ?>
                     $sidebar_class = ($sidebar['sidebar']) ? 'sidebar-'.$sidebar['sidebar'] : 'no-sidebar';
                     $pull_class = ($sidebar['sidebar'] == 'left') ? 'pull-right' : '';
 
-                    echo '<div class="row main '.esc_attr($sidebar_class).'">';
-                    echo '<div class="col-md-'.esc_attr($main_column).' col-sm-12 col-xs-12 main-content '.esc_attr($pull_class).'"><div class="row multi-columns-row blog-posts-'.esc_attr($type).'">';
+                    echo '<div class="row main '.$sidebar_class.'">';
+                    echo '<div class="col-md-'.$main_column.' main-content '.$pull_class.'"><div class="row blog-posts-'.$type.'">';
 
                     if($type == 'grid' || $type == 'masonry'){
                         printf('<div class="clearfix col-lg-%1$s col-md-%1$s col-sm-%2$s grid-sizer"></div>', esc_attr($article_column), esc_attr($article_column_tab));
                     }
-
                     if(!$first_featured){
-                        printf('<div class="article-post-item col-lg-%1$s col-md-%1$s col-sm-%2$s">', $article_column, $col_tab);
+                        printf('<div class="article-post-item col-lg-%1$s col-md-%1$s col-sm-%2$s">', $article_column, $article_column_tab);
                         get_template_part( 'templates/blog/'.$type.'/content', get_post_format());
                         echo '</div>';
+                        $j++;
                     }
                 }else {
-                    printf('<div class="article-post-item col-lg-%1$s col-md-%1$s col-sm-'.$col_tab.'">', $article_column);
-                    $featured = get_post_meta(get_the_ID(), '_kt_post_featured', true);
-                    if($featured == 'yes' && $type != 'grid' && $type != 'masonry' ){
+                    if($featured == 'yes'){
+                        printf('<div class="article-post-item col-lg-12 col-md-12 col-sm-12">', $article_column);
                         get_template_part( 'templates/blog/'.$type.'/contentf', get_post_format());
+                        $j = 0;
+                        $k = 0;
                     }else{
+                        if($j == $column){
+                            $clear = "col-lg-clear col-md-clear";
+                            $j = 0;
+                        }else{
+                            $clear = '';
+                        }
+                        if($k == $column_tab){
+                            $clear_tab = "col-sm-clear";
+                            $k = 0;
+                        }else{
+                            $clear_tab = '';
+                        }
+                        printf('<div class="article-post-item col-lg-%1$s col-md-%1$s col-sm-%2$s %3$s %4$s">', $article_column, $article_column_tab, $clear, $clear_tab);
                         get_template_part( 'templates/blog/'.$type.'/content', get_post_format());
+                        $j++;
+                        $k++;
                     }
                     echo '</div>';
                 }
                 if($i == $wp_query->post_count){
                     echo '</div><!-- .main-content -->';
                     // Previous/next page navigation.
-                    kt_paging_nav($pagination);
+                    kt_paging_nav();
                     echo "</div>";
 
                     if($sidebar['sidebar']){
-                        echo '<div class="col-md-4 col-sm-12 col-xs-12 sidebar main-sidebar">';
+                        echo '<div class="col-md-4 sidebar main-sidebar">';
                         dynamic_sidebar($sidebar['sidebar_area']);
                         echo '</div>';
                     }
@@ -109,7 +127,7 @@ if ( have_posts() ) { ?>
             ?>
         </div><!-- .container -->
     </div><!-- .blog-posts -->
-<?php
+    <?php
 // If no content, include the "No posts found" template.
 }else{
     get_template_part( 'templates/content', 'none' );

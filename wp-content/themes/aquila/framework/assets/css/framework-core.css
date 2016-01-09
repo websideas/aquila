@@ -556,6 +556,12 @@ div#post-body .rwmb-text{
     display: none;
 }
 
+.rwmb-image_radio-wrapper .rwmb-input{
+    margin-left: -10px;
+}
+.rwmb-image_radio-wrapper p.description{
+    margin-left: 10px;
+}
 .rwmb-image_radio-wrapper label{
     display: inline-block;
     margin: 0 10px 15px;
