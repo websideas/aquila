@@ -62,7 +62,7 @@ if ( have_posts() ) { ?>
                     $pull_class = ($sidebar['sidebar'] == 'left') ? 'pull-right' : '';
 
                     echo '<div class="row main '.esc_attr($sidebar_class).'">';
-                    echo '<div class="col-md-'.esc_attr($main_column).' col-sm-12 col-xs-12 main-content '.esc_attr($pull_class).'"><div class="row multi-columns-row blog-posts-'.esc_attr($type).'">';
+                    echo '<div class="col-md-'.esc_attr($main_column).' col-sm-12 col-xs-12 main-content '.esc_attr($pull_class).'"><div class="row blog-posts-'.esc_attr($type).'">';
 
                     if($type == 'grid' || $type == 'masonry'){
                         printf('<div class="clearfix col-lg-%1$s col-md-%1$s col-sm-%2$s grid-sizer"></div>', esc_attr($article_column), esc_attr($article_column_tab));
