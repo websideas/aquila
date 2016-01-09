@@ -2196,6 +2196,9 @@ ul.style-list{
       color: $gray;
       letter-spacing: 0.05em;
       display: block;
+      i{
+        margin-right: 5px;
+      }
     }
     &:first-child{
       margin-left: 0;
@@ -2267,6 +2270,9 @@ ul.style-list{
           font-size: 14px;
           padding: 16px 25px;
           position: relative;
+          i{
+            margin-right: 5px;
+          }
         }
 
         ul.sub-menu-dropdown{
@@ -2344,6 +2350,9 @@ ul.style-list{
             line-height: 1;
             text-transform: uppercase;
             margin: 0 0 20px;
+            i{
+              margin-right: 5px;
+            }
           }
 
           > a{

@@ -92,7 +92,6 @@ function kt_theme_setup() {
         'primary' => esc_html__('Main Navigation Menu', 'aquila'),
         'mobile' => esc_html__('(Mobile Devices) Main Navigation Menu', 'aquila'),
         'footer'	  => esc_html__( 'Footer Navigation Menu', 'aquila' ),
-        'bottom'	  => esc_html__( 'Bottom Menu', 'aquila' ),
     ));
 
 }

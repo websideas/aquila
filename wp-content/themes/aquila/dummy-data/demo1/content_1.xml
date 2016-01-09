@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.4.1" created="2016-01-08 07:35" -->
+<!-- generator="WordPress/4.4.1" created="2016-01-09 02:51" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Aquila</title>
 	<link>http://aquila.kitethemes.com</link>
 	<description>Beautiful Theme For Blogger</description>
-	<pubDate>Fri, 08 Jan 2016 07:35:45 +0000</pubDate>
+	<pubDate>Sat, 09 Jan 2016 02:51:27 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://aquila.kitethemes.com</wp:base_site_url>
@@ -6494,7 +6494,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+			<wp:meta_value><![CDATA[blog-widget-area]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_frontpage_content]]></wp:meta_key>
@@ -7505,7 +7505,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis loborti
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+			<wp:meta_value><![CDATA[blog-widget-area]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_slideshow_type]]></wp:meta_key>
@@ -7542,6 +7542,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis loborti
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_slideshow_postslider]]></wp:meta_key>
 			<wp:meta_value><![CDATA[254]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_promo_widget]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -7631,7 +7635,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis loborti
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+			<wp:meta_value><![CDATA[blog-widget-area]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_dp_original]]></wp:meta_key>
@@ -7672,6 +7676,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis loborti
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_slideshow_postslider]]></wp:meta_key>
 			<wp:meta_value><![CDATA[254]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_promo_widget]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -7883,7 +7891,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis loborti
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+			<wp:meta_value><![CDATA[blog-widget-area]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_dp_original]]></wp:meta_key>
@@ -8151,7 +8159,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis loborti
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+			<wp:meta_value><![CDATA[blog-widget-area]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_dp_original]]></wp:meta_key>
@@ -8192,6 +8200,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis loborti
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_slideshow_postslider]]></wp:meta_key>
 			<wp:meta_value><![CDATA[256]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_promo_widget]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -9820,8 +9832,6 @@ Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem so
 
 <img class="aligncenter " src="http://aquila.kitethemes.com/wp-content/uploads/2015/12/image.png" alt="image" />
 
-[gallery link="file" columns="5" ids="193,59,60,140,12,58,86,85,74,61"]
-
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
@@ -9907,7 +9917,7 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[74]]></wp:meta_value>
+			<wp:meta_value><![CDATA[77]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_like_post]]></wp:meta_key>
@@ -9964,10 +9974,6 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
 			<wp:meta_value><![CDATA[one-day-discover-in-london-city]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_blog_post_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[3]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_audio_mp3]]></wp:meta_key>
@@ -11130,7 +11136,7 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[60]]></wp:meta_value>
+			<wp:meta_value><![CDATA[64]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_like_post]]></wp:meta_key>
@@ -12376,7 +12382,7 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_like_post]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+			<wp:meta_value><![CDATA[2]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
@@ -12400,7 +12406,7 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[534]]></wp:meta_value>
+			<wp:meta_value><![CDATA[536]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>

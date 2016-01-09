@@ -39,8 +39,12 @@ if ( !function_exists( 'kt_extended_imported' ) ) {
          *************************************************************************/
 
         $main_menu = get_term_by( 'name', __('Main menu', 'aquila'), 'nav_menu' );
+        $mobile = get_term_by( 'name', __('Main Menu', 'aquila'), 'nav_menu' );
+        $footer = get_term_by( 'name', __('Footer Navigation Menu', 'aquila'), 'nav_menu' );
         set_theme_mod( 'nav_menu_locations', array(
-                'primary' => $main_menu->term_id
+                'primary' => $main_menu->term_id,
+                'mobile' => $mobile->term_id,
+                'footer' => $footer->term_id,
             )
         );
 
@@ -55,7 +59,7 @@ if ( !function_exists( 'kt_extended_imported' ) ) {
             'demo3' => 'Home',
         );
 
-        if ( isset( $wbc_sliders_array[$demoid]  ) ) {
+        if ( isset( $kt_home_pages[$demoid]  ) ) {
             $page = get_page_by_title( $kt_home_pages[$demoid] );
             if ( isset( $page->ID ) ) {
                 update_option( 'page_on_front', $page->ID );
@@ -103,7 +107,3 @@ function kt_importer_opt_name_aquila(  ) {
     return KT_THEME_OPTIONS;
 }
 add_filter('kt_importer_opt_name', 'kt_importer_opt_name_aquila' );
-
-
-
-

@@ -2585,6 +2585,8 @@ ul.style-list {
       color: #999999;
       letter-spacing: 0.05em;
       display: block; }
+      #main-navigation > li > a i {
+        margin-right: 5px; }
     #main-navigation > li:first-child {
       margin-left: 0; }
     #main-navigation > li:last-child {
@@ -2684,6 +2686,8 @@ ul.style-list {
           font-size: 14px;
           padding: 16px 25px;
           position: relative; }
+          #main-navigation > li ul.sub-menu-dropdown li > a i {
+            margin-right: 5px; }
         #main-navigation > li ul.sub-menu-dropdown li ul.sub-menu-dropdown {
           left: 100%;
           top: 0; }
@@ -2765,6 +2769,9 @@ ul.style-list {
           line-height: 1;
           text-transform: uppercase;
           margin: 0 0 20px; }
+          #main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > a i,
+          #main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > span i {
+            margin-right: 5px; }
         #main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > a:hover {
           color: #22dcce; }
           #main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > a:hover:before, #main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > a:hover:after {
