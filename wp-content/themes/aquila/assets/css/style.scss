@@ -4674,8 +4674,14 @@ article.post-item-content{
   padding: 0;
   margin-bottom: -10px;
   p{
-    margin: 0;
+    &:last-child{
+      margin: 0;
+    }
   }
+}
+
+.pingback{
+  margin-bottom: 30px;
 }
 
 .comment-item {

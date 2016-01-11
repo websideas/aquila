@@ -4960,8 +4960,11 @@ article.post-item-content {
   border: medium none;
   padding: 0;
   margin-bottom: -10px; }
-  .comment-entry.entry-content p {
+  .comment-entry.entry-content p:last-child {
     margin: 0; }
+
+.pingback {
+  margin-bottom: 30px; }
 
 .comment-item {
   margin-bottom: 30px;

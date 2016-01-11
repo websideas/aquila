@@ -125,6 +125,9 @@ function kt_header_class_callback($classes, $layout){
         }
     }
     $header_shadow = '';
+
+
+
     if($layout == 1){
         if(is_page() || is_singular()){
             $post_id = $post->ID;
@@ -132,12 +135,15 @@ function kt_header_class_callback($classes, $layout){
             if($header_shadow == ''){
                 $header_shadow = kt_option('header_shadow', true);
             }
+        }else{
+            $header_shadow = kt_option('header_shadow', true);
         }
     }else{
         $header_shadow = kt_option('header_shadow', true);
     }
 
-    if($header_shadow == 'on' || $header_shadow == 1){
+
+    if($header_shadow == 'on' || $header_shadow == 1  || $header_shadow == true){
         $classes .= ' header-shadow';
     }
 

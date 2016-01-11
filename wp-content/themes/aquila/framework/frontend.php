@@ -331,7 +331,7 @@ function kt_setting_script() {
 
     }
 
-    if($navigation_space = kt_option('navigation_space', 25)){
+    if($navigation_space = kt_option('navigation_space', 15)){
         $css .= '#main-navigation > li{margin-left: '.$navigation_space.'px;margin-right: '.$navigation_space.'px;}#main-navigation > li:first-child {margin-left: 0;}#main-navigation > li:last-child {margin-right: 0;}';
     }
 
@@ -711,40 +711,49 @@ endif;
  */
 function kt_comments($comment, $args, $depth) {
     $GLOBALS['comment'] = $comment;
-    ?>
 
-<li <?php comment_class('comment'); ?> id="li-comment-<?php comment_ID() ?>">
-    <div  id="comment-<?php comment_ID(); ?>" class="comment-item clearfix">
+	if ( 'pingback' == $comment->comment_type || 'trackback' == $comment->comment_type ) : ?>
 
-        <div class="comment-avatar">
-            <?php echo get_avatar($comment->comment_author_email, $size='100',$default='' ); ?>
-        </div>
-        <div class="comment-content">
-            <div class="comment-meta">
-                <h5 class="author_name">
-                    <?php comment_author_link(); ?>
-                </h5>
-                <span class="comment-date">
-                    <?php printf( _x( '%s ago', '%s = human-readable time difference', 'aquila' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
-                </span>
+        <li id="comment-<?php comment_ID(); ?>" <?php comment_class( '' ); ?>>
+            <div class="comment-body">
+                <?php _e( 'Pingback:', '_tk' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', '_tk' ), '<span class="edit-link">', '</span>' ); ?>
             </div>
-            <div class="comment-entry entry-content">
-                <?php comment_text() ?>
-                <?php if ($comment->comment_approved == '0') : ?>
-                    <em><?php esc_html_e('Your comment is awaiting moderation.', 'aquila') ?></em>
-                <?php endif; ?>
+
+	<?php else : ?>
+
+        <li <?php comment_class('comment'); ?> id="li-comment-<?php comment_ID() ?>">
+            <div  id="comment-<?php comment_ID(); ?>" class="comment-item clearfix">
+
+                <div class="comment-avatar">
+                    <?php echo get_avatar($comment->comment_author_email, $size='100',$default='' ); ?>
+                </div>
+                <div class="comment-content">
+                    <div class="comment-meta">
+                        <h5 class="author_name">
+                            <?php comment_author_link(); ?>
+                        </h5>
+                        <span class="comment-date">
+                            <?php printf( _x( '%s ago', '%s = human-readable time difference', 'aquila' ), human_time_diff( get_comment_time( 'U' ), current_time( 'timestamp' ) ) ); ?>
+                        </span>
+                    </div>
+                    <div class="comment-entry entry-content">
+                        <?php comment_text() ?>
+                        <?php if ($comment->comment_approved == '0') : ?>
+                            <em><?php esc_html_e('Your comment is awaiting moderation.', 'aquila') ?></em>
+                        <?php endif; ?>
+                    </div>
+                    <div class="comment-actions">
+                        <?php edit_comment_link( '<span class="icon-pencil"></span> '.esc_html__('Edit', 'aquila'),'  ',' ') ?>
+                        <?php comment_reply_link( array_merge( $args,
+                            array('depth' => $depth,
+                                'max_depth' => $args['max_depth'],
+                                'reply_text' =>'<span class="icon-action-undo"></span> '.esc_html__('Reply','aquila')
+                            ))) ?>
+                    </div>
+                </div>
             </div>
-            <div class="comment-actions">
-                <?php edit_comment_link( '<span class="icon-pencil"></span> '.esc_html__('Edit', 'aquila'),'  ',' ') ?>
-                <?php comment_reply_link( array_merge( $args,
-                    array('depth' => $depth,
-                        'max_depth' => $args['max_depth'],
-                        'reply_text' =>'<span class="icon-action-undo"></span> '.esc_html__('Reply','aquila')
-                    ))) ?>
-            </div>
-        </div>
-    </div>
-<?php
+        <?php
+    endif;
 }
 
 
