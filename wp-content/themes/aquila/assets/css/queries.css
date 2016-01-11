@@ -171,7 +171,16 @@
     padding: 30px 30px 60px; }
   .blog-posts-slick .slick-dots {
     left: 60px;
-    bottom: 40px; } }
+    bottom: 40px; }
+
+  .main-content.col-md-12 .post-layout-1 > .entry-header,
+  .main-content.col-md-12 .post-layout-1 > .entry-content,
+  .main-content.col-md-12 .post-layout-1 > .entry-footer {
+    margin-left: 0;
+    margin-right: 0; }
+  .main-content.col-md-12 .post-single-addons {
+    margin-left: 0;
+    margin-right: 0; } }
 /* 6. Styles for devices(<=991px ) */
 /* 7. Styles for devices(>=768px and <= 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -308,7 +317,8 @@
     margin-bottom: 10px; }
   .author-info .author-description {
     padding-left: 0;
-    text-align: center; }
+    text-align: center;
+    min-height: auto; }
 
   #footer-bottom .social-text ul li a {
     font-size: 14px; }
@@ -331,7 +341,11 @@
       .widget_kt_post_tabs .kt-tabs-nav li a span {
         display: none; }
       .widget_kt_post_tabs .kt-tabs-nav li a i {
-        display: block; } }
+        display: block; }
+
+  .comment-actions {
+    position: static;
+    margin-top: 20px; } }
 /* 12. Styles for devices(<=320px ) */
 
 /*# sourceMappingURL=queries.css.map */

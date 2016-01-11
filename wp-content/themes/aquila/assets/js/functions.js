@@ -307,13 +307,9 @@
      --------------------------------------------- */
     function init_carousel(){
 
-        if( $('.blog-posts-slick').hasClass('posts-slick-thumb') || $('.blog-posts-slick').hasClass('posts-slick-slider') ){
-            var slick_dot = false;
-        }else{
-            var slick_dot = true;
-        }
         $('.blog-posts-slick').slick({
-            dots: slick_dot
+            dots: true,
+            arrows: false
         });
 
         $('.blog-posts-thumb').slick({

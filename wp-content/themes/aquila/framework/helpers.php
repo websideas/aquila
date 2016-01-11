@@ -400,7 +400,7 @@ if (!function_exists('kt_show_slideshow')) {
 
         if($output != ''){
             printf(
-                '<div id="main-slideshow" class="%s"><div id="sideshow-inner">%s</div></div>',
+                '<div id="main-slideshow" class="%s"><div id="sideshow-inner">%s<div class="slick-prev slick-arrow"></div><div class="slick-next slick-arrow"></div></div></div>',
                 esc_attr(implode(' ', $sideshow_class)),
                 $output
             );
@@ -489,11 +489,11 @@ function kt_render_postSlider($post_id){
             if($style != 'thumb'){
                 $content_class = '';
                 if($style == 'slider'){
-                    $content_class = 'slider container';
+                    $content_class = '';
                 }
 
                 $slider_content = sprintf(
-                    '<div class="article-post-content%1$s"><div class="article-post-inner">%2$s %3$s</div></div>',
+                    '<div class="article-post-content %1$s"><div class="article-post-inner">%2$s %3$s</div></div>',
                     $content_class,
                     '<h3><a href="'.get_the_permalink().'">'.get_the_title().'</a></h3>',
                     '<div class="article-post-meta">'.get_the_author().' - '. get_the_date().'</div>'
