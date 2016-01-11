@@ -856,13 +856,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'             => 'logo_width',
                         'type'           => 'dimensions',
-                        'units'          => array( 'px'),
-                        'units_extended' => 'true',
+                        'units'          => 'px',
                         'title'          => esc_html__( 'Logo width', 'aquila' ),
                         'height'         => false,
-                        'default'        => array( 'width'  => 25, 'unit'   => 'px' ),
+                        'default'        => array( 'width'  => '25', 'units'   => 'px' ),
                         'output'   => array( '.site-branding .site-logo img' ),
                     ),
+
                     array(
                         'id'       => 'logo_margin_spacing',
                         'type'     => 'spacing',
@@ -878,20 +878,21 @@ if ( ! class_exists( 'KT_config' ) ) {
                             'margin-left'   => '0'
                         )
                     ),
+
                     array(
                         'id'   => 'divide_id',
                         'type' => 'divide'
                     ),
+
                     array(
                         'id'             => 'logo_mobile_width',
                         'type'           => 'dimensions',
-                        'units'          => array( 'px'),
-                        'units_extended' => 'true',
+                        'units'          => 'px',
                         'title'          => esc_html__( 'Logo mobile width', 'aquila' ),
                         'height'         => false,
                         'default'        => array(
                             'width'  => 25,
-                            'unit'   => 'px'
+                            'units'   => 'px'
                         ),
                         'output'   => array( '#header-content-mobile .site-branding .site-logo img' ),
                     ),
@@ -939,7 +940,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'             => 'logo_sticky_width',
                         'type'           => 'dimensions',
-                        'units'          => array( 'px'),
+                        'units'          => 'px',
                         'title'          => esc_html__( 'Logo width', 'aquila' ),
                         'height'         => false,
                         'default'        => array(
@@ -968,8 +969,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'             => 'navigation_height_fixed',
                         'type'           => 'dimensions',
-                        'units'          => array('px'),
-                        'units_extended' => 'true',
+                        'units'          => 'px',
                         'title'          => esc_html__( 'Main Navigation Sticky Height', 'aquila' ),
                         'desc'          => esc_html__( 'Change height of main navigation sticky', 'aquila' ),
                         'width'         => false,
@@ -1264,7 +1264,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'             => 'navigation_height',
                         'type'           => 'dimensions',
-                        'units'          => array('px'),
+                        'units'          => 'px',
                         'units_extended' => 'true',
                         'title'          => esc_html__( 'Main Navigation Height', 'aquila' ),
                         'subtitle'          => esc_html__( 'Change height of main navigation', 'aquila' ),
@@ -1311,7 +1311,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id'            => 'navigation_space',
                         'type'          => 'slider',
                         'title'         => esc_html__( 'Top Level space', 'aquila' ),
-                        'default'       => 25,
+                        'default'       => 15,
                         'min'           => 0,
                         'step'          => 1,
                         'max'           => 50,
@@ -1355,7 +1355,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                     array(
                         'id'             => 'navigation_dropdown',
                         'type'           => 'dimensions',
-                        'units'          => array('px'),
+                        'units'          => 'px',
                         'units_extended' => 'true',
                         'title'          => esc_html__( 'Dropdown width', 'aquila' ),
                         'subtitle'          => esc_html__( 'Change width of Dropdown', 'aquila' ),
