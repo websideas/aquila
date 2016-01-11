@@ -122,9 +122,9 @@ if (!function_exists('kt_get_page_sidebar')) {
         if($sidebar['sidebar'] == '' || $sidebar['sidebar'] == 'default' ){
             $sidebar['sidebar'] = kt_option('page_sidebar');
             if($sidebar['sidebar'] == 'left' ){
-                $sidebar['sidebar_area'] = kt_option('page_sidebar_left', 'blog-widget-area');
+                $sidebar['sidebar_area'] = kt_option('page_sidebar_left', 'primary-widget-area');
             }elseif($sidebar['sidebar'] == 'right'){
-                $sidebar['sidebar_area'] = kt_option('page_sidebar_right', 'blog-widget-area');
+                $sidebar['sidebar_area'] = kt_option('page_sidebar_right', 'primary-widget-area');
             }
         }elseif($sidebar['sidebar'] == 'left'){
             $sidebar['sidebar_area'] = rwmb_meta('_kt_left_sidebar', array(), $post_id);
@@ -157,9 +157,9 @@ if (!function_exists('kt_get_single_sidebar')) {
         if($sidebar['sidebar'] == '0' || $sidebar['sidebar'] == 'default' ){
             $sidebar['sidebar'] = kt_option('single_sidebar', 'right');
             if($sidebar['sidebar'] == 'left' ){
-                $sidebar['sidebar_area'] = kt_option('single_sidebar_left', 'blog-widget-area');
+                $sidebar['sidebar_area'] = kt_option('single_sidebar_left', 'primary-widget-area');
             }elseif($sidebar['sidebar'] == 'right'){
-                $sidebar['sidebar_area'] = kt_option('single_sidebar_right', 'blog-widget-area');
+                $sidebar['sidebar_area'] = kt_option('single_sidebar_right', 'primary-widget-area');
             }elseif($sidebar['sidebar'] == 'full'){
                 $sidebar['sidebar'] = '';
             }
@@ -187,7 +187,7 @@ if (!function_exists('kt_get_archive_sidebar')) {
         if( isset($_REQUEST['sidebar'] )){
             $sidebar = array(
                 'sidebar' => $_REQUEST['sidebar'],
-                'sidebar_area' => 'blog-widget-area'
+                'sidebar_area' => 'primary-widget-area'
             );
             if($sidebar['sidebar'] == 'full'){
                 $sidebar['sidebar'] = '';
@@ -198,11 +198,11 @@ if (!function_exists('kt_get_archive_sidebar')) {
                 'sidebar_area' => ''
             );
             if($sidebar['sidebar'] == 'left' ){
-                $sidebar['sidebar_area'] = kt_option('search_sidebar_left', 'blog-widget-area');
+                $sidebar['sidebar_area'] = kt_option('search_sidebar_left', 'primary-widget-area');
             }elseif($sidebar['sidebar'] == 'full'){
                 $sidebar['sidebar'] = '';
             }elseif($sidebar['sidebar'] == 'right'){
-                $sidebar['sidebar_area'] = kt_option('search_sidebar_right', 'blog-widget-area');
+                $sidebar['sidebar_area'] = kt_option('search_sidebar_right', 'primary-widget-area');
             }
         }elseif(is_author()){
             $sidebar = array(
@@ -210,11 +210,11 @@ if (!function_exists('kt_get_archive_sidebar')) {
                 'sidebar_area' => '',
             );
             if($sidebar['sidebar'] == 'left' ){
-                $sidebar['sidebar_area'] = kt_option('author_sidebar_left', 'blog-widget-area');
+                $sidebar['sidebar_area'] = kt_option('author_sidebar_left', 'primary-widget-area');
             }elseif($sidebar['sidebar'] == 'full'){
                 $sidebar['sidebar'] = '';
             }elseif($sidebar['sidebar'] == 'right'){
-                $sidebar['sidebar_area'] = kt_option('author_sidebar_right', 'blog-widget-area');
+                $sidebar['sidebar_area'] = kt_option('author_sidebar_right', 'primary-widget-area');
             }
         }else{
             $default = false;
@@ -244,9 +244,9 @@ if (!function_exists('kt_get_archive_sidebar')) {
                     'sidebar_area' => '',
                 );
                 if($sidebar['sidebar'] == 'left' ){
-                    $sidebar['sidebar_area'] = kt_option('archive_sidebar_left', 'blog-widget-area');
+                    $sidebar['sidebar_area'] = kt_option('archive_sidebar_left', 'primary-widget-area');
                 }elseif($sidebar['sidebar'] == 'right'){
-                    $sidebar['sidebar_area'] = kt_option('archive_sidebar_right', 'blog-widget-area');
+                    $sidebar['sidebar_area'] = kt_option('archive_sidebar_right', 'primary-widget-area');
                 }elseif($sidebar['sidebar'] == 'full'){
                     $sidebar['sidebar'] = '';
                 }

@@ -16,7 +16,7 @@ if ( has_nav_menu( 'primary' ) ) {
     ) );
 }else{
     printf(
-        '<ul><li><a href="#">%s</a></li></ul>',
+        '<ul class="no-menu"><li><a href="#">%s</a></li></ul>',
         esc_html__("Define your site main menu!", 'aquila')
     );
 }

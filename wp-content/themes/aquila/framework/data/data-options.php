@@ -2186,7 +2186,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Sidebar left area', 'aquila' ),
                         'subtitle'     => esc_html__( "Please choose default layout", 'aquila' ),
                         'data'     => 'sidebars',
-                        'default'  => 'blog-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('page_sidebar','equals','left')
                         //'clear' => false
                     ),
@@ -2197,7 +2197,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Sidebar right area', 'aquila' ),
                         'subtitle'     => esc_html__( "Please choose page layout", 'aquila' ),
                         'data'     => 'sidebars',
-                        'default'  => 'blog-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('page_sidebar','equals','right')
                         //'clear' => false
                     ),
@@ -2268,7 +2268,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Sidebar left area', 'aquila' ),
                         'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
-                        'default'  => 'blog-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('archive_sidebar','equals','left'),
                         'clear' => false
                     ),
@@ -2278,7 +2278,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Sidebar right area', 'aquila' ),
                         'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
-                        'default'  => 'blog-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('archive_sidebar','equals','right'),
                         'clear' => false
                     ),
@@ -2397,7 +2397,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Sidebar left area', 'aquila' ),
                         'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
-                        'default'  => 'blog-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('author_sidebar','equals','left'),
                         'clear' => false
                     ),
@@ -2407,7 +2407,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Sidebar right area', 'aquila' ),
                         'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
-                        'default'  => 'blog-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('author_sidebar','equals','right'),
                         'clear' => false
                     ),
@@ -2532,7 +2532,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Single post: Sidebar left area', 'aquila' ),
                         'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
-                        'default'  => 'blog-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('single_sidebar','equals','left'),
                         'clear' => false
                     ),
@@ -2542,7 +2542,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Single post: Sidebar right area', 'aquila' ),
                         'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
-                        'default'  => 'blog-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('single_sidebar','equals','right'),
                         'clear' => false
                     ),
@@ -2665,7 +2665,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Sidebar left area', 'aquila' ),
                         'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
-                        'default'  => 'blog-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('search_sidebar','equals','left'),
                         'clear' => false
                     ),
@@ -2675,7 +2675,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Search: Sidebar right area', 'aquila' ),
                         'subtitle'     => esc_html__( "Please choose left sidebar ", 'aquila' ),
                         'data'     => 'sidebars',
-                        'default'  => 'blog-widget-area',
+                        'default'  => 'primary-widget-area',
                         'required' => array('search_sidebar','equals','right'),
                         'clear' => false
                     ),

@@ -305,7 +305,14 @@
      --------------------------------------------- */
     function init_carousel(){
 
-        $('.blog-posts-slick').slick();
+        if( $('.blog-posts-slick').hasClass('posts-slick-thumb') || $('.blog-posts-slick').hasClass('posts-slick-slider') ){
+            var slick_dot = false;
+        }else{
+            var slick_dot = true;
+        }
+        $('.blog-posts-slick').slick({
+            dots: slick_dot
+        });
 
         $('.blog-posts-thumb').slick({
             asNavFor: '.blog-posts-slick',

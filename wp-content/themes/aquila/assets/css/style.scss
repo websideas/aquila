@@ -2480,6 +2480,18 @@ ul.style-list{
 
   }
 }
+
+.nav-main{
+  ul.no-menu{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    li{
+      line-height: 80px;
+    }
+  }
+}
+
 /*
  * 7.2. Header layout
  */
@@ -3009,8 +3021,7 @@ body.opened-nav-animate{
 #main-slideshow{
   position: relative;
   z-index: 1;
-  &.post-slider-slider,
-  &.post-slider-normal{
+  &.post-slider-slider{
     .slick-arrow{
       @include opacity(1);
       &.slick-prev {
@@ -3030,8 +3041,14 @@ body.opened-nav-animate{
   &.post-slider-normal{
     padding: 98px 0;
     background: $gray-bg;
-    .slick-slider{
-      position: static;
+    .slick-arrow{
+      @include opacity(1);
+      &.slick-prev {
+        left: -65px;
+      }
+      &.slick-next {
+        right: -65px;
+      }
     }
   }
 
@@ -3061,15 +3078,26 @@ body.opened-nav-animate{
     position: relative;
     &-content{
       position: absolute;
-      bottom: 30px;
-      border: 15px solid rgba($white, .7);
+      bottom: 40px;
+      padding: 60px 100px 90px;
       left: 130px;
       right: 130px;
       z-index: 1;
       @include opacity(0);
       visibility: hidden;
+      &:after{
+        content: "";
+        width: 270px;
+        left:0;
+        bottom: 0;
+        top:0;
+        position: absolute;
+        border:2px solid;
+        border-color: rgba($white,0.4);
+      }
     }
     &-contentslider{
+      text-align: center;
       @include translate();
       .article-post-inner{
         background: none;
@@ -3077,9 +3105,6 @@ body.opened-nav-animate{
       }
     }
     &-inner{
-      background: rgba($black, .8);
-      padding: 70px;
-      text-align: center;
       letter-spacing: 0.025em;
     }
     &-meta{
@@ -3101,6 +3126,36 @@ body.opened-nav-animate{
       }
     }
   }
+  
+  .slick-dots{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    bottom: 50px;
+    left: 230px;
+    z-index: 10;
+    li{
+      float: left;
+      margin-right: 9px;
+      button{
+        padding: 0;
+        width: 20px;
+        height: 5px;
+        background: $white;
+        @include opacity(0.4);
+        border: none;
+        text-indent: -999px;
+        overflow: hidden;
+      }
+      &.slick-active{
+        button{
+          @include opacity(1);
+        }
+      }
+    }
+  }
+
   .slick-slide{
     position: relative;
     outline: none;
