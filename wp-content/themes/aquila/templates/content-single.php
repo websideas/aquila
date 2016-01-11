@@ -75,13 +75,13 @@ $post_class = array('post-single', 'post-layout-'.$layout);
     }
 
     // If comments are open or we have at least one comment, load up the comment template.
-    if ( shortcode_exists( 'fbcomments' ) ) {
-        echo '<div class="kt_facebook_comment">'.do_shortcode('[fbcomments]').'</div>';
-    }else{
+    //if ( shortcode_exists( 'fbcomments' ) ) {
+        //echo '<div class="kt_facebook_comment">'.do_shortcode('[fbcomments]').'</div>';
+    //}else{
         if ( comments_open() || get_comments_number() ) :
             comments_template();
         endif;
-    }
+    //}
 
     ?>
 </div>

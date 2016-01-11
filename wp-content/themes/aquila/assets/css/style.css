@@ -4779,6 +4779,15 @@ article.post-item-content {
   margin-left: 195px;
   margin-right: 195px; }
 
+.main-content.col-md-12 .post-layout-1 .entry-header,
+.main-content.col-md-12 .post-layout-1 .entry-content,
+.main-content.col-md-12 .post-layout-1 .entry-footer {
+  margin-left: 195px;
+  margin-right: 195px; }
+.main-content.col-md-12 .post-single-addons {
+  margin-left: 195px;
+  margin-right: 195px; }
+
 /*
  * 15.2. Author Info
  */
