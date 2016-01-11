@@ -68,6 +68,9 @@ html, body {
 iframe {
   border: none; }
 
+embed, iframe, object, video {
+  max-width: 100%; }
+
 a {
   -webkit-transition: all 0.3s ease 0s;
   -khtml-transition: all 0.3s ease 0s;
@@ -4247,7 +4250,13 @@ article.post-item-content {
     line-height: 30px;
     text-transform: capitalize;
     font-weight: normal;
-    margin-bottom: 15px; }
+    margin-bottom: 15px;
+    -webkit-word-wrap: break-word;
+    -khtml-word-wrap: break-word;
+    -moz-word-wrap: break-word;
+    -ms-word-wrap: break-word;
+    -o-word-wrap: break-word;
+    word-wrap: break-word; }
     .main-content div.post-item-content .entry-title a, .main-content
     article.post-item-content .entry-title a {
       color: #000000; }
@@ -4666,7 +4675,13 @@ article.post-item-content {
   .post-single .entry-header .entry-title {
     font-size: 36px;
     line-height: 48px;
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    -webkit-word-wrap: break-word;
+    -khtml-word-wrap: break-word;
+    -moz-word-wrap: break-word;
+    -ms-word-wrap: break-word;
+    -o-word-wrap: break-word;
+    word-wrap: break-word; }
 .post-single .post-item-meta {
   border-color: #22dcce;
   margin-top: 25px; }
@@ -4679,10 +4694,10 @@ article.post-item-content {
     margin: 2em 0 2em 70px; }
   .post-single .entry-content ul {
     list-style: none; }
-    .post-single .entry-content ul li {
+    .post-single .entry-content ul > li {
       padding: 0;
       margin-bottom: 0.3em; }
-      .post-single .entry-content ul li:before {
+      .post-single .entry-content ul > li:before {
         background: #22dcce;
         content: "";
         display: block;
@@ -4779,9 +4794,9 @@ article.post-item-content {
   margin-left: 195px;
   margin-right: 195px; }
 
-.main-content.col-md-12 .post-layout-1 .entry-header,
-.main-content.col-md-12 .post-layout-1 .entry-content,
-.main-content.col-md-12 .post-layout-1 .entry-footer {
+.main-content.col-md-12 .post-layout-1 > .entry-header,
+.main-content.col-md-12 .post-layout-1 > .entry-content,
+.main-content.col-md-12 .post-layout-1 > .entry-footer {
   margin-left: 195px;
   margin-right: 195px; }
 .main-content.col-md-12 .post-single-addons {

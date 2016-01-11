@@ -141,6 +141,8 @@
 
         $('#side-widget-area .kt_posts_widget').mCustomScrollbar();
 
+
+        $('.container').fitVids();
     });
     
     $(window).resize(function(){

@@ -68,6 +68,10 @@ iframe {
   border: none;
 }
 
+embed, iframe, object, video{
+  max-width: 100%;
+}
+
 a{
   @include transition(all 0.3s ease 0s);
   &:focus,
@@ -3886,6 +3890,7 @@ article.post-item-content{
       text-transform: capitalize;
       font-weight: normal;
       margin-bottom: 15px;
+      @include css3-prefix('word-wrap','break-word');
       a{
         color: $black;
         em{
@@ -4310,6 +4315,7 @@ article.post-item-content{
       font-size: 36px;
       line-height: 48px;
       margin-bottom: 0;
+      @include css3-prefix('word-wrap','break-word');
     }
   }
   .post-item-meta{
@@ -4327,7 +4333,7 @@ article.post-item-content{
     }
     ul{
       list-style: none;
-      li{
+      > li{
         padding: 0;
         margin-bottom: 0.3em;
         &:before{
@@ -4457,9 +4463,9 @@ article.post-item-content{
 .main-content{
   &.col-md-12{
     .post-layout-1{
-      .entry-header,
-      .entry-content,
-      .entry-footer{
+      > .entry-header,
+      > .entry-content,
+      > .entry-footer{
         margin-left: 195px;
         margin-right: 195px;
       }
