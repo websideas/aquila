@@ -6,13 +6,17 @@
 [Table of contents]
 
 1. Retina logo
-2. Styles for devices(<=1199px)
-3. Styles for devices(<=991px )
-4. Styles for devices(>=768px and <= 991px)
-5. Styles for devices(<=767px )
-6. Styles for devices(>=481px and <= 767px)
-7. Styles for devices(<=480px )
-8. Styles for devices(<=320px )
+2. Styles for devices(>=1490px)
+3. Styles for devices(>=1200px)
+4. Styles for devices(<=1199px)
+5. Styles for devices(>=992px and <= 1199px)
+6. Styles for devices(<=991px )
+7. Styles for devices(>=768px and <= 991px)
+8. Styles for devices(<=767px )
+9. Styles for devices(>=481px and <= 767px)
+10. Styles for devices(<=600 )
+11. Styles for devices(<=480px )
+12. Styles for devices(<=320px )
 */
 /* -------------------------------------------------------------
   Sass CSS3 Mixins! The Cross-Browser CSS3 Sass Library
@@ -29,6 +33,7 @@
 
   .site-branding .site-logo.retina-logo-wrapper .default-logo {
     display: none; } }
+/* 2. Styles for devices(>=1490) */
 @media (max-width: 1490px) {
   #main-slideshow.post-slider-big .slick-slide {
     margin: 0; }
@@ -39,6 +44,7 @@
     position: static; }
   .content-header-1 .header-layout1 .site-branding {
     position: static; } }
+/* 3. Styles for devices(>=1200px) */
 @media (min-width: 1200px) {
   .col-lg-clear {
     clear: left; }
@@ -52,7 +58,7 @@
     padding-right: 40px; }
   .sidebar-right .main-sidebar {
     padding-left: 40px; } }
-/* 2. Styles for devices(<=1199px) */
+/* 4. Styles for devices(<=1199px) */
 @media (max-width: 1199px) {
   .header-container {
     display: none; }
@@ -62,6 +68,7 @@
 
   #header-content-mobile {
     display: block; } }
+/* 5. Styles for devices(>=992px and <= 1199px) */
 @media (min-width: 992px) and (max-width: 1199px) {
   .col-md-clear {
     clear: left; } }
@@ -165,6 +172,8 @@
   .blog-posts-slick .slick-dots {
     left: 60px;
     bottom: 40px; } }
+/* 6. Styles for devices(<=991px ) */
+/* 7. Styles for devices(>=768px and <= 991px) */
 @media (min-width: 768px) and (max-width: 991px) {
   .col-sm-clear {
     clear: left; }
@@ -173,12 +182,16 @@
     display: none; }
   #footer ul.kt_posts_widget li .article-attr {
     padding-left: 0; } }
+/* 8. Styles for devices(<=767px ) */
 @media (max-width: 767px) {
   .col-xs-clear {
     clear: left; }
 
   #instagram-footer .null-instagram-feed .instagram-pics li {
     width: 33.33%; }
+
+  #main-slideshow .slick-arrow {
+    display: none !important; }
 
   .blog-posts-medium article.post-item-content .entry-title {
     margin-top: 10px; }
@@ -235,6 +248,8 @@
     .gallery-images-grid .gallery-image-item a {
       left: 0;
       right: 0; } }
+/* 9. Styles for devices(>=481px and <= 767px) */
+/* 10. Styles for devices(<=600 ) */
 @media (max-width: 600px) {
   body.opened-nav-animate.admin-bar #wpadminbar {
     margin-top: -46px; }
@@ -260,6 +275,7 @@
   .blog-posts-slick .slick-dots {
     left: 40px;
     bottom: 10px; } }
+/* 11. Styles for devices(<=480px ) */
 @media (max-width: 480px) {
   .post-item-meta {
     padding-right: 15px; }
@@ -316,5 +332,6 @@
         display: none; }
       .widget_kt_post_tabs .kt-tabs-nav li a i {
         display: block; } }
+/* 12. Styles for devices(<=320px ) */
 
 /*# sourceMappingURL=queries.css.map */

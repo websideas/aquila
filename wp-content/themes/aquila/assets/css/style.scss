@@ -1,5 +1,5 @@
 /*
- * Title:   WingMan - E-Commerce and Blog Wordpress Theme
+ * Title:   Aquila - E-Commerce and Blog Wordpress Theme
  * Author:  http://themeforest.net/user/Kite-Themes
  */
 
@@ -13,7 +13,31 @@
 3. Forms fields
 4. Buttons
 5. Page Loader
-6. Popup
+6. Back to top
+7. Widgets
+8. ShortCodes
+  8.1. Contact Info
+  8.2. Socials
+  8.3. Google Map
+  8.4 Hightlight
+  8.5 Dropcap
+  8.6 Lists
+  8.7 Gallery Justified
+  8.8 Gallery Grid
+9. Header
+  9.1. Header common styles
+  9.2. Main navigation
+  9.3. Header layout
+  9.4. Header sticky
+  9.5. Header mobile
+10. Footer
+11. Post slider
+12. Side area
+13. Page-header
+14. Blog post
+15. Single post
+16. Pagination
+17. Content
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -21,10 +45,10 @@
 @import 'variables';
 
 /* ==============================
-   1. Common styles
+   1. Base Styles
    ============================== */
 /*
- * 1.1 Common styles
+ * 1.1. Common styles
  */
 ::-moz-selection {
   color: #fff;
@@ -114,10 +138,6 @@ ul, ol{
 /* ==============================
    2. Typography
    ============================== */
-/*
- * 2.1 Typography common styles
- */
-
 body {
   font-family: $font-stack;
   font-size: 14px;
@@ -598,8 +618,11 @@ select:not([multiple]) {
 }
 
 /* ==============================
-   11. Widgets
+   7. Widgets
    ============================== */
+/*
+ * 7.1. Widgets Common styles
+ */
 .widget,
 .widget-container {
   margin-bottom: 45px;
@@ -640,7 +663,6 @@ select:not([multiple]) {
   }
 
 }
-
 
 .widget_rss,
 .widget_pages,
@@ -762,10 +784,9 @@ select:not([multiple]) {
     }
   }
 }
-
-/**
- * Tag Clound
- **/
+/*
+ * 7.2. Tag Clound
+ */
 .widget_product_tag_cloud,
 .widget_tag_cloud{
   .tagcloud{
@@ -793,10 +814,9 @@ select:not([multiple]) {
   }
 }
 
-
-/**
- * Calendar
- **/
+/*
+ * 7.3. Calendar
+ */
 #calendar_wrap{
   border: 1px solid $border-color;
   table{
@@ -863,10 +883,9 @@ select:not([multiple]) {
     }
   }
 }
-
-/**
- * KT image
- **/
+/*
+ * 7.4. KT image
+ */
 .widget_kt_image{
   .kt-image-content{
     position: relative;
@@ -898,10 +917,9 @@ select:not([multiple]) {
   }
 }
 
-
-/**
- * KT About me
- **/
+/*
+ * 7.5. KT About me
+ */
 .widget_kt_aboutme{
   text-align: center;
   .kt-aboutwidget-img{
@@ -932,10 +950,9 @@ select:not([multiple]) {
   }
 }
 
-/**
- * KT Posts
- **/
-
+/*
+ * 7.6. KT Posts
+ */
 ul.kt_posts_widget{
   margin: 0;
   padding: 0;
@@ -979,8 +996,6 @@ ul.kt_posts_widget{
   }
 }
 
-
-
 .widget_kt_posts{
   ul.kt-artilce-2{
     li{
@@ -1013,9 +1028,9 @@ ul.kt_posts_widget{
 
 
 
-/**
- * KT Posts Carousel
- **/
+/*
+ * 7.7. KT Posts Carousel
+ */
 .widget_kt_posts_carousel{
   ul.kt_posts_carousel_widget{
     padding: 0;
@@ -1067,10 +1082,9 @@ ul.kt_posts_widget{
     }
   }
 }
-
-/**
- * Post Tabs
- **/
+/*
+ * 7.8. KT Post Tabs
+ */
 .widget_kt_post_tabs{
   .kt-tabs-nav{
     border-bottom: 2px solid $border-color;
@@ -1119,10 +1133,9 @@ ul.kt_posts_widget{
     }
   }
 }
-
-/**
- * Search
- **/
+/*
+ * 7.9. Search
+ */
 .searchform {
   margin: 0 auto;
   position: relative;
@@ -1147,10 +1160,9 @@ ul.kt_posts_widget{
     display: none;
   }
 }
-/**
- * Instagram
- **/
-
+/*
+ * 7.10. Instagram
+ */
 
 .null-instagram-feed{
   .instagram-pics{
@@ -1210,11 +1222,9 @@ ul.kt_posts_widget{
   }
 }
 
-
-/**
- * Flickr
- **/
-
+/*
+ * 7.11. Flickr
+ */
 .widget_kt_flickr {
   text-align: center;
   .kt_flickr{
@@ -1265,9 +1275,9 @@ ul.kt_posts_widget{
   }
 }
 
-/**
- * KT ADS
- **/
+/*
+ * 7.12. KT ADS
+ */
 .widget_kt_ads {
   .kt-ads-content{
     margin: -5px;
@@ -1282,10 +1292,9 @@ ul.kt_posts_widget{
   }
 }
 
-/**
- * KT Mailchimp
- **/
-
+/*
+ * 7.13. KT Mailchimp
+ */
 .widget_kt_mailchimp{
 
   .kt_mailchimp-before{
@@ -1325,9 +1334,9 @@ ul.kt_posts_widget{
   }
 }
 
-/**
- * Socials
- **/
+/*
+ * 7.14. KT Socials
+ */
 .widget_kt_socials{
   .main-sidebar &{
     background: url('../images/socials-bg.jpg') no-repeat center center;
@@ -1378,18 +1387,18 @@ ul.kt_posts_widget{
   max-width: 300px;
 }
 
-/**
- * Contact info
- **/
+/*
+ * 7.15. Contact info
+ */
 .widget_kt_contactinfo{
   .contact-info-wrapper{
     margin-bottom: 0;
   }
 }
 
-/**
- * Promo widget
- **/
+/*
+ * 7.16. Promo widget
+ */
 .promo-area{
   margin: 0 -15px 50px;
   position: relative;
@@ -1449,11 +1458,11 @@ ul.kt_posts_widget{
 }
 
 /* ==============================
-   7. ShortCodes
+   8. ShortCodes
    ============================== */
 
 /**
- * 15.12. Contact Info
+ * 8.1. Contact Info
  **/
 .contact-info-wrapper{
   margin-bottom: $shortcode;
@@ -1485,7 +1494,7 @@ ul.kt_posts_widget{
 
 
 /**
- * 15.9. Socials
+ * 8.2. Socials
  **/
 .socials-icon-wrapper {
   margin: 0 auto 20px;
@@ -1819,7 +1828,7 @@ ul.kt_posts_widget{
 }
 
 /**
- * 15.10. Google Map
+ * 8.3. Google Map
  **/
 
 .wrapper-googlemap{
@@ -1834,7 +1843,7 @@ ul.kt_posts_widget{
 }
 
 /*
- * 10.2 Hightlight
+ * 8.4 Hightlight
  */
 .hightlight {
   color: #ffffff;
@@ -1855,7 +1864,7 @@ ul.kt_posts_widget{
 }
 
 /*
- * 10.3 Dropcap
+ * 8.5 Dropcap
  */
 .kt_dropcap{
   float: left;
@@ -1919,7 +1928,7 @@ ul.kt_posts_widget{
   }
 }
 /*
- * 10.4 Lists
+ * 8.6 Lists
  */
 ul.style-list{
   padding: 0;
@@ -1978,7 +1987,7 @@ ul.style-list{
 }
 
 /*
- * 10.4 Gallery Justified
+ * 8.7 Gallery Justified
  */
 .wrapper-gallery-justified{
   margin-bottom: $shortcode;
@@ -1988,17 +1997,17 @@ ul.style-list{
   }
 }
 /*
- * 10.4 Gallery Grid
+ * 8.8 Gallery Grid
  */
 .wrapper-gallery-grid{
   margin-bottom: $shortcode;
 }
 
 /* ==============================
-   7. Header
+   9. Header
    ============================== */
 /*
- * 7.1. Header common styles
+ * 9.1. Header common styles
  */
 #site-title,
 #site-description{
@@ -2048,6 +2057,8 @@ ul.style-list{
       @include box-shadow(0, 2px, 6px, rgba($black, 0.05));
     }
   }
+
+
 }
 
 .site-brandingalt{
@@ -2178,7 +2189,7 @@ ul.style-list{
 
 
 /*
- * 7.3. Main navigation
+ * 9.2. Main navigation
  */
 #main-navigation{
   margin: 0;
@@ -2493,7 +2504,7 @@ ul.style-list{
 }
 
 /*
- * 7.2. Header layout
+ * 9.3. Header layout
  */
 
 .header-layout1,
@@ -2547,7 +2558,7 @@ ul.style-list{
 
 
 /*
- * 7.4. Header sticky
+ * 9.4. Header sticky
  */
 .header-container.is-sticky {
   .header-sticky-background{
@@ -2566,6 +2577,7 @@ ul.style-list{
     width: 100%;
     top: 0;
     z-index: 999!important;
+    @include box-shadow(0, 2px, 6px, rgba($black, 0.05));
   }
 
   &.sticky-header-down{
@@ -2622,7 +2634,7 @@ ul.style-list{
 }
 
 /*
- * 7.8. Header mobile
+ * 9.5. Header mobile
  */
 #header-content-mobile{
   position: relative;
@@ -2876,7 +2888,7 @@ body.opened-nav-animate{
 
 
 /* ==============================
-   9. Footer
+   10. Footer
    ============================== */
 #instagram-footer{
   text-align: center;
@@ -3004,19 +3016,8 @@ body.opened-nav-animate{
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* ==============================
-   9. Post slider
+   11. Post slider
    ============================== */
 #main-slideshow{
   position: relative;
@@ -3295,35 +3296,6 @@ body.opened-nav-animate{
       overflow: visible;
     }
   }
-  /*
-  .postslider-slider &,
-  .postslider-graybg &{
-    .article-post-content{
-      left: 120px;
-      right: 120px;
-    }
-    .slick-arrow{
-      @include opacity(1);
-      &.slick-prev {
-        left: 40px;
-      }
-      &.slick-next {
-        right: 40px;
-      }
-      &:hover{
-        &:before{
-          color: $primary-color;
-        }
-      }
-    }
-    .slick-slide{
-      margin: 0;
-    }
-  }
-  */
-
-
-
 
   .layout-boxed &{
     &.posts-slick-slider{
@@ -3412,18 +3384,8 @@ body.opened-nav-animate{
 
 
 
-
-
-
-
-
-
-
-
-
-
 /* ==============================
-   9. Side area
+   12. Side area
    ============================== */
 #side-slideout-right{
   background: #fff;
@@ -3469,15 +3431,6 @@ body.opened-nav-animate{
       }
     }
   }
-  &:hover{
-    #side-widget-area{
-      .kt_posts_widget{
-        .mCSB_scrollTools{
-          @include opacity(1);
-        }
-      }
-    }
-  }
   .open-sidearea &{
     right: 0;
   }
@@ -3509,7 +3462,7 @@ body.opened-nav-animate{
 }
 
 /* ==============================
-   9. Page-header
+   13. Page-header
    ============================== */
 
 .page-header{
@@ -3576,7 +3529,7 @@ body.opened-nav-animate{
 
 
 /* ==============================
-   9. Blog post
+   14. Blog post
    ============================== */
 
 %specialHeading{
@@ -4297,7 +4250,7 @@ article.post-item-content{
 }
 
 /* ==============================
-   18. Single post
+   15. Single post
    ============================== */
 
 .entry-thumb.entry-thumb-audio{
@@ -4450,7 +4403,7 @@ article.post-item-content{
 }
 
 /*
- * 12.4. Author Info
+ * 15.2. Author Info
  */
 .author-info{
   background: $gray-bg;
@@ -4496,7 +4449,7 @@ article.post-item-content{
 
 
 /*
- * 12.5. Post Navigation
+ * 15.3. Post Navigation
  */
 .post-navigation{
   position: relative;
@@ -4511,7 +4464,7 @@ article.post-item-content{
 
 
 /*
- * 12.6. Comments
+ * 15.4. Comments
  */
 .post-single-heading{
   margin: 0 0 30px;
@@ -4718,7 +4671,7 @@ p.logged-in-as{
 }
 
 /*
- * 12.7. Comment Form
+ * 15.5. Comment Form
  */
 #commentform{
   p{
@@ -4743,7 +4696,7 @@ p.logged-in-as{
 }
 
 /*
- * 12.8. Related article
+ * 15.6. Related article
  */
 
 #related-article{
@@ -4814,7 +4767,7 @@ p.logged-in-as{
   }
 }
 /* ==============================
-   18. Pagination
+   16. Pagination
    ============================== */
 .pagination {
   display: block;
@@ -4888,10 +4841,10 @@ p.logged-in-as{
 
 
 /* ==============================
-   9. Content
+   17. Content
    ============================== */
 /*
- * 9.1. content common styles
+ * 17.1. content common styles
  */
 
 .entry-footer{
@@ -4903,13 +4856,18 @@ p.logged-in-as{
   overflow: hidden;
 }
 
+.page-content{
+  .comments-area{
+    margin-top: 50px;
+  }
+}
+
 .site-content {
   padding: 60px 0 100px;
   .page-template-page-blank &{
     padding: 0!important;
   }
 }
-
 
 .layout-boxed{
   background: #eeeeee;
@@ -4958,10 +4916,9 @@ p.logged-in-as{
 
   }
 }
-/* ==============================
-   18. 404
-   ============================== */
-
+/*
+ * 17.2. 404 page
+ */
 body.error404{
   #content{
     background: $gray-bg;

@@ -68,7 +68,7 @@ class Widget_KT_Posts extends WP_Widget {
                     <li <?php post_class('article-widget clearfix'); ?>>
                         <?php
                             if( $layout == 2 ){
-                                kt_post_thumbnail_image( 'kt_widget_article_carousel', 'img-responsive' );
+                                kt_post_thumbnail_image( 'kt_recent_posts', 'img-responsive' );
                             }else{
                                 kt_post_thumbnail_image( 'kt_widget_article', 'img-responsive' );
                             }
