@@ -65,7 +65,10 @@
             <div class="post-item-content">
                 <?php
                 kt_entry_meta_categories();
-                the_content();
+                the_content(sprintf(
+                    esc_html__('Continue reading %s', 'aquila'),
+                    ' <i class="fa fa-long-arrow-right"></i>'
+                ));
                 kt_entry_meta(true);
                 ?>
             </div>

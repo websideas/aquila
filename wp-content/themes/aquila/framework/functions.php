@@ -602,3 +602,19 @@ function kt_total_post_share_count( $url ){
     return $count;
 }
 
+/**
+ * Custom password form
+ *
+ * @return string
+ */
+function kt_password_form() {
+    global $post;
+    $label = 'pwbox-'.( empty( $post->ID ) ? rand() : $post->ID );
+    $o = '<form action="' . esc_url( site_url( 'wp-login.php?action=postpass', 'login_post' ) ) . '" method="post">
+    <p>' . __( "To view this protected post, enter the password below:", 'wingman' ) . '</p>
+    <div class="input-group"><input name="post_password" type="password" size="20" maxlength="20" /><span class="input-group-btn"><input type="submit" class="btn btn-default" name="Submit" value="' . esc_attr__( "Submit", 'aquila' ) . '" /></span></div>
+    </form>
+    ';
+    return $o;
+}
+add_filter( 'the_password_form', 'kt_password_form' );

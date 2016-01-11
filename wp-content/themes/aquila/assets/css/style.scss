@@ -89,6 +89,46 @@ ul, ol{
   margin-bottom: 30px;
 }
 
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 30px;
+  // Cells
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        padding: 8px;
+        vertical-align: top;
+        border-top: 1px solid $border-color;
+      }
+    }
+  }
+  // Bottom align for column headings
+  > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid $border-color;
+  }
+  // Remove top border from thead by default
+  > caption + thead,
+  > colgroup + thead,
+  > thead:first-child {
+    > tr:first-child {
+      > th,
+      > td {
+        border-top: 0;
+      }
+    }
+  }
+  // Account for multiple tbody instances
+  > tbody + tbody {
+    border-top: 2px solid $border-color;
+  }
+}
+
+
 /*
  * 1.2. Helper CSS
  */
@@ -2502,6 +2542,13 @@ ul.style-list{
     }
   }
 }
+.is-sticky{
+  ul.no-menu{
+    li{
+      line-height: 60px;
+    }
+  }
+}
 
 /*
  * 9.3. Header layout
@@ -4274,10 +4321,12 @@ article.post-item-content{
   }
   .entry-content{
     margin-bottom: 20px;
-    ul{
-      margin: 2em 0 2em 70px;
-      list-style: none;
+    > ul{
       padding: 0;
+      margin: 2em 0 2em 70px;
+    }
+    ul{
+      list-style: none;
       li{
         padding: 0;
         margin-bottom: 0.3em;
@@ -4348,6 +4397,9 @@ article.post-item-content{
   .entry-thumb{
     display: block;
     margin-bottom: 35px;
+    img{
+      margin: 0 auto;
+    }
   }
 
 
@@ -4837,6 +4889,26 @@ p.logged-in-as{
   }
 }
 
+.page-links{
+  a{
+    border: none;
+    display: inline-block;
+    width: auto;
+    padding: 0;
+    font-size: 14px;
+    margin: 0 5px;
+    color: $gray;
+    position: relative;
+    font-family: $heading-font;
+  }
+  .page-links-title{
+    padding-left: 0;
+    margin-left: 0;
+  }
+  > span{
+    margin: 0 5px;
+  }
+}
 
 
 

@@ -93,6 +93,32 @@ p {
 ul, ol {
   margin-bottom: 30px; }
 
+table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 30px; }
+  table > thead > tr > th,
+  table > thead > tr > td,
+  table > tbody > tr > th,
+  table > tbody > tr > td,
+  table > tfoot > tr > th,
+  table > tfoot > tr > td {
+    padding: 8px;
+    vertical-align: top;
+    border-top: 1px solid #eeeeee; }
+  table > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #eeeeee; }
+  table > caption + thead > tr:first-child > th,
+  table > caption + thead > tr:first-child > td,
+  table > colgroup + thead > tr:first-child > th,
+  table > colgroup + thead > tr:first-child > td,
+  table > thead:first-child > tr:first-child > th,
+  table > thead:first-child > tr:first-child > td {
+    border-top: 0; }
+  table > tbody + tbody {
+    border-top: 2px solid #eeeeee; }
+
 /*
  * 1.2. Helper CSS
  */
@@ -2867,6 +2893,9 @@ ul.style-list {
   .nav-main ul.no-menu li {
     line-height: 80px; }
 
+.is-sticky ul.no-menu li {
+  line-height: 60px; }
+
 /*
  * 9.3. Header layout
  */
@@ -4645,10 +4674,11 @@ article.post-item-content {
     background: #22dcce; }
 .post-single .entry-content {
   margin-bottom: 20px; }
+  .post-single .entry-content > ul {
+    padding: 0;
+    margin: 2em 0 2em 70px; }
   .post-single .entry-content ul {
-    margin: 2em 0 2em 70px;
-    list-style: none;
-    padding: 0; }
+    list-style: none; }
     .post-single .entry-content ul li {
       padding: 0;
       margin-bottom: 0.3em; }
@@ -4712,6 +4742,8 @@ article.post-item-content {
 .post-single .entry-thumb {
   display: block;
   margin-bottom: 35px; }
+  .post-single .entry-thumb img {
+    margin: 0 auto; }
 .post-single .post-single-share {
   display: inline-block; }
   .post-single .post-single-share > a {
@@ -5138,6 +5170,22 @@ p.logged-in-as {
     .pagination a:focus:before,
     .pagination .current:before {
       width: 100%; }
+
+.page-links a {
+  border: none;
+  display: inline-block;
+  width: auto;
+  padding: 0;
+  font-size: 14px;
+  margin: 0 5px;
+  color: #999999;
+  position: relative;
+  font-family: "Playfair Display", serif; }
+.page-links .page-links-title {
+  padding-left: 0;
+  margin-left: 0; }
+.page-links > span {
+  margin: 0 5px; }
 
 /* ==============================
    17. Content
