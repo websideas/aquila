@@ -1337,7 +1337,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li > a:hover',
                             '#main-navigation > li > a:focus',
                             '#main-navigation > li.current-menu-item > a',
-                            '#main-navigation > li.current-menu-parent > a',
                             '#main-navigation > li.hovered > a',
                         ),
                         'title'    => esc_html__( 'Top Level hover Color', 'aquila' ),
@@ -1391,7 +1390,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         ),
                         'output'   => array(
                             '#main-navigation > li ul.sub-menu-dropdown > li.current-menu-item > a',
-                            '#main-navigation > li ul.sub-menu-dropdown > li.current-menu-parent > a',
                             '#main-navigation > li ul.sub-menu-dropdown > li.hovered > a',
                             '#main-navigation > li ul.sub-menu-dropdown > li > a:hover',
                         ),
@@ -1420,7 +1418,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'color',
                         'output'   => array(
                             '#main-navigation > li ul.sub-menu-dropdown > li.current-menu-item > a',
-                            '#main-navigation > li ul.sub-menu-dropdown > li.current-menu-parent > a',
                             '#main-nav-tool .kt-wpml-languages ul li > a:hover',
                             '#main-navigation > li ul.sub-menu-dropdown > li:hover > a',
                             '#main-navigation > li ul.sub-menu-dropdown > li > a:hover',
