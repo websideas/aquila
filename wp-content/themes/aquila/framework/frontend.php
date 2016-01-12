@@ -261,7 +261,7 @@ function kt_setting_script() {
             '.page-header .page-title',
             '.pagination .page-numbers::before',
             'ul.style-list.style3 li::after',
-            '#side-slideout-right #side-widget-area .kt_posts_widget .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar'
+            '#side-slideout-right #side-widget-area .mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar'
         );
         $css .= implode($selections_background, ',').'{background-color: '.$accent.';}';
 

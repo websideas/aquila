@@ -139,7 +139,7 @@
         });
 
 
-        $('#side-widget-area .kt_posts_widget').mCustomScrollbar();
+        $('#side-widget-area').mCustomScrollbar();
 
 
         $('.container').fitVids();
@@ -307,9 +307,19 @@
      --------------------------------------------- */
     function init_carousel(){
 
-        $('.blog-posts-slick').slick({
+        var blog_posts_slick = $('.blog-posts-slick').slick({
             dots: true,
             arrows: false
+        });
+
+        $('body').on('click','#main-slideshow .slick-next',function(){
+            blog_posts_slick.slick('slickNext');
+            return false;
+        });
+
+        $('body').on('click','#main-slideshow .slick-prev',function(){
+            blog_posts_slick.slick('slickPrev');
+            return false;
         });
 
         $('.blog-posts-thumb').slick({

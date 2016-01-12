@@ -2844,6 +2844,36 @@ if ( ! class_exists( 'KT_config' ) ) {
              *  Sidebar
              **/
             $this->sections[] = array(
+                'id'            => 'sidebar_bar_section',
+                'title'         => esc_html__( 'Sidebar Right Area', 'aquila' ),
+                'desc'          => '',
+                'icon'          => 'fa fa-columns',
+                'fields'        => array(
+
+                    array(
+                        'id' => 'header_bars',
+                        'type' => 'switch',
+                        'title' => esc_html__('Header Bars', 'aquila'),
+                        'desc' => esc_html__('Show button header bars on header.', 'aquila'),
+                        "default" => 1,
+                        'on' => esc_html__('Enabled', 'aquila'),
+                        'off' =>esc_html__('Disabled', 'aquila')
+                    ),
+
+                    array(
+                        'id' => 'title_header_bars',
+                        'type' => 'text',
+                        'title' => esc_html__('Title Header Bars', 'aquila'),
+                        'desc' => '',
+                        'default' => 'Recents Posts'
+                    )
+                )
+            );
+
+            /**
+             *  Sidebar
+             **/
+            $this->sections[] = array(
                 'id'            => 'sidebar_section',
                 'title'         => esc_html__( 'Sidebar Widgets', 'aquila' ),
                 'desc'          => '',

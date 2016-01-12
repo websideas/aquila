@@ -13,7 +13,7 @@ if ( !defined('ABSPATH')) exit;
             <?php get_search_form(); ?>
         </li>
     <?php } ?>
-    <?php if ( kt_option('header_bars', 1) ) { ?>
+    <?php if ( kt_option('header_bars', 1) && is_active_sidebar( 'side-widget-area' ) ) { ?>
         <li class="mini-hamburger">
             <a data-side="left" class="menu-bars-link hamburger-icon" href="#">
                 <span class="hamburger-icon-inner">

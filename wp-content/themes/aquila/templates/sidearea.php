@@ -15,6 +15,8 @@
         <i class="fa fa-times"></i>
     </a>
     <?php if ( is_active_sidebar( 'side-widget-area' ) ) : ?>
+    	<?php $title_side_area = kt_option('title_header_bars'); ?>
+    	<?php if($title_side_area){ ?><h3 class="title-side-area"><?php echo $title_side_area; ?></h3><?php } ?>
         <div id="side-widget-area" class="widget-area" role="complementary">
             <?php dynamic_sidebar( 'side-widget-area' ); ?>
         </div><!-- .widget-area -->

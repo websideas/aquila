@@ -131,9 +131,18 @@ only screen and (min-resolution: 144dpi) {
         line-height: normal;
       }
     }
+    .slick-dots,
     .article-post-content{
       left: 30px;
       right: 30px;
+      width: auto;
+      @include transform(translatex(0));
+    }
+    .article-post-content{
+      padding: 30px 30px 60px;
+    }
+    .slick-dots{
+      padding-left: 30px;
     }
   }
   .row-eq-height{
@@ -173,15 +182,6 @@ only screen and (min-resolution: 144dpi) {
         &.slick-prev{
           left: 0;
         }
-      }
-    }
-  }
-  .postslider-slider,
-  .postslider-graybg{
-    .blog-posts-slick{
-      .article-post-content{
-        left: 30px;
-        right: 30px;
       }
     }
   }
@@ -245,16 +245,6 @@ only screen and (min-resolution: 144dpi) {
           }
         }
       }
-    }
-  }
-
-  .blog-posts-slick{
-    .article-post-content{
-      padding: 30px 30px 60px;
-    }
-    .slick-dots{
-      left: 60px;
-      bottom: 40px;
     }
   }
   .main-content{
@@ -383,6 +373,11 @@ only screen and (min-resolution: 144dpi) {
         left: 0;
         right: 0;
       }
+    }
+  }
+  .blog-posts-slick{
+    .slick-dots{
+      padding-left: 0;
     }
   }
 }

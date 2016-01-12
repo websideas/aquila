@@ -3126,6 +3126,7 @@ body.opened-nav-animate{
     line-height: 60px;
     @include opacity(.4);
     @include transition();
+    cursor: pointer;
     &:before{
       text-indent: 0;
       font-size: 18px;
@@ -3167,8 +3168,10 @@ body.opened-nav-animate{
       position: absolute;
       bottom: 40px;
       padding: 60px 100px 90px;
-      left: 130px;
-      right: 130px;
+      max-width: 1140px;
+      width: 100%;
+      left: 50%;
+      @include transform(translatex(-50%));
       z-index: 1;
       @include opacity(0);
       visibility: hidden;
@@ -3207,12 +3210,15 @@ body.opened-nav-animate{
   }
   
   .slick-dots{
-    padding: 0;
+    padding: 0 0 0 100px;
     margin: 0;
     list-style: none;
     position: absolute;
     bottom: 50px;
-    left: 230px;
+    left: 50%;
+    max-width: 1140px;
+    width: 100%;
+    @include transform(translatex(-50%));
     z-index: 10;
     li{
       float: left;
@@ -3312,7 +3318,7 @@ body.opened-nav-animate{
       }
     }
     .slick-dots{
-      left: 245px;
+      
     }
   }
   &.posts-slick-slider{
@@ -3364,7 +3370,14 @@ body.opened-nav-animate{
   }
 }
 
-.posts-slick-slider{
+.blog-posts-slick.posts-slick-normal{
+  .slick-dots,
+  .article-post-content{
+    margin-left: 40px;
+  }
+}
+
+.blog-posts-slick{
   &.slideAnimation{
     .slick-current{
       .article-post-content{
@@ -3468,38 +3481,45 @@ body.opened-nav-animate{
   z-index: 9999;
   @include box-shadow(1px, 0, 20px, rgba($black, 0.05));
 
-  .widget-container{
-    .widget-title{
-      text-align: center;
-      font-family: $font-stack;
-      font-size: 16px;
-      font-weight: bold;
-      margin-bottom: 55px;
-    }
+  .title-side-area{
+    text-align: center;
+    font-family: $font-stack;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 55px;
+    text-transform: uppercase;
+  }
+  .widget-title{
+    display: none;
   }
 
   #side-widget-area{
-    .kt_posts_widget{
-      position: absolute;
-      left: 65px;
-      right: 35px;
-      bottom: 60px;
-      top: 137px;
-      .mCSB_scrollTools{
-        @include opacity(0);
-        .mCSB_draggerRail{
-          background: $gray;
-        }
-        .mCSB_dragger{
-          .mCSB_dragger_bar{
-            background: $primary-color;
-          }
+    position: absolute;
+    left: 65px;
+    right: 35px;
+    bottom: 60px;
+    top: 137px;
+    .mCSB_scrollTools{
+      @include opacity(0);
+      .mCSB_draggerRail{
+        background: $gray;
+      }
+      .mCSB_dragger{
+        .mCSB_dragger_bar{
+          background: $primary-color;
         }
       }
     }
   }
   .open-sidearea &{
     right: 0;
+  }
+  &:hover{
+    #side-widget-area{
+      .mCSB_scrollTools{
+        @include opacity(1);
+      }
+    }
   }
 }
 
@@ -4320,7 +4340,9 @@ article.post-item-content{
 /* ==============================
    15. Single post
    ============================== */
-
+.page-content{
+  margin-bottom: 30px;
+}
 .entry-thumb.entry-thumb-audio{
   padding: 100px 50px;
 }
