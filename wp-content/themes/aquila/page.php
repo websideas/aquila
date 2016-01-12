@@ -21,13 +21,13 @@ get_header(); ?>
     <div class="row main <?php echo esc_attr($sidebar_class); ?>">
 
 
-        <?php echo '<div class="main-content col-md-'.esc_attr($main_column).' '.esc_attr($pull_class).'">'; ?>
+        <?php echo '<div class="main-content col-sm-12 col-xs-12 col-md-'.esc_attr($main_column).' '.esc_attr($pull_class).'">'; ?>
         <?php while ( have_posts() ) : the_post(); ?>
             <?php get_template_part( 'templates/content', 'page' ); ?>
         <?php endwhile; ?>
         </div><!-- .main-content -->
         <?php if($sidebar['sidebar']){ ?>
-            <?php echo '<div class="col-md-4 sidebar main-sidebar">'; ?>
+            <?php echo '<div class="col-md-4 col-sm-12 col-xs-12 sidebar main-sidebar">'; ?>
                 <?php dynamic_sidebar($sidebar['sidebar_area']); ?>
             </div><!-- .sidebar -->
         <?php } ?>

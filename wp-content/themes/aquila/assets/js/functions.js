@@ -384,7 +384,8 @@
             }
 
             $('.main-sidebar').theiaStickySidebar({
-                additionalMarginTop: margin_sidebar_sticky
+                additionalMarginTop: margin_sidebar_sticky,
+                minWidth: '992'
             });
         }
 

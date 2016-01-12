@@ -34,13 +34,13 @@ if($layout == 6){
         <div class="entry-thumb-fullwidth"><?php kt_post_thumbnail($imageSize, 'img-responsive', false); ?></div>
     <?php } ?>
     <div class="row main <?php echo esc_attr($sidebar_class); ?>">
-        <?php echo '<div class="main-content col-md-'.esc_attr($main_column.' '.$pull_class).'">'; ?>
+        <?php echo '<div class="main-content col-sm-12 col-xs-12 col-md-'.esc_attr($main_column.' '.$pull_class).'">'; ?>
             <?php while ( have_posts() ) : the_post(); ?>
                 <?php get_template_part( 'templates/content', 'single' ); ?>
             <?php endwhile; // end of the loop. ?>
         </div><!-- .main-content -->
         <?php if($sidebar['sidebar']){ ?>
-            <?php echo '<div class="col-md-4 sidebar main-sidebar">'; ?>
+            <?php echo '<div class="col-md-4 col-sm-12 col-xs-12 sidebar main-sidebar">'; ?>
                 <?php dynamic_sidebar($sidebar['sidebar_area']); ?>
             </div><!-- .sidebar -->
         <?php } ?>

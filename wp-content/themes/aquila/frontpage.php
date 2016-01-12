@@ -135,7 +135,7 @@ get_header(); ?>
                             printf('<div class="article-post-item col-lg-%1$s col-md-%1$s col-sm-%2$s">', $article_column, $article_column_tab);
                             get_template_part( 'templates/blog/'.$type.'/content', get_post_format());
                             echo '</div>';
-                            $j++;
+                            $j++;$k++;
                         }
                     }else {
                         if($featured == 'yes'){
@@ -170,7 +170,7 @@ get_header(); ?>
                         echo "</div>";
 
                         if($sidebar['sidebar']){
-                            echo '<div class="col-md-4 sidebar main-sidebar">';
+                            echo '<div class="col-md-4 col-sm-12 col-xs-12 sidebar main-sidebar">';
                             dynamic_sidebar($sidebar['sidebar_area']);
                             echo '</div>';
                         }
