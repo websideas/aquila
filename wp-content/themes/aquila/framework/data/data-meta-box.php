@@ -807,6 +807,10 @@ function kt_register_meta_boxes( $meta_boxes )
         'post_general'  => array(
             'label' => esc_html__( 'General', 'aquila' ),
             'icon'  => 'fa fa-bars',
+        ),
+        'post_header'  => array(
+            'label' => esc_html__( 'Header', 'aquila' ),
+            'icon'  => 'fa fa-desktop',
         )
     );
 
@@ -894,7 +898,23 @@ function kt_register_meta_boxes( $meta_boxes )
             'std'  => '',
             'tab'  => 'post_general',
             'desc' => esc_html__('Select "Default" to use settings in Theme Options', 'aquila')
-        )
+        ),
+
+
+        //Header
+        array(
+            'name' => esc_html__('Header shadow', 'aquila'),
+            'id'   => "{$prefix}header_shadow",
+            'type' => 'select',
+            'options' => array(
+                ''    => esc_html__('Default', 'aquila'),
+                'off'       => esc_html__('Hidden', 'aquila'),
+                'on'        => esc_html__('Show', 'aquila'),
+            ),
+            'std'  => '',
+            'tab'  => 'post_header',
+            'desc' => esc_html__('Select "Default" to use settings in Theme Options', 'aquila')
+        ),
     );
 
     /**

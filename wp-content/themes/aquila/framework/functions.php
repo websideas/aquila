@@ -141,9 +141,9 @@ function kt_header_class_callback($classes, $layout){
     }else{
         $header_shadow = kt_option('header_shadow', true);
     }
+echo $header_shadow;
 
-
-    if($header_shadow == 'on' || $header_shadow === true){
+    if($header_shadow == 'on' || $header_shadow === true || $header_shadow == 1){
         $classes .= ' header-shadow';
     }
 

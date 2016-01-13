@@ -232,6 +232,13 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'    => esc_html__( 'Logo (Retina Version @2x)', 'aquila' ),
                         'desc'     => esc_html__('Select an image file for the retina version of the logo. It should be exactly 2x the size of main logo.', 'aquila')
                     ),
+                    array(
+                        'id'       => 'logo_footer',
+                        'type'     => 'media',
+                        'url'      => true,
+                        'compiler' => true,
+                        'title'    => esc_html__( 'Logo Footer', 'aquila' ),
+                    ),
                 )
             );
 
@@ -400,14 +407,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '2' => array('alt' => esc_html__('Layout 2', 'aquila'), 'img' => KT_FW_IMG . 'footer/footer-bottom-2.png'),
                         ),
                         'default' => '1'
-                    ),
-                    array(
-                        'id'       => 'logo_footer',
-                        'type'     => 'media',
-                        'url'      => true,
-                        'compiler' => true,
-                        'title'    => esc_html__( 'Logo Footer', 'aquila' ),
-                        'required' => array( 'footer_bottom_layout', 'equals', array( 1 ) ),
                     ),
 
                     /* Footer copyright */

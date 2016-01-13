@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.4.1" created="2016-01-09 04:25" -->
+<!-- generator="WordPress/4.4.1" created="2016-01-13 02:36" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Aquila</title>
 	<link>http://aquila.kitethemes.com/demo3</link>
 	<description>Beautiful Theme For Blogger</description>
-	<pubDate>Sat, 09 Jan 2016 04:25:08 +0000</pubDate>
+	<pubDate>Wed, 13 Jan 2016 02:36:59 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://aquila.kitethemes.com/demo3</wp:base_site_url>
@@ -62,7 +62,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/10/15/web-development-reading-list-114-black-friday-ui-stack-accessible-web-apps/image/</link>
 		<pubDate>Tue, 15 Dec 2015 01:53:09 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -78,7 +78,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/image-2.png]]></wp:meta_value>
@@ -93,7 +93,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/12/24/one-day-discover-in-birmingham-city/blog1/</link>
 		<pubDate>Thu, 17 Dec 2015 04:16:49 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog1-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog1-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -109,7 +109,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog1-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog1-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog1-2.jpg]]></wp:meta_value>
@@ -128,7 +128,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/12/24/one-day-discover-in-birmingham-city/blog2/</link>
 		<pubDate>Thu, 17 Dec 2015 04:16:52 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog2-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog2-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[Demo caption]]></excerpt:encoded>
@@ -144,7 +144,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog2-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog2-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog2-2.jpg]]></wp:meta_value>
@@ -163,7 +163,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/11/15/laying-the-groundwork-for-extensibility/blog4/</link>
 		<pubDate>Thu, 17 Dec 2015 04:19:12 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog4-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog4-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -179,7 +179,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog4-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog4-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog4-2.jpg]]></wp:meta_value>
@@ -198,7 +198,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/12/12/black-friday-ui-stack-accessible-web-apps/blog5/</link>
 		<pubDate>Fri, 18 Dec 2015 07:31:19 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog5-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog5-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -214,7 +214,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog5-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog5-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog5-2.jpg]]></wp:meta_value>
@@ -233,7 +233,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/10/15/web-development-reading-list-114-black-friday-ui-stack-accessible-web-apps/happy-corporate-ukulele-whi/</link>
 		<pubDate>Mon, 21 Dec 2015 04:29:38 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/happy-2.mp3</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/happy-2.mp3</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -249,7 +249,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/happy-2.mp3]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/happy-2.mp3]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/happy-2.mp3]]></wp:meta_value>
@@ -264,7 +264,7 @@
 		<link>http://aquila.kitethemes.com/demo3/slider1-jpg/</link>
 		<pubDate>Mon, 21 Dec 2015 15:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/slider1-1.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/slider1-1.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -280,7 +280,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/slider1-1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/slider1-1.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/slider1-1.jpg]]></wp:meta_value>
@@ -295,7 +295,7 @@
 		<link>http://aquila.kitethemes.com/demo3/slider3-jpg/</link>
 		<pubDate>Mon, 21 Dec 2015 15:00:03 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/slider3-1.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/slider3-1.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -311,7 +311,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/slider3-1.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/slider3-1.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/slider3-1.jpg]]></wp:meta_value>
@@ -326,7 +326,7 @@
 		<link>http://aquila.kitethemes.com/demo3/about/</link>
 		<pubDate>Tue, 22 Dec 2015 09:07:39 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/about-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/about-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -342,7 +342,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/about-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/about-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/about-2.jpg]]></wp:meta_value>
@@ -357,7 +357,7 @@
 		<link>http://aquila.kitethemes.com/demo3/footer-about/</link>
 		<pubDate>Thu, 24 Dec 2015 02:18:38 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/footer-about-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/footer-about-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[Demo caption 2]]></excerpt:encoded>
@@ -373,7 +373,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/footer-about-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/footer-about-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/footer-about-2.jpg]]></wp:meta_value>
@@ -388,7 +388,7 @@
 		<link>http://aquila.kitethemes.com/demo3/about-me/about-me-2/</link>
 		<pubDate>Thu, 24 Dec 2015 07:54:12 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/about-me-2.png</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/about-me-2.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -404,7 +404,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/about-me-2.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/about-me-2.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/about-me-2.png]]></wp:meta_value>
@@ -419,7 +419,7 @@
 		<link>http://aquila.kitethemes.com/demo3/about-me/signature/</link>
 		<pubDate>Thu, 24 Dec 2015 07:54:33 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/signature-2.png</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/signature-2.png</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -435,7 +435,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/signature-2.png]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/signature-2.png]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/signature-2.png]]></wp:meta_value>
@@ -450,7 +450,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/12/24/one-day-discover-in-birmingham-city/gallery-1/</link>
 		<pubDate>Tue, 29 Dec 2015 02:42:42 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/11/gallery-1-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/11/gallery-1-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -466,7 +466,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/11/gallery-1-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/11/gallery-1-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/gallery-1-2.jpg]]></wp:meta_value>
@@ -481,7 +481,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/12/24/one-day-discover-in-birmingham-city/gallery-2/</link>
 		<pubDate>Tue, 29 Dec 2015 02:42:47 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/11/gallery-2-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/11/gallery-2-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -497,7 +497,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/11/gallery-2-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/11/gallery-2-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/11/gallery-2-2.jpg]]></wp:meta_value>
@@ -512,7 +512,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/12/18/for-extensibility-laying-the-groundwork/blog-6/</link>
 		<pubDate>Tue, 29 Dec 2015 03:46:32 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-6-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-6-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -528,7 +528,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-6-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-6-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog-6-2.jpg]]></wp:meta_value>
@@ -547,7 +547,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/12/12/black-friday-ui-stack-accessible-web-apps/blog-7/</link>
 		<pubDate>Tue, 29 Dec 2015 03:48:29 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-7-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-7-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -563,7 +563,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-7-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-7-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog-7-2.jpg]]></wp:meta_value>
@@ -582,7 +582,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/12/30/a-guide-to-simple-and-painless-mobile-user-testing-3/image2/</link>
 		<pubDate>Tue, 29 Dec 2015 07:29:54 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image2-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image2-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -598,7 +598,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image2-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image2-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/image2-2.jpg]]></wp:meta_value>
@@ -613,7 +613,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/12/30/a-guide-to-simple-and-painless-mobile-user-testing-3/image3/</link>
 		<pubDate>Tue, 29 Dec 2015 07:29:55 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image3-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image3-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -629,7 +629,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image3-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image3-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/image3-2.jpg]]></wp:meta_value>
@@ -648,7 +648,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/12/28/a-guide-to-simple-and-painless-mobile-user-testing-2/blog-8/</link>
 		<pubDate>Wed, 30 Dec 2015 15:31:40 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-8-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-8-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -664,7 +664,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-8-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-8-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog-8-2.jpg]]></wp:meta_value>
@@ -683,7 +683,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/12/26/good-news-for-http2-and-better-flexbox-grids/blog-9/</link>
 		<pubDate>Wed, 30 Dec 2015 15:34:02 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-9-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-9-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -699,7 +699,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-9-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-9-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog-9-2.jpg]]></wp:meta_value>
@@ -821,7 +821,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/12/25/p-vs-np-the-assumption-that-runs-the-internet/blog-10/</link>
 		<pubDate>Wed, 30 Dec 2015 15:36:22 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-10-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-10-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -837,7 +837,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-10-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-10-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog-10-2.jpg]]></wp:meta_value>
@@ -852,7 +852,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/12/25/web-development-reading-list-114-black-friday-ui-stack-accessible-web-apps-2/blog-11/</link>
 		<pubDate>Wed, 30 Dec 2015 15:37:45 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-11-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-11-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -868,7 +868,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-11-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-11-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog-11-2.jpg]]></wp:meta_value>
@@ -883,7 +883,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/12/18/laying-the-groundwork-for-extensibility-3/blog-12/</link>
 		<pubDate>Wed, 30 Dec 2015 15:42:04 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-12-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-12-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -899,7 +899,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-12-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-12-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog-12-2.jpg]]></wp:meta_value>
@@ -1162,7 +1162,7 @@
 		<link>http://aquila.kitethemes.com/demo3/2015/12/18/for-extensibility-laying-the-groundwork/blog-3/</link>
 		<pubDate>Thu, 31 Dec 2015 09:43:29 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-3-e1451555204399-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-3-e1451555204399-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1178,7 +1178,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/blog-3-e1451555204399-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/blog-3-e1451555204399-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2015/12/blog-3-e1451555204399-2.jpg]]></wp:meta_value>
@@ -1201,7 +1201,7 @@
 		<link>http://aquila.kitethemes.com/demo3/promo1/</link>
 		<pubDate>Tue, 05 Jan 2016 06:11:25 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2016/01/promo1-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2016/01/promo1-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1217,7 +1217,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2016/01/promo1-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2016/01/promo1-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2016/01/promo1-2.jpg]]></wp:meta_value>
@@ -1232,7 +1232,7 @@
 		<link>http://aquila.kitethemes.com/demo3/promo2/</link>
 		<pubDate>Tue, 05 Jan 2016 06:11:28 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2016/01/promo2-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2016/01/promo2-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1248,7 +1248,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2016/01/promo2-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2016/01/promo2-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2016/01/promo2-2.jpg]]></wp:meta_value>
@@ -1263,7 +1263,7 @@
 		<link>http://aquila.kitethemes.com/demo3/promo3/</link>
 		<pubDate>Tue, 05 Jan 2016 06:11:30 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/uploads/2016/01/promo3-2.jpg</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2016/01/promo3-2.jpg</guid>
 		<description></description>
 		<content:encoded><![CDATA[]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
@@ -1279,7 +1279,7 @@
 		<wp:post_type><![CDATA[attachment]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/uploads/2016/01/promo3-2.jpg]]></wp:attachment_url>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2016/01/promo3-2.jpg]]></wp:attachment_url>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
 			<wp:meta_value><![CDATA[2016/01/promo3-2.jpg]]></wp:meta_value>
@@ -4180,7 +4180,7 @@
 		<dc:creator><![CDATA[admin]]></dc:creator>
 		<guid isPermaLink="false">http://aquila.kitethemes.com/?page_id=92</guid>
 		<description></description>
-		<content:encoded><![CDATA[[vc_row][vc_column width="1/2"][blockquote css_animation="bottom-to-top" author=" Lorem ipsum dolor sit amet"]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at est molestie, sollicitudin eros a, porttitor tortor. Etiam in urna ullamcorper, venenatis neque in, volutpat lorem. Quisque non rhoncus eros. Fusce libero lacus, rhoncus vitae luctus mattis, molestie a lacus. Proin quis velit ac urna ultricies pharetra.[/blockquote][/vc_column][vc_column width="1/2"][blockquote reverse="true" css_animation="bottom-to-top" author=" Lorem ipsum dolor sit amet"]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at est molestie, sollicitudin eros a, porttitor tortor. Etiam in urna ullamcorper, venenatis neque in, volutpat lorem. Quisque non rhoncus eros. Fusce libero lacus, rhoncus vitae luctus mattis, molestie a lacus. Proin quis velit ac urna ultricies pharetra.[/blockquote][/vc_column][/vc_row][vc_row][vc_column][blockquote style="post-item-quote" css_animation="bottom-to-top" author=" Lorem ipsum dolor sit amet"]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at est molestie, sollicitudin eros a, porttitor tortor. Etiam in urna ullamcorper, venenatis neque in, volutpat lorem. Quisque non rhoncus eros. Fusce libero lacus, rhoncus vitae luctus mattis, molestie a lacus. Proin quis velit ac urna ultricies pharetra.[/blockquote][blockquote style="simple" css_animation="bottom-to-top" author=" Lorem ipsum dolor sit amet" css=".vc_custom_1450863506420{padding-right: 30px !important;padding-bottom: 30px !important;padding-left: 30px !important;background-image: url(http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/slider1-1.jpg?id=85) !important;}"]Life to me is a journey - you never know what may be
+		<content:encoded><![CDATA[[vc_row][vc_column width="1/2"][blockquote css_animation="bottom-to-top" author=" Lorem ipsum dolor sit amet"]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at est molestie, sollicitudin eros a, porttitor tortor. Etiam in urna ullamcorper, venenatis neque in, volutpat lorem. Quisque non rhoncus eros. Fusce libero lacus, rhoncus vitae luctus mattis, molestie a lacus. Proin quis velit ac urna ultricies pharetra.[/blockquote][/vc_column][vc_column width="1/2"][blockquote reverse="true" css_animation="bottom-to-top" author=" Lorem ipsum dolor sit amet"]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at est molestie, sollicitudin eros a, porttitor tortor. Etiam in urna ullamcorper, venenatis neque in, volutpat lorem. Quisque non rhoncus eros. Fusce libero lacus, rhoncus vitae luctus mattis, molestie a lacus. Proin quis velit ac urna ultricies pharetra.[/blockquote][/vc_column][/vc_row][vc_row][vc_column][blockquote style="post-item-quote" css_animation="bottom-to-top" author=" Lorem ipsum dolor sit amet"]Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam at est molestie, sollicitudin eros a, porttitor tortor. Etiam in urna ullamcorper, venenatis neque in, volutpat lorem. Quisque non rhoncus eros. Fusce libero lacus, rhoncus vitae luctus mattis, molestie a lacus. Proin quis velit ac urna ultricies pharetra.[/blockquote][blockquote style="simple" css_animation="bottom-to-top" author=" Lorem ipsum dolor sit amet" css=".vc_custom_1450863506420{padding-right: 30px !important;padding-bottom: 30px !important;padding-left: 30px !important;background-image: url(http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/slider1-1.jpg?id=85) !important;}"]Life to me is a journey - you never know what may be
 your next destination[/blockquote][/vc_column][/vc_row]]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
 		<wp:post_id>92</wp:post_id>
@@ -6295,7 +6295,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -6442,7 +6442,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -8538,7 +8538,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -8691,7 +8691,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -8858,7 +8858,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -9138,7 +9138,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -9319,7 +9319,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -9481,7 +9481,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -9647,7 +9647,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -10440,7 +10440,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -10589,7 +10589,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -10762,7 +10762,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -10930,7 +10930,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -11095,7 +11095,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -11259,7 +11259,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -11415,7 +11415,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -11568,7 +11568,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -11720,7 +11720,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/uploads/2015/12/image-2.png" alt="image" />
+<img class="aligncenter " src="http://aquila.kitethemes.com/demo3/wp-content/import-data-images/2015/12/image-2.png" alt="image" />
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
