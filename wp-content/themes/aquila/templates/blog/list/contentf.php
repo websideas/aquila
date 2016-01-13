@@ -38,7 +38,7 @@
             $i++;}
             printf(
                 '<div class="%s">%s</div>',
-                'gallery-images-grid clearfix',
+                'gallery-images-grid popup-gallery clearfix',
                 $gallery
             );
         }

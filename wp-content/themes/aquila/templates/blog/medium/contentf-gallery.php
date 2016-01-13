@@ -63,7 +63,7 @@
             }
             printf(
                 '<div class="%s">%s</div>',
-                'gallery-images clearfix',
+                'gallery-images popup-gallery clearfix',
                 $gallery
             );
         }
