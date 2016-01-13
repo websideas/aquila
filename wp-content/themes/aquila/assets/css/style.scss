@@ -355,6 +355,14 @@ select {
   }
 }
 
+button,
+input[type=button],
+input[type=submit]{
+  &:focus {
+    outline: 0;
+  }
+}
+
 select:not([multiple]) {
   @include css3-prefix('box-shadow', 'none');
   @include css3-prefix('appearance', 'none');
