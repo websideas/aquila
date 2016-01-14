@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.4.1" created="2016-01-13 01:27" -->
+<!-- generator="WordPress/4.4.1" created="2016-01-13 09:08" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Aquila</title>
 	<link>http://aquila.kitethemes.com</link>
 	<description>Beautiful Theme For Blogger</description>
-	<pubDate>Wed, 13 Jan 2016 01:27:21 +0000</pubDate>
+	<pubDate>Wed, 13 Jan 2016 09:08:53 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://aquila.kitethemes.com</wp:base_site_url>
@@ -712,220 +712,6 @@
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[tiny_compress_images]]></wp:meta_key>
 			<wp:meta_value><![CDATA[a:13:{i:0;a:4:{s:5:"start";i:1452225175;s:5:"input";a:2:{s:4:"size";i:203615;s:4:"type";s:10:"image/jpeg";}s:6:"output";a:6:{s:4:"size";i:196756;s:4:"type";s:10:"image/jpeg";s:5:"width";i:1920;s:6:"height";i:923;s:5:"ratio";d:0.96630000000000005;s:3:"url";s:50:"https://api.tinify.com/output/qg25mr0pff2f4qqc.jpg";}s:3:"end";i:1452225181;}s:9:"thumbnail";a:4:{s:5:"start";i:1452225181;s:5:"input";a:2:{s:4:"size";i:8470;s:4:"type";s:10:"image/jpeg";}s:6:"output";a:6:{s:4:"size";i:7442;s:4:"type";s:10:"image/jpeg";s:5:"width";i:150;s:6:"height";i:150;s:5:"ratio";d:0.87860000000000005;s:3:"url";s:50:"https://api.tinify.com/output/ts3795nqriv9a011.jpg";}s:3:"end";i:1452225183;}s:6:"medium";a:4:{s:5:"start";i:1452225183;s:5:"input";a:2:{s:4:"size";i:15022;s:4:"type";s:10:"image/jpeg";}s:6:"output";a:6:{s:4:"size";i:14080;s:4:"type";s:10:"image/jpeg";s:5:"width";i:300;s:6:"height";i:144;s:5:"ratio";d:0.93730000000000002;s:3:"url";s:50:"https://api.tinify.com/output/s00on8j85dsmm3fb.jpg";}s:3:"end";i:1452225186;}s:5:"large";a:4:{s:5:"start";i:1452225186;s:5:"input";a:2:{s:4:"size";i:126036;s:4:"type";s:10:"image/jpeg";}s:6:"output";a:6:{s:4:"size";i:93772;s:4:"type";s:10:"image/jpeg";s:5:"width";i:1024;s:6:"height";i:492;s:5:"ratio";d:0.74399999999999999;s:3:"url";s:50:"https://api.tinify.com/output/35innu4q3iokajrm.jpg";}s:3:"end";i:1452225191;}s:15:"kt_recent_posts";a:4:{s:5:"start";i:1452225191;s:5:"input";a:2:{s:4:"size";i:58036;s:4:"type";s:10:"image/jpeg";}s:6:"output";a:6:{s:4:"size";i:53621;s:4:"type";s:10:"image/jpeg";s:5:"width";i:570;s:6:"height";i:355;s:5:"ratio";d:0.92390000000000005;s:3:"url";s:50:"https://api.tinify.com/output/pn1r6qg96qu517je.jpg";}s:3:"end";i:1452225196;}s:23:"kt_recent_posts_masonry";a:4:{s:5:"start";i:1452225196;s:5:"input";a:2:{s:4:"size";i:45506;s:4:"type";s:10:"image/jpeg";}s:6:"output";a:6:{s:4:"size";i:42092;s:4:"type";s:10:"image/jpeg";s:5:"width";i:570;s:6:"height";i:274;s:5:"ratio";d:0.92500000000000004;s:3:"url";s:50:"https://api.tinify.com/output/e59e4hvpk9h2l57q.jpg";}s:3:"end";i:1452225200;}s:17:"kt_first_featured";a:4:{s:5:"start";i:1452225200;s:5:"input";a:2:{s:4:"size";i:89605;s:4:"type";s:10:"image/jpeg";}s:6:"output";a:6:{s:4:"size";i:63241;s:4:"type";s:10:"image/jpeg";s:5:"width";i:670;s:6:"height";i:500;s:5:"ratio";d:0.70579999999999998;s:3:"url";s:50:"https://api.tinify.com/output/kj4tfb5ts19nfh2g.jpg";}s:3:"end";i:1452225204;}s:8:"kt_small";a:4:{s:5:"start";i:1452225204;s:5:"input";a:2:{s:4:"size";i:10458;s:4:"type";s:10:"image/jpeg";}s:6:"output";a:6:{s:4:"size";i:9178;s:4:"type";s:10:"image/jpeg";s:5:"width";i:170;s:6:"height";i:170;s:5:"ratio";d:0.87760000000000005;s:3:"url";s:50:"https://api.tinify.com/output/jqhoh2cdm0cldqoh.jpg";}s:3:"end";i:1452225206;}s:12:"kt_blog_post";a:4:{s:5:"start";i:1452225206;s:5:"input";a:2:{s:4:"size";i:163767;s:4:"type";s:10:"image/jpeg";}s:6:"output";a:6:{s:4:"size";i:127689;s:4:"type";s:10:"image/jpeg";s:5:"width";i:1140;s:6:"height";i:600;s:5:"ratio";d:0.77969999999999995;s:3:"url";s:50:"https://api.tinify.com/output/u42o6bpcfv79h0k2.jpg";}s:3:"end";i:1452225212;}s:20:"kt_blog_post_sidebar";a:4:{s:5:"start";i:1452225212;s:5:"input";a:2:{s:4:"size";i:152389;s:4:"type";s:10:"image/jpeg";}s:6:"output";a:6:{s:4:"size";i:118831;s:4:"type";s:10:"image/jpeg";s:5:"width";i:1140;s:6:"height";i:548;s:5:"ratio";d:0.77980000000000005;s:3:"url";s:50:"https://api.tinify.com/output/1f7dp9qkobn6cim9.jpg";}s:3:"end";i:1452225218;}s:19:"kt_blog_post_slider";a:4:{s:5:"start";i:1452225218;s:5:"input";a:2:{s:4:"size";i:254363;s:4:"type";s:10:"image/jpeg";}s:6:"output";a:6:{s:4:"size";i:160798;s:4:"type";s:10:"image/jpeg";s:5:"width";i:1460;s:6:"height";i:800;s:5:"ratio";d:0.63219999999999998;s:3:"url";s:50:"https://api.tinify.com/output/7pd4pgh5ej3hgi3h.jpg";}s:3:"end";i:1452225227;}s:17:"kt_widget_article";a:4:{s:5:"start";i:1452225227;s:5:"input";a:2:{s:4:"size";i:4444;s:4:"type";s:10:"image/jpeg";}s:6:"output";a:6:{s:4:"size";i:3966;s:4:"type";s:10:"image/jpeg";s:5:"width";i:120;s:6:"height";i:75;s:5:"ratio";d:0.89239999999999997;s:3:"url";s:50:"https://api.tinify.com/output/scgimguito2855oq.jpg";}s:3:"end";i:1452225228;}s:26:"kt_widget_article_carousel";a:4:{s:5:"start";i:1452225228;s:5:"input";a:2:{s:4:"size";i:26843;s:4:"type";s:10:"image/jpeg";}s:6:"output";a:6:{s:4:"size";i:24868;s:4:"type";s:10:"image/jpeg";s:5:"width";i:335;s:6:"height";i:250;s:5:"ratio";d:0.9264;s:3:"url";s:50:"https://api.tinify.com/output/l1bvcunr2va20fue.jpg";}s:3:"end";i:1452225231;}}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title></title>
-		<link>http://aquila.kitethemes.com/5/</link>
-		<pubDate>Mon, 14 Dec 2015 04:16:45 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=5</guid>
-		<description></description>
-		<content:encoded><![CDATA[ ]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>5</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-14 04:16:45]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-14 04:16:45]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[5]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>1</wp:menu_order>
-		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="main-menu"><![CDATA[Main menu]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
-			<wp:meta_value><![CDATA[page]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_icon]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_enable]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_width]]></wp:meta_key>
-			<wp:meta_value><![CDATA[full]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columntitle]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columnlink]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[center]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columns]]></wp:meta_key>
-			<wp:meta_value><![CDATA[3]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_widget]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_clwidth]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_endrow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_image]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title></title>
-		<link>http://aquila.kitethemes.com/7/</link>
-		<pubDate>Mon, 14 Dec 2015 04:16:45 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=7</guid>
-		<description></description>
-		<content:encoded><![CDATA[ ]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>7</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-14 04:16:45]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-14 04:16:45]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[7]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>27</wp:menu_order>
-		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="main-menu"><![CDATA[Main menu]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[taxonomy]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
-			<wp:meta_value><![CDATA[category]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_icon]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_enable]]></wp:meta_key>
-			<wp:meta_value><![CDATA[enabled]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_width]]></wp:meta_key>
-			<wp:meta_value><![CDATA[full]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columntitle]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columnlink]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[center]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columns]]></wp:meta_key>
-			<wp:meta_value><![CDATA[4]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_widget]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_clwidth]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_endrow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_image]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -1662,112 +1448,6 @@
 		</wp:postmeta>
 	</item>
 	<item>
-		<title></title>
-		<link>http://aquila.kitethemes.com/?p=242</link>
-		<pubDate>Wed, 30 Nov -0001 00:00:00 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=242</guid>
-		<description></description>
-		<content:encoded><![CDATA[ ]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>242</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-30 16:32:39]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[0000-00-00 00:00:00]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[]]></wp:post_name>
-		<wp:status><![CDATA[draft]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>1</wp:menu_order>
-		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[72]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
-			<wp:meta_value><![CDATA[post]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_orphaned]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1451493159]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_icon]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_enable]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_width]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columntitle]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columnlink]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columns]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_widget]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_clwidth]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_endrow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_image]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
 		<title>Big Slider</title>
 		<link>http://aquila.kitethemes.com/?kt-post-slider=slider-1</link>
 		<pubDate>Thu, 31 Dec 2015 06:37:48 +0000</pubDate>
@@ -2157,6 +1837,313 @@
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
 			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1000;s:6:"height";i:540;s:4:"file";s:18:"2016/01/promo3.jpg";s:5:"sizes";a:9:{s:9:"thumbnail";a:4:{s:4:"file";s:18:"promo3-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:18:"promo3-300x162.jpg";s:5:"width";i:300;s:6:"height";i:162;s:9:"mime-type";s:10:"image/jpeg";}s:12:"medium_large";a:4:{s:4:"file";s:18:"promo3-768x415.jpg";s:5:"width";i:768;s:6:"height";i:415;s:9:"mime-type";s:10:"image/jpeg";}s:15:"kt_recent_posts";a:4:{s:4:"file";s:18:"promo3-570x355.jpg";s:5:"width";i:570;s:6:"height";i:355;s:9:"mime-type";s:10:"image/jpeg";}s:23:"kt_recent_posts_masonry";a:4:{s:4:"file";s:18:"promo3-570x308.jpg";s:5:"width";i:570;s:6:"height";i:308;s:9:"mime-type";s:10:"image/jpeg";}s:17:"kt_first_featured";a:4:{s:4:"file";s:18:"promo3-670x500.jpg";s:5:"width";i:670;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:8:"kt_small";a:4:{s:4:"file";s:18:"promo3-170x170.jpg";s:5:"width";i:170;s:6:"height";i:170;s:9:"mime-type";s:10:"image/jpeg";}s:17:"kt_widget_article";a:4:{s:4:"file";s:17:"promo3-120x75.jpg";s:5:"width";i:120;s:6:"height";i:75;s:9:"mime-type";s:10:"image/jpeg";}s:26:"kt_widget_article_carousel";a:4:{s:4:"file";s:18:"promo3-335x250.jpg";s:5:"width";i:335;s:6:"height";i:250;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>fullwidth1</title>
+		<link>http://aquila.kitethemes.com/socials/fullwidth1/</link>
+		<pubDate>Wed, 13 Jan 2016 07:54:03 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/wp-content/import-data-images/2015/12/fullwidth1.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>268</wp:post_id>
+		<wp:post_date><![CDATA[2016-01-13 07:54:03]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2016-01-13 07:54:03]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[fullwidth1]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>95</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/wp-content/import-data-images/2015/12/fullwidth1.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2015/12/fullwidth1.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:770;s:6:"height";i:730;s:4:"file";s:22:"2015/12/fullwidth1.jpg";s:5:"sizes";a:9:{s:9:"thumbnail";a:4:{s:4:"file";s:22:"fullwidth1-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:22:"fullwidth1-300x284.jpg";s:5:"width";i:300;s:6:"height";i:284;s:9:"mime-type";s:10:"image/jpeg";}s:15:"kt_recent_posts";a:4:{s:4:"file";s:22:"fullwidth1-570x355.jpg";s:5:"width";i:570;s:6:"height";i:355;s:9:"mime-type";s:10:"image/jpeg";}s:23:"kt_recent_posts_masonry";a:4:{s:4:"file";s:22:"fullwidth1-570x540.jpg";s:5:"width";i:570;s:6:"height";i:540;s:9:"mime-type";s:10:"image/jpeg";}s:17:"kt_first_featured";a:4:{s:4:"file";s:22:"fullwidth1-670x500.jpg";s:5:"width";i:670;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:8:"kt_small";a:4:{s:4:"file";s:22:"fullwidth1-170x170.jpg";s:5:"width";i:170;s:6:"height";i:170;s:9:"mime-type";s:10:"image/jpeg";}s:12:"kt_blog_post";a:4:{s:4:"file";s:22:"fullwidth1-770x600.jpg";s:5:"width";i:770;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:17:"kt_widget_article";a:4:{s:4:"file";s:21:"fullwidth1-120x75.jpg";s:5:"width";i:120;s:6:"height";i:75;s:9:"mime-type";s:10:"image/jpeg";}s:26:"kt_widget_article_carousel";a:4:{s:4:"file";s:22:"fullwidth1-335x250.jpg";s:5:"width";i:335;s:6:"height";i:250;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>fullwidth2</title>
+		<link>http://aquila.kitethemes.com/socials/fullwidth2/</link>
+		<pubDate>Wed, 13 Jan 2016 07:54:05 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/wp-content/import-data-images/2015/12/fullwidth2.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>269</wp:post_id>
+		<wp:post_date><![CDATA[2016-01-13 07:54:05]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2016-01-13 07:54:05]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[fullwidth2]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>95</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/wp-content/import-data-images/2015/12/fullwidth2.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2015/12/fullwidth2.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:1095;s:6:"height";i:730;s:4:"file";s:22:"2015/12/fullwidth2.jpg";s:5:"sizes";a:10:{s:9:"thumbnail";a:4:{s:4:"file";s:22:"fullwidth2-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:22:"fullwidth2-300x200.jpg";s:5:"width";i:300;s:6:"height";i:200;s:9:"mime-type";s:10:"image/jpeg";}s:5:"large";a:4:{s:4:"file";s:23:"fullwidth2-1024x683.jpg";s:5:"width";i:1024;s:6:"height";i:683;s:9:"mime-type";s:10:"image/jpeg";}s:15:"kt_recent_posts";a:4:{s:4:"file";s:22:"fullwidth2-570x355.jpg";s:5:"width";i:570;s:6:"height";i:355;s:9:"mime-type";s:10:"image/jpeg";}s:23:"kt_recent_posts_masonry";a:4:{s:4:"file";s:22:"fullwidth2-570x380.jpg";s:5:"width";i:570;s:6:"height";i:380;s:9:"mime-type";s:10:"image/jpeg";}s:17:"kt_first_featured";a:4:{s:4:"file";s:22:"fullwidth2-670x500.jpg";s:5:"width";i:670;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:8:"kt_small";a:4:{s:4:"file";s:22:"fullwidth2-170x170.jpg";s:5:"width";i:170;s:6:"height";i:170;s:9:"mime-type";s:10:"image/jpeg";}s:12:"kt_blog_post";a:4:{s:4:"file";s:23:"fullwidth2-1095x600.jpg";s:5:"width";i:1095;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:17:"kt_widget_article";a:4:{s:4:"file";s:21:"fullwidth2-120x75.jpg";s:5:"width";i:120;s:6:"height";i:75;s:9:"mime-type";s:10:"image/jpeg";}s:26:"kt_widget_article_carousel";a:4:{s:4:"file";s:22:"fullwidth2-335x250.jpg";s:5:"width";i:335;s:6:"height";i:250;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>fullwidth3</title>
+		<link>http://aquila.kitethemes.com/socials/fullwidth3/</link>
+		<pubDate>Wed, 13 Jan 2016 07:54:07 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/wp-content/import-data-images/2015/12/fullwidth3.jpg</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>270</wp:post_id>
+		<wp:post_date><![CDATA[2016-01-13 07:54:07]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2016-01-13 07:54:07]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[fullwidth3]]></wp:post_name>
+		<wp:status><![CDATA[inherit]]></wp:status>
+		<wp:post_parent>95</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[attachment]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:attachment_url><![CDATA[http://aquila.kitethemes.com/wp-content/import-data-images/2015/12/fullwidth3.jpg]]></wp:attachment_url>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attached_file]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2015/12/fullwidth3.jpg]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_attachment_metadata]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"width";i:499;s:6:"height";i:730;s:4:"file";s:22:"2015/12/fullwidth3.jpg";s:5:"sizes";a:8:{s:9:"thumbnail";a:4:{s:4:"file";s:22:"fullwidth3-150x150.jpg";s:5:"width";i:150;s:6:"height";i:150;s:9:"mime-type";s:10:"image/jpeg";}s:6:"medium";a:4:{s:4:"file";s:22:"fullwidth3-205x300.jpg";s:5:"width";i:205;s:6:"height";i:300;s:9:"mime-type";s:10:"image/jpeg";}s:15:"kt_recent_posts";a:4:{s:4:"file";s:22:"fullwidth3-499x355.jpg";s:5:"width";i:499;s:6:"height";i:355;s:9:"mime-type";s:10:"image/jpeg";}s:17:"kt_first_featured";a:4:{s:4:"file";s:22:"fullwidth3-499x500.jpg";s:5:"width";i:499;s:6:"height";i:500;s:9:"mime-type";s:10:"image/jpeg";}s:8:"kt_small";a:4:{s:4:"file";s:22:"fullwidth3-170x170.jpg";s:5:"width";i:170;s:6:"height";i:170;s:9:"mime-type";s:10:"image/jpeg";}s:12:"kt_blog_post";a:4:{s:4:"file";s:22:"fullwidth3-499x600.jpg";s:5:"width";i:499;s:6:"height";i:600;s:9:"mime-type";s:10:"image/jpeg";}s:17:"kt_widget_article";a:4:{s:4:"file";s:21:"fullwidth3-120x75.jpg";s:5:"width";i:120;s:6:"height";i:75;s:9:"mime-type";s:10:"image/jpeg";}s:26:"kt_widget_article_carousel";a:4:{s:4:"file";s:22:"fullwidth3-335x250.jpg";s:5:"width";i:335;s:6:"height";i:250;s:9:"mime-type";s:10:"image/jpeg";}}s:10:"image_meta";a:12:{s:8:"aperture";i:0;s:6:"credit";s:0:"";s:6:"camera";s:0:"";s:7:"caption";s:0:"";s:17:"created_timestamp";i:0;s:9:"copyright";s:0:"";s:12:"focal_length";i:0;s:3:"iso";i:0;s:13:"shutter_speed";i:0;s:5:"title";s:0:"";s:11:"orientation";i:0;s:8:"keywords";a:0:{}}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title></title>
+		<link>http://aquila.kitethemes.com/5/</link>
+		<pubDate>Mon, 14 Dec 2015 04:16:45 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=5</guid>
+		<description></description>
+		<content:encoded><![CDATA[ ]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>5</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-14 04:16:45]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-14 04:16:45]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[5]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>1</wp:menu_order>
+		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="nav_menu" nicename="main-menu"><![CDATA[Main menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
+			<wp:meta_value><![CDATA[page]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_icon]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_enable]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_width]]></wp:meta_key>
+			<wp:meta_value><![CDATA[full]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columntitle]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columnlink]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[center]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columns]]></wp:meta_key>
+			<wp:meta_value><![CDATA[3]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_widget]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_clwidth]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_endrow]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_layout]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_image]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title></title>
+		<link>http://aquila.kitethemes.com/7/</link>
+		<pubDate>Mon, 14 Dec 2015 04:16:45 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=7</guid>
+		<description></description>
+		<content:encoded><![CDATA[ ]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>7</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-14 04:16:45]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-14 04:16:45]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[7]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>27</wp:menu_order>
+		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="nav_menu" nicename="main-menu"><![CDATA[Main menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[taxonomy]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
+			<wp:meta_value><![CDATA[category]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_icon]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_enable]]></wp:meta_key>
+			<wp:meta_value><![CDATA[enabled]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_width]]></wp:meta_key>
+			<wp:meta_value><![CDATA[full]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columntitle]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columnlink]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[center]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columns]]></wp:meta_key>
+			<wp:meta_value><![CDATA[4]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_widget]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_clwidth]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_endrow]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_layout]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_image]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -3766,113 +3753,6 @@
 	</item>
 	<item>
 		<title></title>
-		<link>http://aquila.kitethemes.com/176/</link>
-		<pubDate>Sat, 26 Dec 2015 01:35:45 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=176</guid>
-		<description></description>
-		<content:encoded><![CDATA[ ]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>176</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-26 01:35:45]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-26 01:35:45]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[176]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>7</wp:menu_order>
-		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="main-menu"><![CDATA[Main menu]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
-			<wp:meta_value><![CDATA[5]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[174]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
-			<wp:meta_value><![CDATA[page]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_icon]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_enable]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_width]]></wp:meta_key>
-			<wp:meta_value><![CDATA[full]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columntitle]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columnlink]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[center]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columns]]></wp:meta_key>
-			<wp:meta_value><![CDATA[4]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_widget]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_clwidth]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_endrow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_image]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title></title>
 		<link>http://aquila.kitethemes.com/179/</link>
 		<pubDate>Sat, 26 Dec 2015 01:35:44 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
@@ -4087,41 +3967,40 @@
 	</item>
 	<item>
 		<title></title>
-		<link>http://aquila.kitethemes.com/181/</link>
-		<pubDate>Sat, 26 Dec 2015 01:35:44 +0000</pubDate>
+		<link>http://aquila.kitethemes.com/?p=242</link>
+		<pubDate>Wed, 30 Nov -0001 00:00:00 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=181</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=242</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>181</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-26 01:35:44]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-26 01:35:44]]></wp:post_date_gmt>
+		<wp:post_id>242</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-30 16:32:39]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[0000-00-00 00:00:00]]></wp:post_date_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[181]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_name><![CDATA[]]></wp:post_name>
+		<wp:status><![CDATA[draft]]></wp:status>
 		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>2</wp:menu_order>
+		<wp:menu_order>1</wp:menu_order>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="main-menu"><![CDATA[Main menu]]></category>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
 			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
-			<wp:meta_value><![CDATA[5]]></wp:meta_value>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[161]]></wp:meta_value>
+			<wp:meta_value><![CDATA[72]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
-			<wp:meta_value><![CDATA[page]]></wp:meta_value>
+			<wp:meta_value><![CDATA[post]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
@@ -4140,6 +4019,10 @@
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_orphaned]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1451493159]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_megamenu_icon]]></wp:meta_key>
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
@@ -4149,7 +4032,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_megamenu_width]]></wp:meta_key>
-			<wp:meta_value><![CDATA[full]]></wp:meta_value>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_megamenu_columntitle]]></wp:meta_key>
@@ -4161,15 +4044,15 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_megamenu_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[center]]></wp:meta_value>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_megamenu_columns]]></wp:meta_key>
-			<wp:meta_value><![CDATA[4]]></wp:meta_value>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_megamenu_widget]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_megamenu_clwidth]]></wp:meta_key>
@@ -4181,35 +4064,31 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_megamenu_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_megamenu_image]]></wp:meta_key>
 			<wp:meta_value><![CDATA[]]></wp:meta_value>
 		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
 	</item>
 	<item>
 		<title></title>
-		<link>http://aquila.kitethemes.com/182/</link>
-		<pubDate>Sat, 26 Dec 2015 01:35:44 +0000</pubDate>
+		<link>http://aquila.kitethemes.com/176/</link>
+		<pubDate>Sat, 26 Dec 2015 01:35:45 +0000</pubDate>
 		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=182</guid>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=176</guid>
 		<description></description>
 		<content:encoded><![CDATA[ ]]></content:encoded>
 		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>182</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-26 01:35:44]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-26 01:35:44]]></wp:post_date_gmt>
+		<wp:post_id>176</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-26 01:35:45]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-26 01:35:45]]></wp:post_date_gmt>
 		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
 		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[182]]></wp:post_name>
+		<wp:post_name><![CDATA[176]]></wp:post_name>
 		<wp:status><![CDATA[publish]]></wp:status>
 		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>3</wp:menu_order>
+		<wp:menu_order>7</wp:menu_order>
 		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
 		<wp:post_password><![CDATA[]]></wp:post_password>
 		<wp:is_sticky>0</wp:is_sticky>
@@ -4224,7 +4103,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[155]]></wp:meta_value>
+			<wp:meta_value><![CDATA[174]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
@@ -4439,6 +4318,220 @@
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
 			<wp:meta_value><![CDATA[168]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
+			<wp:meta_value><![CDATA[page]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_icon]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_enable]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_width]]></wp:meta_key>
+			<wp:meta_value><![CDATA[full]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columntitle]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columnlink]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[center]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columns]]></wp:meta_key>
+			<wp:meta_value><![CDATA[4]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_widget]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_clwidth]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_endrow]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_layout]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_image]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title></title>
+		<link>http://aquila.kitethemes.com/181/</link>
+		<pubDate>Sat, 26 Dec 2015 01:35:44 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=181</guid>
+		<description></description>
+		<content:encoded><![CDATA[ ]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>181</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-26 01:35:44]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-26 01:35:44]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[181]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>2</wp:menu_order>
+		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="nav_menu" nicename="main-menu"><![CDATA[Main menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[161]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
+			<wp:meta_value><![CDATA[page]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_icon]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_enable]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_width]]></wp:meta_key>
+			<wp:meta_value><![CDATA[full]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columntitle]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columnlink]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[center]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columns]]></wp:meta_key>
+			<wp:meta_value><![CDATA[4]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_widget]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_clwidth]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_endrow]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_layout]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_image]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title></title>
+		<link>http://aquila.kitethemes.com/182/</link>
+		<pubDate>Sat, 26 Dec 2015 01:35:44 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=182</guid>
+		<description></description>
+		<content:encoded><![CDATA[ ]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>182</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-26 01:35:44]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-26 01:35:44]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[182]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>3</wp:menu_order>
+		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="nav_menu" nicename="main-menu"><![CDATA[Main menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
+			<wp:meta_value><![CDATA[5]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[155]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
@@ -6119,493 +6212,6 @@
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Date Archives</title>
-		<link>http://aquila.kitethemes.com/date-archives/</link>
-		<pubDate>Wed, 30 Dec 2015 16:45:22 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=243</guid>
-		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>243</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-30 16:45:22]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-30 16:45:22]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[date-archives]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>16</wp:menu_order>
-		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="main-menu"><![CDATA[Main menu]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
-			<wp:meta_value><![CDATA[216]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[243]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
-			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[/2015/12/]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_icon]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_enable]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_width]]></wp:meta_key>
-			<wp:meta_value><![CDATA[full]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columntitle]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columnlink]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[center]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columns]]></wp:meta_key>
-			<wp:meta_value><![CDATA[4]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_widget]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_clwidth]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_endrow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_image]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title></title>
-		<link>http://aquila.kitethemes.com/244/</link>
-		<pubDate>Thu, 31 Dec 2015 01:30:11 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=244</guid>
-		<description></description>
-		<content:encoded><![CDATA[ ]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>244</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-31 01:30:11]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-31 01:30:11]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[244]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>1</wp:menu_order>
-		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="mobile-menu"><![CDATA[Mobile Menu]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
-			<wp:meta_value><![CDATA[page]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_icon]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_enable]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_width]]></wp:meta_key>
-			<wp:meta_value><![CDATA[full]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columntitle]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columnlink]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[center]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columns]]></wp:meta_key>
-			<wp:meta_value><![CDATA[4]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_widget]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_clwidth]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_endrow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_image]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title></title>
-		<link>http://aquila.kitethemes.com/245/</link>
-		<pubDate>Thu, 31 Dec 2015 01:30:11 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=245</guid>
-		<description></description>
-		<content:encoded><![CDATA[ ]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>245</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-31 01:30:11]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-31 01:30:11]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[245]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>2</wp:menu_order>
-		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="nav_menu" nicename="mobile-menu"><![CDATA[Mobile Menu]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[116]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
-			<wp:meta_value><![CDATA[page]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_icon]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_enable]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_width]]></wp:meta_key>
-			<wp:meta_value><![CDATA[full]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columntitle]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columnlink]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[center]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_columns]]></wp:meta_key>
-			<wp:meta_value><![CDATA[4]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_widget]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_clwidth]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_endrow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_menu_item_megamenu_image]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Home</title>
-		<link>http://aquila.kitethemes.com/</link>
-		<pubDate>Mon, 14 Dec 2015 04:12:02 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/?page_id=2</guid>
-		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>2</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-14 04:12:02]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-14 04:12:02]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[home]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[page]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[false]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_scheme]]></wp:meta_key>
-			<wp:meta_value><![CDATA[light]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_show_breadcrumb]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[right]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[blog-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_frontpage_content]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_frontpage_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[grid]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_max_items]]></wp:meta_key>
-			<wp:meta_value><![CDATA[16]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_frontpage_orderby]]></wp:meta_key>
-			<wp:meta_value><![CDATA[date]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_order]]></wp:meta_key>
-			<wp:meta_value><![CDATA[DESC]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[postslider]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_posts_style]]></wp:meta_key>
-			<wp:meta_value><![CDATA[big]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_authors]]></wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_authors]]></wp:meta_key>
-			<wp:meta_value><![CDATA[3]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_frontpage_columns]]></wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_first_featured]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_excerpt_length]]></wp:meta_key>
-			<wp:meta_value><![CDATA[30]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[frontpage.php]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_top_spacing]]></wp:meta_key>
-			<wp:meta_value><![CDATA[100px]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_background_body]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_background_inner]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_source]]></wp:meta_key>
-			<wp:meta_value><![CDATA[posts]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_posts12]]></wp:meta_key>
-			<wp:meta_value><![CDATA[207]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_posts]]></wp:meta_key>
-			<wp:meta_value><![CDATA[198]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_posts]]></wp:meta_key>
-			<wp:meta_value><![CDATA[208]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_frontpage_order]]></wp:meta_key>
-			<wp:meta_value><![CDATA[DESC]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_postslider]]></wp:meta_key>
-			<wp:meta_value><![CDATA[254]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_promo_widget]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_shadow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
 		<title>Quote</title>
 		<link>http://aquila.kitethemes.com/quote/</link>
 		<pubDate>Wed, 23 Sep 2015 01:57:34 +0000</pubDate>
@@ -6690,104 +6296,6 @@ your next destination[/blockquote][/vc_column][/vc_row]]]></content:encoded>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
 			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Socials</title>
-		<link>http://aquila.kitethemes.com/socials/</link>
-		<pubDate>Wed, 23 Dec 2015 01:59:35 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/?page_id=95</guid>
-		<description></description>
-		<content:encoded><![CDATA[[vc_row][vc_column][socials social="twitter,facebook,dribbble,skype" style="color" background_style="text" size="small" space_between_item="18"][socials social="twitter,facebook,dribbble,skype" style="color" background_style="text" space_between_item="18"][/vc_column][/vc_row][vc_row][vc_column width="1/2"][socials social="twitter,facebook,dribbble,skype" background_style="boxed" space_between_item="3"][socials social="twitter,facebook,dribbble,skype" background_style="rounded-less" space_between_item="3"][/vc_column][vc_column width="1/2"][socials social="twitter,facebook,dribbble,skype" background_style="rounded-less-outline" space_between_item="3"][socials social="twitter,facebook,dribbble,skype" background_style="rounded-outline" space_between_item="3"][socials style="light" background_style="rounded-outline" space_between_item="3" css=".vc_custom_1450843307070{background-color: #000000 !important;}"][/vc_column][/vc_row][vc_row][vc_column width="1/2"][socials social="twitter,facebook,dribbble,skype" style="dark" background_style="rounded" space_between_item="3"][socials social="twitter,facebook,dribbble,skype" style="dark" background_style="boxed" space_between_item="3"][socials social="twitter,facebook,dribbble,skype" style="dark" space_between_item="3"][/vc_column][vc_column width="1/2"][socials social="twitter,facebook,dribbble,skype" background_style="rounded-less-outline" space_between_item="3"][socials social="twitter,facebook,dribbble,skype" background_style="rounded-outline" space_between_item="3"][socials style="light" background_style="rounded" space_between_item="3" css=".vc_custom_1450843586525{background-color: #000000 !important;}"][/vc_column][/vc_row]]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>95</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-23 01:59:35]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-23 01:59:35]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[socials]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[page]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[true]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_frontpage_content]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_frontpage_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[list]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_max_items]]></wp:meta_key>
-			<wp:meta_value><![CDATA[10]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_frontpage_orderby]]></wp:meta_key>
-			<wp:meta_value><![CDATA[date]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_order]]></wp:meta_key>
-			<wp:meta_value><![CDATA[DESC]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_posts_style]]></wp:meta_key>
-			<wp:meta_value><![CDATA[big]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[full]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[side-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_shortcodes_custom_css]]></wp:meta_key>
-			<wp:meta_value><![CDATA[.vc_custom_1450843307070{background-color: #000000 !important;}.vc_custom_1450843586525{background-color: #000000 !important;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_frontpage_columns]]></wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_first_featured]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header_custom]]></wp:meta_key>
-			<wp:meta_value><![CDATA[Welcome to my blog]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header_subtitle]]></wp:meta_key>
-			<wp:meta_value><![CDATA[We love what we do !]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -6929,6 +6437,10 @@ We think you’ll love working with us.
 			<wp:meta_key><![CDATA[_kt_frontpage_order]]></wp:meta_key>
 			<wp:meta_value><![CDATA[DESC]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_shadow]]></wp:meta_key>
+			<wp:meta_value><![CDATA[off]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>Contact</title>
@@ -7057,6 +6569,10 @@ Email: Alitstudiosgmail.com[/vc_column_text][/vc_column][/vc_row]]]></content:en
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_frontpage_order]]></wp:meta_key>
 			<wp:meta_value><![CDATA[DESC]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_shadow]]></wp:meta_key>
+			<wp:meta_value><![CDATA[off]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -7273,11 +6789,11 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis loborti
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_background_body]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:4:"none";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_background_inner]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:4:"none";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
@@ -7286,6 +6802,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis loborti
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_slideshow_posts_style]]></wp:meta_key>
 			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_promo_widget]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_frontpage_order]]></wp:meta_key>
+			<wp:meta_value><![CDATA[DESC]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
+			<wp:meta_value><![CDATA[off]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -7407,15 +6935,23 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis loborti
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_background_body]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:4:"none";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_background_inner]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:4:"none";}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_slideshow_postslider]]></wp:meta_key>
 			<wp:meta_value><![CDATA[257]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_promo_widget]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_shadow]]></wp:meta_key>
+			<wp:meta_value><![CDATA[off]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -7524,10 +7060,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis loborti
 			<wp:meta_value><![CDATA[frontpage.php]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_shadow]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_background_body]]></wp:meta_key>
 			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
 		</wp:postmeta>
@@ -7546,6 +7078,10 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis loborti
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_promo_widget]]></wp:meta_key>
 			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_shadow]]></wp:meta_key>
+			<wp:meta_value><![CDATA[off]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -8073,140 +7609,6 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis loborti
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Medium Layout</title>
-		<link>http://aquila.kitethemes.com/medium-layout/</link>
-		<pubDate>Sat, 26 Dec 2015 01:33:06 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/?page_id=172</guid>
-		<description></description>
-		<content:encoded><![CDATA[]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>172</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-26 01:33:06]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-26 01:33:06]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
-		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
-		<wp:post_name><![CDATA[medium-layout]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[page]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
-			<wp:meta_value><![CDATA[false]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_frontpage_content]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_frontpage_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[medium]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_frontpage_columns]]></wp:meta_key>
-			<wp:meta_value><![CDATA[2]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_first_featured]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_max_items]]></wp:meta_key>
-			<wp:meta_value><![CDATA[14]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_frontpage_orderby]]></wp:meta_key>
-			<wp:meta_value><![CDATA[date]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_order]]></wp:meta_key>
-			<wp:meta_value><![CDATA[DESC]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_excerpt_length]]></wp:meta_key>
-			<wp:meta_value><![CDATA[20]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_posts_style]]></wp:meta_key>
-			<wp:meta_value><![CDATA[thumb]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[right]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[blog-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_dp_original]]></wp:meta_key>
-			<wp:meta_value><![CDATA[168]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[postslider]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[off]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_top_spacing]]></wp:meta_key>
-			<wp:meta_value><![CDATA[50px]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[frontpage.php]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_background_body]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_background_inner]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_frontpage_order]]></wp:meta_key>
-			<wp:meta_value><![CDATA[DESC]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_postslider]]></wp:meta_key>
-			<wp:meta_value><![CDATA[256]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_promo_widget]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
 		<title>Medium layout without sidebar</title>
 		<link>http://aquila.kitethemes.com/medium-layout-without-sidebar/</link>
 		<pubDate>Sat, 26 Sep 2015 01:33:56 +0000</pubDate>
@@ -8338,6 +7740,327 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam iaculis loborti
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_slideshow_postslider]]></wp:meta_key>
 			<wp:meta_value><![CDATA[258]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Date Archives</title>
+		<link>http://aquila.kitethemes.com/date-archives/</link>
+		<pubDate>Wed, 30 Dec 2015 16:45:22 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=243</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>243</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-30 16:45:22]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-30 16:45:22]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[date-archives]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>16</wp:menu_order>
+		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="nav_menu" nicename="main-menu"><![CDATA[Main menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
+			<wp:meta_value><![CDATA[216]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[243]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
+			<wp:meta_value><![CDATA[custom]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
+			<wp:meta_value><![CDATA[/2015/12/]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_icon]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_enable]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_width]]></wp:meta_key>
+			<wp:meta_value><![CDATA[full]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columntitle]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columnlink]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[center]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columns]]></wp:meta_key>
+			<wp:meta_value><![CDATA[4]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_widget]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_clwidth]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_endrow]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_layout]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_image]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title></title>
+		<link>http://aquila.kitethemes.com/244/</link>
+		<pubDate>Thu, 31 Dec 2015 01:30:11 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=244</guid>
+		<description></description>
+		<content:encoded><![CDATA[ ]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>244</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-31 01:30:11]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-31 01:30:11]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[244]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>1</wp:menu_order>
+		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="nav_menu" nicename="mobile-menu"><![CDATA[Mobile Menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
+			<wp:meta_value><![CDATA[page]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_icon]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_enable]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_width]]></wp:meta_key>
+			<wp:meta_value><![CDATA[full]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columntitle]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columnlink]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[center]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columns]]></wp:meta_key>
+			<wp:meta_value><![CDATA[4]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_widget]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_clwidth]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_endrow]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_layout]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_image]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title></title>
+		<link>http://aquila.kitethemes.com/245/</link>
+		<pubDate>Thu, 31 Dec 2015 01:30:11 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=245</guid>
+		<description></description>
+		<content:encoded><![CDATA[ ]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>245</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-31 01:30:11]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-31 01:30:11]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[245]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>2</wp:menu_order>
+		<wp:post_type><![CDATA[nav_menu_item]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="nav_menu" nicename="mobile-menu"><![CDATA[Mobile Menu]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[post_type]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_menu_item_parent]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[116]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_object]]></wp:meta_key>
+			<wp:meta_value><![CDATA[page]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_target]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_classes]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:0:"";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_xfn]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_url]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_icon]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_enable]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_width]]></wp:meta_key>
+			<wp:meta_value><![CDATA[full]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columntitle]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columnlink]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[center]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_columns]]></wp:meta_key>
+			<wp:meta_value><![CDATA[4]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_widget]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_clwidth]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_endrow]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_layout]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_menu_item_megamenu_image]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -9035,6 +8758,172 @@ To delete a comment, just log in and view the post&#039;s comments. There you wi
 			<wp:comment_parent>0</wp:comment_parent>
 			<wp:comment_user_id>0</wp:comment_user_id>
 		</wp:comment>
+	</item>
+	<item>
+		<title>Home</title>
+		<link>http://aquila.kitethemes.com/</link>
+		<pubDate>Mon, 14 Dec 2015 04:12:02 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/?page_id=2</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>2</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-14 04:12:02]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-14 04:12:02]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[home]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+			<wp:meta_value><![CDATA[false]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_scheme]]></wp:meta_key>
+			<wp:meta_value><![CDATA[light]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_show_breadcrumb]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[right]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[blog-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_frontpage_content]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_frontpage_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[grid]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_max_items]]></wp:meta_key>
+			<wp:meta_value><![CDATA[16]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_frontpage_orderby]]></wp:meta_key>
+			<wp:meta_value><![CDATA[date]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_order]]></wp:meta_key>
+			<wp:meta_value><![CDATA[DESC]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_slideshow_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[postslider]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_slideshow_posts_style]]></wp:meta_key>
+			<wp:meta_value><![CDATA[big]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_authors]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_authors]]></wp:meta_key>
+			<wp:meta_value><![CDATA[3]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_frontpage_columns]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_first_featured]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_excerpt_length]]></wp:meta_key>
+			<wp:meta_value><![CDATA[30]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_layout]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[frontpage.php]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
+			<wp:meta_value><![CDATA[off]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_top_spacing]]></wp:meta_key>
+			<wp:meta_value><![CDATA[100px]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_background_body]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_background_inner]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_slideshow_source]]></wp:meta_key>
+			<wp:meta_value><![CDATA[posts]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_slideshow_posts12]]></wp:meta_key>
+			<wp:meta_value><![CDATA[207]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_slideshow_posts]]></wp:meta_key>
+			<wp:meta_value><![CDATA[198]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_slideshow_posts]]></wp:meta_key>
+			<wp:meta_value><![CDATA[208]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_frontpage_order]]></wp:meta_key>
+			<wp:meta_value><![CDATA[DESC]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_slideshow_postslider]]></wp:meta_key>
+			<wp:meta_value><![CDATA[254]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_promo_widget]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_shadow]]></wp:meta_key>
+			<wp:meta_value><![CDATA[off]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>Web Development, UI Stack, Accessible Web Apps</title>
@@ -9965,7 +9854,7 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[77]]></wp:meta_value>
+			<wp:meta_value><![CDATA[85]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_like_post]]></wp:meta_key>
@@ -10024,28 +9913,24 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 			<wp:meta_value><![CDATA[one-day-discover-in-london-city]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_blog_post_layout]]></wp:meta_key>
+			<wp:meta_value><![CDATA[3]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_audio_mp3]]></wp:meta_key>
 			<wp:meta_value><![CDATA[0]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
-			<wp:meta_value><![CDATA[193]]></wp:meta_value>
+			<wp:meta_value><![CDATA[268]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
-			<wp:meta_value><![CDATA[231]]></wp:meta_value>
+			<wp:meta_value><![CDATA[269]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
-			<wp:meta_value><![CDATA[192]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
-			<wp:meta_value><![CDATA[58]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
-			<wp:meta_value><![CDATA[59]]></wp:meta_value>
+			<wp:meta_value><![CDATA[270]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -10319,7 +10204,7 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[32]]></wp:meta_value>
+			<wp:meta_value><![CDATA[36]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_like_post]]></wp:meta_key>
@@ -10690,7 +10575,7 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[514]]></wp:meta_value>
+			<wp:meta_value><![CDATA[516]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
@@ -10820,6 +10705,238 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		</wp:comment>
 	</item>
 	<item>
+		<title>Socials</title>
+		<link>http://aquila.kitethemes.com/socials/</link>
+		<pubDate>Wed, 23 Dec 2015 01:59:35 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/?page_id=95</guid>
+		<description></description>
+		<content:encoded><![CDATA[[vc_row][vc_column][socials social="twitter,facebook,dribbble,skype" style="color" background_style="text" size="small" space_between_item="18"][socials social="twitter,facebook,dribbble,skype" style="color" background_style="text" space_between_item="18"][/vc_column][/vc_row][vc_row][vc_column width="1/2"][socials social="twitter,facebook,dribbble,skype" background_style="boxed" space_between_item="3"][socials social="twitter,facebook,dribbble,skype" background_style="rounded-less" space_between_item="3"][/vc_column][vc_column width="1/2"][socials social="twitter,facebook,dribbble,skype" background_style="rounded-less-outline" space_between_item="3"][socials social="twitter,facebook,dribbble,skype" background_style="rounded-outline" space_between_item="3"][socials style="light" background_style="rounded-outline" space_between_item="3" css=".vc_custom_1450843307070{background-color: #000000 !important;}"][/vc_column][/vc_row][vc_row][vc_column width="1/2"][socials social="twitter,facebook,dribbble,skype" style="dark" background_style="rounded" space_between_item="3"][socials social="twitter,facebook,dribbble,skype" style="dark" background_style="boxed" space_between_item="3"][socials social="twitter,facebook,dribbble,skype" style="dark" space_between_item="3"][/vc_column][vc_column width="1/2"][socials social="twitter,facebook,dribbble,skype" background_style="rounded-less-outline" space_between_item="3"][socials social="twitter,facebook,dribbble,skype" background_style="rounded-outline" space_between_item="3"][socials style="light" background_style="rounded" space_between_item="3" css=".vc_custom_1450843586525{background-color: #000000 !important;}"][/vc_column][/vc_row]]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>95</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-23 01:59:35]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-23 01:59:35]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[socials]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+			<wp:meta_value><![CDATA[true]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_frontpage_content]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_frontpage_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[list]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_max_items]]></wp:meta_key>
+			<wp:meta_value><![CDATA[10]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_frontpage_orderby]]></wp:meta_key>
+			<wp:meta_value><![CDATA[date]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_order]]></wp:meta_key>
+			<wp:meta_value><![CDATA[DESC]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_slideshow_posts_style]]></wp:meta_key>
+			<wp:meta_value><![CDATA[big]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[full]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[side-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wpb_shortcodes_custom_css]]></wp:meta_key>
+			<wp:meta_value><![CDATA[.vc_custom_1450843307070{background-color: #000000 !important;}.vc_custom_1450843586525{background-color: #000000 !important;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_frontpage_columns]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_first_featured]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header_custom]]></wp:meta_key>
+			<wp:meta_value><![CDATA[Welcome to my blog]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header_subtitle]]></wp:meta_key>
+			<wp:meta_value><![CDATA[We love what we do !]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Medium Layout</title>
+		<link>http://aquila.kitethemes.com/medium-layout/</link>
+		<pubDate>Sat, 26 Dec 2015 01:33:06 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/?page_id=172</guid>
+		<description></description>
+		<content:encoded><![CDATA[]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>172</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-26 01:33:06]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-26 01:33:06]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[closed]]></wp:comment_status>
+		<wp:ping_status><![CDATA[closed]]></wp:ping_status>
+		<wp:post_name><![CDATA[medium-layout]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[page]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wpb_vc_js_status]]></wp:meta_key>
+			<wp:meta_value><![CDATA[false]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_frontpage_content]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_frontpage_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[medium]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_frontpage_columns]]></wp:meta_key>
+			<wp:meta_value><![CDATA[2]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_first_featured]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_max_items]]></wp:meta_key>
+			<wp:meta_value><![CDATA[14]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_frontpage_orderby]]></wp:meta_key>
+			<wp:meta_value><![CDATA[date]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_order]]></wp:meta_key>
+			<wp:meta_value><![CDATA[DESC]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_excerpt_length]]></wp:meta_key>
+			<wp:meta_value><![CDATA[20]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_slideshow_posts_style]]></wp:meta_key>
+			<wp:meta_value><![CDATA[thumb]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[right]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[blog-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_dp_original]]></wp:meta_key>
+			<wp:meta_value><![CDATA[168]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_slideshow_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[postslider]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
+			<wp:meta_value><![CDATA[off]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_layout]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_top_spacing]]></wp:meta_key>
+			<wp:meta_value><![CDATA[50px]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_page_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[frontpage.php]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_background_body]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_background_inner]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_frontpage_order]]></wp:meta_key>
+			<wp:meta_value><![CDATA[DESC]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_slideshow_postslider]]></wp:meta_key>
+			<wp:meta_value><![CDATA[256]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_promo_widget]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
 		<title>Galleries</title>
 		<link>http://aquila.kitethemes.com/galleries/</link>
 		<pubDate>Mon, 28 Dec 2015 08:24:22 +0000</pubDate>
@@ -10938,7 +11055,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim 
 
 Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
 
-[kt_gallery_grid margin_image="30" image_gallery="12,221,222" layout="12"]
+[kt_gallery_fullwidth image_gallery="268,269,270"]
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
 
@@ -11021,7 +11138,7 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[44]]></wp:meta_value>
+			<wp:meta_value><![CDATA[50]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_like_post]]></wp:meta_key>
@@ -11086,335 +11203,6 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
 			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>Web Development Reading List #114: Black Friday, UI Stack, Accessible Web Apps</title>
-		<link>http://aquila.kitethemes.com/web-development-reading-list-114-black-friday-ui-stack-accessible-web-apps-2/</link>
-		<pubDate>Fri, 25 Dec 2015 03:55:48 +0000</pubDate>
-		<dc:creator><![CDATA[ngohongnguyen]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=200</guid>
-		<description></description>
-		<content:encoded><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
-
-<!--more-->
-
-Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
-<blockquote>I have found that, in the composition of the human body as compared with the bodies of animals, the organs of sense are duller and coarser. Thus, it is composed of less ingenious instruments, and of spaces less capacious for receiving the faculties of sense.</blockquote>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
-
-Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
-
-<img class="aligncenter " src="http://aquila.kitethemes.com/wp-content/import-data-images/2015/12/image.png" alt="image" />
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
-
-Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
-<h4>SHOW ME SOME CODE!</h4>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
-
-Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
-<ul>
-	<li>Pellentesque placerat, ex ac tempor convallis</li>
-	<li>Orci arcu vulputate sapien, vel pulvinar risus enim at libero.</li>
-	<li>Vivamus elementum vehicula sapien vitae tincidunt.</li>
-	<li>Fusce a felis sed leo porttitor cursus</li>
-</ul>
-Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectus efficitur massa, nec elementum sem orci nec quam. Aenean pretium mi leo, vitae pretium turpis interdum ut. Curabitur a lectus sem. Aliquam mattis quam ac ex maximus rhoncus. Mauris in iaculis enim. Mauris lobortis dui in faucibus vestibulum. In convallis euismod elit eu pulvinar. Phasellus et bibendum turpis. Nulla tristique felis id ipsum venenatis mollis. Vivamus vel quam dolor. Nam nec malesuada enim. Maecenas convallis lobortis tortor sed tincidunt.]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>200</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-25 03:55:48]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-25 03:55:48]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[web-development-reading-list-114-black-friday-ui-stack-accessible-web-apps-2]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="post_tag" nicename="case-studies"><![CDATA[Case Studies]]></category>
-		<category domain="post_tag" nicename="javascript"><![CDATA[JavaScript]]></category>
-		<category domain="category" nicename="music"><![CDATA[Music]]></category>
-		<category domain="post_format" nicename="post-format-audio"><![CDATA[Audio]]></category>
-		<category domain="category" nicename="travel"><![CDATA[Travel]]></category>
-		<category domain="post_tag" nicename="user-experience"><![CDATA[User Experience]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[235]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_choose_video]]></wp:meta_key>
-			<wp:meta_value><![CDATA[youtube]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_gallery_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[slider]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_post_featured]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_post_detail_media]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_posts_style]]></wp:meta_key>
-			<wp:meta_value><![CDATA[big]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
-			<wp:meta_value><![CDATA[hello-world]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_audio_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[soundcloud]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_audio_soundcloud]]></wp:meta_key>
-			<wp:meta_value><![CDATA[<iframe height="166" style="width:100%;" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/227010461&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[64]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_like_post]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_dp_original]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_background_body]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_background_inner]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
-			<wp:meta_value><![CDATA[ui-stack-accessible-web-apps-2]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_audio_mp3]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>A Guide To Simple And Painless Mobile User Testing</title>
-		<link>http://aquila.kitethemes.com/good-news-for-http2-and-better-flexbox-grids/</link>
-		<pubDate>Sat, 26 Dec 2015 03:56:19 +0000</pubDate>
-		<dc:creator><![CDATA[admin]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=201</guid>
-		<description></description>
-		<content:encoded><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
-
-<!--more-->
-
-Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
-<blockquote>I have found that, in the composition of the human body as compared with the bodies of animals, the organs of sense are duller and coarser. Thus, it is composed of less ingenious instruments, and of spaces less capacious for receiving the faculties of sense.</blockquote>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
-
-Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
-
-<img class="aligncenter " src="http://aquila.kitethemes.com/wp-content/import-data-images/2015/12/image.png" alt="image" />
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
-
-Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
-<h4>SHOW ME SOME CODE!</h4>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
-
-Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
-<ul>
-	<li>Pellentesque placerat, ex ac tempor convallis</li>
-	<li>Orci arcu vulputate sapien, vel pulvinar risus enim at libero.</li>
-	<li>Vivamus elementum vehicula sapien vitae tincidunt.</li>
-	<li>Fusce a felis sed leo porttitor cursus</li>
-</ul>
-Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectus efficitur massa, nec elementum sem orci nec quam. Aenean pretium mi leo, vitae pretium turpis interdum ut. Curabitur a lectus sem. Aliquam mattis quam ac ex maximus rhoncus. Mauris in iaculis enim. Mauris lobortis dui in faucibus vestibulum. In convallis euismod elit eu pulvinar. Phasellus et bibendum turpis. Nulla tristique felis id ipsum venenatis mollis. Vivamus vel quam dolor. Nam nec malesuada enim. Maecenas convallis lobortis tortor sed tincidunt.]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>201</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-26 03:56:19]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-26 03:56:19]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[good-news-for-http2-and-better-flexbox-grids]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="beauty"><![CDATA[Beauty]]></category>
-		<category domain="category" nicename="fashion"><![CDATA[Fashion]]></category>
-		<category domain="category" nicename="lifestyle"><![CDATA[Lifestyle]]></category>
-		<category domain="post_format" nicename="post-format-gallery"><![CDATA[Gallery]]></category>
-		<category domain="category" nicename="travel"><![CDATA[Travel]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_choose_video]]></wp:meta_key>
-			<wp:meta_value><![CDATA[youtube]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_post_format]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_title_and_meta_center]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_scheme]]></wp:meta_key>
-			<wp:meta_value><![CDATA[light]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_show_breadcrumb]]></wp:meta_key>
-			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[24]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_like_post]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[232]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_gallery_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[slider]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_post_featured]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_post_detail_media]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_posts_style]]></wp:meta_key>
-			<wp:meta_value><![CDATA[big]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_external_url]]></wp:meta_key>
-			<wp:meta_value><![CDATA[http://themeforest.net/item/delphinus-creative-multipurpose-ecommerce-html5/13732519]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_dp_original]]></wp:meta_key>
-			<wp:meta_value><![CDATA[68]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_background_body]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_background_inner]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_audio_mp3]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
-			<wp:meta_value><![CDATA[74]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
-			<wp:meta_value><![CDATA[61]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
-			<wp:meta_value><![CDATA[60]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
-			<wp:meta_value><![CDATA[58]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
-			<wp:meta_value><![CDATA[59]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -11518,11 +11306,11 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[24]]></wp:meta_value>
+			<wp:meta_value><![CDATA[31]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_like_post]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
@@ -11685,7 +11473,7 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[55]]></wp:meta_value>
+			<wp:meta_value><![CDATA[56]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_like_post]]></wp:meta_key>
@@ -11897,156 +11685,6 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_dp_original]]></wp:meta_key>
 			<wp:meta_value><![CDATA[17]]></wp:meta_value>
-		</wp:postmeta>
-	</item>
-	<item>
-		<title>P Vs. NP: The Assumption That Runs The Internet</title>
-		<link>http://aquila.kitethemes.com/p-vs-np-the-assumption-that-runs-the-internet/</link>
-		<pubDate>Fri, 25 Dec 2015 04:03:26 +0000</pubDate>
-		<dc:creator><![CDATA[ngohongnguyen]]></dc:creator>
-		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=208</guid>
-		<description></description>
-		<content:encoded><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
-
-<!--more-->
-
-Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
-<blockquote>I have found that, in the composition of the human body as compared with the bodies of animals, the organs of sense are duller and coarser. Thus, it is composed of less ingenious instruments, and of spaces less capacious for receiving the faculties of sense.</blockquote>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
-
-Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
-
-<img class="aligncenter " src="http://aquila.kitethemes.com/wp-content/import-data-images/2015/12/image.png" alt="image" />
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
-
-Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
-<h3>SHOW ME SOME CODE!</h3>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
-
-Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
-<ul>
-	<li>Pellentesque placerat, ex ac tempor convallis</li>
-	<li>Orci arcu vulputate sapien, vel pulvinar risus enim at libero.</li>
-	<li>Vivamus elementum vehicula sapien vitae tincidunt.</li>
-	<li>Fusce a felis sed leo porttitor cursus</li>
-</ul>
-Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectus efficitur massa, nec elementum sem orci nec quam. Aenean pretium mi leo, vitae pretium turpis interdum ut. Curabitur a lectus sem. Aliquam mattis quam ac ex maximus rhoncus. Mauris in iaculis enim. Mauris lobortis dui in faucibus vestibulum. In convallis euismod elit eu pulvinar. Phasellus et bibendum turpis. Nulla tristique felis id ipsum venenatis mollis. Vivamus vel quam dolor. Nam nec malesuada enim. Maecenas convallis lobortis tortor sed tincidunt.]]></content:encoded>
-		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
-		<wp:post_id>208</wp:post_id>
-		<wp:post_date><![CDATA[2015-12-25 04:03:26]]></wp:post_date>
-		<wp:post_date_gmt><![CDATA[2015-12-25 04:03:26]]></wp:post_date_gmt>
-		<wp:comment_status><![CDATA[open]]></wp:comment_status>
-		<wp:ping_status><![CDATA[open]]></wp:ping_status>
-		<wp:post_name><![CDATA[p-vs-np-the-assumption-that-runs-the-internet]]></wp:post_name>
-		<wp:status><![CDATA[publish]]></wp:status>
-		<wp:post_parent>0</wp:post_parent>
-		<wp:menu_order>0</wp:menu_order>
-		<wp:post_type><![CDATA[post]]></wp:post_type>
-		<wp:post_password><![CDATA[]]></wp:post_password>
-		<wp:is_sticky>0</wp:is_sticky>
-		<category domain="category" nicename="music"><![CDATA[Music]]></category>
-		<category domain="post_format" nicename="post-format-audio"><![CDATA[Audio]]></category>
-		<category domain="category" nicename="travel"><![CDATA[Travel]]></category>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
-			<wp:meta_value><![CDATA[233]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_choose_video]]></wp:meta_key>
-			<wp:meta_value><![CDATA[youtube]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_gallery_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[slider]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_post_featured]]></wp:meta_key>
-			<wp:meta_value><![CDATA[no]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_post_detail_media]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_slideshow_posts_style]]></wp:meta_key>
-			<wp:meta_value><![CDATA[big]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
-			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
-			<wp:meta_value><![CDATA[hello-world]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_audio_type]]></wp:meta_key>
-			<wp:meta_value><![CDATA[soundcloud]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_audio_soundcloud]]></wp:meta_key>
-			<wp:meta_value><![CDATA[<iframe style="width:100%;" height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/227010461&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[30]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_like_post]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
-			<wp:meta_value><![CDATA[]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_layout]]></wp:meta_key>
-			<wp:meta_value><![CDATA[default]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_dp_original]]></wp:meta_key>
-			<wp:meta_value><![CDATA[1]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_background_body]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_background_inner]]></wp:meta_key>
-			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
-			<wp:meta_value><![CDATA[ui-stack-accessible-web-apps-3]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_audio_mp3]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
-			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
-			<wp:meta_value><![CDATA[0]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 	<item>
@@ -12472,7 +12110,7 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
-			<wp:meta_value><![CDATA[541]]></wp:meta_value>
+			<wp:meta_value><![CDATA[542]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
@@ -12572,6 +12210,335 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 			<wp:comment_parent>9</wp:comment_parent>
 			<wp:comment_user_id>1</wp:comment_user_id>
 		</wp:comment>
+	</item>
+	<item>
+		<title>Web Development Reading List #114: Black Friday, UI Stack, Accessible Web Apps</title>
+		<link>http://aquila.kitethemes.com/web-development-reading-list-114-black-friday-ui-stack-accessible-web-apps-2/</link>
+		<pubDate>Fri, 25 Dec 2015 03:55:48 +0000</pubDate>
+		<dc:creator><![CDATA[ngohongnguyen]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=200</guid>
+		<description></description>
+		<content:encoded><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
+
+<!--more-->
+
+Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
+<blockquote>I have found that, in the composition of the human body as compared with the bodies of animals, the organs of sense are duller and coarser. Thus, it is composed of less ingenious instruments, and of spaces less capacious for receiving the faculties of sense.</blockquote>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
+
+Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
+
+<img class="aligncenter " src="http://aquila.kitethemes.com/wp-content/import-data-images/2015/12/image.png" alt="image" />
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
+
+Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
+<h4>SHOW ME SOME CODE!</h4>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
+
+Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
+<ul>
+	<li>Pellentesque placerat, ex ac tempor convallis</li>
+	<li>Orci arcu vulputate sapien, vel pulvinar risus enim at libero.</li>
+	<li>Vivamus elementum vehicula sapien vitae tincidunt.</li>
+	<li>Fusce a felis sed leo porttitor cursus</li>
+</ul>
+Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectus efficitur massa, nec elementum sem orci nec quam. Aenean pretium mi leo, vitae pretium turpis interdum ut. Curabitur a lectus sem. Aliquam mattis quam ac ex maximus rhoncus. Mauris in iaculis enim. Mauris lobortis dui in faucibus vestibulum. In convallis euismod elit eu pulvinar. Phasellus et bibendum turpis. Nulla tristique felis id ipsum venenatis mollis. Vivamus vel quam dolor. Nam nec malesuada enim. Maecenas convallis lobortis tortor sed tincidunt.]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>200</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-25 03:55:48]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-25 03:55:48]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[web-development-reading-list-114-black-friday-ui-stack-accessible-web-apps-2]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="post_tag" nicename="case-studies"><![CDATA[Case Studies]]></category>
+		<category domain="post_tag" nicename="javascript"><![CDATA[JavaScript]]></category>
+		<category domain="category" nicename="music"><![CDATA[Music]]></category>
+		<category domain="post_format" nicename="post-format-audio"><![CDATA[Audio]]></category>
+		<category domain="category" nicename="travel"><![CDATA[Travel]]></category>
+		<category domain="post_tag" nicename="user-experience"><![CDATA[User Experience]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[235]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_choose_video]]></wp:meta_key>
+			<wp:meta_value><![CDATA[youtube]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_gallery_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[slider]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_post_featured]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_post_detail_media]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_slideshow_posts_style]]></wp:meta_key>
+			<wp:meta_value><![CDATA[big]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
+			<wp:meta_value><![CDATA[hello-world]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_audio_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[soundcloud]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_audio_soundcloud]]></wp:meta_key>
+			<wp:meta_value><![CDATA[<iframe height="166" style="width:100%;" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/227010461&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
+			<wp:meta_value><![CDATA[70]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_like_post]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_layout]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_dp_original]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_background_body]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_background_inner]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
+			<wp:meta_value><![CDATA[ui-stack-accessible-web-apps-2]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_audio_mp3]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>A Guide To Simple And Painless Mobile User Testing</title>
+		<link>http://aquila.kitethemes.com/good-news-for-http2-and-better-flexbox-grids/</link>
+		<pubDate>Sat, 26 Dec 2015 03:56:19 +0000</pubDate>
+		<dc:creator><![CDATA[admin]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=201</guid>
+		<description></description>
+		<content:encoded><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
+
+<!--more-->
+
+Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
+<blockquote>I have found that, in the composition of the human body as compared with the bodies of animals, the organs of sense are duller and coarser. Thus, it is composed of less ingenious instruments, and of spaces less capacious for receiving the faculties of sense.</blockquote>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
+
+Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
+
+<img class="aligncenter " src="http://aquila.kitethemes.com/wp-content/import-data-images/2015/12/image.png" alt="image" />
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
+
+Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
+<h4>SHOW ME SOME CODE!</h4>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
+
+Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
+<ul>
+	<li>Pellentesque placerat, ex ac tempor convallis</li>
+	<li>Orci arcu vulputate sapien, vel pulvinar risus enim at libero.</li>
+	<li>Vivamus elementum vehicula sapien vitae tincidunt.</li>
+	<li>Fusce a felis sed leo porttitor cursus</li>
+</ul>
+Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectus efficitur massa, nec elementum sem orci nec quam. Aenean pretium mi leo, vitae pretium turpis interdum ut. Curabitur a lectus sem. Aliquam mattis quam ac ex maximus rhoncus. Mauris in iaculis enim. Mauris lobortis dui in faucibus vestibulum. In convallis euismod elit eu pulvinar. Phasellus et bibendum turpis. Nulla tristique felis id ipsum venenatis mollis. Vivamus vel quam dolor. Nam nec malesuada enim. Maecenas convallis lobortis tortor sed tincidunt.]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>201</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-26 03:56:19]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-26 03:56:19]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[good-news-for-http2-and-better-flexbox-grids]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="beauty"><![CDATA[Beauty]]></category>
+		<category domain="category" nicename="fashion"><![CDATA[Fashion]]></category>
+		<category domain="category" nicename="lifestyle"><![CDATA[Lifestyle]]></category>
+		<category domain="post_format" nicename="post-format-gallery"><![CDATA[Gallery]]></category>
+		<category domain="category" nicename="travel"><![CDATA[Travel]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_choose_video]]></wp:meta_key>
+			<wp:meta_value><![CDATA[youtube]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_post_format]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_title_and_meta_center]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_scheme]]></wp:meta_key>
+			<wp:meta_value><![CDATA[light]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_page_header]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_show_breadcrumb]]></wp:meta_key>
+			<wp:meta_value><![CDATA[-1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
+			<wp:meta_value><![CDATA[24]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_like_post]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[232]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_gallery_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[slider]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_post_featured]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_post_detail_media]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_slideshow_posts_style]]></wp:meta_key>
+			<wp:meta_value><![CDATA[big]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_external_url]]></wp:meta_key>
+			<wp:meta_value><![CDATA[http://themeforest.net/item/delphinus-creative-multipurpose-ecommerce-html5/13732519]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_dp_original]]></wp:meta_key>
+			<wp:meta_value><![CDATA[68]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_layout]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_background_body]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_background_inner]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_audio_mp3]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
+			<wp:meta_value><![CDATA[74]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
+			<wp:meta_value><![CDATA[61]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
+			<wp:meta_value><![CDATA[60]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
+			<wp:meta_value><![CDATA[58]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
+			<wp:meta_value><![CDATA[59]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 	<item>
 		<title>Web Development Reading List #115: Good News For HTTP/2, And Better Flexbox Grids</title>
@@ -13064,6 +13031,156 @@ Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectu
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
 			<wp:meta_value><![CDATA[black-friday-ui-stack-accessible-web-apps-2]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_audio_mp3]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_gallery_images]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>P Vs. NP: The Assumption That Runs The Internet</title>
+		<link>http://aquila.kitethemes.com/p-vs-np-the-assumption-that-runs-the-internet/</link>
+		<pubDate>Fri, 25 Dec 2015 04:03:26 +0000</pubDate>
+		<dc:creator><![CDATA[ngohongnguyen]]></dc:creator>
+		<guid isPermaLink="false">http://aquila.kitethemes.com/?p=208</guid>
+		<description></description>
+		<content:encoded><![CDATA[Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
+
+<!--more-->
+
+Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
+<blockquote>I have found that, in the composition of the human body as compared with the bodies of animals, the organs of sense are duller and coarser. Thus, it is composed of less ingenious instruments, and of spaces less capacious for receiving the faculties of sense.</blockquote>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
+
+Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
+
+<img class="aligncenter " src="http://aquila.kitethemes.com/wp-content/import-data-images/2015/12/image.png" alt="image" />
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
+
+Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
+<h3>SHOW ME SOME CODE!</h3>
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ornare dignissim felis nec malesuada. Nunc fringilla est nec nisi accumsan porta. Praesent non aliquam augue, sed aliquet elit. Nam pretium eu est sed tincidunt. Donec ullamcorper odio vitae felis tempor suscipit tincidunt nec orci. Duis vulputate, nunc id vestibulum imperdiet, dui neque mattis erat, maximus ornare nisi nisi tempor ante.
+
+Cras feugiat sodales arcu. Sed id luctus purus. Aenean tristique risus id sem sollicitudin elementum. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Aliquam erat volutpat. Mauris viverra quis velit ac lobortis. Donec fringilla rhoncus magna. Maecenas elit lorem, tincidunt non gravida sed, consectetur sed nunc. Suspendisse pretium elit ac viverra faucibus.
+<ul>
+	<li>Pellentesque placerat, ex ac tempor convallis</li>
+	<li>Orci arcu vulputate sapien, vel pulvinar risus enim at libero.</li>
+	<li>Vivamus elementum vehicula sapien vitae tincidunt.</li>
+	<li>Fusce a felis sed leo porttitor cursus</li>
+</ul>
+Quisque eu sollicitudin leo. Ut pharetra, dolor eu dictum hendrerit, lacus lectus efficitur massa, nec elementum sem orci nec quam. Aenean pretium mi leo, vitae pretium turpis interdum ut. Curabitur a lectus sem. Aliquam mattis quam ac ex maximus rhoncus. Mauris in iaculis enim. Mauris lobortis dui in faucibus vestibulum. In convallis euismod elit eu pulvinar. Phasellus et bibendum turpis. Nulla tristique felis id ipsum venenatis mollis. Vivamus vel quam dolor. Nam nec malesuada enim. Maecenas convallis lobortis tortor sed tincidunt.]]></content:encoded>
+		<excerpt:encoded><![CDATA[]]></excerpt:encoded>
+		<wp:post_id>208</wp:post_id>
+		<wp:post_date><![CDATA[2015-12-25 04:03:26]]></wp:post_date>
+		<wp:post_date_gmt><![CDATA[2015-12-25 04:03:26]]></wp:post_date_gmt>
+		<wp:comment_status><![CDATA[open]]></wp:comment_status>
+		<wp:ping_status><![CDATA[open]]></wp:ping_status>
+		<wp:post_name><![CDATA[p-vs-np-the-assumption-that-runs-the-internet]]></wp:post_name>
+		<wp:status><![CDATA[publish]]></wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type><![CDATA[post]]></wp:post_type>
+		<wp:post_password><![CDATA[]]></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="music"><![CDATA[Music]]></category>
+		<category domain="post_format" nicename="post-format-audio"><![CDATA[Audio]]></category>
+		<category domain="category" nicename="travel"><![CDATA[Travel]]></category>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_thumbnail_id]]></wp:meta_key>
+			<wp:meta_value><![CDATA[233]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_edit_last]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_vc_post_settings]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{s:10:"vc_grid_id";a:0:{}}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_choose_video]]></wp:meta_key>
+			<wp:meta_value><![CDATA[youtube]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_gallery_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[slider]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_post_featured]]></wp:meta_key>
+			<wp:meta_value><![CDATA[no]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_post_detail_media]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_header_position]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_slideshow_posts_style]]></wp:meta_key>
+			<wp:meta_value><![CDATA[big]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_left_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_right_sidebar]]></wp:meta_key>
+			<wp:meta_value><![CDATA[primary-widget-area]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
+			<wp:meta_value><![CDATA[hello-world]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_audio_type]]></wp:meta_key>
+			<wp:meta_value><![CDATA[soundcloud]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_audio_soundcloud]]></wp:meta_key>
+			<wp:meta_value><![CDATA[<iframe style="width:100%;" height="166" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/227010461&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[kt_post_views_count]]></wp:meta_key>
+			<wp:meta_value><![CDATA[30]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_like_post]]></wp:meta_key>
+			<wp:meta_value><![CDATA[0]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[slide_template]]></wp:meta_key>
+			<wp:meta_value><![CDATA[]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_layout]]></wp:meta_key>
+			<wp:meta_value><![CDATA[default]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_dp_original]]></wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_background_body]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_kt_background_inner]]></wp:meta_key>
+			<wp:meta_value><![CDATA[a:7:{s:5:"color";s:1:"#";s:6:"repeat";s:0:"";s:4:"size";s:0:"";s:10:"attachment";s:0:"";s:8:"position";s:0:"";s:3:"url";s:0:"";s:5:"media";s:12:"inline-block";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key><![CDATA[_wp_old_slug]]></wp:meta_key>
+			<wp:meta_value><![CDATA[ui-stack-accessible-web-apps-3]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key><![CDATA[_kt_audio_mp3]]></wp:meta_key>

@@ -2047,6 +2047,23 @@ ul.style-list{
   margin-bottom: $shortcode;
 }
 
+.gallery-fullwidth{
+  overflow: hidden;
+  margin-bottom: 30px;
+  &.fullwidth{
+    overflow: inherit;
+    .slick-list{
+      overflow: inherit;
+    }
+  }
+  .slick-list{
+    margin: 0 -20px;
+    .slick-slide{
+      margin: 0 20px;
+    }
+  }
+}
+
 /* ==============================
    9. Header
    ============================== */
@@ -2097,7 +2114,7 @@ ul.style-list{
   background: $white;
   &.header-shadow {
     #header-content{
-      z-index: 3;
+      z-index: 11;
       @include box-shadow(0, 2px, 6px, rgba($black, 0.05));
     }
   }
@@ -2118,6 +2135,7 @@ ul.style-list{
 
 #header-content{
   position: relative;
+  z-index: 11;
 }
 
 #main-nav-tool{
@@ -3106,10 +3124,27 @@ body.opened-nav-animate{
     margin-right: auto;
     .slick-arrow{
       &.slick-prev {
-        left: 40px;
+        left: 15px;
       }
       &.slick-next {
-        right: 40px;
+        right: 15px;
+      }
+    }
+  }
+}
+
+.layout-boxed{
+  #main-slideshow{
+    &.post-slider-normal,
+    &.post-slider-slider{
+      .slick-arrow{
+        @include opacity(1);
+        &.slick-prev {
+          left: 0;
+        }
+        &.slick-next {
+          right: 0;
+        }
       }
     }
   }
@@ -3124,6 +3159,7 @@ body.opened-nav-animate{
 
 }
 
+.entry-thumb,
 #main-slideshow{
   .slick-arrow{
     z-index: 90;
@@ -3166,6 +3202,15 @@ body.opened-nav-animate{
     &:hover{
       @include opacity(1);
       outline: none;
+    }
+  }
+}
+
+#main-slideshow,
+.post-item-content{
+  .blog-posts-slick{
+    .slick-arrow{
+      display: none!important;
     }
   }
 }
@@ -3247,6 +3292,7 @@ body.opened-nav-animate{
         border: none;
         text-indent: -999px;
         overflow: hidden;
+        outline: none;
       }
       &.slick-active{
         button{
@@ -4204,6 +4250,9 @@ article.post-item-content{
 
 .entry-thumb-fullwidth{
   overflow: hidden;
+  .gallery-fullwidth{
+    margin: 0;
+  }
 }
 
 .main.sidebar-left,
@@ -4457,6 +4506,12 @@ article.post-item-content{
   .entry-thumb{
     display: block;
     margin-bottom: 35px;
+    .blog-posts-slick{
+      .slick-slide.slick-current::after,
+      .slick-dots{
+        display: none!important;
+      }
+    }
     img{
       margin: 0 auto;
     }

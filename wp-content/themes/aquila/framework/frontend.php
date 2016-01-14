@@ -557,19 +557,19 @@ if ( ! function_exists( 'kt_post_thumbnail' ) ) :
                     );
                 }
             }elseif($type == 'grid'){
-                $images = kt_get_galleries_post('_kt_gallery_images', 'kt_recent_posts_masonry');
+                $images = kt_get_galleries_post('_kt_gallery_images', 'full');
                 $gallery = '';
                 if($images){
                     foreach($images as $image){
                         $gallery .= sprintf(
                             '<div class="%s">%s</div>',
                             'gallery-image-item',
-                            '<a href="'.$image['full_url'].'"><span></span><img src="'.$image['url'].'" title="'.esc_attr($image['title']).'" alt="'.esc_attr($image['alt']).'"></a>'
+                            '<img src="'.$image['url'].'" title="'.esc_attr($image['title']).'" alt="'.esc_attr($image['alt']).'">'
                         );
                     }
                     printf(
                         '<div class="entry-thumb"><div class="%s">%s</div></div><!-- .entry-thumb -->',
-                        'gallery-images gallery-images-justified  clearfix',
+                        'gallery-images gallery-fullwidth clearfix',
                         $gallery
                     );
                 }

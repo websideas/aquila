@@ -309,7 +309,7 @@
 
         var blog_posts_slick = $('.blog-posts-slick').slick({
             dots: true,
-            arrows: false
+            arrows: true
         });
 
         $('body').on('click','#main-slideshow .slick-next',function(){
@@ -354,6 +354,14 @@
         $('body').on('click','.carousel-prev',function(){
             slide_carousel.slick('slickPrev');
             return false;
+        });
+
+
+        $('.gallery-fullwidth').slick({
+            arrows: false,
+            variableWidth: true,
+            centerMode: true,
+            centerPadding: 0
         });
     }
 

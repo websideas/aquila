@@ -398,9 +398,15 @@ if (!function_exists('kt_show_slideshow')) {
             }
         };
 
+        if( $slideshow == 'postslider' ){
+            $slick_arrow = '<div class="slick-prev slick-arrow"></div><div class="slick-next slick-arrow"></div>';
+        }else{
+            $slick_arrow = '';
+        }
+
         if($output != ''){
             printf(
-                '<div id="main-slideshow" class="%s"><div id="sideshow-inner">%s<div class="slick-prev slick-arrow"></div><div class="slick-next slick-arrow"></div></div></div>',
+                '<div id="main-slideshow" class="%s"><div id="sideshow-inner">%s'.$slick_arrow.'</div></div>',
                 esc_attr(implode(' ', $sideshow_class)),
                 $output
             );

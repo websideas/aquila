@@ -46,6 +46,7 @@ $composer_addons = array(
     'googlemap.php',
     'socials.php',
     'gallery-grid.php',
+    'gallery_fullwidth.php',
     'gallery-justified.php'
 );
 
