@@ -3133,11 +3133,12 @@ body.opened-nav-animate{
     margin-left: auto;
     margin-right: auto;
     .slick-arrow{
+      margin-top: -60px;
       &.slick-prev {
-        left: 15px;
+        left: 45px;
       }
       &.slick-next {
-        right: 15px;
+        right: 45px;
       }
     }
   }
@@ -3227,7 +3228,7 @@ body.opened-nav-animate{
 
 #main-slideshow{
   &.post-slider-thumb{
-    .slick-arrow{
+    .slick-slide.slick-current::after{
       display: none!important;
     }
   }
@@ -3393,9 +3394,6 @@ body.opened-nav-animate{
         right: 0;
       }
     }
-    .slick-dots{
-      
-    }
   }
   &.posts-slick-slider{
     .slick-slide{
@@ -3443,7 +3441,8 @@ body.opened-nav-animate{
       left:50%;
       bottom: 20px;
       width: auto;
-      padding: 0
+      padding: 0;
+      right: auto;
     }
   }
 }
