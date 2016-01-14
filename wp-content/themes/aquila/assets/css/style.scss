@@ -2068,6 +2068,7 @@ ul.style-list{
     margin: 0 -20px;
     .slick-slide{
       margin: 0 20px;
+      outline: none;
     }
   }
 }
@@ -2654,6 +2655,7 @@ ul.style-list{
     width: 100%;
     top: 0;
     z-index: 999!important;
+    @include box-shadow(0, 2px, 6px, rgba($black, 0.05));
   }
 
   &.sticky-header-down{
@@ -3217,6 +3219,14 @@ body.opened-nav-animate{
 #main-slideshow,
 .post-item-content{
   .blog-posts-slick{
+    .slick-arrow{
+      display: none!important;
+    }
+  }
+}
+
+#main-slideshow{
+  &.post-slider-thumb{
     .slick-arrow{
       display: none!important;
     }

@@ -3,7 +3,7 @@
 Plugin Name: WP Instagram Widget
 Plugin URI: https://github.com/scottsweb/wp-instagram-widget
 Description: A WordPress widget for showing your latest Instagram photos.
-Version: 1.9.2
+Version: 1.9.3
 Author: Scott Evans
 Author URI: http://scott.ee
 Text Domain: wp-instagram-widget
@@ -162,7 +162,7 @@ class null_instagram_widget extends WP_Widget {
 		$username = strtolower( $username );
 		$username = str_replace( '@', '', $username );
 
-		if ( false === ( $instagram = get_transient( 'instagram-m8-'.sanitize_title_with_dashes( $username ) ) ) ) {
+		if ( false === ( $instagram = get_transient( 'instagram-a1-'.sanitize_title_with_dashes( $username ) ) ) ) {
 
 			$remote = wp_remote_get( 'http://instagram.com/'.trim( $username ) );
 
@@ -196,16 +196,22 @@ class null_instagram_widget extends WP_Widget {
 				$image['display_src'] = preg_replace( '/^https?\:/i', '', $image['display_src'] );
 
 				// handle both types of CDN url
-				$urlparts = parse_url( $image['thumbnail_src'] );
-				$pathparts = explode( '/', $urlparts['path'] );
-				if ( ! preg_match('/s\d+x\d+/', $pathparts[3]) ) {
-					array_splice($pathparts, 3, 0, '');
+				if ( (strpos( $image['thumbnail_src'], 's640x640' ) !== false ) ) {
+					$image['thumbnail'] = str_replace( 's640x640', 's160x160', $image['thumbnail_src'] );
+					$image['small'] = str_replace( 's640x640', 's320x320', $image['thumbnail_src'] );
+				} else {
+					$urlparts = parse_url( $image['thumbnail_src'] );
+					$pathparts = explode( '/', $urlparts['path'] );
+					if ( ! preg_match('/s\d+x\d+/', $pathparts[3]) ) {
+						array_splice($pathparts, 3, 0, '');
+					}
+
+					$pathparts[3] = 's160x160';
+					$image['thumbnail'] = '//' . $urlparts['host'] . implode('/', $pathparts);
+					$pathparts[3] = 's320x320';
+					$image['small'] = '//' . $urlparts['host'] . implode('/', $pathparts);
 				}
 
-				$pathparts[3] = 's160x160';
-				$image['thumbnail'] = '//' . $urlparts['host'] . implode('/', $pathparts);
-				$pathparts[3] = 's320x320';
-				$image['small'] = '//' . $urlparts['host'] . implode('/', $pathparts);
 				$image['large'] = $image['thumbnail_src'];
 
 				if ( $image['is_video'] == true ) {
@@ -236,7 +242,7 @@ class null_instagram_widget extends WP_Widget {
 			// do not set an empty transient - should help catch private or empty accounts
 			if ( ! empty( $instagram ) ) {
 				$instagram = base64_encode( serialize( $instagram ) );
-				set_transient( 'instagram-m8-'.sanitize_title_with_dashes( $username ), $instagram, apply_filters( 'null_instagram_cache_time', HOUR_IN_SECONDS*2 ) );
+				set_transient( 'instagram-a1-'.sanitize_title_with_dashes( $username ), $instagram, apply_filters( 'null_instagram_cache_time', HOUR_IN_SECONDS*2 ) );
 			}
 		}
 

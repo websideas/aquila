@@ -8,7 +8,6 @@ class WPBakeryShortCode_KT_Gallery_Fullwidth extends WPBakeryShortCode {
     protected function content($atts, $content = null) {
         $atts = shortcode_atts( array(
             'image_gallery' => '',
-            'image_size' => 'full',
             'fullwidth' => true,
             
             'el_class' => '',
@@ -35,8 +34,8 @@ class WPBakeryShortCode_KT_Gallery_Fullwidth extends WPBakeryShortCode {
                 $output .= '<div class="gallery-fullwidth'.$class_fulwidth.'">';
                     foreach ( $image_gallery as $attach_id ) {
                     	if ( $attach_id > 0 ) {
-                    		$image = wp_get_attachment_image_src( $attach_id, $image_size );
-
+                    		$image = wp_get_attachment_image_src( $attach_id, 'kt_gallery_fullwidth' );
+                            
                             $output .= '<img src="'.$image[0].'" alt="" />';
                     	}
                     }
@@ -92,12 +91,6 @@ vc_map( array(
 			'param_name' => 'image_gallery',
 			'description' => esc_html__( 'Select image from media library.', 'js_composer' ),
 		),
-        array(
-            "type" => "kt_image_sizes",
-            "heading" => esc_html__( "Select image sizes", 'aquila' ),
-            "param_name" => "image_size",
-            'std' => 'full'
-        ),
 
         array(
             'type' => 'kt_switch',

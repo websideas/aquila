@@ -81,6 +81,8 @@ function kt_theme_setup() {
 
         add_image_size( 'kt_widget_article', 120, 75, true );
         add_image_size( 'kt_widget_article_carousel', 335, 250, true );
+
+        add_image_size( 'kt_gallery_fullwidth', 5000, 730 );        
     }
     
     load_theme_textdomain( 'aquila', KT_THEME_DIR . '/languages' );
@@ -557,7 +559,7 @@ if ( ! function_exists( 'kt_post_thumbnail' ) ) :
                     );
                 }
             }elseif($type == 'grid'){
-                $images = kt_get_galleries_post('_kt_gallery_images', 'full');
+                $images = kt_get_galleries_post('_kt_gallery_images', 'kt_gallery_fullwidth');
                 $gallery = '';
                 if($images){
                     foreach($images as $image){
