@@ -138,7 +138,7 @@ get_header(); ?>
                             $j++;$k++;
                         }
                     }else {
-                        if($featured == 'yes'){
+                        if($featured == 'yes' && ( $type == 'medium' || $type == 'list')){
                             printf('<div class="article-post-item col-lg-12 col-md-12 col-sm-12">', $article_column);
                             get_template_part( 'templates/blog/'.$type.'/contentf', get_post_format());
                             $j = 0;
