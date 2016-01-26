@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,SAAS,CACP,QAAQ,CAAE,KAAK,CACf,GAAG,CAAE,KAAK,CACV,OAAO,CAAE,EAAE,CACX,KAAK,CAAE,KAAK,CACZ,UAAU,CAAE,OAAO,CACnB,OAAO,CAAE,IAAI,CACb,SAAS,CAAE,IAAI,CACf,MAAM,CAAE,iBAAiB,CACzB,WAAW,CAAE,IAAI",
+"sources": ["kt-switcher.scss"],
+"names": [],
+"file": "kt-switcher.css"
+}
