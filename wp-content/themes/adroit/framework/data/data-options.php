@@ -286,12 +286,12 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'on'        => esc_html__( 'Enabled', 'adroit' ),
                         'off'       => esc_html__( 'Disabled', 'adroit' ),
                     ),
-                    
-                    
+
+
                     array(
-                         'id'   => 'footer_socials',
-                         'type' => 'kt_socials',
-                         'title'    => __( 'Select your socials', 'adroit' ),
+                        'id'   => 'footer_socials',
+                        'type' => 'kt_socials',
+                        'title'    => __( 'Select your socials', 'adroit' ),
                     ),
                 )
             );
@@ -506,14 +506,14 @@ if ( ! class_exists( 'KT_config' ) ) {
                 'fields'    => array(
                     array(
                         'id'       => 'kt-presets',
-                        'type'     => 'image_select', 
+                        'type'     => 'image_select',
                         'presets'  => true,
                         'title'    => esc_html__('Color Preset', 'wingman'),
                         'subtitle' => esc_html__('Select the color you want to use for the theme.', 'wingman'),
                         'default'  => 0,
                         'options'  => array(
                             'color_default'      => array(
-                                'alt'   => 'Default', 
+                                'alt'   => 'Default',
                                 'img'   => KT_FW_IMG.'/preset/default.jpg',
                                 'presets'   => array(
                                     'styling_accent' => '#22dcce',
@@ -526,51 +526,23 @@ if ( ! class_exists( 'KT_config' ) ) {
                                     'mobile_sub_color_hover' => '#22dcce',
                                     'styling_link' => array(
                                         'regular' => '#22dcce',
-                                        'hover' => '#000000',
-                                        'active' => '#000000'
+                                        'hover' => '#00A99B',
+                                        'active' => '#00A99B'
                                     ),
-                                )
-                            ),
-                            'color_blue'      => array(
-                                'alt'   => 'Blue', 
-                                'img'   => KT_FW_IMG.'/preset/blue.jpg',
-                                'presets'   => array(
-                                    'styling_accent' => '#5472d2',
-                                    'color_first_loader' => '#5472d2',
-                                    'mega_title_color_hover' => '#5472d2',
-                                    'mega_color_hover' => '#5472d2',
-                                    'navigation_color_hover' => '#5472d2',
-                                    'dropdown_color_hover' => '#5472d2',
-                                    'mobile_menu_color_hover' => '#5472d2',
-                                    'mobile_sub_color_hover' => '#5472d2',
-                                    'styling_link' => array(
-                                        'regular' => '#5472d2',
-                                        'hover' => '#000000',
-                                        'active' => '#000000'
+                                    'typography_footer_widgets_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#22dcce',
+                                        'active'  => '#22dcce'
                                     ),
-                                )
-                            ),
-                            'color_chino'      => array(
-                                'alt'   => 'Chino', 
-                                'img'   => KT_FW_IMG.'/preset/chino.jpg',
-                                'presets'   => array(
-                                    'styling_accent' => '#cec2ab',
-                                    'color_first_loader' => '#cec2ab',
-                                    'mega_title_color_hover' => '#cec2ab',
-                                    'mega_color_hover' => '#cec2ab',
-                                    'navigation_color_hover' => '#cec2ab',
-                                    'dropdown_color_hover' => '#cec2ab',
-                                    'mobile_menu_color_hover' => '#cec2ab',
-                                    'mobile_sub_color_hover' => '#cec2ab',
-                                    'styling_link' => array(
-                                        'regular' => '#cec2ab',
-                                        'hover' => '#000000',
-                                        'active' => '#000000'
-                                    ),
+                                    'typography_footer_bottom_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#22dcce',
+                                        'active'  => '#22dcce'
+                                    )
                                 )
                             ),
                             'color_green'      => array(
-                                'alt'   => 'Green', 
+                                'alt'   => 'Green',
                                 'img'   => KT_FW_IMG.'/preset/green.jpg',
                                 'presets'   => array(
                                     'styling_accent' => '#6dab3c',
@@ -583,13 +555,23 @@ if ( ! class_exists( 'KT_config' ) ) {
                                     'mobile_sub_color_hover' => '#6dab3c',
                                     'styling_link' => array(
                                         'regular' => '#6dab3c',
-                                        'hover' => '#000000',
-                                        'active' => '#000000'
+                                        'hover' => '#3A7809',
+                                        'active' => '#3A7809'
                                     ),
+                                    'typography_footer_widgets_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#6dab3c',
+                                        'active'  => '#6dab3c'
+                                    ),
+                                    'typography_footer_bottom_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#6dab3c',
+                                        'active'  => '#6dab3c'
+                                    )
                                 )
                             ),
                             'color_juicy_pink'      => array(
-                                'alt'   => 'Juicy Pink', 
+                                'alt'   => 'Juicy Pink',
                                 'img'   => KT_FW_IMG.'/preset/juicy-pink.jpg',
                                 'presets'   => array(
                                     'styling_accent' => '#f4524d',
@@ -602,32 +584,23 @@ if ( ! class_exists( 'KT_config' ) ) {
                                     'mobile_sub_color_hover' => '#f4524d',
                                     'styling_link' => array(
                                         'regular' => '#f4524d',
-                                        'hover' => '#000000',
-                                        'active' => '#000000'
+                                        'hover' => '#C11F1A',
+                                        'active' => '#C11F1A'
                                     ),
-                                )
-                            ),
-                            'color_mulled_wine'      => array(
-                                'alt'   => 'mulled-wine', 
-                                'img'   => KT_FW_IMG.'/preset/mulled-wine.jpg',
-                                'presets'   => array(
-                                    'styling_accent' => '#50485b',
-                                    'color_first_loader' => '#50485b',
-                                    'mega_title_color_hover' => '#50485b',
-                                    'mega_color_hover' => '#50485b',
-                                    'navigation_color_hover' => '#50485b',
-                                    'dropdown_color_hover' => '#50485b',
-                                    'mobile_menu_color_hover' => '#50485b',
-                                    'mobile_sub_color_hover' => '#50485b',
-                                    'styling_link' => array(
-                                        'regular' => '#50485b',
-                                        'hover' => '#000000',
-                                        'active' => '#000000'
+                                    'typography_footer_widgets_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#f4524d',
+                                        'active'  => '#f4524d'
                                     ),
+                                    'typography_footer_bottom_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#f4524d',
+                                        'active'  => '#f4524d'
+                                    )
                                 )
                             ),
                             'color_orange'      => array(
-                                'alt'   => 'orange', 
+                                'alt'   => 'orange',
                                 'img'   => KT_FW_IMG.'/preset/orange.jpg',
                                 'presets'   => array(
                                     'styling_accent' => '#f7be68',
@@ -640,51 +613,23 @@ if ( ! class_exists( 'KT_config' ) ) {
                                     'mobile_sub_color_hover' => '#f7be68',
                                     'styling_link' => array(
                                         'regular' => '#f7be68',
-                                        'hover' => '#000000',
-                                        'active' => '#000000'
+                                        'hover' => '#C48B35',
+                                        'active' => '#C48B35'
                                     ),
-                                )
-                            ),
-                            'color_peacoc'      => array(
-                                'alt'   => 'peacoc', 
-                                'img'   => KT_FW_IMG.'/preset/peacoc.jpg',
-                                'presets'   => array(
-                                    'styling_accent' => '#4cadc9',
-                                    'color_first_loader' => '#4cadc9',
-                                    'mega_title_color_hover' => '#4cadc9',
-                                    'mega_color_hover' => '#4cadc9',
-                                    'navigation_color_hover' => '#4cadc9',
-                                    'dropdown_color_hover' => '#4cadc9',
-                                    'mobile_menu_color_hover' => '#4cadc9',
-                                    'mobile_sub_color_hover' => '#4cadc9',
-                                    'styling_link' => array(
-                                        'regular' => '#4cadc9',
-                                        'hover' => '#000000',
-                                        'active' => '#000000'
+                                    'typography_footer_widgets_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#f7be68',
+                                        'active'  => '#f7be68'
                                     ),
-                                )
-                            ),
-                            'color_pink'      => array(
-                                'alt'   => 'pink', 
-                                'img'   => KT_FW_IMG.'/preset/pink.jpg',
-                                'presets'   => array(
-                                    'styling_accent' => '#fe6c61',
-                                    'color_first_loader' => '#fe6c61',
-                                    'mega_title_color_hover' => '#fe6c61',
-                                    'mega_color_hover' => '#fe6c61',
-                                    'navigation_color_hover' => '#fe6c61',
-                                    'dropdown_color_hover' => '#fe6c61',
-                                    'mobile_menu_color_hover' => '#fe6c61',
-                                    'mobile_sub_color_hover' => '#fe6c61',
-                                    'styling_link' => array(
-                                        'regular' => '#fe6c61',
-                                        'hover' => '#000000',
-                                        'active' => '#000000'
-                                    ),
+                                    'typography_footer_bottom_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#f7be68',
+                                        'active'  => '#f7be68'
+                                    )
                                 )
                             ),
                             'color_purple'      => array(
-                                'alt'   => 'purple', 
+                                'alt'   => 'purple',
                                 'img'   => KT_FW_IMG.'/preset/purple.jpg',
                                 'presets'   => array(
                                     'styling_accent' => '#b97ebb',
@@ -697,13 +642,23 @@ if ( ! class_exists( 'KT_config' ) ) {
                                     'mobile_sub_color_hover' => '#b97ebb',
                                     'styling_link' => array(
                                         'regular' => '#b97ebb',
-                                        'hover' => '#000000',
-                                        'active' => '#000000'
+                                        'hover' => '#864B88',
+                                        'active' => '#864B88'
                                     ),
+                                    'typography_footer_widgets_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#b97ebb',
+                                        'active'  => '#b97ebb'
+                                    ),
+                                    'typography_footer_bottom_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#b97ebb',
+                                        'active'  => '#b97ebb'
+                                    )
                                 )
                             ),
                             'color_sandy_brown'      => array(
-                                'alt'   => 'sandy-brown', 
+                                'alt'   => 'sandy-brown',
                                 'img'   => KT_FW_IMG.'/preset/sandy-brown.jpg',
                                 'presets'   => array(
                                     'styling_accent' => '#f79468',
@@ -716,51 +671,23 @@ if ( ! class_exists( 'KT_config' ) ) {
                                     'mobile_sub_color_hover' => '#f79468',
                                     'styling_link' => array(
                                         'regular' => '#f79468',
-                                        'hover' => '#000000',
-                                        'active' => '#000000'
+                                        'hover' => '#C46135',
+                                        'active' => '#C46135'
                                     ),
-                                )
-                            ),
-                            'color_sky'      => array(
-                                'alt'   => 'sky', 
-                                'img'   => KT_FW_IMG.'/preset/sky.jpg',
-                                'presets'   => array(
-                                    'styling_accent' => '#5aa1e3',
-                                    'color_first_loader' => '#5aa1e3',
-                                    'mega_title_color_hover' => '#5aa1e3',
-                                    'mega_color_hover' => '#5aa1e3',
-                                    'navigation_color_hover' => '#5aa1e3',
-                                    'dropdown_color_hover' => '#5aa1e3',
-                                    'mobile_menu_color_hover' => '#5aa1e3',
-                                    'mobile_sub_color_hover' => '#5aa1e3',
-                                    'styling_link' => array(
-                                        'regular' => '#5aa1e3',
-                                        'hover' => '#000000',
-                                        'active' => '#000000'
+                                    'typography_footer_widgets_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#f79468',
+                                        'active'  => '#f79468'
                                     ),
-                                )
-                            ),
-                            'color_turquoise'      => array(
-                                'alt'   => 'turquoise', 
-                                'img'   => KT_FW_IMG.'/preset/turquoise.jpg',
-                                'presets'   => array(
-                                    'styling_accent' => '#00c1cf',
-                                    'color_first_loader' => '#00c1cf',
-                                    'mega_title_color_hover' => '#00c1cf',
-                                    'mega_color_hover' => '#00c1cf',
-                                    'navigation_color_hover' => '#00c1cf',
-                                    'dropdown_color_hover' => '#00c1cf',
-                                    'mobile_menu_color_hover' => '#00c1cf',
-                                    'mobile_sub_color_hover' => '#00c1cf',
-                                    'styling_link' => array(
-                                        'regular' => '#00c1cf',
-                                        'hover' => '#000000',
-                                        'active' => '#000000'
-                                    ),
+                                    'typography_footer_bottom_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#f79468',
+                                        'active'  => '#f79468'
+                                    )
                                 )
                             ),
                             'color_violet'      => array(
-                                'alt'   => 'violet', 
+                                'alt'   => 'violet',
                                 'img'   => KT_FW_IMG.'/preset/violet.jpg',
                                 'presets'   => array(
                                     'styling_accent' => '#8d6dc4',
@@ -773,13 +700,23 @@ if ( ! class_exists( 'KT_config' ) ) {
                                     'mobile_sub_color_hover' => '#8d6dc4',
                                     'styling_link' => array(
                                         'regular' => '#8d6dc4',
-                                        'hover' => '#000000',
-                                        'active' => '#000000'
+                                        'hover' => '#5A3A91',
+                                        'active' => '#5A3A91'
                                     ),
+                                    'typography_footer_widgets_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#8d6dc4',
+                                        'active'  => '#8d6dc4'
+                                    ),
+                                    'typography_footer_bottom_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#8d6dc4',
+                                        'active'  => '#8d6dc4'
+                                    )
                                 )
                             ),
                             'color_vista_blue'      => array(
-                                'alt'   => 'vista-blue', 
+                                'alt'   => 'vista-blue',
                                 'img'   => KT_FW_IMG.'/preset/vista-blue.jpg',
                                 'presets'   => array(
                                     'styling_accent' => '#75d69c',
@@ -792,9 +729,19 @@ if ( ! class_exists( 'KT_config' ) ) {
                                     'mobile_sub_color_hover' => '#75d69c',
                                     'styling_link' => array(
                                         'regular' => '#75d69c',
-                                        'hover' => '#000000',
-                                        'active' => '#000000'
+                                        'hover' => '#42A369',
+                                        'active' => '#42A369'
                                     ),
+                                    'typography_footer_widgets_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#75d69c',
+                                        'active'  => '#75d69c'
+                                    ),
+                                    'typography_footer_bottom_link'  => array(
+                                        'regular' => '#ffffff',
+                                        'hover'   => '#75d69c',
+                                        'active'  => '#75d69c'
+                                    )
                                 )
                             ),
                         )
@@ -836,8 +783,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'output'   => array( 'a' ),
                         'default'  => array(
                             'regular' => '#22dcce',
-                            'hover' => '#000000',
-                            'active' => '#000000'
+                            'hover' => '#00A99B',
+                            'active' => '#00A99B'
                         )
                     ),
                 )
@@ -1337,6 +1284,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                             '#main-navigation > li > a:focus',
                             '#main-navigation > li.current-menu-item > a',
                             '#main-navigation > li.hovered > a',
+                            '#main-navigation > li:hover > a',
                         ),
                         'title'    => esc_html__( 'Top Level hover Color', 'adroit' ),
                         'default'  => '#22dcce',
@@ -1471,7 +1419,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'color',
                         'output'   => array(
                             '#main-navigation > li.menu-item-object-category > .kt-megamenu-wrapper .blog-posts-menu .post-item-content .entry-title a',
-                            '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > a', 
+                            '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > a',
                             '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > span',
                             '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li .widget-title',
                         ),
@@ -1484,7 +1432,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'type'     => 'color',
                         'output'   => array(
                             '#main-navigation > li.menu-item-object-category > .kt-megamenu-wrapper .blog-posts-menu .post-item-content .entry-title a:hover',
-                            '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > a:hover', 
+                            '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > a:hover',
                             '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li > span:hover',
                             '#main-navigation > li:not(.menu-item-object-category) .kt-megamenu-ul > li .widget-title:hover',
                         ),
@@ -3041,6 +2989,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     ),
                 )
             );
+
+
             /**
              *  Advanced Custom CSS
              **/
@@ -3062,6 +3012,8 @@ if ( ! class_exists( 'KT_config' ) ) {
                     ),
                 )
             );
+
+
             /**
              *  Advanced Tracking Code
              **/
@@ -3110,10 +3062,10 @@ if ( ! class_exists( 'KT_config' ) ) {
 
         }
     }
-    
+
     global $reduxConfig;
     $reduxConfig = new KT_config();
-    
+
 } else {
     echo "The class named Redux_Framework_sample_config has already been called. <strong>Developers, you need to prefix this class with your company name or you'll run into problems!</strong>";
 }

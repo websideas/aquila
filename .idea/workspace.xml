@@ -21,87 +21,11 @@
     <favorites_list name="aquila" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="kt-switcher.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/js/kt-switcher.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-24.88889">
-              <caret line="65" column="59" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kt-switcher.scss" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/css/kt-switcher.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5294118">
-              <caret line="68" column="36" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="kt_switcher.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/kt_switcher.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-19.375">
-              <caret line="70" column="61" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
-              <folding>
-                <element signature="e#6#266#0#PHP" expanded="true" />
-                <element signature="e#1583#1617#0#HTML" expanded="true" />
-                <element signature="e#1739#1772#0#HTML" expanded="true" />
-                <element signature="e#1894#1928#0#HTML" expanded="true" />
-                <element signature="e#2050#2084#0#HTML" expanded="true" />
-                <element signature="e#2206#2240#0#HTML" expanded="true" />
-                <element signature="e#2362#2396#0#HTML" expanded="true" />
-                <element signature="e#2518#2552#0#HTML" expanded="true" />
-                <element signature="e#2674#2708#0#HTML" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="data-options.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/framework/data/data-options.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="10.543478">
-              <caret line="582" column="70" selection-start-line="582" selection-start-column="70" selection-end-line="582" selection-end-column="70" />
-              <folding>
-                <marker date="1453800576000" expanded="true" signature="79065:79077" placeholder="..." />
-                <marker date="1453800576000" expanded="true" signature="85069:85081" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/single.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila-child/style.css" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/assets/css/ie.scss" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/templates/author-bio.php" />
-        <option value="&lt;2c89c9bd-0ab6-4323-a130-eed885493f6f&gt;/kitethemes.com/aquila/wp-content/themes/aquila/framework/widgets/kt_widget_tabs.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/widgets/kt_article_carousel.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/widgets/kt_contactinfo.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/widgets/kt_facebook.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/widgets/kt_flickr.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/widgets/kt_googleplus.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/widgets/kt_popular.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/widgets/kt_socials.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/widgets/kt_widget_tabs.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/ajax.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/admin.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/helpers.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/frontend.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/widgets/kt_aboutme.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/widgets/kt_ads.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/widgets/kt_image.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/widgets/kt_promo.php" />
-        <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/widgets.php" />
         <option value="&lt;2c89c9bd-0ab6-4323-a130-eed885493f6f&gt;/kitethemes.com/aquila/wp-config.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/frontpage.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/templates/content-page.php" />
@@ -118,7 +42,6 @@
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/framework/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/aquila/assets/css/style.scss" />
         <option value="$PROJECT_DIR$/intro/index.html" />
-        <option value="$PROJECT_DIR$/wp-content/themes/adroit/assets/css/style.scss" />
         <option value="$PROJECT_DIR$/wp-content/plugins/adroit_cp/adroit_cp.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/adroit-child/functions.php" />
         <option value="$PROJECT_DIR$/wp-content/themes/adroit-child/style.css" />
@@ -129,8 +52,31 @@
         <option value="$PROJECT_DIR$/desc/reviewer.html" />
         <option value="$PROJECT_DIR$/wp-content/plugins/demo-switcher/demo_switcher.php" />
         <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/css/kt-switcher.scss" />
-        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/js/kt-switcher.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/adroit/framework/functions.php" />
+        <option value="$PROJECT_DIR$/wp-content/themes/adroit/assets/css/_variables.scss" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-5472d2.css" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-C11F1A.css" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-C46135.css" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-5A3A91.css" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-42A369.css" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-C48B35.css" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-864B88.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/adroit/framework/frontend.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-3A7809.css" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-00A99B.css" />
+        <option value="$PROJECT_DIR$/wp-content/themes/adroit/framework/data/data-options.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-22dcce.css" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-6dab3c.css" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-f4524d.css" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-f7be68.css" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-b97ebb.css" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-f79468.css" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-8d6dc4.css" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-75d69c.css" />
         <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/kt_switcher.php" />
+        <option value="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/js/kt-switcher.js" />
+        <option value="$PROJECT_DIR$/wp-content/themes/adroit/assets/css/style.scss" />
+        <option value="$PROJECT_DIR$/wp-content/themes/adroit/templates/footers/footer-bottom.php" />
       </list>
     </option>
   </component>
@@ -296,7 +242,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -322,37 +268,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="framework" />
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="data" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aquila" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aquila" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="themes" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adroit" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="assets" />
+              <option name="myItemId" value="footers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -381,8 +301,34 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="aquila" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="aquila" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="wp-content" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="themes" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adroit" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -401,72 +347,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aquila" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aquila" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="redux-framework" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aquila" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aquila" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kt_switcher" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aquila" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aquila" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="wp-content" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="plugins" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="kt_importer" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -492,13 +372,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins" />
       <recent name="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets" />
       <recent name="$PROJECT_DIR$/wp-content/plugins" />
       <recent name="$PROJECT_DIR$/wp-content/themes/aquila/templates/blog/masonry" />
       <recent name="$PROJECT_DIR$/wp-content/themes/aquila/templates/blog/grid" />
-      <recent name="$PROJECT_DIR$/wp-content/themes/aquila/templates/blog" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins" />
       <recent name="$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets" />
       <recent name="$PROJECT_DIR$/wp-content/themes/aquila" />
       <recent name="$PROJECT_DIR$/wp-content/themes/aquila/templates" />
@@ -546,8 +427,8 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1002" extended-state="7" />
-    <editor active="true" />
+    <frame x="0" y="23" width="1920" height="1002" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -665,14 +546,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/assets/css/style.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.03508772">
-          <caret line="2" column="41" selection-start-line="2" selection-start-column="41" selection-end-line="2" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/adroit_cp/adroit_cp.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.84210527">
@@ -751,33 +624,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/framework/functions.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.7647057">
-          <caret line="91" column="22" selection-start-line="91" selection-start-column="22" selection-end-line="91" selection-end-column="29" />
-          <folding>
-            <marker date="1453800576000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/header.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/framework/frontend.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47826087">
-          <caret line="338" column="0" selection-start-line="338" selection-start-column="0" selection-end-line="338" selection-end-column="0" />
-          <folding>
-            <marker date="1453800576000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1453800576000" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1453800576000" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -794,53 +645,197 @@
         <state vertical-scroll-proportion="-32.054607">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/assets/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="43" selection-start-line="0" selection-start-column="43" selection-end-line="0" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/framework/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.0526316">
+          <caret line="285" column="34" selection-start-line="285" selection-start-column="34" selection-end-line="285" selection-end-column="34" />
+          <folding>
+            <marker date="1453857336000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/assets/css/_variables.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/framework/helpers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="591" column="49" selection-start-line="591" selection-start-column="22" selection-end-line="591" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/framework/frontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45730993">
+          <caret line="172" column="40" selection-start-line="172" selection-start-column="40" selection-end-line="172" selection-end-column="40" />
+          <folding>
+            <marker date="1453860831000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1453860831000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1453860831000" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/logo-6dab3c.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/framework/data/data-options.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3115942">
+          <caret line="518" column="60" selection-start-line="518" selection-start-column="60" selection-end-line="518" selection-end-column="60" />
+          <folding>
+            <marker date="1453864548000" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1453864548000" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/css/kt-switcher.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5294118">
-          <caret line="68" column="36" selection-start-line="68" selection-start-column="36" selection-end-line="68" selection-end-column="36" />
+        <state vertical-scroll-proportion="0.44795322">
+          <caret line="80" column="18" selection-start-line="80" selection-start-column="18" selection-end-line="80" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-22dcce.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8771331">
+          <caret line="1" column="14426" selection-start-line="1" selection-start-column="14426" selection-end-line="1" selection-end-column="14426" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-6dab3c.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5221843">
+          <caret line="1" column="11092" selection-start-line="1" selection-start-column="11092" selection-end-line="1" selection-end-column="11092" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-f4524d.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8976109">
+          <caret line="1" column="14426" selection-start-line="1" selection-start-column="14426" selection-end-line="1" selection-end-column="14426" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-f7be68.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8976109">
+          <caret line="1" column="14426" selection-start-line="1" selection-start-column="14426" selection-end-line="1" selection-end-column="14426" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/logo-b97ebb.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-b97ebb.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8976109">
+          <caret line="1" column="14426" selection-start-line="1" selection-start-column="14426" selection-end-line="1" selection-end-column="14426" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-75d69c.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8976109">
+          <caret line="1" column="14426" selection-start-line="1" selection-start-column="14426" selection-end-line="1" selection-end-column="14426" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-8d6dc4.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8976109">
+          <caret line="1" column="14426" selection-start-line="1" selection-start-column="14426" selection-end-line="1" selection-end-column="14426" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/skins/color-f79468.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8976109">
+          <caret line="1" column="14426" selection-start-line="1" selection-start-column="14426" selection-end-line="1" selection-end-column="14426" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/assets/js/kt-switcher.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.88889">
-          <caret line="65" column="59" selection-start-line="65" selection-start-column="59" selection-end-line="65" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="68" column="55" selection-start-line="68" selection-start-column="55" selection-end-line="68" selection-end-column="55" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/footer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.375">
+          <caret line="28" column="54" selection-start-line="28" selection-start-column="54" selection-end-line="28" selection-end-column="54" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/wp-content/plugins/kt_switcher/kt_switcher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-19.375">
-          <caret line="70" column="61" selection-start-line="70" selection-start-column="61" selection-end-line="70" selection-end-column="61" />
+        <state vertical-scroll-proportion="-18.125">
+          <caret line="91" column="47" selection-start-line="91" selection-start-column="47" selection-end-line="91" selection-end-column="47" />
           <folding>
             <element signature="e#6#266#0#PHP" expanded="true" />
-            <element signature="e#1583#1617#0#HTML" expanded="true" />
-            <element signature="e#1739#1772#0#HTML" expanded="true" />
-            <element signature="e#1894#1928#0#HTML" expanded="true" />
-            <element signature="e#2050#2084#0#HTML" expanded="true" />
-            <element signature="e#2206#2240#0#HTML" expanded="true" />
-            <element signature="e#2362#2396#0#HTML" expanded="true" />
-            <element signature="e#2518#2552#0#HTML" expanded="true" />
-            <element signature="e#2674#2708#0#HTML" expanded="true" />
+            <element signature="e#1537#1571#0#HTML" expanded="true" />
+            <element signature="e#1644#1677#0#HTML" expanded="true" />
+            <element signature="e#1750#1783#0#HTML" expanded="true" />
+            <element signature="e#1856#1889#0#HTML" expanded="true" />
+            <element signature="e#1962#1995#0#HTML" expanded="true" />
+            <element signature="e#2068#2101#0#HTML" expanded="true" />
+            <element signature="e#2174#2207#0#HTML" expanded="true" />
+            <element signature="e#2280#2313#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/framework/data/data-options.php">
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/assets/css/style.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="10.543478">
-          <caret line="582" column="70" selection-start-line="582" selection-start-column="70" selection-end-line="582" selection-end-column="70" />
-          <folding>
-            <marker date="1453800576000" expanded="true" signature="79065:79077" placeholder="..." />
-            <marker date="1453800576000" expanded="true" signature="85069:85081" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.3152174">
+          <caret line="3089" column="3" selection-start-line="3089" selection-start-column="3" selection-end-line="3089" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wp-content/themes/adroit/templates/footers/footer-bottom.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14035088">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>

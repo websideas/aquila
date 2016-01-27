@@ -1,8 +1,6 @@
 (function($){
     "use strict"; // Start of use strict
 
-
-
     /* ---------------------------------------------
      Scripts ready
      --------------------------------------------- */
@@ -23,17 +21,19 @@
                     overflow: "hidden",
                     marginLeft: -scrollbarWidth
                 });
-
                 $switcher.addClass('active');
                 $overlay.addClass('active');
             }
         }).on('click', '.demo-overlay', function(){
             var $switcher = $('.switcher'),
-                $overlay = $('.demo-overlay');
+                $overlay = $('.demo-overlay'),
+                $html = $('html');
 
             $switcher.removeClass('active');
             $overlay.removeClass('active');
+            $html.removeAttr('style');
         });
+
 
         $('#switcher_layout').on('change', function(){
             var $val = $(this).val(),
@@ -44,8 +44,10 @@
                 $_body.removeClass('layout-boxed');
                 $_body.removeAttr('style');
             }
+
             $(window).trigger("resize");
         });
+
 
         $('#switcher_background').on('click', 'a', function(e){
             e.preventDefault();
@@ -56,23 +58,30 @@
             });
         });
 
+
         $('#switcher_color').on('click', 'a', function(e){
             e.preventDefault();
+            var $path = $('#switcher_color').data('path'),
+                $this = $(this),
+                $skin_color = $this.data('color'),
+                $skin_url = $path+'color-'+$skin_color+'.css',
+                $skin_logo = $path+'logo-'+$skin_color+'.png',
+                $skin_logo_footer = $path+'footer-logo-'+$skin_color+'.png';
 
-            var skin_url =  $(this).attr('href');
-            $('#kt-main-inline-css').remove();
 
-            if( $('link#ds-skin').length > 0 ){
-                $('link#ds-skin').attr( 'href', skin_url );
+            if( $('link#switcher-skin').length > 0 ){
+                $('link#switcher-skin').attr( 'href', $skin_url );
             }else{
-                $('head').append("<link id='ds-skin' rel='stylesheet' href='"+skin_url+"' type='text/css' media='all' />");
+                $('head').append("<link id='switcher-skin' rel='stylesheet' href='"+$skin_url+"' type='text/css' media='all' />");
             }
 
+            $('.header-branding-outer .default-logo').attr('src', $skin_logo);
+            $('.logo-footer img').attr('src', $skin_logo_footer);
 
+            $('#kt-main-inline-css').remove();
         });
 
     });
-
 
     function _getScrollbarSize() {
         var scrollDiv = document.createElement("div"),

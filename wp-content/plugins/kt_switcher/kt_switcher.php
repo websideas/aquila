@@ -37,32 +37,24 @@ class KT_SWITCHER
 
     function kt_switcher_footer(){
 
-
         ?>
         <div class="demo-overlay"></div>
         <div class="switcher">
             <a href="#" class="switcher-toggle"><i class="fa fa-cog fa-spin"></i></a>
-
             <div class="switcher-inner">
-
-                <div class="switcher-head">
-                    Style Selector
-                </div>
-
-
+                <div class="switcher-head">Style Selector</div>
                 <div class="switcher-panel">
-
                     <div class="form-group">
                         <label>Theme Color</label>
-                        <div id="switcher_color" class="clearfix">
-                            <a data-color="c4b498" href="<?php echo $this->assets; ?>skins/color-6dab3c.css" style="background-color: #6dab3c;">#6dab3c</a>
-                            <a data-color="e34444" href="<?php echo $this->assets; ?>skins/color-e34444.css" style="background-color: #e34444">#e34444</a>
-                            <a data-color="17a7f1" href="<?php echo $this->assets; ?>skins/color-17a7f1.css" style="background-color: #17a7f1;">#17a7f1</a>
-                            <a data-color="2fc961" href="<?php echo $this->assets; ?>skins/color-2fc961.css" style="background-color: #2fc961;">#2fc961</a>
-                            <a data-color="5e36e1" href="<?php echo $this->assets; ?>skins/color-5e36e1.css" style="background-color: #5e36e1;">#5e36e1</a>
-                            <a data-color="f3bb25" href="<?php echo $this->assets; ?>skins/color-f3bb25.css" style="background-color: #f3bb25;">#f3bb25</a>
-                            <a data-color="17a7f1" href="<?php echo $this->assets; ?>skins/color-17a7f1.css" style="background-color: #17a7f1;">#17a7f1</a>
-                            <a data-color="2fc961" href="<?php echo $this->assets; ?>skins/color-2fc961.css" style="background-color: #2fc961;">#2fc961</a>
+                        <div id="switcher_color" class="clearfix" data-path="<?php echo $this->assets; ?>skins/">
+                            <a data-color="22dcce" href="#" style="background-color: #22dcce;">#22dcce</a>
+                            <a data-color="75d69c" href="#" style="background-color: #75d69c">#75d69c</a>
+                            <a data-color="6dab3c" href="#" style="background-color: #6dab3c">#6dab3c</a>
+                            <a data-color="f4524d" href="#" style="background-color: #f4524d">#f4524d</a>
+                            <a data-color="f7be68" href="#" style="background-color: #f7be68">#f7be68</a>
+                            <a data-color="f79468" href="#" style="background-color: #f79468">#f79468</a>
+                            <a data-color="b97ebb" href="#" style="background-color: #b97ebb">#b97ebb</a>
+                            <a data-color="8d6dc4" href="#" style="background-color: #8d6dc4">#8d6dc4</a>
                         </div>
                         <p>You can also sellect color codes via admin theme options</p>
                     </div>
@@ -84,7 +76,6 @@ class KT_SWITCHER
                         </div>
                     </div>
                 </div>
-
 
                 <div class="switcher-footer">
                     <label>See other demos</label>
@@ -109,7 +100,7 @@ class KT_SWITCHER
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
 
         </div>
         <?php

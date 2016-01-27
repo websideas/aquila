@@ -141,7 +141,6 @@ function kt_header_class_callback($classes, $layout){
     }else{
         $header_shadow = kt_option('header_shadow', true);
     }
-echo $header_shadow;
 
     if($header_shadow == 'on' || $header_shadow === true || $header_shadow == 1){
         $classes .= ' header-shadow';
@@ -246,7 +245,7 @@ if(!function_exists('kt_placeholder_callback')) {
 
         $placeholder = kt_option('archive_placeholder');
         if(is_array($placeholder) && $placeholder['id'] != '' ){
-            $obj = get_thumbnail_attachment($placeholder['id'], $size);
+            $obj = kt_get_thumbnail_attachment($placeholder['id'], $size);
             $imgage = $obj['url'];
         }elseif($size == 'kt_recent_posts' || $size == 'kt_recent_posts_masonry') {
             $imgage = KT_THEME_IMG . 'placeholder-recent.jpg';

@@ -160,13 +160,11 @@ function kt_setting_script() {
 
     $styling_link = kt_option('styling_link');
     if($styling_link['hover']){
-        $css .= 'a:hover{color: '.$styling_link['hover'].';}';
-        $css .= 'a:focus{color: '.$styling_link['hover'].';}';
+        $css .= 'a:hover,a:focus{color: '.$styling_link['hover'].';}';
     }
     if($styling_link['active']){
         $css .= 'a:active{color: '.$styling_link['active'].';}';
     }
-
 
     if( $accent !='#22dcce' ){
         $css .= '::-moz-selection{color:#fff;background:'.$accent.'}';
