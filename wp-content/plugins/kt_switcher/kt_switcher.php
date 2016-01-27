@@ -67,16 +67,19 @@ class KT_SWITCHER
                     </div>
                     <div class="form-group">
                         <label>Boxed background examples</label>
-                        <div id="switcher_background">
+                        <div id="switcher_background" class="clearfix">
                             <a href="#" data-repeat="repeat"><img src="<?php echo $this->assets; ?>patterns/congruent_pentagon.png" alt=""/></a>
-                            <a href="#" data-repeat="no-repeat"><img src="<?php echo $this->assets; ?>patterns/criss-xcross.png" alt=""/></a>
-                            <a href="#" data-repeat="repeat"><img src="<?php echo $this->assets; ?>patterns/criss-xcross.png" alt=""/></a>
-                            <a href="#" data-repeat="repeat"><img src="<?php echo $this->assets; ?>patterns/criss-xcross.png" alt=""/></a>
-                            <a href="#" data-repeat="repeat"><img src="<?php echo $this->assets; ?>patterns/criss-xcross.png" alt=""/></a>
+                            <a href="#" data-repeat="repeat"><img src="<?php echo $this->assets; ?>patterns/kindajean.png" alt=""/></a>
+                            <a href="#" data-repeat="repeat"><img src="<?php echo $this->assets; ?>patterns/dimension.png" alt=""/></a>
+                            <a href="#" data-repeat="repeat"><img src="<?php echo $this->assets; ?>patterns/geometry2.png" alt=""/></a>
+                            <a href="#" data-repeat="repeat"><img src="<?php echo $this->assets; ?>patterns/light_grey.png" alt=""/></a>
+                            <a href="#" data-repeat="repeat"><img src="<?php echo $this->assets; ?>patterns/mini_waves.png" alt=""/></a>
+                            <a href="#" data-repeat="repeat"><img src="<?php echo $this->assets; ?>patterns/school.png" alt=""/></a>
+                            <a href="#" data-repeat="repeat"><img src="<?php echo $this->assets; ?>patterns/wild_flowers.png" alt=""/></a>
                         </div>
                     </div>
                 </div>
-
+                <!--
                 <div class="switcher-footer">
                     <label>See other demos</label>
                     <div id="other_demos" class="clearfix">
@@ -100,6 +103,7 @@ class KT_SWITCHER
                         </div>
                     </div>
                 </div>
+                -->
             </div>
 
         </div>

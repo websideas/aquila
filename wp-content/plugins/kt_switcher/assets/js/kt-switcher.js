@@ -51,11 +51,15 @@
 
         $('#switcher_background').on('click', 'a', function(e){
             e.preventDefault();
-            var $this = $(this);
-            $('body').css({
-                'background-image': 'url('+$this.find('img').attr('src')+')',
-                'background-repeat': $this.data('repeat')
-            });
+            var $this = $(this),
+                $layout = $('#switcher_layout').val();
+
+            if($layout == 'boxed'){
+                $('body').css({
+                    'background-image': 'url('+$this.find('img').attr('src')+')',
+                    'background-repeat': $this.data('repeat')
+                });
+            }
         });
 
 

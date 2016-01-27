@@ -80,12 +80,15 @@
     a{
       color: #fff;
       display: inline-block;
+      float: left;
       line-height: 1;
-      margin-bottom: 8px;
+      margin-bottom: 5px;
       margin-right: 5px;
       padding: 8px;
       min-width: 72px;
       text-align: center;
+      border-radius: 3px;
+      
     }
     &:hover{
       a{
@@ -100,11 +103,15 @@
     display: inline-block;
     a{
       display: inline-block;
-      margin: 0 5px 5px 0;
+      margin: 0 8px 8px 0;
       width: 42px;
+      float: left;
       height: 42px;
       overflow: hidden;
       border-radius: 3px;
+      img{
+        max-width: none;
+      }
     }
     &:hover{
       a{
