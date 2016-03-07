@@ -71,8 +71,8 @@ if ( function_exists('register_sidebar')) {
             'id' => 'instagram-footer',
             'before_widget' => '<div id="%1$s" class="instagram-widget %2$s">',
             'after_widget' => '</div>',
-            'before_title' => '<h4 class="instagram-title">',
-            'after_title' => '</h4>',
+            'before_title' => '<!--',
+            'after_title' => '-->',
             'description' => esc_html__('Use the Instagram widget here. IMPORTANT: For best result select "Small" under "Photo Size" and set number of photos to 6.', 'adroit'),
         ));
 
@@ -192,7 +192,6 @@ $kt_widgets = array(
     'kt_googleplus.php',
     'kt_article.php',
     'kt_article_carousel.php',
-    'kt_widget_tabs.php',
     'kt_ads.php',
     'kt_flickr.php',
     'kt_popular.php',

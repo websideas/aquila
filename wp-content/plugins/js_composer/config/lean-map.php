@@ -242,7 +242,7 @@ function vc_icons_arr() {
 }
 
 require_once vc_path_dir( 'CONFIG_DIR', 'grids/vc-grids-functions.php' );
-if ( 'vc_get_autocomplete_suggestion' === vc_request_param( 'action' ) ) {
+if ( 'vc_get_autocomplete_suggestion' === vc_request_param( 'action' ) || 'vc_edit_form' === vc_post_param( 'action' ) ) {
 	add_filter( 'vc_autocomplete_vc_basic_grid_include_callback', 'vc_include_field_search', 10, 1 ); // Get suggestion(find). Must return an array
 	add_filter( 'vc_autocomplete_vc_basic_grid_include_render', 'vc_include_field_render', 10, 1 ); // Render exact product. Must return an array (label,value)
 	add_filter( 'vc_autocomplete_vc_masonry_grid_include_callback', 'vc_include_field_search', 10, 1 ); // Get suggestion(find). Must return an array

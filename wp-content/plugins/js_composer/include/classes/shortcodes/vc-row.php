@@ -75,8 +75,8 @@ class WPBakeryShortCode_VC_Row extends WPBakeryShortCode {
 			foreach ( $controls as $control ) {
 				$control_var = 'controls_' . $control;
 				if ( ( $editAccess && 'edit' == $control ) || $allAccess ) {
-					if ( isset( $$control_var ) ) {
-						$output .= $$control_var;
+					if ( isset( ${$control_var} ) ) {
+						$output .= ${$control_var};
 					}
 				}
 			}
@@ -84,8 +84,8 @@ class WPBakeryShortCode_VC_Row extends WPBakeryShortCode {
 		} elseif ( is_string( $controls ) ) {
 			$control_var = 'controls_' . $controls;
 			if ( ( $editAccess && 'edit' === $controls ) || $allAccess ) {
-				if ( isset( $$control_var ) ) {
-					$output .= $$control_var . $controls_end;
+				if ( isset( ${$control_var} ) ) {
+					$output .= ${$control_var} . $controls_end;
 				}
 			}
 		} else {

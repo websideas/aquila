@@ -80,7 +80,7 @@ function kt_theme_setup() {
         add_image_size( 'kt_blog_post_slider', 1460, 800, true );
 
         add_image_size( 'kt_widget_article', 120, 75, true );
-        add_image_size( 'kt_widget_article_carousel', 335, 250, true );
+        add_image_size( 'kt_widget_article_carousel', 340, 340, true );
 
         add_image_size( 'kt_gallery_fullwidth', 5000, 730 );        
     }
@@ -111,13 +111,12 @@ endif;
 
 function kt_add_scripts() {
 
-    wp_enqueue_style( 'kt-wp-style', get_stylesheet_uri(), array('mediaelement', 'wp-mediaelement') );
     wp_enqueue_style( 'bootstrap', KT_THEME_LIBS . 'bootstrap/css/bootstrap.css', array());
     wp_enqueue_style( 'font-awesome', KT_THEME_LIBS . 'font-awesome/css/font-awesome.min.css', array());
     wp_enqueue_style( 'kt-plugins', KT_THEME_CSS . 'plugins.css', array());
 
 	// Load our main stylesheet.
-    wp_enqueue_style( 'kt-main', KT_THEME_CSS . 'style.css');
+    wp_enqueue_style( 'kt-main', KT_THEME_CSS . 'style.css', array('mediaelement', 'wp-mediaelement'));
     wp_enqueue_style( 'kt-queries', KT_THEME_CSS . 'queries.css');
     
 	// Load the Internet Explorer specific stylesheet.
@@ -128,17 +127,13 @@ function kt_add_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 
-    wp_register_script('google-maps-api','http://maps.googleapis.com/maps/api/js?sensor=false', array( 'jquery' ), null, false);
     wp_enqueue_script( 'bootstrap', KT_THEME_LIBS . 'bootstrap/js/bootstrap.min.js', array( 'jquery' ), null, true );
     wp_enqueue_script( 'kt-plugins', KT_THEME_JS . 'plugins.js', array( 'jquery' ), null, true );
-    wp_enqueue_script( 'kt-main-script', KT_THEME_JS . 'functions.js', array( 'jquery', 'mediaelement', 'wp-mediaelement', 'jquery-ui-tabs' ), null, true );
+    wp_enqueue_script( 'kt-main-script', KT_THEME_JS . 'functions.js', array( 'jquery', 'jquery-ui-tabs' ), null, true );
 
-    global $wp_query;
     wp_localize_script( 'kt-main-script', 'ajax_frontend', array(
         'ajaxurl' => admin_url( 'admin-ajax.php' ),
-        'security' => wp_create_nonce( 'ajax_frontend' ),
-        'current_date' => date_i18n('Y-m-d H:i:s'),
-        'query_vars' => json_encode( $wp_query->query ),
+        'security' => wp_create_nonce( 'ajax_frontend' )
     ));
     
 }
@@ -154,7 +149,7 @@ add_action( 'wp_enqueue_scripts', 'kt_add_scripts' );
  */
 function kt_setting_script() {
     $advanced_css = kt_option('advanced_editor_css');
-    $accent = kt_option('styling_accent', '#82c14f');
+    $accent = kt_option('styling_accent', '#22dcce');
 
     $css = $advanced_css;
 
@@ -198,7 +193,7 @@ function kt_setting_script() {
             'article.post-item-content .cat-links a:hover',
             '.post-item-meta a:hover',
             '.post-item-share ul a:hover',
-            'blockquote::before',
+            'blockquote:before',
             '.widget_kt_aboutme .kt-aboutwidget-socials a:hover',
             '.widget_kt_aboutme .kt-aboutwidget-socials a:focus',
             'ul.kt_posts_widget li h3.title a:hover',
@@ -227,7 +222,9 @@ function kt_setting_script() {
             '#main-navigation > li.menu-item-object-category .megamenu-posts > a:hover',
             '.page-header .category_children li.active a',
             '.page-header .category_children li a:hover',
-            '#close-side-slideout-right:hover'
+            '#close-side-slideout-right:hover',
+            '.main-content div.post-item-content .entry-title a span',
+            '.main-content article.post-item-content .entry-title a span'
         );
         $css .= implode($selections_color, ',').'{color: '.$accent.';}';
 
@@ -373,7 +370,7 @@ function kt_setting_script() {
     $color_first_loader = kt_option('color_first_loader', $accent);
     $color_second_loader = kt_option('color_second_loader', '#cccccc');
     $css .= '.kt_page_loader.style-1 .page_loader_inner{border-color: '.$color_first_loader.';}';
-    $css .= '.kt_page_loader.style-1 .kt_spinner,.kt_page_loader.style-2 .kt_spinner::after{background-color: '.$color_first_loader.';}';
+    $css .= '.kt_page_loader.style-1 .kt_spinner,.kt_page_loader.style-2 .kt_spinner:after{background-color: '.$color_first_loader.';}';
     $css .= '.kt_page_loader.style-2 .kt_spinner,.kt_page_loader.style-3 .kt_spinner{ border-color:'.$color_second_loader.'; }';
     $css .= '.kt_page_loader.style-3 .kt_spinner{ border-bottom-color:'.$color_first_loader.'; }';
 
@@ -716,7 +713,7 @@ function kt_comments($comment, $args, $depth) {
 
         <li id="comment-<?php comment_ID(); ?>" <?php comment_class( '' ); ?>>
             <div class="comment-body">
-                <?php _e( 'Pingback:', '_tk' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( 'Edit', '_tk' ), '<span class="edit-link">', '</span>' ); ?>
+                <?php esc_html_e( 'Pingback:', '_tk' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( esc_html__( 'Edit', '_tk' ), '<span class="edit-link">', '</span>' ); ?>
             </div>
 
 	<?php else : ?>
@@ -725,7 +722,7 @@ function kt_comments($comment, $args, $depth) {
             <div  id="comment-<?php comment_ID(); ?>" class="comment-item clearfix">
 
                 <div class="comment-avatar">
-                    <?php echo get_avatar($comment->comment_author_email, $size='100',$default='' ); ?>
+                    <?php echo get_avatar($comment->comment_author_email, $size='100', $default='' ); ?>
                 </div>
                 <div class="comment-content">
                     <div class="comment-meta">
@@ -785,15 +782,15 @@ if ( ! function_exists( 'kt_post_nav' ) ) :
 
                     
                     if(!get_previous_post_link('&laquo; %link', '', true)){
-                        printf('<div class="nav-previous meta-nav"><span>%s</span></div>', __( '<span>Previous Article</span>', 'adroit' ));
+                        printf('<div class="nav-previous meta-nav"><span>%s</span></div>', esc_html__( '<span>Previous Article</span>', 'adroit' ));
                     }else{
-                        previous_post_link('<div class="nav-previous meta-nav">%link</div>', __( '<span>Previous Article</span>', 'adroit' ), TRUE);
+                        previous_post_link('<div class="nav-previous meta-nav">%link</div>', esc_html__( '<span>Previous Article</span>', 'adroit' ), TRUE);
                     }
 
                     if(!get_next_post_link('&laquo; %link', '', true)){
-                        printf('<div class="nav-next meta-nav"><span>%s</span></div>', __( '<span>Next Article</span>', 'adroit' ));
+                        printf('<div class="nav-next meta-nav"><span>%s</span></div>', esc_html__( '<span>Next Article</span>', 'adroit' ));
                     }else{
-                        next_post_link('<div class="nav-next meta-nav">%link</div>', __( '<span>Next Article</span>', 'adroit' ), TRUE);
+                        next_post_link('<div class="nav-next meta-nav">%link</div>', esc_html__( '<span>Next Article</span>', 'adroit' ), TRUE);
                     }
                 ?>
             </div><!-- .nav-links -->
@@ -832,7 +829,6 @@ if ( ! function_exists( 'kt_paging_nav' ) ) :
             </nav><!-- .navigation -->
 
         <?php }else{
-
             the_posts_pagination();
         }
     }
@@ -1052,7 +1048,6 @@ if( ! function_exists( 'kt_share_box' ) ){
 
         $social_share = kt_option('social_share');
 
-        $count = kt_total_post_share_count($link);
 
         foreach($social_share as $key => $val){
             if($val){
@@ -1101,7 +1096,7 @@ if( ! function_exists( 'kt_share_box' ) ){
             printf(
                 '<div class="%s"> <a href="#">%s</a><ul>%s</ul></div>',
                 $class,
-                $count,
+                esc_html__('share', 'adroit' ),
                 $html
             );
         }

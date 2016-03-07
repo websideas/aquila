@@ -56,13 +56,17 @@ class WPBakeryShortCode_Socials extends WPBakeryShortCode {
             $social_type = explode(',', $social);
             foreach ($social_type as $id) {
                 $val = $socials_arr[$id];
-                $social_text = '<i class="'.esc_attr($val['icon']).'"></i>';
-                $social_icons .= '<li '.$margin.'><a class="'.esc_attr($id).'" title="'.esc_attr($val['title']).'" '.$tooltiphtml.' href="'.esc_url(str_replace('%s', $val['val'], $val['link'])).'" target="_blank">'.$social_text.'<span>'.$val['title'].'</span></a></li>'."\n";
+                if($val['val']) {
+                    $social_text = '<i class="' . esc_attr($val['icon']) . '"></i>';
+                    $social_icons .= '<li ' . $margin . '><a class="' . esc_attr($id) . '" title="' . esc_attr($val['title']) . '" ' . $tooltiphtml . ' href="' . esc_attr(str_replace('%s', $val['val'], $val['link'])) . '" target="_blank">' . $social_text . '<span>' . $val['title'] . '</span></a></li>' . "\n";
+                }
             }
         }else{
             foreach($socials_arr as $key => $val){
-                $social_text = '<i class="'.esc_attr($val['icon']).'"></i>';
-                $social_icons .= '<li '.$margin.'><a class="'.esc_attr($key).'"  '.$tooltiphtml.' title="'.esc_attr($val['title']).'" href="'.esc_url(str_replace('%s', $val['val'], $val['link'])).'" target="_blank">'.$social_text.'<span>'.$val['title'].'</span></a></li>'."\n";
+                if($val['val']) {
+                    $social_text = '<i class="' . esc_attr($val['icon']) . '"></i>';
+                    $social_icons .= '<li ' . $margin . '><a class="' . esc_attr($key) . '"  ' . $tooltiphtml . ' title="' . esc_attr($val['title']) . '" href="' . esc_attr(str_replace('%s', $val['val'], $val['link'])) . '" target="_blank">' . $social_text . '<span>' . $val['title'] . '</span></a></li>' . "\n";
+                }
             }
         }
 

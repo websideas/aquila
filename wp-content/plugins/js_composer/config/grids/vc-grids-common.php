@@ -2,9 +2,10 @@
 require_once 'vc-grids-functions.php';
 $post_types = get_post_types( array() );
 $post_types_list = array();
+$excluded_post_types = array( 'revision', 'nav_menu_item', 'vc_grid_item' );
 if ( is_array( $post_types ) && ! empty( $post_types ) ) {
 	foreach ( $post_types as $post_type ) {
-		if ( 'revision' !== $post_type && 'nav_menu_item' !== $post_type ) {
+		if ( ! in_array( $post_type, $excluded_post_types ) ) {
 			$label = ucfirst( $post_type );
 			$post_types_list[] = array(
 				$post_type,

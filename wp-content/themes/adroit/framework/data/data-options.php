@@ -392,7 +392,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'id' => 'footer_bottom',
                         'type' => 'switch',
                         'title' => esc_html__('Footer bottom enable', 'adroit'),
-                        'default' => true,
+                        'default' => false,
                         'on' => esc_html__('Enabled', 'adroit'),
                         'off' => esc_html__('Disabled', 'adroit'),
                     ),
@@ -806,7 +806,7 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'title'          => esc_html__( 'Logo width', 'adroit' ),
                         'height'         => false,
                         'default'        => array( 'width'  => '25', 'units'   => 'px' ),
-                        'output'   => array( '.site-branding .site-logo img' ),
+                        'output'   => array( '#header #header-content .site-branding .site-logo img' ),
                     ),
 
                     array(
@@ -1737,6 +1737,26 @@ if ( ! class_exists( 'KT_config' ) ) {
 
 
             /**
+             *  Typography header
+             **/
+            $this->sections[] = array(
+                'id'            => 'typography_header',
+                'title'         => esc_html__( 'Header', 'adroit' ),
+                'desc'          => '',
+                'subsection' => true,
+                'fields'        => array(
+                    array(
+                        'id'       => 'typography_header_content',
+                        'type'     => 'typography',
+                        'title'    => esc_html__( 'Header', 'adroit' ),
+                        'subtitle' => esc_html__( 'Specify the header font properties.', 'adroit' ),
+                        'google'   => true,
+                        'text-align' => false,
+                        'output'      => array( '#header' )
+                    )
+                )
+            );
+            /**
              *  Typography footer
              **/
             $this->sections[] = array(
@@ -1878,26 +1898,6 @@ if ( ! class_exists( 'KT_config' ) ) {
             );
 
 
-            /**
-             *  Typography header
-             **/
-            $this->sections[] = array(
-                'id'            => 'typography_header',
-                'title'         => esc_html__( 'Header', 'adroit' ),
-                'desc'          => '',
-                'subsection' => true,
-                'fields'        => array(
-                    array(
-                        'id'       => 'typography_header_content',
-                        'type'     => 'typography',
-                        'title'    => esc_html__( 'Header', 'adroit' ),
-                        'subtitle' => esc_html__( 'Specify the header title font properties.', 'adroit' ),
-                        'google'   => true,
-                        'text-align' => false,
-                        'output'      => array( '#header' )
-                    )
-                )
-            );
 
             /**
              *  Typography sidebar
@@ -1957,10 +1957,6 @@ if ( ! class_exists( 'KT_config' ) ) {
                         'line-height'     => false,
                         'text-transform' => true,
                         'output'      => array( '#main-navigation > li > a' ),
-                        'default'  => array(
-                            'text-transform' => 'uppercase',
-                            'font-weight'    => '600'
-                        ),
                     ),
                     array(
                         'type' => 'divide',
@@ -2027,7 +2023,30 @@ if ( ! class_exists( 'KT_config' ) ) {
 
                 )
             );
+            /**
+             *  Typography Navigation
+             **/
 
+            $this->sections[] = array(
+                'id'            => 'typography_footer_navigation',
+                'title'         => esc_html__( 'Footer Navigation', 'adroit' ),
+                'desc'          => '',
+                'subsection' => true,
+                'fields'        => array(
+                    array(
+                        'id'       => 'typography-footer',
+                        'type'     => 'typography',
+                        'title'    => esc_html__( 'Top Menu Level', 'adroit' ),
+                        'letter-spacing'  => true,
+                        'text-align'      => false,
+                        'color'           => false,
+                        'line-height'     => false,
+                        'text-transform' => true,
+                        'output'      => array( '#footer-navigation ul li a' ),
+                        'default'  => array( ),
+                    ),
+                )
+            );
 
             /**
              *  Typography mobile Navigation

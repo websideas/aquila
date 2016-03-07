@@ -30,7 +30,7 @@
                     get_template_part( 'templates/footers/footer', 'widgets');
                 }
 
-                if(kt_option('footer_bottom', true)){
+                if(kt_option('footer_bottom', false)){
                     get_template_part( 'templates/footers/footer', 'bottom');
                 }
 

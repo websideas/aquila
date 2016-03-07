@@ -377,6 +377,7 @@ if (!function_exists('kt_show_slideshow')) {
         } elseif( $slideshow == 'postslider'){
 
             $postslider = rwmb_meta('_kt_slideshow_postslider', array(), $post_id);
+
             if($postslider){
                 $output .= kt_render_postSlider($postslider);
                 if($output != '') {
@@ -385,8 +386,6 @@ if (!function_exists('kt_show_slideshow')) {
                         $output = '<div class="container">' . $output . '</div>';
                     }
                     $sideshow_class[] = 'post-slider-'.$style;
-
-
                 }
 
             }
@@ -423,6 +422,8 @@ function kt_render_postSlider($post_id){
     $per_page = get_post_meta($post_id, '_kt_slideshow_max_items', true);
     $style = rwmb_meta('_kt_slideshow_slider_style', array(), $post_id);
 
+    if (get_post_status($post_id) != 'publish')
+        return;
 
     $args = array(
         'post_type' => 'post',
@@ -516,7 +517,7 @@ function kt_render_postSlider($post_id){
             }else{
                 $slider_html .= sprintf(
                     '<div class="article-post"><div class="article-post-thumb">%1$s</div>%2$s</div>',
-                    get_the_post_thumbnail(null, $image_size),
+                    kt_post_thumbnail_image($image_size, 'img-responsive', false, true, false),
                     $slider_content
                 );
             }
@@ -582,7 +583,7 @@ if (!function_exists('kt_get_header_layout')) {
      *
      */
     function kt_get_header_layout(){
-        $layout = kt_option('header', 'layout1');
+        $layout = kt_option('header', '1');
         return $layout;
     }
 }
@@ -761,86 +762,6 @@ if (!function_exists('kt_render_custom_css')) {
 }
 
 
-if(!function_exists('kt_colour_brightness')){
-    /**
-     * Convert hexdec color string to darken or lighten
-     *
-     * http://lab.clearpixel.com.au/2008/06/darken-or-lighten-colours-dynamically-using-php/
-     *
-     * $brightness = 0.5; // 50% brighter
-     * $brightness = -0.5; // 50% darker
-     *
-     */
-
-    function kt_colour_brightness($hex, $percent) {
-        // Work out if hash given
-        $hash = '';
-        if (stristr($hex,'#')) {
-            $hex = str_replace('#','',$hex);
-            $hash = '#';
-        }
-        /// HEX TO RGB
-        $rgb = array(hexdec(substr($hex,0,2)), hexdec(substr($hex,2,2)), hexdec(substr($hex,4,2)));
-        //// CALCULATE
-        for ($i=0; $i<3; $i++) {
-            // See if brighter or darker
-            if ($percent > 0) {
-                // Lighter
-                $rgb[$i] = round($rgb[$i] * $percent) + round(255 * (1-$percent));
-            } else {
-                // Darker
-                $positivePercent = $percent - ($percent*2);
-                $rgb[$i] = round($rgb[$i] * $positivePercent) + round(0 * (1-$positivePercent));
-            }
-            // In case rounding up causes us to go to 256
-            if ($rgb[$i] > 255) {
-                $rgb[$i] = 255;
-            }
-        }
-        //// RBG to Hex
-        $hex = '';
-        for($i=0; $i < 3; $i++) {
-            // Convert the decimal digit to hex
-            $hexDigit = dechex($rgb[$i]);
-            // Add a leading zero if necessary
-            if(strlen($hexDigit) == 1) {
-                $hexDigit = "0" . $hexDigit;
-            }
-            // Append to the hex string
-            $hex .= $hexDigit;
-        }
-        return $hash.$hex;
-    }
-}
-
-if(!function_exists('kt_color2hecxa')){
-    /**
-     * Convert color to hex
-     *
-     * @param $color
-     * @return string
-     */
-    function kt_color2Hex($color){
-        switch ($color) {
-            case 'mulled_wine': $color = '#50485b'; break;
-            case 'vista_blue': $color = '#75d69c'; break;
-            case 'juicy_pink': $color = '#f4524d'; break;
-            case 'sandy_brown': $color = '#f79468'; break;
-            case 'purple': $color = '#b97ebb'; break;
-            case 'pink': $color = '#fe6c61'; break;
-            case 'violet': $color = '#8d6dc4'; break;
-            case 'peacoc': $color = '#4cadc9'; break;
-            case 'chino': $color = '#cec2ab'; break;
-            case 'grey': $color = '#ebebeb'; break;
-            case 'orange': $color = '#f7be68'; break;
-            case 'sky': $color = '#5aa1e3'; break;
-            case 'green': $color = '#6dab3c'; break;
-            case 'accent': $color = kt_option('styling_accent', '#d0a852'); break;
-
-        }
-        return $color;
-    }
-}
 
 if(!function_exists('kt_video_youtube')) {
     /**

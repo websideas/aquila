@@ -12,8 +12,8 @@
 2. Typography
 3. Forms fields
 4. Buttons
-5. Page Loader
-6. Back to top
+5. Page Loader & Back to top
+6. WordPress Core
 7. Widgets
 8. ShortCodes
   8.1. Contact Info
@@ -217,11 +217,9 @@ a {
 
 blockquote{
   color: $gray;
-  font-style: italic;
   font-size: 18px;
   line-height: 30px;
   padding: 0 0 0 45px;
-  font-family: $extra-font;
   border: none;
   letter-spacing: 0.025em;
   position: relative;
@@ -290,7 +288,6 @@ blockquote{
     line-height: 48px;
     color: $white;
     padding: 95px 0 0;
-    font-family: $extra-font;
     &:before{
       font-size: 200px;
       color: rgba($white, .2);
@@ -377,8 +374,6 @@ select:not([multiple]) {
   }
 }
 
-
-
 /* ==============================
    4. Buttons
    ============================== */
@@ -389,7 +384,7 @@ select:not([multiple]) {
   display: inline-block;
   line-height: 1.42857;
   padding: 11px 26px;
-  font-size: 16px;
+  font-size: 14px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   font-family: $button-text;
@@ -549,7 +544,7 @@ select:not([multiple]) {
 
 
 /* ==============================
-   5. Page Loader
+   5. Page Loader & backtotop
    ============================== */
 .kt_page_loader{
   position: fixed;
@@ -640,11 +635,6 @@ select:not([multiple]) {
   }
 }
 
-
-
-/* ==============================
-   6. Back to top
-   ============================== */
 #back-to-top{
   background: $primary-color;
   bottom: 30px;
@@ -670,6 +660,184 @@ select:not([multiple]) {
 }
 
 /* ==============================
+   6. WordPress Core
+   ============================== */
+
+
+.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.aligncenter,
+div.aligncenter {
+  display: block;
+  margin: 5px auto 5px auto;
+}
+
+.alignright {
+  float:right;
+  margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+  float: left;
+  margin: 5px 20px 10px 0;
+}
+
+a img.alignright {
+  float: right;
+  margin: 5px 0 10px 20px;
+}
+
+a img.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+  float: left;
+  margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+.text-center{  text-align: center; }
+.wp-caption {
+  background: #fff;
+  border: 1px solid $border-color;
+  max-width: 100%; /* Image does not overflow the content area */
+  padding: 5px 0 10px;
+  text-align: center;
+}
+
+.wp-caption.alignnone {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignleft {
+  margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+  margin: 5px 0 20px 20px;
+}
+
+.wp-caption img {
+  border: 0 none;
+  height: auto;
+  margin: 0;
+  max-width: 98.5%;
+  padding: 0;
+  width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+  font-size: 11px;
+  line-height: 17px;
+  margin: 0;
+  padding: 5px 4px 0;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+/* gallery. */
+.gallery {
+  margin: 0 -1.1666667% 1.75em;
+}
+
+.gallery-item {
+  display: inline-block;
+  max-width: 33.33%;
+  padding: 0 1.1400652% 2.2801304%;
+  text-align: center;
+  vertical-align: top;
+  width: 100%;
+}
+
+.gallery-columns-1 .gallery-item {
+  max-width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+  max-width: 50%;
+}
+
+.gallery-columns-4 .gallery-item {
+  max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+  max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+  max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+  max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+  max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+  max-width: 11.11%;
+}
+
+.gallery-icon img {
+  margin: 0 auto;
+}
+
+.gallery-caption {
+  color: #686868;
+  display: block;
+  font-size: 13px;
+  font-size: 0.8125rem;
+  font-style: italic;
+  line-height: 1.6153846154;
+  padding-top: 0.5384615385em;
+}
+
+.gallery-columns-6 .gallery-caption,
+.gallery-columns-7 .gallery-caption,
+.gallery-columns-8 .gallery-caption,
+.gallery-columns-9 .gallery-caption {
+  display: none;
+}
+
+/* ==============================
    7. Widgets
    ============================== */
 /*
@@ -683,10 +851,9 @@ select:not([multiple]) {
 .widget-title{
   color: $black;
   position: relative;
-  font-size: 16px;
+  font-size: 14px;
   text-transform: uppercase;
   margin-bottom: 24px;
-  font-family: $font-stack;
   text-align: center;
   letter-spacing: .1em;
   font-weight: 700;
@@ -694,17 +861,8 @@ select:not([multiple]) {
 
 .sidebar{
   .widget-title{
-    padding: 0 10px 15px;
-    border-bottom: 2px solid $border-color;
-    &:after{
-      content: '';
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      height: 20px;
-      width: 2px;
-      background: $border-color;
-    }
+    padding: 10px 15px;
+    border: 2px solid $black;
   }
 
 
@@ -856,6 +1014,7 @@ select:not([multiple]) {
       border: 2px solid $border-color;
       text-transform: uppercase;
       letter-spacing: .1em;
+      font-family: $heading-font;
       &:hover,
       &:focus{
         color: #fff;
@@ -1089,110 +1248,91 @@ ul.kt_posts_widget{
     margin: 0;
     .article-widget{
       position: relative;
-
+      .entry-thumb{
+        position: relative;
+        display: block;
+        &:before{
+          content: '';
+          position: absolute;
+          background: rgba(#000, .4);
+          width: 100%;
+          height: 100%;
+          left: 0;
+          top: 0;
+        }
+      }
       img{
         width: 100%;
       }
       .article-attr{
-
-        border: 10px solid rgba($white, .8);
         position: absolute;
-        bottom: 20px;
-        left: 20px;
-        right: 20px;
-
+        bottom: 32px;
+        left: 32px;
         h3.title{
-          margin: 0;
-          background: rgba($black, .7);
           font-size: 14px;
-          line-height: 28px;
-          letter-spacing: 0.025em;
-          padding: 11px 15px;
+          margin: 0;
+          position: relative;
+          padding: 20px 20px 35px 23px;
+          &:before{
+            border: 2px solid rgba(#FFF, .4);
+            width: 95px;
+            height: 100%;
+            display: block;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+          }
           a{
             color: $white;
-            &:hover{
-              color: $primary-color;
-            }
           }
         }
 
-        .carousel-prev,
-        .carousel-next{
-          position: absolute;
-          top:50%;
-          @include transform(translatey(-50%));
-          font-size: 16px;
-          color: $gray;
-        }
-        .carousel-prev{
-          left: -8px;
-        }
-        .carousel-next{
-          right: -8px;
-        }
-      }
+     }
     }
   }
-}
-/*
- * 7.8. KT Post Tabs
- */
-.widget_kt_post_tabs{
-  .kt-tabs-nav{
-    border-bottom: 2px solid $border-color;
-    position: relative;
-    margin-bottom: 25px;
+  .slick-dots{
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    bottom: 50px;
+    z-index: 10;
+    left: 56px;
     padding: 0;
-    &:after{
-      content: '';
-      width: 2px;
-      height: 100%;
-      position: absolute;
-      background: $border-color;
-      top: 0;
-      right: 0;
-      display: block;
-    }
     li{
-      display: inline-block;
-      a{
-        padding: 0 8px 8px;
-        border-right: 2px solid $border-color;
-        font-weight: bold;
-        color: $gray;
-        text-transform: uppercase;
-        display: inline-block;
-        i{
-          display: none;
-        }
-      }
-      &.ui-state-active a,
-      a:hover{
-        color: $black;
-      }
-
-      &:first-child{
-        a{
-          padding-left: 0;
-        }
-      }
+      float: left;
+      margin-right: 7px;
       &:last-child{
-        a{
-          border: none;
-          padding-right: 0;
-        }
+        margin-right: 0;
+      }
+      button{
+        padding: 0;
+        width: 10px;
+        height: 2px;
+        background: $white;
+        @include opacity(0.4);
+        border: none;
+        text-indent: -999px;
+        overflow: hidden;
+        outline: none;
+        display: block;
+      }
+      &.slick-active button,
+      button:hover{
+        @include opacity(1);
       }
     }
+
   }
 }
 /*
- * 7.9. Search
+ * 7.8. Search
  */
 .searchform {
   margin: 0 auto;
   position: relative;
   input[type=text]{
-    background: transparent;
+    background: $gray-bg;
     width: 100%;
     padding: 5px 40px 5px 10px;
   }
@@ -1213,7 +1353,7 @@ ul.kt_posts_widget{
   }
 }
 /*
- * 7.10. Instagram
+ * 7.9. Instagram
  */
 
 .null-instagram-feed{
@@ -1275,7 +1415,7 @@ ul.kt_posts_widget{
 }
 
 /*
- * 7.11. Flickr
+ * 7.10. Flickr
  */
 .widget_kt_flickr {
   text-align: center;
@@ -1328,7 +1468,7 @@ ul.kt_posts_widget{
 }
 
 /*
- * 7.12. KT ADS
+ * 7.11. KT ADS
  */
 .widget_kt_ads {
   .kt-ads-content{
@@ -1345,15 +1485,13 @@ ul.kt_posts_widget{
 }
 
 /*
- * 7.13. KT Mailchimp
+ * 7.12. KT Mailchimp
  */
 .widget_kt_mailchimp{
 
   .kt_mailchimp-before{
-    font-style: italic;
     letter-spacing: 0.025em;
     color: $gray;
-    font-family: $extra-font;
   }
   .main-sidebar &{
     background: $gray-bg;
@@ -1387,7 +1525,7 @@ ul.kt_posts_widget{
 }
 
 /*
- * 7.14. KT Socials
+ * 7.13. KT Socials
  */
 .widget_kt_socials{
   .main-sidebar &{
@@ -1440,7 +1578,7 @@ ul.kt_posts_widget{
 }
 
 /*
- * 7.15. Contact info
+ * 7.14. Contact info
  */
 .widget_kt_contactinfo{
   .contact-info-wrapper{
@@ -1449,7 +1587,7 @@ ul.kt_posts_widget{
 }
 
 /*
- * 7.16. Promo widget
+ * 7.15. Promo widget
  */
 .promo-area{
   margin: 0 -15px 50px;
@@ -2106,18 +2244,19 @@ ul.style-list{
   }
 }
 
+
 #header{
   #header-content{
     .site-branding{
-       .site-logo{
+      .site-logo{
         img{
           float: left;
+          width: 25px;
         }
-       }
+      }
     }
   }
 }
-
 
 .header-container{
   background: $white;
@@ -2127,16 +2266,12 @@ ul.style-list{
       @include box-shadow(0, 2px, 6px, rgba($black, 0.05));
     }
   }
-
-
 }
 
 .site-brandingalt{
   padding: 63px 0 50px;
   .site-desc{
-    font-family: $extra-font;
     color: $gray;
-    font-style: italic;
     padding-top: 15px;
     margin: 0;
   }
@@ -2246,7 +2381,7 @@ ul.style-list{
   a{
     color: $gray;
     padding-left: 12px;
-    font-size: 10px;
+    font-size: 12px;
     &:hover{
       color: $primary-color;
     }
@@ -2265,6 +2400,7 @@ ul.style-list{
 #main-navigation{
   margin: 0;
   padding: 0;
+  font-family: $menu-font;
   > li{
     margin: 0 25px;
     display: inline-block;
@@ -2278,6 +2414,7 @@ ul.style-list{
       color: $gray;
       letter-spacing: 0.05em;
       display: block;
+      font-family: $heading-font;
       i{
         margin-right: 5px;
       }
@@ -3017,6 +3154,7 @@ body.opened-nav-animate{
         text-transform: uppercase;
         letter-spacing: .1em;
         position: relative;
+        font-family: $heading-font;
         &:before{
           content: '';
           height: 1px;
@@ -3087,6 +3225,9 @@ body.opened-nav-animate{
       margin-top: 18px;
       margin-bottom: 17px;
     }
+  }
+  .logo-footer{
+    margin-bottom: 30px;
   }
   .footer-bottom-content{
     margin-bottom: 40px;
@@ -3271,8 +3412,7 @@ body.opened-nav-animate{
     }
     h3{
       font-size: 36px;
-      font-style: italic;
-      font-weight: normal;
+      font-weight: bold;
       line-height: 60px;
       text-transform: capitalize;
       a{
@@ -3313,10 +3453,9 @@ body.opened-nav-animate{
         overflow: hidden;
         outline: none;
       }
-      &.slick-active{
-        button{
-          @include opacity(1);
-        }
+      &.slick-active button,
+      button:hover{
+        @include opacity(1);
       }
     }
   }
@@ -3644,7 +3783,6 @@ body.opened-nav-animate{
     background: $primary-color;
     font-size: 16px;
     font-weight: bold;
-    font-family: $font-stack;
     margin: 0;
     text-transform: uppercase;
     i{
@@ -3701,8 +3839,7 @@ body.opened-nav-animate{
 %specialHeading{
   .entry-title{
     font-size: 30px;
-    font-weight: normal;
-    font-style: italic;
+    font-weight: bold;
     line-height: 40px;
     text-transform: none;
     margin: 30px 0 25px;
@@ -3767,8 +3904,6 @@ body.opened-nav-animate{
     padding: 0 25px;
   }
   .entry-title-audio{
-    font-style: italic;
-    font-weight: normal;
     margin: 0;
     padding: 50px 10px 15px;
     position: relative;
@@ -4003,17 +4138,16 @@ article.post-item-content{
       font-size: 16px;
       line-height: 30px;
       text-transform: capitalize;
-      font-weight: normal;
+      font-weight: bold;
       margin-bottom: 15px;
       @include css3-prefix('word-wrap','break-word');
       a{
         color: $black;
-        em{
-          color: $gray;
+        span{
+          color: $primary-color;
           @include transition(all 0.3s ease 0s);
         }
-        &:hover,
-        &:hover em{
+        &:hover{
           color: $primary-color;
         }
       }
@@ -4071,8 +4205,6 @@ article.post-item-content{
     &.format-audio{
       .entry-title{
         font-size: 24px;
-        font-weight: normal;
-        font-style: italic;
         line-height: 30px;
         margin: 25px 0;
         position: relative;
@@ -4675,7 +4807,6 @@ article.post-item-content{
   position: relative;
   font-weight: bold;
   text-transform: uppercase;
-  font-family: $font-stack;
   text-align: center;
   &:after{
     content: '';
@@ -5019,7 +5150,6 @@ p.logged-in-as{
     &.prev,
     &.next{
       padding: 0;
-      font-style: italic;
     }
     &.next{
       float: right;
@@ -5154,8 +5284,7 @@ body.error404{
       h1{
         font-size: 200px;
         color: $black;
-        font-weight: normal;
-        font-style: italic;
+        font-weight: bold;
         line-height: 1;
         margin-bottom: 60px;
       }

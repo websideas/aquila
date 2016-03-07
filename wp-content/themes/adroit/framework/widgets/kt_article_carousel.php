@@ -58,13 +58,11 @@ class Widget_KT_Posts_Carousel extends WP_Widget {
                     <li <?php post_class('article-widget clearfix'); ?>>
                         <?php kt_post_thumbnail_image( 'kt_widget_article_carousel', 'img-responsive' ); ?>
                         <div class="article-attr">
-                            <a class="carousel-prev" href="#"><i class="fa fa-angle-left"></i></a>
                             <h3 class="title">
                                 <a href="<?php the_permalink(); ?>">
                                     <?php get_the_title() ? the_title() : the_ID(); ?>
                                 </a>
                             </h3>
-                            <a class="carousel-next" href="#"><i class="fa fa-angle-right"></i></a>
                         </div>
                     </li>
                 <?php endwhile; ?>

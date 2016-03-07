@@ -39,7 +39,7 @@ jQuery( document ).ready( function () {
 		return memo + getImageEventString( e );
 	}, '' );
 	vc.events.on( imageEventString, function ( model, param, settings ) {
-		if ( param.length > 0 ) {
+		if ( param && param.length > 0 ) {
 			var ids = param.split( /\s*,\s*/ );
 			_.each( ids, function ( id ) {
 				var attachment = window.wp.media.model.Attachment.get( id );

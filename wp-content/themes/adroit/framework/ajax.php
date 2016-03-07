@@ -8,11 +8,11 @@ if ( !defined('ABSPATH')) exit;
 ===============================**/
 
 
-add_action( 'wp_ajax_fronted_likepost', 'wp_ajax_fronted_likepost_callback' );
-add_action( 'wp_ajax_nopriv_fronted_likepost', 'wp_ajax_fronted_likepost_callback' );
+add_action( 'wp_ajax_fronted_likepost', 'kt_ajax_fronted_likepost_callback' );
+add_action( 'wp_ajax_nopriv_fronted_likepost', 'kt_ajax_fronted_likepost_callback' );
 
 
-function wp_ajax_fronted_likepost_callback() {
+function kt_ajax_fronted_likepost_callback() {
     check_ajax_referer( 'ajax_frontend', 'security' );
 
     if(!isset($_POST['post_id']) || !is_numeric($_POST['post_id'])) return;

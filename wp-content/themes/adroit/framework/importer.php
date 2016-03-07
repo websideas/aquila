@@ -14,7 +14,7 @@ function kt_import_demo_adroit( $demos ){
         'status' => sprintf(
             '<span class="%s">%s</span>',
             'demo-main',
-            __('Main', 'adroit')
+            esc_html__('Main', 'adroit')
         )
     );
 
@@ -31,9 +31,9 @@ if ( !function_exists( 'kt_extended_imported' ) ) {
          * Setting Menus
          *************************************************************************/
 
-        $main_menu = get_term_by( 'name', __('Main menu', 'adroit'), 'nav_menu' );
-        $mobile = get_term_by( 'name', __('Main Menu', 'adroit'), 'nav_menu' );
-        $footer = get_term_by( 'name', __('Footer Navigation Menu', 'adroit'), 'nav_menu' );
+        $main_menu = get_term_by( 'name', esc_html__('Main menu', 'adroit'), 'nav_menu' );
+        $mobile = get_term_by( 'name', esc_html__('Main Menu', 'adroit'), 'nav_menu' );
+        $footer = get_term_by( 'name', esc_html__('Footer Navigation Menu', 'adroit'), 'nav_menu' );
 
         // array of demos/homepages to check/select from
         $kt_menus = array(
@@ -90,13 +90,12 @@ if ( !function_exists( 'kt_extended_imported' ) ) {
 
 
 function kt_importer_dir_adroit( ) {
-    return KT_THEME_DATA_DIR.'/';
+    return KT_THEME_DATA_DIR;
 }
 add_filter('kt_importer_dir', 'kt_importer_dir_adroit' );
 
 function kt_importer_url_adroit( ) {
-
-    return KT_THEME_DATA.'/';
+    return KT_THEME_DATA;
 }
 add_filter('kt_importer_url', 'kt_importer_url_adroit' );
 

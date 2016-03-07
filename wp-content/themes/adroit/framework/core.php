@@ -97,8 +97,8 @@ if ( class_exists( 'RW_Meta_Box' ) && is_admin() ) {
  * 
  */
 
-if(!function_exists('redux_register_custom_extension_loader')) :
-	function redux_register_custom_extension_loader($ReduxFramework) {
+if(!function_exists('kt_register_custom_extension_loader')) :
+	function kt_register_custom_extension_loader($ReduxFramework) {
 		$path = KT_FW_EXT_DIR . '/ReduxCoreExt/';
 		$folders = scandir( $path, 1 );		   
 		foreach($folders as $folder) {
@@ -118,7 +118,7 @@ if(!function_exists('redux_register_custom_extension_loader')) :
 		}
 	}
 	// Modify {$redux_opt_name} to match your opt_name
-	add_action("redux/extensions/".KT_THEME_OPTIONS."/before", 'redux_register_custom_extension_loader', 0);
+	add_action("redux/extensions/".KT_THEME_OPTIONS."/before", 'kt_register_custom_extension_loader', 0);
 endif;
 
 
@@ -186,12 +186,12 @@ function kt_vcSetAsTheme() {
 if ( class_exists( 'Vc_Manager', false ) ) {
 
 
-    if ( ! function_exists( 'js_composer_bridge_admin' ) ) {
-		function js_composer_bridge_admin( $hook ) {
+    if ( ! function_exists( 'kt_composer_bridge_admin' ) ) {
+		function kt_composer_bridge_admin( $hook ) {
 			wp_enqueue_style( 'js_composer_bridge', KT_FW_CSS . 'js_composer_bridge.css', array(), KT_FW_VER );
 		}
 	}
-    add_action( 'admin_enqueue_scripts', 'js_composer_bridge_admin', 15 );
+    add_action( 'admin_enqueue_scripts', 'kt_composer_bridge_admin', 15 );
 
 
     if ( !function_exists('kt_js_composer_bridge') ) {

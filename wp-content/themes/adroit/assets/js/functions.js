@@ -56,20 +56,12 @@
         kt_likepost();
         init_lightbox_content();
 
-        
-        if($('#wpadminbar').length){
-            $('body').addClass('admin-bar');
-        }
-
-
         $('.button-toggle').click(function(e){
             e.preventDefault();
             $(this).closest('#nav').toggleClass('is-opened');
         });
         
         $('.widget-container .kt_widget_tabs').tabs();
-
-
 
 
         $('body')
@@ -201,8 +193,7 @@
             $masonry.imagesLoaded(function(){
                 $masonry.isotope({
                     itemSelector: '.article-post-item',
-                    layoutMode: 'packery',
-                    packery: {columnWidth: '.grid-sizer'}
+                    masonry: {columnWidth: '.grid-sizer' }
                 });
             });
         });
@@ -343,7 +334,9 @@
         });
 
         var slide_carousel = $('.kt_posts_carousel_widget').slick({
-            arrows: false
+            arrows: false,
+            dots: true
+
         });
 
         $('body').on('click','.carousel-next',function(){

@@ -14,25 +14,31 @@
             'pinterest' => array('title' => esc_html__('Pinterest', 'adroit'), 'icon' => 'fa fa-pinterest', 'link' => 'http://www.pinterest.com/%s'),
             'instagram' => array('title' => esc_html__('Instagram', 'adroit'), 'icon' => 'fa fa-instagram', 'link' => 'http://instagram.com/%s'),
         );
-        
+
+
         foreach($socials_arr as $k => &$v){
             $val = kt_option($k);
             $v['val'] = ($val) ? $val : '';
         }
+
         $social_icons = '';
         if($social){
             $social_type = explode(',', $social);
             foreach ($social_type as $id) {
                 $val = $socials_arr[$id];
-                $social_text = '<i class="'.esc_attr($val['icon']).'"></i>';
-                $social_icons .= '<a class="'.esc_attr($id).'" title="'.esc_attr($val['title']).'" href="'.esc_url(str_replace('%s', $val['val'], $val['link'])).'" target="_blank">'.$social_text.'</a>';
+                if($val['val']) {
+                    $social_text = '<i class="' . esc_attr($val['icon']) . '"></i>';
+                    $social_icons .= '<a class="' . esc_attr($id) . '" title="' . esc_attr($val['title']) . '" href="' . esc_attr(str_replace('%s', $val['val'], $val['link'])) . '" target="_blank">' . $social_text . '</a>';
+                }
             }
         }else{
             foreach($socials_arr as $key => $val){
-                $social_text = '<i class="'.esc_attr($val['icon']).'"></i>';
-                $social_icons .= '<a class="'.esc_attr($key).'" title="'.esc_attr($val['title']).'" href="'.esc_url(str_replace('%s', $val['val'], $val['link'])).'" target="_blank">'.$social_text.'</a>';
+                if($val['val']){
+                    $social_text = '<i class="'.esc_attr($val['icon']).'"></i>';
+                    $social_icons .= '<a class="'.esc_attr($key).'" title="'.esc_attr($val['title']).'" href="'.esc_attr(str_replace('%s', $val['val'], $val['link'])).'" target="_blank">'.$social_text.'</a>';
+                }
             }
         }
     ?>
     <?php echo $social_icons; ?>
-</div><!-- .menu-bars-socials -->
+</div><!-- .main-nav-socials -->

@@ -104,7 +104,7 @@ function kt_body_classes( $classes ) {
         }
 
     }else{
-        $classes[] = 'layout-'.kt_option('layout', 'boxed');
+        $classes[] = 'layout-'.kt_option('layout', 'full');
     }
 
     return $classes;
@@ -251,6 +251,8 @@ if(!function_exists('kt_placeholder_callback')) {
             $imgage = KT_THEME_IMG . 'placeholder-recent.jpg';
         }elseif ($size == 'kt_blog_post' || $size == 'kt_blog_post_sidebar'){
             $imgage = KT_THEME_IMG . 'placeholder-blogpost.jpg';
+        }elseif($size == 'kt_blog_post_slider'){
+            $imgage = KT_THEME_IMG . 'placeholder-slider.jpg';
         }else{
             $imgage = KT_THEME_IMG . 'placeholder-post.jpg';
         }
@@ -418,6 +420,8 @@ function kt_get_page_header( ){
         );
     }
 }
+
+
 /**
  * Get page title
  *
@@ -534,78 +538,6 @@ function kt_get_page_subtitle(){
     return $subtitle;
 }
 
-
-/**
- * Get Share Count
- *
- */
-
-/*== Facebook ==*/
-function kt_get_facebook_post_share_count( $url ) {
-    $response = wp_remote_get( 'https://graph.facebook.com/?id='.$url );
-    if ( ! is_wp_error( $response ) && isset( $response['body'] ) ) {
-        $data = json_decode( $response['body'] );
-        if ( ! is_null( $data ) && isset( $data->shares ) )
-            return intval($data->shares);
-    }
-    return 0;
-}
-
-/*== Pinterest ==*/
-function kt_get_pinterest_post_share_count( $url ) {
-    $response = wp_remote_get( '.http://api.pinterest.com/v1/urls/count.json?callback=receivecount&url='.$url );
-    if ( ! is_wp_error( $response ) && isset( $response['body'] ) ) {
-        $data = json_decode( substr( $response['body'], 13, - 1 ) );
-        if ( ! is_null( $data ) && isset( $data->count ) )
-            return intval($data->count);
-    }
-    return 0;
-}
-
-/*== Linked ==*/
-function kt_get_linkedin_post_share_count( $url ) {
-    $response = wp_remote_get( 'http://www.linkedin.com/countserv/count/share?url='.$url.'&format=json' );
-    if ( ! is_wp_error( $response ) && isset( $response['body'] ) ) {
-        $data = json_decode( $response['body'] );
-        if ( ! is_null( $data ) && isset( $data->count ) )
-            return intval($data->count);
-    }
-    return 0;
-}
-
-/*== Google Plus ==*/
-function kt_get_googleplus_post_share_count( $url ) {
-    $args       = array(
-        'headers' => array( 'Content-type' => 'application/json' ),
-        'body'    => '[{"method":"pos.plusones.get","id":"p","params":{"nolog":true,"id":"'.rawurldecode( $url ).'","source":"widget","userId":"@viewer","groupId":"@self"},"jsonrpc":"2.0","key":"p","apiVersion":"v1"}]',
-    );
-    $google_url = 'https://clients6.google.com/rpc';
-
-    $response = wp_remote_post( $google_url, $args );
-    if ( ! is_wp_error( $response ) && isset( $response['body'] ) ) {
-        $data = json_decode( $response['body'] );
-        if ( ! is_null( $data ) ) {
-            if ( is_array( $data ) && count( $data ) == 1 )
-                $data = array_shift( $data );
-
-            if ( isset( $data->result->metadata->globalCounts->count ) )
-                return intval($data->result->metadata->globalCounts->count);
-        }
-    }
-
-    return 0;
-}
-
-function kt_total_post_share_count( $url ){
-    $fb = kt_get_facebook_post_share_count( $url );
-    $gp = kt_get_googleplus_post_share_count( $url );
-    $pt = kt_get_pinterest_post_share_count( $url ) ;
-    $li = kt_get_linkedin_post_share_count( $url ) ;
-
-    $count =  $fb + $gp + $pt + $li;
-
-    return $count;
-}
 
 /**
  * Custom password form

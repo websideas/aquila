@@ -19,11 +19,13 @@ if ( ! defined( 'ABSPATH' ) ) {
  * @var $video_bg
  * @var $video_bg_url
  * @var $video_bg_parallax
+ * @var $parallax_speed_bg
+ * @var $parallax_speed_video
  * @var $content - shortcode content
  * Shortcode class
  * @var $this WPBakeryShortCode_VC_Row
  */
-$el_class = $full_height = $full_width = $equal_height = $flex_row = $columns_placement = $content_placement = $parallax = $parallax_image = $css = $el_id = $video_bg = $video_bg_url = $video_bg_parallax = '';
+$el_class = $full_height = $parallax_speed_bg = $parallax_speed_video = $full_width = $equal_height = $flex_row = $columns_placement = $content_placement = $parallax = $parallax_image = $css = $el_id = $video_bg = $video_bg_url = $video_bg_parallax = '';
 $output = $after_output = '';
 $atts = vc_map_get_attributes( $this->getShortcode(), $atts );
 extract( $atts );
@@ -89,8 +91,10 @@ if ( ! empty( $flex_row ) ) {
 
 $has_video_bg = ( ! empty( $video_bg ) && ! empty( $video_bg_url ) && vc_extract_youtube_id( $video_bg_url ) );
 
+$parallax_speed = $parallax_speed_bg;
 if ( $has_video_bg ) {
 	$parallax = $video_bg_parallax;
+	$parallax_speed = $parallax_speed_video;
 	$parallax_image = $video_bg_url;
 	$css_classes[] = ' vc_video-bg-container';
 	wp_enqueue_script( 'vc_youtube_iframe_api_js' );
@@ -98,7 +102,7 @@ if ( $has_video_bg ) {
 
 if ( ! empty( $parallax ) ) {
 	wp_enqueue_script( 'vc_jquery_skrollr_js' );
-	$wrapper_attributes[] = 'data-vc-parallax="1.5"'; // parallax speed
+	$wrapper_attributes[] = 'data-vc-parallax="' . esc_attr( $parallax_speed ) . '"'; // parallax speed
 	$css_classes[] = 'vc_general vc_parallax vc_parallax-' . $parallax;
 	if ( false !== strpos( $parallax, 'fade' ) ) {
 		$css_classes[] = 'js-vc_parallax-o-fade';

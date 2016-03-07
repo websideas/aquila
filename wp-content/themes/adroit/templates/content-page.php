@@ -20,7 +20,7 @@
         ?>
     </div><!-- .entry-content -->
     <?php
-    if( kt_option( 'show_page_comment', 0 ) ){
+    if( kt_option( 'show_page_comment', 1 ) ){
         // If comments are open or we have at least one comment, load up the comment template.
         if ( shortcode_exists( 'fbcomments' ) ) {
             echo '<div class="kt_facebook_comment">'.do_shortcode('[fbcomments]').'</div>';
@@ -35,7 +35,7 @@
     edit_post_link(
         sprintf(
         /* translators: %s: Name of current post */
-            wp_kses(__( 'Edit<span class="screen-reader-text"> "%s"</span>', 'adroit' ), array( 'span' => array('class' => true) ) ),
+            wp_kses(__( 'Edit<span class="screen-reader-text"> %s</span>', 'adroit' ), array( 'span' => array('class' => true) ) ),
             get_the_title()
         ),
         '<footer class="entry-footer"><span class="edit-link">',

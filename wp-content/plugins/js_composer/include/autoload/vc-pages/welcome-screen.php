@@ -58,6 +58,7 @@ function vc_welcome_menu_hooks() {
 }
 
 add_action( 'admin_menu', 'vc_welcome_menu_hooks', 9 );
+add_action( 'network_admin_menu', 'vc_welcome_menu_hooks', 9 );
 /**
  * ====================
  * Redirect to welcome page on plugin activation.

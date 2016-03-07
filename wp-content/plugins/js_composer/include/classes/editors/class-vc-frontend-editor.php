@@ -508,13 +508,18 @@ class Vc_Frontend_Editor implements Vc_Editor_Interface {
 	 * @return bool
 	 */
 	function showButton( $post_id = null ) {
+		$type = get_post_type();
+
 		return self::inlineEnabled() && ! in_array( get_post_status(), array(
 			'private',
 			'trash',
+		) ) && ! in_array( $type, array(
+			'templatera',
+			'vc_grid_item',
 		) ) && vc_user_access()->wpAny( array(
-			'edit_post',
-			$post_id,
-		) )->get() && vc_check_post_type( get_post_type() );
+				'edit_post',
+				$post_id,
+			) )->get() && vc_check_post_type( $type );
 	}
 
 	/**

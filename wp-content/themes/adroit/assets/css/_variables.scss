@@ -11,10 +11,13 @@
 ////4. Hamburger
 
 //// 1. Fonts ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
-$font-stack: 'Karla', sans-serif;
-$heading-font: 'Playfair Display', serif;
-$button-text: 'Karla', sans-serif;
-$extra-font: 'Vollkorn', serif;
+$font-stack: 'Georgia', sans-serif;
+$heading-font: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$button-text: 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+$menu-font: 'Karla', serif;
+
+
+
 
 //// 2. Color codes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
@@ -49,7 +52,6 @@ $orange: #ed8b5c;
 
 $header-height: 80px;
 $header-sticky: 60px;
-
 
 //// 4. ShortCodes ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 $shortcode: 30px;

@@ -41,9 +41,7 @@ vc_add_params("vc_custom_heading", array(
 
 
 $composer_addons = array(
-    //'dropcap.php',
     'blockquote.php',
-    'googlemap.php',
     'socials.php',
     'gallery-grid.php',
     'gallery_fullwidth.php',

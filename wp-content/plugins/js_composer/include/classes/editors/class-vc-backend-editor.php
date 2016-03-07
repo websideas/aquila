@@ -136,6 +136,7 @@ class Vc_Backend_Editor implements Vc_Editor_Interface {
 	 * @return bool
 	 */
 	public function isValidPostType( $type = '' ) {
+		if( 'vc_grid_item' === $type ) { return false; }
 		return vc_check_post_type( ! empty( $type ) ? $type : get_post_type() );
 	}
 

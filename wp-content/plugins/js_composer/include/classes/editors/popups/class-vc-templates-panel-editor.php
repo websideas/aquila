@@ -281,6 +281,7 @@ HTML;
 		if ( '' === $template_id ) {
 			die( 'Error: Vc_Templates_Panel_Editor::renderFrontendTemplate:1' );
 		}
+		WPBMap::addAllMappedShortcodes();
 		if ( 'my_templates' === $template_type ) {
 			$saved_templates = get_option( $this->option_name );
 			vc_frontend_editor()->setTemplateContent( $saved_templates[ $template_id ]['template'] );
@@ -409,6 +410,7 @@ HTML;
 		if ( ! isset( $template_id, $template_type ) || '' === $template_id || '' === $template_type ) {
 			die( 'Error: Vc_Templates_Panel_Editor::renderBackendTemplate:1' );
 		}
+		WPBMap::addAllMappedShortcodes();
 		if ( 'my_templates' === $template_type ) {
 			$saved_templates = get_option( $this->option_name );
 
@@ -452,6 +454,7 @@ HTML;
 		if ( ! isset( $template_id, $template_type ) || '' === $template_id || '' === $template_type ) {
 			die( __( 'Error: wrong template id.', 'js_composer' ) );
 		}
+		WPBMap::addAllMappedShortcodes();
 		if ( 'my_templates' === $template_type ) {
 			$saved_templates = get_option( $this->option_name );
 

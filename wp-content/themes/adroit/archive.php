@@ -33,7 +33,7 @@ if ( have_posts() ) { ?>
                 $first_featured = kt_option('search_first_featured', false);
                 $pagination = kt_option('search_pagination', 'normal');
             }else{
-                $type = kt_option('archive_loop_style', 'gird');
+                $type = kt_option('archive_loop_style', 'grid');
                 $column = kt_option('archive_columns', 2);
                 $first_featured = kt_option('archive_first_featured', false);
                 $pagination = kt_option('archive_pagination', 'normal');

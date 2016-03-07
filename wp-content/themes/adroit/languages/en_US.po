@@ -1,0 +1,4232 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Adroit\n"
+"POT-Creation-Date: 2016-02-22 15:50+0700\n"
+"PO-Revision-Date: 2016-02-22 15:54+0700\n"
+"Last-Translator: Kite-Themes <cuongdao.ict@gmail.com>\n"
+"Language-Team: Kite-Themes <cuongdao.ict@gmail.com>\n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: __;_e;_x;_n:1,2;_x:1,2c;_ex:1,2c;esc_html__;"
+"esc_html_e;esc_html_x;esc_attr__;esc_attr_e;esc_attr_x\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPathExcluded-2: ../recommend-plugins\n"
+"X-Poedit-SearchPathExcluded-3: ../framework/extensions/meta-box\n"
+"X-Poedit-SearchPathExcluded-4: ../framework/extensions/meta-box-tabs\n"
+"X-Poedit-SearchPathExcluded-5: ../framework/extensions/meta-box-show-hide\n"
+"X-Poedit-SearchPathExcluded-6: ../framework/extensions/meta-box-conditional-"
+"logic\n"
+"X-Poedit-SearchPathExcluded-7: ../framework/class\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../comments.php:49
+msgid "Comments are closed."
+msgstr ""
+
+#: ../comments.php:60
+msgid "(required)"
+msgstr ""
+
+#: ../comments.php:64 ../framework/widgets/kt_article.php:155
+#: ../framework/widgets/kt_article_carousel.php:135
+msgid "Name"
+msgstr ""
+
+#: ../comments.php:66
+msgid "Email"
+msgstr ""
+
+#: ../comments.php:68
+msgid "Website"
+msgstr ""
+
+#: ../comments.php:72
+msgid "send"
+msgstr ""
+
+#: ../comments.php:74
+msgid "Your Comment"
+msgstr ""
+
+#: ../frontpage.php:195 ../templates/content-page.php:38
+#, php-format
+msgid "Edit<span class=\"screen-reader-text\"> \"%s\"</span>"
+msgstr ""
+
+#: ../searchform.php:2
+msgid "Type and hit enter ..."
+msgstr ""
+
+#: ../framework/admin.php:27
+#: ../framework/extensions-custom/meta-box-custom.php:18
+#: ../framework/widgets/kt_aboutme.php:120
+#: ../framework/widgets/kt_image.php:91 ../framework/widgets/kt_promo.php:94
+msgid "Select your image"
+msgstr ""
+
+#: ../framework/frontend.php:94
+msgid "Main Navigation Menu"
+msgstr ""
+
+#: ../framework/frontend.php:95
+msgid "(Mobile Devices) Main Navigation Menu"
+msgstr ""
+
+#: ../framework/frontend.php:96 ../framework/importer.php:36
+msgid "Footer Navigation Menu"
+msgstr ""
+
+#: ../framework/frontend.php:496
+msgid "No image"
+msgstr ""
+
+#: ../framework/frontend.php:669
+msgid "Comment navigation"
+msgstr ""
+
+#: ../framework/frontend.php:672
+msgid "Older Comments"
+msgstr ""
+
+#: ../framework/frontend.php:676
+msgid "Newer Comments"
+msgstr ""
+
+#: ../framework/frontend.php:720
+msgid "Pingback:"
+msgstr ""
+
+#: ../framework/frontend.php:720 ../framework/frontend.php:747
+#: ../templates/content-single.php:47
+msgid "Edit"
+msgstr ""
+
+#: ../framework/frontend.php:737
+#, php-format
+msgctxt "%s = human-readable time difference"
+msgid "%s ago"
+msgstr ""
+
+#: ../framework/frontend.php:743
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: ../framework/frontend.php:751
+msgid "Reply"
+msgstr ""
+
+#: ../framework/frontend.php:789 ../framework/frontend.php:791
+msgid "<span>Previous Article</span>"
+msgstr ""
+
+#: ../framework/frontend.php:795 ../framework/frontend.php:797
+msgid "<span>Next Article</span>"
+msgstr ""
+
+#: ../framework/frontend.php:824
+msgid "Posts navigation"
+msgstr ""
+
+#: ../framework/frontend.php:827
+msgid "Older posts"
+msgstr ""
+
+#: ../framework/frontend.php:830
+msgid "Newer posts"
+msgstr ""
+
+#: ../framework/frontend.php:855
+msgctxt "Used before category names."
+msgid "Categories"
+msgstr ""
+
+#: ../framework/frontend.php:891
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ""
+
+#: ../framework/frontend.php:894
+msgctxt "Used before tag names."
+msgid "Tags: "
+msgstr ""
+
+#: ../framework/frontend.php:914
+msgctxt "Used before post author name."
+msgid "Author"
+msgstr ""
+
+#: ../framework/frontend.php:917
+msgid "By:"
+msgstr ""
+
+#: ../framework/frontend.php:962
+msgid " ago"
+msgstr ""
+
+#: ../framework/frontend.php:972
+msgctxt "Used before publish date."
+msgid "Posted on"
+msgstr ""
+
+#: ../framework/frontend.php:1002
+msgid "View"
+msgstr ""
+
+#: ../framework/frontend.php:1002
+msgid "Views"
+msgstr ""
+
+#: ../framework/frontend.php:1025
+msgid "Like this post"
+msgstr ""
+
+#: ../framework/frontend.php:1026
+msgid "You already like this!"
+msgstr ""
+
+#: ../framework/frontend.php:1063 ../framework/functions.php:308
+#: ../framework/data/data-options.php:2709
+#: ../framework/data/data-options.php:2924
+#: ../framework/js_composer/vc_addons/socials.php:29
+#: ../framework/widgets/kt_aboutme.php:46
+#: ../framework/widgets/kt_facebook.php:80
+#: ../templates/headers/header-socials.php:5
+msgid "Facebook"
+msgstr ""
+
+#: ../framework/frontend.php:1068 ../framework/functions.php:309
+#: ../framework/data/data-options.php:2702
+#: ../framework/data/data-options.php:2925
+#: ../framework/js_composer/vc_addons/socials.php:30
+#: ../framework/widgets/kt_aboutme.php:47
+#: ../templates/headers/header-socials.php:6
+msgid "Twitter"
+msgstr ""
+
+#: ../framework/frontend.php:1073 ../framework/data/data-options.php:2763
+#: ../framework/data/data-options.php:2926
+msgid "Google+"
+msgstr ""
+
+#: ../framework/frontend.php:1078 ../framework/functions.php:317
+#: ../framework/data/data-options.php:2716
+#: ../framework/data/data-options.php:2927
+#: ../framework/js_composer/vc_addons/socials.php:38
+#: ../framework/widgets/kt_aboutme.php:55
+#: ../templates/headers/header-socials.php:14
+msgid "Pinterest"
+msgstr ""
+
+#: ../framework/frontend.php:1083 ../framework/functions.php:314
+#: ../framework/data/data-options.php:2755
+#: ../framework/js_composer/vc_addons/socials.php:35
+#: ../framework/widgets/kt_aboutme.php:52
+#: ../templates/headers/header-socials.php:11
+msgid "LinkedIn"
+msgstr ""
+
+#: ../framework/frontend.php:1088 ../framework/functions.php:312
+#: ../framework/data/data-options.php:2739
+#: ../framework/data/data-options.php:2929
+#: ../framework/js_composer/vc_addons/socials.php:33
+#: ../framework/widgets/kt_aboutme.php:50
+#: ../templates/headers/header-socials.php:9
+msgid "Tumblr"
+msgstr ""
+
+#: ../framework/frontend.php:1093 ../framework/data/data-options.php:2930
+msgid "Mail"
+msgstr ""
+
+#: ../framework/frontend.php:1148
+msgid "Related Article"
+msgstr ""
+
+#: ../framework/functions.php:223
+msgid "Facebook page/profile url"
+msgstr ""
+
+#: ../framework/functions.php:224
+msgid "Twitter username (without @)"
+msgstr ""
+
+#: ../framework/functions.php:225
+msgid "Pinterest username"
+msgstr ""
+
+#: ../framework/functions.php:226
+msgid "Google+ page/profile URL"
+msgstr ""
+
+#: ../framework/functions.php:227
+msgid "Instagram username"
+msgstr ""
+
+#: ../framework/functions.php:228
+msgid "Behance username"
+msgstr ""
+
+#: ../framework/functions.php:229
+msgid "Tumblr username"
+msgstr ""
+
+#: ../framework/functions.php:230
+msgid "Dribbble username"
+msgstr ""
+
+#: ../framework/functions.php:310 ../framework/data/data-options.php:2723
+#: ../framework/js_composer/vc_addons/socials.php:31
+#: ../framework/widgets/kt_aboutme.php:48
+#: ../templates/headers/header-socials.php:7
+msgid "Dribbble"
+msgstr ""
+
+#: ../framework/functions.php:311 ../framework/data/data-meta-box.php:101
+#: ../framework/data/data-options.php:2731
+#: ../framework/js_composer/vc_addons/socials.php:32
+#: ../framework/widgets/kt_aboutme.php:49
+#: ../templates/headers/header-socials.php:8
+msgid "Vimeo"
+msgstr ""
+
+#: ../framework/functions.php:313 ../framework/data/data-options.php:2747
+#: ../framework/js_composer/vc_addons/socials.php:34
+#: ../framework/widgets/kt_aboutme.php:51
+#: ../templates/headers/header-socials.php:10
+msgid "Skype"
+msgstr ""
+
+#: ../framework/functions.php:315
+#: ../framework/js_composer/vc_addons/socials.php:36
+#: ../framework/widgets/kt_aboutme.php:53
+#: ../framework/widgets/kt_googleplus.php:89
+#: ../templates/headers/header-socials.php:12
+msgid "Google Plus"
+msgstr ""
+
+#: ../framework/functions.php:316 ../framework/data/data-meta-box.php:100
+#: ../framework/js_composer/vc_addons/socials.php:37
+#: ../framework/widgets/kt_aboutme.php:54
+#: ../templates/headers/header-socials.php:13
+msgid "Youtube"
+msgstr ""
+
+#: ../framework/functions.php:318 ../framework/data/data-options.php:2779
+#: ../framework/js_composer/vc_addons/socials.php:39
+#: ../framework/widgets/kt_aboutme.php:56
+#: ../templates/headers/header-socials.php:15
+msgid "Instagram"
+msgstr ""
+
+#: ../framework/functions.php:358
+msgctxt "previous post"
+msgid "Previous"
+msgstr ""
+
+#: ../framework/functions.php:361
+msgctxt "next post"
+msgid "Next"
+msgstr ""
+
+#: ../framework/functions.php:431 ../framework/data/data-options.php:2167
+msgid "Blog"
+msgstr ""
+
+#: ../framework/functions.php:445
+#, php-format
+msgid "<i class=\"fa fa-search\"></i> <span>%s</span>"
+msgstr ""
+
+#: ../framework/functions.php:455
+#, php-format
+msgid "<i class=\"fa fa-tags\"></i> <span>%s</span>"
+msgstr ""
+
+#: ../framework/functions.php:457
+#, php-format
+msgid "<i class=\"fa fa-user\"></i> <span>%s</span>"
+msgstr ""
+
+#: ../framework/functions.php:459 ../framework/functions.php:461
+#: ../framework/functions.php:463
+#, php-format
+msgid "<i class=\"fa fa-clock-o\"></i> <span>%s</span>"
+msgstr ""
+
+#: ../framework/functions.php:459
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: ../framework/functions.php:461
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: ../framework/functions.php:463
+msgctxt "daily archives date format"
+msgid "F j, Y"
+msgstr ""
+
+#: ../framework/functions.php:484
+msgid "Lastest posts"
+msgstr ""
+
+#: ../framework/functions.php:502 ../framework/data/data-meta-box.php:233
+#: ../framework/data/data-meta-box.php:385
+#: ../framework/extensions/meta-box/inc/fields/select.php:211
+msgid "All"
+msgstr ""
+
+#: ../framework/functions.php:513 ../framework/functions.php:517
+#: ../framework/functions.php:522
+#, php-format
+msgid "%s posts"
+msgstr ""
+
+#: ../framework/functions.php:619
+msgid "To view this protected post, enter the password below:"
+msgstr ""
+
+#: ../framework/functions.php:620
+msgid "Submit"
+msgstr ""
+
+#: ../framework/helpers.php:79 ../framework/widgets/kt_aboutme.php:142
+#: ../framework/widgets/kt_image.php:124 ../framework/widgets/kt_promo.php:127
+msgid "Crop"
+msgstr ""
+
+#: ../framework/helpers.php:86
+msgid "Full"
+msgstr ""
+
+#: ../framework/helpers.php:89
+msgid "Custom size"
+msgstr ""
+
+#: ../framework/importer.php:17
+msgid "Main"
+msgstr ""
+
+#: ../framework/importer.php:34
+msgid "Main menu"
+msgstr ""
+
+#: ../framework/importer.php:35
+msgid "Main Menu"
+msgstr ""
+
+#: ../framework/widgets.php:16
+msgid "Primary Widget Area"
+msgstr ""
+
+#: ../framework/widgets.php:18
+msgid "The primary widget area"
+msgstr ""
+
+#: ../framework/widgets.php:26
+msgid "Blog Widget Area"
+msgstr ""
+
+#: ../framework/widgets.php:28
+msgid "The blog widget area"
+msgstr ""
+
+#: ../framework/widgets.php:36
+msgid "Side Area"
+msgstr ""
+
+#: ../framework/widgets.php:38
+msgid "The side widget area"
+msgstr ""
+
+#: ../framework/widgets.php:46
+msgid "Promo Area"
+msgstr ""
+
+#: ../framework/widgets.php:48
+msgid "IMPORTANT: For best result select set number of widget to 3."
+msgstr ""
+
+#: ../framework/widgets.php:59
+#, php-format
+msgid "Sidebar %s"
+msgstr ""
+
+#: ../framework/widgets.php:61
+#, php-format
+msgid "The sidebar column %s widget area"
+msgstr ""
+
+#: ../framework/widgets.php:70
+msgid "Instagram Footer"
+msgstr ""
+
+#: ../framework/widgets.php:76
+msgid ""
+"Use the Instagram widget here. IMPORTANT: For best result select \"Small\" "
+"under \"Photo Size\" and set number of photos to 6."
+msgstr ""
+
+#: ../framework/widgets.php:80 ../framework/data/data-options.php:1757
+msgid "Footer top"
+msgstr ""
+
+#: ../framework/widgets.php:82
+msgid "The footer top widget area"
+msgstr ""
+
+#: ../framework/widgets.php:94
+#, php-format
+msgid "Footer column %s"
+msgstr ""
+
+#: ../framework/widgets.php:96
+#, php-format
+msgid "The footer column %s widget area"
+msgstr ""
+
+#: ../framework/widgets.php:105
+msgid "Footer bottom column 1"
+msgstr ""
+
+#: ../framework/widgets.php:107 ../framework/widgets.php:117
+msgid "The footer bottom widget area"
+msgstr ""
+
+#: ../framework/widgets.php:115
+msgid "Footer bottom column 2"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:324
+msgid "Install Required Plugins"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:325
+msgid "Install Plugins"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:326
+#, php-format
+msgid "Installing Plugin: %s"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:327
+msgid "Something went wrong with the plugin API."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:388
+msgid "Return to Required Plugins Installer"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:389
+msgid "Return to the dashboard"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:390
+#: ../framework/class/class-tgm-plugin-activation.php:3014
+msgid "Plugin activated successfully."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:391
+#: ../framework/class/class-tgm-plugin-activation.php:2817
+msgid "The following plugin was activated successfully:"
+msgid_plural "The following plugins were activated successfully:"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:392
+#, php-format
+msgid "No action taken. Plugin %1$s was already active."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:393
+#, php-format
+msgid ""
+"Plugin not activated. A higher version of %s is needed for this theme. "
+"Please update the plugin."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:394
+#, php-format
+msgid "All plugins installed and activated successfully. %1$s"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:395
+msgid "Dismiss this notice"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:396
+msgid "Please contact the administrator of this site for help."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:515
+msgid "This plugin needs to be updated to be compatible with your theme."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:516
+msgid "Update Required"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:629
+msgid "The tgmpa_admin_menu_use_add_theme_page filter is deprecated."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:818
+#: ../framework/class/class-tgm-plugin-activation.php:3423
+msgid "Return to the Dashboard"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:925
+msgid ""
+"The remote plugin package does not contain a folder with the desired slug "
+"and renaming did not work."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:925
+#: ../framework/class/class-tgm-plugin-activation.php:928
+msgid ""
+"Please contact the plugin provider and ask them to package their plugin "
+"according to the WordPress guidelines."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:928
+msgid ""
+"The remote plugin package consists of more than one file, but the files are "
+"not packaged in a folder."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:1106
+#: ../framework/class/class-tgm-plugin-activation.php:2813
+msgid "and"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:1866
+#, php-format
+msgctxt "%s = version number"
+msgid "TGMPA v%s"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2152
+msgid "Required"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2155
+msgid "Recommended"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2171
+msgid "WordPress Repository"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2174
+msgid "External Source"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2177
+msgid "Pre-Packaged"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2194
+msgid "Not Installed"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2198
+msgid "Installed But Not Activated"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2200
+msgid "Active"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2206
+msgid "Required Update not Available"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2209
+msgid "Requires Update"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2212
+msgid "Update recommended"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2220
+#, php-format
+msgctxt "%1$s = install status, %2$s = update status"
+msgid "%1$s, %2$s"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2268
+#, php-format
+msgid "To Install <span class=\"count\">(%s)</span>"
+msgid_plural "To Install <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2271
+#, php-format
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2274
+#, php-format
+msgid "To Activate <span class=\"count\">(%s)</span>"
+msgid_plural "To Activate <span class=\"count\">(%s)</span>"
+msgstr[0] ""
+msgstr[1] ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2356
+msgctxt "as in: \"version nr unknown\""
+msgid "unknown"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2364
+msgid "Installed version:"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2372
+msgid "Minimum required version:"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2384
+msgid "Available version:"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2407
+#, php-format
+msgid ""
+"No plugins to install, update or activate. <a href=\"%1$s\">Return to the "
+"Dashboard</a>"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2421
+msgid "Plugin"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2422
+msgid "Source"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2423
+msgid "Type"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2427
+msgid "Version"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2428
+msgid "Status"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2476
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Install %2$s"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2480
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Update %2$s"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2485
+#, php-format
+msgctxt "%2$s = plugin name in screen reader markup"
+msgid "Activate %2$s"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2555
+msgid "Upgrade message from the plugin author:"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2588
+msgid "Install"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2594
+msgid "Update"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2597
+msgid "Activate"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2628
+msgid "No plugins were selected to be installed. No action taken."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2630
+msgid "No plugins were selected to be updated. No action taken."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2666
+msgid "No plugins are available to be installed at this time."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2668
+msgid "No plugins are available to be updated at this time."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2773
+msgid "No plugins were selected to be activated. No action taken."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:2799
+msgid "No plugins are available to be activated at this time."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:3013
+msgid "Plugin activation failed."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:3347
+#, php-format
+msgid "Updating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:3349
+#, php-format
+msgid "An error occurred while installing %1$s: <strong>%2$s</strong>."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:3350
+#, php-format
+msgid "The installation of %1$s failed."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:3354
+msgid ""
+"The installation and activation process is starting. This process may take a "
+"while on some hosts, so please be patient."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:3355
+#, php-format
+msgid "%1$s installed and activated successfully."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:3355
+#: ../framework/class/class-tgm-plugin-activation.php:3361
+msgid "Show Details"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:3355
+#: ../framework/class/class-tgm-plugin-activation.php:3361
+msgid "Hide Details"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:3356
+msgid "All installations and activations have been completed."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:3357
+#, php-format
+msgid "Installing and Activating Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:3360
+msgid ""
+"The installation process is starting. This process may take a while on some "
+"hosts, so please be patient."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:3361
+#, php-format
+msgid "%1$s installed successfully."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:3362
+msgid "All installations have been completed."
+msgstr ""
+
+#: ../framework/class/class-tgm-plugin-activation.php:3363
+#, php-format
+msgid "Installing Plugin %1$s (%2$d/%3$d)"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:21
+#: ../framework/data/data-meta-box.php:133
+#: ../framework/data/data-meta-box.php:583
+#: ../framework/data/data-meta-box.php:596
+#: ../framework/data/data-meta-box.php:681
+#: ../framework/data/data-meta-box.php:711
+#: ../framework/data/data-meta-box.php:725
+#: ../framework/data/data-meta-box.php:838
+#: ../framework/data/data-meta-box.php:855
+#: ../framework/data/data-meta-box.php:868
+#: ../framework/data/data-meta-box.php:881
+#: ../framework/data/data-meta-box.php:894
+#: ../framework/data/data-meta-box.php:910
+#: ../framework/data/data-options.php:2879
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:47
+msgid "Default"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:37
+msgid "Audio Settings"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:44
+msgid "Audio Type"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:48
+#: ../framework/data/data-meta-box.php:91
+#: ../framework/data/data-meta-box.php:737
+#: ../framework/extensions-custom/meta-box-custom.php:126
+#: ../framework/extensions-custom/meta-box-custom.php:174
+msgid "Select Option"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:49
+#: ../framework/extensions-custom/meta-box-custom.php:309
+msgid "Upload"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:50
+#: ../framework/data/data-meta-box.php:62
+msgid "Soundcloud"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:54
+msgid "Upload MP3 File"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:63
+msgid "Paste embed iframe or Wordpress shortcode."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:79
+msgid "Video Settings"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:87
+msgid "Video Type"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:92
+msgid "External url"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:96
+msgid "Choose Video"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:106
+msgid "Video id"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:108
+msgid ""
+"Enter id of video .Example: <br />- Link video youtube: https://www.youtube."
+"com/watch?v=nPOO1Coe2DI id of video: nPOO1Coe2DI <br /> -Link vimeo: https://"
+"vimeo.com/70296428 id video: 70296428."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:121
+msgid "Gallery Settings"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:129
+msgid "Gallery Type"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:134
+#: ../framework/data/data-meta-box.php:454
+#: ../framework/data/data-options.php:2241
+#: ../framework/data/data-options.php:2377
+#: ../framework/data/data-options.php:2643
+msgid "Grid"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:135
+#: ../framework/data/data-meta-box.php:739
+msgid "Revolution Slider"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:136
+#: ../framework/data/data-meta-box.php:740
+msgid "Layer Slider"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:140
+#: ../framework/data/data-meta-box.php:760
+msgid "Select Revolution Slider"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:147
+#: ../framework/data/data-meta-box.php:769
+msgid "Select Layer Slider"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:154
+msgid "Gallery images"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:157
+msgid "You can drag and drop for change order image"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:194
+msgid "Quote Settings"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:201
+msgid "Quote Content"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:202
+msgid "Please type the text for your quote here."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:209
+#: ../framework/data/data-meta-box.php:306
+#: ../framework/data/data-meta-box.php:516
+#: ../framework/data/data-options.php:2306
+#: ../framework/data/data-options.php:2561
+#: ../framework/js_composer/vc_addons/blockquote.php:59
+#: ../framework/widgets/kt_article.php:158
+#: ../framework/widgets/kt_article_carousel.php:138
+msgid "Author"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:211
+msgid "Please type the text for author quote here."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:224
+msgid "Post Slider Settings"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:229
+#: ../framework/data/data-meta-box.php:381
+msgid "Data source"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:234
+#: ../framework/data/data-meta-box.php:242
+#: ../framework/data/data-meta-box.php:386
+#: ../framework/data/data-meta-box.php:407
+msgid "Specific Categories"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:235
+#: ../framework/data/data-meta-box.php:256
+#: ../framework/data/data-meta-box.php:387
+#: ../framework/data/data-meta-box.php:421
+msgid "Specific Authors"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:236
+#: ../framework/data/data-meta-box.php:388
+msgid "Specific Posts"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:267
+#: ../framework/data/data-meta-box.php:433
+msgid "Posts"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:280
+msgid "Posts Slider style"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:284
+msgid "Normal Carousel"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:285
+msgid "Big Carousel"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:286
+msgid "Posts slider"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:287
+msgid "Thumb slider"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:294
+#: ../framework/data/data-meta-box.php:503
+msgid "Number of items"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:297
+#: ../framework/data/data-meta-box.php:506
+msgid ""
+"Set max limit for items in grid or enter -1 to display all (limited to 1000)."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:301
+#: ../framework/data/data-meta-box.php:511
+msgid "Order by"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:304
+#: ../framework/data/data-meta-box.php:514
+#: ../framework/widgets/kt_article.php:157
+#: ../framework/widgets/kt_article_carousel.php:137
+msgid "Date"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:305
+#: ../framework/data/data-meta-box.php:515
+msgid "Order by post ID"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:307
+#: ../framework/data/data-meta-box.php:517
+msgid "Title"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:308
+#: ../framework/data/data-meta-box.php:518
+msgid "Last modified date"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:309
+#: ../framework/data/data-meta-box.php:519
+msgid "Post/page parent ID"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:310
+#: ../framework/data/data-meta-box.php:520
+msgid "Number of comments"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:311
+#: ../framework/data/data-meta-box.php:521
+msgid "Menu order/Page Order"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:312
+#: ../framework/data/data-meta-box.php:522
+msgid "Meta value"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:313
+#: ../framework/data/data-meta-box.php:523
+msgid "Meta value number"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:315
+#: ../framework/data/data-meta-box.php:525
+msgid ""
+"Select order type. If \"Meta value\" or \"Meta value Number\" is chosen then "
+"meta key is required."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:319
+#: ../framework/data/data-meta-box.php:530
+msgid "Meta key"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:325
+#: ../framework/data/data-meta-box.php:538
+msgid "Sorting"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:329
+#: ../framework/data/data-meta-box.php:542
+msgid "Descending"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:330
+#: ../framework/data/data-meta-box.php:543
+msgid "Ascending"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:332
+#: ../framework/data/data-meta-box.php:545
+msgid "Select sorting order."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:354
+#: ../framework/data/data-meta-box.php:808
+#: ../framework/data/data-options.php:174
+#: ../framework/data/data-options.php:180
+#: ../framework/data/data-options.php:768
+#: ../framework/data/data-options.php:1207
+#: ../framework/data/data-options.php:1621
+msgid "General"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:358
+#: ../framework/data/data-meta-box.php:562
+#: ../framework/js_composer/vc_addons/gallery-grid.php:111
+msgid "Layout"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:362
+msgid "Displays"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:369
+#: ../framework/js_composer/vc_addons/blockquote.php:53
+#: ../framework/js_composer/vc_addons/googlemap.php:144
+msgid "Content"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:373
+msgid "This content"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:374
+msgid "Special content"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:395
+msgid "Show Promo Widget"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:399
+#: ../framework/data/data-meta-box.php:824
+#: ../framework/extensions/meta-box/inc/fields/checkbox.php:95
+#: ../framework/js_composer/vc_addons/blockquote.php:87
+msgid "No"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:400
+#: ../framework/data/data-meta-box.php:825
+#: ../framework/extensions/meta-box/inc/fields/checkbox.php:95
+msgid "Yes"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:448
+msgid "Blog type"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:452
+#: ../framework/data/data-options.php:2239
+#: ../framework/data/data-options.php:2375
+msgid "List"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:453
+#: ../framework/data/data-options.php:2240
+#: ../framework/data/data-options.php:2376
+msgid "Medium"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:455
+#: ../framework/data/data-options.php:2242
+#: ../framework/data/data-options.php:2378
+#: ../framework/data/data-options.php:2645
+msgid "Masonry"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:462
+msgid "Blog columns"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:466
+msgid "2"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:467
+msgid "3"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:468
+msgid "4"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:475
+#: ../framework/data/data-options.php:2249
+#: ../framework/data/data-options.php:2385
+#: ../framework/data/data-options.php:2652
+msgid "First featured"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:480
+msgid "Check it if you want the first article is featured."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:549
+#: ../framework/data/data-options.php:2282
+#: ../framework/data/data-options.php:2411
+#: ../framework/data/data-options.php:2685
+msgid "Excerpt Length"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:552
+#: ../framework/data/data-options.php:2283
+#: ../framework/data/data-options.php:2412
+#: ../framework/data/data-options.php:2686
+msgid "Insert the number of words you want to show in the post excerpts."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:566
+#: ../framework/data/data-meta-box.php:644
+#: ../framework/data/data-options.php:1492
+msgid "Background"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:578
+msgid "Page layout"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:580
+msgid "Please choose this page's layout."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:584
+#: ../framework/data/data-options.php:189
+msgid "Full width Layout"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:585
+#: ../framework/data/data-options.php:190
+msgid "Boxed Layout"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:591
+#: ../framework/data/data-options.php:2117
+#: ../framework/data/data-options.php:2199
+#: ../framework/data/data-options.php:2328
+#: ../framework/data/data-options.php:2463
+#: ../framework/data/data-options.php:2596
+msgid "Sidebar configuration"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:593
+msgid ""
+"Choose the sidebar configuration for the detail page.<br/><b>Note: Cart and "
+"checkout, My account page always use no sidebars.</b>"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:597
+#: ../framework/data/data-options.php:2120
+#: ../framework/data/data-options.php:2202
+#: ../framework/data/data-options.php:2331
+#: ../framework/data/data-options.php:2466
+#: ../framework/data/data-options.php:2599
+msgid "No sidebars"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:598
+#: ../framework/data/data-options.php:2121
+#: ../framework/data/data-options.php:2203
+#: ../framework/data/data-options.php:2332
+#: ../framework/data/data-options.php:2467
+#: ../framework/data/data-options.php:2600
+msgid "Left Sidebar"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:599
+msgid "Right Sidebar"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:605
+msgid "Left sidebar"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:610
+#: ../framework/data/data-meta-box.php:619
+msgid "Select your sidebar."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:614
+msgid "Right sidebar"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:623
+msgid "Page top spacing"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:625
+msgid "Enter your page top spacing (Example: 100px)."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:630
+msgid "Page bottom spacing"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:632
+msgid "Enter your page bottom spacing (Example: 100px)."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:637
+msgid "Extra page class"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:639
+msgid ""
+"If you wish to add extra classes to the body class of the page (for custom "
+"css use), then please add the class(es) here."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:648
+msgid "The option that will be used as the OUTER page."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:651
+msgid "Inner Background"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:655
+msgid "The option that will be used as the INNER page."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:663
+#: ../framework/data/data-meta-box.php:812
+#: ../framework/data/data-options.php:251
+#: ../framework/data/data-options.php:1886
+#: ../framework/data/data-options.php:1893
+msgid "Header"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:667
+#: ../framework/data/data-meta-box.php:676
+msgid "Page Header"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:678
+msgid "Show Page Header."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:682
+#: ../framework/data/data-meta-box.php:712
+#: ../framework/data/data-meta-box.php:856
+#: ../framework/data/data-meta-box.php:869
+#: ../framework/data/data-meta-box.php:882
+#: ../framework/data/data-meta-box.php:895
+#: ../framework/data/data-meta-box.php:911
+msgid "Hidden"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:683
+#: ../framework/data/data-meta-box.php:713
+#: ../framework/data/data-meta-box.php:857
+#: ../framework/data/data-meta-box.php:870
+#: ../framework/data/data-meta-box.php:883
+#: ../framework/data/data-meta-box.php:896
+#: ../framework/data/data-meta-box.php:912
+msgid "Show"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:689
+msgid "Page Header Custom Text"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:691
+msgid "Enter cstom Text for page header."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:697
+msgid "Page header subtitle"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:699
+msgid "Enter subtitle for page."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:707
+#: ../framework/data/data-meta-box.php:906
+#: ../framework/data/data-options.php:275
+msgid "Header shadow"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:717
+#: ../framework/data/data-meta-box.php:861
+#: ../framework/data/data-meta-box.php:874
+#: ../framework/data/data-meta-box.php:887
+#: ../framework/data/data-meta-box.php:900
+#: ../framework/data/data-meta-box.php:916
+msgid "Select \"Default\" to use settings in Theme Options"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:720
+msgid "Header position"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:723
+msgid "Please choose header position"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:726
+msgid "Below Slideshow"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:732
+msgid "Select Your Slideshow Type"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:734
+msgid "You can select the slideshow type using this option."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:738
+#: ../framework/data/data-meta-box.php:746
+msgid "Post Slider"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:741
+msgid "From Page content"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:751
+msgid "Slider Select Option"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:765
+msgid "Select the Revolution Slider."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:774
+msgid "Select the Layer Slider."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:778
+#: ../framework/data/data-options.php:2101 ../templates/content-page.php:17
+#: ../templates/content-single.php:35
+msgid "Page"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:783
+msgid "Page Select Option"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:799
+msgid "Page Options"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:820
+msgid "Featured Post"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:829
+msgid "Make this post featured"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:834
+msgid "Post layouts"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:835
+msgid "Select the your post layout."
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:839
+#: ../framework/data/data-options.php:263
+#: ../framework/data/data-options.php:372
+#: ../framework/data/data-options.php:406
+#: ../framework/data/data-options.php:2451
+#: ../framework/widgets/kt_article.php:174
+msgid "Layout 1"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:840
+#: ../framework/data/data-options.php:264
+#: ../framework/data/data-options.php:373
+#: ../framework/data/data-options.php:407
+#: ../framework/data/data-options.php:2452
+#: ../framework/widgets/kt_article.php:175
+msgid "Layout 2"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:841
+#: ../framework/data/data-options.php:374
+#: ../framework/data/data-options.php:2453
+msgid "Layout 3"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:842
+#: ../framework/data/data-options.php:375
+#: ../framework/data/data-options.php:2454
+msgid "Layout 4"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:843
+#: ../framework/data/data-options.php:376
+#: ../framework/data/data-options.php:2455
+msgid "Layout 5"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:844
+#: ../framework/data/data-options.php:377
+#: ../framework/data/data-options.php:2456
+msgid "Layout 6"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:851
+#: ../framework/data/data-options.php:2530
+msgid "Previous & next buttons"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:864
+msgid "Author info"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:877
+msgid "Social sharing"
+msgstr ""
+
+#: ../framework/data/data-meta-box.php:890
+msgid "Related articles"
+msgstr ""
+
+#: ../framework/data/data-options.php:71 ../framework/data/data-options.php:73
+msgid "Theme Options"
+msgstr ""
+
+#: ../framework/data/data-options.php:144
+msgid "Like us on Facebook"
+msgstr ""
+
+#: ../framework/data/data-options.php:150
+msgid "Follow us on Themeforest"
+msgstr ""
+
+#: ../framework/data/data-options.php:156
+msgid "Get Email Newsletter"
+msgstr ""
+
+#: ../framework/data/data-options.php:162
+msgid "Check out our works"
+msgstr ""
+
+#: ../framework/data/data-options.php:186
+msgid "Site boxed mod(?)"
+msgstr ""
+
+#: ../framework/data/data-options.php:187
+#: ../framework/data/data-options.php:2142
+msgid "Please choose page layout"
+msgstr ""
+
+#: ../framework/data/data-options.php:200
+msgid "Placeholder"
+msgstr ""
+
+#: ../framework/data/data-options.php:201
+msgid "Placeholder for none image"
+msgstr ""
+
+#: ../framework/data/data-options.php:210
+msgid "Logos"
+msgstr ""
+
+#: ../framework/data/data-options.php:217
+msgid "Logos settings"
+msgstr ""
+
+#: ../framework/data/data-options.php:225
+#: ../framework/data/data-options.php:798
+msgid "Logo"
+msgstr ""
+
+#: ../framework/data/data-options.php:232
+msgid "Logo (Retina Version @2x)"
+msgstr ""
+
+#: ../framework/data/data-options.php:233
+msgid ""
+"Select an image file for the retina version of the logo. It should be "
+"exactly 2x the size of main logo."
+msgstr ""
+
+#: ../framework/data/data-options.php:240
+msgid "Logo Footer"
+msgstr ""
+
+#: ../framework/data/data-options.php:260
+msgid "Header layout"
+msgstr ""
+
+#: ../framework/data/data-options.php:261
+#: ../framework/data/data-options.php:2449
+msgid "Please choose header layout"
+msgstr ""
+
+#: ../framework/data/data-options.php:277
+#: ../framework/data/data-options.php:286
+#: ../framework/data/data-options.php:314
+#: ../framework/data/data-options.php:329
+#: ../framework/data/data-options.php:345
+#: ../framework/data/data-options.php:361
+#: ../framework/data/data-options.php:396
+#: ../framework/data/data-options.php:424
+#: ../framework/data/data-options.php:450
+#: ../framework/data/data-options.php:2111
+#: ../framework/data/data-options.php:2155
+#: ../framework/data/data-options.php:2193
+#: ../framework/data/data-options.php:2252
+#: ../framework/data/data-options.php:2322
+#: ../framework/data/data-options.php:2388
+#: ../framework/data/data-options.php:2515
+#: ../framework/data/data-options.php:2524
+#: ../framework/data/data-options.php:2533
+#: ../framework/data/data-options.php:2542
+#: ../framework/data/data-options.php:2551
+#: ../framework/data/data-options.php:2590
+#: ../framework/data/data-options.php:2655
+#: ../framework/data/data-options.php:2803
+#: ../framework/data/data-options.php:2869
+msgid "Enabled"
+msgstr ""
+
+#: ../framework/data/data-options.php:278
+#: ../framework/data/data-options.php:287
+#: ../framework/data/data-options.php:315
+#: ../framework/data/data-options.php:330
+#: ../framework/data/data-options.php:346
+#: ../framework/data/data-options.php:362
+#: ../framework/data/data-options.php:397
+#: ../framework/data/data-options.php:425
+#: ../framework/data/data-options.php:451
+#: ../framework/data/data-options.php:879
+#: ../framework/data/data-options.php:2112
+#: ../framework/data/data-options.php:2156
+#: ../framework/data/data-options.php:2194
+#: ../framework/data/data-options.php:2253
+#: ../framework/data/data-options.php:2323
+#: ../framework/data/data-options.php:2389
+#: ../framework/data/data-options.php:2516
+#: ../framework/data/data-options.php:2525
+#: ../framework/data/data-options.php:2534
+#: ../framework/data/data-options.php:2543
+#: ../framework/data/data-options.php:2552
+#: ../framework/data/data-options.php:2591
+#: ../framework/data/data-options.php:2656
+#: ../framework/data/data-options.php:2804
+#: ../framework/data/data-options.php:2870
+msgid "Disabled"
+msgstr ""
+
+#: ../framework/data/data-options.php:283
+msgid "Search Icon"
+msgstr ""
+
+#: ../framework/data/data-options.php:284
+msgid "Enable the search Icon in the header."
+msgstr ""
+
+#: ../framework/data/data-options.php:294
+msgid "Select your socials"
+msgstr ""
+
+#: ../framework/data/data-options.php:303
+#: ../framework/data/data-options.php:980
+#: ../framework/data/data-options.php:1744
+msgid "Footer"
+msgstr ""
+
+#: ../framework/data/data-options.php:312
+msgid "Back to top"
+msgstr ""
+
+#: ../framework/data/data-options.php:321
+#: ../framework/data/data-options.php:986
+msgid "Footer settings"
+msgstr ""
+
+#: ../framework/data/data-options.php:327
+msgid "Footer enable"
+msgstr ""
+
+#: ../framework/data/data-options.php:337
+#: ../framework/data/data-options.php:1014
+msgid "Footer top settings"
+msgstr ""
+
+#: ../framework/data/data-options.php:343
+msgid "Footer top enable"
+msgstr ""
+
+#: ../framework/data/data-options.php:353
+#: ../framework/data/data-options.php:1085
+msgid "Footer widgets settings"
+msgstr ""
+
+#: ../framework/data/data-options.php:359
+msgid "Footer widgets enable"
+msgstr ""
+
+#: ../framework/data/data-options.php:369
+msgid "Footer widgets layout"
+msgstr ""
+
+#: ../framework/data/data-options.php:370
+msgid "Select your footer widgets layout"
+msgstr ""
+
+#: ../framework/data/data-options.php:378
+msgid "Layout 7"
+msgstr ""
+
+#: ../framework/data/data-options.php:379
+msgid "Layout 8"
+msgstr ""
+
+#: ../framework/data/data-options.php:380
+msgid "Layout 9"
+msgstr ""
+
+#: ../framework/data/data-options.php:388
+#: ../framework/data/data-options.php:1125
+msgid "Footer bottom settings"
+msgstr ""
+
+#: ../framework/data/data-options.php:394
+msgid "Footer bottom enable"
+msgstr ""
+
+#: ../framework/data/data-options.php:403
+msgid "Footer bottom layout"
+msgstr ""
+
+#: ../framework/data/data-options.php:404
+msgid "Select your footer bottom layout"
+msgstr ""
+
+#: ../framework/data/data-options.php:416
+#: ../framework/data/data-options.php:1165
+msgid "Footer copyright settings"
+msgstr ""
+
+#: ../framework/data/data-options.php:422
+msgid "Footer copyright enable"
+msgstr ""
+
+#: ../framework/data/data-options.php:430
+msgid "Footer Copyright Text"
+msgstr ""
+
+#: ../framework/data/data-options.php:441
+msgid "Page Loader"
+msgstr ""
+
+#: ../framework/data/data-options.php:442
+msgid "Page Loader Options"
+msgstr ""
+
+#: ../framework/data/data-options.php:448
+msgid "Use Page Loader?"
+msgstr ""
+
+#: ../framework/data/data-options.php:457
+msgid "Loader layout"
+msgstr ""
+
+#: ../framework/data/data-options.php:458
+msgid "Please choose loader layout"
+msgstr ""
+
+#: ../framework/data/data-options.php:460
+msgid "Style 1"
+msgstr ""
+
+#: ../framework/data/data-options.php:461
+#: ../framework/data/data-options.php:462
+msgid "Style 2"
+msgstr ""
+
+#: ../framework/data/data-options.php:469
+msgid "Background Color Page Loader"
+msgstr ""
+
+#: ../framework/data/data-options.php:486
+msgid "Color Loader"
+msgstr ""
+
+#: ../framework/data/data-options.php:494
+msgid "Color Second Loader"
+msgstr ""
+
+#: ../framework/data/data-options.php:505
+msgid "Preset"
+msgstr ""
+
+#: ../framework/data/data-options.php:511
+msgid "Color Preset"
+msgstr ""
+
+#: ../framework/data/data-options.php:512
+msgid "Select the color you want to use for the theme."
+msgstr ""
+
+#: ../framework/data/data-options.php:758
+msgid "Styling"
+msgstr ""
+
+#: ../framework/data/data-options.php:774
+msgid "Main Color"
+msgstr ""
+
+#: ../framework/data/data-options.php:782
+msgid "Links Color"
+msgstr ""
+
+#: ../framework/data/data-options.php:806
+#: ../framework/data/data-options.php:890
+msgid "Logo width"
+msgstr ""
+
+#: ../framework/data/data-options.php:819
+msgid "Logo margin spacing Option"
+msgstr ""
+
+#: ../framework/data/data-options.php:837
+msgid "Logo mobile width"
+msgstr ""
+
+#: ../framework/data/data-options.php:851
+msgid "Logo mobile margin spacing Option"
+msgstr ""
+
+#: ../framework/data/data-options.php:871
+msgid "Sticky"
+msgstr ""
+
+#: ../framework/data/data-options.php:877
+msgid "Sticky header"
+msgstr ""
+
+#: ../framework/data/data-options.php:880
+msgid "Fixed Sticky"
+msgstr ""
+
+#: ../framework/data/data-options.php:881
+msgid "Slide Down"
+msgstr ""
+
+#: ../framework/data/data-options.php:884
+msgid "Choose your sticky effect."
+msgstr ""
+
+#: ../framework/data/data-options.php:905
+msgid "Logo sticky margin spacing Option"
+msgstr ""
+
+#: ../framework/data/data-options.php:919
+msgid "Main Navigation Sticky Height"
+msgstr ""
+
+#: ../framework/data/data-options.php:920
+msgid "Change height of main navigation sticky"
+msgstr ""
+
+#: ../framework/data/data-options.php:943
+msgid "Header sticky background"
+msgstr ""
+
+#: ../framework/data/data-options.php:944
+msgid "Header sticky with image, color, etc."
+msgstr ""
+
+#: ../framework/data/data-options.php:961
+msgid "Sticky Background opacity"
+msgstr ""
+
+#: ../framework/data/data-options.php:992
+#: ../framework/data/data-options.php:1173
+msgid "Footer Background"
+msgstr ""
+
+#: ../framework/data/data-options.php:993
+#: ../framework/data/data-options.php:1064
+#: ../framework/data/data-options.php:1174
+msgid "Footer Background with image, color, etc."
+msgstr ""
+
+#: ../framework/data/data-options.php:1001
+msgid "Footer Border"
+msgstr ""
+
+#: ../framework/data/data-options.php:1020
+msgid "Footer top Background"
+msgstr ""
+
+#: ../framework/data/data-options.php:1021
+msgid "Footer top Background with image, color, etc."
+msgstr ""
+
+#: ../framework/data/data-options.php:1034
+msgid "Footer top padding"
+msgstr ""
+
+#: ../framework/data/data-options.php:1040
+msgid "Footer top Border"
+msgstr ""
+
+#: ../framework/data/data-options.php:1055
+msgid "Footer Navigation settings"
+msgstr ""
+
+#: ../framework/data/data-options.php:1063
+msgid "Footer navigation Background"
+msgstr ""
+
+#: ../framework/data/data-options.php:1077
+msgid "Footer navigation padding"
+msgstr ""
+
+#: ../framework/data/data-options.php:1091
+msgid "Footer widgets Background"
+msgstr ""
+
+#: ../framework/data/data-options.php:1092
+msgid "Footer widgets Background with image, color, etc."
+msgstr ""
+
+#: ../framework/data/data-options.php:1105
+msgid "Footer widgets padding"
+msgstr ""
+
+#: ../framework/data/data-options.php:1112
+msgid "Footer widgets Border"
+msgstr ""
+
+#: ../framework/data/data-options.php:1131
+msgid "Footer bottom Background"
+msgstr ""
+
+#: ../framework/data/data-options.php:1132
+msgid "Footer bottom Background with image, color, etc."
+msgstr ""
+
+#: ../framework/data/data-options.php:1145
+msgid "Footer bottom padding"
+msgstr ""
+
+#: ../framework/data/data-options.php:1152
+msgid "Footer bottom Border"
+msgstr ""
+
+#: ../framework/data/data-options.php:1187
+msgid "Footer copyright padding"
+msgstr ""
+
+#: ../framework/data/data-options.php:1200
+#: ../framework/data/data-options.php:1946
+msgid "Main Navigation"
+msgstr ""
+
+#: ../framework/data/data-options.php:1215
+msgid "Main Navigation Height"
+msgstr ""
+
+#: ../framework/data/data-options.php:1216
+msgid "Change height of main navigation"
+msgstr ""
+
+#: ../framework/data/data-options.php:1239
+msgid "MegaMenu & Dropdown Box background"
+msgstr ""
+
+#: ../framework/data/data-options.php:1252
+msgid "Top Level"
+msgstr ""
+
+#: ../framework/data/data-options.php:1259
+msgid "Top Level space"
+msgstr ""
+
+#: ../framework/data/data-options.php:1266
+msgid "Margin left between top level."
+msgstr ""
+
+#: ../framework/data/data-options.php:1275
+#: ../framework/data/data-options.php:1510
+msgid "Top Level Color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1289
+#: ../framework/data/data-options.php:1521
+msgid "Top Level hover Color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1298
+msgid "Drop down"
+msgstr ""
+
+#: ../framework/data/data-options.php:1306
+msgid "Dropdown width"
+msgstr ""
+
+#: ../framework/data/data-options.php:1307
+msgid "Change width of Dropdown"
+msgstr ""
+
+#: ../framework/data/data-options.php:1315
+msgid "Dropdown Background Color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1334
+msgid "Dropdown Background Hover Color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1358
+msgid "Dropdown Text Color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1372
+msgid "Dropdown Text Hover Color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1380
+msgid "DropDown Border"
+msgstr ""
+
+#: ../framework/data/data-options.php:1396
+msgid "Mega"
+msgstr ""
+
+#: ../framework/data/data-options.php:1403
+msgid "MegaMenu Background color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1426
+msgid "MegaMenu Title color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1439
+msgid "MegaMenu Title Hover Color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1450
+msgid "MegaMenu Text color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1463
+msgid "MegaMenu Text Hover color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1485
+msgid "Mobile Menu"
+msgstr ""
+
+#: ../framework/data/data-options.php:1528
+msgid "Top Level Background Color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1547
+msgid "Top Level Hover Color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1576
+msgid "Text color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1590
+msgid "Text Hover color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1610
+msgid "Typography"
+msgstr ""
+
+#: ../framework/data/data-options.php:1627
+msgid "Body Font"
+msgstr ""
+
+#: ../framework/data/data-options.php:1628
+msgid "Specify the body font properties."
+msgstr ""
+
+#: ../framework/data/data-options.php:1638
+msgid "Pragraph"
+msgstr ""
+
+#: ../framework/data/data-options.php:1639
+msgid "Specify the pragraph font properties."
+msgstr ""
+
+#: ../framework/data/data-options.php:1648
+msgid "Button"
+msgstr ""
+
+#: ../framework/data/data-options.php:1649
+msgid "Specify the button font properties."
+msgstr ""
+
+#: ../framework/data/data-options.php:1666
+msgid "Typography Heading settings"
+msgstr ""
+
+#: ../framework/data/data-options.php:1672
+msgid "Heading 1"
+msgstr ""
+
+#: ../framework/data/data-options.php:1673
+msgid "Specify the heading 1 font properties."
+msgstr ""
+
+#: ../framework/data/data-options.php:1683
+msgid "Heading 2"
+msgstr ""
+
+#: ../framework/data/data-options.php:1684
+msgid "Specify the heading 2 font properties."
+msgstr ""
+
+#: ../framework/data/data-options.php:1694
+msgid "Heading 3"
+msgstr ""
+
+#: ../framework/data/data-options.php:1695
+msgid "Specify the heading 3 font properties."
+msgstr ""
+
+#: ../framework/data/data-options.php:1705
+msgid "Heading 4"
+msgstr ""
+
+#: ../framework/data/data-options.php:1706
+msgid "Specify the heading 4 font properties."
+msgstr ""
+
+#: ../framework/data/data-options.php:1716
+msgid "Heading 5"
+msgstr ""
+
+#: ../framework/data/data-options.php:1717
+msgid "Specify the heading 5 font properties."
+msgstr ""
+
+#: ../framework/data/data-options.php:1727
+msgid "Heading 6"
+msgstr ""
+
+#: ../framework/data/data-options.php:1728
+msgid "Specify the heading 6 font properties."
+msgstr ""
+
+#: ../framework/data/data-options.php:1751
+msgid "Typography Footer top settings"
+msgstr ""
+
+#: ../framework/data/data-options.php:1758
+msgid "Specify the footer top font properties."
+msgstr ""
+
+#: ../framework/data/data-options.php:1772
+msgid "Typography Footer widgets settings"
+msgstr ""
+
+#: ../framework/data/data-options.php:1778
+msgid "Footer widgets"
+msgstr ""
+
+#: ../framework/data/data-options.php:1779
+msgid "Specify the footer widgets font properties."
+msgstr ""
+
+#: ../framework/data/data-options.php:1793
+msgid "Footer widgets title"
+msgstr ""
+
+#: ../framework/data/data-options.php:1794
+msgid "Specify the footer widgets title font properties."
+msgstr ""
+
+#: ../framework/data/data-options.php:1804
+msgid "Footer widgets Links Color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1816
+msgid "Typography Footer Bottom settings"
+msgstr ""
+
+#: ../framework/data/data-options.php:1822
+msgid "Footer Bottom Links Color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1833
+msgid "Footer Bottom"
+msgstr ""
+
+#: ../framework/data/data-options.php:1834
+#: ../framework/data/data-options.php:1866
+msgid "Specify the footer font properties."
+msgstr ""
+
+#: ../framework/data/data-options.php:1848
+msgid "Typography Footer copyright settings"
+msgstr ""
+
+#: ../framework/data/data-options.php:1854
+msgid "Footer Copyright Links Color"
+msgstr ""
+
+#: ../framework/data/data-options.php:1865
+msgid "Footer copyright"
+msgstr ""
+
+#: ../framework/data/data-options.php:1894
+msgid "Specify the header title font properties."
+msgstr ""
+
+#: ../framework/data/data-options.php:1907
+msgid "Sidebar"
+msgstr ""
+
+#: ../framework/data/data-options.php:1914
+#: ../framework/data/data-options.php:2841
+msgid "Sidebar title"
+msgstr ""
+
+#: ../framework/data/data-options.php:1915
+#: ../framework/data/data-options.php:1930
+msgid "Specify the sidebar title font properties."
+msgstr ""
+
+#: ../framework/data/data-options.php:1929
+msgid "Sidebar text"
+msgstr ""
+
+#: ../framework/data/data-options.php:1953
+#: ../framework/data/data-options.php:2045
+msgid "Top Menu Level"
+msgstr ""
+
+#: ../framework/data/data-options.php:1972
+msgid "Dropdown menu"
+msgstr ""
+
+#: ../framework/data/data-options.php:1978
+msgid "Second Menu Level"
+msgstr ""
+
+#: ../framework/data/data-options.php:1994
+#: ../framework/data/data-options.php:2016
+msgid "Mega menu"
+msgstr ""
+
+#: ../framework/data/data-options.php:2000
+#: ../framework/data/data-options.php:2077
+msgid "Heading title"
+msgstr ""
+
+#: ../framework/data/data-options.php:2038
+msgid "Mobile Navigation"
+msgstr ""
+
+#: ../framework/data/data-options.php:2063
+msgid "Sub Menu Level"
+msgstr ""
+
+#: ../framework/data/data-options.php:2102
+msgid "General Page Options"
+msgstr ""
+
+#: ../framework/data/data-options.php:2108
+#: ../framework/data/data-options.php:2190
+#: ../framework/data/data-options.php:2319
+#: ../framework/data/data-options.php:2587
+#: ../framework/data/data-options.php:2866
+msgid "Show Page header"
+msgstr ""
+
+#: ../framework/data/data-options.php:2109
+#: ../framework/data/data-options.php:2191
+#: ../framework/data/data-options.php:2320
+#: ../framework/data/data-options.php:2588
+#: ../framework/data/data-options.php:2867
+msgid "Show page header or?."
+msgstr ""
+
+#: ../framework/data/data-options.php:2118
+#: ../framework/data/data-options.php:2200
+#: ../framework/data/data-options.php:2329
+#: ../framework/data/data-options.php:2597
+msgid "Please choose archive page "
+msgstr ""
+
+#: ../framework/data/data-options.php:2122
+#: ../framework/data/data-options.php:2204
+#: ../framework/data/data-options.php:2333
+#: ../framework/data/data-options.php:2468
+#: ../framework/data/data-options.php:2601
+msgid "Right Layout"
+msgstr ""
+
+#: ../framework/data/data-options.php:2130
+#: ../framework/data/data-options.php:2212
+#: ../framework/data/data-options.php:2341
+#: ../framework/data/data-options.php:2609
+msgid "Sidebar left area"
+msgstr ""
+
+#: ../framework/data/data-options.php:2131
+msgid "Please choose default layout"
+msgstr ""
+
+#: ../framework/data/data-options.php:2141
+#: ../framework/data/data-options.php:2222
+#: ../framework/data/data-options.php:2351
+msgid "Sidebar right area"
+msgstr ""
+
+#: ../framework/data/data-options.php:2152
+msgid "Show comments on page ?"
+msgstr ""
+
+#: ../framework/data/data-options.php:2153
+msgid "Show or hide the readmore button."
+msgstr ""
+
+#: ../framework/data/data-options.php:2169
+msgid "General Blog Options"
+msgstr ""
+
+#: ../framework/data/data-options.php:2177
+msgid "Archive"
+msgstr ""
+
+#: ../framework/data/data-options.php:2184
+msgid "Archive post general"
+msgstr ""
+
+#: ../framework/data/data-options.php:2213
+#: ../framework/data/data-options.php:2223
+#: ../framework/data/data-options.php:2342
+#: ../framework/data/data-options.php:2352
+#: ../framework/data/data-options.php:2477
+#: ../framework/data/data-options.php:2487
+#: ../framework/data/data-options.php:2610
+#: ../framework/data/data-options.php:2620
+msgid "Please choose left sidebar "
+msgstr ""
+
+#: ../framework/data/data-options.php:2236
+#: ../framework/data/data-options.php:2372
+msgid "Loop Style"
+msgstr ""
+
+#: ../framework/data/data-options.php:2250
+#: ../framework/data/data-options.php:2386
+#: ../framework/data/data-options.php:2653
+msgid "Show First article featured or?."
+msgstr ""
+
+#: ../framework/data/data-options.php:2258
+#: ../framework/data/data-options.php:2394
+#: ../framework/data/data-options.php:2661
+msgid "Columns on desktop"
+msgstr ""
+
+#: ../framework/data/data-options.php:2261
+#: ../framework/data/data-options.php:2397
+#: ../framework/data/data-options.php:2664
+msgid "2 columns"
+msgstr ""
+
+#: ../framework/data/data-options.php:2262
+#: ../framework/data/data-options.php:2398
+#: ../framework/data/data-options.php:2665
+msgid "3 columns"
+msgstr ""
+
+#: ../framework/data/data-options.php:2263
+#: ../framework/data/data-options.php:2399
+#: ../framework/data/data-options.php:2666
+msgid "4 columns"
+msgstr ""
+
+#: ../framework/data/data-options.php:2275
+#: ../framework/data/data-options.php:2365
+#: ../framework/data/data-options.php:2633
+msgid "Posts per page"
+msgstr ""
+
+#: ../framework/data/data-options.php:2276
+#: ../framework/data/data-options.php:2366
+#: ../framework/data/data-options.php:2634
+msgid "Insert the total number of pages."
+msgstr ""
+
+#: ../framework/data/data-options.php:2289
+#: ../framework/data/data-options.php:2418
+#: ../framework/data/data-options.php:2674
+msgid "Pagination Type"
+msgstr ""
+
+#: ../framework/data/data-options.php:2290
+#: ../framework/data/data-options.php:2419
+#: ../framework/data/data-options.php:2675
+msgid "Select the pagination type."
+msgstr ""
+
+#: ../framework/data/data-options.php:2292
+#: ../framework/data/data-options.php:2421
+#: ../framework/data/data-options.php:2677
+msgid "Normal pagination"
+msgstr ""
+
+#: ../framework/data/data-options.php:2293
+#: ../framework/data/data-options.php:2422
+#: ../framework/data/data-options.php:2678
+msgid "Next - Previous button"
+msgstr ""
+
+#: ../framework/data/data-options.php:2313
+msgid "Author post general"
+msgstr ""
+
+#: ../framework/data/data-options.php:2434
+msgid "Single Post"
+msgstr ""
+
+#: ../framework/data/data-options.php:2441
+msgid "Single post general"
+msgstr ""
+
+#: ../framework/data/data-options.php:2448
+msgid "Single layout"
+msgstr ""
+
+#: ../framework/data/data-options.php:2464
+msgid "Please choose sidebar for single post"
+msgstr ""
+
+#: ../framework/data/data-options.php:2476
+msgid "Single post: Sidebar left area"
+msgstr ""
+
+#: ../framework/data/data-options.php:2486
+msgid "Single post: Sidebar right area"
+msgstr ""
+
+#: ../framework/data/data-options.php:2501
+msgid "Image size"
+msgstr ""
+
+#: ../framework/data/data-options.php:2502
+msgid "Select image size."
+msgstr ""
+
+#: ../framework/data/data-options.php:2512
+msgid "Share box in posts"
+msgstr ""
+
+#: ../framework/data/data-options.php:2513
+msgid "Show share box in blog posts."
+msgstr ""
+
+#: ../framework/data/data-options.php:2521
+msgid "Show like article"
+msgstr ""
+
+#: ../framework/data/data-options.php:2522
+msgid "Show like article or?"
+msgstr ""
+
+#: ../framework/data/data-options.php:2531
+msgid "Show Previous & next buttons in blog posts."
+msgstr ""
+
+#: ../framework/data/data-options.php:2539
+msgid "Author info in posts"
+msgstr ""
+
+#: ../framework/data/data-options.php:2540
+msgid "Show author info in blog posts."
+msgstr ""
+
+#: ../framework/data/data-options.php:2548
+msgid "Related posts"
+msgstr ""
+
+#: ../framework/data/data-options.php:2549
+msgid "Show related posts in blog posts."
+msgstr ""
+
+#: ../framework/data/data-options.php:2557
+msgid "Related Query Type"
+msgstr ""
+
+#: ../framework/data/data-options.php:2559
+msgid "Categories"
+msgstr ""
+
+#: ../framework/data/data-options.php:2560
+msgid "Tags"
+msgstr ""
+
+#: ../framework/data/data-options.php:2574
+msgid "Search"
+msgstr ""
+
+#: ../framework/data/data-options.php:2581
+msgid "Search post general"
+msgstr ""
+
+#: ../framework/data/data-options.php:2619
+msgid "Search: Sidebar right area"
+msgstr ""
+
+#: ../framework/data/data-options.php:2640
+msgid "Search Loop Style"
+msgstr ""
+
+#: ../framework/data/data-options.php:2644
+msgid "medium"
+msgstr ""
+
+#: ../framework/data/data-options.php:2694
+#: ../framework/js_composer/vc_addons/socials.php:125
+#: ../framework/widgets/kt_socials.php:84
+msgid "Socials"
+msgstr ""
+
+#: ../framework/data/data-options.php:2695
+msgid "Social and share settings"
+msgstr ""
+
+#: ../framework/data/data-options.php:2703
+msgid "Your Twitter username (no @)."
+msgstr ""
+
+#: ../framework/data/data-options.php:2710
+msgid "Your Facebook page/profile url"
+msgstr ""
+
+#: ../framework/data/data-options.php:2717
+msgid "Your Pinterest username"
+msgstr ""
+
+#: ../framework/data/data-options.php:2724
+msgid "Your Dribbble username"
+msgstr ""
+
+#: ../framework/data/data-options.php:2732
+msgid "Your Vimeo username"
+msgstr ""
+
+#: ../framework/data/data-options.php:2740
+msgid "Your Tumblr username"
+msgstr ""
+
+#: ../framework/data/data-options.php:2748
+msgid "Your Skype username"
+msgstr ""
+
+#: ../framework/data/data-options.php:2756
+msgid "Your LinkedIn page/profile url"
+msgstr ""
+
+#: ../framework/data/data-options.php:2764
+msgid "Your Google+ page/profile URL"
+msgstr ""
+
+#: ../framework/data/data-options.php:2771
+msgid "YouTube"
+msgstr ""
+
+#: ../framework/data/data-options.php:2772
+msgid "Your YouTube username"
+msgstr ""
+
+#: ../framework/data/data-options.php:2780
+msgid "Your Instagram username"
+msgstr ""
+
+#: ../framework/data/data-options.php:2792
+msgid "Sidebar Right Area"
+msgstr ""
+
+#: ../framework/data/data-options.php:2800
+msgid "Header Bars"
+msgstr ""
+
+#: ../framework/data/data-options.php:2801
+msgid "Show button header bars on header."
+msgstr ""
+
+#: ../framework/data/data-options.php:2810
+msgid "Title Header Bars"
+msgstr ""
+
+#: ../framework/data/data-options.php:2822
+msgid "Sidebar Widgets"
+msgstr ""
+
+#: ../framework/data/data-options.php:2830
+msgid "Slides Options"
+msgstr ""
+
+#: ../framework/data/data-options.php:2831
+msgid "Unlimited sidebar with drag and drop sortings."
+msgstr ""
+
+#: ../framework/data/data-options.php:2842
+msgid "Sidebar Description"
+msgstr ""
+
+#: ../framework/data/data-options.php:2853
+#: ../framework/data/data-options.php:2876
+msgid "404 Page"
+msgstr ""
+
+#: ../framework/data/data-options.php:2860
+msgid "404 Page general"
+msgstr ""
+
+#: ../framework/data/data-options.php:2880
+msgid "From Page"
+msgstr ""
+
+#: ../framework/data/data-options.php:2881
+msgid "Redirect Home"
+msgstr ""
+
+#: ../framework/data/data-options.php:2890
+msgid "Pages Select Option"
+msgstr ""
+
+#: ../framework/data/data-options.php:2891
+msgid "Select your page 404 you want use"
+msgstr ""
+
+#: ../framework/data/data-options.php:2903
+msgid "Advanced"
+msgstr ""
+
+#: ../framework/data/data-options.php:2913
+#: ../framework/data/data-options.php:2921
+msgid "Social Share"
+msgstr ""
+
+#: ../framework/data/data-options.php:2922
+msgid "Reorder and Enable/Disable Social Share Buttons."
+msgstr ""
+
+#: ../framework/data/data-options.php:2928
+msgid "Linkedin"
+msgstr ""
+
+#: ../framework/data/data-options.php:2951
+msgid "Socials API"
+msgstr ""
+
+#: ../framework/data/data-options.php:2958
+msgid "Facebook App"
+msgstr ""
+
+#: ../framework/data/data-options.php:2964
+msgid "Facebook App ID"
+msgstr ""
+
+#: ../framework/data/data-options.php:2965
+msgid "Add Facebook App ID."
+msgstr ""
+
+#: ../framework/data/data-options.php:2977
+msgid "Custom CSS"
+msgstr ""
+
+#: ../framework/data/data-options.php:2984
+msgid "CSS Code"
+msgstr ""
+
+#: ../framework/data/data-options.php:2985
+msgid "Paste your CSS code here."
+msgstr ""
+
+#: ../framework/data/data-options.php:2999
+msgid "Custom JS"
+msgstr ""
+
+#: ../framework/data/data-options.php:3006
+msgid "JS Code"
+msgstr ""
+
+#: ../framework/data/data-options.php:3007
+msgid "Paste your JS code here."
+msgstr ""
+
+#: ../framework/data/data-options.php:3022
+#: ../framework/data/data-options.php:3029
+msgid "Tracking Code"
+msgstr ""
+
+#: ../framework/data/data-options.php:3030
+msgid ""
+"Paste your Google Analytics (or other) tracking code here. This will be "
+"added into the header template of your theme. Please put code inside script "
+"tags."
+msgstr ""
+
+#: ../framework/data/data-options.php:3038
+msgid "Theme Name:"
+msgstr ""
+
+#: ../framework/data/data-options.php:3039
+msgid "Theme Version:"
+msgstr ""
+
+#: ../framework/data/data-options.php:3040
+msgid "Theme URI:"
+msgstr ""
+
+#: ../framework/data/data-options.php:3041
+msgid "Author:"
+msgstr ""
+
+#: ../framework/data/data-options.php:3050
+msgid "Troubleshooting"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/common.php:48
+msgid "Documentation"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/common.php:49
+msgid "Extensions"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/field.php:250
+msgid "+ Add more"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/validation.php:43
+msgid "Please correct the errors highlighted below and try again."
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/autocomplete.php:18
+#: ../framework/extensions/meta-box/inc/fields/autocomplete.php:83
+#: ../framework/extensions/meta-box/inc/fields/autocomplete.php:100
+msgid "Delete"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/button.php:35
+msgid "Click me"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/file-input.php:17
+msgid "Select File"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/file-input.php:40
+#: ../framework/extensions/meta-box/inc/fields/select.php:211
+msgid "Select"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/file-input.php:42
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:220
+#: ../framework/extensions-custom/meta-box-custom.php:311
+msgid "Remove"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/file.php:19
+#, php-format
+msgid "You may only upload maximum %d file"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/file.php:20
+#, php-format
+msgid "You may only upload maximum %d files"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/file.php:98
+msgid "Error: Cannot delete file"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/file.php:111
+msgctxt "file upload"
+msgid "Upload Files"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/file.php:112
+msgctxt "file upload"
+msgid "+ Add new file"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/file.php:168
+msgctxt "file upload"
+msgid "Delete"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/file.php:169
+msgctxt "file upload"
+msgid "Edit"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/image-advanced.php:35
+#: ../framework/extensions/meta-box/inc/fields/media.php:163
+msgctxt "media"
+msgid "+ Add Media"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/image.php:70
+#: ../framework/extensions/meta-box/inc/fields/thickbox-image.php:34
+msgctxt "image upload"
+msgid "Upload Images"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/image.php:71
+msgctxt "image upload"
+msgid "+ Add new image"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/image.php:136
+msgctxt "image upload"
+msgid "Delete"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/image.php:137
+msgctxt "image upload"
+msgid "Edit"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/key-value.php:19
+msgid "Key"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/key-value.php:20
+msgid "Value"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/map.php:51
+msgid "Find Address"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/media.php:164
+msgctxt "media"
+msgid "Remove"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/media.php:165
+msgctxt "media"
+msgid "Edit"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/media.php:166
+msgctxt "media"
+msgid "View"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/media.php:167
+msgctxt "media"
+msgid " file"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/media.php:168
+msgctxt "media"
+msgid " files"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/media.php:169
+msgctxt "media"
+msgid "No Title"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/oembed.php:62
+msgid "Embed HTML not available."
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/oembed.php:84
+msgid "Preview"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/plupload-image.php:105
+msgctxt "image upload"
+msgid "Drop images here"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/plupload-image.php:106
+msgctxt "image upload"
+msgid "or"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/plupload-image.php:107
+msgctxt "image upload"
+msgid "Select Files"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/plupload-image.php:182
+msgctxt "image upload"
+msgid "Allowed Image Files"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/post.php:67
+msgid "Select a post"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/post.php:71
+#: ../framework/extensions/meta-box/inc/fields/taxonomy.php:40
+#, php-format
+msgid "Select a %s"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/select.php:211
+#: ../framework/js_composer/vc_addons/googlemap.php:89
+#: ../framework/js_composer/vc_addons/socials.php:169
+#: ../framework/js_composer/vc_addons/socials.php:199
+#: ../framework/js_composer/vc_addons/socials.php:216
+#: ../framework/widgets/kt_socials.php:151
+#: ../framework/widgets/kt_socials.php:170
+#: ../framework/widgets/kt_socials.php:180
+msgid "None"
+msgstr ""
+
+#: ../framework/extensions/meta-box/inc/fields/user.php:49
+msgid "Select an user"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_custom_walker.php:249
+msgid "See all"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:90
+#, php-format
+msgid "%s (Invalid)"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:94
+#, php-format
+msgid "%s (Pending)"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:107
+msgid "sub item"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:122
+msgid "Move up"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:135
+msgid "Move down"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:137
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:139
+msgid "Edit Menu Item"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:148
+msgid "URL"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:155
+msgid "Navigation Label"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:161
+msgid "Title Attribute"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:168
+msgid "Open link in a new window/tab"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:173
+msgid "CSS Classes (optional)"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:179
+msgid "Link Relationship (XFN)"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:185
+msgid "Description"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:187
+msgid ""
+"The description will be displayed in the menu if the current theme supports "
+"it."
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:195
+msgid "Move"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:196
+msgid "Up one"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:197
+msgid "Down one"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:200
+msgid "To the top"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:207
+#, php-format
+msgid "Original: %s"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_edit_custom_walker.php:221
+msgid "Cancel"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:20
+msgid "Select icon of this item (set empty to hide). Ex: fa fa-home"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:28
+msgid "Enable Mega Menu (only for main menu)"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:35
+msgid "Mega Menu number of columns"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:45
+msgid "Mega Menu layout"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:48
+msgid "Table + Border"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:54
+msgid "Mega Menu width"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:56
+msgid "Full Width"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:57
+msgid "1/2"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:58
+msgid "3/4"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:59
+msgid "4/5"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:60
+msgid "9/10"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:66
+msgid "Mega menu position"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:69
+msgid "Left edge of menu bar"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:70
+msgid "Right edge of menu bar"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:71
+msgid "Left Edge of Parent item"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:72
+msgid "Right Edge of Parent item"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:89
+msgid "Menu image"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:98
+msgid "Upload image"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:102
+msgid ""
+"Mega Menu Column Width - Overrides parent colum (in percentage, ex: 30%)"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:109
+msgid "Disable Mega Menu Column Title"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:115
+msgid "Disable Mega Menu Column Link"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:121
+msgid "End Row (Clear the next row and start a new one with next item)"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:126
+msgid "Mega Menu Widget Area"
+msgstr ""
+
+#: ../framework/extensions/nav/nav_menu_custom_fields.php:129
+msgid "Select Widget Area"
+msgstr ""
+
+#: ../framework/extensions-custom/meta-box-custom.php:242
+msgid "Background Repeat"
+msgstr ""
+
+#: ../framework/extensions-custom/meta-box-custom.php:256
+msgid "Background Size"
+msgstr ""
+
+#: ../framework/extensions-custom/meta-box-custom.php:270
+msgid "Background Attachment"
+msgstr ""
+
+#: ../framework/extensions-custom/meta-box-custom.php:291
+msgid "Background Position"
+msgstr ""
+
+#: ../framework/extensions-custom/meta-box-custom.php:302
+msgid "No media selected"
+msgstr ""
+
+#: ../framework/extensions-custom/meta-box-custom.php:401
+msgid "Select Image"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_bridge.php:13
+msgid "Visibility"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_bridge.php:16
+msgid "Always Visible"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_bridge.php:17
+msgid "Visible on Phones"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_bridge.php:18
+msgid "Visible on Tablets"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_bridge.php:19
+msgid "Visible on Desktops"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_bridge.php:20
+msgid "Visible on Desktops Large"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_bridge.php:22
+msgid "Hidden on Phones"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_bridge.php:23
+msgid "Hidden on Tablets"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_bridge.php:24
+msgid "Hidden on Desktops"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_bridge.php:25
+msgid "Hidden on Desktops Large"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_bridge.php:34
+msgid "Letter spacing"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_bridge.php:38
+msgid "Extra"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_parrams.php:314
+msgid "Search icon ..."
+msgstr ""
+
+#: ../framework/js_composer/js_composer_parrams.php:328
+msgid "From all categories"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_update.php:13
+#: ../framework/js_composer/js_composer_update.php:20
+msgid "Accent color"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_update.php:25
+msgid "Border box"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_update.php:26
+msgid "Border box Left"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_update.php:27
+msgid "Border box Right"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_update.php:28
+msgid "Creative Left"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_update.php:29
+msgid "Creative Right"
+msgstr ""
+
+#: ../framework/js_composer/js_composer_update.php:30
+msgid "Creative When hover"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:45
+msgid "Blockquote"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:47
+#: ../framework/js_composer/vc_addons/gallery-grid.php:94
+#: ../framework/js_composer/vc_addons/gallery-justified.php:95
+#: ../framework/js_composer/vc_addons/gallery_fullwidth.php:85
+#: ../framework/js_composer/vc_addons/googlemap.php:53
+#: ../framework/js_composer/vc_addons/socials.php:127
+msgid "by Theme"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:65
+#: ../framework/js_composer/vc_addons/socials.php:143
+msgid "Style"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:68
+msgid "Normal"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:69
+msgid "Post quote"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:70
+msgid "Simple"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:72
+msgid "Position of content."
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:76
+msgid "Reverse Blockquote"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:83
+msgid "CSS Animation"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:88
+msgid "Top to bottom"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:89
+msgid "Bottom to top"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:90
+msgid "Left to right"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:91
+msgid "Right to left"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:92
+msgid "Appear from center"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:94
+msgid ""
+"Select type of animation if you want this element to be animated when it "
+"enters into the browsers viewport. Note: Works only in modern browsers."
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:98
+#: ../framework/js_composer/vc_addons/gallery-grid.php:142
+#: ../framework/js_composer/vc_addons/gallery-justified.php:146
+#: ../framework/js_composer/vc_addons/gallery_fullwidth.php:104
+#: ../framework/js_composer/vc_addons/socials.php:236
+msgid "Extra class name"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:100
+#: ../framework/js_composer/vc_addons/gallery-grid.php:144
+#: ../framework/js_composer/vc_addons/gallery-justified.php:148
+#: ../framework/js_composer/vc_addons/gallery_fullwidth.php:106
+#: ../framework/js_composer/vc_addons/googlemap.php:151
+#: ../framework/js_composer/vc_addons/socials.php:238
+msgid ""
+"If you wish to style particular content element differently, then use this "
+"field to add a class name and then refer to it in your css file."
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:104
+#: ../framework/js_composer/vc_addons/gallery-grid.php:149
+#: ../framework/js_composer/vc_addons/gallery-justified.php:153
+#: ../framework/js_composer/vc_addons/gallery_fullwidth.php:111
+#: ../framework/js_composer/vc_addons/googlemap.php:156
+#: ../framework/js_composer/vc_addons/socials.php:242
+msgid "Css"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/blockquote.php:107
+#: ../framework/js_composer/vc_addons/gallery-grid.php:152
+#: ../framework/js_composer/vc_addons/gallery-justified.php:156
+#: ../framework/js_composer/vc_addons/gallery_fullwidth.php:114
+#: ../framework/js_composer/vc_addons/googlemap.php:159
+#: ../framework/js_composer/vc_addons/socials.php:245
+msgid "Design options"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery-grid.php:81
+#: ../framework/js_composer/vc_addons/gallery-justified.php:82
+#: ../framework/js_composer/vc_addons/gallery_fullwidth.php:72
+msgid "Add images"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery-grid.php:92
+msgid "KT Gallery Grid"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery-grid.php:99
+#: ../framework/js_composer/vc_addons/gallery-justified.php:100
+#: ../framework/js_composer/vc_addons/gallery_fullwidth.php:90
+msgid "Image Gallery"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery-grid.php:101
+#: ../framework/js_composer/vc_addons/gallery-justified.php:102
+#: ../framework/js_composer/vc_addons/gallery_fullwidth.php:92
+msgid "Select image from media library."
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery-grid.php:105
+#: ../framework/js_composer/vc_addons/gallery-justified.php:106
+msgid "Select image sizes"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery-grid.php:113
+msgid ""
+"Manually set a string of numbers to specify the number of images each row "
+"contains. Default: null generates a stacked layout of one image per row. "
+"Example: 131, 1212"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery-grid.php:117
+#: ../framework/js_composer/vc_addons/gallery-justified.php:121
+msgid "Margin"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery-grid.php:123
+msgid "Set the pixel width between the columns and rows. Default: 10px"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery-grid.php:127
+#: ../framework/js_composer/vc_addons/gallery-justified.php:131
+msgid "Gallery Popup"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery-grid.php:130
+#: ../framework/js_composer/vc_addons/gallery-justified.php:134
+msgid "Use or don't use popup gallery."
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery-grid.php:134
+#: ../framework/js_composer/vc_addons/gallery-justified.php:138
+msgid "Select image sizes popup gallery"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery-justified.php:93
+msgid "KT Gallery Justified"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery-justified.php:111
+msgid "Row Height"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery-justified.php:117
+msgid "The preferred height of rows in pixel."
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery-justified.php:127
+msgid "Decide the margins between the images."
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery_fullwidth.php:83
+msgid "KT Gallery Fullwidth"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/gallery_fullwidth.php:97
+msgid "Full width"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:51
+msgid "Google map"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:57
+#: ../framework/widgets/kt_facebook.php:93
+msgid "Height"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:60
+msgid "Enter height of map,units :'px',Leave empty to use '300px'."
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:64
+msgid "Location"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:67
+msgid "Enter location"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:71
+msgid "Map type"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:75
+msgid "Roadmap"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:76
+msgid "Satellite"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:77
+msgid "Hybrid"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:78
+msgid "Terrain"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:85
+msgid "Map stype"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:90
+msgid "Simple & Light"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:91
+msgid "Light Grey & Blue"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:92
+#: ../framework/js_composer/vc_addons/socials.php:147
+#: ../framework/widgets/kt_googleplus.php:120
+#: ../framework/widgets/kt_socials.php:141
+msgid "Dark"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:93
+msgid "Pinkish Gray"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:94
+msgid "Elevation"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:95
+msgid "Mostly Grayscale"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:96
+msgid "Red Hat Antwerp"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:97
+msgid "Shades of Grey"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:105
+msgid "Disable map zoom on mouse wheel scroll"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:109
+msgid "Map zoom"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:133
+msgid "1 is the smallest zoom level, 19 the greatest"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:138
+msgid "Image marker"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:140
+msgid "Select image show"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/googlemap.php:149
+msgid "Extra class"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:128
+msgid "Social"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:134
+msgid "Choose social"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:137
+#: ../framework/widgets/kt_socials.php:135
+msgid "Empty for select all, Drop and sortable social"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:146
+#: ../framework/widgets/kt_socials.php:140
+msgid "Accent"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:148
+#: ../framework/widgets/kt_googleplus.php:119
+#: ../framework/widgets/kt_socials.php:142
+msgid "Light"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:149
+#: ../framework/widgets/kt_socials.php:143
+msgid "Color"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:150
+#: ../framework/js_composer/vc_addons/socials.php:156
+#: ../framework/widgets/kt_socials.php:144
+msgid "Custom Color"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:158
+msgid "Select color socials."
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:166
+msgid "Background shape"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:170
+#: ../framework/widgets/kt_socials.php:152
+msgid "Text"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:171
+#: ../framework/widgets/kt_socials.php:153
+msgid "Circle"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:172
+#: ../framework/widgets/kt_socials.php:154
+msgid "Square"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:173
+#: ../framework/widgets/kt_socials.php:155
+msgid "Rounded"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:174
+#: ../framework/widgets/kt_socials.php:156
+msgid "Outline Circle"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:175
+#: ../framework/widgets/kt_socials.php:157
+msgid "Outline Square"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:176
+#: ../framework/widgets/kt_socials.php:158
+msgid "Outline Rounded"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:178
+#: ../framework/widgets/kt_socials.php:160
+msgid "Select background shape and style for social."
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:185
+msgid "Size"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:188
+#: ../framework/widgets/kt_socials.php:164
+msgid "Standard"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:189
+#: ../framework/widgets/kt_socials.php:165
+msgid "Small"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:196
+msgid "Tooltip"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:200
+#: ../framework/widgets/kt_socials.php:171
+msgid "Top"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:201
+#: ../framework/js_composer/vc_addons/socials.php:219
+#: ../framework/widgets/kt_image.php:138
+#: ../framework/widgets/kt_socials.php:172
+#: ../framework/widgets/kt_socials.php:183
+msgid "Right"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:202
+#: ../framework/widgets/kt_socials.php:173
+msgid "Bottom"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:203
+#: ../framework/js_composer/vc_addons/socials.php:218
+#: ../framework/widgets/kt_image.php:137
+#: ../framework/widgets/kt_socials.php:174
+#: ../framework/widgets/kt_socials.php:182
+msgid "Left"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:206
+#: ../framework/widgets/kt_socials.php:176
+msgid "Select the tooltip position"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:213
+msgid "Align"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:217
+#: ../framework/widgets/kt_image.php:136
+#: ../framework/widgets/kt_socials.php:181
+msgid "Center"
+msgstr ""
+
+#: ../framework/js_composer/vc_addons/socials.php:225
+msgid "Space Between item"
+msgstr ""
+
+#: ../framework/widgets/kt_aboutme.php:15
+msgid "About Me widget."
+msgstr ""
+
+#: ../framework/widgets/kt_aboutme.php:16
+msgid "KT: About me"
+msgstr ""
+
+#: ../framework/widgets/kt_aboutme.php:102
+msgid "About me"
+msgstr ""
+
+#: ../framework/widgets/kt_aboutme.php:116 ../framework/widgets/kt_ads.php:174
+#: ../framework/widgets/kt_article.php:134
+#: ../framework/widgets/kt_article_carousel.php:119
+#: ../framework/widgets/kt_contactinfo.php:61
+#: ../framework/widgets/kt_facebook.php:87
+#: ../framework/widgets/kt_flickr.php:97
+#: ../framework/widgets/kt_googleplus.php:96
+#: ../framework/widgets/kt_image.php:87
+#: ../framework/widgets/kt_popular.php:177
+#: ../framework/widgets/kt_socials.php:96
+msgid "Title:"
+msgstr ""
+
+#: ../framework/widgets/kt_aboutme.php:132
+#: ../framework/widgets/kt_image.php:114 ../framework/widgets/kt_promo.php:117
+msgid "Image size:"
+msgstr ""
+
+#: ../framework/widgets/kt_aboutme.php:153
+msgid "Description:"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:15
+msgid "Ads for widget."
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:16
+msgid "KT: Ads 125x125"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:136
+msgid "Advertise"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:176
+msgid "Image 1"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:179
+msgid "Select your image 1"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:187
+msgid "Link Ads 1:"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:191
+msgid "Image 2"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:194
+msgid "Select your image 2"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:202
+msgid "Link Ads 2:"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:206
+msgid "Image 3"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:209
+msgid "Select your image 3"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:217
+msgid "Link Ads 3:"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:221
+msgid "Image 4"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:224
+msgid "Select your image 4"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:232
+msgid "Link Ads 4:"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:237 ../framework/widgets/kt_image.php:103
+#: ../framework/widgets/kt_promo.php:106
+msgid "Target:"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:239 ../framework/widgets/kt_image.php:105
+#: ../framework/widgets/kt_promo.php:108
+msgid "Stay in Window"
+msgstr ""
+
+#: ../framework/widgets/kt_ads.php:240 ../framework/widgets/kt_image.php:106
+#: ../framework/widgets/kt_promo.php:109
+msgid "Open New Window"
+msgstr ""
+
+#: ../framework/widgets/kt_article.php:14
+#: ../framework/widgets/kt_article_carousel.php:14
+msgid "Show posts of categories."
+msgstr ""
+
+#: ../framework/widgets/kt_article.php:15
+msgid "KT: Posts"
+msgstr ""
+
+#: ../framework/widgets/kt_article.php:120
+msgid "Recent Posts"
+msgstr ""
+
+#: ../framework/widgets/kt_article.php:137
+#: ../framework/widgets/kt_article_carousel.php:122
+#: ../framework/widgets/kt_popular.php:197
+msgid "Number of posts to show:"
+msgstr ""
+
+#: ../framework/widgets/kt_article.php:140
+#: ../framework/widgets/kt_article_carousel.php:125
+msgid "Categories:"
+msgstr ""
+
+#: ../framework/widgets/kt_article.php:150
+msgid "Display Just Featured"
+msgstr ""
+
+#: ../framework/widgets/kt_article.php:153
+#: ../framework/widgets/kt_article_carousel.php:133
+msgid "Order by:"
+msgstr ""
+
+#: ../framework/widgets/kt_article.php:156
+#: ../framework/widgets/kt_article_carousel.php:136
+msgid "ID"
+msgstr ""
+
+#: ../framework/widgets/kt_article.php:159
+#: ../framework/widgets/kt_article_carousel.php:139
+msgid "Modified"
+msgstr ""
+
+#: ../framework/widgets/kt_article.php:160
+#: ../framework/widgets/kt_article_carousel.php:140
+msgid "Rand"
+msgstr ""
+
+#: ../framework/widgets/kt_article.php:161
+#: ../framework/widgets/kt_article_carousel.php:141
+msgid "Comment count"
+msgstr ""
+
+#: ../framework/widgets/kt_article.php:165
+#: ../framework/widgets/kt_article_carousel.php:145
+msgid "Order:"
+msgstr ""
+
+#: ../framework/widgets/kt_article.php:167
+#: ../framework/widgets/kt_article_carousel.php:147
+msgid "Desc"
+msgstr ""
+
+#: ../framework/widgets/kt_article.php:168
+#: ../framework/widgets/kt_article_carousel.php:148
+msgid "ASC"
+msgstr ""
+
+#: ../framework/widgets/kt_article.php:172
+#: ../framework/widgets/kt_googleplus.php:110
+msgid "Layout:"
+msgstr ""
+
+#: ../framework/widgets/kt_article_carousel.php:15
+msgid "KT: Posts Carousel"
+msgstr ""
+
+#: ../framework/widgets/kt_contactinfo.php:15
+msgid "KT: Contact info"
+msgstr ""
+
+#: ../framework/widgets/kt_contactinfo.php:55
+msgid "Contact info"
+msgstr ""
+
+#: ../framework/widgets/kt_contactinfo.php:64
+msgid "Address:"
+msgstr ""
+
+#: ../framework/widgets/kt_contactinfo.php:67
+msgid "Phone:"
+msgstr ""
+
+#: ../framework/widgets/kt_contactinfo.php:70
+msgid "Email:"
+msgstr ""
+
+#: ../framework/widgets/kt_facebook.php:14
+msgid "Embed facebook Like page."
+msgstr ""
+
+#: ../framework/widgets/kt_facebook.php:15
+msgid "KT: Page Plugin facebook"
+msgstr ""
+
+#: ../framework/widgets/kt_facebook.php:90
+msgid "The URL of the Facebook Page:"
+msgstr ""
+
+#: ../framework/widgets/kt_facebook.php:97
+msgid "Use Small Header"
+msgstr ""
+
+#: ../framework/widgets/kt_facebook.php:98
+msgid "Use the small header instead"
+msgstr ""
+
+#: ../framework/widgets/kt_facebook.php:101
+msgid "Adapt to plugin container width"
+msgstr ""
+
+#: ../framework/widgets/kt_facebook.php:102
+msgid "Try to fit inside the container width"
+msgstr ""
+
+#: ../framework/widgets/kt_facebook.php:105
+msgid "Hide Cover Photo"
+msgstr ""
+
+#: ../framework/widgets/kt_facebook.php:108
+msgid "Show Friend's Faces"
+msgstr ""
+
+#: ../framework/widgets/kt_facebook.php:111
+msgid "Show Page Posts"
+msgstr ""
+
+#: ../framework/widgets/kt_facebook.php:113
+msgid "For use widget, You need config Facebook App ID in Theme options"
+msgstr ""
+
+#: ../framework/widgets/kt_flickr.php:14
+msgid "Lasted images in flickr."
+msgstr ""
+
+#: ../framework/widgets/kt_flickr.php:15
+msgid "KT: Flickr"
+msgstr ""
+
+#: ../framework/widgets/kt_flickr.php:90
+msgid "Flickr"
+msgstr ""
+
+#: ../framework/widgets/kt_flickr.php:100
+msgid "Flickr ID:"
+msgstr ""
+
+#: ../framework/widgets/kt_flickr.php:102
+msgid "To find your flickID visit"
+msgstr ""
+
+#: ../framework/widgets/kt_flickr.php:102
+msgid "idGettr."
+msgstr ""
+
+#: ../framework/widgets/kt_flickr.php:105
+msgid "Number of image to show:"
+msgstr ""
+
+#: ../framework/widgets/kt_flickr.php:107
+msgid "Select number of photos to display."
+msgstr ""
+
+#: ../framework/widgets/kt_flickr.php:111
+#, php-format
+msgid ""
+"API key (Use default or get your own from <a href=\"%s\">Flickr APP Garden</"
+"a>):"
+msgstr ""
+
+#: ../framework/widgets/kt_googleplus.php:14
+msgid "Embed Google+ Badge."
+msgstr ""
+
+#: ../framework/widgets/kt_googleplus.php:15
+msgid "KT: Google+ Badge"
+msgstr ""
+
+#: ../framework/widgets/kt_googleplus.php:99
+msgid "Type:"
+msgstr ""
+
+#: ../framework/widgets/kt_googleplus.php:101
+msgid "Profile badge"
+msgstr ""
+
+#: ../framework/widgets/kt_googleplus.php:102
+msgid "Google+ page"
+msgstr ""
+
+#: ../framework/widgets/kt_googleplus.php:103
+msgid "Community page"
+msgstr ""
+
+#: ../framework/widgets/kt_googleplus.php:107
+msgid "The URL of the Google plus Page:"
+msgstr ""
+
+#: ../framework/widgets/kt_googleplus.php:112
+msgid "Portrait"
+msgstr ""
+
+#: ../framework/widgets/kt_googleplus.php:113
+msgid "Landscape"
+msgstr ""
+
+#: ../framework/widgets/kt_googleplus.php:117
+msgid "Color theme:"
+msgstr ""
+
+#: ../framework/widgets/kt_googleplus.php:125
+msgid "Cover Photo"
+msgstr ""
+
+#: ../framework/widgets/kt_googleplus.php:126
+#: ../framework/widgets/kt_googleplus.php:130
+msgid "Only work with portrait layout"
+msgstr ""
+
+#: ../framework/widgets/kt_googleplus.php:129
+msgid "Tagline"
+msgstr ""
+
+#: ../framework/widgets/kt_image.php:15
+msgid "Image for widget."
+msgstr ""
+
+#: ../framework/widgets/kt_image.php:16
+msgid "KT: image"
+msgstr ""
+
+#: ../framework/widgets/kt_image.php:99 ../framework/widgets/kt_promo.php:102
+msgid "Link:"
+msgstr ""
+
+#: ../framework/widgets/kt_image.php:134
+#: ../framework/widgets/kt_socials.php:178
+msgid "Align:"
+msgstr ""
+
+#: ../framework/widgets/kt_popular.php:16
+msgid "Display popular posts of week, month and year in tabbed format."
+msgstr ""
+
+#: ../framework/widgets/kt_popular.php:17
+msgid "KT: Post Popular"
+msgstr ""
+
+#: ../framework/widgets/kt_popular.php:58
+msgid "1 Week"
+msgstr ""
+
+#: ../framework/widgets/kt_popular.php:59
+msgid "1 Month"
+msgstr ""
+
+#: ../framework/widgets/kt_popular.php:60
+msgid "1 year"
+msgstr ""
+
+#: ../framework/widgets/kt_popular.php:167
+msgid "Widget Tabs"
+msgstr ""
+
+#: ../framework/widgets/kt_popular.php:180
+msgid "Select Tabs"
+msgstr ""
+
+#: ../framework/widgets/kt_popular.php:183
+msgid "Display Popular Posts of week"
+msgstr ""
+
+#: ../framework/widgets/kt_popular.php:187
+msgid "Display Popular Posts of Month"
+msgstr ""
+
+#: ../framework/widgets/kt_popular.php:191
+msgid "Display Popular Posts of Year"
+msgstr ""
+
+#: ../framework/widgets/kt_popular.php:194
+msgid "Options Tabs"
+msgstr ""
+
+#: ../framework/widgets/kt_popular.php:202
+msgid "Show Thumbnail (Avatar Comments)"
+msgstr ""
+
+#: ../framework/widgets/kt_promo.php:15
+msgid "Promo for widget."
+msgstr ""
+
+#: ../framework/widgets/kt_promo.php:16
+msgid "KT: promo"
+msgstr ""
+
+#: ../framework/widgets/kt_promo.php:89
+msgid "Promo Text:"
+msgstr ""
+
+#: ../framework/widgets/kt_socials.php:15
+msgid "Socials for widget."
+msgstr ""
+
+#: ../framework/widgets/kt_socials.php:16
+msgid "KT: Socials"
+msgstr ""
+
+#: ../framework/widgets/kt_socials.php:138
+msgid "Style:"
+msgstr ""
+
+#: ../framework/widgets/kt_socials.php:147
+msgid "Custom Color:"
+msgstr ""
+
+#: ../framework/widgets/kt_socials.php:149
+msgid "Background Style:"
+msgstr ""
+
+#: ../framework/widgets/kt_socials.php:162
+msgid "Size:"
+msgstr ""
+
+#: ../framework/widgets/kt_socials.php:168
+msgid "Tooltip:"
+msgstr ""
+
+#: ../framework/widgets/kt_socials.php:186
+msgid "Space Between item:"
+msgstr ""
+
+#: ../templates/author-bio.php:17
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: ../templates/author-bio.php:18
+#, php-format
+msgid "About %s"
+msgstr ""
+
+#: ../templates/content-404.php:4
+msgid "404"
+msgstr ""
+
+#: ../templates/content-404.php:5
+msgid "Oops, page not found."
+msgstr ""
+
+#: ../templates/content-404.php:6
+msgid ""
+"It looks like nothing was found at this location. <br />Click the link below "
+"to return home."
+msgstr ""
+
+#: ../templates/content-404.php:8
+msgid "Back to Home"
+msgstr ""
+
+#: ../templates/content-404.php:9
+msgid "Return home"
+msgstr ""
+
+#: ../templates/content-none.php:18
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+
+#: ../templates/content-none.php:23
+#, php-format
+msgid "Sorry ! No post was found by <span class='search-keyword'>'%s'</span>."
+msgstr ""
+
+#: ../templates/content-none.php:24
+msgid "Try searching for something else"
+msgstr ""
+
+#: ../templates/content-none.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: ../templates/content-page.php:13 ../templates/content-single.php:31
+msgid "Pages:"
+msgstr ""
+
+#: ../templates/blog/list/content.php:13
+#: ../templates/blog/list/contentf-audio.php:34
+#: ../templates/blog/list/contentf-video.php:25
+#: ../templates/blog/list/contentf.php:69
+#, php-format
+msgid "Continue reading %s"
+msgstr ""
+
+#: ../templates/headers/header-menu.php:20
+msgid "Define your site main menu!"
+msgstr ""

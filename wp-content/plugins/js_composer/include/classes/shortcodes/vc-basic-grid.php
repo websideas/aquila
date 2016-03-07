@@ -435,7 +435,10 @@ class WPBakeryShortCode_VC_Basic_Grid extends WPBakeryShortCode_Vc_Pageable {
 				'offset' => $atts['query_offset'],
 				'orderby' => $atts['orderby'],
 				'order' => $atts['order'],
-				'meta_key' => 'meta_key' === $atts['orderby'] ? $atts['meta_key'] : '',
+				'meta_key' => in_array( $atts['orderby'], array(
+					'meta_value',
+					'meta_value_num',
+				) ) ? $atts['meta_key'] : '',
 				'post_type' => $atts['post_type'],
 				'exclude' => $atts['exclude'],
 			);

@@ -952,7 +952,11 @@ if ( ! class_exists( 'WPBakeryShortCode' ) ) {
 			$return = array();
 			if ( is_array( $atts ) ) {
 				foreach ( $atts as $key => $val ) {
-					$return[ $key ] = str_replace( '``', '"', $val );
+					$return[ $key ] = str_replace( array(
+						'`{`',
+						'`}`',
+						'``',
+					), array( '[', ']', '"' ), $val );
 				}
 			}
 
@@ -1018,7 +1022,7 @@ if ( ! class_exists( 'WPBakeryShortCode' ) ) {
 							$inner = '';
 							if ( isset( $this->settings['params'] ) && is_array( $this->settings['params'] ) ) {
 								foreach ( $this->settings['params'] as $param ) {
-									$param_value = isset( $$param['param_name'] ) ? $$param['param_name'] : '';
+									$param_value = isset( ${$param['param_name']} ) ? ${$param['param_name']} : '';
 									if ( is_array( $param_value ) ) {
 										// Get first element from the array
 										reset( $param_value );
@@ -1056,7 +1060,7 @@ if ( ! class_exists( 'WPBakeryShortCode' ) ) {
 			$inner = '';
 			if ( isset( $this->settings['params'] ) && is_array( $this->settings['params'] ) ) {
 				foreach ( $this->settings['params'] as $param ) {
-					$param_value = isset( $$param['param_name'] ) ? $$param['param_name'] : '';
+					$param_value = isset( ${$param['param_name']} ) ? ${$param['param_name']} : '';
 					if ( is_array( $param_value ) ) {
 						// Get first element from the array
 						reset( $param_value );
@@ -1164,8 +1168,8 @@ if ( ! class_exists( 'WPBakeryShortCodesContainer' ) ) {
 				foreach ( $controls as $control ) {
 					$control_var = 'controls_' . $control;
 					if ( ( $editAccess && 'edit' == $control ) || $allAccess ) {
-						if ( isset( $$control_var ) ) {
-							$controls_string .= $$control_var;
+						if ( isset( ${$control_var} ) ) {
+							$controls_string .= ${$control_var};
 						}
 					}
 				}

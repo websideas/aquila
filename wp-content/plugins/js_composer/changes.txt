@@ -1,3 +1,31 @@
+5.02.2016 - ver 4.10
+	- Added: Compatibility with option to add ACF to page
+	- Added: Video width and alignment controls
+	- Added: Parallax speed parameter added
+	- Added: Category and Author elements added to Grid Builder
+	- Added: Link to author in Grid Builder
+	- Update: License tab available with 'set as theme’
+	- Update: TweetMe button updated to support new styles
+	- Update: Fontawesome library updated
+	- Update: Grid Builder templates include user templates
+	- Fixed: Add Media image sorting in WYSIWYG
+	- Fixed: Single image preview in Grid Builder
+	- Fixed: WP Theme 2016 underline fix
+	- Fixed: Tabs outline style fix
+	- Fixed: Iconpicker icons rendering on category change
+	- Fixed: ACF fields rendering in Grid Builder
+
+12.01.2016 - ver 4.9.2
+   - Fixed: "Editing an existing Post Grid, page IDs are displayed instead of titles."
+   - Fixed: Extra CSS class name for single image in post grid
+   - Fixed: Third elements not working in templates
+   - Fixed: Visual Composer button is now added even if psot doesn't support title
+   - Fixed: Yoast + single image without default value
+   - Fixed: Grid builder on multisite
+   - Fixed: 404 error on WP multisite
+   - Improved: Tab activation through menu (links on same page)
+   - Improved: PHP7 compatibility
+
 23.12.2015 - ver 4.9.1
    - Improved: VC save action is fired on wp save_post instead of edit_post
    - Improved: Some unneded files removed from package

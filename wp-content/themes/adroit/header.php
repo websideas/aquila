@@ -28,6 +28,7 @@
 
     $position = kt_get_header();
     $header_layout = kt_get_header_layout();
+    
     ?>
     <?php get_template_part( 'templates/sidearea'); ?>
     <div id="page_outter">
